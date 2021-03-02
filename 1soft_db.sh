@@ -3,7 +3,7 @@
 # 宏基因组软件和数据库安装 Metagenomic software & database
 
     # 测试环境为Linux Ubuntu 18.04 / CentOS 7
-    # 版本: 1.09, 2020/10/16
+    # 版本: 1.10, 2021/1/22
 
 ## 安装前准备：Conda和数据库位置
 
@@ -11,19 +11,19 @@
     db=~/db
     mkdir -p ${db} && cd ${db}
     # 软件安装位置
-    soft=~/miniconda2
+    soft=~/miniconda3
 
 ### 软件管理器miniconda2
 
-    # 下载最新版miniconda2
-    wget -c https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh
+    # 下载最新版miniconda3
+    wget -c https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
     # Conda默认软件安装目录为~/miniconda2，管理员可修改为/conda
-    bash Miniconda2-latest-Linux-x86_64.sh -b -f -p ${soft}
+    bash Miniconda3-latest-Linux-x86_64.sh -b -f -p ${soft}
     # 安装时许可协议打yes，-p指定安装目录为预定义的soft变量，注意安装完成后按提示激活
-    ~/miniconda2/bin/conda init
+    ~/miniconda3/bin/conda init
     # 退出终端重新打开，提示符前出现(base)，方可使用conda
-    conda -V # 查看版本 4.8.3
-    python --version # 2.7.16
+    conda -V # 查看版本 4.9.2
+    python --version # 2.7.17
 
 安装说明详见：[Nature Method：Bioconda解决生物软件安装的烦恼](https://mp.weixin.qq.com/s/SzJswztVB9rHVh3Ak7jpfA)
 
@@ -35,7 +35,7 @@
     # 添加常用频道
     conda config --add channels conda-forge
 
-添加清华镜像加速下载(可选，通常会加速，但有时会无法访问)
+(可选)添加清华镜像加速下载(通常会加速，但有时会导致无法访问)
 
     site=https://mirrors.tuna.tsinghua.edu.cn/anaconda
     conda config --add channels ${site}/pkgs/free/ 
@@ -55,55 +55,62 @@ conda默认配置文件为 ~/.condarc 查看配置文件位置
 查看虚拟环境列表 
 
     conda env list
-    
+
 创建虚拟环境，防污染环境变量，如果有的软件在Solving environment步骤数小时无法安装，可以新建环境
 
-    conda create -n meta # python=2.7 r-base=3.6
+    conda create -n meta
 
 加载环境
 
     conda activate meta
 
-### 可选：Java运行环境jdk
+### 常用系统工具
+
+(可选)Java运行环境jdk
 
     # example support trimmomatic
     conda install -c cyclus java-jdk # 156M，cyclus极慢
     java -version # 11.0.1
 
-### 并行计算parallel
+并行计算parallel
     
-    # sudo apt install parallel # Ubuntu下安装方法
-    conda install parallel
-    parallel --version # GNU parallel 20190522
+    # Ubuntu下安装方法
+    # sudo apt install parallel
+    # conda安装parallel，版本有点老
+    conda install parallel -c bioconda
+    parallel --version # GNU parallel 20170422
 
+表格统计工具csvtk
 
+    conda install csvtk -c bioconda
+
+    
 ## 1质控软件
 
 ### 质量评估fastqc
 
-    conda install fastqc # 10 MB
-    fastqc -v # FastQC v0.11.9
+    # =为指定版本，-c指定安装源，均可加速安装
+    # -y为同意安装
+    conda install fastqc=0.11.9 -c bioconda -y
+    fastqc -v
 
 ### 评估报告汇总multiqc
 
-    # 注1.8/9新版本需要Python 3.7的环境
-    conda install multiqc # 111 MB
-    multiqc --version # multiqc, version 1.7
+    # 注1.7为Python2环境，1.8/9新版本需要Python3的环境
+    conda install multiqc=1.9 -c bioconda -y 
+    multiqc --version
 
 ### 质量控制流程kneaddata
 
-    # 安装环境支持的最新版
-    conda install kneaddata # kneaddata v0.7.4，
-    kneaddata --version # 0.7.4
+    conda install kneaddata=0.7.4 -c bioconda -y 
+    kneaddata --version
     trimmomatic -version # 0.39
-    bowtie2 --version # 2.3.5.1
+    bowtie2 --version # 2.4.2
 
     # 查看可用数据库
     kneaddata_database
-    # 包括人基因组bmtagger/bowtie2、小鼠基因组、人类转录组和核糖体RNA的索引，如人基因组bowtie2索引
-    # human_genome : bowtie2 = http://huttenhower.sph.harvard.edu/kneadData_databases/Homo_sapiens_Bowtie2_v0.1.tar.gz
+    # 包括人基因组bowtie2/bmtagger、人类转录组、核糖体RNA和小鼠基因组
     # 下载人基因组bowtie2索引 3.44 GB
-    cd ${db}
     mkdir -p ${db}/kneaddata/human_genome
     kneaddata_database --download human_genome bowtie2 ${db}/kneaddata/human_genome
     # 数据库下载慢或失败，附录有百度云和国内备份链接
@@ -112,18 +119,30 @@ conda默认配置文件为 ~/.condarc 查看配置文件位置
 
 ### HUMAnN2安装
 
-安装MetaPhlAn2、HUMAnN2和所有依赖关系，并记录主要软件版本
+方法1. 新建虚拟环境安装：安装MetaPhlAn2、HUMAnN2和所有依赖关系，并记录主要软件版本
 
-    conda install humann2 # 141M
+    # conda install humann2=2.8.1 -c bioconda -y
+    conda create -n humann2 humann2=2.8.1 -c bioconda -y
+    conda activate humann2
+    # 记录核心软件版本
     humann2 --version # humann2 v2.8.1
     metaphlan2.py -v # MetaPhlAn version 2.7.5 (6 February 2018)
     diamond help #  v0.8.22.84
 
-(可选)如果安装或使用失败，可新建虚拟环境安装
+方法1. Conda导入和导出环境
 
-    conda create -n humann2
-    conda activate humann2
-    conda install humann2
+    # 安装conda-pack
+    conda install -c conda-forge conda-pack
+    #conda 安装不成功可用pip安装
+    # pip conda-pack
+    # 安装好的环境下打包导出
+    conda pack -n humann2 -o humann2.tar.gz
+
+    # 新建文件夹存放humann2环境
+    mkdir -p ~/miniconda3/envs/humann2
+    tar -xzf humann2.tar.gz -C ~/miniconda3/envs/humann2
+    # 激活环境
+    source ~/miniconda3/envs/humann2/bin/activate
 
 测试流程是否可用
 
@@ -135,33 +154,53 @@ conda默认配置文件为 ~/.condarc 查看配置文件位置
 
     humann2_databases
 
-- utility_mapping : full = http://huttenhower.sph.harvard.edu/humann2_data/full_mapping_1_1.tar.gz
-- chocophlan : full = http://huttenhower.sph.harvard.edu/humann2_data/chocophlan/full_chocophlan_plus_viral.v0.1.1.tar.gz
-- uniref : uniref90_diamond = http://huttenhower.sph.harvard.edu/humann2_data/uniprot/uniref_annotated/uniref90_annotated_1_1.tar.gz
-
-安装数据库(数据库下载慢或失败，附录有百度云和国内备份链接)
+安装数据库(注：数据库下载慢或失败，附录有国内备份链接)
 
     cd ${db}
     mkdir -p ${db}/humann2 # 建立下载目录
+    # 输助比对数据库 593MB
+    humann2_databases --download utility_mapping full ${db}/humann2
     # 微生物泛基因组 5.37 GB
     humann2_databases --download chocophlan full ${db}/humann2
     # 功能基因diamond索引 10.3 GB
     humann2_databases --download uniref uniref90_diamond ${db}/humann2
-
+    
     # 设置数据库位置
     # 显示参数
     humann2_config --print
     # 如修改线程数，推荐3-8，根据实际情况调整
     humann2_config --update run_modes threads 3
+    humann2_config --update database_folders utility_mapping ${db}/humann2/utility_mapping
     humann2_config --update database_folders nucleotide ${db}/humann2/chocophlan
     humann2_config --update database_folders protein ${db}/humann2
     # metaphlan2数据库默认位于程序所在目录的db_v20和databases下各一份
     humann2_config --print
 
+### Microbiome helper
+
+主页：https://github.com/mlangill/microbiome_helper
+
+下载并安装
+
+    # 下载、解压 、添加环境变量
+    wget -c https://github.com/LangilleLab/microbiome_helper/archive/master.zip
+    unzip master.zip
+    export PATH=`pwd`/microbiome_helper-master:$PATH
+    # 写入bashrc永久添加环境
+    echo "export PATH=`pwd`/microbiome_helper-master:\$PATH" >> ~/.bashrc
+    
+    # metaphlan_to_stamp.pl 这个脚本有修改，修改后的脚本在db/script/下，也在QQ群文件中
+    #----修改的内容如下----------------------------------------
+    # my @taxa_ranks=("Kingdom","Phylum","Class","Order","Family","Genus","Species", "Strain");
+    > 
+    # #start with assumption that this is not metaphlan2
+    # my $metaphlan2_version=1;
+    #------------------------------------------------------
+    
 ### 物种组成美化GraPhlAn
 
     # GraPhlAn核心程序包
-    conda install graphlan # 23 KB
+    conda install graphlan=1.1.3 -c bioconda -y
     graphlan.py --version # 1.1.3 (5 June 2018)
     # GraPhlAn输入文件制作程序，如转换LEfSe、Metaphlan2结果格式为GraPhlAn用于绘图
     conda install export2graphlan # 38 KB
@@ -184,31 +223,86 @@ conda默认配置文件为 ~/.condarc 查看配置文件位置
 
 物种注释：基于LCA算法的物种注释kraken2  https://ccb.jhu.edu/software/kraken/
 
-安装和查看版本
+- 软件安装
 
-    conda install kraken2 -y
-    # 2.0.9-beta 2020
-    kraken2 --version 
-    
-安装存在问题，可以新建环境安装
+安装方法1. 直接安装并查看版本
+
+    conda install kraken2 -c bioconda -y
+    kraken2 --version # 2.1.1
+    conda install bracken=2.6.0 -c bioconda
+
+安装方法2. 新建环境安装并启动软件环境
 
     conda create -n kraken2 -y -c bioconda kraken2
     conda activate kraken2
-    kraken2 --version 
-    
-下载数据库(NCBI每2周更新一次)，记录下载日期和大小
+    conda install bracken=2.6.0 -c bioconda
+    # krakentools 0.1 补充脚本
+    conda install krakentools -c bioconda
+    # krona绘图
+    conda install krona -c bioconda
 
---standard标准模式下只下载5种数据库：古菌archaea、细菌bacteria、人类human、载体UniVec_Core、病毒viral
+安装方法3. conda导入和导出
 
-下载数据83GB，时间由网速决定，索引5h，多线程可加速至1h完成
+    # 从安装好的环境打包，此处为Ubuntu 16.04LTS
+    # conda pack -n kraken2 -o ~/db/kraken2/kraken2.tar.gz
+    # 添加权限，否则别人无法下载
+    # chmod 777 ~/db/kraken2/kraken2.tar.gz
+    # 下载压缩包
+    wget -c http://210.75.224.110/db/kraken2/kraken2.tar.gz
+    # 新建文件夹存放kraken2环境
+    mkdir -p /conda2/envs/kraken2
+    # 解压环境到指定目录
+    tar -xzf kraken2.tar.gz -C /conda2/envs/kraken2
+    # 激活环境
+    source /conda2/envs/kraken2/bin/activate
+
+- 数据库
+
+下载数据库(NCBI每2周更新一次)，记录下载日期和大小。需根据服务器内存、使用目的选择合适方案。--standard标准模式下只下载5种数据库：古菌archaea、细菌bacteria、人类human、载体UniVec_Core、病毒viral。也可选直接下载作者构建的索引，还包括bracken的索引。
+
+- 方法1. 数据库安装
+
+方案1. 标准库安装，下载数据~100GB，时间由网速决定，索引5h，多线程可加速至1h完成
     
-    d=200918
     cd ${db}
+    d=210122
     mkdir -p kraken2/$d && cd kraken2/$d
     kraken2-build --standard --threads 24 --db ./
-
     
-默认数据库中没有真菌，原生动物等。需要定制化的数据库、常见问题参考附录。
+方案2. 自定义微生物数据库，如标准+真菌+原生动物+质粒
+
+    cd ${db}
+    d=210122
+    mkdir -p kraken2/$d && cd kraken2/$d
+    # 下载物种注释
+    kraken2-build --download-taxonomy --threads 24 --db ./
+    # 下载数据库
+    for i in archaea bacteria UniVec_Core viral human fungi plasmid protozoa; do
+        kraken2-build --download-library $i --threads 24 --db ./
+    done
+    # 确定的库建索引
+    kraken2-build --build --threads 24 --db ./
+
+- 方法1. 数据库下载
+
+下载标准+原生动物+真菌+植物8GB(PlusPFP-8)数据库，包括kraken2和bracken2的索引。更多版本数据库详见：https://benlangmead.github.io/aws-indexes/k2 。
+
+方案1. 迷你库(8G)
+
+    # 压缩包5.2G，
+    wget -c https://genome-idx.s3.amazonaws.com/kraken/k2_pluspfp_8gb_20201202.tar.gz
+    # 备用地址：
+    # wget -c http://210.75.224.110/db/kraken2/k2_pluspfp_8gb_20201202.tar.gz
+    tar xvzf k2_pluspfp_8gb_20201202.tar.gz
+
+方案2. 完整库(8G)
+
+    # 压缩包70G，
+    d=20201202
+    mkdir ${d} && cd ${d}
+    wget -c https://genome-idx.s3.amazonaws.com/kraken/k2_pluspfp_20201202.tar.gz
+    tar xvzf k2_pluspfp_20201202.tar.gz
+
 
 ## 3基因组拼接、注释和定量
 
@@ -250,17 +344,36 @@ conda默认配置文件为 ~/.condarc 查看配置文件位置
 
 ## 4基因功能注释
 
+### KEGG层级注释
+
+https://www.kegg.jp/kegg-bin/show_brite?ko00001.keg 下载htext
+
+    # 转换ABCD为列表
+    kegg_ko00001_htext2tsv.pl -i ko00001.keg -o ko00001.tsv
+    # 统计行数，2021.1月版55761行，整理后为55103个条目
+    wc -l ko00001.*
+    # 统计各级数量, /54/527/23917
+    for i in `seq 1 2 8`;do
+        cut -f ${i} ko00001.tsv|sort|uniq|wc -l ; done
+    # 生成KO编号和注释列表
+    cut -f 7,8 ko00001.tsv|sort|uniq|sed '1 i KO\tDescription' \
+      > KO_description.txt
+    # KO与通路(Pathway)对应表，用于合并D级为C级
+    awk 'BEGIN{FS=OFS="\t"} {print $7,$6}' ko00001.tsv | sed '1 i KO\tpathway' \
+      > KO_path.list
+      
+      
 ### 蛋白同源综合注释eggNOG
 
 eggNOG http://eggnogdb.embl.de
 
     # 安装eggnog比对工具emapper
-    conda install eggnog-mapper -y
+    conda install eggnog-mapper=2.0.1 -y -c bioconda
     emapper.py --version # 2.0.1
     
     # 下载常用数据库，注意设置下载位置
     mkdir -p ${db}/eggnog5 && cd ${db}/eggnog5
-    # -y默认同意，-f强制下载，eggnog.db.gz 7.9G
+    # -y默认同意，-f强制下载，eggnog.db.gz 7.9G+4.9G
     download_eggnog_data.py -y -f --data_dir ./
     
     # 下载方式2(可选)：链接直接下载
@@ -276,24 +389,71 @@ eggNOG http://eggnogdb.embl.de
     wget -c http://210.75.224.110/share/KO.anno
 
 
+
 ### CAZy碳水化合物
 
-    # dbCAN2无法访问 http://cys.bios.niu.edu/dbCAN2/
+    # dbCAN2 http://bcb.unl.edu/dbCAN2
+    # 创建数据库存放目录并进入
     mkdir -p ${db}/dbCAN2 && cd ${db}/dbCAN2
-    # 最近此数据库无法访问，改用国内备份链接
-    # wget -c http://cys.bios.niu.edu/dbCAN2/download/CAZyDB.07312018.fa
-    # wget -c http://cys.bios.niu.edu/dbCAN2/download/CAZyDB.07312018.fam-activities.txt
-    
-    # 使用国内备用链接
-    wget -c http://210.75.224.110/share/meta/dbcan2/CAZyDB.07312018.fa # 497 MB
-    wget -c http://210.75.224.110/share/meta/dbcan2/CAZyDB.07312018.fam-activities.txt # 58 KB
-    time diamond makedb --in CAZyDB.07312018.fa --db CAZyDB.07312018 # 28s
+    # 下载序列和描述
+    wget -c http://bcb.unl.edu/dbCAN2/download/CAZyDB.07312020.fa
+    wget -c http://bcb.unl.edu/dbCAN2/download/Databases/CAZyDB.07302020.fam-activities.txt
+    # 备用数据库下载地址并解压 
+    #wget -c http://210.75.224.110/db/dbcan2/CAZyDB.07312020.fa.gz
+    #gunzip CAZyDB.07312020.fa.gz
+    # diamond建索引，800M，1m
+    diamond --version # 0.8.22/2.0.5
+    time diamond makedb \
+      --in CAZyDB.07312020.fa \
+      --db CAZyDB.07312020
+    # 压缩原始数据节约空间
+    gzip CAZyDB.07312020.fa
     # 提取fam对应注释
-    grep -v '#' CAZyDB.07312018.fam-activities.txt|sed 's/  //'| \
-      sed '1 i ID\tDescription' > fam_description.txt
+    grep -v '#' CAZyDB.07302020.fam-activities.txt \
+      |sed 's/  //'| \
+      sed '1 i CAZy\tDescription' \
+      > CAZy_description.txt
 
 ### 抗生素抗性基因CARD
 
+    # 官网：https://card.mcmaster.ca
+    # Bioconda: http://bioconda.github.io/recipes/rgi/README.html
+    # Github: https://github.com/arpcard/rgi
+
+软件安装
+
+    # 方法1. Cona安装rgi
+    conda install --channel bioconda rgi
+    
+    # 方法2. 指定环境安装rgi
+    conda create -n rgi -c bioconda rgi
+    
+    # 方法3. 从其他安装的环境导出和导入
+    # 安装好的环境下打包导出，262M
+    conda pack -n rgi -o rgi.tar.gz
+    # 下载软件包
+    wget -c http://210.75.224.110/db/card/rgi.tar.gz
+    # 新建文件夹存放rgi环境
+    mkdir -p ~/miniconda2/envs/rgi
+    tar -xzf rgi.tar.gz -C ~/miniconda3/envs/rgi
+    # 激活环境
+    source ~/miniconda2/envs/rgi/bin/activate
+
+数据库部署
+
+    # 下载最新版数据库，2.8M
+    wget -c https://card.mcmaster.ca/latest/data
+    # 解压后20M
+    tar -xvf data card.json
+    # wget -c http://210.75.224.110/db/card/card.json
+    # 加载数据库
+    rgi load --card_json card.json
+    
+    # 宏基因组分析扩展数据库和加载
+    rgi card_annotation -i card.json
+    rgi load -i card.json --card_annotation card_database_v3.1.0.fasta
+
+    
 ### 抗生素抗性基因Resfam
 
     # http://dantaslab.wustl.edu/resfams
@@ -623,60 +783,10 @@ http://nmdc.cn/datadownload
     cp -rf salmon-latest_linux_x86_64/ ${soft}/envs/metagenome_env/share/salmon
     ${soft}/envs/metagenome_env/share/salmon/bin/salmon -v # 0.14.0
 
-### 物种和功能注释HUMAnN3
 
-https://huttenhower.sph.harvard.edu/humann3/
+## 1.10 2021.1.22
 
-MetaPhlAn3、HUMAnN3为python3，下游工具graphlan等是Python2，要使用不同的环境。
-
-    # 创建python3.7环境 
-    conda create -n humann3 python=3.7
-    conda activate humann3
-
-    # 安装humann3
-    # pip安装humann3，100M，-i指定清华镜像加速
-    site=https://pypi.tuna.tsinghua.edu.cn/simple
-    pip install humann -i ${site}
-    humann3 --version # humann v3.0.0.alpha.3
-
-    # 安装依赖关系
-    # Bowtie2 (version >= 2.1)
-    conda install bowtie2
-    bowtie2 --version # bowtie2-2.4.1
-    # biom-format
-    conda install biom-format
-    biom --version # biom, version 2.1.8
-    # metaphlan3
-    conda install metaphlan
-    metaphlan -v # 3.0.1 (25 Jun 2020)
-    # diamond 
-    conda install diamond
-    diamond --version # 0.8.36
-
-    # 测试流程，显示OK即成功
-    humann_test
-
-    # 下载数据库
-    # 显示可用数据库，humann2目录中的2019版即为humann3的数据库，有chocophlan,uniref和utility_mapping三类
-    humann3_databases
-    # 多文件时新建子目录层级管理
-    mkdir -p ${db}/humann3
-    # 自动下载并解压，微生物泛基因组库 15.3 GB
-    humann3_databases --download chocophlan full ${db}/humann3
-    # 手动下载压缩包的指定目录解压
-    # tar xvzf full_chocophlan.v296_201901.tar.gz -C chocophlan
-    # 功能基因diamond索引 19.31 GB
-    humann3_databases --download uniref uniref90_diamond ${db}/humann3
-    # tar xvzf uniref90_annotated_v201901.tar.gz -C uniref
-    # 通用比对库，1.37 GB
-    humann3_databases --download utility_mapping full ${db}/humann3
-    # tar xvzf full_mapping_v201901.tar.gz -C utility_mapping
-
-    # 设置数据库位置
-    # 显示参数
-    humann_config
-    # 如修改线程数，推荐3-8，根据实际情况调整
-    humann_config --update run_modes threads 9
-    humann_config --update database_folders nucleotide ${db}/humann3/chocophlan
-    humann_config --update database_folders protein ${db}/humann3/uniref
-    humann_config --update database_folders utility_mapping ${db}/humann3/utility_mapping
+1. humann2添加utility_mapping数据库，支持生成KEGG表；
+2. kraken2添加最小8G索引；
+3. 添加KEGG注释、层级信息及整理代码
+4. 添加CARD数据库

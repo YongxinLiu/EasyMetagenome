@@ -2,164 +2,235 @@
 
 # 宏基因组分析流程 Pipeline of metagenomic analysis
 
-    # 版本 Version：1.09, 2020/10/16
-    # 系统要求 System: Linux Ubuntu 18.04+ / CentOS 7+
-    # 依赖软件 Sofware: Rstudio server 1.1+、KneadData v0.7.4、MetaPhlAn v3.0.1、HUMAnN2 v3.0.0.alpha.3 ......
-    # Windows/Mac访问Rstudio服务器，推荐使用Chrome浏览器，可选Edge，不要用IE因为存在兼容性问题
+- 版本 Version：1.10, 2021/1/22
+- 系统要求 System: Linux Ubuntu 16.04+ / CentOS 7+
+- 依赖软件 Sofware: (Rstudio server 1.1+)、KneadData v0.7.4、MetaPhlAn v2.7.5、HUMAnN2 v2.8.1、......
+- Chrome浏览器访问Rstudio服务器
 
 # 一、数据预处理 Data preprocessing
 
 ## 1.1 准备工作 Prepare
     
-    # 首次使用请参照`soft_db.sh`脚本，安装软件和数据库(大约3-5天)
-    # 学员U盘或服务器家目录(~)有项目文件夹meta, 
-    # 1. 包含测序数据(seq/*.fq.gz)和和实验设计(result/metadata.txt);若无可手动从U盘上传。
-    # 2. 使用谷歌浏览器访问RStudio服务器，具体IP地址课上通知，服务器可使用1个月
-    # 3. Terminal中新建工作目录 mkdir -p meta ，右侧File中进入meta目录并上传流程pipeline.sh流程文件，单击打开
+- 首次使用请参照`1soft_db.sh`脚本，安装软件和数据库(大约3-5天)
+- EasyMetagenome项目Github或服务器家目录(~)有项目文件夹meta,
+
+1. 包含测序数据(seq/*.fq.gz)和和实验设计(result/metadata.txt); 若无可手动从备份U盘或之前项目上传；
+2. 使用谷歌浏览器访问RStudio服务器，内部服务器具体IP地址课上通知；
+3. 以下段落代码新建项目，右侧File中进入项目目录并上传流程文件pipeline.sh，再单击打开。
 
 ### 1.1.1 环境变量设置(每次开始分析前必须运行)
 
-    # 设置数据库、软件和工作目录
-    # 公共数据库database(db)位置，如多人共用可由管理员布置至/db，而个人可下载至~/db
+设置数据库、软件和工作目录
+
+    # 公共数据库database(db)位置，如管理员设置/db，个人下载至~/db
     db=/db
-    # Conda软件software安装目录，如/conda2或~/miniconda2
+    # Conda软件software安装目录，`conda env list`命令查看，如~/miniconda2
     soft=/conda2
     # 设置工作目录work directory(wd)，如meta
     wd=~/meta
+    # 创建并进入工作目录
+    mkdir -p $wd && cd $wd
     
-    # 导入指定虚拟环境，如配置时叫metagenome_env
+    # 方法1.加载自己安装环境
+    # conda activate metagenome_env
+    
+    # 方法2.加载别人安装环境
     export PATH=${soft}/envs/metagenome_env/bin/:$PATH
     source ${soft}/bin/activate metagenome_env
-    # 创建并进入工作目录
-    mkdir -p $wd 
-    cd $wd
+    
     # 指定某个R语言环境
     alias Rscript="/anaconda2/bin/Rscript --vanilla"
 
 ### 1.1.2 起始文件——序列和元数据
 
-
-    # 创建3个常用子目录：序列，临时文件和结果
+创建3个常用子目录：序列，临时文件和结果
+ 
     mkdir -p seq temp result
-
-    # 用户使用filezilla上传测序文件至seq目录，本次从其它位置复制，或从网络下载
-    
-    # 12个样本数据，只取了10万条PE100数据(20MB)作为演示，通常测序数据单样本>2千万条的PE150数据(6GB)
-
     # 上传实验设计(元数据) metadata.txt 于结果result目录
+    wget http://210.75.224.110/temp/meta/meta2010/result/metadata.txt -O result/metadata.txt
     # 检查文件格式，^I为制表符，$为Linux换行，^M$为Windows回车，^M为Mac换行符
     cat -A result/metadata.txt
     # 转换Windows回车为Linux换行
     sed -i 's/\r//' result/metadata.txt
     cat -A result/metadata.txt
 
-    # 从其它目录复制测序数据
-    # cp -rf /db/meta/seq/*.gz seq/
+用户使用filezilla上传测序文件至seq目录，本次从其它位置复制，或从网络下载测试数据
     
-    # 从GSA数据库下载测序数据
-    # 根据元数据GSA的CRA(批次)和CRR(样品)编号下载，每个双端测序样本两个文件，并按SampleID改名
-    wget -c ftp://download.big.ac.cn/gsa/CRA002355/CRR117732/CRR117732_f1.fq.gz -O seq/C1_1.fq.gz
-    wget -c ftp://download.big.ac.cn/gsa/CRA002355/CRR117732/CRR117732_r2.fq.gz -O seq/C1_2.fq.gz
+    # 方法1. 从其它目录复制测序数据
+    cp -rf /db/meta2101/seq/*.gz seq/
     
-    # 按实验设计批量下载并改名
-    awk '{system("wget -c ftp://download.big.ac.cn/gsa/"$6"/"$7"/"$7"_f1.fq.gz -O seq/"$1"_1.fq.gz")}' \
-        <(tail -n+2 result/metadata.txt)
-    awk '{system("wget -c ftp://download.big.ac.cn/gsa/"$6"/"$7"/"$7"_r2.fq.gz -O seq/"$1"_2.fq.gz")}' \
-        <(tail -n+2 result/metadata.txt)
+    # 方法2. 网络下载测试数据
+    cd seq/
+    awk '{system("wget -c http://210.75.224.110/temp/meta/meta2010/seq/"$1"_1.fq.gz")}' \
+      <(tail -n+2 ../result/metadata.txt)
+    awk '{system("wget -c http://210.75.224.110/temp/meta/meta2010/seq/"$1"_2.fq.gz")}' \
+      <(tail -n+2 ../result/metadata.txt)
+    cd ..
+
+    # 查看文件大小
     ls -lsh seq
+    # -l 列出详细信息 (l: list)
+    # -sh 显示人类可读方式文件大小 (s: size; h: human readable)	
 
 ### 1.1.3 了解工作目录和文件
 
-    # 显示文件结构
-    tree 
+显示文件结构
+
+    tree -L 2
     # .
     # ├── pipeline.sh
     # ├── result
     # │   └── metadata.txt
     # ├── seq
     # │   ├── C1_1.fq.gz
-    # │   ├── .._2.fq.gz
-    # │   └── N6_2.fq.gz
-    # ├── soft_db.sh
+    # │   ├── C1_2.fq.gz
+    # │   ├── N1_1.fq.gz
+    # │   └── N1_2.fq.gz
     # └── temp
-    # pipeline.sh是分析流程代码；
-    # seq目录中有12个样本双端测序，共24个序列文件；
-    # temp是临时文件夹，存储分析中间文件，结束可全部删除节约空间
-    # result是重要节点文件和整理化的分析结果图表，
-    # 实验设计metadata.txt也在此
+
+- pipeline.sh是分析流程代码；
+- seq目录中有12个样本Illumina双端测序，24个序列文件；
+- temp是临时文件夹，存储分析中间文件，结束可全部删除节约空间
+- result是重要节点文件和整理化的分析结果图表，
+- 实验设计metadata.txt也在此
+
+
+## 1.2 (可选)FastQC质量评估
+
+    # 第一次使用软件要记录软件版本，文章方法中必须写清楚
+    fastqc --version # 0.11.8
+    # time统计运行时间，此处耗时1m，fastqc质量评估
+    # *.gz为原始数据，-t指定多线程
+    time fastqc seq/*.gz -t 2
+
+质控报告见`seq`目录，详细解读请阅读[《数据的质量控制软件——FastQC》](https://mp.weixin.qq.com/s/tDMih7ISLJcL4F4sWBq3Vw)。
     
-    # 查看压缩测序数据前8行
-    zcat seq/C1_1.fq.gz | head -n8
+multiqc将fastqc的多个报告生成单个整合报告，方法批量查看和比较
 
-
-## 1.2 (可选)FastQC质量评估Quality access
-
-    # time统计运行时间，fastqc质量评估，
-    # *.gz为原始数据，-t指定多线程，1m22s
-    time fastqc seq/*.gz -t 1
-    # 结果见seq目录，解读见 [数据的质量控制软件——fastQC](https://mp.weixin.qq.com/s/tDMih7ISLJcL4F4sWBq3Vw)
-    
-    # 生成多样品报告比较
+    # 记录软件版本
+    multiqc --version # 1.5
+    # 整理seq目录下fastqc报告，输出multiqc_report.html至result/qc目录
     multiqc -d seq/ -o result/qc
-    # 查看右侧result/qc目录中multiqc_report.html，View in Web Browser查看可交互式报告
-    # 正常N和癌症C组GC含量组间存在差异
-    
+
+查看右侧result/qc目录中multiqc_report.html，单击，选择`View in Web Browser`查看可交互式报告。
 
 ## 1.3 KneadData质控和去宿主
 
-    # kneaddata是流程，它依赖trimmomatic质控和去接头，bowtie2比对宿主并筛选非宿主序列
+kneaddata是流程，它主要依赖trimmomatic质控和去接头，bowtie2比对宿主，然后筛选非宿主序列用于下游分析 。
+
+    # 记录核心软件版本
+    kneaddata --version # 0.6.1
+    trimmomatic -version # 0.39
+    bowtie2 --version # 2.3.5
     # 可只选一行中部分代码点击Run，如选中下行中#号后面命令查看程序帮助
     # kneaddata -h # 显示帮助
-    # (可选) 序列预处理，解决NCBI SRA数据双端ID一致问题
-    gunzip seq/*.gz
-    sed -i '1~4 s/$/\\1/g' seq/*_1.fq
-    sed -i '1~4 s/$/\\2/g' seq/*_2.fq
-    pigz seq/*.fq
     
+检查点：zless/zcat查看压缩测序数据，检查序列质量格式(质量值为大写字母为标准Phred33格式 ，小写字母可能可能有Phred64需要使用fastp转换)；检查双端序列ID是否重复，如果重名需要在质控前改名更正。参考**附录，质控kneaddata，去宿主后双端不匹配——序列改名**。
+
+    # 设置某个样本名为变量i，以后再无需修改
+    i=C1
+    # zless查看压缩文件，空格翻页，按q退出。
+    zless seq/${i}_1.fq.gz | head -n4
+    # zcat显示压缩文件，head指定显示行数
+    zcat seq/${i}_2.fq.gz | head -n4
+
+- | 为管道符，上一个命令的输出，传递给下一个命令做输入
+- gzip: stdout: Broken pipe：管道断开。这里是人为断开，不是错误
+- 运行过程中需要仔细阅读屏幕输出的信息
+
 ### 1.3.1 (可选)单样品质控
 
-    # 请务必根据自己软件和数据库安装位置，conda env list 查看软件安装位置
-    # 多行注释命令运行，可全选，按Ctrl+Shift+C进行注释的取消和添加
-    # 10万条序列质控，时间10s~3m
-    time kneaddata -i seq/C1_1.fq.gz -i seq/C1_2.fq.gz \
-      -o temp/qc -v -t 3 --remove-intermediate-output \
+若一条代码分割在多行显示时，最好全部选中运行，多行分割的代码行末有一个 “\” 。多行注释命令运行，可全选，按Ctrl+Shift+C进行注释的取消和添加。
+
+- 以metadata中`C1`样品本质控为例
+
+1. 输入文件：双端FASTQ测序数据，提供给参数-i，seq/${i}_1.fq.gz和 seq/${i}_2.fq.gz
+2. 参考数据库：宿主基因组索引 -db ${db}/kneaddata/human_genome/Homo_sapiens
+3. 输出文件：质控后的FASTQ测序数据，在目录temp/qc下面，${i}_1_kneaddata_paired_1.fastq和${i}_1_kneaddata_paired_1.fastq，用于后续分析
+4. 软件位置：`conda env list`查看软件安装位置，请务必根据自己软件和数据库安装位置，修改软件trimmomatic和接头文件位置。
+
+(可选)手动设置trimmomatic程序和接头位置
+
+    如：${soft}/envs/metagenome_env/share/trimmomatic/
+    # 查看multiqc结果中接头污染最严重的样本，再到fastqc报告中查看接头序列，复制前20个碱基检索确定接头文件
+    grep 'GATCGGAAGAGCACACGTCT' ${soft}/envs/metagenome_env/share/trimmomatic/adapters/*
+    # 根据实际情况选择单端SE或双端PE，一般为 TruSeq3-PE-2.fa，更准确的是问测序公司要接头文件
+
+100万条序列8线程质控和去宿主，耗时~2m。
+    
+    mkdir -p temp/qc
+    time kneaddata -i seq/${i}_1.fq.gz -i seq/${i}_2.fq.gz \
+      -o temp/qc -v -t 8 --remove-intermediate-output \
       --trimmomatic /conda2/envs/metagenome_env/share/trimmomatic/ \
       --trimmomatic-options 'ILLUMINACLIP:/conda2/envs/metagenome_env/share/trimmomatic/adapters/TruSeq3-PE.fa:2:40:15 SLIDINGWINDOW:4:20 MINLEN:50' \
       --bowtie2-options '--very-sensitive --dovetail' -db ${db}/kneaddata/human_genome/Homo_sapiens
-    
+    # 查看质控后的结果文件
+    ls -shtr temp/qc/${i}_1_kneaddata_paired_?.fastq
+
 ### 1.3.1 多样品并行质控
 
-    # 现实中是有一大堆样品，你可以逐个修改样品名运行，但并行队列管理是最优选择
+并行队列管理软件——“parallel”。
+    
+    # 记录软件版本
+    parallel --version # 20190522
     # 打will cite承诺引用并行软件parallel
     parallel --citation 
     
+parallel软件说明和使用实例
+
+    # 根据样本列表`:::`并行处理，并行j=2个任务，每个任务t=3个线程，2~7m
+    # 运行下面这行，体会下parallel的工作原理
+    # ::: 表示传递参数；第一个::: 后面为第一组参数，对应于{1};
+    # 第二个::: 后面为第二组参数，对应于{2}，依次替换
+    parallel -j 3 --xapply "echo {1} {2}" ::: seq/*_1.fq.gz ::: seq/*_2.fq.gz
+    # --xapply保持文件成对，否则将为两两组合，显示如下：
+    parallel -j 2 "echo {1} {2}" ::: seq/*_1.fq.gz ::: seq/*_2.fq.gz
+    # 从文件列表使用
+    parallel -j 3 --xapply "echo seq/{1}_1.fq.gz seq/{1}_2.fq.gz" ::: `tail -n+2 result/metadata.txt|cut -f1`
+    
+并行质控和去宿主：单样本运行成功，且参数设置绝对路径。出现错误`Unrecognized option: -d64`参考**附录，质控Kneaddata，Java版本不匹配——重装Java运行环境**。
+
     # 每步分析产生多个文件时新建子文件夹
     mkdir -p temp/qc
-    # 根据样本列表:::并行处理，并行j=2个任务，每个任务t=3个线程，2~7m
+    # 每个线程处理百万序列约10分钟，多线程可加速 j x t 倍
     time parallel -j 2 --xapply \
       "kneaddata -i seq/{1}_1.fq.gz \
       -i seq/{1}_2.fq.gz \
-      -o temp/qc -v -t 3 --remove-intermediate-output \
-      --trimmomatic /conda2/envs/metagenome_env/share/trimmomatic/ \
-      --trimmomatic-options 'ILLUMINACLIP:/conda2/envs/metagenome_env/share/trimmomatic/adapters/TruSeq3-PE.fa:2:40:15 SLIDINGWINDOW:4:20 MINLEN:50' \
+      -o temp/qc -v -t 9 --remove-intermediate-output \
+      --trimmomatic ${soft}/envs/metagenome_env/share/trimmomatic/ \
+      --trimmomatic-options 'ILLUMINACLIP:TruSeq3-PE.fa:2:40:15 SLIDINGWINDOW:4:20 MINLEN:50' \
       --bowtie2-options '--very-sensitive --dovetail' \
       -db ${db}/kneaddata/human_genome/Homo_sapiens" \
-      ::: `tail -n+2 result/metadata.txt|cut -f1`
+      ::: `tail -n+3 result/metadata.txt|cut -f1`
 
-    # 质控结果汇总
+    # (可选)大文件清理，高宿主含量样本可节约>90%空间
+    rm -rf temp/qc/*contam* temp/qc/*unmatched* 
+
+质控结果汇总
+
+    # 采用kneaddata附属工具kneaddata_read_count_table
     kneaddata_read_count_table \
       --input temp/qc \
-      --output result/01kneaddata_sum.txt
-    cat result/01kneaddata_sum.txt
+      --output temp/kneaddata.txt
+    # 筛选重点结果列
+    cut -f 1,2,4,12,13 temp/kneaddata.txt | sed 's/_1_kneaddata//' > result/qc/sum.txt
+    cat result/qc/sum.txt
 
+    # 用R代码统计下质控结果
+    Rscript -e "data=read.table('result/qc/sum.txt', header=T, row.names=1, sep='\t'); summary(data)"
+    # R转换宽表格为长表格
+    Rscript -e "library(reshape2); data=read.table('result/qc/sum.txt', header=T,row.names=1, sep='\t'); write.table(melt(data), file='result/qc/sum_long.txt',sep='\t', quote=F, col.names=T, row.names=F)"
+    cat result/qc/sum_long.txt
+    # 可用 http://www.ehbio.com/ImageGP/ 绘图展示
 
-## 1.4 (可选)质控后质量再评估 
+## 1.4 (可选)质控后质量评估 
+
+整理bowtie2, trimmomatic, fastqc报告，接头和PCR污染率一般小于1%。结果见：result/qc/multiqc_report_1.html
 
     # 1-2m
-    fastqc temp/qc/*_1_kneaddata_paired_* -t 2
+    fastqc temp/qc/*_1_kneaddata_paired_*.fastq -t 4
     multiqc -d temp/qc/ -o result/qc/
-    # 整理bowtie2, trimmomatic, fastqc报告，接头和PCR污染率一般小于1%
-
+    # v1.7以后开始使用Python3，v1.9缺少bowtie2比对结果的统计
 
 
 # 二、基于读长分析 Read-based (HUMAnN2)
@@ -169,48 +240,85 @@
 英文教程：https://github.com/LangilleLab/microbiome_helper/wiki/Metagenomics-Tutorial-(Humann2)
 
 
-## 2.1 合并质控文件为HUMAnN2输入
+## 2.1 准备HUMAnN2输入文件
 
-    # HUMAnN2要求双端序列合并的文件作为输入
+小技巧：循环批量处理样本列表
+
+    # 基于样本元数据提取样本列表命令解析
+    # 去掉表头
+    tail -n+2 result/metadata.txt
+    # 提取第一列样本名
+    tail -n+2 result/metadata.txt|cut -f 1
+    # 循环处理样本
+    for i in `tail -n+2 result/metadata.txt|cut -f1`;do echo "Processing "$i; done
+    # ` 反引号为键盘左上角Esc键下面的按键，一般在数字1的左边，代表运行命令返回结果
+
+HUMAnN2要求双端序列合并的文件作为输入，for循环根据实验设计样本名批量双端序列合并。注意星号和问号，分别代表多个和单个字符，当然大家更不能溜号~~~行分割的代码行末有一个 \ 
+        
     mkdir -p temp/concat
-    
-    # for循环根据实验设计样本名批量双端序列合并
-    # 注意星号和问号，分别代表多个和单个字符，当然大家更不能溜号~~~
-    for i in `tail -n+2 result/metadata.txt | cut -f 1`;do 
+    # 双端合并为单个文件
+    for i in `tail -n+2 result/metadata.txt|cut -f1`;do 
       cat temp/qc/${i}*_1_kneaddata_paired_?.fastq \
-      > temp/concat/${i}.fq; 
+      > temp/concat/${i}_all.fq; 
     done
-    
+    # 取子集，如统一取为6G，1.6亿行，此处取20万行演示流程
+    for i in `tail -n+2 result/metadata.txt|cut -f1`;do 
+       head -n800000 temp/concat/${i}_all.fq > temp/concat/${i}.fq
+    done
     # 查看样品数量和大小
-    ls -sh temp/concat/*.fq 
-
+    ls -sh temp/concat/*.fq
 
 ## 2.2 HUMAnN2计算物种和功能组成
 
-    # 物种组成调用MetaPhlAn2, bowtie2比对至核酸序列；
-    # 功能组成为humann2调用diamond比对至蛋白库11Gb
-    # 输入文件：temp/concat/*.fq 每个样品质控后双端合并后的fastq序列
-    # 输出文件：temp/humann2/ 目录下
-    #           C1_pathabundance.tsv
-    #           C1_pathcoverage.tsv
-    #           C1_genefamilies.tsv
-    # 整合后的输出：
-    #           result/metaphlan2/taxonomy.tsv 物种丰度表
-    #           result/metaphlan2/taxonomy.spf 物种丰度表（用于stamp分析）
-    #           result/humann2/pathabundance_relab_stratified.tsv 通路丰度表
-    #           result/humann2/pathabundance_relab_unstratified.tsv 通路丰度表
-    #           stratified(每个菌的功能组成)和unstratified(功能组成)
+- 物种组成调用MetaPhlAn2, bowtie2比对至核酸序列，解决有哪些微生物存在的问题；
+- 功能组成为humann2调用diamond比对至蛋白库11Gb，解决这些微生物参与哪些功能通路的问题；
+- 输入文件：temp/concat/*.fq 每个样品质控后双端合并后的fastq序列
+- 输出文件：temp/humann2/ 目录下
+    - C1_pathabundance.tsv
+    - C1_pathcoverage.tsv
+    - C1_genefamilies.tsv
+- 整合后的输出：
+    - result/metaphlan2/taxonomy.tsv 物种丰度表
+    - result/metaphlan2/taxonomy.spf 物种丰度表（用于stamp分析）
+    - result/humann2/pathabundance_relab_unstratified.tsv 通路丰度表
+    - result/humann2/pathabundance_relab_stratified.tsv 通路物种组成丰度表
+    - stratified(每个菌对此功能通路组成的贡献)和unstratified(功能组成)
 
-    ### (可选)单样本运行，~1h
-    time humann2 --input temp/concat/C3.fq  \
-      --output temp/ --threads 3
+(可选)启动humann2环境：仅humann2布置于自定义环境下使用
 
-    # 多样本并行计算，1-6h
+    # 方法1. conda加载环境
+    # conda activate humann2
+    # 方法2. source加载指定
+    # source ~/miniconda3/envs/humann2/bin/activate
+
+(可选)检查数据库配置是否正确
+
+    humann2 --version # v2.8.1/0.11.2
+    humann2_config
+
+(可选)单样本1.25M PE150运行测试，8p，2.5M，1~2h；0.2M, 34m；0.1M，30m；0.01M，25m
+
+    mkdir -p temp/humann2
+    i=C1
+    time humann2 --input temp/concat/${i}.fq  \
+      --output temp/humann2 --threads 8
+
+多样本并行计算
+
     mkdir -p temp/humann2
     time parallel -j 2 \
-      'humann2 --input {}  \
-      --output temp/humann2/ ' \
-      ::: temp/concat/*.fq > temp/log
+      'humann2 --input temp/concat/{}.fq  \
+      --output temp/humann2/ --threads 8 ' \
+      ::: `tail -n+2 result/metadata.txt|cut -f1` > temp/log
+    cat temp/log
+
+    # (可选)大文件清理，humann2临时文件可达原始数据30~40倍
+    # 链接重要文件至humann2目录
+    for i in `tail -n+2 result/metadata.txt|cut -f1`;do 
+       ln temp/humann2/${i}_humann2_temp/${i}_metaphlan_bugs_list.tsv temp/humann2/
+    done    
+    # 删除临时文件
+    # rm -rf temp/concat/* temp/humann2/*_humann2_temp
 
 ## 2.3 物种组成表
 
@@ -218,9 +326,19 @@
 
 ### 2.3.1 样品结果合并
 
-    merge_metaphlan_tables.py temp/humann2/*_humann2_temp/*_metaphlan_bugs_list.tsv | \
-      sed 's/_metaphlan_bugs_list//g' > result/metaphlan2/taxonomy.tsv
+    # 合并、修正样本名、预览
+    merge_metaphlan_tables.py \
+      temp/humann2/*_metaphlan_bugs_list.tsv | \
+      sed 's/_metaphlan_bugs_list//g' \
+      > result/metaphlan2/taxonomy.tsv
     head -n3 result/metaphlan2/taxonomy.tsv
+    
+    # (可选)筛选>0.5%的分类，绘制维恩图
+    awk 'BEGIN{OFS=FS="\t"}{if(FNR==1) {for(i=2;i<=NF;i++) a[i]=$i;} \
+       else {for(i=2;i<=NF;i++) if($i>0.5) print $1, a[i];}}' \
+       result/metaphlan2/taxonomy.tsv \
+       > result/metaphlan2/taxonomy_high.tsv
+    wc -l result/metaphlan2/taxonomy_high.tsv
 
 ### 2.3.2 转换为stamp的spf格式
 
@@ -228,17 +346,17 @@
       > result/metaphlan2/taxonomy.spf
     head -n3 result/metaphlan2/taxonomy.spf
     # 下载metadata.txt和taxonomy.spf使用stamp分析
+    # 网络分析见附录 metaphlan2 - 网络
 
 ### 2.3.3 (可选) Python绘制热图
 
     # c设置颜色方案，top设置物种数量，minv最小相对丰度，s标准化方法，log为取10为底对数，xy为势图宽和高，图片可选pdf/png/svg格式
-    time metaphlan_hclust_heatmap.py \
+    metaphlan_hclust_heatmap.py \
       --in result/metaphlan2/taxonomy.tsv \
       --out result/metaphlan2/heatmap.pdf \
-      -c jet --top 15 --minv 0.1 \
+      -c jet --top 30 --minv 0.1 \
       -s log -x 0.4 -y 0.2
-    # 帮助文档见 metaphlan_hclust_heatmap.py -h
-    # (可选)Excel筛选数据ImageGP绘图
+    # 帮助见 metaphlan_hclust_heatmap.py -h
 
 ### 2.3.4 (可选) R绘制热图
 
@@ -246,97 +364,123 @@
     # 若在服务器上，请保持工作目录不变，并修改R脚本目录位置
 
     # 本地分析目录
-    cd /c/meta
-    # 调置脚本所有目录，服务器位于 /db/script/
-    R=/c/meta/db/script
-    
+    # 若在服务器上，这一句不需运行，已注释掉
+    # cd /c/meta
+    # 调置脚本所有目录，服务器位于 /db/script/ 或 ~/db/script，windows为/c/meta/db/script
+    R=/db/script/
+
     # 显示脚本帮助 help
     Rscript ${R}/metaphlan_hclust_heatmap.R -h
+    
     # 按指定列合并、排序并取Top25种绘制热图
-    # -i输入MetaPhlAn3文件；-t 分类级别，可选Kingdom/Phylum/Class/Order/Family/Genus/Species，界门纲目科属种株，推荐门，目，属
+    # -i输入MetaPhlAn2文件；-t 分类级别，-t 分类级别，可选Kingdom/Phylum/Class/Order/Family/Genus/Species/Strain，界门纲目科属种株，推荐门，目，属
     # -n 输出物种数量，默认为25，最大为合并后的数量
-    # -o输出图表前缀，默认根据输入文件、物种级别和数量自动生成；
-    Rscript db/script/metaphlan_hclust_heatmap.R \
-      -i result/metaphlan3/taxonomy.spf \
+    # -o输出图表前缀，默认根据输入文件、物种级别和数量自动生成
+    # 科水平Top25热图
+    Rscript ${R}/metaphlan_hclust_heatmap.R \
+      -i result/metaphlan2/taxonomy.spf \
       -t Family -n 25 \
       -w 183 -e 118 \
-      -o result/metaphlan3/heatmap_Family
-
-    # 属水平的Top30
-    Rscript db/script/metaphlan_hclust_heatmap.R \
-      -i result/metaphlan3/taxonomy.spf \
-      -t Genus \
-      -n 30 \
-      -o result/metaphlan3/heatmap_Genus
+      -o result/metaphlan2/heatmap_Family
     
 ## 2.4 功能组成分析
 
-    mkdir -p result/humann3
+    mkdir -p result/humann2
 
 ### 2.4.1 功能组成合并、标准化和分层
 
-    # 合并通路丰度(pathabundance)，含功能和物种组成
-    humann_join_tables \
-      --input temp/humann3 \
+合并通路丰度(pathabundance)，含功能和对应物种组成。可选基因家族(genefamilies 太多)，通路覆盖度(pathcoverage)。注意看屏幕输出`# Gene table created: result/humann2/pathabundance.tsv`
+
+    humann2_join_tables \
+      --input temp/humann2 \
       --file_name pathabundance \
-      --output result/humann3/pathabundance.tsv
-    # 可选基因家族(genefamilies 太多)，通路覆盖度(pathcoverage)层面
-    # 删除列名多余信息
-    sed -i 's/_Abundance//g' result/humann3/pathabundance.tsv
-    # 预览文件头尾格式
-    head -n3 result/humann3/pathabundance.tsv
-    tail -n3 result/humann3/pathabundance.tsv
+      --output result/humann2/pathabundance.tsv
+    # 样本名调整：删除列名多余信息
+    head result/humann2/pathabundance.tsv
+    sed -i 's/_Abundance//g' result/humann2/pathabundance.tsv
+    head result/humann2/pathabundance.tsv
 
-    # 标准化为相对丰度(1)relab或百万比cpm
-    humann_renorm_table \
-      --input result/humann3/pathabundance.tsv \
+标准化为相对丰度relab(1)或百万比cpm
+
+    humann2_renorm_table \
+      --input result/humann2/pathabundance.tsv \
       --units relab \
-      --output result/humann3/pathabundance_relab.tsv
-    head -n5 result/humann3/pathabundance_relab.tsv
+      --output result/humann2/pathabundance_relab.tsv
+    head -n5 result/humann2/pathabundance_relab.tsv
 
-    # 分层结果：功能和对应物种表(stratified)和功能组成表(unstratified)
-    humann_split_stratified_table \
-      --input result/humann3/pathabundance_relab.tsv \
-      --output result/humann3/ 
+分层结果：功能和对应物种表(stratified)和功能组成表(unstratified)
+
+    humann2_split_stratified_table \
+      --input result/humann2/pathabundance_relab.tsv \
+      --output result/humann2/ 
     # 可以使用stamp进行统计分析
 
-### 2.4.2 添加分组和差异比较
+### 2.4.2 差异比较和柱状图
 
-    # 在通路丰度中添加分组
+两样本无法组间比较，在pcl层面替换为HMP数据进行统计和可视化。
+
+参考 https://bitbucket.org/biobakery/humann2/wiki/Home#markdown-header-standard-workflow
+
+- 输入数据：通路丰度表格 result/humann2/pathabundance.tsv
+- 输入数据：实验设计信息 result/metadata.txt
+- 中间数据：包含分组信息的通路丰度表格文件 result/humann2/pathabundance.pcl 
+- 输出结果：result/humann2/associate.txt
+
+在通路丰度中添加分组
+
     ## 提取样品列表
-    head -n1 result/humann3/pathabundance.tsv | sed 's/# Pathway/SampleID/' | tr '\t' '\n' > temp/header
+    head -n1 result/humann2/pathabundance.tsv | sed 's/# Pathway/SampleID/' | tr '\t' '\n' > temp/header
     ## 对应分组
     awk 'BEGIN{FS=OFS="\t"}NR==FNR{a[$1]=$2}NR>FNR{print a[$1]}' result/metadata.txt temp/header | tr '\n' '\t'|sed 's/\t$/\n/' > temp/group
     # 合成样本、分组+数据
-    cat <(head -n1 result/humann3/pathabundance.tsv) temp/group <(tail -n+2 result/humann3/pathabundance.tsv) > result/humann3/pathabundance.pcl
+    cat <(head -n1 result/humann2/pathabundance.tsv) temp/group <(tail -n+2 result/humann2/pathabundance.tsv) \
+      > result/humann2/pathabundance.pcl
 
-    # 组间比较，样本量少无差异
-    humann_associate --input result/humann3/pathabundance.pcl  \
+组间比较，样本量少无差异，结果为4列的文件：通路名字，通路在各个分组的丰度，差异P-value，校正后的Q-value。演示数据2样本无法统计，此处替换为HMP的结果演示统计和绘图(上传hmp_pathabund.pcl，替换pathabundance.pcl为hmp_pathabund.pcl)。
+
+    wget -c http://210.75.224.110/temp/meta/meta2010/result/humann2/hmp_pathabund.pcl -O result/humann2/hmp_pathabund.pcl
+    # 设置输入文件名
+    pcl=result/humann2/hmp_pathabund.pcl
+    # 统计表格行、列数量
+    csvtk -t stat ${pcl}
+    # 按分组KW检验
+    humann2_associate --input ${pcl} \
         --focal-metadatum Group --focal-type categorical \
         --last-metadatum Group --fdr 0.05 \
-        --output result/humann3/associate.txt
+        --output result/humann2/associate.txt
+    wc -l result/humann2/associate.txt
+    head -n5 result/humann2/associate.txt
 
-### 2.4.3 通路物种组成柱状图
+barplot展示腺苷核苷酸合成的物种组成
 
-    # barplot展示腺苷核苷酸合成的物种组成
-    humann_barplot \
-        --input result/humann3/pathabundance.pcl \
-        --focal-feature PWY-7219 \
+    # --sort sum metadata 按丰度和分组排序
+    # 指定差异通路，如 P163-PWY / PWY-3781 / PWY66-409 / PWY1F-823
+    path=PWY-3781
+    humann2_barplot --sort sum metadata \
+        --input ${pcl} \
+        --focal-feature ${path} \
         --focal-metadatum Group --last-metadatum Group \
-        --output result/humann3/barplot1.pdf
-    # --sort sum 按丰度排序
-    humann_barplot --sort sum \
-        --input result/humann3/pathabundance.pcl \
-        --focal-feature PWY-7219 \
-        --focal-metadatum Group --last-metadatum Group \
-        --output result/humann3/barplot2.pdf
-    # --sort sum metadata 按丰度排序
-    humann_barplot --sort sum metadata \
-        --input result/humann3/pathabundance.pcl \
-        --focal-feature PWY-7219 \
-        --focal-metadatum Group --last-metadatum Group \
-        --output result/humann3/barplot3.pdf
+        --output result/humann2/barplot_${path}.pdf
 
+### 2.4.3 转换为KEGG注释
+
+需要下载utility_mapping数据库并配置成功才可以使用。详见软件和数据库安装1soft_db.sh。
+
+支持GO、PFAM、eggNOG、level4ec、KEGG的D级KO等注释，详见`humann2_regroup_table -h`。
+
+    # 转换基因家族为KO(uniref90_ko)，可选eggNOG(uniref90_eggnog)或酶(uniref90_level4ec)
+    for i in `tail -n+2 result/metadata.txt|cut -f1`;do
+      humann2_regroup_table \
+        -i temp/humann2/${i}_genefamilies.tsv \
+        -g uniref90_ko \
+        -o temp/humann2/${i}_ko.tsv
+    done
+    # 合并，并修正样本名
+    humann2_join_tables \
+      --input temp/humann2/ \
+      --file_name ko \
+      --output result/humann2/ko.tsv
+    sed -i '1s/_Abundance-RPKs//g' result/humann2/ko.tsv
 
 ## 2.5 GraPhlAn图
 
@@ -357,14 +501,21 @@
 
 ## 2.6 LEfSe差异分析和Cladogram
 
-    # 准备输入文件，修改样本品为组名，**非通用代码**，可手动修改
+- 输入文件：物种丰度表result/metaphlan2/taxonomy.tsv
+- 输入文件：样品分组信息 result/metadata.txt
+- 中间文件：整合后用于LefSe分析的文件 result/metaphlan2/lefse.txt，这个文件可以提供给www.ehbio.com/ImageGP 用于在线LefSE分析
+- LefSe结果输出：result/metaphlan2/目录下lefse开头和feature开头的文件
+    
+准备输入文件，修改样本品为组名，**非通用代码**，可手动修改
+
     # 只保留组名C, N, 删除数字重复编号，去除注释行
     head -n3 result/metaphlan2/taxonomy.tsv
     sed '1 s/[0-9]*//g' result/metaphlan2/taxonomy.tsv \
       | grep -v '#' > result/metaphlan2/lefse.txt
     head -n3 result/metaphlan2/lefse.txt
     
-    # LEfSe本地代码供参考，可选Xshell下运行或ImageGP在线分析
+LEfSe本地代码供参考，可选Xshell下运行或ImageGP在线分析
+
     # 格式转换为lefse内部格式
     lefse-format_input.py \
       result/metaphlan2/lefse.txt \
@@ -397,106 +548,170 @@
       temp/input.in temp/input.res \
       result/metaphlan2/lefse_
 
+若出现错误 Unknown property axis_bgcolor，则修改`lefse-plot_cladogram.py`里的`ax_bgcolor`替换成`facecolor`即可。
 
-## 2.7 kraken2物种注释reads
+## 2.7 Kraken2物种注释
 
-    # 还可以进行contig、gene、bin层面的序列物种注释
+Kraken2可以快速完成读长(read)层面的物种注释，还可以进行重叠群(contig)、基因(gene)、宏基因组组装基因组(MAG/bin)层面的序列物种注释。
 
-### 2.7.1 物种注释
+    # 启动kraken2工作环境
+    source /conda2/envs/kraken2/bin/activate
+    # 记录软件版本
+    kraken2 --version # 2.1.1
+
+### 2.7.1 Kraken2物种注释
+
+- {1}代表样本名字
+- 输入：temp/qc/{1}_1_kneaddata_paired*.fastq 质控后的FASTQ数据
+- 参考数据库：-db ${db}/kraken2/mini/，默认标准数据库>50GB，这里使用8GB迷你数据库。
+- 输出结果：每个样本单独输出，temp/kraken2/{1}_report和temp/kraken2/{1}_output
+- 整合后的输出结果： result/kraken2/taxonomy_count.txt 物种丰度表
+
+    
+(可选) 单样本注释，5m
 
     mkdir -p temp/kraken2
-    
-    # 单样本注释，5m
-    time kraken2 --db ${db}/kraken2 --paired temp/qc/C1_1_kneaddata_paired*.fastq \
-      --threads 3 --use-names --use-mpa-style --report-zero-counts \
-      --report temp/kraken2/C1_report \
-      --output temp/kraken2/C1_output
-    
-    # 多样本并行，12个样本2个同时各3线程，
-    time parallel -j 2 \
-      "kraken2 --db ${db}/kraken2 --paired temp/qc/{1}_1_kneaddata_paired*.fastq \
-      --threads 3 --use-names --use-mpa-style --report-zero-counts \
-      --report temp/kraken2/{1}_report \
-      --output temp/kraken2/{1}_output" \
-      ::: `tail -n+2 result/metadata.txt | cut -f 1`
-    # 屏幕会输出各样品注释比例，和运行时间 20~30m
+    i=C1
+    # 1m，--use-mpa-style可直接输出metphlan格式，但bracken无法处理
+    time kraken2 --db ${db}/kraken2/mini/ --paired temp/qc/${i}_1_kneaddata_paired*.fastq \
+      --threads 8 --use-names --report-zero-counts \
+      --report temp/kraken2/${i}.report \
+      --output temp/kraken2/${i}.output
 
-### 2.7.2 汇总样品物种组成表
+多样本并行生成report，2样本各8线程
+
+    time parallel -j 2 \
+      "kraken2 --db ${db}/kraken2/mini --paired temp/qc/{1}_1_kneaddata_paired*.fastq \
+      --threads 8 --use-names --report-zero-counts \
+      --report temp/kraken2/{1}.report \
+      --output temp/kraken2/{1}.output" \
+      ::: `tail -n+2 result/metadata.txt|cut -f1`
+
+使用krakentools转换report为mpa格式
+    
+    for i in `tail -n+2 result/metadata.txt|cut -f1`;do
+      kreport2mpa.py -r temp/kraken2/${i}.report \
+        --display-header \
+        -o temp/kraken2/${i}.mpa 
+    done
+
+合并样本为表格
 
     mkdir -p result/kraken2
     # 输出结果行数相同，但不一定顺序一致，要重新排序
     parallel -j 1 \
-      'sort temp/kraken2/{1}_report | cut -f 2 | sed "1 s/^/{1}\n/" > temp/kraken2/{1}_count ' \
-      ::: `tail -n+2 result/metadata.txt | cut -f 1`
+      'tail -n+2 temp/kraken2/{1}.mpa | sort | cut -f 2 | sed "1 s/^/{1}\n/" > temp/kraken2/{1}_count ' \
+      ::: `tail -n+2 result/metadata.txt|cut -f1`
     # 提取第一样本品行名为表行名
     header=`tail -n 1 result/metadata.txt | cut -f 1`
     echo $header
-    sort temp/kraken2/${header}_report | cut -f 1 | \
+    tail -n+2 temp/kraken2/${header}.mpa | sort | cut -f 1 | \
       sed "1 s/^/Taxonomy\n/" > temp/kraken2/0header_count
     head -n3 temp/kraken2/0header_count
     # paste合并样本为表格
     ls temp/kraken2/*count
-    paste temp/kraken2/*count > result/kraken2/taxonomy_count.txt
+    paste temp/kraken2/*count > result/kraken2/tax_count.mpa
 
-### 2.7.3 物种多样性分析
+### 2.7.2 Bracken估计丰度
 
-    # 提取种级别注释并抽平至最小测序量，计算6种alpha多样性指数
-    # Rscript ${db}/script/kraken2alpha.R -h # 查看帮助和参数详细
-    # 输入count文件，按最小值抽平为norm文件，计算alpha多样性
-    Rscript ${db}/script/kraken2alpha.R \
-      --input result/kraken2/taxonomy_count.txt \
-      --depth 0 \
-      --normalize result/kraken2/tax_norm.txt \
-      --output result/kraken2/tax_alpha.txt
-    
-    # 绘制Alpha多样性箱线图
-    # 可选richness/chao1/ACE/shannon/simpson
-    Rscript ${db}/script/alpha_boxplot.R \
-      -i result/kraken2/tax_alpha.txt \
-      -t shannon \
-      -d result/metadata.txt \
-      -n Group \
-      -o result/kraken2/alpha_shannon \
-      -w 4 -e 2.5
-    # 批量计算6种指数的箱线图+统计
-    for i in richness chao1 ACE shannon simpson invsimpson;do
-    Rscript ${db}/script/alpha_boxplot.R -i result/kraken2/tax_alpha.txt -t ${i} \
-      -d result/metadata.txt -n Group -w 4 -e 2.5 \
-      -o result/kraken2/alpha_${i}
+参数简介：
+- -d为数据库，与kraken2一致
+- -i为输入kraken2报告文件
+- r是读长，此处默认为100，通常为150
+- l为分类级，本次种级别(S)丰度估计，可选域、门、纲、目、科、属、种：D,P,C,O,F,G,S
+- t是阈值，默认为0，越大越可靠，但可用数据越少
+- -o 输出重新估计的值
+   
+循环重新估计每个样品的丰度
+
+    # 设置估算的分类级别D,P,C,O,F,G,S
+    tax=P
+    mkdir -p temp/bracken
+    for i in `tail -n+2 result/metadata.txt|cut -f1`;do
+        # i=C1
+        bracken -d ${db}/kraken2/mini \
+          -i temp/kraken2/${i}.report \
+          -r 100 -l ${tax} -t 0 \
+          -o temp/bracken/${i}
     done
+    
+结果描述：共7列，分别为物种名、ID、分类级、读长计数、补充读长计数、**总数、总数百分比**
+
+    name    taxonomy_id     taxonomy_lvl    kraken_assigned_reads   added_reads     new_est_reads        fraction_total_reads
+    Capnocytophaga sputigena        1019    S       4798    996     5794    0.23041
+    Capnocytophaga sp. oral taxon 878       1316596 S       239     21      260     0.01034
+
+bracken结果合并成表
+
+    # 输出结果行数相同，但不一定顺序一致，要去年表头重新排序
+    # 仅提取第6列reads count，并添加样本名
+    parallel -j 1 \
+      'tail -n+2 temp/bracken/{1}|sort|cut -f 6| sed "1 s/^/{1}\n/" > temp/bracken/{1}.count ' \
+      ::: `tail -n+2 result/metadata.txt|cut -f1`
+    # 提取第一样本品行名为表行名
+    h=`tail -n1 result/metadata.txt|cut -f1`
+    tail -n+2 temp/bracken/${h}|sort|cut -f1 | \
+      sed "1 s/^/Taxonomy\n/" > temp/bracken/0header.count
+    # 检查文件数，为n+1
+    ls temp/bracken/*count | wc
+    # paste合并样本为表格，并删除非零行
+    paste temp/bracken/*count > result/kraken2/bracken.${tax}.txt
+    # 统计行列，默认去除表头
+    csvtk -t stat result/kraken2/bracken.${tax}.txt
+
+结果筛选
+
+    # microbiome_helper按频率过滤，-r可标准化，-e过滤
+    Rscript /db/script/filter_feature_table.R \
+      -i result/kraken2/bracken.${tax}.txt \
+      -p 0.01 \
+      -o result/kraken2/bracken.${tax}.0.01
+    # > 0.01(1%)的样本在出现，剩1391行
+    csvtk -t stat result/kraken2/bracken.${tax}.0.01
+    
+    # 按物种名手动去除宿主污染，以人为例
+    # 种水平去除人类P:Chordata,S:Homo sapiens
+    grep 'Homo sapiens' result/kraken2/bracken.S.0.01
+    grep -v 'Homo sapiens' result/kraken2/bracken.S.0.01 \
+      > result/kraken2/bracken.S.0.01-H
+    
+    # 门水平去除脊索动物
+    grep 'Chordata' result/kraken2/bracken.P.0.01
+    grep -v 'Chordata' result/kraken2/bracken.P.0.01 > result/kraken2/bracken.P.0.01-H
+
+分析后清理每条序列的注释大文件
+
+    rm -rf temp/kraken2/*.output
+
+### 2.7.3 多样性分析
+
+    # 设置脚本位置
+    sd=/db/script
+    
+    # 提取种级别注释并抽平至最小测序量，计算6种alpha多样性指数
+    # 查看帮助
+    Rscript $sd/otutab_rare.R -h    
+    # -d指定最小样本量，默认0为最小值，抽平文件bracken.S.norm，alpha多样性bracken.S.alpha
+    tax=S
+    Rscript $sd/otutab_rare.R \
+      --input result/kraken2/bracken.${tax}.txt \
+      --depth 0 --seed 1 \
+      --normalize result/kraken2/bracken.${tax}.norm \
+      --output result/kraken2/bracken.${tax}.alpha
+    
+    # 绘制Alpha多样性指数箱线图，详见script/MetaStatPlot.sh
+
+    # Beta多样性距离矩阵计算
+    mkdir -p result/kraken2/beta/
+    usearch -beta_div result/kraken2/bracken.${tax}.norm \
+        -filename_prefix result/kraken2/beta/
+    # PCoA分析，详见script/MetaStatPlot.sh
 
 ### 2.7.4 物种组成
 
-    # 转换为metaphalan2 spf格式，但ncbi注释不完整
-    awk 'BEGIN{OFS=FS="\t"}{delete a; a["d"]="unclassified";a["p"]="unclassified";a["c"]="unclassified";a["o"]="unclassified";a["f"]="unclassified";a["g"]="unclassified";a["s"]="unclassified";a["S"]="unclassified"; \
-      split($1,x,"|");for(i in x){split(x[i],b,"__");a[b[1]]=b[2];} \
-      print a["d"],a["p"],a["c"],a["o"],a["f"],a["g"],a["s"],a["S"],$0;}' \
-      result/kraken2/tax_norm.txt > temp.txt
-    cut -f 1-8,10- temp.txt > result/kraken2/tax_norm.spf
-    sed -i '1 s/unclassified\tunclassified\tunclassified\tunclassified\tunclassified\tunclassified\tunclassified\tunclassified/Kingdom\tPhylum\tClass\tOrder\tFamily\tGenus\tSpecies\tStrain/' \
-      result/kraken2/tax_norm.spf
+- script/MetaStatPlot.sh ### 2.7.4 物种组成 (bracken2结果的物种组成堆叠可视化)
+- script/MetaStatPlot.sh 附录 ## kraken2的物种组成热图和箱线图
 
-    # 绘制热图
-    Rscript db/script/metaphlan_hclust_heatmap.R \
-      -i result/kraken2/tax_norm.spf \
-      -t Genus \
-      -n 25 \
-      -w 183 -e 118 \
-      -o result/kraken2/heatmap_Genus
-
-    # 绘制属水平Top30箱线图
-    Rscript db/script/metaphlan_boxplot.R \
-      -i result/kraken2/tax_norm.spf \
-      -t Genus \
-      -n 30 \
-      -o result/kraken2/boxplot_Genus
-    # 绘制门水平Top10箱线图
-    Rscript db/script/metaphlan_boxplot.R \
-      -i result/kraken2/tax_norm.spf \
-      -t Phylum \
-      -n 10 -w 6 -e 4 \
-      -o result/kraken2/boxplot_Phylum
-  
 
 # 三、组装分析流程 Assemble-based
 
@@ -506,15 +721,21 @@
 
     # 删除旧文件夹，否则megahit无法运行
     rm -rf temp/megahit
-    # 组装，6~30m，TB级数据需几天至几周
-    time megahit -t 6 \
+    # 组装，10~30m，TB级数据需几天至几周
+    time megahit -t 3 \
         -1 `tail -n+2 result/metadata.txt|cut -f 1|sed 's/^/temp\/qc\//;s/$/_1_kneaddata_paired_1.fastq/'| tr '\n' ','|sed 's/,$//'` \
         -2 `tail -n+2 result/metadata.txt|cut -f 1|sed 's/^/temp\/qc\//;s/$/_1_kneaddata_paired_2.fastq/'| tr '\n' ','|sed 's/,$//'` \
         -o temp/megahit 
     # 检查点：查看拼接结果，8.2M，通常300M~5G
     ls -sh temp/megahit/final.contigs.fa
-    # 预览重叠最前6行，前60列字符
+    # 预览重叠群最前6行，前60列字符
     head -n6 temp/megahit/final.contigs.fa | cut -c1-60
+    
+    # 备份重要结果
+    mkdir -p result/megahit/
+    ln -f temp/megahit/final.contigs.fa result/megahit/
+    # 删除临时文件
+    rm -rf temp/megahit/intermediate_contigs/
 
 ### 3.1.2 (可选) metaSPAdes精细拼接
 
@@ -525,16 +746,20 @@
       -o temp/metaspades
     # 23M，contigs体积更大
     ls -sh temp/metaspades/contigs.fasta
-
+    
+    # 备份重要结果
+    mkdir -p result/metaspades/
+    ln -f temp/metaspades/contigs.fasta result/metaspades/
+    # 删除临时文件
+    rm -rf temp/metaspades
+    
 ### 3.1.3 QUAST评估
 
-    mkdir -p result/megahit/
-    ln temp/megahit/final.contigs.fa result/megahit/
-    quast.py result/megahit/final.contigs.fa -o result/megahit/quast -t 2
+    quast.py temp/megahit/final.contigs.fa -o result/megahit/quast -t 2
     # 生成report文本tsv/txt、网页html、PDF等格式报告
     
     # (可选) megahit和metaspades比较
-    time quast.py --label "megahit,metapasdes" \
+    quast.py --label "megahit,metapasdes" \
         temp/megahit/final.contigs.fa \
         temp/metaspades/contigs.fasta \
         -o temp/quast
@@ -543,52 +768,71 @@
     # metaquast based on silva, and top 50 species genome to access
     time metaquast.py result/megahit/final.contigs.fa -o result/megahit/metaquast
 
-## 3.2 基因预测、去冗余和定量 Gene prediction, cluster & quantitfy
+## 3.2 基因预测、去冗余和定量 
+
+    # Gene prediction, cluster & quantitfy
 
 ### 3.2.1 metaProdigal基因预测
 
+    # 输入文件：拼装好的序列文件 result/megahit/final.contigs.fa
+    # 输出文件：prodigal预测的基因序列 temp/prodigal/gene.fa
+    
     mkdir -p temp/prodigal
-    # prodigal的meta模式预测基因，7s，>和2>&1记录分析过程至gene.log
-    time prodigal -i  result/megahit/final.contigs.fa \
+    # prodigal的meta模式预测基因，35s，>和2>&1记录分析过程至gene.log
+    time prodigal -i result/megahit/final.contigs.fa \
         -d temp/prodigal/gene.fa \
         -o temp/prodigal/gene.gff \
         -p meta -f gff > temp/prodigal/gene.log 2>&1 
     # 查看日志是否运行完成，有无错误
     tail temp/prodigal/gene.log
-    # 统计基因数量19185
+    # 统计基因数量19221
     grep -c '>' temp/prodigal/gene.fa 
 
 ### 3.2.2 基因聚类/去冗余cd-hit
 
+    # 输入文件：prodigal预测的基因序列 temp/prodigal/gene.fa
+    # 输出文件：去冗余后的基因和蛋白序列：result/NR/nucleotide.fa
+    #                                     result/NR/protein.fa
+    
     mkdir -p result/NR
     # aS覆盖度，c相似度，G局部比对，g最优解，T多线程，M内存0不限制
-    # 2万基因2m，2千万需要2000h，可多线程加速
+    # 2万基因2m，2千万需要2000h，多线程可加速
     time cd-hit-est -i temp/prodigal/gene.fa \
         -o result/NR/nucleotide.fa \
         -aS 0.9 -c 0.95 -G 0 -g 0 -T 0 -M 0
-    # 统计非冗余基因数量19146，单次拼接结果数量下降不大，多批拼接冗余度高
-    grep -c '>' temp/prodigal/nucleotide.fa
+    # 统计非冗余基因数量19182，单次拼接结果数量下降不大，多批拼接冗余度高
+    grep -c '>' result/NR/nucleotide.fa
     # 翻译核酸为对应蛋白序列，emboss
-    transeq -sequence result/NR/nucleotide.fa -outseq result/NR/protein.fa -trim Y 
+    transeq -sequence result/NR/nucleotide.fa \
+      -outseq result/NR/protein.fa -trim Y 
     # 序列名自动添加了_1，为与核酸对应要去除
     sed -i 's/_1 / /' result/NR/protein.fa
 
 ### 3.2.3 基因定量salmon
 
+    # 输入文件：去冗余后的基因和蛋白序列：result/NR/nucleotide.fa
+    # 输出文件：Salmon定量后的结果：result/salmon/gene.count
+    #                               result/salmon/gene.TPM
+    
     mkdir -p temp/salmon
-    # 直接运行salmon找不到lib库，可使用程序完整路径解决问题(error while loading shared libraries: liblzma.so.0)
-    alias salmon="/conda2/envs/metagenome_env/share/salmon/bin/salmon"
+    salmon -v # 1.3.0
+
     # 建索引, -t序列, -i 索引，10s
-    time salmon index -t result/NR/nucleotide.fa -p 9 \
-        -i temp/salmon/index 
-    # 定量，l文库类型自动选择，p线程，--meta宏基因组模式, 2个任务并行12个样，共42s
+    time salmon index \
+      -t result/NR/nucleotide.fa \
+      -p 9 \
+      -i temp/salmon/index 
+    
+    # 定量，l文库类型自动选择，p线程，--meta宏基因组模式, 2个任务并行12个样，共48s
+    # 注意parallel中待并行的命令必须是双引号
     time parallel -j 2 \
-      "/conda2/envs/metagenome_env/share/salmon/bin/salmon quant \
-        -i temp/salmon/index -l A -p 3 --meta \
+      "salmon quant \
+        -i temp/salmon/index -l A -p 8 --meta \
         -1 temp/qc/{1}_1_kneaddata_paired_1.fastq \
         -2 temp/qc/{1}_1_kneaddata_paired_2.fastq \
         -o temp/salmon/{1}.quant" \
-        ::: `tail -n+2 result/metadata.txt | cut -f 1`
+        ::: `tail -n+2 result/metadata.txt|cut -f1`
+    
     # 合并
     mkdir -p result/salmon
     salmon quantmerge \
@@ -598,6 +842,7 @@
         --quants temp/salmon/*.quant \
         --column NumReads -o result/salmon/gene.count
     sed -i '1 s/.quant//g' result/salmon/gene.*
+    
     # 预览结果表格
     head -n3 result/salmon/gene.*
 
@@ -626,95 +871,116 @@
 
     # https://github.com/eggnogdb/eggnog-mapper/wiki/eggNOG-mapper-v2
     
-    # 进入Python3环境，emapper2必在python3中运行
-    source ${soft}/bin/activate humann3
-    emapper.py --version
-    
-    # diamond比对基因至eggNOG数据库, 1~5h
+    # 记录软件版本
+    emapper.py --version # 2.0.0
+
+    # diamond比对基因至eggNOG 5.0数据库, 10h
     mkdir -p temp/eggnog
-    time emapper.py -m diamond --no_annot --no_file_comments \
-      --data_dir ${db}/eggnog5 --cpu 3 -i result/NR/protein.fa \
-      -o temp/eggnog/protein --override
+    time emapper.py --no_annot --no_file_comments --override \
+      --data_dir ${db}/eggnog5 \
+      -i result/NR/protein.fa \
+      --cpu 9 -m diamond \
+      -o temp/eggnog/protein
 
     # 比对结果功能注释, 1h
-    time emapper.py --annotate_hits_table \
-      temp/eggnog/protein.emapper.seed_orthologs --no_file_comments \
-    	-o temp/eggnog/output --cpu 3 --data_dir ${db}/eggnog --override
+    time emapper.py \
+      --annotate_hits_table temp/eggnog/protein.emapper.seed_orthologs \
+      --data_dir ${db}/eggnog5 \
+      --cpu 9 --no_file_comments --override \
+      -o temp/eggnog/output
 
-    # 结果注释表头, 重点1序列名，9KO，16CAZy，21COG分类，22注释
+    # 添表头, 1列为ID，9列KO，16列CAZy，21列COG，22列描述
+    sed '1 i Name\tortholog\tevalue\tscore\ttaxonomic\tprotein\tGO\tEC\tKO\tPathway\tModule\tReaction\trclass\tBRITE\tTC\tCAZy\tBiGG\ttax_scope\tOG\tbestOG\tCOG\tdescription' \
+      temp/eggnog/output.emapper.annotations \
+      > temp/eggnog/output
+
+summarizeAbundance生成COG/KO/CAZy丰度汇总表
+
     mkdir -p result/eggnog
-    sed '1 i Name\tortholog\tevalue\tscore\ttaxonomic\tprotein\tGO\tEC\tKO\tPathway\tModule\tReaction\trclass\tBRITE\tTC\tCAZy\tBiGG\ttax_scope\tOG\tbestOG\tCOG\tdescription\t' \
-      temp/eggnog/output.emapper.annotations > temp/eggnog/output
-    head -n3 temp/eggnog/output
-
-
-Python3脚本整理COG/KO/CAZy数据表
-
+    # 显示帮助，需要Python3环境，可修改软件第一行指定python位置
+    summarizeAbundance.py -h
+    # 汇总，9列KO，16列CAZy按逗号分隔，21列COG按字母分隔，原始值累加
     summarizeAbundance.py \
       -i result/salmon/gene.TPM \
       -m temp/eggnog/output \
       -c '9,16,21' -s ',+,+*' -n raw \
       -o result/eggnog/eggnog
-    # eggnog.CAZy.raw.txt  eggnog.COG.raw.txt  eggnog.KO.raw.txt
-    # STAMP的spf格式，结合metadata.tsv进行COG/KO/Description差异比较
-    # KO
     sed -i 's/^ko://' result/eggnog/eggnog.KO.raw.txt
+    # eggnog.CAZy.raw.txt  eggnog.COG.raw.txt  eggnog.KO.raw.txt
+    
+    # 添加注释生成STAMP的spf格式，结合metadata.txt进行差异比较
+    # KO，v2021.1
     awk 'BEGIN{FS=OFS="\t"} NR==FNR{a[$1]=$2} NR>FNR{print a[$1],$0}' \
-      ${db}/eggnog/KO.anno \
-      result/eggnog/eggnog.KO.raw.txt| \
-      sed 's/^\t/Description\t/' > result/eggnog/eggnog.KO.TPM.spf
-    # CAZy
+      ${db}/kegg/KO_description.txt \
+      result/eggnog/eggnog.KO.raw.txt | \
+      sed 's/^\t/Unannotated\t/' \
+      > result/eggnog/eggnog.KO.TPM.spf
+    # CAZy，v2020.7
     awk 'BEGIN{FS=OFS="\t"} NR==FNR{a[$1]=$2} NR>FNR{print a[$1],$0}' \
-       ${db}/dbcan2/fam_description.txt result/eggnog/eggnog.CAZy.raw.txt | \
-      sed 's/^\t/Description\t/' > result/eggnog/eggnog.CAZy.TPM.spf
+       ${db}/dbcan2/CAZy_description.txt result/eggnog/eggnog.CAZy.raw.txt | \
+      sed 's/^\t/Unannotated\t/' > result/eggnog/eggnog.CAZy.TPM.spf
     # COG
     awk 'BEGIN{FS=OFS="\t"} NR==FNR{a[$1]=$2"\t"$3} NR>FNR{print a[$1],$0}' \
       ${db}/eggnog/COG.anno \
       result/eggnog/eggnog.COG.raw.txt | sed '1 s/^/Level1\tLevel2/'> \
       result/eggnog/eggnog.COG.TPM.spf
 
-### 3.3.2 碳水化合物dbCAN2(可选)
+### 3.3.2 (可选)碳水化合物dbCAN2
 
-    # 比对CAZy数据库, 用时10m; 加--sensitive更全但更慢1h
+    # 比对CAZy数据库, 用时2~18m; 加--sensitive更全但慢至1h
     mkdir -p temp/dbcan2
-    time diamond blastp --db ${db}/dbCAN2/CAZyDB.07312018 --query result/NR/protein.fa \
-    	--outfmt 6 --threads 2 --max-target-seqs 1 --quiet -e 1e-5 \
+    time diamond blastp \
+      --db ${db}/dbCAN2/CAZyDB.07312020 \
+      --query result/NR/protein.fa \
+      --threads 9 -e 1e-5 --outfmt 6 --max-target-seqs 1 --quiet \
     	--out temp/dbcan2/gene_diamond.f6 
     # 整理比对数据为表格
     mkdir -p result/dbcan2
-    # 提取基因对应基因家族，同一基因存在1对多，只取第一个
-    cut -f 1,2 temp/dbcan2/gene_diamond.f6 | uniq | sed 's/|/\t/g' | cut -f 1,3 | \
-    	sed 's/_[0-9]*$//' |sed '1 i Name\tKO' > temp/dbcan2/gene_fam.list
-    # 基因丰度矩阵末尾添加对应FAM编号，没注释的直接删除
-    awk 'BEGIN{FS=OFS="\t"} NR==FNR{a[$1]=$2} NR>FNR{print $0,a[$1]}' temp/dbcan2/gene_fam.list \
-      result/salmon/gene.count | sed '/\t$/d' > temp/dbcan2/gene_fam.count
-    # 按基因家族合并
-    Rscript ${db}/script/mat_gene2ko.R -i temp/dbcan2/gene_fam.count -o result/dbcan2/cazytab
-    # 结果中添加FAM注释，spf格式用于stamp分析
-    awk 'BEGIN{FS=OFS="\t"} NR==FNR{a[$1]=$2} NR>FNR{print a[$1],$0}' ${db}/dbCAN2/fam_description.txt \
-    	result/dbcan2/cazytab.count > result/dbcan2/cazytab.count.spf
-
-### 3.3.3 抗生素抗性ResFam
-
-    mkdir -p temp/resfam result/resfam
-    # 比对至抗生素数据库 1m
-    time diamond blastp --db ${db}/resfam/Resfams-proteins --query result/NR/protein.fa \
-    	--outfmt 6 --threads 2 --max-target-seqs 1 --quiet -e 1e-5 --sensitive \
-    	--out temp/resfam/gene_diamond.f6
-    # 提取基因对应基因家族
-    cut -f 1,2 temp/resfam/gene_diamond.f6 | uniq | \
-      sed '1 i Name\tResGeneID' > temp/resfam/gene_fam.list
-    # 基因丰度矩阵末尾添加对应FAM编号，没注释的直接删除
+    # 提取基因与dbcan分类对应表
+    perl /db/script/format_dbcan2list.pl \
+      -i temp/dbcan2/gene_diamond.f6 \
+      -o temp/dbcan2/gene.list
+    # 按对应表累计丰度
+    summarizeAbundance.py \
+      -i result/salmon/gene.TPM \
+      -m temp/dbcan2/gene.list \
+      -c 2 -s ',' -n raw \
+      -o result/dbcan2/TPM
+    # 添加注释生成STAMP的spf格式，结合metadata.txt进行差异比较
     awk 'BEGIN{FS=OFS="\t"} NR==FNR{a[$1]=$2} NR>FNR{print a[$1],$0}' \
-      temp/resfam/gene_fam.list result/salmon/gene.count | \
-    	sed '/^\t/d' > result/resfam/resfam.count
-    # 统计注释基因的比例, 488/19147=2.5%
-    wc -l result/salmon/gene.count result/resfam/resfam.count 
-    # 结果中添加FAM注释，spf格式用于stamp分析
-    awk 'BEGIN{FS=OFS="\t"} NR==FNR{a[$1]=$4"\t"$3"\t"$2} NR>FNR{print a[$1],$0}' \
-      ${db}/resfam/Resfams-proteins_class.tsv  result/resfam/resfam.count \
-      > result/resfam/resfam.count.spf
+       ${db}/dbcan2/CAZy_description.txt result/dbcan2/TPM.CAZy.raw.txt | \
+      sed 's/^\t/Unannotated\t/' > result/dbcan2/TPM.CAZy.raw.spf
+    # 检查未注释数量，有则需要检查原因
+    grep 'Unannotated' result/dbcan2/TPM.CAZy.raw.spf|wc -l
 
+### 3.3.3 抗生素抗性CARD
+
+数据库：https://card.mcmaster.ca/
+
+参考文献：http://doi.org/10.1093/nar/gkz935
+
+软件使用Github: https://github.com/arpcard/rgi
+
+    # 启动rgi环境
+    source ${soft}/bin/activate rgi
+    # 加载数据库
+    rgi load -i ${db}/card/card.json \
+      --card_annotation ${db}/card/card_database_v3.1.0.fasta --local
+    
+    # 蛋白注释
+    mkdir -p result/card
+    cut -f 1 -d ' ' result/NR/protein.fa > temp/protein.fa
+    # --include_loose 会显著增加上百倍结果
+    time rgi main \
+      --input_sequence temp/protein.fa \
+      --output_file result/card/protein \
+      --input_type protein --clean \
+      --num_threads 9 --alignment_tool DIAMOND
+      
+
+结果说明：
+- protein.json，在线可视化
+- protein.txt，注释基因列表
 
 
 # 四、挖掘单菌基因组/分箱(Binning)
@@ -729,11 +995,32 @@ Python3脚本整理COG/KO/CAZy数据表
 
 ### 4.1.1 准备数据和环境变量
 
+    # 流程: https://github.com/bxlab/metaWRAP/blob/master/Usage_tutorial.md
+    > 
+    # 输入数据：质控后的FASTQ序列，文件名格式必须为*_1.fastq和*_2.fastq
+    #           C1_1_kneaddata_paired_1.fastq  -> C1_1_1.fq
+    #           C1_1_kneaddata_paired_2.fastq  -> C1_1_2.fq
+    #           放置到 binning/temp/qc 目录下
+    
+    # 拼装获得的contig文件：result/megahit/final.contigs.fa
+    #           放置到 binning/temp/megahit 目录下
+    #        
+    
+    # 中间输出文件：
+    #     Binning结果：binning/temp/binning
+    #     提纯后的Bin统计结果：binning/temp/bin_refinement/metawrap_50_10_bins.stats
+    #     Bin定量结果文件：binning/temp/bin_quant/bin_abundance_heatmap.png
+    #                      binning/temp/bin_quant/bin_abundance_table.tab (数据表)
+    #     Bin物种注释结果：binning/temp/bin_classify/bin_taxonomy.tab
+    #     Prokka基因预测结果：binning/temp/bin_annotate/prokka_out/bin.10.ffn 核酸序列
+    #     Bin可视化结果：binning/temp/bloblogy/final.contigs.binned.blobplot (数据表)
+    #                    binning/temp/bloblogy/blobplot_figures (可视化图)
+
     # 准备原始数据从头分析，详见公众号或官网教程
     # 这里我们从质控后数据和拼接结果开始
     cd ${wd}
     mkdir -p binning && cd binning
-    mkdir -p temp
+    mkdir -p temp && cd temp
     # 这里基于质控clean数据和拼接好的contigs，自己链接自上游分析
     # 7G质控数据，输入数据文件名格式必须为*_1.fastq和*_2.fastq
     mkdir -p seq
@@ -770,6 +1057,7 @@ Python3脚本整理COG/KO/CAZy数据表
     nohup metawrap binning -o temp/binning -t 2 -a temp/megahit/final.contigs.fa \
       --metabat2 --maxbin2 --concoct temp/qc/ERR*.fastq &
     # 用自己的文件，替换输出文件名为 *1_kneaddata_paired*.fastq 
+	# 如果想接上上面的流程使用自己的文件做分析，则把ERR*.fastq替换为 *1_kneaddata_paired*.fastq
     # 输出文件夹 temp/binning 包括3种软件结果和中间文件
 
 ### 4.1.3 Bin提纯
@@ -792,6 +1080,7 @@ Python3脚本整理COG/KO/CAZy数据表
 
     # 使用salmon计算每个bin在样本中相对丰度
     # 耗时3m，系统用时10m，此处可设置线程，但salmon仍调用全部资源
+	
     # 需要指定输出文件夹，包括4.3中的参数的输出目录
     metawrap quant_bins -b temp/bin_refinement/metawrap_50_10_bins -t 8 \
       -o temp/bin_quant -a temp/megahit/final.contigs.fa temp/qc/ERR*.fastq
@@ -806,7 +1095,12 @@ Python3脚本整理COG/KO/CAZy数据表
     metawrap classify_bins -b temp/bin_refinement/metawrap_50_10_bins \
       -o temp/bin_classify -t 2
     # 注释结果见`temp/bin_classify/bin_taxonomy.tab`
-    
+
+    # export LD_LIBRARY_PATH=/conda2/envs/metagenome_env/lib/:${LD_LIBRARY_PATH}
+     # 这是动态链接库找不到时的一个简单的应急策略
+    ln -s /conda2/envs/metagenome_env/lib/libssl.so.1.0.0 .
+    ln -s /conda2/envs/metagenome_env/lib/libcrypto.so.1.0.0 .
+	
     # 基于prokka基因注释，4m
     metaWRAP annotate_bins -o temp/bin_annotate \
       -b temp/bin_refinement/metawrap_50_10_bins  -t 2
@@ -874,20 +1168,24 @@ Python3脚本整理COG/KO/CAZy数据表
 
 ## 4.2 dRep去冗余种/株基因组集
 
-    # 进入虚拟环境，没用用conda安装
-    conda activate drep
+    # 进入虚拟环境，没有用conda安装
+    
+    # conda activate drep
+    source ${soft}/bin/activate drep
+    cd ${wd}/binning
 
 合并所有bin至同一目录
 
     mkdir -p temp/drep_in
     # 混合组装分箱并重命名
     ln -s `pwd`/temp/bin_refinement/metawrap_50_10_bins/bin.* temp/drep_in/
-    rename 's/bin/mix_all/' temp/drep_in/bin.*
+    rename 'bin' 'mix_all' temp/drep_in/bin.*
+    
     # 单样品组装分箱结果重命名
-    for i in `ls seq/|cut -f1 -d '_'|uniq`;do
-        ln -s `pwd`/temp/bin_refinement_${i}/metawrap_50_10_bins/bin.* temp/drep_in/
-        rename "s/bin./s_${i}./" temp/drep_in/bin.*
-    done
+    # for i in `ls seq/|cut -f1 -d '_'|uniq`;do
+    #    ln -s `pwd`/temp/bin_refinement_${i}/metawrap_50_10_bins/bin.* temp/drep_in/
+    #    rename "bin." "s_${i}" temp/drep_in/bin.*
+    # done
     # 统计混合和单样本来源数据，10个混，5个单
     ls temp/drep_in/|cut -f 1 -d '_'|uniq -c
     # 统计混合批次/单样本来源
@@ -896,7 +1194,7 @@ Python3脚本整理COG/KO/CAZy数据表
 按种水平去冗余：15个为10个，8个来自混拼，2个来自单拼
 
     mkdir -p temp/drep95
-    # 15个，10min
+    # 15个，40min
     dRep dereplicate temp/drep95/ \
       -g temp/drep_in/*.fa \
       -sa 0.95 -nc 0.30 -comp 50 -con 10 -p 24
@@ -909,8 +1207,9 @@ Python3脚本整理COG/KO/CAZy数据表
 
 (可选)按株水平汇总
 
-    mkdir -p temp/drep99
-    dRep dereplicate temp/drep99/ \
+    # 20-30min
+    mkdir -p temp/drep95
+    dRep dereplicate temp/drep95/ \
       -g temp/drep_in/*.fa \
       -sa 0.99 -nc 0.30 -comp 50 -con 10 -p 24
 
@@ -918,20 +1217,21 @@ Python3脚本整理COG/KO/CAZy数据表
 
 启动软件所在虚拟环境
 
-    conda activate gtdbtk
+	# gtdbtk与drep安装在了同一个环境
+    # conda activate gtdbtk
 
 细菌基因组物种注释
 
 以上面鉴定的10个种为例，注意扩展名要与输入文件一致，可使用压缩格式gz。主要结果文件描述：此9个细菌基因组，结果位于tax.bac120开头的文件，如物种注释 tax.bac120.summary.tsv。古菌结果位于tax.ar122开头的文件中。
 
     mkdir -p temp/gtdb_classify
-    # 10个基因组，24p，26min
+    # 10个基因组，24p，100min 60G内存
     gtdbtk classify_wf \
         --genome_dir temp/drep95/dereplicated_genomes \
         --out_dir temp/gtdb_classify \
         --extension fa \
         --prefix tax \
-        --cpus 2
+        --cpus 40
 
 
 多序列对齐结果建树
@@ -952,7 +1252,7 @@ Python3脚本整理COG/KO/CAZy数据表
 
     mkdir -p result/itol
     # 制作分类学表
-    tail -n+2 temp/gtdb_classify/tax.bac120.summary.tsv|cut -f 1-2|sed 's/;/\t/g'|sed '1 s/^/ID\tKingdom\tPhylum\tClass\tOrder\tFamily\tGenus\tSpecies\n/' > result/itol/tax.txt
+    tail -n+2 temp/gtdb_classify/tax.bac120.summary.tsv|cut -f 1-2|sed 's/;/\t/g'|sed '1 s/^/ID\tDomain\tPhylum\tClass\tOrder\tFamily\tGenus\tSpecies\n/' > result/itol/tax.txt
     # 基因组评估信息
     sed 's/,/\t/g;s/.fa//' temp/drep95/data_tables/Widb.csv|cut -f 1-7,11|sed '1 s/genome/ID/' > result/itol/genome.txt
     # 整合注释文件
@@ -962,7 +1262,8 @@ table2itol制作注释文件
 
     cd result/itol/
     # 设置脚本位置
-    db=~/meta/script/table2itol
+    db=./table2itol-master
+    #db=/db
     
     ## 方案1. 分类彩带、数值热图、种标签
     # -a 找不到输入列将终止运行（默认不执行）-c 将整数列转换为factor或具有小数点的数字，-t 偏离提示标签时转换ID列，-w 颜色带，区域宽度等， -D输出目录，-i OTU列名，-l 种标签替换ID
@@ -978,194 +1279,140 @@ table2itol制作注释文件
     ## 方案4. 将整数转化成因子生成注释文件
     Rscript ${db}/table2itol.R -a -c factor -D plan4 -i ID -l Genus -t %s -w 0 annotation.txt
 
+## 4.5 PROKKA单菌基因组功能注释
+
+    conda activate metawrap
+    i=bin1
+    time prokka result/contig/${db}.fa \
+      --kingdom Archaea,Bacteria --cpus 9 \
+      --outdir temp/prokka/${db} 
     
-# 附录1. 测试版humann3
+# 附录
 
-教程：https://github.com/LangilleLab/microbiome_helper/wiki/Metagenomics-Tutorial-(humann3)
+## 质控KneadData
 
-    # 进入Python3环境，humann3必在python3中运行
-    source ${soft}/bin/activate humann3
+### 去宿主后双端不匹配——序列改名
 
-## 2.1 合并质控文件为humann3输入
+(可选) 序列改名，解决NCBI SRA数据双端ID重名问题，详见[《MPB：随机宏基因组测序数据质量控制和去宿主的分析流程和常见问题》](https://mp.weixin.qq.com/s/ovL4TwalqZvwx5qWb5fsYA)。
 
-    # humann3也要求双端序列合并的文件作为输入
-    mkdir -p temp/concat
+    gunzip seq/*.gz
+    sed -i '1~4 s/$/\\1/g' seq/*_1.fq
+    sed -i '1~4 s/$/\\2/g' seq/*_2.fq
+    # pigz是并行版的gzip，没装可替换为gzip
+    pigz seq/*.fq
+
+### Java不匹配——重装Java运行环境
+
+若出现错误 Unrecognized option: -d64，则安装java解决：
     
-    # for循环根据实验设计样本名批量双端序列合并
-    # 注意星号和问号，分别代表多个和单个字符，当然大家更不能溜号~~~
-    for i in `tail -n+2 result/metadata.txt | cut -f 1`;do 
-      cat temp/qc/${i}*_1_kneaddata_paired_?.fastq \
-      > temp/concat/${i}.fq; 
-    done
+    conda install -c cyclus java-jdk
+
+## 物种组成metaphlan2
+
+### 无法找到数据库
+
+正常在首次运行时，会自动下载数据库。有时会失败，解决方法：
+
+方法1. 使用软件安装的用户运行一下程序即可下载成功
+
+方法2. 将我们预下载好的数据索引文件,链接到软件安装目录
+
+    db=~/db
+    soft=~/miniconda2
+    mkdir -p ${soft}/bin/db_v20
+    ln -s ${db}/metaphlan2/* ${soft}/bin/db_v20/
+    mkdir -p ${soft}/bin/databases
+    ln -s ${db}/metaphlan2/* ${soft}/bin/databases/
+
+### 生成数据绘制样品间共有或特有物种信息网络图
+
+    awk 'BEGIN{OFS=FS="\t"}{if(FNR==1) {for(i=9;i<=NF;i++) a[i]=$i; print "Tax\tGroup"} \
+       else {for(i=9;i<=NF;i++) if($i>0.05) print "Tax_"FNR, a[i];}}' \
+       result/metaphlan2/taxonomy.spf > result/metaphlan2/taxonomy_highabundance.tsv
+       
+    awk 'BEGIN{OFS=FS="\t"}{if(FNR==1) {print "Tax\tGrpcombine";} else a[$1]=a[$1]==""?$2:a[$1]$2;}END{for(i in a) print i,a[i]}' \
+       result/metaphlan2/taxonomy_highabundance.tsv > result/metaphlan2/taxonomy_group.tsv
     
-    # 查看样品数量和大小
-    ls -sh temp/concat/*.fq 
+    cut -f 2 result/metaphlan2/taxonomy_group.tsv | tail -n +2 | sort -u >group
+    
+    for i in `cat group`; do printf "#%02x%02x%02x\n" $((RANDOM%256)) $((RANDOM%256)) $((RANDOM%256)); done >colorcode
+    
+    paste group colorcode >group_colorcode
+    
+    awk 'BEGIN{OFS=FS="\t"}ARGIND==1{a[$1]=$2;}ARGIND==2{if(FNR==1) {print $0, "Grpcombinecolor"} else print $0,a[$2]}' \
+       group_colorcode result/metaphlan2/taxonomy_group.tsv > result/metaphlan2/taxonomy_group2.tsv
+    
+    awk 'BEGIN{OFS=FS="\t"}{if(FNR==1) {print "Tax",$1,$2,$3,$4, $5, $6, $7, $8 } else print "Tax_"FNR, $1,$2,$3,$4, $5,$6, $7, $8}' \
+       result/metaphlan2/taxonomy.spf > result/metaphlan2/taxonomy_anno.tsv
 
+## 物种分类Kraken2
 
-## 2.2 humann3计算物种和功能组成
+    # 方法2. krakentools中combine_mpa.py，需手动安装脚本，且结果还需调整样本名
+    combine_mpa.py \
+      -i `tail -n+2 result/metadata.txt|cut -f1|sed 's/^/temp\/kraken2\//;s/$/.mpa/'|tr '\n' ' '` \
+      -o temp/kraken2/combined_mpa
 
-    注意：humann3的命令为humann，以区别于humann2
+## 组装Megahit
 
-    # 物种组成调用MetaPhlAn3, bowtie2比对至核酸序列；
-    # 功能组成为humann3调用diamond比对至蛋白库11Gb
-    # 输入文件：temp/concat/*.fq 每个样品质控后双端合并后的fastq序列
-    # 输出文件：temp/humann3/ 目录下
-    #           C1_pathabundance.tsv
-    #           C1_pathcoverage.tsv
-    #           C1_genefamilies.tsv
-    # 整合后的输出：
-    #           result/metaphlan2/taxonomy.tsv 物种丰度表
-    #           result/metaphlan2/taxonomy.spf 物种丰度表（用于stamp分析）
-    #           result/humann3/pathabundance_relab_stratified.tsv 通路丰度表
-    #           result/humann3/pathabundance_relab_unstratified.tsv 通路丰度表
-    #           stratified(每个菌的功能组成)和unstratified(功能组成)
+### 数据太大导致程序中断
 
-    # (可选)单样本运行，~1h
-    time humann --input temp/concat/C2.fq  \
-      --output temp/ --threads 16
+报错信息：126 - Too many vertices in the unitig graph (8403694648 >= 4294967294), you may increase the kmer size to remove tons
 
-    # 多样本并行计算，1-6h
-    mkdir -p temp/humann3
-    time parallel -j 2 \
-      'humann --input {}  \
-      --output temp/humann3/ ' \
-      ::: temp/concat/*.fq > temp/log
+解决方法：需要增加k-mer
 
-## 2.3 物种组成表
+添加参数： --k-min 29 --k-max 141 --k-step 20
 
-    mkdir -p result/metaphlan3
+## 组装MetaSpdades
 
-    # 样品结果合并
-    merge_metaphlan_tables.py temp/humann3/*_humann_temp/*_metaphlan_bugs_list.tsv | \
-      sed 's/_metaphlan_bugs_list//g' > result/metaphlan3/taxonomy.tsv
-    head -n3 result/metaphlan3/taxonomy.tsv
-    # 结果比metaphlan2多了一行注释，一列NCBI_tax_id，调整为标准表格
-    sed '/^#/d' result/metaphlan3/taxonomy.tsv | cut -f 1,3- > result/metaphlan3/taxonomy.txt
+### 二三代混合组装
 
-    # 转换为stamp的spf格式
-    metaphlan_to_stamp.pl result/metaphlan3/taxonomy.txt \
-      > result/metaphlan3/taxonomy.spf
-    head -n3 result/metaphlan3/taxonomy.spf
-    # 下载metadata.txt和taxonomy.spf使用stamp分析
+    # 3G数据，耗时3h
+    i=SampleA
+    time metaspades.py -t 48 -m 500 \
+      -1 seq/${i}_1.fastq -2 seq/${i}L_2.fastq \
+      --nanopore seq/${i}.fastq \
+      -o temp/metaspades_${i}
 
-## 2.4 功能组成分析
+### 基因定量salmon
 
-    mkdir -p result/humann3
+### 找不到库文件liblzma.so.0
 
-### 2.4.1 功能组成合并、标准化和分层
+- 报错信息：error while loading shared libraries: liblzma.so.0
+- 问题描述：直接运行salmon报告，显示找不到lib库，
+- 解决方法：可使用程序完整路径解决问题，`alias salmon="${soft}/envs/metagenome_env/share/salmon/bin/salmon"`
 
-    # 合并通路丰度(pathabundance)，含功能和物种组成
-    humann_join_tables \
-      --input temp/humann3 \
-      --file_name pathabundance \
-      --output result/humann3/pathabundance.tsv
-    # 可选基因家族(genefamilies 太多)，通路覆盖度(pathcoverage)层面
-    # 删除列名多余信息
-    sed -i 's/_Abundance//g' result/humann3/pathabundance.tsv
-    # 预览文件头尾格式
-    head -n3 result/humann3/pathabundance.tsv
-    tail -n3 result/humann3/pathabundance.tsv
+## 数据库
 
-    # 标准化为相对丰度(1)relab或百万比cpm
-    humann_renorm_table \
-      --input result/humann3/pathabundance.tsv \
-      --units relab \
-      --output result/humann3/pathabundance_relab.tsv
-    head -n5 result/humann3/pathabundance_relab.tsv
+### 抗生素抗性ResFam
 
-    # 分层结果：功能和对应物种表(stratified)和功能组成表(unstratified)
-    humann_split_stratified_table \
-      --input result/humann3/pathabundance_relab.tsv \
-      --output result/humann3/ 
-    # 可以使用stamp进行统计分析
+数据库：http://www.dantaslab.org/resfams
 
-### 2.4.2 添加分组和差异比较
+参考文献：http://doi.org/10.1038/ismej.2014.106
 
-    # 在通路丰度中添加分组
-    ## 提取样品列表
-    head -n1 result/humann3/pathabundance.tsv | sed 's/# Pathway/SampleID/' | tr '\t' '\n' > temp/header
-    ## 对应分组
-    awk 'BEGIN{FS=OFS="\t"}NR==FNR{a[$1]=$2}NR>FNR{print a[$1]}' result/metadata.txt temp/header | tr '\n' '\t'|sed 's/\t$/\n/' > temp/group
-    # 合成样本、分组+数据
-    cat <(head -n1 result/humann3/pathabundance.tsv) temp/group <(tail -n+2 result/humann3/pathabundance.tsv) > result/humann3/pathabundance.pcl
-
-    # 组间比较，样本量少无差异
-    humann_associate --input result/humann3/pathabundance.pcl  \
-        --focal-metadatum Group --focal-type categorical \
-        --last-metadatum Group --fdr 0.05 \
-        --output result/humann3/associate.txt
-
-### 2.4.3 通路物种组成柱状图
-
-    # barplot展示腺苷核苷酸合成的物种组成
-    humann_barplot \
-        --input result/humann3/pathabundance.pcl \
-        --focal-feature PWY-7219 \
-        --focal-metadatum Group --last-metadatum Group \
-        --output result/humann3/barplot1.pdf
-    # --sort sum 按丰度排序
-    humann_barplot --sort sum \
-        --input result/humann3/pathabundance.pcl \
-        --focal-feature PWY-7219 \
-        --focal-metadatum Group --last-metadatum Group \
-        --output result/humann3/barplot2.pdf
-    # --sort sum metadata 按丰度排序
-    humann_barplot --sort sum metadata \
-        --input result/humann3/pathabundance.pcl \
-        --focal-feature PWY-7219 \
-        --focal-metadatum Group --last-metadatum Group \
-        --output result/humann3/barplot3.pdf
-
-# 附录2. emapper+eggNOG4.5(COG/KEGG)
-
-    # diamond比对基因至eggNOG数据库, 1~5h
-    mkdir -p temp/eggnog
-    time emapper.py -m diamond --no_annot --no_file_comments \
-      --data_dir ${db}/eggnog --cpu 6 -i result/NR/protein.fa \
-      -o temp/eggnog/protein --override
-
-    # 比对结果功能注释, 1h
-    time emapper.py --annotate_hits_table \
-      temp/eggnog/protein.emapper.seed_orthologs --no_file_comments \
-    	-o temp/eggnog/output --cpu 2 --data_dir ${db}/eggnog --override
-
-    # 结果注释表头, 重点1序列名，7KO，12COG分类，13注释
-    mkdir -p result/eggnog
-    sed '1 i Name\teggNOG\tEvalue\tScore\tGeneName\tGO\tKO\tBiGG\tTax\tOG\tBestOG\tCOG\tAnnotation' \
-      temp/eggnog/output.emapper.annotations > temp/eggnog/output
-
-    # 1.整理COG表
-    # 提取12列COG分类
-    cut -f 1,12 temp/eggnog/output|cut -f 1 -d ','|grep -v -P '\t$' \
-      >temp/eggnog/1cog.list
-    # 基因丰度矩阵末尾添加对应cog编号，没注释的直接删除
-    awk 'BEGIN{FS=OFS="\t"} NR==FNR{a[$1]=$2} NR>FNR{print $0,a[$1]}' \
-      temp/eggnog/1cog.list result/salmon/gene.count | \
-    	sed '/\t$/d' | sed '1 s/COG/KO/' > temp/eggnog/gene_cog.count
-    # 按COG类型合并表格，输出count和RPM值，n设置标准化单位，默认1M，可选100/1
-    Rscript ${db}/script/mat_gene2ko.R -i temp/eggnog/gene_cog.count \
-      -o result/eggnog/cogtab -n 1000000
-    # STAMP的spf格式，结果metadata.tsv进行KO或Description差异比较
-    awk 'BEGIN{FS=OFS="\t"} NR==FNR{a[$1]=$2"\t"$3} NR>FNR{print a[$1],$0}' \
-      ${db}/eggnog/COG.anno result/eggnog/cogtab.count > \
-      result/eggnog/cogtab.count.spf
-
-    # 2. 整理KO表
-    # 提取基因KO表，基因1对多个KO时只提取第一个KO
-    cut -f 1,7 temp/eggnog/output|cut -f 1 -d ','|grep -v -P '\t$' \
-      > temp/eggnog/2ko.list
-    # 基因丰度矩阵末尾添加对应KO编号，没注释的直接删除
-    awk 'BEGIN{FS=OFS="\t"} NR==FNR{a[$1]=$2} NR>FNR{print $0,a[$1]}' \
-      temp/eggnog/2ko.list \
-      result/salmon/gene.count | sed '/\t$/d' > temp/eggnog/gene_ko.count
-    # 合并基因表为KO表，输出count值和tpm值
-    Rscript ${db}/script/mat_gene2ko.R -i temp/eggnog/gene_ko.count \
-      -o result/eggnog/kotab -n 1000000
-    # STAMP的spf格式，结果metadata.txt进行KO或Description差异比较
-    awk 'BEGIN{FS=OFS="\t"} NR==FNR{a[$1]=$2} NR>FNR{print a[$1],$0}' \
-      ${db}/eggnog/KO.anno result/eggnog/kotab.count | \
-      sed 's/^\t/Undescription\t/' > result/eggnog/kotab.count.spf
-      
+    mkdir -p temp/resfam result/resfam
+    # 比对至抗生素数据库 1m
+    time diamond blastp \
+      --db ${db}/resfam/Resfams-proteins \
+      --query result/NR/protein.fa \
+      --threads 9 --outfmt 6 --sensitive \
+      -e 1e-5 --max-target-seqs 1 --quiet \
+      --out temp/resfam/gene_diamond.f6
+    # 提取基因对应抗性基因列表
+    cut -f 1,2 temp/resfam/gene_diamond.f6 | uniq | \
+      sed '1 i Name\tResGeneID' > temp/resfam/gene_fam.list
+    # 统计注释基因的比例, 488/19182=2.5%
+    wc -l temp/resfam/gene_fam.list  result/salmon/gene.count 
+    # 按列表累计丰度
+    summarizeAbundance.py \
+      -i result/salmon/gene.TPM \
+      -m temp/resfam/gene_fam.list \
+      -c 2 -s ',' -n raw \
+      -o result/resfam/TPM
+    # 结果中添加FAM注释，spf格式用于stamp分析
+    awk 'BEGIN{FS=OFS="\t"} NR==FNR{a[$1]=$4"\t"$3"\t"$2} NR>FNR{print a[$1],$0}' \
+      ${db}/resfam/Resfams-proteins_class.tsv  result/resfam/TPM.ResGeneID.raw.txt \
+      > result/resfam/TPM.ResGeneID.raw.spf
+    
 # 版本更新记录
 
 ## 1.08 2020.7.20
@@ -1174,7 +1421,7 @@ table2itol制作注释文件
 2. 提供HUMAnN3测试版的安装和分析流程(附录1)；
 3. eggNOG升级为emapper 2.0和eggNOG 5.0流程，结果列表从13列变为22列，新增CAZy注释。emapper 1.0版本见附录2。
 
-## 1.08 2020.10.16
+## 1.09 2020.10.16
 
 1. 新增二、三代混合组装OPERA-MS软件使用 (31Megahit)
 2. 新增eggNOG-mapper结果COG/KO/CAZy整理脚本summarizeAbundance.py，删除旧版Shell+R代码 (32Annotation)
@@ -1182,5 +1429,15 @@ table2itol制作注释文件
 4. 新增dRep实现基因组去冗余 (34Genomes)
 5. 新增GTDB-Tk基因组物种注释和进化树构建 (34Genomes)
 
+## 1.10 2021.1.22
 
-
+1. 增加删除中间文件部分，节约空间，防止硬盘写满；
+2. 正文的补充分析方法、常见问题移至附录，按软件名、问题/方法分级索引；
+3. 软件使用前，增加检查软件版本命令，方便文章方法中撰写准确版本；
+4. 删除不稳定的humann3、过时的eggnog版本教程；
+5. 增加kraken2新环境, 增加bracken, krakentools新工具；
+6. kraken2结果新增beta多样性PCoA，物种组成堆叠柱状图；
+7. 增metaspades二、三代组装代码示例；
+8. 新增KEGG层级注释整理代码；
+9. 更新dbCAN2中2018版为2020版；
+10. 新增CARD本地分析流程；
