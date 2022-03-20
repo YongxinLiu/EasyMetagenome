@@ -1,0 +1,3 @@
+Sample	input_read_pairs	surviving	surviving_pct	forward_only_surviving	forward_only_surviving_pct	reverse_only_surviving	reverse_only_surviving_pct	dropped	dropped_pct
+temp | qc | decompressed__mns1ymd_C1_1	75000.0	65252.0	87.0	5124.0	6.83	1630.0	2.17	2994.0	3.99
+temp | qc | decompressed_gzoed9nx_C2_1	75000.0	47231.0	62.97	2056.0	2.74	7418.0	9.89	18295.0	24.39

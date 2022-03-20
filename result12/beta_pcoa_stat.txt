@@ -1,0 +1,6 @@
+Sun Apr 25 22:49:14 2021
+Cancer	Normal	0.315368463153685
+
+Sat May 08 16:40:03 2021
+Cancer	Normal	0.316668333166683
+

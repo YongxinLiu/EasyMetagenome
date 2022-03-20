@@ -1,0 +1,49 @@
+Sample	Bowtie 2_overall_alignment_rate	Trimmomatic_dropped_pct	FastQC_percent_duplicates	FastQC_percent_fails	FastQC_avg_sequence_length	FastQC_percent_gc	FastQC_total_sequences
+C1_1_kneaddata.trimmed.single.1	0.66						
+C2_1_kneaddata.trimmed.single.1	33.74						
+C3_1_kneaddata.trimmed.single.1	40.88						
+C4_1_kneaddata.trimmed.single.1	5.83						
+C5_1_kneaddata.trimmed.single.1	0.3						
+C6_1_kneaddata.trimmed.single.1	0.06						
+N1_1_kneaddata.trimmed.single.1	10.55						
+N2_1_kneaddata.trimmed.single.1	29.45						
+N3_1_kneaddata.trimmed.single.1	2.31						
+N4_1_kneaddata.trimmed.single.1	1.17						
+N5_1_kneaddata.trimmed.single.1	0.41						
+N6_1_kneaddata.trimmed.single.1	0.22						
+decompressed_2sNG6j_N1_1		9.62					
+decompressed_5j_q_v_N5_1		5.02					
+decompressed_6BnnUg_C3_1		22.33					
+decompressed_6dYQSn_N6_1		2.95					
+decompressed_GKa2Bx_N2_1		25.71					
+decompressed_IGjoBj_C2_1		21.64					
+decompressed_OZsEzE_C1_1		4.01					
+decompressed_QyHvZF_N3_1		6.08					
+decompressed_WI375b_N4_1		2.83					
+decompressed_alt1Jq_C5_1		4.22					
+decompressed_cYQQrC_C4_1		8.49					
+decompressed_chSNQP_C6_1		3.56					
+temp | qc | C1_1_kneaddata_paired_1			0.06326281843571735	0.0	98.60692187813422	36.0	64809.0
+temp | qc | C1_1_kneaddata_paired_2			0.05709083614929966	0.0	98.30319862981993	36.0	64809.0
+temp | qc | C2_1_kneaddata_paired_1			0.5332213029989674	9.090909090909092	95.42534901758015	52.0	30944.0
+temp | qc | C2_1_kneaddata_paired_2			0.5332213029989674	9.090909090909092	96.48888314374354	52.0	30944.0
+temp | qc | C3_1_kneaddata_paired_1			0.26533533498586337	0.0	97.94351150368327	41.0	28643.0
+temp | qc | C3_1_kneaddata_paired_2			0.2967566246552309	0.0	97.38295569598156	41.0	28643.0
+temp | qc | C4_1_kneaddata_paired_1			0.1032389018180595	0.0	97.90677002222262	42.0	57149.0
+temp | qc | C4_1_kneaddata_paired_2			0.08224115907540863	0.0	97.73875308404347	42.0	57149.0
+temp | qc | C5_1_kneaddata_paired_1			0.10980493476294839	0.0	98.33380700167938	37.0	61928.0
+temp | qc | C5_1_kneaddata_paired_2			0.10657537785814952	0.0	98.44141583774706	37.0	61928.0
+temp | qc | C6_1_kneaddata_paired_1			0.11501127110456366	0.0	98.55542776525432	40.0	65211.0
+temp | qc | C6_1_kneaddata_paired_2			0.1472144270138358	0.0	98.24321050129579	40.0	65211.0
+temp | qc | N1_1_kneaddata_paired_1			0.05404196638217229	0.0	98.4702769184898	41.0	53662.0
+temp | qc | N1_1_kneaddata_paired_2			0.057768998546464445	0.0	97.94409451753569	41.0	53662.0
+temp | qc | N2_1_kneaddata_paired_1			0.09412355285037677	9.090909090909092	97.08505631725912	48.0	31873.0
+temp | qc | N2_1_kneaddata_paired_2			0.11922316694381152	9.090909090909092	96.1494682019264	48.0	31873.0
+temp | qc | N3_1_kneaddata_paired_1			0.07585251632478673	0.0	98.2387045709386	42.0	60644.0
+temp | qc | N3_1_kneaddata_paired_2			0.07255458083238864	0.0	97.65803706879494	42.0	60644.0
+temp | qc | N4_1_kneaddata_paired_1			0.141746616732064	0.0	98.86358007191775	41.0	67021.0
+temp | qc | N4_1_kneaddata_paired_2			0.12831798988376875	0.0	98.53442950716939	41.0	67021.0
+temp | qc | N5_1_kneaddata_paired_1			0.08569116270213328	9.090909090909092	97.7648888395195	45.0	63017.0
+temp | qc | N5_1_kneaddata_paired_2			0.07616992240188836	9.090909090909092	97.53107891521336	44.0	63017.0
+temp | qc | N6_1_kneaddata_paired_1			0.023882735767372765	0.0	98.62396632534256	44.0	66994.0
+temp | qc | N6_1_kneaddata_paired_2			0.005970683941853849	0.0	98.19664447562468	44.0	66994.0

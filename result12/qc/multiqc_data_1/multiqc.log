@@ -1,0 +1,220 @@
+[2020-05-02 14:18:45,635] multiqc                                            [DEBUG  ]  No MultiQC config found: /usr/local/lib/python3.5/dist-packages/multiqc_config.yaml
+[2020-05-02 14:18:45,636] multiqc                                            [DEBUG  ]  No MultiQC config found: /mnt/bai/yongxin/.multiqc_config.yaml
+[2020-05-02 14:18:45,636] multiqc                                            [DEBUG  ]  No MultiQC config found: multiqc_config.yaml
+[2020-05-02 14:18:45,636] multiqc                                            [DEBUG  ]  Command used: /mnt/bai/yongxin/bin/multiqc -d temp/qc/ -o result/qc/
+[2020-05-02 14:18:48,644] multiqc                                            [WARNING]  MultiQC Version v1.8 now available!
+[2020-05-02 14:18:48,644] multiqc                                            [INFO   ]  This is MultiQC v1.4
+[2020-05-02 14:18:48,644] multiqc                                            [DEBUG  ]  Command     : /mnt/bai/yongxin/bin/multiqc -d temp/qc/ -o result/qc/
+[2020-05-02 14:18:48,644] multiqc                                            [DEBUG  ]  Working dir : /mnt/bai/yongxin/ehbio/train/2005meta
+[2020-05-02 14:18:48,645] multiqc                                            [INFO   ]  Template    : default
+[2020-05-02 14:18:48,645] multiqc                                            [INFO   ]  Prepending directory to sample names
+[2020-05-02 14:18:48,645] multiqc                                            [INFO   ]  Searching 'temp/qc/'
+[2020-05-02 14:18:48,645] multiqc                                            [DEBUG  ]  Analysing modules: afterqc, custom_content, conpair, peddy, methylQA, qualimap, preseq, quast, qorts, rna_seqc, rsem, rseqc, busco, goleft_indexcov, disambiguate, supernova, deeptools, sargasso, verifybamid, homer, macs2, theta2, snpeff, gatk, htseq, bcftools, featureCounts, picard, prokka, samblaster, samtools, bamtools, jellyfish, vcftools, bbmap, bismark, hicexplorer, hicup, salmon, kallisto, slamdunk, star, hisat2, tophat, bowtie2, bowtie1, leehom, adapterRemoval, cutadapt, flexbar, trimmomatic, skewer, sortmerna, biobloomtools, fastq_screen, fastqc, clusterflow, bcl2fastq, interop
+[2020-05-02 14:18:48,646] multiqc                                            [DEBUG  ]  Using temporary directory for creating report: /tmp/tmpfuiku20z
+[2020-05-02 14:18:48,720] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C5_1_kneaddata_hg37dec_v0.1_bowtie2_unmatched_1_contam.fastq
+[2020-05-02 14:18:48,720] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C3_1_kneaddata_unmatched_1.fastq
+[2020-05-02 14:18:48,721] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C2_1_kneaddata_hg37dec_v0.1_bowtie2_paired_contam_2.fastq
+[2020-05-02 14:18:48,731] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C2_1_kneaddata_hg37dec_v0.1_bowtie2_paired_contam_1.fastq
+[2020-05-02 14:18:48,732] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C6_1_kneaddata_paired_2_fastqc.html
+[2020-05-02 14:18:48,732] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N3_1_kneaddata_hg37dec_v0.1_bowtie2_paired_contam_2.fastq
+[2020-05-02 14:18:48,746] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N2_1_kneaddata_paired_2.fastq
+[2020-05-02 14:18:48,746] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N4_1_kneaddata_unmatched_1.fastq
+[2020-05-02 14:18:48,746] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C2_1_kneaddata_unmatched_2.fastq
+[2020-05-02 14:18:48,746] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C4_1_kneaddata_paired_1_fastqc.html
+[2020-05-02 14:18:48,747] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C2_1_kneaddata_paired_2_fastqc.html
+[2020-05-02 14:18:48,747] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N1_1_kneaddata_hg37dec_v0.1_bowtie2_unmatched_2_contam.fastq
+[2020-05-02 14:18:48,747] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C4_1_kneaddata_hg37dec_v0.1_bowtie2_paired_contam_1.fastq
+[2020-05-02 14:18:48,747] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C3_1_kneaddata_unmatched_2.fastq
+[2020-05-02 14:18:48,748] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N1_1_kneaddata_paired_1.fastq
+[2020-05-02 14:18:48,748] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N2_1_kneaddata_hg37dec_v0.1_bowtie2_paired_contam_1.fastq
+[2020-05-02 14:18:48,748] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C3_1_kneaddata_hg37dec_v0.1_bowtie2_unmatched_2_contam.fastq
+[2020-05-02 14:18:48,749] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C4_1_kneaddata_unmatched_2.fastq
+[2020-05-02 14:18:48,749] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C5_1_kneaddata_hg37dec_v0.1_bowtie2_paired_contam_1.fastq
+[2020-05-02 14:18:48,749] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C5_1_kneaddata_unmatched_1.fastq
+[2020-05-02 14:18:48,750] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N2_1_kneaddata_paired_2_fastqc.html
+[2020-05-02 14:18:48,760] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N1_1_kneaddata_paired_2.fastq
+[2020-05-02 14:18:48,760] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N6_1_kneaddata_paired_1_fastqc.html
+[2020-05-02 14:18:48,769] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N5_1_kneaddata_unmatched_1.fastq
+[2020-05-02 14:18:48,770] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C1_1_kneaddata_hg37dec_v0.1_bowtie2_paired_contam_2.fastq
+[2020-05-02 14:18:48,770] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N5_1_kneaddata_paired_1_fastqc.html
+[2020-05-02 14:18:48,770] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C6_1_kneaddata_paired_2.fastq
+[2020-05-02 14:18:48,770] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N3_1_kneaddata_paired_1_fastqc.html
+[2020-05-02 14:18:48,770] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C2_1_kneaddata_hg37dec_v0.1_bowtie2_unmatched_1_contam.fastq
+[2020-05-02 14:18:48,770] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C6_1_kneaddata_unmatched_2.fastq
+[2020-05-02 14:18:48,771] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C6_1_kneaddata_hg37dec_v0.1_bowtie2_unmatched_2_contam.fastq
+[2020-05-02 14:18:48,771] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C6_1_kneaddata_unmatched_1.fastq
+[2020-05-02 14:18:48,780] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N1_1_kneaddata_hg37dec_v0.1_bowtie2_paired_contam_1.fastq
+[2020-05-02 14:18:48,780] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N3_1_kneaddata_paired_1.fastq
+[2020-05-02 14:18:48,780] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: decompressed_t6m_fzeb_C1_1.fq
+[2020-05-02 14:18:48,781] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C5_1_kneaddata_paired_2.fastq
+[2020-05-02 14:18:48,781] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N5_1_kneaddata_hg37dec_v0.1_bowtie2_paired_contam_2.fastq
+[2020-05-02 14:18:48,781] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N4_1_kneaddata_hg37dec_v0.1_bowtie2_paired_contam_1.fastq
+[2020-05-02 14:18:48,781] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N4_1_kneaddata_paired_2_fastqc.html
+[2020-05-02 14:18:48,781] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N2_1_kneaddata_hg37dec_v0.1_bowtie2_unmatched_1_contam.fastq
+[2020-05-02 14:18:48,781] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C4_1_kneaddata_hg37dec_v0.1_bowtie2_unmatched_2_contam.fastq
+[2020-05-02 14:18:48,782] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C5_1_kneaddata_unmatched_2.fastq
+[2020-05-02 14:18:48,782] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N1_1_kneaddata_unmatched_2.fastq
+[2020-05-02 14:18:48,782] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N4_1_kneaddata_unmatched_2.fastq
+[2020-05-02 14:18:48,791] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N5_1_kneaddata_paired_1.fastq
+[2020-05-02 14:18:48,800] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C6_1_kneaddata_hg37dec_v0.1_bowtie2_paired_contam_1.fastq
+[2020-05-02 14:18:48,800] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N4_1_kneaddata_paired_1_fastqc.html
+[2020-05-02 14:18:48,800] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C6_1_kneaddata_hg37dec_v0.1_bowtie2_paired_contam_2.fastq
+[2020-05-02 14:18:48,801] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: decompressed_46vjh7y2_C1_2.fq
+[2020-05-02 14:18:48,801] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N5_1_kneaddata_paired_2_fastqc.html
+[2020-05-02 14:18:48,802] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N4_1_kneaddata_hg37dec_v0.1_bowtie2_paired_contam_2.fastq
+[2020-05-02 14:18:48,802] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C1_1_kneaddata_paired_1.fastq
+[2020-05-02 14:18:48,802] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C1_1_kneaddata_hg37dec_v0.1_bowtie2_paired_contam_1.fastq
+[2020-05-02 14:18:48,802] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N2_1_kneaddata_paired_1.fastq
+[2020-05-02 14:18:48,802] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N5_1_kneaddata_hg37dec_v0.1_bowtie2_paired_contam_1.fastq
+[2020-05-02 14:18:48,802] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N2_1_kneaddata_unmatched_2.fastq
+[2020-05-02 14:18:48,811] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N6_1_kneaddata_unmatched_1.fastq
+[2020-05-02 14:18:48,811] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C4_1_kneaddata_hg37dec_v0.1_bowtie2_unmatched_1_contam.fastq
+[2020-05-02 14:18:48,812] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N6_1_kneaddata_hg37dec_v0.1_bowtie2_unmatched_2_contam.fastq
+[2020-05-02 14:18:48,812] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N6_1_kneaddata_paired_2_fastqc.html
+[2020-05-02 14:18:48,812] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N1_1_kneaddata_paired_1_fastqc.html
+[2020-05-02 14:18:48,813] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N3_1_kneaddata_hg37dec_v0.1_bowtie2_paired_contam_1.fastq
+[2020-05-02 14:18:48,822] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N3_1_kneaddata_paired_2_fastqc.html
+[2020-05-02 14:18:48,822] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N1_1_kneaddata_hg37dec_v0.1_bowtie2_paired_contam_2.fastq
+[2020-05-02 14:18:48,822] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C3_1_kneaddata_paired_1.fastq
+[2020-05-02 14:18:48,822] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N4_1_kneaddata_paired_1.fastq
+[2020-05-02 14:18:48,823] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C3_1_kneaddata_hg37dec_v0.1_bowtie2_paired_contam_1.fastq
+[2020-05-02 14:18:48,823] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C3_1_kneaddata_paired_1_fastqc.html
+[2020-05-02 14:18:48,823] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C5_1_kneaddata_hg37dec_v0.1_bowtie2_paired_contam_2.fastq
+[2020-05-02 14:18:48,823] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N1_1_kneaddata_paired_2_fastqc.html
+[2020-05-02 14:18:48,823] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N6_1_kneaddata_unmatched_2.fastq
+[2020-05-02 14:18:48,823] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N6_1_kneaddata_hg37dec_v0.1_bowtie2_unmatched_1_contam.fastq
+[2020-05-02 14:18:48,824] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N3_1_kneaddata_paired_2.fastq
+[2020-05-02 14:18:48,824] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C4_1_kneaddata_hg37dec_v0.1_bowtie2_paired_contam_2.fastq
+[2020-05-02 14:18:48,825] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N4_1_kneaddata_hg37dec_v0.1_bowtie2_unmatched_1_contam.fastq
+[2020-05-02 14:18:48,825] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N5_1_kneaddata_paired_2.fastq
+[2020-05-02 14:18:48,830] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C1_1_kneaddata_paired_1_fastqc.html
+[2020-05-02 14:18:48,834] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C6_1_kneaddata_paired_1.fastq
+[2020-05-02 14:18:48,834] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C3_1_kneaddata_paired_2.fastq
+[2020-05-02 14:18:48,835] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N4_1_kneaddata_paired_2.fastq
+[2020-05-02 14:18:48,835] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C2_1_kneaddata_paired_1_fastqc.html
+[2020-05-02 14:18:48,836] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N3_1_kneaddata_unmatched_2.fastq
+[2020-05-02 14:18:48,836] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C1_1_kneaddata_paired_2.fastq
+[2020-05-02 14:18:48,836] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: decompressed_or5_barb_C1_1.fq
+[2020-05-02 14:18:48,836] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C4_1_kneaddata_paired_1.fastq
+[2020-05-02 14:18:48,836] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N5_1_kneaddata_hg37dec_v0.1_bowtie2_unmatched_1_contam.fastq
+[2020-05-02 14:18:48,837] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N4_1_kneaddata_hg37dec_v0.1_bowtie2_unmatched_2_contam.fastq
+[2020-05-02 14:18:48,837] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C2_1_kneaddata_hg37dec_v0.1_bowtie2_unmatched_2_contam.fastq
+[2020-05-02 14:18:48,837] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C2_1_kneaddata_paired_2.fastq
+[2020-05-02 14:18:48,838] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N6_1_kneaddata_hg37dec_v0.1_bowtie2_paired_contam_2.fastq
+[2020-05-02 14:18:48,838] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C3_1_kneaddata_paired_2_fastqc.html
+[2020-05-02 14:18:48,838] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C5_1_kneaddata_hg37dec_v0.1_bowtie2_unmatched_2_contam.fastq
+[2020-05-02 14:18:48,838] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C5_1_kneaddata_paired_1_fastqc.html
+[2020-05-02 14:18:48,839] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C5_1_kneaddata_paired_2_fastqc.html
+[2020-05-02 14:18:48,839] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C2_1_kneaddata_paired_1.fastq
+[2020-05-02 14:18:48,839] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N2_1_kneaddata_unmatched_1.fastq
+[2020-05-02 14:18:48,839] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N2_1_kneaddata_paired_1_fastqc.html
+[2020-05-02 14:18:48,840] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C5_1_kneaddata_paired_1.fastq
+[2020-05-02 14:18:48,849] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N2_1_kneaddata_hg37dec_v0.1_bowtie2_paired_contam_2.fastq
+[2020-05-02 14:18:48,849] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N6_1_kneaddata_hg37dec_v0.1_bowtie2_paired_contam_1.fastq
+[2020-05-02 14:18:48,850] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C1_1_kneaddata_paired_2_fastqc.html
+[2020-05-02 14:18:48,850] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N5_1_kneaddata_hg37dec_v0.1_bowtie2_unmatched_2_contam.fastq
+[2020-05-02 14:18:48,850] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N5_1_kneaddata_unmatched_2.fastq
+[2020-05-02 14:18:48,851] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C3_1_kneaddata_hg37dec_v0.1_bowtie2_unmatched_1_contam.fastq
+[2020-05-02 14:18:48,851] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: decompressed_gl1b1f4l_C1_2.fq
+[2020-05-02 14:18:48,851] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N3_1_kneaddata_unmatched_1.fastq
+[2020-05-02 14:18:48,851] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N6_1_kneaddata_paired_2.fastq
+[2020-05-02 14:18:48,860] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C4_1_kneaddata_paired_2.fastq
+[2020-05-02 14:18:48,860] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C1_1_kneaddata_hg37dec_v0.1_bowtie2_unmatched_1_contam.fastq
+[2020-05-02 14:18:48,860] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C6_1_kneaddata_hg37dec_v0.1_bowtie2_unmatched_1_contam.fastq
+[2020-05-02 14:18:48,860] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N3_1_kneaddata_hg37dec_v0.1_bowtie2_unmatched_1_contam.fastq
+[2020-05-02 14:18:48,860] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C6_1_kneaddata_paired_1_fastqc.html
+[2020-05-02 14:18:48,861] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C1_1_kneaddata_unmatched_1.fastq
+[2020-05-02 14:18:48,861] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N1_1_kneaddata_hg37dec_v0.1_bowtie2_unmatched_1_contam.fastq
+[2020-05-02 14:18:48,861] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C3_1_kneaddata_hg37dec_v0.1_bowtie2_paired_contam_2.fastq
+[2020-05-02 14:18:48,862] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C2_1_kneaddata_unmatched_1.fastq
+[2020-05-02 14:18:48,870] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C4_1_kneaddata_unmatched_1.fastq
+[2020-05-02 14:18:48,871] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C1_1_kneaddata_unmatched_2.fastq
+[2020-05-02 14:18:48,871] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C4_1_kneaddata_paired_2_fastqc.html
+[2020-05-02 14:18:48,871] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N1_1_kneaddata_unmatched_1.fastq
+[2020-05-02 14:18:48,872] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N3_1_kneaddata_hg37dec_v0.1_bowtie2_unmatched_2_contam.fastq
+[2020-05-02 14:18:48,872] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N2_1_kneaddata_hg37dec_v0.1_bowtie2_unmatched_2_contam.fastq
+[2020-05-02 14:18:48,872] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: N6_1_kneaddata_paired_1.fastq
+[2020-05-02 14:18:48,880] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C1_1_kneaddata_hg37dec_v0.1_bowtie2_unmatched_2_contam.fastq
+[2020-05-02 14:18:49,132] multiqc                                            [DEBUG  ]  No samples found: afterqc
+[2020-05-02 14:18:49,137] multiqc                                            [DEBUG  ]  No samples found: custom_content
+[2020-05-02 14:18:49,140] multiqc                                            [DEBUG  ]  No samples found: conpair
+[2020-05-02 14:18:49,143] multiqc                                            [DEBUG  ]  No samples found: peddy
+[2020-05-02 14:18:49,147] multiqc                                            [DEBUG  ]  No samples found: methylQA
+[2020-05-02 14:18:49,151] multiqc                                            [DEBUG  ]  No samples found: qualimap
+[2020-05-02 14:18:49,154] multiqc                                            [DEBUG  ]  No samples found: preseq
+[2020-05-02 14:18:49,157] multiqc                                            [DEBUG  ]  No samples found: quast
+[2020-05-02 14:18:49,161] multiqc                                            [DEBUG  ]  No samples found: qorts
+[2020-05-02 14:18:49,164] multiqc                                            [DEBUG  ]  No samples found: rna_seqc
+[2020-05-02 14:18:49,168] multiqc                                            [DEBUG  ]  No samples found: rsem
+[2020-05-02 14:18:49,173] multiqc                                            [DEBUG  ]  No samples found: rseqc
+[2020-05-02 14:18:49,176] multiqc                                            [DEBUG  ]  No samples found: busco
+[2020-05-02 14:18:49,180] multiqc                                            [DEBUG  ]  No samples found: goleft_indexcov
+[2020-05-02 14:18:49,183] multiqc                                            [DEBUG  ]  No samples found: disambiguate
+[2020-05-02 14:18:49,190] multiqc                                            [DEBUG  ]  No samples found: supernova
+[2020-05-02 14:18:49,195] multiqc                                            [DEBUG  ]  No samples found: deeptools
+[2020-05-02 14:18:49,199] multiqc                                            [DEBUG  ]  No samples found: sargasso
+[2020-05-02 14:18:49,202] multiqc                                            [DEBUG  ]  No samples found: verifybamid
+[2020-05-02 14:18:49,206] multiqc                                            [DEBUG  ]  No samples found: homer
+[2020-05-02 14:18:49,209] multiqc                                            [DEBUG  ]  No samples found: macs2
+[2020-05-02 14:18:49,213] multiqc                                            [DEBUG  ]  No samples found: theta2
+[2020-05-02 14:18:49,216] multiqc                                            [DEBUG  ]  No samples found: snpeff
+[2020-05-02 14:18:49,221] multiqc                                            [DEBUG  ]  No samples found: gatk
+[2020-05-02 14:18:49,227] multiqc                                            [DEBUG  ]  No samples found: htseq
+[2020-05-02 14:18:49,233] multiqc                                            [DEBUG  ]  No samples found: bcftools
+[2020-05-02 14:18:49,239] multiqc                                            [DEBUG  ]  No samples found: featureCounts
+[2020-05-02 14:18:49,248] multiqc                                            [DEBUG  ]  No samples found: picard
+[2020-05-02 14:18:49,253] multiqc                                            [DEBUG  ]  No samples found: prokka
+[2020-05-02 14:18:49,258] multiqc                                            [DEBUG  ]  No samples found: samblaster
+[2020-05-02 14:18:49,264] multiqc                                            [DEBUG  ]  No samples found: samtools
+[2020-05-02 14:18:49,269] multiqc                                            [DEBUG  ]  No samples found: bamtools
+[2020-05-02 14:18:49,273] multiqc                                            [DEBUG  ]  No samples found: jellyfish
+[2020-05-02 14:18:49,278] multiqc                                            [DEBUG  ]  No samples found: vcftools
+[2020-05-02 14:18:49,286] multiqc                                            [DEBUG  ]  No samples found: bbmap
+[2020-05-02 14:18:49,290] multiqc                                            [DEBUG  ]  No samples found: bismark
+[2020-05-02 14:18:49,294] multiqc                                            [DEBUG  ]  No samples found: hicexplorer
+[2020-05-02 14:18:49,297] multiqc                                            [DEBUG  ]  No samples found: hicup
+[2020-05-02 14:18:49,301] multiqc                                            [DEBUG  ]  No samples found: salmon
+[2020-05-02 14:18:49,305] multiqc                                            [DEBUG  ]  No samples found: kallisto
+[2020-05-02 14:18:49,309] multiqc                                            [DEBUG  ]  No samples found: slamdunk
+[2020-05-02 14:18:49,313] multiqc                                            [DEBUG  ]  No samples found: star
+[2020-05-02 14:18:49,316] multiqc                                            [DEBUG  ]  No samples found: hisat2
+[2020-05-02 14:18:49,320] multiqc                                            [DEBUG  ]  No samples found: tophat
+[2020-05-02 14:18:49,326] multiqc.modules.bowtie2.bowtie2                    [DEBUG  ]  Found a bowtie2 command, updating sample name to 'N5_1_kneaddata.trimmed.single.1'
+[2020-05-02 14:18:49,331] multiqc.modules.bowtie2.bowtie2                    [DEBUG  ]  Found a bowtie2 command, updating sample name to 'N3_1_kneaddata.trimmed.single.1'
+[2020-05-02 14:18:49,334] multiqc.modules.bowtie2.bowtie2                    [DEBUG  ]  Found a bowtie2 command, updating sample name to 'N1_1_kneaddata.trimmed.single.1'
+[2020-05-02 14:18:49,337] multiqc.modules.bowtie2.bowtie2                    [DEBUG  ]  Found a bowtie2 command, updating sample name to 'N6_1_kneaddata.trimmed.single.1'
+[2020-05-02 14:18:49,340] multiqc.modules.bowtie2.bowtie2                    [DEBUG  ]  Found a bowtie2 command, updating sample name to 'N2_1_kneaddata.trimmed.single.1'
+[2020-05-02 14:18:49,343] multiqc.modules.bowtie2.bowtie2                    [DEBUG  ]  Found a bowtie2 command, updating sample name to 'C6_1_kneaddata.trimmed.single.1'
+[2020-05-02 14:18:49,346] multiqc.modules.bowtie2.bowtie2                    [DEBUG  ]  Found a bowtie2 command, updating sample name to 'N4_1_kneaddata.trimmed.single.1'
+[2020-05-02 14:18:49,349] multiqc.modules.bowtie2.bowtie2                    [DEBUG  ]  Found a bowtie2 command, updating sample name to 'C2_1_kneaddata.trimmed.single.1'
+[2020-05-02 14:18:49,352] multiqc.modules.bowtie2.bowtie2                    [DEBUG  ]  Found a bowtie2 command, updating sample name to 'C1_1_kneaddata.trimmed.single.1'
+[2020-05-02 14:18:49,355] multiqc.modules.bowtie2.bowtie2                    [DEBUG  ]  Found a bowtie2 command, updating sample name to 'C3_1_kneaddata.trimmed.single.1'
+[2020-05-02 14:18:49,358] multiqc.modules.bowtie2.bowtie2                    [DEBUG  ]  Found a bowtie2 command, updating sample name to 'C5_1_kneaddata.trimmed.single.1'
+[2020-05-02 14:18:49,361] multiqc.modules.bowtie2.bowtie2                    [DEBUG  ]  Found a bowtie2 command, updating sample name to 'C4_1_kneaddata.trimmed.single.1'
+[2020-05-02 14:18:49,362] multiqc.modules.bowtie2.bowtie2                    [INFO   ]  Found 12 reports
+[2020-05-02 14:18:49,380] multiqc                                            [DEBUG  ]  No samples found: bowtie1
+[2020-05-02 14:18:49,383] multiqc                                            [DEBUG  ]  No samples found: leehom
+[2020-05-02 14:18:49,387] multiqc                                            [DEBUG  ]  No samples found: adapterRemoval
+[2020-05-02 14:18:49,390] multiqc                                            [DEBUG  ]  No samples found: cutadapt
+[2020-05-02 14:18:49,393] multiqc                                            [DEBUG  ]  No samples found: flexbar
+[2020-05-02 14:18:49,403] multiqc.modules.trimmomatic.trimmomatic            [INFO   ]  Found 12 logs
+[2020-05-02 14:18:49,406] multiqc                                            [DEBUG  ]  No samples found: skewer
+[2020-05-02 14:18:49,410] multiqc                                            [DEBUG  ]  No samples found: sortmerna
+[2020-05-02 14:18:49,413] multiqc                                            [DEBUG  ]  No samples found: biobloomtools
+[2020-05-02 14:18:49,416] multiqc                                            [DEBUG  ]  No samples found: fastq_screen
+[2020-05-02 14:18:49,495] multiqc.modules.fastqc.fastqc                      [INFO   ]  Found 24 reports
+[2020-05-02 14:18:49,916] multiqc                                            [DEBUG  ]  No samples found: clusterflow
+[2020-05-02 14:18:49,923] multiqc                                            [DEBUG  ]  No samples found: bcl2fastq
+[2020-05-02 14:18:49,928] multiqc                                            [DEBUG  ]  No samples found: interop
+[2020-05-02 14:18:50,001] multiqc                                            [INFO   ]  Compressing plot data
+[2020-05-02 14:18:50,477] multiqc                                            [WARNING]  Previous MultiQC output found! Adjusting filenames..
+[2020-05-02 14:18:50,477] multiqc                                            [WARNING]  Use -f or --force to overwrite existing reports instead
+[2020-05-02 14:18:50,478] multiqc                                            [INFO   ]  Report      : result/qc/multiqc_report_1.html
+[2020-05-02 14:18:50,478] multiqc                                            [INFO   ]  Data        : result/qc/multiqc_data_1
+[2020-05-02 14:18:50,478] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmpfuiku20z/multiqc_data/multiqc_sources.txt' to 'result/qc/multiqc_data_1'
+[2020-05-02 14:18:50,479] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmpfuiku20z/multiqc_data/multiqc_data.json' to 'result/qc/multiqc_data_1'
+[2020-05-02 14:18:50,481] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmpfuiku20z/multiqc_data/multiqc_trimmomatic.txt' to 'result/qc/multiqc_data_1'
+[2020-05-02 14:18:50,481] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmpfuiku20z/multiqc_data/multiqc_fastqc.txt' to 'result/qc/multiqc_data_1'
+[2020-05-02 14:18:50,481] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmpfuiku20z/multiqc_data/multiqc_general_stats.txt' to 'result/qc/multiqc_data_1'
+[2020-05-02 14:18:50,482] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmpfuiku20z/multiqc_data/multiqc_bowtie2.txt' to 'result/qc/multiqc_data_1'
+[2020-05-02 14:18:50,613] multiqc                                            [INFO   ]  MultiQC complete

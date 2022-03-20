@@ -1,3 +1,0 @@
-SampleID	Group	Replicate	Sex	Individual	GSA	CRR	project_accession
-C1	Cancer	1	Male  	p136	CRA002355	CRR117732	PRJCA002236
-C2	Cancer	2	Male  	p143	CRA002355	CRR117733	PRJCA002236

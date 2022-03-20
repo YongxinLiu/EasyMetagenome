@@ -1,0 +1,206 @@
+Pathway	C1	C2
+ aspartate and glutamate metabolism [PATH:ko00250]	10399.123999999998	1133.945
+ diarylheptanoid and gingerol biosynthesis [PATH:ko00945]	0.0	0.0
+ leucine and isoleucine biosynthesis [PATH:ko00290]	3735.3379999999997	0.0
+ leucine and isoleucine degradation [PATH:ko00280]	766.7239999999998	1194.946
+ piperidine and pyridine alkaloid biosynthesis [PATH:ko00960]	0.0	0.0
+ serine and threonine metabolism [PATH:ko00260]	3484.5150000000003	0.0
+ tyrosine and tryptophan biosynthesis [PATH:ko00400]	1208.09	1870.88
+ABC transporters [PATH:ko02010]	8156.433000000001	343.588
+AMPK signaling pathway [PATH:ko04152]	0.0	0.0
+Adipocytokine signaling pathway [PATH:ko04920]	468.859	0.0
+Alanine	10399.123999999998	1133.945
+Alzheimer disease [PATH:ko05010]	1115.3	0.0
+Amino acid metabolism	3268.2799999999997	0.0
+Amino acid related enzymes [BR:ko01007]	11237.253999999999	10971.015
+Amino sugar and nucleotide sugar metabolism [PATH:ko00520]	9730.329	4207.38
+Aminoacyl-tRNA biosynthesis [PATH:ko00970]	6832.866000000001	10971.015
+Antifolate resistance [PATH:ko01523]	2872.844	0.0
+Antigen processing and presentation [PATH:ko04612]	1104.217	0.0
+Apoptosis - fly [PATH:ko04214]	631.455	0.0
+Arginine and proline metabolism [PATH:ko00330]	529.894	0.0
+Arginine biosynthesis [PATH:ko00220]	1844.64	0.0
+Bacterial chemotaxis [PATH:ko02030]	1064.35	3093.534
+Bacterial motility proteins [BR:ko02035]	2846.875	3093.534
+Bacterial secretion system [PATH:ko03070]	6066.883	0.0
+Base excision repair [PATH:ko03410]	1257.54	518.729
+Benzoate degradation [PATH:ko00362]	0.0	783.471
+Biofilm formation - Escherichia coli [PATH:ko02026]	5145.347	563.94
+Biofilm formation - Pseudomonas aeruginosa [PATH:ko02025]	1276.13	1371.88
+Biofilm formation - Vibrio cholerae [PATH:ko05111]	4188.2119999999995	1371.88
+Biotin metabolism [PATH:ko00780]	6584.861999999999	0.0
+Butanoate metabolism [PATH:ko00650]	674.33	1194.946
+C5-Branched dibasic acid metabolism [PATH:ko00660]	1878.846	0.0
+Carbohydrate metabolism	1138.75	0.0
+Carbon fixation in photosynthetic organisms [PATH:ko00710]	3590.2569999999996	0.0
+Carbon fixation pathways in prokaryotes [PATH:ko00720]	6533.512	783.471
+Cationic antimicrobial peptide (CAMP) resistance [PATH:ko01503]	698.9939999999998	0.0
+Cell cycle - Caulobacter [PATH:ko04112]	3998.96	103.776
+Cell growth	4765.73	1307.9
+Central carbon metabolism in cancer [PATH:ko05230]	1844.64	3008.94
+Chaperones and folding catalysts [BR:ko03110]	4364.958	103.776
+Chemical carcinogenesis [PATH:ko05204]	0.0	1296.29
+Chloroalkane and chloroalkene degradation [PATH:ko00625]	0.0	1296.29
+Chromosome and associated proteins [BR:ko03036]	16862.917	21658.689
+Citrate cycle (TCA cycle) [PATH:ko00020]	2861.023	0.0
+Cofactor metabolism	933.594	1623.96
+Cyanoamino acid metabolism [PATH:ko00460]	1461.6879999999999	0.0
+Cysteine and methionine metabolism [PATH:ko00270]	5311.573	3427.83
+Cytoskeleton proteins [BR:ko04812]	0.0	13988.839
+D-Alanine metabolism [PATH:ko00473]	656.326	0.0
+D-Glutamine and D-glutamate metabolism [PATH:ko00471]	4255.441000000001	0.0
+DNA repair and recombination proteins [BR:ko03400]	27588.481000000003	9392.574
+DNA replication [PATH:ko03030]	6061.826	850.2860000000002
+DNA replication proteins [BR:ko03032]	9456.613000000001	4278.116
+Drug metabolism - cytochrome P450 [PATH:ko00982]	0.0	1296.29
+Drug metabolism - other enzymes [PATH:ko00983]	4694.5470000000005	0.0
+Energy metabolism	683.252	0.0
+Enzymes with EC numbers	11716.541	0.0
+Estrogen signaling pathway [PATH:ko04915]	1104.217	0.0
+Exosome [BR:ko04147]	10352.665	5262.881
+Fat digestion and absorption [PATH:ko04975]	0.0	783.471
+Fatty acid biosynthesis [PATH:ko00061]	2798.639	0.0
+Fatty acid degradation [PATH:ko00071]	468.859	2079.761
+Ferroptosis [PATH:ko04216]	468.859	0.0
+Flagellar assembly [PATH:ko02040]	4538.04	2115.13
+Flavonoid biosynthesis [PATH:ko00941]	0.0	0.0
+Fluid shear stress and atherosclerosis [PATH:ko05418]	1104.217	0.0
+Folate biosynthesis [PATH:ko00790]	2212.0319999999997	0.0
+Fructose and mannose metabolism [PATH:ko00051]	2074.685	3255.7110000000002
+Function unknown	8970.606	880.7180000000002
+GABAergic synapse [PATH:ko04727]	1844.64	0.0
+Galactose metabolism [PATH:ko00052]	3778.4590000000003	0.0
+General function prediction only	2061.49	0.0
+Glucagon signaling pathway [PATH:ko04922]	656.676	3008.94
+Glucosinolate biosynthesis [PATH:ko00966]	766.7239999999998	0.0
+Glutamatergic synapse [PATH:ko04724]	1844.64	0.0
+Glutathione metabolism [PATH:ko00480]	3931.009	3255.577
+Glycerophospholipid metabolism [PATH:ko00564]	3324.933	0.0
+Glycine	3484.5150000000003	0.0
+Glycolysis / Gluconeogenesis [PATH:ko00010]	6069.137	4305.23
+Glycosaminoglycan binding proteins [BR:ko00536]	546.849	0.0
+Glycosaminoglycan degradation [PATH:ko00531]	295.433	0.0
+Glycosphingolipid biosynthesis - ganglio series [PATH:ko00604]	295.433	0.0
+Glycosphingolipid biosynthesis - globo and isoglobo series [PATH:ko00603]	295.433	0.0
+Glycosyltransferases [BR:ko01003]	4676.116	0.0
+Glyoxylate and dicarboxylate metabolism [PATH:ko00630]	1470.606	783.471
+HIF-1 signaling pathway [PATH:ko04066]	1115.3	0.0
+Histidine metabolism [PATH:ko00340]	1677.6570000000002	0.0
+Homologous recombination [PATH:ko03440]	6120.957999999999	1369.0150000000003
+Human papillomavirus infection [PATH:ko05165]	0.0	3008.94
+IL-17 signaling pathway [PATH:ko04657]	1104.217	0.0
+Inositol phosphate metabolism [PATH:ko00562]	0.0	0.0
+Insulin resistance [PATH:ko04931]	1277.3290000000002	951.669
+Insulin signaling pathway [PATH:ko04910]	656.676	0.0
+Isoquinoline alkaloid biosynthesis [PATH:ko00950]	0.0	0.0
+Lipid biosynthesis proteins [BR:ko01004]	2064.191	0.0
+Lipopolysaccharide biosynthesis [PATH:ko00540]	4041.19	0.0
+Lipopolysaccharide biosynthesis proteins [BR:ko01005]	4041.19	0.0
+Longevity regulating pathway - multiple species [PATH:ko04213]	1232.32	0.0
+Longevity regulating pathway - worm [PATH:ko04212]	2005.17	0.0
+Lysine biosynthesis [PATH:ko00300]	1309.853	0.0
+Lysine degradation [PATH:ko00310]	2129.673	783.471
+Lysosome [PATH:ko04142]	295.433	1470.47
+Membrane trafficking [BR:ko04131]	2219.517	3008.94
+Messenger RNA biogenesis [BR:ko03019]	7390.368	552.405
+Metabolism of xenobiotics by cytochrome P450 [PATH:ko00980]	0.0	1296.29
+Methane metabolism [PATH:ko00680]	884.025	1296.29
+MicroRNAs in cancer [PATH:ko05206]	1844.64	3427.83
+Mismatch repair [PATH:ko03430]	7071.318	1369.0150000000003
+Mitochondrial biogenesis [BR:ko03029]	21506.086000000003	0.0
+Monobactam biosynthesis [PATH:ko00261]	1905.048	0.0
+NOD-like receptor signaling pathway [PATH:ko04621]	1104.217	0.0
+Naphthalene degradation [PATH:ko00626]	0.0	1296.29
+Necroptosis [PATH:ko04217]	1760.893	0.0
+Nicotinate and nicotinamide metabolism [PATH:ko00760]	1368.5810000000001	2450.78
+Nitrogen metabolism [PATH:ko00910]	1006.441	0.0
+Novobiocin biosynthesis [PATH:ko00401]	0.0	0.0
+Nucleotide excision repair [PATH:ko03420]	8223.613	2912.53
+O-Antigen nucleotide sugar biosynthesis [PATH:ko00541]	5481.7	4197.514
+One carbon pool by folate [PATH:ko00670]	6865.719	0.0
+Other glycan degradation [PATH:ko00511]	950.763	1470.47
+Oxidative phosphorylation [PATH:ko00190]	5260.52	1431.45
+PI3K-Akt signaling pathway [PATH:ko04151]	1104.217	0.0
+PPAR signaling pathway [PATH:ko03320]	468.859	0.0
+Pantothenate and CoA biosynthesis [PATH:ko00770]	766.7239999999998	0.0
+Pathogenic Escherichia coli infection [PATH:ko05130]	1115.3	0.0
+Pathways in cancer [PATH:ko05200]	1104.217	0.0
+Pentose and glucuronate interconversions [PATH:ko00040]	0.0	2322.06
+Pentose phosphate pathway [PATH:ko00030]	1598.4180000000001	0.0
+Peptidases and inhibitors [BR:ko01002]	12198.11	2764.256
+Peptidoglycan biosynthesis [PATH:ko00550]	5813.6720000000005	2322.06
+Peptidoglycan biosynthesis and degradation proteins [BR:ko01011]	6825.749	2322.06
+Peroxisome [PATH:ko04146]	468.859	0.0
+Pertussis [PATH:ko05133]	546.849	0.0
+Phenazine biosynthesis [PATH:ko00405]	0.0	0.0
+Phenylalanine	1208.09	1870.88
+Phenylalanine metabolism [PATH:ko00360]	0.0	0.0
+Phenylpropanoid biosynthesis [PATH:ko00940]	0.0	0.0
+Phosphonate and phosphinate metabolism [PATH:ko00440]	0.0	2341.55
+Phosphotransferase system (PTS) [PATH:ko02060]	856.17	0.0
+Photosynthesis [PATH:ko00195]	402.791	0.0
+Photosynthesis proteins [BR:ko00194]	402.791	0.0
+Plant-pathogen interaction [PATH:ko04626]	1104.217	0.0
+Polyketide sugar unit biosynthesis [PATH:ko00523]	966.61	941.803
+Porphyrin and chlorophyll metabolism [PATH:ko00860]	6415.282999999999	1556.19
+Prenyltransferases [BR:ko01006]	417.218	0.0
+Prodigiosin biosynthesis [PATH:ko00333]	963.885	0.0
+Progesterone-mediated oocyte maturation [PATH:ko04914]	1104.217	0.0
+Prokaryotic defense system [BR:ko02048]	3579.1400000000003	3427.83
+Propanoate metabolism [PATH:ko00640]	1296.165	783.471
+Prostate cancer [PATH:ko05215]	1104.217	0.0
+Proteasome [BR:ko03051]	1104.217	0.0
+Protein export [PATH:ko03060]	4503.598	1289.12
+Protein kinases [BR:ko01001]	2619.08	0.0
+Protein phosphatases and associated proteins [BR:ko01009]	1104.217	0.0
+Protein processing	1115.3	0.0
+Protein processing in endoplasmic reticulum [PATH:ko04141]	1104.217	0.0
+Proximal tubule bicarbonate reclamation [PATH:ko04964]	1844.64	0.0
+Purine metabolism [PATH:ko00230]	21389.908000000003	6158.634
+Pyrimidine metabolism [PATH:ko00240]	21011.798	1229.2060000000001
+Pyruvate metabolism [PATH:ko00620]	3569.8519999999994	4615.767
+Quorum sensing [PATH:ko02024]	5242.26	0.0
+RNA degradation [PATH:ko03018]	6789.912	0.0
+RNA polymerase [PATH:ko03020]	6335.779	794.3389999999998
+Replication and repair	5403.743	333.19499999999994
+Retinol metabolism [PATH:ko00830]	0.0	1296.29
+Ribosome [BR:ko03011]	43775.116	357.98
+Ribosome [PATH:ko03010]	43775.116	357.98
+Ribosome biogenesis [BR:ko03009]	34826.075	0.0
+Salmonella infection [PATH:ko05132]	2219.517	0.0
+Secretion system [BR:ko02044]	8722.032	0.0
+Selenocompound metabolism [PATH:ko00450]	4047.2879999999996	0.0
+Signaling proteins	404.598	0.0
+Sphingolipid metabolism [PATH:ko00600]	2084.12	0.0
+Starch and sucrose metabolism [PATH:ko00500]	4363.468	0.0
+Stilbenoid	0.0	0.0
+Streptomycin biosynthesis [PATH:ko00521]	966.61	941.803
+Sulfur metabolism [PATH:ko00920]	3790.697	0.0
+Sulfur relay system [PATH:ko04122]	2839.915	98.9787
+Synthesis and degradation of ketone bodies [PATH:ko00072]	0.0	1194.946
+Terpenoid backbone biosynthesis [PATH:ko00900]	5850.147	896.85
+Th17 cell differentiation [PATH:ko04659]	1104.217	0.0
+Thermogenesis [PATH:ko04714]	468.859	0.0
+Thiamine metabolism [PATH:ko00730]	4678.961	98.9787
+Thyroid hormone signaling pathway [PATH:ko04919]	0.0	0.0
+Thyroid hormone synthesis [PATH:ko04918]	0.0	3255.577
+Transcription	1552.463	0.0
+Transcription factors [BR:ko03000]	9873.708	7580.455
+Transcription machinery [BR:ko03021]	11360.523000000001	1469.966
+Transfer RNA biogenesis [BR:ko03016]	18361.110000000004	11720.564999999999
+Translation factors [BR:ko03012]	3771.6760000000004	1978.1660000000002
+Transport	3966.5060000000003	300.129
+Transporters [BR:ko02000]	37454.46800000001	14412.598000000002
+Tropane	0.0	0.0
+Tryptophan metabolism [PATH:ko00380]	0.0	783.471
+Tuberculosis [PATH:ko05152]	1138.75	0.0
+Two-component system [BR:ko02022]	6510.609	0.0
+Two-component system [PATH:ko02020]	10190.064000000002	5695.385
+Type II diabetes mellitus [PATH:ko04930]	0.0	3008.94
+Tyrosine metabolism [PATH:ko00350]	1556.42	1296.29
+Ubiquinone and other terpenoid-quinone biosynthesis [PATH:ko00130]	1003.2920000000001	0.0
+Valine	4502.062	1194.946
+Vancomycin resistance [PATH:ko01502]	999.5690000000001	0.0
+Various types of N-glycan biosynthesis [PATH:ko00513]	295.433	0.0
+Viral carcinogenesis [PATH:ko05203]	0.0	3008.94
+beta-Lactam resistance [PATH:ko01501]	933.594	2322.06

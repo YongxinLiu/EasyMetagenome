@@ -1,0 +1,7 @@
+Sample	FastQC_mqc-generalstats-fastqc-percent_duplicates	FastQC_mqc-generalstats-fastqc-percent_gc	FastQC_mqc-generalstats-fastqc-avg_sequence_length	FastQC_mqc-generalstats-fastqc-percent_fails	FastQC_mqc-generalstats-fastqc-total_sequences	Trimmomatic_mqc-generalstats-trimmomatic-dropped_pct
+temp | qc | C1_1_kneaddata_paired_1	0.06593878427283073	36.0	98.60893700545911	0.0	65212.0	
+temp | qc | C1_1_kneaddata_paired_2	0.05980494387536339	36.0	98.30518922897626	0.0	65212.0	
+temp | qc | C2_1_kneaddata_paired_1	3.7002173961765266	44.0	96.78186422824358	10.0	44619.0	
+temp | qc | C2_1_kneaddata_paired_2	3.697976198480461	44.0	97.54252672628253	10.0	44619.0	
+temp | qc | decompressed__mns1ymd_C1_1						3.99
+temp | qc | decompressed_gzoed9nx_C2_1						24.39

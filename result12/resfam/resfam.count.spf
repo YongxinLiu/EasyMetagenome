@@ -1,0 +1,488 @@
+MechanismClassification	Description	Resfam	ResGeneID	Name	C1	C2	C3	C4	C5	C6	N1	N2	N3	N4	N5	N6
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	NC_012469.1.7685970.p01	k119_16643_1	0	1	1	5	0	0	0	0	0	5	2	0
+Quinolone Resistance	Fluoroquinolone Resistant DNA Topoisomerase	FluoroquinoloneResistantDNATopoisomerase	NC_012469.1.7686721.p01	k119_16557_1	5	0	0	0	3	0	1	0	0	0	0	0
+Quinolone Resistance	Fluoroquinolone Resistant DNA Topoisomerase	FluoroquinoloneResistantDNATopoisomerase	NC_007622.3794239.p01	k119_16515_1	0	0	0	1	0	0	0	0	0	1	1	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686946.p01	k119_16449_2	0	0	0	0	0	2	1	0	0	0	0	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	NC_002758.1121879.p01	k119_16426_1	0	0	0	0	0	0	0	2	0	0	3	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_008702.1.4606598.p01	k119_16423_1	0	0	0	0	0	0	0	0	0	5	0	1
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_011586.7043668.p01	k119_16369_2	2	0	0	0	4	0	0	0	0	1	0	0
+ABC Transporter	msbA: ATP-binding cassette (ABC) antibiotic efflux pump	msbA	gi|57651525|ref|YP_185623.1|	k119_16323_1	0	4	1	1	0	0	0	0	0	0	0	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	NC_002758.1121879.p01	k119_16288_1	0	0	0	0	0	0	2	0	2	3	0	2
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_010400.5985985.p01	k119_16267_1	0	0	0	0	0	0	0	0	0	0	5	0
+Gene Modulating Resistance	VanR: transcriptional activator regulating VanA, VanH and VanX	vanR	FJ349556.1.orf0.gene.p01	k119_16256_1	4	0	1	0	5	0	0	0	0	0	1	0
+RND Antibiotic Efflux	resistance-nodulation-cell division (RND) antibiotic efflux pump	RNDAntibioticEffluxPump	gi|26987642|ref|NP_743067.1|	k119_16223_1	0	0	0	3	0	4	0	1	1	2	7	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_16207_1	0	1	0	1	0	0	0	1	0	0	0	1
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_008702.1.4606598.p01	k119_16194_1	0	0	0	0	0	1	0	1	1	1	2	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_16011_1	0	0	0	1	0	0	0	0	2	1	0	0
+Quinolone Resistance	Fluoroquinolone Resistant DNA Topoisomerase	FluoroquinoloneResistantDNATopoisomerase	NC_012469.1.7686721.p01	k119_15970_1	0	0	0	2	0	0	1	0	2	1	0	0
+rRNA Methyltransferase	Cfr 23S ribosomal RNA methyltransferase	Cfr23RibosomalRNAMethyltransferase	NC_009632.5316674.p01	k119_15968_1	3	0	0	0	2	0	1	0	0	1	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_008702.1.4606598.p01	k119_15948_1	0	0	0	2	0	0	0	0	0	1	1	3
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7685735.p01	k119_15935_1	5	0	0	0	0	0	0	0	0	0	0	1
+ABC Transporter	msbA: ATP-binding cassette (ABC) antibiotic efflux pump	msbA	NC_010400.5985078.p01	k119_15926_1	0	0	0	2	0	1	0	0	1	1	0	0
+MFS Transporter	norA: major facilitator superfamily (MFS) antibiotic efflux pump	norA	NC_013450.8613418.p01	k119_15901_1	0	0	1	1	0	10	1	0	0	0	0	0
+MFS Transporter	norA: major facilitator superfamily (MFS) antibiotic efflux pump	norA	NC_013450.8613418.p01	k119_15892_1	3	0	1	0	2	2	0	1	0	0	0	1
+Gene Modulating Resistance	VanS: trasncriptional regulator of van glycopeptide resistance genes	vanS	U82965.2.orf15.gene.p01	k119_15804_1	0	0	0	0	0	0	0	0	0	1	6	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7685735.p01	k119_15632_1	3	0	1	0	3	0	0	0	0	0	0	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	NC_002758.1121879.p01	k119_15547_1	5	0	1	0	2	0	0	0	1	1	1	1
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686946.p01	k119_16185_1	0	0	0	2	1	0	0	1	3	2	4	1
+Gylcopeptide Resistance	VanH: D-specific alpha-ketoacid dehydrogenase that synthesizes D-lactate	vanH	AF310956.2.orf4.gene.p01	k119_15478_1	4	0	0	0	3	0	0	0	2	1	0	1
+ABC Transporter	msbA: ATP-binding cassette (ABC) antibiotic efflux pump	msbA	NC_008702.1.4608011.p01	k119_15396_1	0	0	0	0	0	0	0	0	0	0	5	0
+ABC Transporter	msbA: ATP-binding cassette (ABC) antibiotic efflux pump	msbA	gi|57651525|ref|YP_185623.1|	k119_15277_1	3	0	0	0	2	0	0	0	0	0	0	0
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	L20800.gene.p01	k119_15254_1	0	0	1	2	0	0	0	0	2	0	1	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_15192_1	0	0	0	1	0	0	0	0	2	3	0	0
+Acetyltransferase	chloramphenicol acetyltransferase (CAT)	Chloramphenicol_Acetyltransferase_CAT	AY123251.gene2.p01	k119_15121_1	0	0	0	4	0	0	0	0	1	2	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_15115_1	0	0	0	4	0	0	0	0	0	2	0	0
+Gene Modulating Resistance	VanR: transcriptional activator regulating VanA, VanH and VanX	vanR	Y16952.3.orf35.gene.p01	k119_15889_1	0	0	0	4	0	0	0	0	4	4	1	0
+rRNA Methyltransferase	Cfr 23S ribosomal RNA methyltransferase	Cfr23RibosomalRNAMethyltransferase	NC_011586.7043651.p01	k119_15071_1	1	0	0	0	6	0	0	0	0	0	0	0
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	L42544.gene.p01	k119_15044_1	0	0	1	0	0	0	0	0	0	7	0	0
+Gene Modulating Resistance	VanS: trasncriptional regulator of van glycopeptide resistance genes	vanS	Y16952.3.orf34.gene.p01	k119_15004_1	4	0	0	0	2	1	0	0	0	0	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_008702.1.4606598.p01	k119_14968_1	0	0	0	0	0	1	0	2	1	0	0	0
+rRNA Methyltransferase	Erm38: Erm 23S ribosomal RNA methyltransferase: rRNA methyltransferase conferring antibiotic resistance	Erm38	AY154657.2.orf0.gene.p01	k119_15659_2	0	0	0	4	0	0	1	0	0	4	1	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_14875_1	0	0	0	1	0	0	0	0	1	5	8	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_14611_1	4	0	0	0	0	0	0	0	0	0	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7685735.p01	k119_14599_1	0	0	0	3	0	0	0	0	0	5	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7685735.p01	k119_14543_3	0	1	0	7	0	1	1	0	0	4	3	0
+rRNA Methyltransferase	ErmB: Erm 23S ribosomal RNA methyltransferase: rRNA methyltransferase conferring antibiotic resistance	ErmB	gi|428160746|ref|YP_007078965.1|	k119_14539_1	0	0	1	0	0	0	0	2	3	0	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7685735.p01	k119_14518_1	0	0	0	1	0	0	0	0	1	0	3	1
+MFS Transporter	major facilitator superfamily (MFS) antibiotic efflux pump	MFSAntibioticEffluxPump	NC_002695.1.915653.p01	k119_14430_2	0	2	0	0	0	0	0	0	0	2	3	0
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	AJ514254.gene.p01	k119_14343_1	6	0	0	1	2	0	1	0	2	0	0	2
+Gene Modulating Resistance	VanR: transcriptional activator regulating VanA, VanH and VanX	vanR	U82965.2.orf14.gene.p01	k119_14285_2	0	0	0	0	0	0	5	0	1	2	1	2
+rRNA Methyltransferase	Cfr 23S ribosomal RNA methyltransferase	Cfr23RibosomalRNAMethyltransferase	NC_011586.7043651.p01	k119_14260_1	5	0	0	0	0	0	2	0	0	0	0	0
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	L42544.gene.p01	k119_14237_1	0	0	3	2	8	0	1	1	2	2	1	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_008702.1.4606598.p01	k119_15018_2	0	0	0	0	0	0	0	0	0	1	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_008702.1.4606598.p01	k119_14163_1	1	0	1	0	5	0	0	0	0	0	2	1
+MFS Transporter	emrB: subunit of efflux pump conferring antibiotic resistance	emrB	NC_002695.1.914736.p01	k119_13955_1	0	0	2	1	0	1	0	0	0	0	0	1
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	U82085.gene.p01	k119_13898_1	0	0	1	0	0	13	0	0	1	1	1	0
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	L42544.gene.p01	k119_13897_1	0	0	0	0	0	10	0	1	1	0	1	0
+ABC Transporter	macA: subunit of efflux pump conferring antibiotic resistance	macA	NC_011035.1.6447343.p01	k119_13891_1	0	0	0	2	0	0	0	0	0	5	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_13856_1	4	0	1	2	0	0	0	0	0	1	0	1
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	M85225.gene.p01	k119_13832_1	1	0	0	1	0	0	1	3	4	0	4	0
+Quinolone Resistance	Fluoroquinolone Resistant DNA Topoisomerase	FluoroquinoloneResistantDNATopoisomerase	NC_012469.1.7686721.p01	k119_13714_1	0	0	0	0	0	9	0	0	0	0	0	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	AJ579365.gene.p01	k119_13691_1	3	0	0	0	2	1	1	0	0	0	0	0
+rRNA Methyltransferase	Emr 23S ribosomal RNA methyltransferase: rRNA methyltransferase conferring antibiotic resistance	Erm23SRibosomalRNAMethyltransferase	X51891.1.orf0.gene.p01	k119_13672_1	0	3	3	0	0	0	0	1	0	0	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7685735.p01	k119_13668_1	0	0	0	0	8	0	0	0	0	0	0	0
+ABC Transporter	msbA: ATP-binding cassette (ABC) antibiotic efflux pump	msbA	NC_002516.2.881672.p01	k119_13634_1	0	0	0	1	0	1	0	1	1	2	3	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_13596_1	0	0	2	5	0	0	0	0	2	4	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_13583_2	0	2	1	1	0	1	0	1	2	4	9	0
+Quinolone Resistance	Fluoroquinolone Resistant DNA Topoisomerase	FluoroquinoloneResistantDNATopoisomerase	NC_011035.1.6447337.p01	k119_13548_1	1	0	0	0	0	0	3	0	0	0	0	0
+Quinolone Resistance	Fluoroquinolone Resistant DNA Topoisomerase	FluoroquinoloneResistantDNATopoisomerase	NC_011035.1.6447337.p01	k119_13522_1	0	0	0	4	0	0	0	0	2	5	0	0
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	Z21523.gene.p01	k119_13492_1	6	0	0	0	0	4	1	1	0	0	0	0
+ABC Transporter	msbA: ATP-binding cassette (ABC) antibiotic efflux pump	msbA	NC_002516.2.881672.p01	k119_13481_1	6	0	5	0	4	0	1	0	0	0	0	1
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686946.p01	k119_9042_1	0	0	0	0	0	0	0	0	3	4	0	0
+Gene Modulating Resistance	baeR: subunit of gene modulating antibiotic efflux	baeR	NC_010410.6002989.p01	k119_6138_1	0	0	0	1	0	0	0	0	4	1	1	1
+Other Efflux	chloramphenicol efflux pump	Chloramphenicol_Efflux_Pump	gi|32479383|ref|NP_862236.1|	k119_6078_1	0	1	0	3	0	0	0	0	4	0	6	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_5368_1	2	0	0	0	5	0	1	0	0	0	0	0
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	AJ514254.gene.p01	k119_5976_1	0	0	0	1	0	0	0	0	3	2	10	0
+Other Efflux	chloramphenicol efflux pump	Chloramphenicol_Efflux_Pump	AF294653.1.gene4.p01	k119_7216_2	0	0	0	4	0	0	0	0	3	3	0	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	U82085.gene.p01	k119_5851_1	0	0	0	0	0	10	0	2	0	0	0	0
+RND Antibiotic Efflux	adeC-adeK-oprM: outer membrane factor the multidrug efflux complex	adeC-adeK-oprM	NC_011595.7058890.p01	k119_5839_1	0	0	3	1	0	0	0	0	1	3	0	0
+ABC Transporter	msbA: ATP-binding cassette (ABC) antibiotic efflux pump	msbA	gi|57651525|ref|YP_185623.1|	k119_5823_1	0	3	1	2	0	1	0	1	0	1	6	2
+MFS Transporter	emrB: subunit of efflux pump conferring antibiotic resistance	emrB	NC_002695.1.914736.p01	k119_11085_2	0	0	0	3	0	0	0	0	4	3	1	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	NC_002758.1121879.p01	k119_5447_1	0	0	0	1	0	0	0	0	3	0	2	0
+ABC Transporter	msbA: ATP-binding cassette (ABC) antibiotic efflux pump	msbA	NC_008702.1.4608011.p01	k119_5423_1	0	0	0	1	0	0	0	0	1	5	0	1
+ABC Transporter	msbA: ATP-binding cassette (ABC) antibiotic efflux pump	msbA	NC_002516.2.881672.p01	k119_3076_1	0	0	1	0	0	0	0	0	1	1	0	0
+Phosphotransferase	aminoglycoside phosphotransferase (APH3)	APH3_double_prime	FQ312006.1.gene706.p01	k119_5340_1	6	0	2	1	2	1	2	0	1	1	1	0
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	AJ295238.gene.p01	k119_11655_1	0	0	0	1	0	6	0	0	0	0	0	0
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	X04388.gene.p01	k119_5276_2	0	0	0	0	6	0	0	0	0	0	0	1
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_008702.1.4606598.p01	k119_2769_1	0	0	0	1	0	0	1	0	2	1	5	0
+Quinolone Resistance	Fluoroquinolone Resistant DNA Topoisomerase	FluoroquinoloneResistantDNATopoisomerase	M58408.gene.p01	k119_9899_1	0	0	0	3	0	1	0	0	1	0	2	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	NC_002758.1121879.p01	k119_5075_1	0	1	0	0	0	18	2	0	0	0	0	1
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_008702.1.4606596.p01	k119_5099_1	3	0	2	1	0	0	0	0	0	1	0	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	U82085.gene.p01	k119_5034_1	6	0	5	3	5	0	2	0	0	1	1	2
+RND Antibiotic Efflux	resistance-nodulation-cell division (RND) antibiotic efflux pump	RNDAntibioticEffluxPump	NC_008702.1.4607810.p01	k119_4829_1	7	1	3	3	9	0	1	0	3	2	1	0
+Gylcopeptide Resistance	VanH: D-specific alpha-ketoacid dehydrogenase that synthesizes D-lactate	vanH	U35369.1.gene5.p01	k119_7854_2	0	0	2	2	0	0	0	0	0	1	8	0
+ABC Transporter	msbA: ATP-binding cassette (ABC) antibiotic efflux pump	msbA	NC_002516.2.881672.p01	k119_11893_1	0	0	0	0	0	0	0	0	0	4	0	2
+Gylcopeptide Resistance	VanH: D-specific alpha-ketoacid dehydrogenase that synthesizes D-lactate	vanH	U35369.1.gene5.p01	k119_4989_1	0	0	0	2	0	0	1	0	4	5	3	1
+RND Antibiotic Efflux	resistance-nodulation-cell division (RND) antibiotic efflux pump	RNDAntibioticEffluxPump	NC_008702.1.4606607.p01	k119_10224_1	2	0	0	0	2	0	0	0	0	0	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7685735.p01	k119_4533_2	0	1	0	5	0	1	1	0	3	5	6	2
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_10778_1	0	1	0	1	0	0	0	0	0	1	7	0
+Gene Modulating Resistance	blaI: gene modulating beta-lactam resistance, regulates PC1 beta-lactamase (blaZ)	blaI	NC_005054.2598289.p01	k119_10602_1	1	0	1	0	0	0	2	0	0	5	0	4
+Quinolone Resistance	Fluoroquinolone Resistant DNA Topoisomerase	FluoroquinoloneResistantDNATopoisomerase	M58408.gene.p01	k119_4171_1	0	0	0	0	6	0	1	0	0	0	0	1
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7685735.p01	k119_4136_2	0	0	0	0	0	11	0	0	0	0	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_9418_1	0	0	0	0	0	0	1	0	0	3	1	2
+Gylcopeptide Resistance	VanC: D-Ala-D-Ala ligase that can synthesize D-Ala-D-Ser	vanC	AF162694.1.orf1.gene.p01	k119_14997_1	5	1	0	0	2	0	0	0	0	0	1	1
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	AJ514254.gene.p01	k119_4085_1	7	0	0	0	4	0	1	0	0	0	0	2
+ABC Transporter	msbA: ATP-binding cassette (ABC) antibiotic efflux pump	msbA	NC_008702.1.4608011.p01	k119_4639_1	0	0	0	1	0	0	0	0	0	7	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_008702.1.4609454.p01	k119_4729_1	0	0	1	1	0	0	1	0	0	2	1	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_008702.1.4609454.p01	k119_3989_1	0	1	0	2	0	0	0	0	3	0	2	0
+Other Efflux	emrE: small multidrug resistance (SMR) antibiotic efflux pump	emrE	NC_002695.1.913273.p01	k119_3238_1	0	10	0	3	0	0	0	0	0	0	0	0
+ABC Transporter	msbA: ATP-binding cassette (ABC) antibiotic efflux pump	msbA	gi|57651526|ref|YP_185624.1|	k119_4484_1	12	0	1	1	2	1	0	0	1	0	1	3
+Quinolone Resistance	Fluoroquinolone Resistant DNA Topoisomerase	FluoroquinoloneResistantDNATopoisomerase	NC_012469.1.7685406.p01	k119_1579_1	1	0	0	0	6	0	0	0	1	0	2	2
+Quinolone Resistance	Fluoroquinolone Resistant DNA Topoisomerase	FluoroquinoloneResistantDNATopoisomerase	NC_002516.2.879741.p01	k119_3930_2	0	0	1	0	0	1	0	0	1	0	3	0
+Gene Modulating Resistance	VanR: transcriptional activator regulating VanA, VanH and VanX	vanR	DQ212986.1.gene4.p01	k119_13846_1	0	0	0	0	0	0	0	0	3	0	0	0
+Phosphotransferase	aminoglycoside phosphotransferase (APH3)	APH3_double_prime	FQ312006.1.gene706.p01	k119_5354_2	0	1	0	1	0	1	0	0	1	1	0	3
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_008702.1.4606598.p01	k119_3894_1	0	0	0	3	0	0	0	0	2	3	1	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686946.p01	k119_5834_1	0	0	0	1	0	0	0	0	0	5	0	0
+Gene Modulating Resistance	soxR: mutant efflux regulatory protein conferring antibiotic resistance	soxR	NC_009085.4918082.p01	k119_3880_1	0	1	1	3	0	0	0	0	3	1	2	1
+ABC Transporter	msbA: ATP-binding cassette (ABC) antibiotic efflux pump	msbA	NC_008702.1.4608011.p01	k119_3851_1	0	0	1	0	0	0	0	2	1	2	4	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_008702.1.4609454.p01	k119_3847_1	0	0	2	0	0	0	0	0	1	0	4	0
+rRNA Methyltransferase	Emr 23S ribosomal RNA methyltransferase: rRNA methyltransferase conferring antibiotic resistance	Erm23SRibosomalRNAMethyltransferase	AY234334.1.orf0.gene.p01	k119_3820_2	1	0	0	0	1	0	0	0	0	0	0	0
+Gylcopeptide Resistance	VanY: glycopeptide resistance gene	vanY	gi|5759263|gb|AAD51058.1|AF175293_3	k119_16560_1	0	0	0	0	0	0	0	2	0	1	5	1
+Gene Modulating Resistance	VanS: trasncriptional regulator of van glycopeptide resistance genes	vanS	FJ349556.1.orf1.gene.p01	k119_1341_1	0	1	0	2	0	0	5	0	0	2	0	1
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_011586.7043668.p01	k119_15132_1	0	1	0	0	0	0	0	0	0	4	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_3719_1	4	0	2	1	0	0	0	1	2	0	2	0
+MFS Transporter	emrB: subunit of efflux pump conferring antibiotic resistance	emrB	NC_013450.8615150.p01	k119_783_1	0	1	0	0	0	0	0	0	0	2	9	0
+RND Antibiotic Efflux	resistance-nodulation-cell division (RND) antibiotic efflux pump	RNDAntibioticEffluxPump	gi|146306240|ref|YP_001186705.1|	k119_2270_2	0	0	0	2	0	0	0	1	3	3	8	1
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_5655_1	0	0	0	4	0	0	0	1	4	4	0	1
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_008702.1.4606598.p01	k119_3658_1	0	0	0	0	0	7	0	0	0	0	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_12470_1	0	0	2	1	0	0	0	0	1	3	0	0
+Phosphotransferase	aminoglycoside phosphotransferase (APH3)	APH3_double_prime	FQ312006.1.gene706.p01	k119_7877_1	0	0	0	1	0	0	1	1	4	5	0	0
+Other Efflux	chloramphenicol efflux pump	Chloramphenicol_Efflux_Pump	gi|498887|gb|AAB36568.1|	k119_5533_1	0	1	0	1	0	0	0	0	2	0	5	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	U82085.gene.p01	k119_3446_2	0	0	0	2	0	0	0	0	0	1	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_008702.1.4606598.p01	k119_6621_1	0	0	0	7	0	0	0	0	1	3	3	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	NC_002758.1121879.p01	k119_6027_1	0	0	2	2	0	0	5	0	0	4	0	2
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	U82085.gene.p01	k119_4321_1	0	0	0	0	0	0	0	0	1	4	0	0
+Quinolone Resistance	Fluoroquinolone Resistant DNA Topoisomerase	FluoroquinoloneResistantDNATopoisomerase	NC_011035.1.6447337.p01	k119_13224_1	0	0	0	3	0	1	0	0	0	1	0	0
+rRNA Methyltransferase	Cfr 23S ribosomal RNA methyltransferase	Cfr23RibosomalRNAMethyltransferase	NC_011586.7043651.p01	k119_9056_1	0	0	0	0	0	0	0	0	2	2	1	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_008702.1.4606598.p01	k119_12979_1	0	0	0	1	0	3	0	1	0	1	5	1
+MFS Transporter	emrB: subunit of efflux pump conferring antibiotic resistance	emrB	NC_013450.8615214.p01	k119_7254_1	0	0	0	10	0	0	1	0	5	8	1	0
+RND Antibiotic Efflux	adeC-adeK-oprM: outer membrane factor the multidrug efflux complex	adeC-adeK-oprM	NC_010400.5984384.p01	k119_3236_1	0	0	0	4	0	0	0	0	0	6	0	1
+Gene Modulating Resistance	VanR: transcriptional activator regulating VanA, VanH and VanX	vanR	AF155139.2.orf0.gene.p01	k119_5070_2	0	0	1	0	0	13	0	0	0	1	0	0
+Gene Modulating Resistance	VanR: transcriptional activator regulating VanA, VanH and VanX	vanR	Y16952.3.orf35.gene.p01	k119_3312_1	0	0	0	0	0	0	0	0	0	5	0	0
+Acetyltransferase	chloramphenicol acetyltransferase (CAT)	Chloramphenicol_Acetyltransferase_CAT	NC_011595.7057747.p01	k119_2203_1	5	0	0	0	2	0	0	0	0	0	0	0
+Gene Modulating Resistance	ramA: gene modulating antibiotic efflux	ramA	gi|2495371|sp|P55922.1|RAMA_ENTCL	k119_8296_1	0	0	0	3	0	2	0	0	0	0	0	2
+Other Efflux	emrE: small multidrug resistance (SMR) antibiotic efflux pump	emrE	AE000516.2.gene3301.p01	k119_5571_1	0	1	0	0	0	0	0	0	0	0	2	0
+RND Antibiotic Efflux	adeC-adeK-oprM: outer membrane factor the multidrug efflux complex	adeC-adeK-oprM	NC_011595.7058890.p01	k119_14155_1	0	0	0	1	0	0	0	0	0	1	3	0
+RND Antibiotic Efflux	adeB: membrane fusion protein of multidrug efflux complex	adeB	NC_009085.4919117.p01	k119_3905_1	0	0	1	0	0	6	0	0	0	0	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_008702.1.4609454.p01	k119_4823_1	0	0	0	0	0	0	0	0	0	3	5	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_008702.1.4606598.p01	k119_3124_2	0	0	1	0	0	0	0	0	0	0	1	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686946.p01	k119_8566_1	0	0	0	2	0	0	2	0	0	1	3	3
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_008702.1.4606598.p01	k119_9853_1	0	0	0	3	0	1	0	1	0	0	3	0
+Quinolone Resistance	Fluoroquinolone Resistant DNA Topoisomerase	FluoroquinoloneResistantDNATopoisomerase	NC_007622.3794239.p01	k119_1406_1	0	1	0	3	0	0	0	0	6	1	1	1
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_7632_1	1	0	1	0	6	0	2	0	0	0	1	1
+ABC Transporter	macA: subunit of efflux pump conferring antibiotic resistance	macA	NC_011035.1.6447343.p01	k119_900_1	0	0	0	4	0	2	0	0	1	0	2	0
+RND Antibiotic Efflux	resistance-nodulation-cell division (RND) antibiotic efflux pump	RNDAntibioticEffluxPump	gi|146306240|ref|YP_001186705.1|	k119_13066_1	3	0	0	0	0	1	0	0	0	0	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686946.p01	k119_9165_1	0	1	0	1	0	1	0	2	0	4	2	0
+Gene Modulating Resistance	VanR: transcriptional activator regulating VanA, VanH and VanX	vanR	DQ212986.1.gene4.p01	k119_4730_1	0	0	0	2	0	0	0	0	1	1	5	1
+MFS Transporter	emrB: subunit of efflux pump conferring antibiotic resistance	emrB	NC_002695.1.914736.p01	k119_4317_1	0	0	0	0	0	0	0	0	3	0	5	0
+RND Antibiotic Efflux	adeC-adeK-oprM: outer membrane factor the multidrug efflux complex	adeC-adeK-oprM	NC_010410.6000769.p01	k119_2959_1	0	0	0	0	0	0	0	0	2	4	2	0
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	NC_009782.5559075.p01	k119_1922_1	10	0	5	3	6	0	0	0	1	1	3	2
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_008702.1.4606598.p01	k119_2409_1	0	0	0	2	0	0	0	0	7	2	2	0
+rRNA Methyltransferase	Cfr 23S ribosomal RNA methyltransferase	Cfr23RibosomalRNAMethyltransferase	NC_009632.5316674.p01	k119_8291_1	0	0	0	0	0	1	0	0	7	0	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_008702.1.4606598.p01	k119_5099_2	2	0	0	1	0	0	1	0	0	2	2	1
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	X04388.gene.p01	k119_1105_1	2	0	0	1	0	0	0	0	0	1	0	1
+rRNA Methyltransferase	Cfr 23S ribosomal RNA methyltransferase	Cfr23RibosomalRNAMethyltransferase	NC_011586.7043651.p01	k119_5458_1	0	0	0	2	0	0	0	0	0	5	1	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7685735.p01	k119_16539_1	0	0	1	3	0	0	0	0	3	4	2	0
+RND Antibiotic Efflux	adeB: membrane fusion protein of multidrug efflux complex	adeB	NC_009085.4919117.p01	k119_13339_1	1	0	0	0	5	0	1	0	0	0	1	0
+Gylcopeptide Resistance	VanT: membrane bound serine racemase, converting L-serine to D-serine	vanT	DQ212986.1.gene11.p01	k119_908_1	0	0	1	1	2	1	0	0	0	2	0	0
+RND Antibiotic Efflux	resistance-nodulation-cell division (RND) antibiotic efflux pump	RNDAntibioticEffluxPump	gi|116052244|ref|YP_788912.1|	k119_1264_1	0	1	1	0	0	0	0	0	3	1	5	2
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	U82085.gene.p01	k119_767_1	0	0	2	6	0	0	0	0	4	7	1	2
+RND Antibiotic Efflux	resistance-nodulation-cell division (RND) antibiotic efflux pump	RNDAntibioticEffluxPump	NC_008702.1.4608571.p01	k119_3896_1	0	3	1	0	0	0	0	0	0	0	0	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	AJ579365.gene.p01	k119_16176_1	0	0	0	0	0	0	1	0	1	3	6	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_870_2	0	0	0	3	0	0	1	0	1	4	4	0
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	L42544.gene.p01	k119_2753_1	0	1	2	12	0	0	1	1	15	13	3	1
+ABC Transporter	msbA: ATP-binding cassette (ABC) antibiotic efflux pump	msbA	gi|57651525|ref|YP_185623.1|	k119_1425_1	0	1	0	1	0	3	0	2	2	0	2	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_1171_1	0	0	0	0	0	0	0	0	0	1	3	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_008702.1.4606598.p01	k119_13651_1	0	0	0	2	0	0	0	0	0	3	0	0
+Gene Modulating Resistance	VanS: trasncriptional regulator of van glycopeptide resistance genes	vanS	AF162694.1.orf5.gene.p01	k119_1023_1	0	0	1	2	0	0	0	0	0	1	11	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7685735.p01	k119_2300_1	0	1	1	1	0	0	0	0	4	1	1	1
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_7775_1	0	0	1	2	0	1	0	0	0	1	0	0
+RND Antibiotic Efflux	resistance-nodulation-cell division (RND) antibiotic efflux pump	RNDAntibioticEffluxPump	NC_008702.1.4607484.p01	k119_743_1	1	1	0	0	0	4	1	0	0	0	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686946.p01	k119_1400_1	0	0	0	4	0	0	0	0	0	0	1	1
+ABC Transporter	msbA: ATP-binding cassette (ABC) antibiotic efflux pump	msbA	gi|57651525|ref|YP_185623.1|	k119_8115_1	0	0	0	0	0	5	0	0	0	0	0	0
+Gylcopeptide Resistance	VanH: D-specific alpha-ketoacid dehydrogenase that synthesizes D-lactate	vanH	AF310956.2.orf4.gene.p01	k119_12062_1	0	0	0	0	7	0	1	0	0	0	0	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	U82085.gene.p01	k119_9335_1	0	0	3	1	1	0	2	1	4	4	1	1
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_2469_1	5	0	1	0	1	0	0	0	0	0	1	1
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_008702.1.4606598.p01	k119_16039_1	0	0	0	1	0	0	0	0	2	2	1	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_010400.5985985.p01	k119_4409_1	0	0	0	0	7	0	1	0	0	0	0	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	NC_002758.1121879.p01	k119_8948_1	0	0	0	0	0	0	0	0	4	1	0	0
+Gylcopeptide Resistance	VanT: membrane bound serine racemase, converting L-serine to D-serine	vanT	DQ212986.1.gene11.p01	k119_5175_2	7	0	0	0	4	0	0	0	2	0	0	0
+Gene Modulating Resistance	VanS: trasncriptional regulator of van glycopeptide resistance genes	vanS	AF162694.1.orf5.gene.p01	k119_2972_2	0	0	1	12	0	0	0	0	2	7	0	0
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	L42544.gene.p01	k119_10849_1	0	3	5	2	2	2	11	1	11	7	2	8
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	NC_002758.1121879.p01	k119_13529_2	3	0	0	0	1	0	0	0	0	0	0	1
+RND Antibiotic Efflux	resistance-nodulation-cell division (RND) antibiotic efflux pump	RNDAntibioticEffluxPump	NC_008702.1.4607484.p01	k119_2272_1	0	0	0	0	0	7	0	0	0	0	0	0
+Quinolone Resistance	Fluoroquinolone Resistant DNA Topoisomerase	FluoroquinoloneResistantDNATopoisomerase	NC_012469.1.7685406.p01	k119_11492_1	0	0	0	2	0	0	0	0	0	3	2	2
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	FN594949.1.gene24.p01	k119_7752_1	0	1	0	1	0	0	0	0	0	4	0	0
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	L20800.gene.p01	k119_1711_1	0	0	0	0	7	0	0	0	0	0	0	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	NC_002758.1121879.p01	k119_5684_1	0	1	0	5	0	0	0	0	1	4	0	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	NC_002758.1121879.p01	k119_7615_1	2	0	0	0	2	0	0	0	1	0	0	0
+RND Antibiotic Efflux	adeC-adeK-oprM: outer membrane factor the multidrug efflux complex	adeC-adeK-oprM	NC_008702.1.4606278.p01	k119_1030_1	4	0	0	0	0	0	1	0	0	0	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686946.p01	k119_10612_1	5	0	3	7	7	1	5	0	1	2	1	2
+Gene Modulating Resistance	VanS: trasncriptional regulator of van glycopeptide resistance genes	vanS	FJ349556.1.orf1.gene.p01	k119_9216_1	0	0	0	3	0	0	0	0	0	1	2	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_13835_1	2	0	0	1	1	1	0	0	1	0	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686946.p01	k119_8708_2	2	0	0	1	1	0	1	0	0	0	1	3
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	M85225.gene.p01	k119_10345_1	0	0	1	2	0	0	0	0	1	3	1	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	NC_002758.1121879.p01	k119_80_1	0	0	0	3	0	0	0	0	4	4	6	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_149_1	0	2	0	1	1	2	0	0	1	2	6	0
+RND Antibiotic Efflux	resistance-nodulation-cell division (RND) antibiotic efflux pump	RNDAntibioticEffluxPump	NC_011595.7058956.p01	k119_8654_1	1	0	1	0	4	0	0	0	0	0	0	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	NC_012469.1.7685970.p01	k119_1490_1	0	0	0	2	0	0	0	0	0	8	0	0
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	L20800.gene.p01	k119_6214_1	0	1	1	0	1	0	1	1	4	1	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686946.p01	k119_13552_1	0	0	1	1	0	4	0	1	3	1	1	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_2880_1	0	0	0	0	1	0	0	0	0	5	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_011586.7043668.p01	k119_13594_1	0	0	1	1	0	1	0	0	0	1	4	1
+MFS Transporter	tetracycline resistance MFS efflux pump: selectively pump out tetracycline or tetracycline derivatives	Tetracycline_Resistance_MFS_Efflux_Pump	GQ244501.1.gene1.p01	k119_975_1	0	0	0	0	0	0	0	0	2	0	6	0
+Gene Modulating Resistance	romA: trasncription factor mediating antibiotic resistance	romA	gi|493862968|ref|WP_006809718.1|	k119_5945_1	2	0	0	2	1	0	0	0	1	1	0	0
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	L20800.gene.p01	k119_7442_1	0	0	0	1	0	0	0	0	1	2	0	0
+ABC Transporter	msbA: ATP-binding cassette (ABC) antibiotic efflux pump	msbA	NC_010400.5985078.p01	k119_9848_2	3	0	0	0	0	1	0	0	0	0	0	2
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_008702.1.4609454.p01	k119_6691_1	0	0	0	1	0	0	0	0	3	2	1	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_144_1	2	0	0	0	0	0	0	0	0	0	0	0
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	X04388.gene.p01	k119_4980_1	0	2	0	9	0	0	0	0	0	17	0	0
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	L42544.gene.p01	k119_1721_1	0	0	0	1	1	0	0	1	3	0	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_010400.5985985.p01	k119_13102_1	0	0	1	0	0	0	0	0	1	0	4	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686946.p01	k119_4614_1	0	0	1	0	0	8	0	0	0	0	0	0
+ABC Transporter	msbA: ATP-binding cassette (ABC) antibiotic efflux pump	msbA	NC_011595.7058895.p01	k119_1808_1	0	0	0	4	0	0	0	0	0	2	1	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	U82085.gene.p01	k119_6787_1	0	3	0	1	0	2	0	0	2	0	5	0
+Quinolone Resistance	Fluoroquinolone Resistant DNA Topoisomerase	FluoroquinoloneResistantDNATopoisomerase	NC_009641.5331984.p01	k119_2200_1	0	0	0	4	0	13	1	3	3	1	6	3
+RND Antibiotic Efflux	resistance-nodulation-cell division (RND) antibiotic efflux pump	RNDAntibioticEffluxPump	gi|229592366|ref|YP_002874485.1|	k119_2270_1	0	1	0	1	0	1	0	0	1	0	6	0
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	AJ295238.gene.p01	k119_12945_1	0	0	2	3	3	0	0	0	3	2	9	1
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	L42544.gene.p01	k119_2566_1	0	0	2	1	0	2	0	1	0	0	2	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	U82085.gene.p01	k119_6190_1	0	1	1	2	0	0	0	0	2	2	3	1
+Quinolone Resistance	Fluoroquinolone Resistant DNA Topoisomerase	FluoroquinoloneResistantDNATopoisomerase	NC_012469.1.7686721.p01	k119_8862_1	0	0	0	0	0	2	0	0	0	0	0	4
+Other Efflux	emrE: small multidrug resistance (SMR) antibiotic efflux pump	emrE	NC_002695.1.913273.p01	k119_4656_1	0	0	0	3	0	0	0	0	3	2	0	0
+ABC Transporter	msbA: ATP-binding cassette (ABC) antibiotic efflux pump	msbA	NC_002516.2.881672.p01	k119_10335_1	0	0	0	0	0	4	1	0	0	0	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_008702.1.4606598.p01	k119_506_1	0	0	1	1	0	0	0	0	4	0	1	0
+RND Antibiotic Efflux	adeC-adeK-oprM: outer membrane factor the multidrug efflux complex	adeC-adeK-oprM	NC_011595.7058890.p01	k119_7259_1	0	0	0	3	0	0	0	0	0	2	0	0
+Gene Modulating Resistance	VanR: transcriptional activator regulating VanA, VanH and VanX	vanR	NC_005054.2598277.p01	k119_6055_1	0	0	0	0	5	0	0	0	0	0	0	0
+Gene Modulating Resistance	VanR: transcriptional activator regulating VanA, VanH and VanX	vanR	FJ349556.1.orf0.gene.p01	k119_7732_1	0	0	0	2	0	0	0	0	2	0	6	0
+RND Antibiotic Efflux	resistance-nodulation-cell division (RND) antibiotic efflux pump	RNDAntibioticEffluxPump	NC_008702.1.4608571.p01	k119_2599_1	3	0	0	0	3	0	5	0	0	0	0	2
+Quinolone Resistance	Fluoroquinolone Resistant DNA Topoisomerase	FluoroquinoloneResistantDNATopoisomerase	NC_011595.7059884.p01	k119_4339_1	0	1	0	1	0	1	0	0	1	0	1	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	NC_002758.1121879.p01	k119_12069_1	0	0	0	1	0	0	0	0	4	0	3	0
+MFS Transporter	emrB: subunit of efflux pump conferring antibiotic resistance	emrB	NC_002695.1.914736.p01	k119_1598_3	0	0	1	9	0	2	0	0	6	5	3	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686946.p01	k119_1449_1	3	0	1	0	3	1	0	0	0	0	1	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686946.p01	k119_715_1	0	0	0	1	1	0	4	0	0	1	2	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686946.p01	k119_578_1	0	0	0	1	0	0	0	2	2	1	1	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_12082_1	0	0	0	3	0	0	0	0	0	4	0	0
+ABC Transporter	msbA: ATP-binding cassette (ABC) antibiotic efflux pump	msbA	gi|57651526|ref|YP_185624.1|	k119_3928_1	0	0	0	2	0	1	0	1	0	1	5	1
+RND Antibiotic Efflux	adeB: membrane fusion protein of multidrug efflux complex	adeB	NC_010410.6002903.p01	k119_832_1	0	0	2	4	0	0	1	0	0	3	0	0
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	L42544.gene.p01	k119_1469_3	2	0	1	5	0	2	2	0	4	6	4	0
+ABC Transporter	msbA: ATP-binding cassette (ABC) antibiotic efflux pump	msbA	NC_010400.5985078.p01	k119_4920_1	0	0	0	4	0	0	1	0	3	2	1	0
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	L42544.gene.p01	k119_1550_1	0	0	1	1	0	1	1	0	1	2	1	0
+Gylcopeptide Resistance	VanT: membrane bound serine racemase, converting L-serine to D-serine	vanT	AF162694.1.orf3.gene.p01	k119_14229_1	0	0	0	0	0	9	0	0	0	0	1	0
+Phosphotransferase	aminoglycoside phosphotransferase (APH3)	APH3_double_prime	FQ312006.1.gene706.p01	k119_2428_1	0	0	0	3	0	0	0	0	0	2	4	1
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_1567_1	0	0	0	0	0	0	0	0	0	2	4	0
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	DQ294299.gene.p01	k119_12635_1	0	0	0	1	0	0	1	1	2	1	0	0
+Quinolone Resistance	Fluoroquinolone Resistant DNA Topoisomerase	FluoroquinoloneResistantDNATopoisomerase	NC_007622.3794239.p01	k119_7190_2	2	0	3	1	2	2	0	0	0	1	1	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	U82085.gene.p01	k119_10232_1	0	0	0	0	0	0	0	0	0	5	0	0
+rRNA Methyltransferase	Cfr 23S ribosomal RNA methyltransferase	Cfr23RibosomalRNAMethyltransferase	NC_009632.5316674.p01	k119_2509_1	0	0	1	0	0	4	0	0	0	0	0	0
+MFS Transporter	emrB: subunit of efflux pump conferring antibiotic resistance	emrB	NC_009641.5331260.p01	k119_14946_1	0	0	0	2	0	0	0	0	0	0	9	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	NC_012469.1.7685970.p01	k119_13382_1	0	0	1	0	0	0	0	0	0	0	6	0
+RND Antibiotic Efflux	adeB: membrane fusion protein of multidrug efflux complex	adeB	NC_009085.4919117.p01	k119_9537_1	0	0	0	0	0	9	0	0	0	0	0	0
+Gylcopeptide Resistance	VanT: membrane bound serine racemase, converting L-serine to D-serine	vanT	EU250284.1.orf3.gene.p01	k119_1706_1	0	0	0	1	0	0	0	0	0	5	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7685735.p01	k119_1720_1	0	1	1	0	0	0	0	0	0	0	0	0
+Quinolone Resistance	Fluoroquinolone Resistant DNA Topoisomerase	FluoroquinoloneResistantDNATopoisomerase	NC_009641.5331984.p01	k119_2537_1	6	0	1	0	13	1	2	2	1	0	0	2
+ABC Transporter	msbA: ATP-binding cassette (ABC) antibiotic efflux pump	msbA	NC_008702.1.4608011.p01	k119_5341_1	0	0	0	0	3	0	0	0	0	0	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_010400.5985985.p01	k119_13853_1	0	0	1	2	0	2	0	0	0	2	2	2
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_011586.7043668.p01	k119_5884_1	0	2	0	2	0	0	0	0	2	2	2	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7685735.p01	k119_13333_1	0	0	0	1	0	0	0	0	0	6	0	0
+rRNA Methyltransferase	Cfr 23S ribosomal RNA methyltransferase	Cfr23RibosomalRNAMethyltransferase	NC_011586.7043651.p01	k119_4955_1	0	0	0	1	0	13	1	0	0	0	0	0
+Gene Modulating Resistance	baeR: subunit of gene modulating antibiotic efflux	baeR	NC_010410.6002989.p01	k119_1696_1	4	0	1	3	3	1	2	0	0	1	1	4
+ABC Transporter	msbA: ATP-binding cassette (ABC) antibiotic efflux pump	msbA	NC_008702.1.4608011.p01	k119_13314_2	0	0	1	0	0	0	0	0	0	1	1	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7685735.p01	k119_1026_1	3	0	1	0	0	1	1	0	0	0	0	2
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_1842_1	2	0	0	0	2	1	1	0	0	1	0	0
+Phosphotransferase	aminoglycoside phosphotransferase (APH3)	APH3_double_prime	FQ312006.1.gene706.p01	k119_3697_1	0	0	0	2	0	0	5	0	4	3	2	3
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_008702.1.4606598.p01	k119_3872_1	0	0	0	1	0	0	0	0	1	5	0	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	U82085.gene.p01	k119_5325_2	0	0	0	0	0	3	1	1	0	0	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_008702.1.4606597.p01	k119_4622_1	0	0	0	0	0	0	0	0	2	1	3	0
+RND Antibiotic Efflux	resistance-nodulation-cell division (RND) antibiotic efflux pump	RNDAntibioticEffluxPump	NC_008702.1.4606607.p01	k119_3416_1	0	1	1	0	4	0	1	0	0	2	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7685735.p01	k119_1547_1	0	1	0	2	0	0	0	0	0	3	0	0
+RND Antibiotic Efflux	resistance-nodulation-cell division (RND) antibiotic efflux pump	RNDAntibioticEffluxPump	NC_008702.1.4608571.p01	k119_1943_1	0	4	0	1	0	0	0	0	0	0	0	0
+ABC Transporter	msbA: ATP-binding cassette (ABC) antibiotic efflux pump	msbA	NC_008702.1.4607352.p01	k119_8501_1	0	0	0	0	0	0	1	0	0	0	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_1152_1	3	0	1	1	0	2	0	0	0	0	0	1
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_14504_1	2	0	1	0	3	0	0	0	0	0	0	1
+ABC Transporter	msbA: ATP-binding cassette (ABC) antibiotic efflux pump	msbA	gi|57651525|ref|YP_185623.1|	k119_2253_2	3	0	2	0	1	0	0	0	0	0	1	1
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_1420_1	0	0	0	0	0	0	0	0	0	6	0	0
+Gene Modulating Resistance	VanR: transcriptional activator regulating VanA, VanH and VanX	vanR	FJ349556.1.orf0.gene.p01	k119_11011_1	0	0	0	0	0	0	4	0	0	2	1	0
+Gene Modulating Resistance	VanS: trasncriptional regulator of van glycopeptide resistance genes	vanS	AF130997.1.orf1.gene.p01	k119_2868_1	0	0	0	2	0	0	0	0	2	0	1	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_010400.5985985.p01	k119_1189_2	0	0	1	2	0	0	0	0	1	1	5	2
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	AJ295238.gene.p01	k119_2175_1	0	0	0	8	0	0	1	0	10	4	4	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	U82085.gene.p01	k119_1974_1	0	0	1	2	0	1	1	0	10	2	4	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	NC_012469.1.7685970.p01	k119_1952_1	0	0	0	0	8	0	0	0	0	0	0	0
+RND Antibiotic Efflux	adeB: membrane fusion protein of multidrug efflux complex	adeB	NC_010410.6002903.p01	k119_2826_1	0	0	0	1	0	0	0	0	3	2	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7685735.p01	k119_86_1	0	0	0	2	0	0	0	0	0	2	0	0
+RND Antibiotic Efflux	resistance-nodulation-cell division (RND) antibiotic efflux pump	RNDAntibioticEffluxPump	NC_008702.1.4606564.p01	k119_2512_1	0	5	1	2	0	0	0	0	0	0	0	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	NC_002758.1121879.p01	k119_2981_1	0	0	0	9	0	0	0	0	5	6	0	0
+ABC Transporter	msbA: ATP-binding cassette (ABC) antibiotic efflux pump	msbA	gi|57651525|ref|YP_185623.1|	k119_11900_1	0	1	0	5	0	0	0	0	0	5	0	0
+Beta-Lactamase	Subclass B3 (metallo-) beta-lactamase hydrolize penicillins, cephalosporins and carbapenems	SubclassB3	gi|197296825|gb|ACH58985.1|	k119_2068_1	2	0	1	0	5	0	0	0	0	0	1	1
+Quinolone Resistance	Fluoroquinolone Resistant DNA Topoisomerase	FluoroquinoloneResistantDNATopoisomerase	M58408.gene.p01	k119_2407_1	0	0	0	1	0	1	0	2	0	0	2	1
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7685735.p01	k119_4138_2	0	0	0	2	0	0	0	0	0	2	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7685735.p01	k119_11785_1	3	0	1	3	0	0	1	0	0	3	0	1
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_2761_1	0	0	2	2	1	0	2	1	4	1	2	1
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_11316_1	4	0	0	0	0	0	0	0	0	0	1	1
+RND Antibiotic Efflux	resistance-nodulation-cell division (RND) antibiotic efflux pump	RNDAntibioticEffluxPump	NC_008702.1.4606277.p01	k119_2611_1	0	0	0	8	0	0	0	1	8	9	2	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_2562_2	0	0	0	0	0	0	0	0	1	2	0	1
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	AY485126.gene.p01	k119_4198_1	3	0	0	0	2	0	1	0	0	0	1	2
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	NC_012469.1.7685970.p01	k119_3701_4	0	0	1	2	3	0	1	0	17	3	9	4
+MFS Transporter	major facilitator superfamily (MFS) antibiotic efflux pump	MFSAntibioticEffluxPump	NC_002695.1.915653.p01	k119_11085_1	0	0	2	11	0	0	2	1	9	9	1	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	U82085.gene.p01	k119_1578_1	2	0	2	1	2	0	0	0	0	1	1	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	AJ579365.gene.p01	k119_9312_1	2	0	0	0	4	1	0	0	0	0	0	0
+Gene Modulating Resistance	VanR: transcriptional activator regulating VanA, VanH and VanX	vanR	Y16952.3.orf35.gene.p01	k119_7160_1	0	0	0	0	0	0	0	0	1	0	0	3
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_011586.7043668.p01	k119_65_1	0	0	0	0	0	0	1	0	0	3	1	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	NC_002758.1121879.p01	k119_4271_1	0	0	0	2	0	0	0	1	3	5	0	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	NC_012469.1.7685970.p01	k119_178_1	0	0	0	0	0	7	1	0	0	0	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7685735.p01	k119_14598_1	0	1	0	3	0	0	1	0	6	6	0	0
+RND Antibiotic Efflux	mexE: membrane fusion protein of the MexEF-OprN multidrug efflux complex	MexE	NC_002516.2.880212.p01	k119_2996_1	0	0	0	0	0	5	0	0	0	1	0	0
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	L20800.gene.p01	k119_4084_1	0	0	0	1	0	1	0	0	2	1	3	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_1797_2	0	0	0	0	0	0	0	2	2	0	4	2
+Gene Modulating Resistance	baeR: subunit of gene modulating antibiotic efflux	baeR	NC_010410.6002989.p01	k119_6242_1	0	0	0	1	1	0	4	0	0	8	0	1
+MFS Transporter	major facilitator superfamily (MFS) antibiotic efflux pump	MFSAntibioticEffluxPump	NC_002516.2.880556.p01	k119_4590_1	0	1	0	0	0	0	0	0	0	5	0	0
+Other Efflux	chloramphenicol efflux pump	Chloramphenicol_Efflux_Pump	gi|581504|emb|CAA78046.1|	k119_15046_1	0	0	0	7	0	0	0	0	2	1	0	0
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	FN594949.1.gene24.p01	k119_6282_1	0	0	0	0	0	0	0	3	0	0	1	2
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	NC_002758.1121879.p01	k119_6298_1	0	0	0	0	1	1	4	0	0	3	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_008702.1.4609454.p01	k119_6317_1	0	0	0	2	0	0	0	0	0	5	0	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	NC_002758.1121879.p01	k119_6348_1	0	2	1	2	0	0	0	0	1	1	6	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_7029_2	0	0	0	0	0	0	0	0	0	0	1	1
+Other Efflux	emrE: small multidrug resistance (SMR) antibiotic efflux pump	emrE	NC_002695.1.913273.p01	k119_6365_1	0	0	1	0	0	0	0	0	1	1	4	0
+ABC Transporter	macA: subunit of efflux pump conferring antibiotic resistance	macA	NC_011035.1.6447343.p01	k119_14468_1	0	0	0	0	0	0	0	0	2	1	3	0
+Gylcopeptide Resistance	VanC: D-Ala-D-Ala ligase that can synthesize D-Ala-D-Ser	vanC	AF162694.1.orf1.gene.p01	k119_6383_1	0	0	0	0	0	0	0	0	1	0	2	0
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	L42544.gene.p01	k119_8941_1	0	0	0	4	0	4	0	3	2	2	7	6
+ABC Transporter	macA: subunit of efflux pump conferring antibiotic resistance	macA	NC_011035.1.6447343.p01	k119_6493_2	0	0	0	11	0	0	0	0	9	12	2	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	NC_002758.1121879.p01	k119_8020_1	0	0	0	1	0	0	0	0	0	0	4	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_6585_1	4	0	0	0	0	0	2	0	0	0	0	0
+rRNA Methyltransferase	Cfr 23S ribosomal RNA methyltransferase	Cfr23RibosomalRNAMethyltransferase	NC_011586.7043651.p01	k119_13163_2	0	0	0	2	0	0	0	0	1	3	3	0
+ABC Transporter	msbA: ATP-binding cassette (ABC) antibiotic efflux pump	msbA	NC_010400.5985078.p01	k119_6546_2	2	0	0	0	0	1	1	0	0	0	0	1
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_1643_1	0	1	0	1	1	0	0	0	0	9	0	0
+RND Antibiotic Efflux	resistance-nodulation-cell division (RND) antibiotic efflux pump	RNDAntibioticEffluxPump	NC_008702.1.4607484.p01	k119_9232_1	0	0	0	1	0	5	0	0	0	0	0	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	NC_002758.1121879.p01	k119_11035_1	0	0	0	3	0	0	0	0	0	3	0	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	NC_002758.1121879.p01	k119_6729_1	2	0	2	0	4	0	0	0	1	0	0	3
+Gylcopeptide Resistance	VanC: D-Ala-D-Ala ligase that can synthesize D-Ala-D-Ser	vanC	AF162694.1.orf1.gene.p01	k119_6754_1	0	0	1	2	0	0	0	1	0	3	0	0
+Gene Modulating Resistance	VanS: trasncriptional regulator of van glycopeptide resistance genes	vanS	AF155139.2.orf1.gene.p01	k119_6802_1	0	0	0	0	0	3	0	0	0	0	0	0
+ABC Transporter	msbA: ATP-binding cassette (ABC) antibiotic efflux pump	msbA	NC_008702.1.4608011.p01	k119_7966_1	0	0	0	0	0	4	0	0	0	0	0	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	U82085.gene.p01	k119_6837_1	1	0	0	0	3	1	0	0	0	0	0	1
+Quinolone Resistance	Fluoroquinolone Resistant DNA Topoisomerase	FluoroquinoloneResistantDNATopoisomerase	NC_012469.1.7686721.p01	k119_7803_1	0	0	0	1	0	0	0	0	1	0	3	0
+Gene Modulating Resistance	baeR: subunit of gene modulating antibiotic efflux	baeR	NC_010410.6002989.p01	k119_7715_1	0	4	2	0	0	0	0	0	0	0	0	0
+ABC Transporter	msbA: ATP-binding cassette (ABC) antibiotic efflux pump	msbA	gi|57651525|ref|YP_185623.1|	k119_6905_1	1	0	0	1	0	0	0	0	1	2	0	0
+RND Antibiotic Efflux	resistance-nodulation-cell division (RND) antibiotic efflux pump	RNDAntibioticEffluxPump	NC_008702.1.4608571.p01	k119_6918_1	5	0	0	0	1	0	2	0	0	0	0	0
+Quinolone Resistance	Fluoroquinolone Resistant DNA Topoisomerase	FluoroquinoloneResistantDNATopoisomerase	NC_002695.1.916822.p01	k119_3397_1	0	1	0	3	0	0	0	1	1	2	5	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	NC_002758.1121879.p01	k119_2639_1	0	0	0	0	0	12	0	0	0	0	0	1
+ABC Transporter	msbA: ATP-binding cassette (ABC) antibiotic efflux pump	msbA	NC_010400.5985078.p01	k119_6949_1	0	0	0	3	0	0	1	0	3	1	2	0
+ABC Transporter	msbA: ATP-binding cassette (ABC) antibiotic efflux pump	msbA	NC_002516.2.881672.p01	k119_7959_1	0	0	0	0	7	0	0	0	0	0	0	0
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	L20800.gene.p01	k119_925_1	4	0	0	1	3	0	1	0	1	1	2	1
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	U82085.gene.p01	k119_7094_1	0	4	0	2	0	0	0	0	0	0	0	0
+ABC Transporter	msbA: ATP-binding cassette (ABC) antibiotic efflux pump	msbA	NC_008702.1.4607352.p01	k119_16193_1	0	0	0	3	0	0	0	0	1	1	1	0
+ABC Transporter	msbA: ATP-binding cassette (ABC) antibiotic efflux pump	msbA	gi|57651526|ref|YP_185624.1|	k119_10338_1	0	0	0	2	0	0	0	0	0	3	2	3
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	U82085.gene.p01	k119_5556_1	4	0	2	2	4	0	1	0	0	0	2	1
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686946.p01	k119_7211_1	0	1	1	0	0	0	0	0	1	1	0	0
+RND Antibiotic Efflux	resistance-nodulation-cell division (RND) antibiotic efflux pump	RNDAntibioticEffluxPump	gi|77460714|ref|YP_350221.1|	k119_7217_1	0	0	0	0	5	0	0	0	0	0	0	1
+Gylcopeptide Resistance	VanH: D-specific alpha-ketoacid dehydrogenase that synthesizes D-lactate	vanH	AF310956.2.orf4.gene.p01	k119_1555_1	0	0	0	3	0	2	0	2	0	0	0	0
+RND Antibiotic Efflux	resistance-nodulation-cell division (RND) antibiotic efflux pump	RNDAntibioticEffluxPump	NC_002695.1.915267.p01	k119_9720_1	0	3	1	0	0	0	0	0	0	0	0	0
+ABC Transporter	msbA: ATP-binding cassette (ABC) antibiotic efflux pump	msbA	NC_011595.7058895.p01	k119_15720_1	0	0	1	0	0	1	2	0	1	1	1	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	NC_002758.1121879.p01	k119_7324_1	0	0	2	1	0	0	0	0	0	3	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_008702.1.4609454.p01	k119_4017_1	2	0	0	0	0	0	2	0	5	0	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_7361_1	2	0	4	1	5	0	1	0	1	1	0	2
+Gene Modulating Resistance	VanR: transcriptional activator regulating VanA, VanH and VanX	vanR	AF155139.2.orf0.gene.p01	k119_4759_2	0	0	1	2	0	0	0	0	2	3	0	0
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	AJ222769.gene.p01	k119_10723_1	0	0	0	0	0	0	0	0	0	8	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_011586.7043668.p01	k119_7433_1	0	0	1	1	0	0	0	1	3	2	0	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	NC_002758.1121879.p01	k119_10592_2	2	0	1	1	3	0	0	0	0	0	1	1
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	L42544.gene.p01	k119_7892_2	0	0	0	0	5	0	1	0	1	0	0	0
+Other Efflux	chloramphenicol efflux pump	Chloramphenicol_Efflux_Pump	gi|498887|gb|AAB36568.1|	k119_10768_1	0	3	0	0	0	0	0	0	0	0	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_7593_1	0	0	0	0	0	0	0	0	2	1	5	0
+Quinolone Resistance	Fluoroquinolone Resistant DNA Topoisomerase	FluoroquinoloneResistantDNATopoisomerase	AE000516.2.gene6.p01	k119_7623_1	0	0	0	1	0	0	0	0	3	1	5	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7685735.p01	k119_13069_1	0	0	1	8	0	0	0	0	6	5	3	0
+RND Antibiotic Efflux	mexA: membrane fusion protein of the MexAB-OprM multidrug efflux complex	MexA	gi|152989389|ref|YP_001345920.1|	k119_3822_1	1	1	0	3	0	0	0	0	4	5	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_008702.1.4606598.p01	k119_7729_2	0	1	2	1	1	0	2	0	0	3	1	1
+Gylcopeptide Resistance	VanA: D-Ala-D-Ala ligase that can synthesize D-Ala-D-Lac	vanA	gi|6448488|emb|CAB61227.1|	k119_9342_1	0	0	0	2	0	0	0	0	0	2	1	0
+Gylcopeptide Resistance	VanC: D-Ala-D-Ala ligase that can synthesize D-Ala-D-Ser	vanC	L29638.gene.p01	k119_15781_2	0	0	0	3	0	0	0	0	4	2	0	0
+ABC Transporter	msbA: ATP-binding cassette (ABC) antibiotic efflux pump	msbA	NC_008702.1.4608011.p01	k119_7876_1	5	0	2	0	3	0	0	2	0	0	0	3
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	L20800.gene.p01	k119_7877_3	0	0	0	1	0	0	3	0	1	2	0	0
+MFS Transporter	emrB: subunit of efflux pump conferring antibiotic resistance	emrB	NC_002695.1.914736.p01	k119_5885_1	0	0	0	0	0	1	0	0	4	1	10	0
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	M85225.gene.p01	k119_16225_1	0	0	0	9	0	0	1	0	2	12	3	0
+Gene Modulating Resistance	baeS: subunit of gene modulating antibiotic efflux	baeS	NC_010410.6000672.p01	k119_8038_1	0	1	3	0	0	0	0	0	0	0	0	0
+Gene Modulating Resistance	VanS: trasncriptional regulator of van glycopeptide resistance genes	vanS	DQ212986.1.gene5.p01	k119_8108_2	0	0	0	0	0	0	0	0	2	2	4	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	U82085.gene.p01	k119_8156_1	6	0	0	1	1	0	1	0	1	0	0	2
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	AJ222769.gene.p01	k119_9703_1	0	1	0	1	0	0	0	0	0	2	0	0
+MFS Transporter	tetracycline resistance MFS efflux pump: selectively pump out tetracycline or tetracycline derivatives	Tetracycline_Resistance_MFS_Efflux_Pump	AY264780.2.gene3.p01	k119_8204_1	0	1	2	1	0	0	0	0	0	0	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_008702.1.4609454.p01	k119_12985_1	0	0	0	1	0	0	0	0	1	1	2	0
+Quinolone Resistance	Fluoroquinolone Resistant DNA Topoisomerase	FluoroquinoloneResistantDNATopoisomerase	M58408.gene.p01	k119_8229_1	0	0	1	1	0	1	0	1	2	0	7	1
+ABC Transporter	msbA: ATP-binding cassette (ABC) antibiotic efflux pump	msbA	NC_011595.7058895.p01	k119_8263_1	4	0	2	0	2	0	0	0	1	0	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7685735.p01	k119_8317_1	0	0	0	3	0	0	3	0	4	3	0	1
+Gylcopeptide Resistance	VanT: membrane bound serine racemase, converting L-serine to D-serine	vanT	AF253562.2.orf6.gene.p01	k119_8367_1	0	0	0	0	0	0	0	0	1	0	7	0
+RND Antibiotic Efflux	resistance-nodulation-cell division (RND) antibiotic efflux pump	RNDAntibioticEffluxPump	gi|170720160|ref|YP_001747848.1|	k119_8454_1	0	0	0	1	1	0	0	2	1	1	0	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	NC_002758.1121879.p01	k119_8513_1	4	0	1	0	1	0	0	0	0	0	0	1
+rRNA Methyltransferase	Emr 23S ribosomal RNA methyltransferase: rRNA methyltransferase conferring antibiotic resistance	Erm23SRibosomalRNAMethyltransferase	X51891.1.orf0.gene.p01	k119_8529_1	0	1	0	2	0	0	1	0	0	5	0	2
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_8879_1	1	0	0	0	5	0	1	0	0	0	0	0
+RND Antibiotic Efflux	adeC-adeK-oprM: outer membrane factor the multidrug efflux complex	adeC-adeK-oprM	NC_008702.1.4606278.p01	k119_8610_1	0	3	0	1	0	0	0	0	0	0	0	0
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	FN594949.1.gene24.p01	k119_8670_1	0	0	0	1	1	1	4	1	8	2	0	1
+ABC Transporter	msbA: ATP-binding cassette (ABC) antibiotic efflux pump	msbA	NC_002516.2.881672.p01	k119_8682_1	0	0	0	0	5	0	0	1	0	0	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7685735.p01	k119_1574_1	1	0	0	0	0	1	0	1	0	1	5	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_8769_2	2	0	2	1	5	1	1	0	0	0	3	1
+rRNA Methyltransferase	Cfr 23S ribosomal RNA methyltransferase	Cfr23RibosomalRNAMethyltransferase	NC_011586.7043651.p01	k119_8773_1	0	2	0	1	0	2	0	1	3	1	2	3
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686946.p01	k119_1670_2	0	0	0	1	0	0	0	0	1	0	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_008702.1.4606598.p01	k119_10263_1	0	0	0	0	6	0	0	0	0	0	0	1
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_9339_1	0	0	2	3	0	2	0	0	1	1	11	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7685735.p01	k119_15856_1	6	0	5	1	6	0	1	1	0	0	1	2
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7685735.p01	k119_8878_1	3	0	0	3	3	0	2	0	3	0	4	2
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	DQ294299.gene.p01	k119_8952_1	0	1	0	0	1	0	0	0	0	0	5	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_9009_1	0	0	0	1	0	0	1	0	0	0	0	1
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7685735.p01	k119_9131_1	0	0	0	0	0	0	0	0	0	1	1	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_9138_1	0	0	0	2	0	0	0	0	2	1	3	0
+Gylcopeptide Resistance	VanB: D-Ala-D-Ala ligase that can synthesize D-Ala-D-Lac	vanB	AE016830.1.gene2250.p01	k119_9144_1	0	1	0	0	0	8	0	0	0	0	0	0
+ABC Transporter	msbA: ATP-binding cassette (ABC) antibiotic efflux pump	msbA	NC_002516.2.881672.p01	k119_9507_1	5	0	1	0	10	0	1	0	0	2	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7685735.p01	k119_1987_1	0	0	0	0	0	0	0	0	0	4	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_9251_1	0	0	1	2	0	0	0	0	0	1	1	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_9323_1	0	0	0	0	0	0	5	0	0	3	0	0
+Gylcopeptide Resistance	VanH: D-specific alpha-ketoacid dehydrogenase that synthesizes D-lactate	vanH	AF130997.1.orf3.gene.p01	k119_9401_1	3	0	0	0	4	2	0	0	0	0	1	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_011586.7043668.p01	k119_9475_1	0	0	0	0	0	0	0	0	0	2	6	1
+ABC Transporter	macA: subunit of efflux pump conferring antibiotic resistance	macA	NC_011035.1.6447343.p01	k119_9478_1	0	1	0	1	0	1	0	0	1	2	1	1
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_11352_1	1	0	1	1	0	0	0	0	1	1	2	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_9548_1	1	0	4	2	2	1	0	0	1	0	0	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	NC_002758.1121879.p01	k119_9563_1	0	0	0	0	0	0	1	0	3	1	3	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_7651_1	0	0	1	5	0	0	0	0	0	3	2	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_008702.1.4609454.p01	k119_9686_1	0	0	2	1	0	1	1	1	3	5	4	0
+Gylcopeptide Resistance	VanH: D-specific alpha-ketoacid dehydrogenase that synthesizes D-lactate	vanH	AF310956.2.orf4.gene.p01	k119_16221_1	0	0	0	3	0	0	0	0	0	8	0	0
+Quinolone Resistance	Fluoroquinolone Resistant DNA Topoisomerase	FluoroquinoloneResistantDNATopoisomerase	NC_012469.1.7686721.p01	k119_819_1	0	0	0	0	0	0	1	0	0	2	0	3
+Gene Modulating Resistance	VanS: trasncriptional regulator of van glycopeptide resistance genes	vanS	AF162694.1.orf5.gene.p01	k119_4722_1	0	0	0	1	0	12	1	1	0	0	0	0
+RND Antibiotic Efflux	resistance-nodulation-cell division (RND) antibiotic efflux pump	RNDAntibioticEffluxPump	NC_008702.1.4606277.p01	k119_9836_1	0	0	0	1	2	0	0	1	1	0	2	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7685735.p01	k119_5319_2	0	0	0	1	0	1	0	0	1	1	2	0
+RND Antibiotic Efflux	adeA-adeI: membrane fusion protein of multidrug efflux complex	adeA-adeI	NC_010410.6002906.p01	k119_9920_1	3	0	0	0	0	0	3	0	0	0	0	0
+rRNA Methyltransferase	Cfr 23S ribosomal RNA methyltransferase	Cfr23RibosomalRNAMethyltransferase	NC_009632.5316674.p01	k119_9940_1	0	0	1	1	0	0	3	0	0	0	0	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	U82085.gene.p01	k119_9966_1	0	0	1	0	0	7	1	1	0	0	0	0
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	L42544.gene.p01	k119_9978_1	0	0	1	4	0	1	1	0	5	5	2	1
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	AY485126.gene.p01	k119_9997_1	0	0	0	5	0	0	0	0	6	1	1	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_14597_2	0	1	0	0	0	1	0	0	0	0	1	0
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	Z21523.gene.p01	k119_10069_1	5	0	1	2	0	4	3	0	0	0	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_008702.1.4606596.p01	k119_10095_1	0	0	0	1	0	0	0	0	2	0	6	0
+Gene Modulating Resistance	VanR: transcriptional activator regulating VanA, VanH and VanX	vanR	Y16952.3.orf35.gene.p01	k119_10189_1	0	1	1	1	0	0	0	1	2	1	2	0
+ABC Transporter	msbA: ATP-binding cassette (ABC) antibiotic efflux pump	msbA	NC_002516.2.881672.p01	k119_10208_1	0	0	1	1	0	0	0	0	1	3	4	0
+ABC Transporter	msbA: ATP-binding cassette (ABC) antibiotic efflux pump	msbA	gi|57651526|ref|YP_185624.1|	k119_15971_1	0	0	0	2	0	0	0	0	1	5	2	0
+Quinolone Resistance	Fluoroquinolone Resistant DNA Topoisomerase	FluoroquinoloneResistantDNATopoisomerase	M58408.gene.p01	k119_12553_1	0	1	1	4	0	0	0	0	2	6	2	0
+Quinolone Resistance	Fluoroquinolone Resistant DNA Topoisomerase	FluoroquinoloneResistantDNATopoisomerase	NC_009641.5331984.p01	k119_5640_1	1	0	1	2	0	0	0	0	0	2	0	1
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	U82085.gene.p01	k119_10401_1	0	0	0	2	0	2	0	0	0	0	2	0
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	AJ295238.gene.p01	k119_10417_1	0	2	1	8	0	1	0	1	2	14	1	1
+MFS Transporter	emrB: subunit of efflux pump conferring antibiotic resistance	emrB	NC_002695.1.914736.p01	k119_12234_1	0	3	0	0	0	0	0	0	1	0	5	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7685735.p01	k119_10469_1	0	0	1	2	0	3	0	0	0	2	1	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	U82085.gene.p01	k119_13443_2	0	1	0	0	0	0	0	1	2	0	0	1
+ABC Transporter	msbA: ATP-binding cassette (ABC) antibiotic efflux pump	msbA	gi|57651525|ref|YP_185623.1|	k119_10679_1	0	1	1	1	0	1	0	0	0	1	5	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	NC_002758.1121879.p01	k119_10731_1	0	0	1	0	0	5	0	0	0	0	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_9208_3	0	0	3	4	0	0	0	0	6	6	1	0
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	L20800.gene.p01	k119_10766_1	0	0	1	1	1	1	1	1	0	1	0	0
+RND Antibiotic Efflux	adeC-adeK-oprM: outer membrane factor the multidrug efflux complex	adeC-adeK-oprM	NC_011595.7058890.p01	k119_10784_1	0	0	0	4	0	0	0	0	6	3	1	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_008702.1.4609454.p01	k119_7055_1	0	0	0	0	0	3	0	0	0	0	1	0
+Quinolone Resistance	Fluoroquinolone Resistant DNA Topoisomerase	FluoroquinoloneResistantDNATopoisomerase	NC_011035.1.6447337.p01	k119_6762_1	1	0	1	7	0	0	1	0	4	5	1	2
+MFS Transporter	emrB: subunit of efflux pump conferring antibiotic resistance	emrB	NC_002695.1.914736.p01	k119_10897_1	0	0	0	0	4	1	0	0	0	0	0	0
+Quinolone Resistance	Fluoroquinolone Resistant DNA Topoisomerase	FluoroquinoloneResistantDNATopoisomerase	NC_002695.1.916822.p01	k119_10906_1	1	0	0	3	2	0	0	0	1	3	0	1
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	AY485126.gene.p01	k119_10909_1	4	0	1	0	1	0	2	0	0	0	1	1
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	U82085.gene.p01	k119_14878_1	0	0	0	0	0	0	0	0	1	2	0	0
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	AY485126.gene.p01	k119_10948_1	0	4	0	5	2	4	0	0	1	4	16	2
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	X04388.gene.p01	k119_10948_2	0	0	0	2	6	1	0	2	1	3	8	1
+ABC Transporter	msbA: ATP-binding cassette (ABC) antibiotic efflux pump	msbA	NC_002516.2.881672.p01	k119_14956_1	5	0	0	0	0	0	4	0	0	0	0	1
+Gene Modulating Resistance	VanS: trasncriptional regulator of van glycopeptide resistance genes	vanS	AE016830.1.gene2254.p01	k119_872_1	0	0	0	1	0	0	2	0	0	2	0	1
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	AJ222769.gene.p01	k119_2835_1	0	1	0	3	2	3	0	0	0	1	1	1
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	AJ579365.gene.p01	k119_11012_2	0	0	0	0	8	0	0	0	0	0	0	1
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	DQ294299.gene.p01	k119_8931_1	0	0	1	2	0	0	3	2	5	4	4	1
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7685735.p01	k119_15001_2	0	0	0	0	0	0	0	0	2	2	1	0
+RND Antibiotic Efflux	resistance-nodulation-cell division (RND) antibiotic efflux pump	RNDAntibioticEffluxPump	NC_008702.1.4606277.p01	k119_2485_1	0	0	0	0	0	5	0	0	0	1	0	0
+Acetyltransferase	chloramphenicol acetyltransferase (CAT)	Chloramphenicol_Acetyltransferase_CAT	NC_011595.7057349.p01	k119_11246_1	1	0	0	0	0	0	5	0	0	0	0	1
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_008702.1.4606598.p01	k119_11279_1	0	0	0	5	0	0	0	1	7	4	7	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_011586.7043668.p01	k119_14571_1	0	0	0	15	0	0	0	0	5	12	2	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686946.p01	k119_9393_1	0	0	0	0	0	2	0	0	1	1	1	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_008702.1.4606598.p01	k119_11580_3	0	0	2	9	1	1	0	1	3	5	10	0
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	L42544.gene.p01	k119_4827_1	0	0	0	1	0	1	0	0	1	4	0	0
+ABC Transporter	msbA: ATP-binding cassette (ABC) antibiotic efflux pump	msbA	NC_010400.5985078.p01	k119_14617_1	0	0	2	0	0	6	0	0	0	0	0	1
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_10115_1	0	1	0	2	0	1	0	0	2	2	3	0
+ABC Transporter	msbA: ATP-binding cassette (ABC) antibiotic efflux pump	msbA	NC_002516.2.881672.p01	k119_11727_1	0	0	0	0	0	0	1	0	3	3	1	0
+Gylcopeptide Resistance	VanH: D-specific alpha-ketoacid dehydrogenase that synthesizes D-lactate	vanH	AF310956.2.orf4.gene.p01	k119_13241_1	3	0	3	1	2	0	1	0	0	2	0	1
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_010400.5985985.p01	k119_4389_1	0	0	0	0	2	1	0	2	0	1	1	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686946.p01	k119_13043_1	0	0	0	1	0	0	0	0	0	0	1	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	NC_002758.1121879.p01	k119_12418_2	2	0	2	0	4	0	0	0	0	0	0	0
+Gylcopeptide Resistance	VanT: membrane bound serine racemase, converting L-serine to D-serine	vanT	AF162694.1.orf3.gene.p01	k119_12633_1	0	0	0	3	0	0	0	1	3	4	0	0
+MFS Transporter	major facilitator superfamily (MFS) antibiotic efflux pump	MFSAntibioticEffluxPump	NC_002516.2.880556.p01	k119_12844_1	0	0	0	4	0	0	0	0	2	3	0	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7685735.p01	k119_13603_1	0	0	0	0	0	0	0	0	0	0	12	0
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_008702.1.4609454.p01	k119_12967_1	0	0	0	1	0	0	0	0	1	0	3	1
+rRNA Methyltransferase	Emr 23S ribosomal RNA methyltransferase: rRNA methyltransferase conferring antibiotic resistance	Erm23SRibosomalRNAMethyltransferase	M29832.gene.p01	k119_15514_1	0	0	0	0	0	7	1	0	0	0	0	0
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	FN594949.1.gene24.p01	k119_13013_1	1	0	0	2	9	1	0	1	4	1	7	1
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_4854_1	0	0	0	2	0	1	0	0	6	4	0	0
+ABC Transporter	macA: subunit of efflux pump conferring antibiotic resistance	macA	NC_011035.1.6447343.p01	k119_15786_1	0	0	0	3	1	1	0	0	1	0	4	0
+Target Protection	tetracycline resistance ribosomal protection protein: protect RNA-polymerase from tetracycline inhibition	Tetracycline_Resistance_Ribosomal_Protection_Protein	L42544.gene.p01	k119_1925_1	0	1	0	0	0	6	1	0	1	0	0	0
+Phosphotransferase	aminoglycoside phosphotransferase (APH3)	APH3_double_prime	FQ312006.1.gene706.p01	k119_13899_1	0	0	0	0	0	3	0	1	3	0	0	0
+ABC Transporter	ATP-binding cassette (ABC) antibiotic efflux pump	ABCAntibioticEffluxPump	U82085.gene.p01	k119_13207_1	0	0	0	6	0	2	3	0	0	2	1	1
+ABC Transporter	macB: subunit of efflux pump conferring antibiotic resistance	macB	NC_012469.1.7686878.p01	k119_13275_2	0	0	2	2	0	0	0	0	7	1	0	0

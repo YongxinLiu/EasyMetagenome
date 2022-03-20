@@ -1,0 +1,9 @@
+PathwayL1	C1	C2
+Brite Hierarchies	328059.9190000002	118344.64499999999
+Cellular Processes	29078.798000000006	10090.61
+Environmental Information Processing	27489.067000000003	6038.973000000002
+Genetic Information Processing	100916.658	20531.0077
+Human Diseases	19919.977	20033.609
+Metabolism	223695.15299999987	73871.1237
+Not Included in Pathway or Brite	45980.852999999996	4445.902
+Organismal Systems	19220.858	7047.988

@@ -1,0 +1,1221 @@
+Aligning contigs to reference...
+	Aligning contigs to the reference
+Filtering alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000001.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000002.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000003.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000004.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000005.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000006.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000007.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000008.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000009.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000010.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000011.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000012.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000013.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000014.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000015.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000016.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000017.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000018.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000019.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000020.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000021.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000022.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000023.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000024.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000025.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000026.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000027.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000028.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000029.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000030.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000031.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000032.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000033.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000034.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000035.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000036.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000037.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000038.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000039.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000040.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000041.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000042.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000001.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000002.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000003.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000004.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000005.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000006.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000007.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000008.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000009.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000010.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000011.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000012.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000013.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000014.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000015.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000016.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000017.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000018.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000019.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000020.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000021.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000022.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000023.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000024.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000025.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000026.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000027.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000028.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000029.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000030.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000031.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000032.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000033.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000034.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000035.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000036.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000037.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000038.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000039.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000040.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000041.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000042.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000043.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000044.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000045.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000046.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000047.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000048.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000049.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000050.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000051.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000052.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000053.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000054.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000055.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000056.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000057.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000058.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000059.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000060.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000061.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000062.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000063.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000064.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000065.1]
+	Loaded [Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NC_009506.1]
+	Loaded [Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000001.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000002.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000003.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000004.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000005.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000006.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000007.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000008.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000009.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000010.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000011.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000012.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000013.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000014.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000015.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000016.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000017.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000018.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000019.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000020.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000021.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000022.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000023.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000024.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000025.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000026.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000027.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000028.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000029.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000030.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000031.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000032.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000033.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000034.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000035.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000036.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000037.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000038.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000039.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000040.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000041.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000042.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000043.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000044.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000045.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000046.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000047.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000048.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000049.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000050.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000051.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000052.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000053.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000054.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000055.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000056.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000057.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000058.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000059.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000060.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000061.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000062.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000063.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000064.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000065.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000066.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000067.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000068.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000069.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000070.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000071.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000072.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000073.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000074.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000075.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000076.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000077.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000078.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000079.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000080.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000081.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000082.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000083.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000084.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000085.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000086.1]
+	Loaded [Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000087.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669419.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669420.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669421.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669422.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669423.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669424.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669425.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669426.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669427.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669428.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669429.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669430.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669431.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669432.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669433.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669434.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669435.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669436.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669437.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669438.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669439.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669440.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669441.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669442.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669443.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669444.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669445.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669446.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669447.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669448.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669449.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669450.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669451.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669452.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669453.1]
+	Loaded [Sphingomonas_taxi_NZ_CP009571.1]
+	Loaded [Sphingomonas_taxi_NZ_CP009572.1]
+	Loaded [Sphingomonas_taxi_NZ_CP009573.1]
+	Total Regions: 234
+	Total Region Length: 17285411
+Analyzing contigs...
+CONTIG: k119_509 (519bp)
+		This contig is unaligned. (519 bp)
+		Unaligned bases: 519 (number of Ns: 0)
+
+CONTIG: k119_678 (1205bp)
+		This contig is unaligned. (1205 bp)
+		Unaligned bases: 1205 (number of Ns: 0)
+
+CONTIG: k119_849 (594bp)
+		This contig is unaligned. (594 bp)
+		Unaligned bases: 594 (number of Ns: 0)
+
+CONTIG: k119_514 (555bp)
+		This contig is unaligned. (555 bp)
+		Unaligned bases: 555 (number of Ns: 0)
+
+CONTIG: k119_516 (526bp)
+		This contig is unaligned. (526 bp)
+		Unaligned bases: 526 (number of Ns: 0)
+
+CONTIG: k119_343 (523bp)
+		This contig is unaligned. (523 bp)
+		Unaligned bases: 523 (number of Ns: 0)
+
+CONTIG: k119_5 (676bp)
+		This contig is unaligned. (676 bp)
+		Unaligned bases: 676 (number of Ns: 0)
+
+CONTIG: k119_175 (2151bp)
+		This contig is unaligned. (2151 bp)
+		Unaligned bases: 2151 (number of Ns: 0)
+
+CONTIG: k119_520 (765bp)
+Best alignment score: 445.0 (LEN: 466, IDY: 95.49), Total number of alignments: 2
+			Looking for the best set of alignments (out of 2 total alignments)
+			The best set is below. Score: 716.0, number of alignments: 2, unaligned bases: 15
+		This contig is misassembled.
+			Real Alignment 1: 1622400 1622683 | 1 284 | 284 284 | 95.42 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_520
+			  Indel (> 5bp) between these two alignments: deletion of length 22; 0 mismatches (number of Ns: 0)
+			Real Alignment 2: 1622706 1623171 | 285 750 | 466 466 | 95.49 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_520
+
+CONTIG: k119_349 (579bp)
+		This contig is unaligned. (579 bp)
+		Unaligned bases: 579 (number of Ns: 0)
+
+CONTIG: k119_859 (586bp)
+Best alignment score: 406.0 (LEN: 419, IDY: 96.90), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 406.0, number of alignments: 1, unaligned bases: 167
+		Alignment: 2427552 2427970 | 58 476 | 419 419 | 96.9 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_859
+
+CONTIG: k119_523 (532bp)
+		This contig is unaligned. (532 bp)
+		Unaligned bases: 532 (number of Ns: 0)
+
+CONTIG: k119_10 (502bp)
+Best alignment score: 364.1 (LEN: 375, IDY: 97.08), Total number of alignments: 6
+			Looking for the best set of alignments (out of 6 total alignments)
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 102727 102861 | 3 136 | 135 134 | 96.3 | Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000003.1 k119_10
+		Skipping redundant alignment 14879 14975 | 222 126 | 97 97 | 96.91 | Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000007.1 k119_10
+		Skipping redundant alignment 12711 13049 | 464 126 | 339 339 | 95.28 | Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000007.1 k119_10
+		Skipping redundant alignment 22483 22859 | 126 500 | 377 375 | 97.08 | Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000009.1 k119_10
+			The best set is below. Score: 471.5, number of alignments: 2, unaligned bases: 0
+		This contig is misassembled.
+			Excluding internal overlap of size 11 between Alignment 1 and 2: 4817 4953 | 136 1 | 137 136 --> 4828 4953 | 125 1 | 126 125
+			Real Alignment 1: 4828 4953 | 125 1 | 126 125 | 97.08 | Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000006.1 k119_10
+			  Gap between these two alignments (local misassembly). Inconsistency = 159
+			Real Alignment 2: 4289 4668 | 502 126 | 380 377 | 95.0 | Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000006.1 k119_10
+
+CONTIG: k119_860 (544bp)
+		This contig is unaligned. (544 bp)
+		Unaligned bases: 544 (number of Ns: 0)
+
+CONTIG: k119_352 (543bp)
+Best alignment score: 540.0 (LEN: 543, IDY: 99.45), Total number of alignments: 1
+		One align captures most of this contig: 115194 115736 | 1 543 | 543 543 | 99.45 | Prevotella_nigrescens_CC14M_NZ_KI669448.1 k119_352
+
+CONTIG: k119_184 (824bp)
+Best alignment score: 547.0 (LEN: 551, IDY: 99.27), Total number of alignments: 10
+			Looking for the best set of alignments (out of 10 total alignments)
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 37427 37649 | 1 223 | 223 223 | 96.86 | Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000014.1 k119_184
+		Skipping redundant alignment 41986 42208 | 1 223 | 223 223 | 96.86 | Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000025.1 k119_184
+		Skipping redundant alignment 2689 2911 | 1 223 | 223 223 | 96.86 | Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000030.1 k119_184
+		Skipping redundant alignment 2591 2816 | 226 1 | 226 226 | 96.9 | Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000034.1 k119_184
+		Skipping redundant alignment 2071 2590 | 780 261 | 520 520 | 99.04 | Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000034.1 k119_184
+		Skipping redundant alignment 37650 38172 | 258 780 | 523 523 | 99.04 | Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000014.1 k119_184
+		Skipping redundant alignment 42209 42731 | 258 780 | 523 523 | 99.04 | Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000025.1 k119_184
+		Skipping redundant alignment 2912 3434 | 258 780 | 523 523 | 99.04 | Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000030.1 k119_184
+			The best set is below. Score: 770.0, number of alignments: 2, unaligned bases: 46
+		This contig is misassembled.
+			Real Alignment 1: 684 910 | 1 227 | 227 227 | 98.24 | Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000051.1 k119_184
+			  Indel (> 5bp) between these two alignments: insertion of length 32; 4 mismatches (number of Ns: 0)
+			Real Alignment 2: 915 1465 | 264 814 | 551 551 | 99.27 | Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000051.1 k119_184
+
+CONTIG: k119_353 (989bp)
+Best alignment score: 829.1 (LEN: 844, IDY: 98.24), Total number of alignments: 5
+			Looking for the best set of alignments (out of 5 total alignments)
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 2263 2384 | 361 482 | 122 122 | 95.9 | Prevotella_nigrescens_CC14M_NZ_KI669450.1 k119_353
+		Skipping redundant alignment 65845 65966 | 482 361 | 122 122 | 95.9 | Prevotella_nigrescens_CC14M_NZ_KI669426.1 k119_353
+		Skipping redundant alignment 2018081 2018344 | 682 945 | 264 264 | 98.11 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_353
+		Skipping redundant alignment 181785 181898 | 977 865 | 114 113 | 97.37 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_353
+			The best set is below. Score: 829.1, number of alignments: 1, unaligned bases: 145
+		Alignment: 2398116 2398965 | 977 134 | 850 844 | 98.24 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_353
+
+CONTIG: k119_685 (2468bp)
+Best alignment score: 436.0 (LEN: 449, IDY: 97.10), Total number of alignments: 7
+			Looking for the best set of alignments (out of 7 total alignments)
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 3858874 3859094 | 1 221 | 221 221 | 98.64 | Sphingomonas_taxi_NZ_CP009571.1 k119_685
+		Skipping redundant alignment 3406673 3406900 | 1 228 | 228 228 | 97.37 | Sphingomonas_taxi_NZ_CP009571.1 k119_685
+		Skipping redundant alignment 1853379 1853606 | 228 1 | 228 228 | 97.37 | Sphingomonas_taxi_NZ_CP009571.1 k119_685
+		Skipping redundant alignment 43 113 | 272 342 | 71 71 | 98.59 | Sphingomonas_taxi_NZ_CP009571.1 k119_685
+		Skipping redundant alignment 1853267 1853340 | 342 269 | 74 74 | 97.3 | Sphingomonas_taxi_NZ_CP009571.1 k119_685
+		Skipping redundant alignment 3406938 3407012 | 268 342 | 75 75 | 96.0 | Sphingomonas_taxi_NZ_CP009571.1 k119_685
+			The best set is below. Score: 436.0, number of alignments: 1, unaligned bases: 2019
+		This contig is partially unaligned. (Aligned 449 out of 2468 non-N bases (18.19%))
+		Alignment: 519191 519639 | 84 532 | 449 449 | 97.1 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_685
+		Unaligned bases: 1 to 83 (83)
+		Unaligned bases: 533 to 2468 (1936)
+		It can contain up to 1 interspecies translocations (will be reported as Possible Misassemblies).
+
+CONTIG: k119_15 (1201bp)
+		This contig is unaligned. (1201 bp)
+		Unaligned bases: 1201 (number of Ns: 0)
+
+CONTIG: k119_355 (1080bp)
+		This contig is unaligned. (1080 bp)
+		Unaligned bases: 1080 (number of Ns: 0)
+
+CONTIG: k119_190 (950bp)
+		This contig is unaligned. (950 bp)
+		Unaligned bases: 950 (number of Ns: 0)
+
+CONTIG: k119_686 (1607bp)
+		This contig is unaligned. (1607 bp)
+		Unaligned bases: 1607 (number of Ns: 0)
+
+CONTIG: k119_356 (510bp)
+Best alignment score: 490.0 (LEN: 509, IDY: 96.27), Total number of alignments: 1
+		One align captures most of this contig: 12121 12629 | 2 510 | 509 509 | 96.27 | Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000035.1 k119_356
+
+CONTIG: k119_869 (835bp)
+		This contig is unaligned. (835 bp)
+		Unaligned bases: 835 (number of Ns: 0)
+
+CONTIG: k119_533 (615bp)
+Best alignment score: 106.0 (LEN: 111, IDY: 95.50), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 106.0, number of alignments: 1, unaligned bases: 504
+		Alignment: 526896 527006 | 295 405 | 111 111 | 95.5 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_533
+
+CONTIG: k119_193 (581bp)
+Best alignment score: 571.0 (LEN: 581, IDY: 98.28), Total number of alignments: 1
+		One align captures most of this contig: 2117731 2118311 | 1 581 | 581 581 | 98.28 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_193
+
+CONTIG: k119_359 (509bp)
+Best alignment score: 484.0 (LEN: 509, IDY: 95.09), Total number of alignments: 1
+		One align captures most of this contig: 1380837 1381345 | 509 1 | 509 509 | 95.09 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_359
+
+CONTIG: k119_539 (547bp)
+		This contig is unaligned. (547 bp)
+		Unaligned bases: 547 (number of Ns: 0)
+
+CONTIG: k119_363 (863bp)
+Best alignment score: 806.0 (LEN: 839, IDY: 96.07), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 806.0, number of alignments: 1, unaligned bases: 24
+		Alignment: 451549 452387 | 1 839 | 839 839 | 96.07 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_363
+
+CONTIG: k119_693 (646bp)
+		This contig is unaligned. (646 bp)
+		Unaligned bases: 646 (number of Ns: 0)
+
+CONTIG: k119_695 (586bp)
+		This contig is unaligned. (586 bp)
+		Unaligned bases: 586 (number of Ns: 0)
+
+CONTIG: k119_882 (655bp)
+Best alignment score: 639.0 (LEN: 655, IDY: 97.56), Total number of alignments: 1
+		One align captures most of this contig: 1647087 1647741 | 655 1 | 655 655 | 97.56 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_882
+
+CONTIG: k119_25 (866bp)
+Best alignment score: 674.0 (LEN: 690, IDY: 97.68), Total number of alignments: 2
+			Looking for the best set of alignments (out of 2 total alignments)
+			The best set is below. Score: 702.5, number of alignments: 2, unaligned bases: 97
+		This contig is misassembled.
+			Real Alignment 1: 366949 367027 | 39 117 | 79 79 | 100.0 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_25
+			  Extensive misassembly (relocation, inconsistency = 1160167) between these two alignments
+			Real Alignment 2: 1527254 1527944 | 866 177 | 691 690 | 97.68 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_25
+
+CONTIG: k119_367 (1112bp)
+Best alignment score: 1065.6 (LEN: 1111, IDY: 95.91), Total number of alignments: 6
+		Skipping these alignments as insignificant (option --ambiguity-score is set to "0.99"):
+			Skipping alignment 2300860 2301152 | 819 1111 | 293 293 | 98.98 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_367
+			Skipping alignment 279970 280220 | 862 1111 | 251 250 | 98.8 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_367
+			Skipping alignment 182008 182130 | 989 1111 | 123 123 | 100.0 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_367
+			Skipping alignment 2399548 2399665 | 990 1107 | 118 118 | 100.0 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_367
+			Skipping alignment 17 113 | 113 17 | 97 97 | 100.0 | Sphingomonas_taxi_NZ_CP009571.1 k119_367
+		One align captures most of this contig: 518347 519465 | 1111 1 | 1119 1111 | 95.91 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_367
+
+CONTIG: k119_884 (985bp)
+		This contig is unaligned. (985 bp)
+		Unaligned bases: 985 (number of Ns: 0)
+
+CONTIG: k119_552 (541bp)
+		This contig is unaligned. (541 bp)
+		Unaligned bases: 541 (number of Ns: 0)
+
+CONTIG: k119_368 (1602bp)
+		This contig is unaligned. (1602 bp)
+		Unaligned bases: 1602 (number of Ns: 0)
+
+CONTIG: k119_211 (507bp)
+		This contig is unaligned. (507 bp)
+		Unaligned bases: 507 (number of Ns: 0)
+
+CONTIG: k119_553 (704bp)
+		This contig is unaligned. (704 bp)
+		Unaligned bases: 704 (number of Ns: 0)
+
+CONTIG: k119_372 (659bp)
+Best alignment score: 239.0 (LEN: 250, IDY: 95.60), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 239.0, number of alignments: 1, unaligned bases: 409
+		Alignment: 649268 649517 | 410 659 | 250 250 | 95.6 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_372
+
+CONTIG: k119_215 (630bp)
+Best alignment score: 627.0 (LEN: 630, IDY: 99.52), Total number of alignments: 1
+		One align captures most of this contig: 1405691 1406320 | 1 630 | 630 630 | 99.52 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_215
+
+CONTIG: k119_707 (520bp)
+		This contig is unaligned. (520 bp)
+		Unaligned bases: 520 (number of Ns: 0)
+
+CONTIG: k119_37 (735bp)
+		This contig is unaligned. (735 bp)
+		Unaligned bases: 735 (number of Ns: 0)
+
+CONTIG: k119_217 (523bp)
+		This contig is unaligned. (523 bp)
+		Unaligned bases: 523 (number of Ns: 0)
+
+CONTIG: k119_559 (509bp)
+		This contig is unaligned. (509 bp)
+		Unaligned bases: 509 (number of Ns: 0)
+
+CONTIG: k119_711 (650bp)
+		This contig is unaligned. (650 bp)
+		Unaligned bases: 650 (number of Ns: 0)
+
+CONTIG: k119_220 (531bp)
+		This contig is unaligned. (531 bp)
+		Unaligned bases: 531 (number of Ns: 0)
+
+CONTIG: k119_561 (560bp)
+Best alignment score: 416.0 (LEN: 431, IDY: 96.52), Total number of alignments: 2
+			Looking for the best set of alignments (out of 2 total alignments)
+			The best set is below. Score: 468.4, number of alignments: 2, unaligned bases: 0
+		This contig is misassembled.
+			Excluding internal overlap of size 40 between Alignment 1 and 2: 1509047 1509215 | 1 169 | 169 169 --> 1509047 1509175 | 1 129 | 129 129
+			Real Alignment 1: 1509047 1509175 | 1 129 | 129 129 | 95.27 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_561
+			  Extensive misassembly (relocation, inconsistency = 1118570) between these two alignments
+			Real Alignment 2: 390046 390476 | 560 130 | 431 431 | 96.52 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_561
+
+CONTIG: k119_894 (549bp)
+		This contig is unaligned. (549 bp)
+		Unaligned bases: 549 (number of Ns: 0)
+
+CONTIG: k119_40 (592bp)
+		This contig is unaligned. (592 bp)
+		Unaligned bases: 592 (number of Ns: 0)
+
+CONTIG: k119_222 (519bp)
+		This contig is unaligned. (519 bp)
+		Unaligned bases: 519 (number of Ns: 0)
+
+CONTIG: k119_563 (619bp)
+		This contig is unaligned. (619 bp)
+		Unaligned bases: 619 (number of Ns: 0)
+
+CONTIG: k119_41 (533bp)
+		This contig is unaligned. (533 bp)
+		Unaligned bases: 533 (number of Ns: 0)
+
+CONTIG: k119_382 (595bp)
+Best alignment score: 468.1 (LEN: 491, IDY: 95.34), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 468.1, number of alignments: 1, unaligned bases: 104
+		Alignment: 283891 284381 | 5 495 | 491 491 | 95.34 | Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000001.1 k119_382
+
+CONTIG: k119_42 (517bp)
+		This contig is unaligned. (517 bp)
+		Unaligned bases: 517 (number of Ns: 0)
+
+CONTIG: k119_717 (599bp)
+		This contig is unaligned. (599 bp)
+		Unaligned bases: 599 (number of Ns: 0)
+
+CONTIG: k119_900 (1143bp)
+		This contig is unaligned. (1143 bp)
+		Unaligned bases: 1143 (number of Ns: 0)
+
+CONTIG: k119_46 (512bp)
+Best alignment score: 504.0 (LEN: 512, IDY: 98.44), Total number of alignments: 1
+		One align captures most of this contig: 1256371 1256882 | 1 512 | 512 512 | 98.44 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_46
+
+CONTIG: k119_50 (787bp)
+		This contig is unaligned. (787 bp)
+		Unaligned bases: 787 (number of Ns: 0)
+
+CONTIG: k119_905 (811bp)
+Best alignment score: 784.0 (LEN: 809, IDY: 96.91), Total number of alignments: 1
+		One align captures most of this contig: 1226921 1227729 | 1 809 | 809 809 | 96.91 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_905
+
+CONTIG: k119_395 (763bp)
+		This contig is unaligned. (763 bp)
+		Unaligned bases: 763 (number of Ns: 0)
+
+CONTIG: k119_906 (1478bp)
+Best alignment score: 762.0 (LEN: 795, IDY: 95.85), Total number of alignments: 5
+			Looking for the best set of alignments (out of 5 total alignments)
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 317184 317329 | 146 1 | 146 146 | 97.26 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_906
+		Skipping redundant alignment 315930 316371 | 1377 936 | 442 442 | 95.25 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_906
+			The best set is below. Score: 1312.0, number of alignments: 3, unaligned bases: 109
+		This contig is misassembled.
+			Real Alignment 1: 652236 652367 | 1 132 | 132 132 | 97.73 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_906
+			  Indel (> 5bp) between these two alignments: deletion of length 21; 0 mismatches (number of Ns: 0)
+			Real Alignment 2: 652389 653183 | 133 927 | 795 795 | 95.85 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_906
+			  Indel (> 5bp) between these two alignments: insertion of length 6; 2 mismatches (number of Ns: 0)
+			Real Alignment 3: 653186 653627 | 936 1377 | 442 442 | 95.25 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_906
+
+CONTIG: k119_576 (598bp)
+Best alignment score: 580.0 (LEN: 598, IDY: 96.99), Total number of alignments: 1
+		One align captures most of this contig: 2308256 2308853 | 1 598 | 598 598 | 96.99 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_576
+
+CONTIG: k119_234 (501bp)
+Best alignment score: 484.1 (LEN: 501, IDY: 96.62), Total number of alignments: 4
+		Skipping these alignments as insignificant (option --ambiguity-score is set to "0.99"):
+			Skipping alignment 400007 400085 | 495 417 | 79 79 | 98.73 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_234
+		This contig has 3 significant alignments. [An ambiguously mapped contig]
+		Using all these alignments (option --ambiguity-usage is set to "all"):
+			Alignment: 2296187 2296689 | 1 501 | 503 501 | 96.62 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_234
+			Alignment: 776137 776638 | 501 1 | 502 501 | 96.61 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_234
+			Alignment: 932959 933460 | 1 501 | 502 501 | 96.02 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_234
+
+CONTIG: k119_57 (504bp)
+Best alignment score: 501.0 (LEN: 504, IDY: 99.40), Total number of alignments: 1
+		One align captures most of this contig: 545384 545887 | 504 1 | 504 504 | 99.4 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_57
+
+CONTIG: k119_728 (651bp)
+Best alignment score: 632.0 (LEN: 651, IDY: 97.08), Total number of alignments: 1
+		One align captures most of this contig: 861809 862459 | 651 1 | 651 651 | 97.08 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_728
+
+CONTIG: k119_235 (594bp)
+		This contig is unaligned. (594 bp)
+		Unaligned bases: 594 (number of Ns: 0)
+
+CONTIG: k119_397 (595bp)
+		This contig is unaligned. (595 bp)
+		Unaligned bases: 595 (number of Ns: 0)
+
+CONTIG: k119_236 (613bp)
+Best alignment score: 587.0 (LEN: 610, IDY: 96.23), Total number of alignments: 1
+		One align captures most of this contig: 1537369 1537978 | 1 610 | 610 610 | 96.23 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_236
+
+CONTIG: k119_237 (937bp)
+		This contig is unaligned. (937 bp)
+		Unaligned bases: 937 (number of Ns: 0)
+
+CONTIG: k119_734 (562bp)
+Best alignment score: 551.0 (LEN: 562, IDY: 98.04), Total number of alignments: 1
+		One align captures most of this contig: 117999 118560 | 562 1 | 562 562 | 98.04 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_734
+
+CONTIG: k119_586 (952bp)
+		This contig is unaligned. (952 bp)
+		Unaligned bases: 952 (number of Ns: 0)
+
+CONTIG: k119_241 (514bp)
+		This contig is unaligned. (514 bp)
+		Unaligned bases: 514 (number of Ns: 0)
+
+CONTIG: k119_67 (1102bp)
+		This contig is unaligned. (1102 bp)
+		Unaligned bases: 1102 (number of Ns: 0)
+
+CONTIG: k119_408 (502bp)
+		This contig is unaligned. (502 bp)
+		Unaligned bases: 502 (number of Ns: 0)
+
+CONTIG: k119_243 (508bp)
+Best alignment score: 494.0 (LEN: 508, IDY: 97.24), Total number of alignments: 1
+		One align captures most of this contig: 1183867 1184374 | 508 1 | 508 508 | 97.24 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_243
+
+CONTIG: k119_918 (548bp)
+Best alignment score: 509.0 (LEN: 522, IDY: 97.51), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 509.0, number of alignments: 1, unaligned bases: 26
+		Alignment: 276126 276647 | 548 27 | 522 522 | 97.51 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_918
+
+CONTIG: k119_920 (616bp)
+		This contig is unaligned. (616 bp)
+		Unaligned bases: 616 (number of Ns: 0)
+
+CONTIG: k119_589 (576bp)
+Best alignment score: 361.0 (LEN: 368, IDY: 98.10), Total number of alignments: 2
+			Looking for the best set of alignments (out of 2 total alignments)
+			The best set is below. Score: 540.0, number of alignments: 2, unaligned bases: 17
+		This contig is misassembled.
+			Real Alignment 1: 1579759 1579949 | 1 191 | 191 191 | 96.34 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_589
+			  Gap between these two alignments (local misassembly). Inconsistency = 183
+			Real Alignment 2: 1580150 1580517 | 209 576 | 368 368 | 98.1 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_589
+
+CONTIG: k119_69 (552bp)
+		This contig is unaligned. (552 bp)
+		Unaligned bases: 552 (number of Ns: 0)
+
+CONTIG: k119_744 (522bp)
+Best alignment score: 513.0 (LEN: 522, IDY: 98.28), Total number of alignments: 2
+		Skipping these alignments as insignificant (option --ambiguity-score is set to "0.99"):
+			Skipping alignment 51608 52119 | 522 11 | 512 512 | 95.31 | Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000001.1 k119_744
+		One align captures most of this contig: 151729 152250 | 522 1 | 522 522 | 98.28 | Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000012.1 k119_744
+
+CONTIG: k119_921 (551bp)
+Best alignment score: 493.0 (LEN: 518, IDY: 95.17), Total number of alignments: 8
+			Looking for the best set of alignments (out of 8 total alignments)
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 1361615 1361695 | 81 1 | 81 81 | 95.06 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_921
+		Skipping redundant alignment 1309200 1309578 | 32 410 | 379 379 | 95.25 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_921
+		Skipping redundant alignment 44721 44801 | 433 513 | 81 81 | 98.77 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_921
+		Skipping redundant alignment 1665967 1666053 | 433 519 | 87 87 | 95.4 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_921
+		Skipping redundant alignment 1361160 1361265 | 538 433 | 106 106 | 98.11 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_921
+		Skipping redundant alignment 1309598 1309703 | 433 538 | 106 106 | 97.17 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_921
+		Skipping redundant alignment 581236 581346 | 429 539 | 111 111 | 96.4 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_921
+			The best set is below. Score: 493.0, number of alignments: 1, unaligned bases: 33
+		Alignment: 1917499 1918015 | 518 1 | 517 518 | 95.17 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_921
+
+CONTIG: k119_247 (707bp)
+		This contig is unaligned. (707 bp)
+		Unaligned bases: 707 (number of Ns: 0)
+
+CONTIG: k119_71 (819bp)
+Best alignment score: 804.0 (LEN: 819, IDY: 98.17), Total number of alignments: 1
+		One align captures most of this contig: 7345 8165 | 1 819 | 821 819 | 98.17 | Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000011.1 k119_71
+
+CONTIG: k119_72 (597bp)
+Best alignment score: 292.0 (LEN: 293, IDY: 99.66), Total number of alignments: 3
+			Looking for the best set of alignments (out of 3 total alignments)
+		This contig has several significant sets of alignments. [An ambiguously mapped contig]
+		Using all alignments in these sets (option --ambiguity-usage is set to "all"):
+			The very best set is shown in details below, the rest are:
+				Group #2. Score: 292.0, number of alignments: 1, unaligned bases: 304
+				Group #3. Score: 292.0, number of alignments: 1, unaligned bases: 302
+			List of alignments used in the sets above:
+		Alignment: 3894 4186 | 1 293 | 293 293 | 99.66 | Sphingomonas_taxi_NZ_CP009571.1 k119_72
+		Alignment: 3410889 3411181 | 1 293 | 293 293 | 99.66 | Sphingomonas_taxi_NZ_CP009571.1 k119_72
+		Alignment: 1849192 1849486 | 295 1 | 295 295 | 98.98 | Sphingomonas_taxi_NZ_CP009571.1 k119_72
+			The best set is below. Score: 292.0, number of alignments: 1, unaligned bases: 304
+		Alignment: 3894 4186 | 1 293 | 293 293 | 99.66 | Sphingomonas_taxi_NZ_CP009571.1 k119_72
+
+CONTIG: k119_251 (618bp)
+		This contig is unaligned. (618 bp)
+		Unaligned bases: 618 (number of Ns: 0)
+
+CONTIG: k119_751 (624bp)
+		This contig is unaligned. (624 bp)
+		Unaligned bases: 624 (number of Ns: 0)
+
+CONTIG: k119_74 (602bp)
+		This contig is unaligned. (602 bp)
+		Unaligned bases: 602 (number of Ns: 0)
+
+CONTIG: k119_595 (1219bp)
+Best alignment score: 834.0 (LEN: 854, IDY: 97.66), Total number of alignments: 12
+			Looking for the best set of alignments (out of 12 total alignments)
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 2398553 2398739 | 1 187 | 187 187 | 96.79 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_595
+		Skipping redundant alignment 2191 2384 | 258 65 | 194 194 | 97.42 | Prevotella_nigrescens_CC14M_NZ_KI669450.1 k119_595
+		Skipping redundant alignment 65845 66038 | 65 258 | 194 194 | 97.42 | Prevotella_nigrescens_CC14M_NZ_KI669426.1 k119_595
+		Skipping redundant alignment 3410193 3410292 | 771 672 | 100 100 | 95.0 | Sphingomonas_taxi_NZ_CP009571.1 k119_595
+		Skipping redundant alignment 1850083 1850182 | 672 771 | 100 100 | 95.0 | Sphingomonas_taxi_NZ_CP009571.1 k119_595
+		Skipping redundant alignment 3198 3297 | 771 672 | 100 100 | 95.0 | Sphingomonas_taxi_NZ_CP009571.1 k119_595
+		Skipping redundant alignment 1145 1230 | 695 780 | 86 86 | 100.0 | Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000029.1 k119_595
+		This contig has several significant sets of alignments. [An ambiguously mapped contig]
+		Using all alignments in these sets (option --ambiguity-usage is set to "all"):
+			The very best set is shown in details below, the rest are:
+				Group #2. Score: 827.1, number of alignments: 1, unaligned bases: 365
+				Group #3. Score: 827.1, number of alignments: 1, unaligned bases: 365
+				Group #4. Score: 827.1, number of alignments: 1, unaligned bases: 365
+				Group #5. Score: 827.1, number of alignments: 1, unaligned bases: 365
+			List of alignments used in the sets above:
+		Alignment: 1967 2820 | 895 42 | 854 854 | 97.66 | Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000051.1 k119_595
+		Alignment: 38705 39558 | 895 42 | 854 854 | 96.85 | Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000014.1 k119_595
+		Alignment: 43264 44117 | 895 42 | 854 854 | 96.85 | Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000025.1 k119_595
+		Alignment: 3967 4820 | 895 42 | 854 854 | 96.85 | Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000030.1 k119_595
+		Alignment: 685 1538 | 42 895 | 854 854 | 96.85 | Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000034.1 k119_595
+			The best set is below. Score: 834.0, number of alignments: 1, unaligned bases: 365
+		Alignment: 1967 2820 | 895 42 | 854 854 | 97.66 | Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000051.1 k119_595
+
+CONTIG: k119_254 (732bp)
+Best alignment score: 718.0 (LEN: 723, IDY: 99.31), Total number of alignments: 5
+		Skipping these alignments as insignificant (option --ambiguity-score is set to "0.99"):
+			Skipping alignment 4382 5104 | 10 732 | 723 723 | 95.71 | Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000034.1 k119_254
+			Skipping alignment 401 1123 | 732 10 | 723 723 | 95.71 | Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000030.1 k119_254
+			Skipping alignment 39698 40420 | 732 10 | 723 723 | 95.71 | Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000025.1 k119_254
+			Skipping alignment 35139 35861 | 732 10 | 723 723 | 95.71 | Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000014.1 k119_254
+		One align captures most of this contig: 304 1026 | 732 10 | 723 723 | 99.31 | Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000054.1 k119_254
+
+CONTIG: k119_933 (649bp)
+Best alignment score: 634.0 (LEN: 649, IDY: 97.69), Total number of alignments: 1
+		One align captures most of this contig: 502708 503356 | 649 1 | 649 649 | 97.69 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_933
+
+CONTIG: k119_934 (610bp)
+Best alignment score: 578.0 (LEN: 604, IDY: 95.70), Total number of alignments: 1
+		One align captures most of this contig: 261670 262273 | 604 1 | 604 604 | 95.7 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_934
+
+CONTIG: k119_257 (630bp)
+		This contig is unaligned. (630 bp)
+		Unaligned bases: 630 (number of Ns: 0)
+
+CONTIG: k119_603 (593bp)
+		This contig is unaligned. (593 bp)
+		Unaligned bases: 593 (number of Ns: 0)
+
+CONTIG: k119_761 (534bp)
+		This contig is unaligned. (534 bp)
+		Unaligned bases: 534 (number of Ns: 0)
+
+CONTIG: k119_604 (663bp)
+		This contig is unaligned. (663 bp)
+		Unaligned bases: 663 (number of Ns: 0)
+
+CONTIG: k119_434 (867bp)
+		This contig is unaligned. (867 bp)
+		Unaligned bases: 867 (number of Ns: 0)
+
+CONTIG: k119_88 (669bp)
+Best alignment score: 363.0 (LEN: 378, IDY: 96.03), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 363.0, number of alignments: 1, unaligned bases: 291
+		Alignment: 2112366 2112743 | 378 1 | 378 378 | 96.03 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_88
+
+CONTIG: k119_91 (539bp)
+Best alignment score: 522.1 (LEN: 539, IDY: 96.86), Total number of alignments: 1
+		One align captures most of this contig: 269207 269745 | 1 539 | 539 539 | 96.86 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_91
+
+CONTIG: k119_945 (576bp)
+Best alignment score: 552.0 (LEN: 572, IDY: 96.51), Total number of alignments: 1
+		One align captures most of this contig: 210313 210885 | 5 576 | 573 572 | 96.51 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_945
+
+CONTIG: k119_445 (542bp)
+		This contig is unaligned. (542 bp)
+		Unaligned bases: 542 (number of Ns: 0)
+
+CONTIG: k119_275 (647bp)
+Best alignment score: 629.0 (LEN: 647, IDY: 97.22), Total number of alignments: 1
+		One align captures most of this contig: 601609 602255 | 1 647 | 647 647 | 97.22 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_275
+
+CONTIG: k119_96 (502bp)
+		This contig is unaligned. (502 bp)
+		Unaligned bases: 502 (number of Ns: 0)
+
+CONTIG: k119_613 (633bp)
+Best alignment score: 611.0 (LEN: 630, IDY: 96.98), Total number of alignments: 1
+		One align captures most of this contig: 678560 679189 | 4 633 | 630 630 | 96.98 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_613
+
+CONTIG: k119_769 (826bp)
+		This contig is unaligned. (826 bp)
+		Unaligned bases: 826 (number of Ns: 0)
+
+CONTIG: k119_447 (557bp)
+		This contig is unaligned. (557 bp)
+		Unaligned bases: 557 (number of Ns: 0)
+
+CONTIG: k119_102 (506bp)
+		This contig is unaligned. (506 bp)
+		Unaligned bases: 506 (number of Ns: 0)
+
+CONTIG: k119_454 (549bp)
+		This contig is unaligned. (549 bp)
+		Unaligned bases: 549 (number of Ns: 0)
+
+CONTIG: k119_776 (696bp)
+Best alignment score: 112.0 (LEN: 112, IDY: 100.00), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 112.0, number of alignments: 1, unaligned bases: 584
+		This contig is partially unaligned. (Aligned 112 out of 696 non-N bases (16.09%))
+		Alignment: 1620884 1620995 | 112 1 | 112 112 | 100.0 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_776
+		Unaligned bases: 113 to 696 (584)
+		It can contain up to 1 interspecies translocations (will be reported as Possible Misassemblies).
+
+CONTIG: k119_622 (671bp)
+Best alignment score: 514.0 (LEN: 540, IDY: 95.19), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 514.0, number of alignments: 1, unaligned bases: 131
+		Alignment: 1339676 1340215 | 562 23 | 540 540 | 95.19 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_622
+
+CONTIG: k119_283 (609bp)
+Best alignment score: 550.0 (LEN: 577, IDY: 95.32), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 550.0, number of alignments: 1, unaligned bases: 32
+		Alignment: 251232 251808 | 1 577 | 577 577 | 95.32 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_283
+
+CONTIG: k119_777 (565bp)
+Best alignment score: 544.1 (LEN: 565, IDY: 96.30), Total number of alignments: 5
+		Skipping these alignments as insignificant (option --ambiguity-score is set to "0.99"):
+			Skipping alignment 518198 518437 | 326 565 | 240 240 | 97.1 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_777
+			Skipping alignment 182040 182200 | 565 403 | 161 163 | 97.55 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_777
+			Skipping alignment 2399579 2399739 | 565 403 | 161 163 | 96.32 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_777
+			Skipping alignment 2301066 2301222 | 561 403 | 157 159 | 96.23 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_777
+		One align captures most of this contig: 280129 280693 | 565 1 | 565 565 | 96.3 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_777
+
+CONTIG: k119_106 (555bp)
+		This contig is unaligned. (555 bp)
+		Unaligned bases: 555 (number of Ns: 0)
+
+CONTIG: k119_778 (845bp)
+		This contig is unaligned. (845 bp)
+		Unaligned bases: 845 (number of Ns: 0)
+
+CONTIG: k119_459 (574bp)
+		This contig is unaligned. (574 bp)
+		Unaligned bases: 574 (number of Ns: 0)
+
+CONTIG: k119_959 (587bp)
+		This contig is unaligned. (587 bp)
+		Unaligned bases: 587 (number of Ns: 0)
+
+CONTIG: k119_460 (587bp)
+		This contig is unaligned. (587 bp)
+		Unaligned bases: 587 (number of Ns: 0)
+
+CONTIG: k119_781 (525bp)
+		This contig is unaligned. (525 bp)
+		Unaligned bases: 525 (number of Ns: 0)
+
+CONTIG: k119_462 (505bp)
+		This contig is unaligned. (505 bp)
+		Unaligned bases: 505 (number of Ns: 0)
+
+CONTIG: k119_962 (733bp)
+		This contig is unaligned. (733 bp)
+		Unaligned bases: 733 (number of Ns: 0)
+
+CONTIG: k119_627 (515bp)
+		This contig is unaligned. (515 bp)
+		Unaligned bases: 515 (number of Ns: 0)
+
+CONTIG: k119_290 (1167bp)
+		This contig is unaligned. (1167 bp)
+		Unaligned bases: 1167 (number of Ns: 0)
+
+CONTIG: k119_116 (556bp)
+Best alignment score: 399.0 (LEN: 408, IDY: 97.79), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 399.0, number of alignments: 1, unaligned bases: 148
+		Alignment: 399617 400024 | 556 149 | 408 408 | 97.79 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_116
+
+CONTIG: k119_964 (568bp)
+		This contig is unaligned. (568 bp)
+		Unaligned bases: 568 (number of Ns: 0)
+
+CONTIG: k119_291 (702bp)
+Best alignment score: 568.0 (LEN: 579, IDY: 98.10), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 568.0, number of alignments: 1, unaligned bases: 123
+		Alignment: 1307293 1307871 | 702 124 | 579 579 | 98.1 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_291
+
+CONTIG: k119_787 (545bp)
+Best alignment score: 86.0 (LEN: 87, IDY: 98.85), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 86.0, number of alignments: 1, unaligned bases: 458
+		Alignment: 52029 52115 | 1 87 | 87 87 | 98.85 | Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000013.1 k119_787
+
+CONTIG: k119_292 (573bp)
+Best alignment score: 513.2 (LEN: 537, IDY: 95.56), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 513.2, number of alignments: 1, unaligned bases: 36
+		Alignment: 2451 2987 | 573 37 | 537 537 | 95.56 | Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000038.1 k119_292
+
+CONTIG: k119_118 (529bp)
+Best alignment score: 519.0 (LEN: 526, IDY: 98.67), Total number of alignments: 1
+		One align captures most of this contig: 1979867 1980392 | 1 526 | 526 526 | 98.67 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_118
+
+CONTIG: k119_966 (514bp)
+Best alignment score: 497.0 (LEN: 514, IDY: 96.69), Total number of alignments: 1
+		One align captures most of this contig: 696143 696656 | 1 514 | 514 514 | 96.69 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_966
+
+CONTIG: k119_788 (955bp)
+		This contig is unaligned. (955 bp)
+		Unaligned bases: 955 (number of Ns: 0)
+
+CONTIG: k119_473 (513bp)
+		This contig is unaligned. (513 bp)
+		Unaligned bases: 513 (number of Ns: 0)
+
+CONTIG: k119_789 (1053bp)
+		This contig is unaligned. (1053 bp)
+		Unaligned bases: 1053 (number of Ns: 0)
+
+CONTIG: k119_970 (585bp)
+		This contig is unaligned. (585 bp)
+		Unaligned bases: 585 (number of Ns: 0)
+
+CONTIG: k119_299 (630bp)
+		This contig is unaligned. (630 bp)
+		Unaligned bases: 630 (number of Ns: 0)
+
+CONTIG: k119_640 (653bp)
+		This contig is unaligned. (653 bp)
+		Unaligned bases: 653 (number of Ns: 0)
+
+CONTIG: k119_971 (671bp)
+Best alignment score: 130.0 (LEN: 133, IDY: 97.74), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 130.0, number of alignments: 1, unaligned bases: 538
+		This contig is partially unaligned. (Aligned 133 out of 671 non-N bases (19.82%))
+		Alignment: 69236 69368 | 650 518 | 133 133 | 97.74 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_971
+		Unaligned bases: 1 to 517 (517)
+		Unaligned bases: 651 to 671 (21)
+		It can contain up to 1 interspecies translocations (will be reported as Possible Misassemblies).
+
+CONTIG: k119_125 (507bp)
+		This contig is unaligned. (507 bp)
+		Unaligned bases: 507 (number of Ns: 0)
+
+CONTIG: k119_642 (553bp)
+Best alignment score: 533.0 (LEN: 545, IDY: 97.80), Total number of alignments: 1
+		One align captures most of this contig: 1100074 1100618 | 545 1 | 545 545 | 97.8 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_642
+
+CONTIG: k119_791 (1219bp)
+		This contig is unaligned. (1219 bp)
+		Unaligned bases: 1219 (number of Ns: 0)
+
+CONTIG: k119_126 (694bp)
+Best alignment score: 322.0 (LEN: 331, IDY: 97.28), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 322.0, number of alignments: 1, unaligned bases: 363
+		Alignment: 2829 3159 | 364 694 | 331 331 | 97.28 | Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000002.1 k119_126
+
+CONTIG: k119_793 (620bp)
+Best alignment score: 379.0 (LEN: 397, IDY: 95.47), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 379.0, number of alignments: 1, unaligned bases: 223
+		Alignment: 341706 342102 | 620 224 | 397 397 | 95.47 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_793
+
+CONTIG: k119_645 (524bp)
+		This contig is unaligned. (524 bp)
+		Unaligned bases: 524 (number of Ns: 0)
+
+CONTIG: k119_481 (557bp)
+		This contig is unaligned. (557 bp)
+		Unaligned bases: 557 (number of Ns: 0)
+
+CONTIG: k119_976 (799bp)
+Best alignment score: 674.0 (LEN: 709, IDY: 95.06), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 674.0, number of alignments: 1, unaligned bases: 90
+		Alignment: 200 908 | 764 56 | 709 709 | 95.06 | Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000029.1 k119_976
+
+CONTIG: k119_130 (588bp)
+		This contig is unaligned. (588 bp)
+		Unaligned bases: 588 (number of Ns: 0)
+
+CONTIG: k119_483 (687bp)
+Best alignment score: 671.0 (LEN: 687, IDY: 97.67), Total number of alignments: 1
+		One align captures most of this contig: 1192404 1193089 | 1 687 | 686 687 | 97.67 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_483
+
+CONTIG: k119_484 (517bp)
+		This contig is unaligned. (517 bp)
+		Unaligned bases: 517 (number of Ns: 0)
+
+CONTIG: k119_798 (695bp)
+		This contig is unaligned. (695 bp)
+		Unaligned bases: 695 (number of Ns: 0)
+
+CONTIG: k119_308 (660bp)
+		This contig is unaligned. (660 bp)
+		Unaligned bases: 660 (number of Ns: 0)
+
+CONTIG: k119_133 (665bp)
+Best alignment score: 648.2 (LEN: 665, IDY: 97.48), Total number of alignments: 1
+		One align captures most of this contig: 67325 67998 | 1 665 | 674 665 | 97.48 | Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000013.1 k119_133
+
+CONTIG: k119_651 (554bp)
+		This contig is unaligned. (554 bp)
+		Unaligned bases: 554 (number of Ns: 0)
+
+CONTIG: k119_310 (544bp)
+		This contig is unaligned. (544 bp)
+		Unaligned bases: 544 (number of Ns: 0)
+
+CONTIG: k119_134 (633bp)
+		This contig is unaligned. (633 bp)
+		Unaligned bases: 633 (number of Ns: 0)
+
+CONTIG: k119_652 (580bp)
+		This contig is unaligned. (580 bp)
+		Unaligned bases: 580 (number of Ns: 0)
+
+CONTIG: k119_982 (531bp)
+Best alignment score: 520.0 (LEN: 531, IDY: 97.93), Total number of alignments: 1
+		One align captures most of this contig: 1550506 1551036 | 531 1 | 531 531 | 97.93 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_982
+
+CONTIG: k119_653 (604bp)
+Best alignment score: 596.0 (LEN: 604, IDY: 98.68), Total number of alignments: 1
+		One align captures most of this contig: 732471 733074 | 604 1 | 604 604 | 98.68 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_653
+
+CONTIG: k119_491 (516bp)
+Best alignment score: 503.0 (LEN: 516, IDY: 97.48), Total number of alignments: 1
+		One align captures most of this contig: 7446 7961 | 1 516 | 516 516 | 97.48 | Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000006.1 k119_491
+
+CONTIG: k119_313 (675bp)
+		This contig is unaligned. (675 bp)
+		Unaligned bases: 675 (number of Ns: 0)
+
+CONTIG: k119_805 (820bp)
+Best alignment score: 589.0 (LEN: 606, IDY: 97.19), Total number of alignments: 2
+			Looking for the best set of alignments (out of 2 total alignments)
+			The best set is below. Score: 775.0, number of alignments: 2, unaligned bases: 11
+		This contig is misassembled.
+			Real Alignment 1: 349561 349763 | 208 6 | 203 203 | 95.07 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_805
+			  Gap between these two alignments (local misassembly). Inconsistency = 184
+			Real Alignment 2: 348765 349370 | 820 215 | 606 606 | 97.19 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_805
+
+CONTIG: k119_494 (636bp)
+		This contig is unaligned. (636 bp)
+		Unaligned bases: 636 (number of Ns: 0)
+
+CONTIG: k119_143 (1611bp)
+		This contig is unaligned. (1611 bp)
+		Unaligned bases: 1611 (number of Ns: 0)
+
+CONTIG: k119_500 (656bp)
+		This contig is unaligned. (656 bp)
+		Unaligned bases: 656 (number of Ns: 0)
+
+CONTIG: k119_661 (621bp)
+		This contig is unaligned. (621 bp)
+		Unaligned bases: 621 (number of Ns: 0)
+
+CONTIG: k119_502 (585bp)
+		This contig is unaligned. (585 bp)
+		Unaligned bases: 585 (number of Ns: 0)
+
+CONTIG: k119_812 (740bp)
+		This contig is unaligned. (740 bp)
+		Unaligned bases: 740 (number of Ns: 0)
+
+CONTIG: k119_146 (586bp)
+Best alignment score: 570.0 (LEN: 583, IDY: 97.77), Total number of alignments: 1
+		One align captures most of this contig: 442630 443212 | 1 583 | 583 583 | 97.77 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_146
+
+CONTIG: k119_814 (509bp)
+Best alignment score: 485.4 (LEN: 509, IDY: 95.36), Total number of alignments: 1
+		One align captures most of this contig: 536709 537225 | 509 1 | 517 509 | 95.36 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_814
+
+CONTIG: k119_1002 (546bp)
+Best alignment score: 546.0 (LEN: 546, IDY: 100.00), Total number of alignments: 4
+		Skipping these alignments as insignificant (option --ambiguity-score is set to "0.99"):
+			Skipping alignment 3858976 3859082 | 183 77 | 107 107 | 97.2 | Sphingomonas_taxi_NZ_CP009571.1 k119_1002
+			Skipping alignment 3406775 3406881 | 183 77 | 107 107 | 97.2 | Sphingomonas_taxi_NZ_CP009571.1 k119_1002
+			Skipping alignment 1853398 1853503 | 77 182 | 106 106 | 97.17 | Sphingomonas_taxi_NZ_CP009571.1 k119_1002
+		One align captures most of this contig: 526 1071 | 1 546 | 546 546 | 100.0 | Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000005.1 k119_1002
+
+CONTIG: k119_147 (747bp)
+Best alignment score: 706.0 (LEN: 729, IDY: 96.84), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 706.0, number of alignments: 1, unaligned bases: 18
+		Alignment: 1258106 1258834 | 729 1 | 729 729 | 96.84 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_147
+
+CONTIG: k119_816 (543bp)
+		This contig is unaligned. (543 bp)
+		Unaligned bases: 543 (number of Ns: 0)
+
+CONTIG: k119_817 (531bp)
+		This contig is unaligned. (531 bp)
+		Unaligned bases: 531 (number of Ns: 0)
+
+CONTIG: k119_149 (999bp)
+		This contig is unaligned. (999 bp)
+		Unaligned bases: 999 (number of Ns: 0)
+
+CONTIG: k119_153 (568bp)
+		This contig is unaligned. (568 bp)
+		Unaligned bases: 568 (number of Ns: 0)
+
+CONTIG: k119_1010 (536bp)
+Best alignment score: 262.0 (LEN: 275, IDY: 95.27), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 262.0, number of alignments: 1, unaligned bases: 261
+		Alignment: 2373826 2374100 | 262 536 | 275 275 | 95.27 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_1010
+
+CONTIG: k119_673 (835bp)
+		This contig is unaligned. (835 bp)
+		Unaligned bases: 835 (number of Ns: 0)
+
+CONTIG: k119_157 (556bp)
+		This contig is unaligned. (556 bp)
+		Unaligned bases: 556 (number of Ns: 0)
+
+CONTIG: k119_338 (575bp)
+		This contig is unaligned. (575 bp)
+		Unaligned bases: 575 (number of Ns: 0)
+
+CONTIG: k119_339 (739bp)
+		This contig is unaligned. (739 bp)
+		Unaligned bases: 739 (number of Ns: 0)
+
+CONTIG: k119_828 (625bp)
+Best alignment score: 289.0 (LEN: 296, IDY: 97.64), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 289.0, number of alignments: 1, unaligned bases: 329
+		Alignment: 882932 883227 | 1 296 | 296 296 | 97.64 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_828
+
+CONTIG: k119_161 (597bp)
+		This contig is unaligned. (597 bp)
+		Unaligned bases: 597 (number of Ns: 0)
+
+CONTIG: k119_833 (667bp)
+Best alignment score: 341.0 (LEN: 352, IDY: 96.88), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 341.0, number of alignments: 1, unaligned bases: 315
+		Alignment: 134984 135335 | 312 663 | 352 352 | 96.88 | Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000008.1 k119_833
+
+CONTIG: k119_164 (1146bp)
+		This contig is unaligned. (1146 bp)
+		Unaligned bases: 1146 (number of Ns: 0)
+
+CONTIG: k119_839 (551bp)
+		This contig is unaligned. (551 bp)
+		Unaligned bases: 551 (number of Ns: 0)
+
+CONTIG: k119_169 (520bp)
+Best alignment score: 515.0 (LEN: 520, IDY: 99.04), Total number of alignments: 1
+		One align captures most of this contig: 745948 746468 | 1 520 | 521 520 | 99.04 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_169
+
+CONTIG: k119_842 (657bp)
+		This contig is unaligned. (657 bp)
+		Unaligned bases: 657 (number of Ns: 0)
+
+Analyzing coverage...
+Writing SNPs into /mnt/c/meta/result/megahit/metaquast/combined_reference/contigs_reports/minimap_output/raw/final-contigs.used_snps.gz
+
+Analysis is finished!
+Founded SNPs were written into /mnt/c/meta/result/megahit/metaquast/combined_reference/contigs_reports/minimap_output/raw/final-contigs.used_snps.gz
+
+Results:
+	Local Misassemblies: 3
+	Misassemblies: 2
+		Relocations: 2
+		Translocations: 0
+		Interspecies translocations: 0
+		Inversions: 0
+	Potentially Misassembled Contigs (i/s translocations): 3
+		Possible Misassemblies: 3
+	Scaffold gap extensive misassemblies: 0
+	Scaffold gap local misassemblies: 0
+	Misassembled Contigs: 2
+	Misassembled Contig Bases: 1426
+	Misassemblies Inter-Contig Overlap: 0
+Unaligned Contigs: 112 + 3 part
+Half Unaligned Contigs with Misassemblies: 0
+Unaligned Contig Bases: 82058
+
+Ambiguously Mapped Contigs: 3
+Total Bases in Ambiguously Mapped Contigs: 2317
+Extra Bases in Ambiguously Mapped Contigs: 5006
+Note that --allow-ambiguity option was set to "all" and each of these contigs was used several times.
+
+	Covered Bases: 45708
+
+	SNPs: 1241
+	Insertions: 71
+	Deletions: 118
+

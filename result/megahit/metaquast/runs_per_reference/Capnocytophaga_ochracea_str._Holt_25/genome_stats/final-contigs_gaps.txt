@@ -1,0 +1,91 @@
+Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000001.1
+1 110700
+Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000002.1
+1 2828
+3160 114967
+Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000003.1
+1 199419
+Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000004.1
+1 25632
+Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000005.1
+1 55495
+Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000006.1
+1 4288
+4669 4827
+4954 7445
+7962 8378
+Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000007.1
+1 59060
+Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000008.1
+1 149895
+Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000009.1
+1 30947
+Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000010.1
+1 154946
+Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000011.1
+1 7344
+8166 15092
+Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000012.1
+1 151728
+152251 202194
+Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000013.1
+1 7610
+Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000014.1
+1 38704
+39559 40242
+Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000015.1
+1 41408
+Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000016.1
+1 50870
+Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000017.1
+1 20507
+Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000018.1
+1 53674
+Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000019.1
+1 11787
+Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000020.1
+1 111916
+Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000021.1
+1 150377
+Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000022.1
+1 24903
+Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000023.1
+1 123849
+Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000024.1
+1 46854
+Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000025.1
+1 44801
+Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000026.1
+1 45649
+Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000027.1
+1 7950
+Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000028.1
+1 2439
+Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000029.1
+1 48052
+Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000030.1
+1 104078
+Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000031.1
+1 12014
+Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000032.1
+1 27953
+Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000033.1
+1 39399
+Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000034.1
+1 59549
+Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000035.1
+1 33721
+Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000036.1
+1 231723
+Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000037.1
+1 2009
+Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000038.1
+1 1907
+Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000039.1
+1 42599
+Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000040.1
+1 96639
+Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000041.1
+1 14064
+Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000042.1
+1 28489

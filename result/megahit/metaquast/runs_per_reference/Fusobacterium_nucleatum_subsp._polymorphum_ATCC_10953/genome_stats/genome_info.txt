@@ -1,0 +1,15 @@
+reference chromosomes:
+	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NC_009506.1 (total length: 11934 bp, total length without N's: 11934 bp, maximal covered length: 0 bp)
+	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 (total length: 2429698 bp, total length without N's: 2428297 bp, maximal covered length: 30764 bp)
+
+total genome size: 2441632
+
+gap min size: 50
+partial gene/operon min size: 100
+
+
+
+assembly                 | genome    | duplication | gaps      | genes     | partial   | operons   | partial   |
+                         | fraction  | ratio       | number    |           | genes     |           | operons   |
+========================================================================================================================
+final-contigs_to_Fusobac | 1.261     | 1.111       | 72        | -         | -         | -         | -         |

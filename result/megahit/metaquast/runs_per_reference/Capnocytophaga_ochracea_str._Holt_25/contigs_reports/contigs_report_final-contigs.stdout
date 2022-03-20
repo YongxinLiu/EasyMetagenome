@@ -1,0 +1,122 @@
+Aligning contigs to reference...
+	Aligning contigs to the reference
+Filtering alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000001.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000002.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000003.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000004.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000005.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000006.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000007.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000008.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000009.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000010.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000011.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000012.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000013.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000014.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000015.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000016.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000017.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000018.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000019.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000020.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000021.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000022.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000023.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000024.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000025.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000026.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000027.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000028.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000029.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000030.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000031.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000032.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000033.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000034.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000035.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000036.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000037.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000038.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000039.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000040.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000041.1]
+	Loaded [Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000042.1]
+	Total Regions: 42
+	Total Region Length: 2653757
+Analyzing contigs...
+CONTIG: k119_10 (502bp)
+Best alignment score: 358.1 (LEN: 377, IDY: 95.00), Total number of alignments: 2
+			Looking for the best set of alignments (out of 2 total alignments)
+			The best set is below. Score: 471.5, number of alignments: 2, unaligned bases: 0
+		This contig is misassembled.
+			Excluding internal overlap of size 11 between Alignment 1 and 2: 4817 4953 | 136 1 | 137 136 --> 4828 4953 | 125 1 | 126 125
+			Real Alignment 1: 4828 4953 | 125 1 | 126 125 | 97.08 | Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000006.1 k119_10
+			  Gap between these two alignments (local misassembly). Inconsistency = 159
+			Real Alignment 2: 4289 4668 | 502 126 | 380 377 | 95.0 | Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000006.1 k119_10
+
+CONTIG: k119_491 (516bp)
+Best alignment score: 503.0 (LEN: 516, IDY: 97.48), Total number of alignments: 1
+		One align captures most of this contig: 7446 7961 | 1 516 | 516 516 | 97.48 | Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000006.1 k119_491
+
+CONTIG: k119_744 (522bp)
+Best alignment score: 513.0 (LEN: 522, IDY: 98.28), Total number of alignments: 1
+		One align captures most of this contig: 151729 152250 | 522 1 | 522 522 | 98.28 | Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000012.1 k119_744
+
+CONTIG: k119_71 (819bp)
+Best alignment score: 804.0 (LEN: 819, IDY: 98.17), Total number of alignments: 1
+		One align captures most of this contig: 7345 8165 | 1 819 | 821 819 | 98.17 | Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000011.1 k119_71
+
+CONTIG: k119_595 (1219bp)
+Best alignment score: 827.1 (LEN: 854, IDY: 96.85), Total number of alignments: 4
+			Looking for the best set of alignments (out of 4 total alignments)
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 43264 44117 | 895 42 | 854 854 | 96.85 | Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000025.1 k119_595
+		Skipping redundant alignment 3967 4820 | 895 42 | 854 854 | 96.85 | Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000030.1 k119_595
+		Skipping redundant alignment 685 1538 | 42 895 | 854 854 | 96.85 | Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000034.1 k119_595
+		This contig has several significant sets of alignments. [An ambiguously mapped contig]
+		Using only the very best set (option --ambiguity-usage is set to "one").
+			The best set is below. Score: 827.1, number of alignments: 1, unaligned bases: 365
+		Alignment: 38705 39558 | 895 42 | 854 854 | 96.85 | Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000014.1 k119_595
+
+CONTIG: k119_126 (694bp)
+Best alignment score: 322.0 (LEN: 331, IDY: 97.28), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 322.0, number of alignments: 1, unaligned bases: 363
+		Alignment: 2829 3159 | 364 694 | 331 331 | 97.28 | Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000002.1 k119_126
+
+Analyzing coverage...
+Writing SNPs into /mnt/c/meta/result/megahit/metaquast/runs_per_reference/Capnocytophaga_ochracea_str._Holt_25/contigs_reports/minimap_output/final-contigs.used_snps.gz
+
+Analysis is finished!
+Founded SNPs were written into /mnt/c/meta/result/megahit/metaquast/runs_per_reference/Capnocytophaga_ochracea_str._Holt_25/contigs_reports/minimap_output/final-contigs.used_snps.gz
+
+Results:
+	Local Misassemblies: 1
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Scaffold gap extensive misassemblies: 0
+	Scaffold gap local misassemblies: 0
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Unaligned Contigs: 0 + 0 part
+Half Unaligned Contigs with Misassemblies: 0
+Unaligned Contig Bases: 0
+
+Ambiguously Mapped Contigs: 1
+Total Bases in Ambiguously Mapped Contigs: 1219
+Extra Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each of these contigs was used.
+
+	Covered Bases: 3550
+
+	SNPs: 84
+	Insertions: 3
+	Deletions: 9
+

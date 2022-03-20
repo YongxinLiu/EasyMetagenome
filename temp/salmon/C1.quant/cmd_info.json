@@ -1,0 +1,11 @@
+{
+    "salmon_version": "1.4.0",
+    "index": "temp/salmon/index",
+    "libType": "A",
+    "threads": "3",
+    "meta": [],
+    "mates1": "temp/qc/C1_1.fastq",
+    "mates2": "temp/qc/C1_2.fastq",
+    "output": "temp/salmon/C1.quant",
+    "auxDir": "aux_info"
+}

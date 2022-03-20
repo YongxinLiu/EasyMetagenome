@@ -1,0 +1,16 @@
+reference chromosomes:
+	Sphingomonas_taxi_NZ_CP009571.1 (total length: 3859099 bp, total length without N's: 3859099 bp, maximal covered length: 321 bp)
+	Sphingomonas_taxi_NZ_CP009572.1 (total length: 163311 bp, total length without N's: 163311 bp, maximal covered length: 0 bp)
+	Sphingomonas_taxi_NZ_CP009573.1 (total length: 39492 bp, total length without N's: 39492 bp, maximal covered length: 0 bp)
+
+total genome size: 4061902
+
+gap min size: 50
+partial gene/operon min size: 100
+
+
+
+assembly                 | genome    | duplication | gaps      | genes     | partial   | operons   | partial   |
+                         | fraction  | ratio       | number    |           | genes     |           | operons   |
+========================================================================================================================
+final-contigs_to_Sphingo | 0.008     | 1.860       | 4         | -         | -         | -         | -         |

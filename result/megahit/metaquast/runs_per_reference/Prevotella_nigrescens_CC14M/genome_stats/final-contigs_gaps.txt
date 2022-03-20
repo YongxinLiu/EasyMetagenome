@@ -1,0 +1,95 @@
+Prevotella_nigrescens_CC14M_NZ_KI669419.1
+1 149926
+151539 155459
+157090 215759
+215815 281626
+Prevotella_nigrescens_CC14M_NZ_KI669420.1
+1 20090
+21716 46841
+48302 121094
+Prevotella_nigrescens_CC14M_NZ_KI669421.1
+1 5504
+6745 55290
+55676 73503
+73764 99665
+Prevotella_nigrescens_CC14M_NZ_KI669422.1
+1 76507
+Prevotella_nigrescens_CC14M_NZ_KI669423.1
+1 77749
+Prevotella_nigrescens_CC14M_NZ_KI669424.1
+1 70305
+Prevotella_nigrescens_CC14M_NZ_KI669425.1
+1 69164
+Prevotella_nigrescens_CC14M_NZ_KI669426.1
+1 66429
+Prevotella_nigrescens_CC14M_NZ_KI669427.1
+1 59567
+Prevotella_nigrescens_CC14M_NZ_KI669428.1
+1 54469
+Prevotella_nigrescens_CC14M_NZ_KI669429.1
+1 25841
+27502 46188
+Prevotella_nigrescens_CC14M_NZ_KI669430.1
+1 150146
+150497 268064
+Prevotella_nigrescens_CC14M_NZ_KI669431.1
+1 40440
+Prevotella_nigrescens_CC14M_NZ_KI669432.1
+1 35343
+Prevotella_nigrescens_CC14M_NZ_KI669433.1
+1 25475
+Prevotella_nigrescens_CC14M_NZ_KI669434.1
+1 25437
+Prevotella_nigrescens_CC14M_NZ_KI669435.1
+1 10308
+11574 23764
+Prevotella_nigrescens_CC14M_NZ_KI669436.1
+1 17640
+Prevotella_nigrescens_CC14M_NZ_KI669437.1
+1 15797
+15808 21001
+Prevotella_nigrescens_CC14M_NZ_KI669438.1
+1 15546
+Prevotella_nigrescens_CC14M_NZ_KI669439.1
+1 13627
+Prevotella_nigrescens_CC14M_NZ_KI669440.1
+1 10198
+Prevotella_nigrescens_CC14M_NZ_KI669441.1
+1 221115
+221126 224509
+225775 261247
+Prevotella_nigrescens_CC14M_NZ_KI669442.1
+1 8978
+Prevotella_nigrescens_CC14M_NZ_KI669443.1
+1 8265
+Prevotella_nigrescens_CC14M_NZ_KI669444.1
+1 6478
+Prevotella_nigrescens_CC14M_NZ_KI669445.1
+1 4287
+Prevotella_nigrescens_CC14M_NZ_KI669446.1
+1 4280
+Prevotella_nigrescens_CC14M_NZ_KI669447.1
+1 2657
+Prevotella_nigrescens_CC14M_NZ_KI669448.1
+1 104019
+105095 115193
+115737 259754
+Prevotella_nigrescens_CC14M_NZ_KI669449.1
+1 139489
+139785 228505
+228921 248061
+248817 251947
+252258 257286
+257297 259494
+Prevotella_nigrescens_CC14M_NZ_KI669450.1
+1 109184
+110160 120329
+121955 223095
+Prevotella_nigrescens_CC14M_NZ_KI669451.1
+1 127761
+129202 162361
+Prevotella_nigrescens_CC14M_NZ_KI669452.1
+1 70668
+71943 139090
+Prevotella_nigrescens_CC14M_NZ_KI669453.1
+1 127448

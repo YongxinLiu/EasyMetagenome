@@ -1,0 +1,3 @@
+Sample	raw pair1	trimmed pair1	final pair1	final pair2
+C1	75000.0	65252.0	65212.0	65212.0
+C2	75000.0	47231.0	44619.0	44619.0

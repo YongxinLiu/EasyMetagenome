@@ -1,0 +1,101 @@
+/home/yongxin/miniconda2/envs/meta/bin/quast.py --colors #E31A1C --ls solid --no-check-meta --contig-thresholds 1000,5000,10000,25000,50000 --memory-efficient -t 1 /mnt/c/meta/result/megahit/metaquast/quast_corrected_input/final-contigs_to_Haemophilus_sputorum_CCUG_13788.fasta -R /mnt/c/meta/result/megahit/metaquast/quast_corrected_input/Haemophilus_sputorum_CCUG_13788.fasta -o /mnt/c/meta/result/megahit/metaquast/runs_per_reference/Haemophilus_sputorum_CCUG_13788 --labels final.contigs
+
+Started: 2021-08-09 00:11:50
+
+Logging to /mnt/c/meta/result/megahit/metaquast/runs_per_reference/Haemophilus_sputorum_CCUG_13788/quast.log
+
+CWD: /mnt/c/meta
+Main parameters: 
+  MODE: meta, threads: 1, minimum contig length: 500, minimum alignment length: 65, ambiguity: one, \
+  threshold for extensive misassembly size: 1000
+
+Reference:
+  /mnt/c/meta/result/megahit/metaquast/quast_corrected_input/Haemophilus_sputorum_CCUG_13788.fasta ==> Haemophilus_sputorum_CCUG_13788
+
+Contigs:
+  Pre-processing...
+  /mnt/c/meta/result/megahit/metaquast/quast_corrected_input/final-contigs_to_Haemophilus_sputorum_CCUG_13788.fasta ==> final.contigs
+
+2021-08-09 00:11:50
+Running Basic statistics processor...
+  Reference genome:
+    Haemophilus_sputorum_CCUG_13788.fasta, length = 2143543, num fragments = 87, GC % = 39.72
+WARNING:   Reference genome is fragmented. You may consider rerunning QUAST using --fragmented option. QUAST will try to detect misassemblies caused by the fragmentation and mark them fake (will be excluded from # misassemblies).
+  Contig files: 
+    final.contigs
+  Calculating N50 and L50...
+    final.contigs, N50 = 799, L50 = 1, Total length = 1345, GC % = 51.60, # N's per 100 kbp =  0.00
+  Drawing Nx plot...
+    saved to /mnt/c/meta/result/megahit/metaquast/runs_per_reference/Haemophilus_sputorum_CCUG_13788/basic_stats/Nx_plot.pdf
+  Drawing NGx plot...
+    saved to /mnt/c/meta/result/megahit/metaquast/runs_per_reference/Haemophilus_sputorum_CCUG_13788/basic_stats/NGx_plot.pdf
+  Drawing cumulative plot...
+    saved to /mnt/c/meta/result/megahit/metaquast/runs_per_reference/Haemophilus_sputorum_CCUG_13788/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /mnt/c/meta/result/megahit/metaquast/runs_per_reference/Haemophilus_sputorum_CCUG_13788/basic_stats/GC_content_plot.pdf
+  Drawing final.contigs GC content plot...
+    saved to /mnt/c/meta/result/megahit/metaquast/runs_per_reference/Haemophilus_sputorum_CCUG_13788/basic_stats/final.contigs_GC_content_plot.pdf
+Done.
+
+2021-08-09 00:11:52
+Running Contig analyzer...
+  final.contigs
+  Logging to files /mnt/c/meta/result/megahit/metaquast/runs_per_reference/Haemophilus_sputorum_CCUG_13788/contigs_reports/contigs_report_final-contigs.stdout and contigs_report_final-contigs.stderr...
+  Aligning contigs to the reference
+  /home/yongxin/miniconda2/envs/meta/bin/minimap2 -c -x asm5 -B5 -O4,16 --no-long-join \
+  -r 85 -N 50 -s 65 -z 200 --mask-level 0.9 --min-occ 200 -g 2500 --score-N 2 --cs \
+  -t 1 result/megahit/metaquast/quast_corrected_input/Haemophilus_sputorum_CCUG_13788.fasta \
+  result/megahit/metaquast/quast_corrected_input/final-contigs_to_Haemophilus_sputorum_CCUG_13788.fasta \
+  > result/megahit/metaquast/runs_per_reference/Haemophilus_sputorum_CCUG_13788/contigs_reports/minimap_output/final-contigs.coords_tmp \
+  2>> result/megahit/metaquast/runs_per_reference/Haemophilus_sputorum_CCUG_13788/contigs_reports/contigs_report_final-contigs.stderr
+  Analysis is finished.
+
+  Creating total report...
+    saved to /mnt/c/meta/result/megahit/metaquast/runs_per_reference/Haemophilus_sputorum_CCUG_13788/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+  Transposed version of total report...
+    saved to /mnt/c/meta/result/megahit/metaquast/runs_per_reference/Haemophilus_sputorum_CCUG_13788/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
+  Creating total report...
+    saved to /mnt/c/meta/result/megahit/metaquast/runs_per_reference/Haemophilus_sputorum_CCUG_13788/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+  Drawing misassemblies by types plot...
+    saved to /mnt/c/meta/result/megahit/metaquast/runs_per_reference/Haemophilus_sputorum_CCUG_13788/contigs_reports/misassemblies_plot.pdf
+  Drawing misassemblies FRCurve plot...
+    saved to /mnt/c/meta/result/megahit/metaquast/runs_per_reference/Haemophilus_sputorum_CCUG_13788/contigs_reports/misassemblies_frcurve_plot.pdf
+Done.
+
+2021-08-09 00:11:52
+Running NA-NGA calculation...
+  final.contigs, Largest alignment = 701, NA50 = 701, LA50 = 1
+  Drawing cumulative plot...
+    saved to /mnt/c/meta/result/megahit/metaquast/runs_per_reference/Haemophilus_sputorum_CCUG_13788/aligned_stats/cumulative_plot.pdf
+  Drawing NAx plot...
+    saved to /mnt/c/meta/result/megahit/metaquast/runs_per_reference/Haemophilus_sputorum_CCUG_13788/aligned_stats/NAx_plot.pdf
+  Drawing NGAx plot...
+    saved to /mnt/c/meta/result/megahit/metaquast/runs_per_reference/Haemophilus_sputorum_CCUG_13788/aligned_stats/NGAx_plot.pdf
+Done.
+
+2021-08-09 00:11:53
+Running Genome analyzer...
+  NOTICE: No file with genomic features were provided. Use the --features option if you want to specify it.
+
+  NOTICE: No file with operons were provided. Use the -O option if you want to specify it.
+  final.contigs
+  Analysis is finished.
+  Skipping drawing Genome fraction, % histogram... (less than 2 columns histogram makes no sense)
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding or --glimmer option to enable it.
+
+2021-08-09 00:11:53
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating Icarus viewers...
+  2 of 2: Creating PDF with all tables and plots...
+Done
+
+2021-08-09 00:11:54
+RESULTS:
+  Text versions of total report are saved to /mnt/c/meta/result/megahit/metaquast/runs_per_reference/Haemophilus_sputorum_CCUG_13788/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /mnt/c/meta/result/megahit/metaquast/runs_per_reference/Haemophilus_sputorum_CCUG_13788/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /mnt/c/meta/result/megahit/metaquast/runs_per_reference/Haemophilus_sputorum_CCUG_13788/report.html
+  PDF version (tables and plots) is saved to /mnt/c/meta/result/megahit/metaquast/runs_per_reference/Haemophilus_sputorum_CCUG_13788/report.pdf
+  Icarus (contig browser) is saved to /mnt/c/meta/result/megahit/metaquast/runs_per_reference/Haemophilus_sputorum_CCUG_13788/icarus.html

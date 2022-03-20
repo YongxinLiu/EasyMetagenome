@@ -1,0 +1,79 @@
+Aligning contigs to reference...
+	Aligning contigs to the reference
+Filtering alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669419.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669420.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669421.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669422.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669423.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669424.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669425.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669426.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669427.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669428.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669429.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669430.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669431.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669432.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669433.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669434.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669435.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669436.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669437.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669438.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669439.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669440.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669441.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669442.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669443.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669444.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669445.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669446.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669447.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669448.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669449.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669450.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669451.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669452.1]
+	Loaded [Prevotella_nigrescens_CC14M_NZ_KI669453.1]
+	Total Regions: 35
+	Total Region Length: 2986732
+Analyzing contigs...
+CONTIG: k119_352 (543bp)
+Best alignment score: 540.0 (LEN: 543, IDY: 99.45), Total number of alignments: 1
+		One align captures most of this contig: 115194 115736 | 1 543 | 543 543 | 99.45 | Prevotella_nigrescens_CC14M_NZ_KI669448.1 k119_352
+
+Analyzing coverage...
+Writing SNPs into /mnt/c/meta/result/megahit/metaquast/runs_per_reference/Prevotella_nigrescens_CC14M/contigs_reports/minimap_output/final-contigs.used_snps.gz
+
+Analysis is finished!
+Founded SNPs were written into /mnt/c/meta/result/megahit/metaquast/runs_per_reference/Prevotella_nigrescens_CC14M/contigs_reports/minimap_output/final-contigs.used_snps.gz
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Scaffold gap extensive misassemblies: 0
+	Scaffold gap local misassemblies: 0
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Unaligned Contigs: 0 + 0 part
+Half Unaligned Contigs with Misassemblies: 0
+Unaligned Contig Bases: 0
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Extra Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each of these contigs was used.
+
+	Covered Bases: 543
+
+	SNPs: 3
+	Insertions: 0
+	Deletions: 0
+

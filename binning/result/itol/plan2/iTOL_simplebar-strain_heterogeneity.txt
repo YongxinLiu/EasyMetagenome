@@ -1,0 +1,20 @@
+DATASET_SIMPLEBAR
+SEPARATOR TAB
+COLOR	#000000
+DATASET_LABEL	strain_heterogeneity
+LEGEND_COLORS	#000000
+LEGEND_LABELS	Min. (0.0), Max. (100.0)
+LEGEND_SHAPES	1
+LEGEND_TITLE	strain heterogeneity
+MARGIN	5
+WIDTH	200
+DATA
+mix_all.9	50
+s_ERR011348.2	0
+mix_all.4	66.67
+mix_all.5	50
+s_ERR011349.1	0
+mix_all.8	50
+mix_all.2	100
+mix_all.10	21.43
+mix_all.6	50

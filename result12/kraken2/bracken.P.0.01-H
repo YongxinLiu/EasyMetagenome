@@ -1,0 +1,26 @@
+Taxonomy	C1	C2	C3	C4	C5	C6	N1	N2	N3	N4	N5	N6
+Actinobacteria	54	498	203	1283	23	219	559	4011	2955	1535	8374	2435
+Apicomplexa	5	168	198	47	2	4	50	151	11	10	4	2
+Bacteroidetes	10746	927	1237	735	5684	18841	6014	1713	535	491	1056	5569
+Candidatus Omnitrophica	0	0	1	0	0	0	0	0	0	0	0	0
+Candidatus Saccharibacteria	0	0	0	0	0	1	13	1	0	1	4	18
+Chlorobi	0	0	0	1	0	0	0	0	0	0	0	0
+Chloroflexi	1	0	0	0	0	0	0	1	0	0	0	1
+Crenarchaeota	0	0	0	0	0	0	0	0	0	0	0	1
+Cyanobacteria	2	1	1	3	1	2	0	1	0	2	1	0
+Deferribacteres	0	0	0	0	0	0	0	0	0	0	0	1
+Deinococcus-Thermus	2	0	0	0	0	0	1	0	0	0	0	0
+Euryarchaeota	0	1	0	1	3	0	0	0	0	0	0	1
+Fibrobacteres	0	0	0	0	1	0	0	0	0	0	0	0
+Firmicutes	2541	1284	2435	5328	1436	6558	7412	3390	10777	9719	6010	7417
+Fusobacteria	10384	202	3871	3425	11321	1867	2586	395	2174	2720	2057	4344
+Ignavibacteriae	0	0	0	0	1	0	0	0	0	0	0	0
+Peploviricota	0	0	0	0	0	0	0	0	0	1	0	0
+Planctomycetes	0	0	1	0	2	0	0	0	0	0	0	0
+Proteobacteria	1291	7447	3876	13697	5583	4852	2523	3294	10430	17790	12508	5643
+Spirochaetes	2	4	7	7	3	79	53	9	2	1	1	854
+Streptophyta	39	138	132	32	42	20	79	92	32	25	13	24
+Tenericutes	4	1	3	1	1	2	16	0	2	0	7	19
+Thermotogae	1	0	0	0	1	1	0	0	0	0	1	0
+Uroviricota	2	4	65	0	3	2	46	0	47	8	2	3
+Verrucomicrobia	0	0	0	0	0	0	0	0	0	0	0	1

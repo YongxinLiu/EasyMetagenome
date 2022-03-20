@@ -1,0 +1,48 @@
+reference chromosomes:
+	Prevotella_nigrescens_CC14M_NZ_KI669419.1 (total length: 281626 bp, total length without N's: 278329 bp, maximal covered length: 0 bp)
+	Prevotella_nigrescens_CC14M_NZ_KI669420.1 (total length: 121094 bp, total length without N's: 118009 bp, maximal covered length: 0 bp)
+	Prevotella_nigrescens_CC14M_NZ_KI669421.1 (total length: 99665 bp, total length without N's: 97780 bp, maximal covered length: 0 bp)
+	Prevotella_nigrescens_CC14M_NZ_KI669422.1 (total length: 76507 bp, total length without N's: 76507 bp, maximal covered length: 0 bp)
+	Prevotella_nigrescens_CC14M_NZ_KI669423.1 (total length: 77749 bp, total length without N's: 77749 bp, maximal covered length: 0 bp)
+	Prevotella_nigrescens_CC14M_NZ_KI669424.1 (total length: 70305 bp, total length without N's: 70305 bp, maximal covered length: 0 bp)
+	Prevotella_nigrescens_CC14M_NZ_KI669425.1 (total length: 69164 bp, total length without N's: 69164 bp, maximal covered length: 0 bp)
+	Prevotella_nigrescens_CC14M_NZ_KI669426.1 (total length: 66429 bp, total length without N's: 66429 bp, maximal covered length: 0 bp)
+	Prevotella_nigrescens_CC14M_NZ_KI669427.1 (total length: 59567 bp, total length without N's: 59567 bp, maximal covered length: 0 bp)
+	Prevotella_nigrescens_CC14M_NZ_KI669428.1 (total length: 54469 bp, total length without N's: 54469 bp, maximal covered length: 0 bp)
+	Prevotella_nigrescens_CC14M_NZ_KI669429.1 (total length: 46188 bp, total length without N's: 44528 bp, maximal covered length: 0 bp)
+	Prevotella_nigrescens_CC14M_NZ_KI669430.1 (total length: 268064 bp, total length without N's: 267714 bp, maximal covered length: 0 bp)
+	Prevotella_nigrescens_CC14M_NZ_KI669431.1 (total length: 40440 bp, total length without N's: 40440 bp, maximal covered length: 0 bp)
+	Prevotella_nigrescens_CC14M_NZ_KI669432.1 (total length: 35343 bp, total length without N's: 35343 bp, maximal covered length: 0 bp)
+	Prevotella_nigrescens_CC14M_NZ_KI669433.1 (total length: 25475 bp, total length without N's: 25475 bp, maximal covered length: 0 bp)
+	Prevotella_nigrescens_CC14M_NZ_KI669434.1 (total length: 25437 bp, total length without N's: 25437 bp, maximal covered length: 0 bp)
+	Prevotella_nigrescens_CC14M_NZ_KI669435.1 (total length: 23764 bp, total length without N's: 22499 bp, maximal covered length: 0 bp)
+	Prevotella_nigrescens_CC14M_NZ_KI669436.1 (total length: 17640 bp, total length without N's: 17640 bp, maximal covered length: 0 bp)
+	Prevotella_nigrescens_CC14M_NZ_KI669437.1 (total length: 21001 bp, total length without N's: 20991 bp, maximal covered length: 0 bp)
+	Prevotella_nigrescens_CC14M_NZ_KI669438.1 (total length: 15546 bp, total length without N's: 15546 bp, maximal covered length: 0 bp)
+	Prevotella_nigrescens_CC14M_NZ_KI669439.1 (total length: 13627 bp, total length without N's: 13627 bp, maximal covered length: 0 bp)
+	Prevotella_nigrescens_CC14M_NZ_KI669440.1 (total length: 10198 bp, total length without N's: 10198 bp, maximal covered length: 0 bp)
+	Prevotella_nigrescens_CC14M_NZ_KI669441.1 (total length: 261247 bp, total length without N's: 259972 bp, maximal covered length: 0 bp)
+	Prevotella_nigrescens_CC14M_NZ_KI669442.1 (total length: 8978 bp, total length without N's: 8978 bp, maximal covered length: 0 bp)
+	Prevotella_nigrescens_CC14M_NZ_KI669443.1 (total length: 8265 bp, total length without N's: 8265 bp, maximal covered length: 0 bp)
+	Prevotella_nigrescens_CC14M_NZ_KI669444.1 (total length: 6478 bp, total length without N's: 6478 bp, maximal covered length: 0 bp)
+	Prevotella_nigrescens_CC14M_NZ_KI669445.1 (total length: 4287 bp, total length without N's: 4287 bp, maximal covered length: 0 bp)
+	Prevotella_nigrescens_CC14M_NZ_KI669446.1 (total length: 4280 bp, total length without N's: 4280 bp, maximal covered length: 0 bp)
+	Prevotella_nigrescens_CC14M_NZ_KI669447.1 (total length: 2657 bp, total length without N's: 2657 bp, maximal covered length: 0 bp)
+	Prevotella_nigrescens_CC14M_NZ_KI669448.1 (total length: 259754 bp, total length without N's: 258679 bp, maximal covered length: 543 bp)
+	Prevotella_nigrescens_CC14M_NZ_KI669449.1 (total length: 259494 bp, total length without N's: 257709 bp, maximal covered length: 0 bp)
+	Prevotella_nigrescens_CC14M_NZ_KI669450.1 (total length: 223095 bp, total length without N's: 220495 bp, maximal covered length: 0 bp)
+	Prevotella_nigrescens_CC14M_NZ_KI669451.1 (total length: 162361 bp, total length without N's: 160921 bp, maximal covered length: 0 bp)
+	Prevotella_nigrescens_CC14M_NZ_KI669452.1 (total length: 139090 bp, total length without N's: 137816 bp, maximal covered length: 0 bp)
+	Prevotella_nigrescens_CC14M_NZ_KI669453.1 (total length: 127448 bp, total length without N's: 127448 bp, maximal covered length: 0 bp)
+
+total genome size: 2986732
+
+gap min size: 50
+partial gene/operon min size: 100
+
+
+
+assembly                 | genome    | duplication | gaps      | genes     | partial   | operons   | partial   |
+                         | fraction  | ratio       | number    |           | genes     |           | operons   |
+========================================================================================================================
+final-contigs_to_Prevote | 0.018     | 1.000       | 60        | -         | -         | -         | -         |

@@ -1,0 +1,21 @@
+DATASET_COLORSTRIP
+SEPARATOR TAB
+BORDER_WIDTH	0.5
+COLOR	#bebada
+DATASET_LABEL	Family
+LEGEND_COLORS	#a6cee3	#1f78b4	#b2df8a	#33a02c	#fb9a99	#e31a1c	#fdbf6f
+LEGEND_LABELS	f__Acidaminococcaceae	f__Acutalibacteraceae	f__Bacteroidaceae	f__CAG-465	f__CAG-508	f__Erysipelatoclostridiaceae	f__Lachnospiraceae
+LEGEND_SHAPES	1	1	1	1	1	1	1
+LEGEND_TITLE	Family
+MARGIN	5
+STRIP_WIDTH	25
+DATA
+mix_all.9	#e31a1c	f__Erysipelatoclostridiaceae
+s_ERR011348.2	#1f78b4	f__Acutalibacteraceae
+mix_all.4	#1f78b4	f__Acutalibacteraceae
+mix_all.5	#1f78b4	f__Acutalibacteraceae
+s_ERR011349.1	#fb9a99	f__CAG-508
+mix_all.8	#33a02c	f__CAG-465
+mix_all.2	#fdbf6f	f__Lachnospiraceae
+mix_all.10	#a6cee3	f__Acidaminococcaceae
+mix_all.6	#b2df8a	f__Bacteroidaceae

@@ -1,0 +1,5 @@
+S1	E1	S2	E2	Reference	Contig	IDY	Ambiguous	Best_group
+200	900	764	64	Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000029.1	k119_976	95.58		True
+CONTIG	k119_976	799	correct
+526	1071	1	546	Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000005.1	k119_1002	100.0		True
+CONTIG	k119_1002	546	correct

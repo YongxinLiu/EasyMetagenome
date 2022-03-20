@@ -1,0 +1,149 @@
+# Pathway	C1_Abundance
+UNMAPPED	21084.3661380067
+UNINTEGRATED	19814.7073111346
+UNINTEGRATED|g__Fusobacterium.s__Fusobacterium_nucleatum	7339.5447075977
+UNINTEGRATED|unclassified	3691.6646259107
+UNINTEGRATED|g__Prevotella.s__Prevotella_nigrescens	2118.7010609843
+UNINTEGRATED|g__Alloprevotella.s__Alloprevotella_tannerae	1339.0203591075
+UNINTEGRATED|g__Gemella.s__Gemella_morbillorum	1148.0056469133
+UNINTEGRATED|g__Campylobacter.s__Campylobacter_showae	953.4447480972
+UNINTEGRATED|g__Eikenella.s__Eikenella_corrodens	757.5409521576
+UNINTEGRATED|g__Solobacterium.s__Solobacterium_moorei	676.3061081518
+PWY-7219: adenosine ribonucleotides de novo biosynthesis	34.6526269345
+PWY-7219: adenosine ribonucleotides de novo biosynthesis|g__Fusobacterium.s__Fusobacterium_nucleatum	20.7080431952
+PWY-7219: adenosine ribonucleotides de novo biosynthesis|g__Prevotella.s__Prevotella_nigrescens	3.7836988774
+PWY-7219: adenosine ribonucleotides de novo biosynthesis|g__Alloprevotella.s__Alloprevotella_tannerae	2.4615685446
+PWY-7219: adenosine ribonucleotides de novo biosynthesis|g__Gemella.s__Gemella_morbillorum	2.2160332943
+PWY-6122: 5-aminoimidazole ribonucleotide biosynthesis II	29.9424927405
+PWY-6122: 5-aminoimidazole ribonucleotide biosynthesis II|g__Fusobacterium.s__Fusobacterium_nucleatum	9.4607011705
+PWY-6122: 5-aminoimidazole ribonucleotide biosynthesis II|g__Gemella.s__Gemella_morbillorum	3.3598025351
+PWY-6122: 5-aminoimidazole ribonucleotide biosynthesis II|g__Campylobacter.s__Campylobacter_showae	2.6828074762
+PWY-6122: 5-aminoimidazole ribonucleotide biosynthesis II|g__Eikenella.s__Eikenella_corrodens	1.3633188242
+PWY-6277: superpathway of 5-aminoimidazole ribonucleotide biosynthesis	29.9424927405
+PWY-6277: superpathway of 5-aminoimidazole ribonucleotide biosynthesis|g__Fusobacterium.s__Fusobacterium_nucleatum	9.4607011705
+PWY-6277: superpathway of 5-aminoimidazole ribonucleotide biosynthesis|g__Gemella.s__Gemella_morbillorum	3.3598025351
+PWY-6277: superpathway of 5-aminoimidazole ribonucleotide biosynthesis|g__Campylobacter.s__Campylobacter_showae	2.6828074762
+PWY-6277: superpathway of 5-aminoimidazole ribonucleotide biosynthesis|g__Eikenella.s__Eikenella_corrodens	1.3633188242
+PWY-5686: UMP biosynthesis	28.8182195774
+PWY-5686: UMP biosynthesis|g__Fusobacterium.s__Fusobacterium_nucleatum	13.7276559765
+DTDPRHAMSYN-PWY: dTDP-L-rhamnose biosynthesis I	26.8127441140
+DTDPRHAMSYN-PWY: dTDP-L-rhamnose biosynthesis I|g__Fusobacterium.s__Fusobacterium_nucleatum	12.0770337743
+DTDPRHAMSYN-PWY: dTDP-L-rhamnose biosynthesis I|unclassified	8.4856170855
+DTDPRHAMSYN-PWY: dTDP-L-rhamnose biosynthesis I|g__Prevotella.s__Prevotella_nigrescens	3.1747125392
+PWY-6163: chorismate biosynthesis from 3-dehydroquinate	25.8507938700
+PWY-6163: chorismate biosynthesis from 3-dehydroquinate|g__Fusobacterium.s__Fusobacterium_nucleatum	15.7040234908
+PWY-6121: 5-aminoimidazole ribonucleotide biosynthesis I	25.6954432395
+PWY-6121: 5-aminoimidazole ribonucleotide biosynthesis I|g__Fusobacterium.s__Fusobacterium_nucleatum	9.2201484874
+PWY-6121: 5-aminoimidazole ribonucleotide biosynthesis I|g__Gemella.s__Gemella_morbillorum	3.5111221442
+PWY-6121: 5-aminoimidazole ribonucleotide biosynthesis I|g__Campylobacter.s__Campylobacter_showae	2.2411131430
+TRNA-CHARGING-PWY: tRNA charging	24.7441532358
+TRNA-CHARGING-PWY: tRNA charging|g__Fusobacterium.s__Fusobacterium_nucleatum	13.3729602896
+PWY-6386: UDP-N-acetylmuramoyl-pentapeptide biosynthesis II (lysine-containing)	24.7131640413
+PWY-6386: UDP-N-acetylmuramoyl-pentapeptide biosynthesis II (lysine-containing)|g__Fusobacterium.s__Fusobacterium_nucleatum	2.4377626077
+PWY-6387: UDP-N-acetylmuramoyl-pentapeptide biosynthesis I (meso-diaminopimelate containing)	24.6566582792
+PWY-6387: UDP-N-acetylmuramoyl-pentapeptide biosynthesis I (meso-diaminopimelate containing)|g__Fusobacterium.s__Fusobacterium_nucleatum	13.2707906303
+PEPTIDOGLYCANSYN-PWY: peptidoglycan biosynthesis I (meso-diaminopimelate containing)	24.5697936933
+PEPTIDOGLYCANSYN-PWY: peptidoglycan biosynthesis I (meso-diaminopimelate containing)|g__Fusobacterium.s__Fusobacterium_nucleatum	13.1264320513
+PWY-6151: S-adenosyl-L-methionine cycle I	24.2431719892
+PWY-6151: S-adenosyl-L-methionine cycle I|g__Fusobacterium.s__Fusobacterium_nucleatum	13.6823150181
+PWY-5103: L-isoleucine biosynthesis III	23.5996575921
+PWY-5103: L-isoleucine biosynthesis III|g__Fusobacterium.s__Fusobacterium_nucleatum	21.0304513648
+ILEUSYN-PWY: L-isoleucine biosynthesis I (from threonine)	22.7630069248
+ILEUSYN-PWY: L-isoleucine biosynthesis I (from threonine)|g__Fusobacterium.s__Fusobacterium_nucleatum	20.9002852255
+VALSYN-PWY: L-valine biosynthesis	22.7630069248
+VALSYN-PWY: L-valine biosynthesis|g__Fusobacterium.s__Fusobacterium_nucleatum	20.9002852255
+VALSYN-PWY: L-valine biosynthesis|g__Campylobacter.s__Campylobacter_showae	1.4036319366
+OANTIGEN-PWY: O-antigen building blocks biosynthesis (E. coli)	22.3484406483
+OANTIGEN-PWY: O-antigen building blocks biosynthesis (E. coli)|g__Fusobacterium.s__Fusobacterium_nucleatum	6.6247902296
+ANAGLYCOLYSIS-PWY: glycolysis III (from glucose)	22.3299610530
+ANAGLYCOLYSIS-PWY: glycolysis III (from glucose)|g__Fusobacterium.s__Fusobacterium_nucleatum	9.2607997005
+PWY-5100: pyruvate fermentation to acetate and lactate II	22.1425556256
+PWY-1042: glycolysis IV (plant cytosol)	22.0957886600
+UDPNAGSYN-PWY: UDP-N-acetyl-D-glucosamine biosynthesis I	21.5086675083
+UDPNAGSYN-PWY: UDP-N-acetyl-D-glucosamine biosynthesis I|g__Fusobacterium.s__Fusobacterium_nucleatum	17.9427091296
+PWY-5188: tetrapyrrole biosynthesis I (from glutamate)	21.4877988974
+PWY-5188: tetrapyrrole biosynthesis I (from glutamate)|g__Fusobacterium.s__Fusobacterium_nucleatum	15.6662316169
+NONMEVIPP-PWY: methylerythritol phosphate pathway I	21.1222692661
+NONMEVIPP-PWY: methylerythritol phosphate pathway I|g__Fusobacterium.s__Fusobacterium_nucleatum	11.9145696268
+CALVIN-PWY: Calvin-Benson-Bassham cycle	20.9120053627
+CALVIN-PWY: Calvin-Benson-Bassham cycle|g__Fusobacterium.s__Fusobacterium_nucleatum	13.5795900792
+PWY-6385: peptidoglycan biosynthesis III (mycobacteria)	20.7803205959
+PWY-6385: peptidoglycan biosynthesis III (mycobacteria)|g__Fusobacterium.s__Fusobacterium_nucleatum	2.4957820646
+BRANCHED-CHAIN-AA-SYN-PWY: superpathway of branched amino acid biosynthesis	20.2234948432
+BRANCHED-CHAIN-AA-SYN-PWY: superpathway of branched amino acid biosynthesis|g__Fusobacterium.s__Fusobacterium_nucleatum	17.8912432536
+PWY-6124: inosine-5'-phosphate biosynthesis II	20.0613962960
+PWY-6124: inosine-5'-phosphate biosynthesis II|g__Fusobacterium.s__Fusobacterium_nucleatum	15.7010982475
+PWY-7663: gondoate biosynthesis (anaerobic)	19.6888374247
+PWY-7663: gondoate biosynthesis (anaerobic)|g__Fusobacterium.s__Fusobacterium_nucleatum	9.2718748284
+PWY-7663: gondoate biosynthesis (anaerobic)|g__Prevotella.s__Prevotella_nigrescens	6.3946602804
+ANAEROFRUCAT-PWY: homolactic fermentation	18.9430293222
+PWY-7111: pyruvate fermentation to isobutanol (engineered)	17.8902982555
+PWY-7111: pyruvate fermentation to isobutanol (engineered)|g__Fusobacterium.s__Fusobacterium_nucleatum	13.8415060467
+PWY-7111: pyruvate fermentation to isobutanol (engineered)|g__Campylobacter.s__Campylobacter_showae	1.5631106871
+PWY-6123: inosine-5'-phosphate biosynthesis I	17.6021704967
+PWY-3001: superpathway of L-isoleucine biosynthesis I	17.3091166139
+PWY66-422: D-galactose degradation V (Leloir pathway)	17.0233034563
+PWY66-422: D-galactose degradation V (Leloir pathway)|g__Fusobacterium.s__Fusobacterium_nucleatum	15.8068916568
+COA-PWY-1: coenzyme A biosynthesis II (mammalian)	16.9945597445
+COA-PWY-1: coenzyme A biosynthesis II (mammalian)|g__Fusobacterium.s__Fusobacterium_nucleatum	10.4623615603
+COA-PWY-1: coenzyme A biosynthesis II (mammalian)|g__Alloprevotella.s__Alloprevotella_tannerae	4.0049320646
+GLYCOLYSIS: glycolysis I (from glucose 6-phosphate)	16.7868423963
+PWY-7199: pyrimidine deoxyribonucleosides salvage	16.6434683373
+PWY-6737: starch degradation V	16.2667605462
+PWY-6737: starch degradation V|g__Fusobacterium.s__Fusobacterium_nucleatum	13.6936753747
+THRESYN-PWY: superpathway of L-threonine biosynthesis	16.2162705528
+GLYCOGENSYNTH-PWY: glycogen biosynthesis I (from ADP-D-Glucose)	16.1822886310
+GLYCOGENSYNTH-PWY: glycogen biosynthesis I (from ADP-D-Glucose)|g__Fusobacterium.s__Fusobacterium_nucleatum	12.6860117282
+PWY-6897: thiamin salvage II	15.8771106198
+PWY-6317: galactose degradation I (Leloir pathway)	15.8745876182
+PWY-5659: GDP-mannose biosynthesis	15.7977790935
+PWY-5484: glycolysis II (from fructose 6-phosphate)	15.7665328843
+PWY-7357: thiamin formation from pyrithiamine and oxythiamine (yeast)	15.3219050373
+PWY-7357: thiamin formation from pyrithiamine and oxythiamine (yeast)|g__Fusobacterium.s__Fusobacterium_nucleatum	9.1148485378
+HISDEG-PWY: L-histidine degradation I	14.2763911986
+HISDEG-PWY: L-histidine degradation I|g__Fusobacterium.s__Fusobacterium_nucleatum	13.6659129407
+PWY-4242: pantothenate and coenzyme A biosynthesis III	14.0698368987
+PWY-4242: pantothenate and coenzyme A biosynthesis III|g__Fusobacterium.s__Fusobacterium_nucleatum	7.7288442351
+PYRIDNUCSYN-PWY: NAD biosynthesis I (from aspartate)	14.0529481168
+SER-GLYSYN-PWY: superpathway of L-serine and glycine biosynthesis I	14.0030893979
+SER-GLYSYN-PWY: superpathway of L-serine and glycine biosynthesis I|g__Prevotella.s__Prevotella_nigrescens	2.9597319880
+SER-GLYSYN-PWY: superpathway of L-serine and glycine biosynthesis I|g__Campylobacter.s__Campylobacter_showae	1.1371712864
+COA-PWY: coenzyme A biosynthesis I	13.9150988827
+COA-PWY: coenzyme A biosynthesis I|g__Fusobacterium.s__Fusobacterium_nucleatum	8.5911863120
+COA-PWY: coenzyme A biosynthesis I|g__Alloprevotella.s__Alloprevotella_tannerae	3.1745680470
+P163-PWY: L-lysine fermentation to acetate and butanoate	13.5823855352
+P163-PWY: L-lysine fermentation to acetate and butanoate|g__Fusobacterium.s__Fusobacterium_nucleatum	13.5823855352
+PWY-5973: cis-vaccenate biosynthesis	13.5751579189
+NONOXIPENT-PWY: pentose phosphate pathway (non-oxidative branch)	13.5308672348
+PWY-2942: L-lysine biosynthesis III	12.7786648397
+PWY-7234: inosine-5'-phosphate biosynthesis III	11.2769333447
+PWY-7221: guanosine ribonucleotides de novo biosynthesis	11.1392411964
+PWY-7221: guanosine ribonucleotides de novo biosynthesis|g__Gemella.s__Gemella_morbillorum	2.3776894883
+PWY-6609: adenine and adenosine salvage III	10.9996513297
+PWY-6609: adenine and adenosine salvage III|g__Solobacterium.s__Solobacterium_moorei	3.2111523533
+PWY-724: superpathway of L-lysine, L-threonine and L-methionine biosynthesis II	10.8881200121
+PWY-5695: urate biosynthesis/inosine 5'-phosphate degradation	10.3109216515
+PWY-7229: superpathway of adenosine nucleotides de novo biosynthesis I	10.1675788329
+PWY-5097: L-lysine biosynthesis VI	9.3375743979
+PWY-6126: superpathway of adenosine nucleotides de novo biosynthesis II	6.7328424116
+THISYNARA-PWY: superpathway of thiamin diphosphate biosynthesis III (eukaryotes)	6.2629326034
+THISYNARA-PWY: superpathway of thiamin diphosphate biosynthesis III (eukaryotes)|g__Fusobacterium.s__Fusobacterium_nucleatum	5.6505087264
+PWY-7013: L-1,2-propanediol degradation	5.5300471297
+PWY-7013: L-1,2-propanediol degradation|g__Fusobacterium.s__Fusobacterium_nucleatum	3.6182722750
+DAPLYSINESYN-PWY: L-lysine biosynthesis I	5.0758047680
+PWY-6703: preQ0 biosynthesis	4.4405157901
+PWY-7282: 4-amino-2-methyl-5-phosphomethylpyrimidine biosynthesis (yeast)	4.4259569741
+PWY-3841: folate transformations II	4.1229537286
+1CMET2-PWY: N10-formyl-tetrahydrofolate biosynthesis	3.7050404209
+PWY-5030: L-histidine degradation III	3.5181215981
+PWY-5030: L-histidine degradation III|g__Fusobacterium.s__Fusobacterium_nucleatum	3.3236523693
+PWY-7220: adenosine deoxyribonucleotides de novo biosynthesis II	3.2680665424
+PWY-7220: adenosine deoxyribonucleotides de novo biosynthesis II|g__Solobacterium.s__Solobacterium_moorei	1.2772334327
+PWY-7222: guanosine deoxyribonucleotides de novo biosynthesis II	3.2680665424
+PWY-7222: guanosine deoxyribonucleotides de novo biosynthesis II|g__Solobacterium.s__Solobacterium_moorei	1.2772334327
+PWY-6700: queuosine biosynthesis	3.1203685677
+PANTO-PWY: phosphopantothenate biosynthesis I	2.4358267522
+HSERMETANA-PWY: L-methionine biosynthesis III	1.8465664946
+HSERMETANA-PWY: L-methionine biosynthesis III|g__Campylobacter.s__Campylobacter_showae	1.5952674074
+PWY-6936: seleno-amino acid biosynthesis	1.7820508637
+ASPASN-PWY: superpathway of L-aspartate and L-asparagine biosynthesis	1.3972222074

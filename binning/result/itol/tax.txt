@@ -1,0 +1,10 @@
+ID	Kingdom	Phylum	Class	Order	Family	Genus	Species
+mix_all.9	d__Bacteria	p__Firmicutes	c__Bacilli	o__Erysipelotrichales	f__Erysipelatoclostridiaceae	g__Erysipelatoclostridium	s__Erysipelatoclostridium sp000752095
+s_ERR011348.2	d__Bacteria	p__Firmicutes_A	c__Clostridia	o__Oscillospirales	f__Acutalibacteraceae	g__Ruminococcus_E	s__Ruminococcus_E bromii_B
+mix_all.4	d__Bacteria	p__Firmicutes_A	c__Clostridia	o__Oscillospirales	f__Acutalibacteraceae	g__CAG-177	s__CAG-177 sp003514385
+mix_all.5	d__Bacteria	p__Firmicutes_A	c__Clostridia	o__Oscillospirales	f__Acutalibacteraceae	g__CAG-180	s__CAG-180 sp000432435
+s_ERR011349.1	d__Bacteria	p__Firmicutes_A	c__Clostridia	o__TANB77	f__CAG-508	g__CAG-273	s__CAG-273 sp000435755
+mix_all.8	d__Bacteria	p__Firmicutes_A	c__Clostridia	o__TANB77	f__CAG-465	g__CAG-465	s__CAG-465 sp000433755
+mix_all.2	d__Bacteria	p__Firmicutes_A	c__Clostridia	o__Lachnospirales	f__Lachnospiraceae	g__Butyrivibrio_A	s__Butyrivibrio_A crossotus
+mix_all.10	d__Bacteria	p__Firmicutes_C	c__Negativicutes	o__Acidaminococcales	f__Acidaminococcaceae	g__Phascolarctobacterium	s__Phascolarctobacterium faecium
+mix_all.6	d__Bacteria	p__Bacteroidota	c__Bacteroidia	o__Bacteroidales	f__Bacteroidaceae	g__Bacteroides	s__Bacteroides uniformis

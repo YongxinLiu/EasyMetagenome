@@ -1,0 +1,7 @@
+Sphingomonas_taxi_NZ_CP009571.1
+1 3893
+4215 3859099
+Sphingomonas_taxi_NZ_CP009572.1
+1 163311
+Sphingomonas_taxi_NZ_CP009573.1
+1 39492

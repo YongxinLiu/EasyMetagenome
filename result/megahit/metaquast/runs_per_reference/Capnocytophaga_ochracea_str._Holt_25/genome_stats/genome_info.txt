@@ -1,0 +1,55 @@
+reference chromosomes:
+	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000001.1 (total length: 110700 bp, total length without N's: 110700 bp, maximal covered length: 0 bp)
+	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000002.1 (total length: 114967 bp, total length without N's: 114967 bp, maximal covered length: 331 bp)
+	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000003.1 (total length: 199419 bp, total length without N's: 199419 bp, maximal covered length: 0 bp)
+	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000004.1 (total length: 25632 bp, total length without N's: 25632 bp, maximal covered length: 0 bp)
+	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000005.1 (total length: 55495 bp, total length without N's: 55495 bp, maximal covered length: 0 bp)
+	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000006.1 (total length: 8378 bp, total length without N's: 8378 bp, maximal covered length: 1022 bp)
+	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000007.1 (total length: 59060 bp, total length without N's: 59060 bp, maximal covered length: 0 bp)
+	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000008.1 (total length: 149895 bp, total length without N's: 149895 bp, maximal covered length: 0 bp)
+	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000009.1 (total length: 30947 bp, total length without N's: 30947 bp, maximal covered length: 0 bp)
+	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000010.1 (total length: 154946 bp, total length without N's: 154946 bp, maximal covered length: 0 bp)
+	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000011.1 (total length: 15092 bp, total length without N's: 15092 bp, maximal covered length: 821 bp)
+	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000012.1 (total length: 202194 bp, total length without N's: 202194 bp, maximal covered length: 522 bp)
+	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000013.1 (total length: 7610 bp, total length without N's: 7610 bp, maximal covered length: 0 bp)
+	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000014.1 (total length: 40242 bp, total length without N's: 40242 bp, maximal covered length: 854 bp)
+	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000015.1 (total length: 41408 bp, total length without N's: 41408 bp, maximal covered length: 0 bp)
+	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000016.1 (total length: 50870 bp, total length without N's: 50870 bp, maximal covered length: 0 bp)
+	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000017.1 (total length: 20507 bp, total length without N's: 20507 bp, maximal covered length: 0 bp)
+	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000018.1 (total length: 53674 bp, total length without N's: 53674 bp, maximal covered length: 0 bp)
+	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000019.1 (total length: 11787 bp, total length without N's: 11787 bp, maximal covered length: 0 bp)
+	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000020.1 (total length: 111916 bp, total length without N's: 111916 bp, maximal covered length: 0 bp)
+	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000021.1 (total length: 150377 bp, total length without N's: 150377 bp, maximal covered length: 0 bp)
+	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000022.1 (total length: 24903 bp, total length without N's: 24903 bp, maximal covered length: 0 bp)
+	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000023.1 (total length: 123849 bp, total length without N's: 123849 bp, maximal covered length: 0 bp)
+	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000024.1 (total length: 46854 bp, total length without N's: 46854 bp, maximal covered length: 0 bp)
+	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000025.1 (total length: 44801 bp, total length without N's: 44801 bp, maximal covered length: 0 bp)
+	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000026.1 (total length: 45649 bp, total length without N's: 45649 bp, maximal covered length: 0 bp)
+	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000027.1 (total length: 7950 bp, total length without N's: 7950 bp, maximal covered length: 0 bp)
+	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000028.1 (total length: 2439 bp, total length without N's: 2439 bp, maximal covered length: 0 bp)
+	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000029.1 (total length: 48052 bp, total length without N's: 48052 bp, maximal covered length: 0 bp)
+	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000030.1 (total length: 104078 bp, total length without N's: 104078 bp, maximal covered length: 0 bp)
+	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000031.1 (total length: 12014 bp, total length without N's: 12014 bp, maximal covered length: 0 bp)
+	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000032.1 (total length: 27953 bp, total length without N's: 27953 bp, maximal covered length: 0 bp)
+	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000033.1 (total length: 39399 bp, total length without N's: 39399 bp, maximal covered length: 0 bp)
+	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000034.1 (total length: 59549 bp, total length without N's: 59549 bp, maximal covered length: 0 bp)
+	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000035.1 (total length: 33721 bp, total length without N's: 33721 bp, maximal covered length: 0 bp)
+	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000036.1 (total length: 231723 bp, total length without N's: 231723 bp, maximal covered length: 0 bp)
+	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000037.1 (total length: 2009 bp, total length without N's: 2009 bp, maximal covered length: 0 bp)
+	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000038.1 (total length: 1907 bp, total length without N's: 1907 bp, maximal covered length: 0 bp)
+	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000039.1 (total length: 42599 bp, total length without N's: 42599 bp, maximal covered length: 0 bp)
+	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000040.1 (total length: 96639 bp, total length without N's: 96639 bp, maximal covered length: 0 bp)
+	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000041.1 (total length: 14064 bp, total length without N's: 14064 bp, maximal covered length: 0 bp)
+	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000042.1 (total length: 28489 bp, total length without N's: 28489 bp, maximal covered length: 0 bp)
+
+total genome size: 2653757
+
+gap min size: 50
+partial gene/operon min size: 100
+
+
+
+assembly                 | genome    | duplication | gaps      | genes     | partial   | operons   | partial   |
+                         | fraction  | ratio       | number    |           | genes     |           | operons   |
+========================================================================================================================
+final-contigs_to_Capnocy | 0.134     | 1.203       | 49        | -         | -         | -         | -         |

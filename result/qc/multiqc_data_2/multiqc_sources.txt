@@ -1,0 +1,5 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	seq | C1_1	/mnt/c/meta/seq/C1_1_fastqc.zip
+FastQC	all_sections	seq | C1_2	/mnt/c/meta/seq/C1_2_fastqc.zip
+FastQC	all_sections	seq | C2_1	/mnt/c/meta/seq/C2_1_fastqc.zip
+FastQC	all_sections	seq | C2_2	/mnt/c/meta/seq/C2_2_fastqc.zip

@@ -1,0 +1,25 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	seq | N6_2	/mnt/bai/yongxin/ehbio/train/2005meta/seq/N6_2_fastqc.zip
+FastQC	all_sections	seq | C6_1	/mnt/bai/yongxin/ehbio/train/2005meta/seq/C6_1_fastqc.zip
+FastQC	all_sections	seq | N1_1	/mnt/bai/yongxin/ehbio/train/2005meta/seq/N1_1_fastqc.zip
+FastQC	all_sections	seq | N4_1	/mnt/bai/yongxin/ehbio/train/2005meta/seq/N4_1_fastqc.zip
+FastQC	all_sections	seq | C3_1	/mnt/bai/yongxin/ehbio/train/2005meta/seq/C3_1_fastqc.zip
+FastQC	all_sections	seq | C5_2	/mnt/bai/yongxin/ehbio/train/2005meta/seq/C5_2_fastqc.zip
+FastQC	all_sections	seq | C4_1	/mnt/bai/yongxin/ehbio/train/2005meta/seq/C4_1_fastqc.zip
+FastQC	all_sections	seq | N2_1	/mnt/bai/yongxin/ehbio/train/2005meta/seq/N2_1_fastqc.zip
+FastQC	all_sections	seq | C2_2	/mnt/bai/yongxin/ehbio/train/2005meta/seq/C2_2_fastqc.zip
+FastQC	all_sections	seq | N5_1	/mnt/bai/yongxin/ehbio/train/2005meta/seq/N5_1_fastqc.zip
+FastQC	all_sections	seq | C4_2	/mnt/bai/yongxin/ehbio/train/2005meta/seq/C4_2_fastqc.zip
+FastQC	all_sections	seq | N3_2	/mnt/bai/yongxin/ehbio/train/2005meta/seq/N3_2_fastqc.zip
+FastQC	all_sections	seq | C1_1	/mnt/bai/yongxin/ehbio/train/2005meta/seq/C1_1_fastqc.zip
+FastQC	all_sections	seq | N6_1	/mnt/bai/yongxin/ehbio/train/2005meta/seq/N6_1_fastqc.zip
+FastQC	all_sections	seq | C5_1	/mnt/bai/yongxin/ehbio/train/2005meta/seq/C5_1_fastqc.zip
+FastQC	all_sections	seq | C1_2	/mnt/bai/yongxin/ehbio/train/2005meta/seq/C1_2_fastqc.zip
+FastQC	all_sections	seq | C3_2	/mnt/bai/yongxin/ehbio/train/2005meta/seq/C3_2_fastqc.zip
+FastQC	all_sections	seq | N3_1	/mnt/bai/yongxin/ehbio/train/2005meta/seq/N3_1_fastqc.zip
+FastQC	all_sections	seq | N4_2	/mnt/bai/yongxin/ehbio/train/2005meta/seq/N4_2_fastqc.zip
+FastQC	all_sections	seq | C6_2	/mnt/bai/yongxin/ehbio/train/2005meta/seq/C6_2_fastqc.zip
+FastQC	all_sections	seq | N1_2	/mnt/bai/yongxin/ehbio/train/2005meta/seq/N1_2_fastqc.zip
+FastQC	all_sections	seq | N5_2	/mnt/bai/yongxin/ehbio/train/2005meta/seq/N5_2_fastqc.zip
+FastQC	all_sections	seq | N2_2	/mnt/bai/yongxin/ehbio/train/2005meta/seq/N2_2_fastqc.zip
+FastQC	all_sections	seq | C2_1	/mnt/bai/yongxin/ehbio/train/2005meta/seq/C2_1_fastqc.zip

@@ -1,0 +1,141 @@
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000001.1
+1 283890
+284382 286724
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000002.1
+1 210284
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000003.1
+1 195369
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000004.1
+1 194241
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000005.1
+1 177176
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000006.1
+1 155916
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000007.1
+1 155118
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000008.1
+1 134983
+135336 154533
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000009.1
+1 130936
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000010.1
+19 120601
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000011.1
+1 86870
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000012.1
+1 85075
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000013.1
+1 52028
+52116 67324
+67999 78940
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000014.1
+1 78675
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000015.1
+1 78595
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000016.1
+1 68469
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000017.1
+1 59463
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000018.1
+1 51988
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000019.1
+1 51773
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000020.1
+1 45500
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000021.1
+1 38769
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000022.1
+1 24961
+24963 35212
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000023.1
+1 34183
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000024.1
+1 30403
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000025.1
+1 30324
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000026.1
+1 27584
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000027.1
+1 27536
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000028.1
+1 27071
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000029.1
+1 25276
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000030.1
+1 22858
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000031.1
+1 20859
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000032.1
+1 20112
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000033.1
+5 17936
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000034.1
+1 16313
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000035.1
+1 12120
+12630 14517
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000036.1
+1 14354
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000037.1
+1 13347
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000038.1
+1 2450
+2988 12439
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000039.1
+1 10530
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000040.1
+1 9793
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000041.1
+1 9013
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000042.1
+1 8792
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000043.1
+1 7281
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000044.1
+1 6108
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000045.1
+1 6009
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000046.1
+1 5749
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000047.1
+1 5613
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000048.1
+1 4401
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000049.1
+1 3972
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000050.1
+1 3846
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000051.1
+1 683
+1466 1966
+2821 3380
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000052.1
+1 3282
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000053.1
+1 2652
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000054.1
+1 303
+1027 1772
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000055.1
+1 1673
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000056.1
+1 1548
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000057.1
+1 1262
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000058.1
+1 1015
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000059.1
+1 811
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000060.1
+1 796
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000061.1
+1 378
+380 773
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000062.1
+1 724
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000063.1
+1 571
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000064.1
+1 570
+Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000065.1
+1 510

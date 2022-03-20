@@ -1,0 +1,13 @@
+Sample	reverse_only_surviving_pct	forward_only_surviving_pct	surviving	dropped	input_read_pairs	dropped_pct	forward_only_surviving	surviving_pct	reverse_only_surviving
+decompressed_2sNG6j_N1_1	2.2	8.1	60059.0	7215.0	75000.0	9.62	6078.0	80.08	1648.0
+decompressed_5j_q_v_N5_1	2.53	8.09	63270.0	3763.0	75000.0	5.02	6071.0	84.36	1896.0
+decompressed_6BnnUg_C3_1	2.27	9.39	49504.0	16748.0	75000.0	22.33	7044.0	66.01	1704.0
+decompressed_6dYQSn_N6_1	1.82	5.7	67139.0	2215.0	75000.0	2.95	4278.0	89.52	1368.0
+decompressed_GKa2Bx_N2_1	2.65	10.05	46195.0	19283.0	75000.0	25.71	7537.0	61.59	1985.0
+decompressed_IGjoBj_C2_1	11.43	2.97	47971.0	16227.0	75000.0	21.64	2227.0	63.96	8575.0
+decompressed_OZsEzE_C1_1	2.17	6.82	65243.0	3008.0	75000.0	4.01	5118.0	86.99	1631.0
+decompressed_QyHvZF_N3_1	2.44	8.67	62104.0	4560.0	75000.0	6.08	6506.0	82.81	1830.0
+decompressed_WI375b_N4_1	1.62	5.13	67807.0	2126.0	75000.0	2.83	3849.0	90.41	1218.0
+decompressed_alt1Jq_C5_1	10.31	2.66	62110.0	3164.0	75000.0	4.22	1997.0	82.81	7729.0
+decompressed_cYQQrC_C4_1	2.44	8.16	60685.0	6367.0	75000.0	8.49	6121.0	80.91	1827.0
+decompressed_chSNQP_C6_1	2.23	7.22	65249.0	2667.0	75000.0	3.56	5412.0	87.0	1672.0

@@ -1,0 +1,353 @@
+Aligning contigs to reference...
+	Aligning contigs to the reference
+Filtering alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NC_009506.1]
+	Loaded [Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1]
+	Total Regions: 2
+	Total Region Length: 2441632
+Analyzing contigs...
+CONTIG: k119_520 (765bp)
+Best alignment score: 445.0 (LEN: 466, IDY: 95.49), Total number of alignments: 2
+			Looking for the best set of alignments (out of 2 total alignments)
+			The best set is below. Score: 716.0, number of alignments: 2, unaligned bases: 15
+		This contig is misassembled.
+			Real Alignment 1: 1622400 1622683 | 1 284 | 284 284 | 95.42 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_520
+			  Indel (> 5bp) between these two alignments: deletion of length 22; 0 mismatches (number of Ns: 0)
+			Real Alignment 2: 1622706 1623171 | 285 750 | 466 466 | 95.49 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_520
+
+CONTIG: k119_859 (586bp)
+Best alignment score: 406.0 (LEN: 419, IDY: 96.90), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 406.0, number of alignments: 1, unaligned bases: 167
+		Alignment: 2427552 2427970 | 58 476 | 419 419 | 96.9 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_859
+
+CONTIG: k119_353 (989bp)
+Best alignment score: 829.1 (LEN: 844, IDY: 98.24), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 829.1, number of alignments: 1, unaligned bases: 145
+		Alignment: 2398116 2398965 | 977 134 | 850 844 | 98.24 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_353
+
+CONTIG: k119_685 (2468bp)
+Best alignment score: 436.0 (LEN: 449, IDY: 97.10), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 436.0, number of alignments: 1, unaligned bases: 2019
+		This contig is partially unaligned. (Aligned 449 out of 2468 non-N bases (18.19%))
+		Alignment: 519191 519639 | 84 532 | 449 449 | 97.1 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_685
+		Unaligned bases: 1 to 83 (83)
+		Unaligned bases: 533 to 2468 (1936)
+
+CONTIG: k119_533 (615bp)
+Best alignment score: 106.0 (LEN: 111, IDY: 95.50), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 106.0, number of alignments: 1, unaligned bases: 504
+		Alignment: 526896 527006 | 295 405 | 111 111 | 95.5 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_533
+
+CONTIG: k119_193 (581bp)
+Best alignment score: 571.0 (LEN: 581, IDY: 98.28), Total number of alignments: 1
+		One align captures most of this contig: 2117731 2118311 | 1 581 | 581 581 | 98.28 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_193
+
+CONTIG: k119_359 (509bp)
+Best alignment score: 484.0 (LEN: 509, IDY: 95.09), Total number of alignments: 1
+		One align captures most of this contig: 1380837 1381345 | 509 1 | 509 509 | 95.09 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_359
+
+CONTIG: k119_363 (863bp)
+Best alignment score: 806.0 (LEN: 839, IDY: 96.07), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 806.0, number of alignments: 1, unaligned bases: 24
+		Alignment: 451549 452387 | 1 839 | 839 839 | 96.07 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_363
+
+CONTIG: k119_882 (655bp)
+Best alignment score: 639.0 (LEN: 655, IDY: 97.56), Total number of alignments: 1
+		One align captures most of this contig: 1647087 1647741 | 655 1 | 655 655 | 97.56 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_882
+
+CONTIG: k119_25 (866bp)
+Best alignment score: 674.0 (LEN: 690, IDY: 97.68), Total number of alignments: 2
+			Looking for the best set of alignments (out of 2 total alignments)
+			The best set is below. Score: 702.5, number of alignments: 2, unaligned bases: 97
+		This contig is misassembled.
+			Real Alignment 1: 366949 367027 | 39 117 | 79 79 | 100.0 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_25
+			  Extensive misassembly (relocation, inconsistency = 1160167) between these two alignments
+			Real Alignment 2: 1527254 1527944 | 866 177 | 691 690 | 97.68 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_25
+
+CONTIG: k119_367 (1112bp)
+Best alignment score: 1067.6 (LEN: 1111, IDY: 96.09), Total number of alignments: 1
+		One align captures most of this contig: 518347 519465 | 1111 1 | 1119 1111 | 96.09 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_367
+
+CONTIG: k119_372 (659bp)
+Best alignment score: 239.0 (LEN: 250, IDY: 95.60), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 239.0, number of alignments: 1, unaligned bases: 409
+		Alignment: 649268 649517 | 410 659 | 250 250 | 95.6 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_372
+
+CONTIG: k119_215 (630bp)
+Best alignment score: 627.0 (LEN: 630, IDY: 99.52), Total number of alignments: 1
+		One align captures most of this contig: 1405691 1406320 | 1 630 | 630 630 | 99.52 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_215
+
+CONTIG: k119_561 (560bp)
+Best alignment score: 416.0 (LEN: 431, IDY: 96.52), Total number of alignments: 2
+			Looking for the best set of alignments (out of 2 total alignments)
+			The best set is below. Score: 468.4, number of alignments: 2, unaligned bases: 0
+		This contig is misassembled.
+			Excluding internal overlap of size 40 between Alignment 1 and 2: 1509047 1509215 | 1 169 | 169 169 --> 1509047 1509175 | 1 129 | 129 129
+			Real Alignment 1: 1509047 1509175 | 1 129 | 129 129 | 95.27 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_561
+			  Extensive misassembly (relocation, inconsistency = 1118570) between these two alignments
+			Real Alignment 2: 390046 390476 | 560 130 | 431 431 | 96.52 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_561
+
+CONTIG: k119_46 (512bp)
+Best alignment score: 504.0 (LEN: 512, IDY: 98.44), Total number of alignments: 1
+		One align captures most of this contig: 1256371 1256882 | 1 512 | 512 512 | 98.44 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_46
+
+CONTIG: k119_905 (811bp)
+Best alignment score: 784.0 (LEN: 809, IDY: 96.91), Total number of alignments: 1
+		One align captures most of this contig: 1226921 1227729 | 1 809 | 809 809 | 96.91 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_905
+
+CONTIG: k119_906 (1478bp)
+Best alignment score: 762.0 (LEN: 795, IDY: 95.85), Total number of alignments: 5
+			Looking for the best set of alignments (out of 5 total alignments)
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 317184 317329 | 146 1 | 146 146 | 97.26 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_906
+		Skipping redundant alignment 315930 316371 | 1377 936 | 442 442 | 95.25 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_906
+			The best set is below. Score: 1312.0, number of alignments: 3, unaligned bases: 109
+		This contig is misassembled.
+			Real Alignment 1: 652236 652367 | 1 132 | 132 132 | 97.73 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_906
+			  Indel (> 5bp) between these two alignments: deletion of length 21; 0 mismatches (number of Ns: 0)
+			Real Alignment 2: 652389 653183 | 133 927 | 795 795 | 95.85 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_906
+			  Indel (> 5bp) between these two alignments: insertion of length 6; 2 mismatches (number of Ns: 0)
+			Real Alignment 3: 653186 653627 | 936 1377 | 442 442 | 95.25 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_906
+
+CONTIG: k119_576 (598bp)
+Best alignment score: 580.0 (LEN: 598, IDY: 96.99), Total number of alignments: 1
+		One align captures most of this contig: 2308256 2308853 | 1 598 | 598 598 | 96.99 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_576
+
+CONTIG: k119_234 (501bp)
+Best alignment score: 484.1 (LEN: 501, IDY: 96.62), Total number of alignments: 3
+		This contig has 3 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+			Alignment: 2296187 2296689 | 1 501 | 503 501 | 96.62 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_234
+			Skipping alignment 776137 776638 | 501 1 | 502 501 | 96.61 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_234
+			Skipping alignment 932959 933460 | 1 501 | 502 501 | 96.02 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_234
+
+CONTIG: k119_57 (504bp)
+Best alignment score: 501.0 (LEN: 504, IDY: 99.40), Total number of alignments: 1
+		One align captures most of this contig: 545384 545887 | 504 1 | 504 504 | 99.4 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_57
+
+CONTIG: k119_728 (651bp)
+Best alignment score: 632.0 (LEN: 651, IDY: 97.08), Total number of alignments: 1
+		One align captures most of this contig: 861809 862459 | 651 1 | 651 651 | 97.08 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_728
+
+CONTIG: k119_236 (613bp)
+Best alignment score: 587.0 (LEN: 610, IDY: 96.23), Total number of alignments: 1
+		One align captures most of this contig: 1537369 1537978 | 1 610 | 610 610 | 96.23 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_236
+
+CONTIG: k119_734 (562bp)
+Best alignment score: 551.0 (LEN: 562, IDY: 98.04), Total number of alignments: 1
+		One align captures most of this contig: 117999 118560 | 562 1 | 562 562 | 98.04 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_734
+
+CONTIG: k119_243 (508bp)
+Best alignment score: 494.0 (LEN: 508, IDY: 97.24), Total number of alignments: 1
+		One align captures most of this contig: 1183867 1184374 | 508 1 | 508 508 | 97.24 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_243
+
+CONTIG: k119_918 (548bp)
+Best alignment score: 509.0 (LEN: 522, IDY: 97.51), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 509.0, number of alignments: 1, unaligned bases: 26
+		Alignment: 276126 276647 | 548 27 | 522 522 | 97.51 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_918
+
+CONTIG: k119_589 (576bp)
+Best alignment score: 361.0 (LEN: 368, IDY: 98.10), Total number of alignments: 2
+			Looking for the best set of alignments (out of 2 total alignments)
+			The best set is below. Score: 540.0, number of alignments: 2, unaligned bases: 17
+		This contig is misassembled.
+			Real Alignment 1: 1579759 1579949 | 1 191 | 191 191 | 96.34 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_589
+			  Gap between these two alignments (local misassembly). Inconsistency = 183
+			Real Alignment 2: 1580150 1580517 | 209 576 | 368 368 | 98.1 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_589
+
+CONTIG: k119_921 (551bp)
+Best alignment score: 493.0 (LEN: 518, IDY: 95.17), Total number of alignments: 5
+			Looking for the best set of alignments (out of 5 total alignments)
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 1361615 1361695 | 81 1 | 81 81 | 95.06 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_921
+		Skipping redundant alignment 44721 44801 | 433 513 | 81 81 | 98.77 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_921
+		Skipping redundant alignment 1361160 1361265 | 538 433 | 106 106 | 98.11 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_921
+		Skipping redundant alignment 1309598 1309703 | 433 538 | 106 106 | 97.17 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_921
+			The best set is below. Score: 493.0, number of alignments: 1, unaligned bases: 33
+		Alignment: 1917499 1918015 | 518 1 | 517 518 | 95.17 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_921
+
+CONTIG: k119_933 (649bp)
+Best alignment score: 634.0 (LEN: 649, IDY: 97.69), Total number of alignments: 1
+		One align captures most of this contig: 502708 503356 | 649 1 | 649 649 | 97.69 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_933
+
+CONTIG: k119_934 (610bp)
+Best alignment score: 578.0 (LEN: 604, IDY: 95.70), Total number of alignments: 1
+		One align captures most of this contig: 261670 262273 | 604 1 | 604 604 | 95.7 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_934
+
+CONTIG: k119_88 (669bp)
+Best alignment score: 363.0 (LEN: 378, IDY: 96.03), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 363.0, number of alignments: 1, unaligned bases: 291
+		Alignment: 2112366 2112743 | 378 1 | 378 378 | 96.03 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_88
+
+CONTIG: k119_91 (539bp)
+Best alignment score: 522.1 (LEN: 539, IDY: 96.86), Total number of alignments: 1
+		One align captures most of this contig: 269207 269745 | 1 539 | 539 539 | 96.86 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_91
+
+CONTIG: k119_945 (576bp)
+Best alignment score: 552.0 (LEN: 572, IDY: 96.51), Total number of alignments: 1
+		One align captures most of this contig: 210313 210885 | 5 576 | 573 572 | 96.51 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_945
+
+CONTIG: k119_275 (647bp)
+Best alignment score: 629.0 (LEN: 647, IDY: 97.22), Total number of alignments: 1
+		One align captures most of this contig: 601609 602255 | 1 647 | 647 647 | 97.22 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_275
+
+CONTIG: k119_613 (633bp)
+Best alignment score: 611.0 (LEN: 630, IDY: 96.98), Total number of alignments: 1
+		One align captures most of this contig: 678560 679189 | 4 633 | 630 630 | 96.98 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_613
+
+CONTIG: k119_776 (696bp)
+Best alignment score: 112.0 (LEN: 112, IDY: 100.00), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 112.0, number of alignments: 1, unaligned bases: 584
+		This contig is partially unaligned. (Aligned 112 out of 696 non-N bases (16.09%))
+		Alignment: 1620884 1620995 | 112 1 | 112 112 | 100.0 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_776
+		Unaligned bases: 113 to 696 (584)
+
+CONTIG: k119_622 (671bp)
+Best alignment score: 514.0 (LEN: 540, IDY: 95.19), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 514.0, number of alignments: 1, unaligned bases: 131
+		Alignment: 1339676 1340215 | 562 23 | 540 540 | 95.19 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_622
+
+CONTIG: k119_283 (609bp)
+Best alignment score: 550.0 (LEN: 577, IDY: 95.32), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 550.0, number of alignments: 1, unaligned bases: 32
+		Alignment: 251232 251808 | 1 577 | 577 577 | 95.32 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_283
+
+CONTIG: k119_777 (565bp)
+Best alignment score: 544.1 (LEN: 565, IDY: 96.30), Total number of alignments: 1
+		One align captures most of this contig: 280129 280693 | 565 1 | 565 565 | 96.3 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_777
+
+CONTIG: k119_116 (556bp)
+Best alignment score: 399.0 (LEN: 408, IDY: 97.79), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 399.0, number of alignments: 1, unaligned bases: 148
+		Alignment: 399617 400024 | 556 149 | 408 408 | 97.79 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_116
+
+CONTIG: k119_291 (702bp)
+Best alignment score: 568.0 (LEN: 579, IDY: 98.10), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 568.0, number of alignments: 1, unaligned bases: 123
+		Alignment: 1307293 1307871 | 702 124 | 579 579 | 98.1 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_291
+
+CONTIG: k119_118 (529bp)
+Best alignment score: 519.0 (LEN: 526, IDY: 98.67), Total number of alignments: 1
+		One align captures most of this contig: 1979867 1980392 | 1 526 | 526 526 | 98.67 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_118
+
+CONTIG: k119_966 (514bp)
+Best alignment score: 497.0 (LEN: 514, IDY: 96.69), Total number of alignments: 1
+		One align captures most of this contig: 696143 696656 | 1 514 | 514 514 | 96.69 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_966
+
+CONTIG: k119_971 (671bp)
+		This contig is unaligned. (671 bp)
+		Unaligned bases: 671 (number of Ns: 0)
+
+CONTIG: k119_642 (553bp)
+Best alignment score: 533.0 (LEN: 545, IDY: 97.80), Total number of alignments: 1
+		One align captures most of this contig: 1100074 1100618 | 545 1 | 545 545 | 97.8 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_642
+
+CONTIG: k119_793 (620bp)
+Best alignment score: 380.0 (LEN: 399, IDY: 95.24), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 380.0, number of alignments: 1, unaligned bases: 221
+		Alignment: 341706 342104 | 620 222 | 399 399 | 95.24 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_793
+
+CONTIG: k119_483 (687bp)
+Best alignment score: 671.0 (LEN: 687, IDY: 97.67), Total number of alignments: 1
+		One align captures most of this contig: 1192404 1193089 | 1 687 | 686 687 | 97.67 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_483
+
+CONTIG: k119_982 (531bp)
+Best alignment score: 520.0 (LEN: 531, IDY: 97.93), Total number of alignments: 1
+		One align captures most of this contig: 1550506 1551036 | 531 1 | 531 531 | 97.93 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_982
+
+CONTIG: k119_653 (604bp)
+Best alignment score: 596.0 (LEN: 604, IDY: 98.68), Total number of alignments: 1
+		One align captures most of this contig: 732471 733074 | 604 1 | 604 604 | 98.68 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_653
+
+CONTIG: k119_805 (820bp)
+Best alignment score: 589.0 (LEN: 606, IDY: 97.19), Total number of alignments: 2
+			Looking for the best set of alignments (out of 2 total alignments)
+			The best set is below. Score: 775.0, number of alignments: 2, unaligned bases: 11
+		This contig is misassembled.
+			Real Alignment 1: 349561 349763 | 208 6 | 203 203 | 95.07 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_805
+			  Gap between these two alignments (local misassembly). Inconsistency = 184
+			Real Alignment 2: 348765 349370 | 820 215 | 606 606 | 97.19 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_805
+
+CONTIG: k119_146 (586bp)
+Best alignment score: 570.0 (LEN: 583, IDY: 97.77), Total number of alignments: 1
+		One align captures most of this contig: 442630 443212 | 1 583 | 583 583 | 97.77 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_146
+
+CONTIG: k119_814 (509bp)
+Best alignment score: 421.0 (LEN: 437, IDY: 96.34), Total number of alignments: 2
+			Looking for the best set of alignments (out of 2 total alignments)
+			The best set is below. Score: 488.0, number of alignments: 2, unaligned bases: 5
+		This contig is misassembled.
+			Real Alignment 1: 536789 537225 | 437 1 | 437 437 | 96.34 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_814
+			  Indel (> 5bp) between these two alignments: deletion of length 8; 0 mismatches (number of Ns: 0)
+			Real Alignment 2: 536709 536775 | 509 443 | 67 67 | 100.0 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_814
+
+CONTIG: k119_147 (747bp)
+Best alignment score: 706.0 (LEN: 729, IDY: 96.84), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 706.0, number of alignments: 1, unaligned bases: 18
+		Alignment: 1258106 1258834 | 729 1 | 729 729 | 96.84 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_147
+
+CONTIG: k119_1010 (536bp)
+Best alignment score: 262.0 (LEN: 275, IDY: 95.27), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 262.0, number of alignments: 1, unaligned bases: 261
+		Alignment: 2373826 2374100 | 262 536 | 275 275 | 95.27 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_1010
+
+CONTIG: k119_828 (625bp)
+Best alignment score: 289.0 (LEN: 296, IDY: 97.64), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 289.0, number of alignments: 1, unaligned bases: 329
+		Alignment: 882932 883227 | 1 296 | 296 296 | 97.64 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_828
+
+CONTIG: k119_169 (520bp)
+Best alignment score: 515.0 (LEN: 520, IDY: 99.04), Total number of alignments: 1
+		One align captures most of this contig: 745948 746468 | 1 520 | 521 520 | 99.04 | Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1 k119_169
+
+Analyzing coverage...
+Writing SNPs into /mnt/c/meta/result/megahit/metaquast/runs_per_reference/Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953/contigs_reports/minimap_output/final-contigs.used_snps.gz
+
+Analysis is finished!
+Founded SNPs were written into /mnt/c/meta/result/megahit/metaquast/runs_per_reference/Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953/contigs_reports/minimap_output/final-contigs.used_snps.gz
+
+Results:
+	Local Misassemblies: 2
+	Misassemblies: 2
+		Relocations: 2
+		Translocations: 0
+		Inversions: 0
+	Scaffold gap extensive misassemblies: 0
+	Scaffold gap local misassemblies: 0
+	Misassembled Contigs: 2
+	Misassembled Contig Bases: 1426
+	Misassemblies Inter-Contig Overlap: 0
+Unaligned Contigs: 1 + 2 part
+Half Unaligned Contigs with Misassemblies: 0
+Unaligned Contig Bases: 3274
+
+Ambiguously Mapped Contigs: 1
+Total Bases in Ambiguously Mapped Contigs: 501
+Extra Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each of these contigs was used.
+
+	Covered Bases: 30764
+
+	SNPs: 884
+	Insertions: 19
+	Deletions: 81
+

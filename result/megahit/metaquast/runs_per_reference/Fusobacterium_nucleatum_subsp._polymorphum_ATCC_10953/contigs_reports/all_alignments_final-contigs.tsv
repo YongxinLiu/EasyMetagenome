@@ -1,0 +1,126 @@
+S1	E1	S2	E2	Reference	Contig	IDY	Ambiguous	Best_group
+1622400	1622683	1	284	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_520	95.42		True
+indel: indel (> 5bp)
+1622706	1623171	285	750	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_520	95.49		True
+CONTIG	k119_520	765	correct
+2427552	2427970	58	476	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_859	96.9		True
+CONTIG	k119_859	586	correct
+2398116	2398965	977	134	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_353	98.24		True
+CONTIG	k119_353	989	correct
+519191	519639	84	532	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_685	97.1		True
+CONTIG	k119_685	2468	correct_unaligned
+526896	527006	295	405	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_533	95.5		True
+CONTIG	k119_533	615	correct
+2117731	2118311	1	581	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_193	98.28		True
+CONTIG	k119_193	581	correct
+1380837	1381345	509	1	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_359	95.09		True
+CONTIG	k119_359	509	correct
+451549	452387	1	839	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_363	96.07		True
+CONTIG	k119_363	863	correct
+1647087	1647741	655	1	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_882	97.56		True
+CONTIG	k119_882	655	correct
+366949	367027	39	117	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_25	100.0		True
+relocation, inconsistency = 1160167
+1527254	1527944	866	177	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_25	97.68		True
+CONTIG	k119_25	866	misassembled
+518347	519465	1111	1	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_367	96.09		True
+CONTIG	k119_367	1112	correct
+649268	649517	410	659	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_372	95.6		True
+CONTIG	k119_372	659	correct
+1405691	1406320	1	630	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_215	99.52		True
+CONTIG	k119_215	630	correct
+1509047	1509175	1	129	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_561	95.27		True
+relocation, inconsistency = 1118570
+390046	390476	560	130	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_561	96.52		True
+CONTIG	k119_561	560	misassembled
+1256371	1256882	1	512	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_46	98.44		True
+CONTIG	k119_46	512	correct
+1226921	1227729	1	809	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_905	96.91		True
+CONTIG	k119_905	811	correct
+652236	652367	1	132	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_906	97.73		True
+indel: indel (> 5bp)
+652389	653183	133	927	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_906	95.85		True
+indel: indel (> 5bp)
+653186	653627	936	1377	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_906	95.25		True
+CONTIG	k119_906	1478	correct
+2308256	2308853	1	598	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_576	96.99		True
+CONTIG	k119_576	598	correct
+2296187	2296689	1	501	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_234	96.62		True
+CONTIG	k119_234	501	correct
+545384	545887	504	1	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_57	99.4		True
+CONTIG	k119_57	504	correct
+861809	862459	651	1	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_728	97.08		True
+CONTIG	k119_728	651	correct
+1537369	1537978	1	610	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_236	96.23		True
+CONTIG	k119_236	613	correct
+117999	118560	562	1	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_734	98.04		True
+CONTIG	k119_734	562	correct
+1183867	1184374	508	1	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_243	97.24		True
+CONTIG	k119_243	508	correct
+276126	276647	548	27	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_918	97.51		True
+CONTIG	k119_918	548	correct
+1579759	1579949	1	191	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_589	96.34		True
+local misassembly
+1580150	1580517	209	576	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_589	98.1		True
+CONTIG	k119_589	576	correct
+1917499	1918015	518	1	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_921	95.17		True
+CONTIG	k119_921	551	correct
+502708	503356	649	1	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_933	97.69		True
+CONTIG	k119_933	649	correct
+261670	262273	604	1	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_934	95.7		True
+CONTIG	k119_934	610	correct
+2112366	2112743	378	1	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_88	96.03		True
+CONTIG	k119_88	669	correct
+269207	269745	1	539	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_91	96.86		True
+CONTIG	k119_91	539	correct
+210313	210885	5	576	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_945	96.51		True
+CONTIG	k119_945	576	correct
+601609	602255	1	647	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_275	97.22		True
+CONTIG	k119_275	647	correct
+678560	679189	4	633	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_613	96.98		True
+CONTIG	k119_613	633	correct
+1620884	1620995	112	1	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_776	100.0		True
+CONTIG	k119_776	696	correct_unaligned
+1339676	1340215	562	23	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_622	95.19		True
+CONTIG	k119_622	671	correct
+251232	251808	1	577	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_283	95.32		True
+CONTIG	k119_283	609	correct
+280129	280693	565	1	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_777	96.3		True
+CONTIG	k119_777	565	correct
+399617	400024	556	149	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_116	97.79		True
+CONTIG	k119_116	556	correct
+1307293	1307871	702	124	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_291	98.1		True
+CONTIG	k119_291	702	correct
+1979867	1980392	1	526	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_118	98.67		True
+CONTIG	k119_118	529	correct
+696143	696656	1	514	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_966	96.69		True
+CONTIG	k119_966	514	correct
+CONTIG	k119_971	671	unaligned
+1100074	1100618	545	1	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_642	97.8		True
+CONTIG	k119_642	553	correct
+341706	342104	620	222	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_793	95.24		True
+CONTIG	k119_793	620	correct
+1192404	1193089	1	687	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_483	97.67		True
+CONTIG	k119_483	687	correct
+1550506	1551036	531	1	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_982	97.93		True
+CONTIG	k119_982	531	correct
+732471	733074	604	1	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_653	98.68		True
+CONTIG	k119_653	604	correct
+349561	349763	208	6	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_805	95.07		True
+local misassembly
+348765	349370	820	215	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_805	97.19		True
+CONTIG	k119_805	820	correct
+442630	443212	1	583	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_146	97.77		True
+CONTIG	k119_146	586	correct
+536789	537225	437	1	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_814	96.34		True
+indel: indel (> 5bp)
+536709	536775	509	443	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_814	100.0		True
+CONTIG	k119_814	509	correct
+1258106	1258834	729	1	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_147	96.84		True
+CONTIG	k119_147	747	correct
+2373826	2374100	262	536	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_1010	95.27		True
+CONTIG	k119_1010	536	correct
+882932	883227	1	296	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_828	97.64		True
+CONTIG	k119_828	625	correct
+745948	746468	1	520	Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1	k119_169	99.04		True
+CONTIG	k119_169	520	correct

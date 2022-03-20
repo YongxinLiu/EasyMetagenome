@@ -1,0 +1,9 @@
+variable	value
+raw.pair1	75000
+raw.pair1	75000
+trimmed.pair1	65252
+trimmed.pair1	47231
+final.pair1	65212
+final.pair1	44619
+final.pair2	65212
+final.pair2	44619

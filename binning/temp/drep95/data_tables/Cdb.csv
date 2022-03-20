@@ -1,0 +1,16 @@
+genome,secondary_cluster,threshold,cluster_method,comparison_algorithm,primary_cluster
+mix_all.2.fa,1_1,0.050000000000000044,average,ANImf,1
+s_ERR011349.2.fa,1_1,0.050000000000000044,average,ANImf,1
+mix_all.3.fa,2_1,0.050000000000000044,average,ANImf,2
+s_ERR011349.1.fa,2_1,0.050000000000000044,average,ANImf,2
+mix_all.8.fa,3_0,0.050000000000000044,average,ANImf,3
+mix_all.9.fa,4_0,0.050000000000000044,average,ANImf,4
+mix_all.1.fa,5_1,0.050000000000000044,average,ANImf,5
+s_ERR011347.1.fa,5_1,0.050000000000000044,average,ANImf,5
+s_ERR011348.2.fa,5_1,0.050000000000000044,average,ANImf,5
+mix_all.6.fa,6_1,0.050000000000000044,average,ANImf,6
+s_ERR011348.1.fa,6_1,0.050000000000000044,average,ANImf,6
+mix_all.10.fa,7_0,0.050000000000000044,average,ANImf,7
+mix_all.4.fa,8_0,0.050000000000000044,average,ANImf,8
+mix_all.5.fa,9_0,0.050000000000000044,average,ANImf,9
+mix_all.7.fa,10_0,0.050000000000000044,average,ANImf,10

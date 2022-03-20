@@ -1,0 +1,12 @@
+LABELS
+SEPARATOR TAB
+DATA
+mix_all.9	g__Erysipelatoclostridium
+s_ERR011348.2	g__Ruminococcus_E
+mix_all.4	g__CAG-177
+mix_all.5	g__CAG-180
+s_ERR011349.1	g__CAG-273
+mix_all.8	g__CAG-465
+mix_all.2	g__Butyrivibrio_A
+mix_all.10	g__Phascolarctobacterium
+mix_all.6	g__Bacteroides

@@ -1,0 +1,20 @@
+DATASET_SIMPLEBAR
+SEPARATOR TAB
+COLOR	#000000
+DATASET_LABEL	cluster_members
+LEGEND_COLORS	#000000
+LEGEND_LABELS	Min. (1), Max. (3)
+LEGEND_SHAPES	1
+LEGEND_TITLE	cluster members
+MARGIN	5
+WIDTH	200
+DATA
+mix_all.9	1
+s_ERR011348.2	3
+mix_all.4	1
+mix_all.5	1
+s_ERR011349.1	2
+mix_all.8	1
+mix_all.2	2
+mix_all.10	1
+mix_all.6	2

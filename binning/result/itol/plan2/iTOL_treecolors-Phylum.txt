@@ -1,0 +1,18 @@
+TREE_COLORS
+SEPARATOR TAB
+COLOR	#a6cee3
+DATASET_LABEL	Phylum
+LEGEND_COLORS	#a6cee3	#1f78b4	#b2df8a	#33a02c
+LEGEND_LABELS	p__Bacteroidota	p__Firmicutes	p__Firmicutes_A	p__Firmicutes_C
+LEGEND_SHAPES	1	1	1	1
+LEGEND_TITLE	Phylum
+DATA
+mix_all.9	range	#1f78b4	p__Firmicutes
+s_ERR011348.2	range	#b2df8a	p__Firmicutes_A
+mix_all.4	range	#b2df8a	p__Firmicutes_A
+mix_all.5	range	#b2df8a	p__Firmicutes_A
+s_ERR011349.1	range	#b2df8a	p__Firmicutes_A
+mix_all.8	range	#b2df8a	p__Firmicutes_A
+mix_all.2	range	#b2df8a	p__Firmicutes_A
+mix_all.10	range	#33a02c	p__Firmicutes_C
+mix_all.6	range	#a6cee3	p__Bacteroidota

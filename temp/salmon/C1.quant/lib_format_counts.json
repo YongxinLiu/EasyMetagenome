@@ -1,0 +1,22 @@
+{
+    "read_files": "[ temp/qc/C1_1.fastq, temp/qc/C1_2.fastq]",
+    "expected_format": "IU",
+    "compatible_fragment_ratio": 1.0,
+    "num_compatible_fragments": 3404,
+    "num_assigned_fragments": 3404,
+    "num_frags_with_concordant_consistent_mappings": 2452,
+    "num_frags_with_inconsistent_or_orphan_mappings": 976,
+    "strand_mapping_bias": 0.5297716150081566,
+    "MSF": 0,
+    "OSF": 0,
+    "ISF": 1299,
+    "MSR": 0,
+    "OSR": 0,
+    "ISR": 1153,
+    "SF": 467,
+    "SR": 509,
+    "MU": 0,
+    "OU": 0,
+    "IU": 0,
+    "U": 0
+}

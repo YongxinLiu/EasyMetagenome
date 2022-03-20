@@ -1,0 +1,15 @@
+Family	C1	C2
+f__Pasteurellaceae	0	46.70298
+f__Sphingomonadaceae	0	37.82149
+f__Flavobacteriaceae	37.2374	0
+f__Fusobacteriaceae	34.5214	0
+f__Prevotellaceae	12.51913	1.86628
+f__Neisseriaceae	0.61929	12.78434
+f__Bacillales_noname	6.04734	0
+f__Peptostreptococcaceae	4.77315	0
+f__Lachnospiraceae	1.12522	0
+f__Leptotrichiaceae	1.10997	0
+f__Erysipelotrichaceae	0.9907	0
+f__Veillonellaceae	0	0.8249
+f__Clostridiales_Family_XI_Incertae_Sedis	0.53523	0
+f__Campylobacteraceae	0.52116	0

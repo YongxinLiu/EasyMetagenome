@@ -1,0 +1,15 @@
+S1	E1	S2	E2	Reference	Contig	IDY	Ambiguous	Best_group
+4828	4953	125	1	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000006.1	k119_10	97.08		True
+local misassembly
+4289	4668	502	126	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000006.1	k119_10	95.0		True
+CONTIG	k119_10	502	correct
+7446	7961	1	516	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000006.1	k119_491	97.48		True
+CONTIG	k119_491	516	correct
+151729	152250	522	1	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000012.1	k119_744	98.28		True
+CONTIG	k119_744	522	correct
+7345	8165	1	819	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000011.1	k119_71	98.17		True
+CONTIG	k119_71	819	correct
+38705	39558	895	42	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000014.1	k119_595	96.85		True
+CONTIG	k119_595	1219	correct
+2829	3159	364	694	Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000002.1	k119_126	97.28		True
+CONTIG	k119_126	694	correct

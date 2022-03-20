@@ -1,0 +1,6 @@
+k119_72	597	0	320	+	Sphingomonas_taxi_NZ_CP009571.1	3859099	3893	4214	316	321	0	NM:i:5	ms:i:289	AS:i:289	nn:i:0	tp:A:P	cm:i:25	s1:i:246	s2:i:305	de:f:0.0156	zd:i:1	rl:i:0	cg:Z:293M1D27M	cs:Z::182*ag:110-t*cg*ta:17*tc:7
+k119_72	597	0	320	-	Sphingomonas_taxi_NZ_CP009571.1	3859099	1849165	1849486	316	321	0	NM:i:5	ms:i:289	AS:i:289	nn:i:0	tp:A:S	cm:i:25	s1:i:246	de:f:0.0156	zd:i:2	rl:i:0	cg:Z:25M1D295M	cs:Z::7*ag:17-a*gt*ac:110*tc:182
+k119_72	597	0	320	+	Sphingomonas_taxi_NZ_CP009571.1	3859099	3410888	3411209	316	321	0	NM:i:5	ms:i:289	AS:i:289	nn:i:0	tp:A:S	cm:i:25	s1:i:246	de:f:0.0156	zd:i:1	rl:i:0	cg:Z:293M1D27M	cs:Z::182*ag:110-t*cg*ta:17*tc:7
+k119_72	597	458	587	+	Sphingomonas_taxi_NZ_CP009571.1	3859099	4352	4481	122	129	0	NM:i:7	ms:i:87	AS:i:87	nn:i:0	tp:A:P	cm:i:6	s1:i:59	s2:i:305	de:f:0.0543	zd:i:2	rl:i:0	cg:Z:129M	cs:Z::79*ga:9*tc*ct:2*tc*ct:4*ga*ag:28
+k119_72	597	458	587	-	Sphingomonas_taxi_NZ_CP009571.1	3859099	1848898	1849027	122	129	0	NM:i:7	ms:i:87	AS:i:87	nn:i:0	tp:A:S	cm:i:6	s1:i:59	de:f:0.0543	zd:i:1	rl:i:0	cg:Z:129M	cs:Z::28*tc*ct:4*ga*ag:2*ga*ag:9*ct:79
+k119_72	597	458	587	+	Sphingomonas_taxi_NZ_CP009571.1	3859099	3411347	3411476	122	129	0	NM:i:7	ms:i:87	AS:i:87	nn:i:0	tp:A:S	cm:i:6	s1:i:59	de:f:0.0543	zd:i:2	rl:i:0	cg:Z:129M	cs:Z::79*ga:9*tc*ct:2*tc*ct:4*ga*ag:28

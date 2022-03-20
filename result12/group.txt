@@ -1,0 +1,13 @@
+SampleID	Group
+C1	Cancer
+C2	Cancer
+C3	Cancer
+C4	Cancer
+C5	Cancer
+C6	Cancer
+N1	Normal
+N2	Normal
+N3	Normal
+N4	Normal
+N5	Normal
+N6	Normal

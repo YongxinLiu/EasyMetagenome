@@ -1,0 +1,139 @@
+/home/yongxin/miniconda2/envs/meta/bin/metaquast.py result/megahit/final.contigs.fa -o result/megahit/metaquast
+
+Version: 5.0.2
+
+System information:
+  OS: Linux-4.4.0-19041-Microsoft-x86_64-with-debian-bullseye-sid (linux_64)
+  Python version: 3.6.10
+  CPUs number: 12
+
+Started: 2021-08-08 23:56:33
+
+Logging to /mnt/c/meta/result/megahit/metaquast/metaquast.log
+NOTICE: Output directory already exists and looks like a QUAST output dir. Existing results can be reused (e.g. previously generated alignments)!
+NOTICE: Maximum number of threads is set to 3 (use --threads option to set it manually)
+
+Contigs:
+  Pre-processing...
+  result/megahit/final.contigs.fa ==> final.contigs
+
+No references are provided, starting to search for reference genomes in SILVA 16S rRNA database and to download them from NCBI...
+
+2021-08-08 23:56:34
+
+Downloading SILVA 16S ribosomal RNA gene database...
+Processing downloaded file. Logging to /home/yongxin/miniconda2/envs/meta/lib/python3.6/site-packages/quast_libs/silva/blastdb.log...
+Unpacking and replacing " " with "_"...
+gunzip -c /home/yongxin/miniconda2/envs/meta/lib/python3.6/site-packages/quast_libs/silva/SILVA_123_SSURef_Nr99_tax_silva.fasta.gz \
+> /home/yongxin/miniconda2/envs/meta/lib/python3.6/site-packages/quast_libs/silva/SILVA_123_SSURef_Nr99_tax_silva.fasta.unpacked \
+2>> /home/yongxin/miniconda2/envs/meta/lib/python3.6/site-packages/quast_libs/silva/blastdb.log
+Making BLAST database...
+/home/yongxin/miniconda2/envs/meta/bin/makeblastdb -in /home/yongxin/miniconda2/envs/meta/lib/python3.6/site-packages/quast_libs/silva/SILVA_123_SSURef_Nr99_tax_silva.fasta \
+-dbtype nucl -out /home/yongxin/miniconda2/envs/meta/lib/python3.6/site-packages/quast_libs/silva/silva.123.db \
+>> /home/yongxin/miniconda2/envs/meta/lib/python3.6/site-packages/quast_libs/silva/blastdb.log \
+2>> /home/yongxin/miniconda2/envs/meta/lib/python3.6/site-packages/quast_libs/silva/blastdb.log
+Running BlastN..
+  processing final.contigs
+/home/yongxin/miniconda2/envs/meta/bin/blastn -query result/megahit/final.contigs.fa \
+-db /home/yongxin/miniconda2/envs/meta/lib/python3.6/site-packages/quast_libs/silva/silva.123.db \
+-outfmt 7 -num_threads 3 > result/megahit/metaquast/quast_downloaded_references/blast.res_final-contigs \
+2>> result/megahit/metaquast/quast_downloaded_references/blast.err
+  BLAST results for final.contigs are saved to /mnt/c/meta/result/megahit/metaquast/quast_downloaded_references/blast.res_final-contigs...
+
+
+2021-08-09 00:02:01
+Trying to download found references from NCBI. Totally 6 organisms to try.
+  Sphingomonas_taxi                                     | successfully downloaded (total 1, 5 more to go)
+  Prevotella_nigrescens_CC14M                           | successfully downloaded (total 2, 4 more to go)
+  Haemophilus_sputorum_CCUG_13788                       | successfully downloaded (total 3, 3 more to go)
+  Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953 | successfully downloaded (total 4, 2 more to go)
+  Capnocytophaga_sputigena_ATCC_33612                   | successfully downloaded (total 5, 1 more to go)
+  Capnocytophaga_sp._oral_clone_ID062                   | not found in the NCBI database
+  Capnocytophaga_sp._oral_clone_ID062 was not found in NCBI database, trying to download the next best match
+  Capnocytophaga_ochracea_str._Holt_25                  | successfully downloaded (total 6, 0 more to go)
+
+Downloaded reference(s):
+  /mnt/c/meta/result/megahit/metaquast/quast_downloaded_references/Capnocytophaga_ochracea_str._Holt_25.fasta ==> Capnocytophaga_ochracea_str._Holt_25
+  /mnt/c/meta/result/megahit/metaquast/quast_downloaded_references/Capnocytophaga_sputigena_ATCC_33612.fasta ==> Capnocytophaga_sputigena_ATCC_33612
+  /mnt/c/meta/result/megahit/metaquast/quast_downloaded_references/Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953.fasta ==> Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953
+  /mnt/c/meta/result/megahit/metaquast/quast_downloaded_references/Haemophilus_sputorum_CCUG_13788.fasta ==> Haemophilus_sputorum_CCUG_13788
+  /mnt/c/meta/result/megahit/metaquast/quast_downloaded_references/Prevotella_nigrescens_CC14M.fasta ==> Prevotella_nigrescens_CC14M
+  /mnt/c/meta/result/megahit/metaquast/quast_downloaded_references/Sphingomonas_taxi.fasta ==> Sphingomonas_taxi
+  All references were combined in combined_reference.fasta
+
+Starting quast.py for the combined reference...
+(logging to /mnt/c/meta/result/megahit/metaquast/combined_reference/quast.log)
+
+Excluding downloaded references with low genome fraction from further analysis..
+All downloaded references have low genome fraction. Nothing was excluded for now.
+
+Partitioning contigs into bins aligned to each reference..
+  processing final.contigs
+
+Run QUAST on different references in parallel..
+
+Starting quast.py for the contigs aligned to Capnocytophaga_ochracea_str._Holt_25... (logging to /mnt/c/meta/result/megahit/metaquast/runs_per_reference/Capnocytophaga_ochracea_str._Holt_25/quast.log)
+
+Starting quast.py for the contigs aligned to Capnocytophaga_sputigena_ATCC_33612... (logging to /mnt/c/meta/result/megahit/metaquast/runs_per_reference/Capnocytophaga_sputigena_ATCC_33612/quast.log)
+
+Starting quast.py for the contigs aligned to Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953... (logging to /mnt/c/meta/result/megahit/metaquast/runs_per_reference/Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953/quast.log)
+
+Starting quast.py for the contigs aligned to Haemophilus_sputorum_CCUG_13788... (logging to /mnt/c/meta/result/megahit/metaquast/runs_per_reference/Haemophilus_sputorum_CCUG_13788/quast.log)
+
+Starting quast.py for the contigs aligned to Prevotella_nigrescens_CC14M... (logging to /mnt/c/meta/result/megahit/metaquast/runs_per_reference/Prevotella_nigrescens_CC14M/quast.log)
+
+Starting quast.py for the contigs aligned to Sphingomonas_taxi... (logging to /mnt/c/meta/result/megahit/metaquast/runs_per_reference/Sphingomonas_taxi/quast.log)
+
+Starting quast.py for the contigs not aligned anywhere... (logging to /mnt/c/meta/result/megahit/metaquast/not_aligned/quast.log)
+
+2021-08-09 00:11:56
+Summarizing results...
+  Drawing # contigs metaQUAST summary plot...
+    saved to /mnt/c/meta/result/megahit/metaquast/summary/PDF/num_contigs.pdf
+  Drawing Largest contig metaQUAST summary plot...
+    saved to /mnt/c/meta/result/megahit/metaquast/summary/PDF/Largest_contig.pdf
+  Drawing Total length metaQUAST summary plot...
+    saved to /mnt/c/meta/result/megahit/metaquast/summary/PDF/Total_length.pdf
+  Drawing Largest alignment metaQUAST summary plot...
+    saved to /mnt/c/meta/result/megahit/metaquast/summary/PDF/Largest_alignment.pdf
+  Drawing Total aligned length metaQUAST summary plot...
+    saved to /mnt/c/meta/result/megahit/metaquast/summary/PDF/Total_aligned_length.pdf
+  Drawing Total length (>= 1000 bp) metaQUAST summary plot...
+    saved to /mnt/c/meta/result/megahit/metaquast/summary/PDF/Total_length_(ge_1000_bp).pdf
+  Drawing Total length (>= 10000 bp) metaQUAST summary plot...
+    saved to /mnt/c/meta/result/megahit/metaquast/summary/PDF/Total_length_(ge_10000_bp).pdf
+  Drawing Total length (>= 50000 bp) metaQUAST summary plot...
+    saved to /mnt/c/meta/result/megahit/metaquast/summary/PDF/Total_length_(ge_50000_bp).pdf
+  Drawing # misassemblies metaQUAST summary plot...
+    saved to /mnt/c/meta/result/megahit/metaquast/summary/PDF/num_misassemblies.pdf
+  Drawing metaQUAST summary misassemblies plot for final.contigs...
+    saved to /mnt/c/meta/result/megahit/metaquast/summary/PDF/final-contigs_misassemblies.pdf
+  Drawing Misassembled contigs length metaQUAST summary plot...
+    saved to /mnt/c/meta/result/megahit/metaquast/summary/PDF/Misassembled_contigs_length.pdf
+  Drawing # mismatches per 100 kbp metaQUAST summary plot...
+    saved to /mnt/c/meta/result/megahit/metaquast/summary/PDF/num_mismatches_per_100_kbp.pdf
+  Drawing # indels per 100 kbp metaQUAST summary plot...
+    saved to /mnt/c/meta/result/megahit/metaquast/summary/PDF/num_indels_per_100_kbp.pdf
+  Drawing # N's per 100 kbp metaQUAST summary plot...
+    saved to /mnt/c/meta/result/megahit/metaquast/summary/PDF/num_Ns_per_100_kbp.pdf
+  Drawing Genome fraction (%) metaQUAST summary plot...
+    saved to /mnt/c/meta/result/megahit/metaquast/summary/PDF/Genome_fraction.pdf
+  Drawing Duplication ratio metaQUAST summary plot...
+    saved to /mnt/c/meta/result/megahit/metaquast/summary/PDF/Duplication_ratio.pdf
+  Drawing NGA50 metaQUAST summary plot...
+    saved to /mnt/c/meta/result/megahit/metaquast/summary/PDF/NGA50.pdf
+
+  Text versions of reports and plots for each metric (for all references and assemblies) are saved to /mnt/c/meta/result/megahit/metaquast/summary/
+  Icarus (contig browser) is saved to /mnt/c/meta/result/megahit/metaquast/icarus.html
+  Drawing interactive Krona plots...
+  Krona chart for final.contigs is saved to /mnt/c/meta/result/megahit/metaquast/krona_charts/final.contigs_taxonomy_chart.html
+  Extended version of HTML-report (for all references and assemblies) is saved to /mnt/c/meta/result/megahit/metaquast/report.html
+
+MetaQUAST finished.
+  Log is saved to /mnt/c/meta/result/megahit/metaquast/metaquast.log
+
+Finished: 2021-08-09 00:11:59
+Elapsed time: 0:15:25.712704
+Total NOTICEs: 11; WARNINGs: 1; non-fatal ERRORs: 0
+
+Thank you for using QUAST!

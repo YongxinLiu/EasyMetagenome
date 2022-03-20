@@ -1,0 +1,71 @@
+Taxonomy	C1	C2
+Acidobacteria	0	0
+Actinobacteria	54	496
+Apicomplexa	5	137
+Aquificae	0	0
+Armatimonadetes	0	0
+Artverviricota	0	0
+Bacillariophyta	0	0
+Bacteroidetes	10746	916
+Balneolaeota	0	0
+Caldiserica	0	0
+Calditrichaeota	0	0
+Candidatus Bipolaricaulota	0	0
+Candidatus Cloacimonetes	0	0
+Candidatus Geothermarchaeota	0	0
+Candidatus Korarchaeota	0	0
+Candidatus Lokiarchaeota	0	0
+Candidatus Micrarchaeota	0	0
+Candidatus Omnitrophica	0	0
+Candidatus Saccharibacteria	0	0
+Cercozoa	0	0
+Chlamydiae	0	0
+Chlorobi	0	0
+Chloroflexi	1	0
+Chlorophyta	0	0
+Chordata	81	2701
+Chrysiogenetes	0	0
+Ciliophora	0	0
+Coprothermobacterota	0	0
+Cossaviricota	0	0
+Crenarchaeota	0	0
+Cressdnaviricota	0	0
+Cyanobacteria	2	1
+Deferribacteres	0	0
+Deinococcus-Thermus	2	0
+Dictyoglomi	0	0
+Dividoviricota	0	0
+Duplornaviricota	0	0
+Elusimicrobia	0	0
+Euglenozoa	0	0
+Euryarchaeota	0	1
+Evosea	0	0
+Fibrobacteres	0	0
+Firmicutes	2541	1221
+Fusobacteria	10386	200
+Gemmatimonadetes	0	0
+Hofneiviricota	0	0
+Ignavibacteriae	0	0
+Kiritimatiellaeota	0	0
+Kitrinoviricota	0	0
+Lenarviricota	0	0
+Negarnaviricota	0	0
+Nitrospirae	0	0
+Nucleocytoviricota	0	0
+Peploviricota	0	0
+Phixviricota	0	0
+Pisuviricota	0	0
+Planctomycetes	0	0
+Preplasmiviricota	0	0
+Proteobacteria	1291	6979
+Rhodophyta	0	0
+Saleviricota	0	0
+Spirochaetes	2	4
+Streptophyta	40	130
+Synergistetes	0	0
+Tenericutes	4	1
+Thaumarchaeota	0	0
+Thermodesulfobacteria	0	0
+Thermotogae	1	0
+Uroviricota	2	1
+Verrucomicrobia	0	0

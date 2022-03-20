@@ -1,0 +1,8 @@
+Assemblies                                             final.contigs
+Capnocytophaga_ochracea_str._Holt_25                   4272         
+Capnocytophaga_sputigena_ATCC_33612                    6330         
+Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953  37445        
+Haemophilus_sputorum_CCUG_13788                        1345         
+Prevotella_nigrescens_CC14M                            543          
+Sphingomonas_taxi                                      597          
+not_aligned                                            78917        

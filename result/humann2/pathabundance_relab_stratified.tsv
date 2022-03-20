@@ -1,0 +1,115 @@
+# Pathway	C1	C2
+UNINTEGRATED|g__Alloprevotella.s__Alloprevotella_tannerae	0.0318262	0
+UNINTEGRATED|g__Campylobacter.s__Campylobacter_showae	0.0226617	0
+UNINTEGRATED|g__Eikenella.s__Eikenella_corrodens	0.0180054	0
+UNINTEGRATED|g__Fusobacterium.s__Fusobacterium_nucleatum	0.174448	0
+UNINTEGRATED|g__Gemella.s__Gemella_morbillorum	0.0272861	0
+UNINTEGRATED|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0.0232382
+UNINTEGRATED|g__Haemophilus.s__Haemophilus_sputorum	0	0.0285127
+UNINTEGRATED|g__Prevotella.s__Prevotella_nigrescens	0.0503579	0
+UNINTEGRATED|g__Solobacterium.s__Solobacterium_moorei	0.0160746	0
+UNINTEGRATED|g__Sphingomonas.s__Sphingomonas_melonis	0	0.218965
+UNINTEGRATED|unclassified	0.0877445	0
+ANAGLYCOLYSIS-PWY: glycolysis III (from glucose)|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000220113	0
+BRANCHED-CHAIN-AA-SYN-PWY: superpathway of branched amino acid biosynthesis|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000425244	0
+BRANCHED-CHAIN-AA-SYN-PWY: superpathway of branched amino acid biosynthesis|g__Sphingomonas.s__Sphingomonas_melonis	0	0.000115895
+CALVIN-PWY: Calvin-Benson-Bassham cycle|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000322764	0
+COA-PWY-1: coenzyme A biosynthesis II (mammalian)|g__Alloprevotella.s__Alloprevotella_tannerae	9.51904e-05	0
+COA-PWY-1: coenzyme A biosynthesis II (mammalian)|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000248672	0
+COA-PWY: coenzyme A biosynthesis I|g__Alloprevotella.s__Alloprevotella_tannerae	7.5454e-05	0
+COA-PWY: coenzyme A biosynthesis I|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000204198	0
+DTDPRHAMSYN-PWY: dTDP-L-rhamnose biosynthesis I|g__Fusobacterium.s__Fusobacterium_nucleatum	0.00028705	0
+DTDPRHAMSYN-PWY: dTDP-L-rhamnose biosynthesis I|g__Prevotella.s__Prevotella_nigrescens	7.54575e-05	0
+DTDPRHAMSYN-PWY: dTDP-L-rhamnose biosynthesis I|unclassified	0.000201689	0
+FUCCAT-PWY: fucose degradation|g__Haemophilus.s__Haemophilus_sputorum	0	0.00010001
+GLCMANNANAUT-PWY: superpathway of N-acetylglucosamine, N-acetylmannosamine and N-acetylneuraminate degradation|g__Haemophilus.s__Haemophilus_sputorum	0	7.46242e-05
+GLUTORN-PWY: L-ornithine biosynthesis|g__Haemophilus.s__Haemophilus_sputorum	0	5.30372e-05
+GLYCOGENSYNTH-PWY: glycogen biosynthesis I (from ADP-D-Glucose)|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000301525	0
+HISDEG-PWY: L-histidine degradation I|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000324815	0
+HSERMETANA-PWY: L-methionine biosynthesis III|g__Campylobacter.s__Campylobacter_showae	3.79168e-05	0
+ILEUSYN-PWY: L-isoleucine biosynthesis I (from threonine)|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000496764	0
+ILEUSYN-PWY: L-isoleucine biosynthesis I (from threonine)|g__Sphingomonas.s__Sphingomonas_melonis	0	0.000128244
+NAD-BIOSYNTHESIS-II: NAD salvage pathway II|g__Haemophilus.s__Haemophilus_sputorum	0	5.99199e-05
+NONMEVIPP-PWY: methylerythritol phosphate pathway I|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000283189	0
+OANTIGEN-PWY: O-antigen building blocks biosynthesis (E. coli)|g__Fusobacterium.s__Fusobacterium_nucleatum	0.00015746	0
+P163-PWY: L-lysine fermentation to acetate and butanoate|g__Fusobacterium.s__Fusobacterium_nucleatum	0.00032283	0
+PEPTIDOGLYCANSYN-PWY: peptidoglycan biosynthesis I (meso-diaminopimelate containing)|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000311993	0
+PEPTIDOGLYCANSYN-PWY: peptidoglycan biosynthesis I (meso-diaminopimelate containing)|g__Haemophilus.s__Haemophilus_sputorum	0	6.71529e-05
+PWY-1042: glycolysis IV (plant cytosol)|g__Haemophilus.s__Haemophilus_parainfluenzae	0	3.68178e-05
+PWY-2942: L-lysine biosynthesis III|g__Haemophilus.s__Haemophilus_sputorum	0	6.48722e-05
+PWY-4242: pantothenate and coenzyme A biosynthesis III|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000183701	0
+PWY-5030: L-histidine degradation III|g__Fusobacterium.s__Fusobacterium_nucleatum	7.89975e-05	0
+PWY-5103: L-isoleucine biosynthesis III|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000499858	0
+PWY-5103: L-isoleucine biosynthesis III|g__Sphingomonas.s__Sphingomonas_melonis	0	9.39978e-05
+PWY-5188: tetrapyrrole biosynthesis I (from glutamate)|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000372359	0
+PWY-5686: UMP biosynthesis|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000326283	0
+PWY-5791: 1,4-dihydroxy-2-naphthoate biosynthesis II (plants)|g__Haemophilus.s__Haemophilus_sputorum	0	4.48187e-05
+PWY-5837: 1,4-dihydroxy-2-naphthoate biosynthesis I|g__Haemophilus.s__Haemophilus_sputorum	0	4.48187e-05
+PWY-6121: 5-aminoimidazole ribonucleotide biosynthesis I|g__Campylobacter.s__Campylobacter_showae	5.32674e-05	0
+PWY-6121: 5-aminoimidazole ribonucleotide biosynthesis I|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000219147	0
+PWY-6121: 5-aminoimidazole ribonucleotide biosynthesis I|g__Gemella.s__Gemella_morbillorum	8.34533e-05	0
+PWY-6121: 5-aminoimidazole ribonucleotide biosynthesis I|g__Haemophilus.s__Haemophilus_sputorum	0	5.11505e-05
+PWY-6122: 5-aminoimidazole ribonucleotide biosynthesis II|g__Campylobacter.s__Campylobacter_showae	6.37657e-05	0
+PWY-6122: 5-aminoimidazole ribonucleotide biosynthesis II|g__Eikenella.s__Eikenella_corrodens	3.24037e-05	0
+PWY-6122: 5-aminoimidazole ribonucleotide biosynthesis II|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000224865	0
+PWY-6122: 5-aminoimidazole ribonucleotide biosynthesis II|g__Gemella.s__Gemella_morbillorum	7.98567e-05	0
+PWY-6122: 5-aminoimidazole ribonucleotide biosynthesis II|g__Haemophilus.s__Haemophilus_sputorum	0	4.57658e-05
+PWY-6124: inosine-5'-phosphate biosynthesis II|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000373188	0
+PWY-6125: superpathway of guanosine nucleotides de novo biosynthesis II|g__Haemophilus.s__Haemophilus_parainfluenzae	0	5.79049e-05
+PWY-6126: superpathway of adenosine nucleotides de novo biosynthesis II|g__Haemophilus.s__Haemophilus_parainfluenzae	0	4.49007e-05
+PWY-6151: S-adenosyl-L-methionine cycle I|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000325205	0
+PWY-6151: S-adenosyl-L-methionine cycle I|g__Haemophilus.s__Haemophilus_sputorum	0	5.95467e-05
+PWY-6163: chorismate biosynthesis from 3-dehydroquinate|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000373258	0
+PWY-621: sucrose degradation III (sucrose invertase)|g__Haemophilus.s__Haemophilus_sputorum	0	5.01961e-05
+PWY-6277: superpathway of 5-aminoimidazole ribonucleotide biosynthesis|g__Campylobacter.s__Campylobacter_showae	6.37657e-05	0
+PWY-6277: superpathway of 5-aminoimidazole ribonucleotide biosynthesis|g__Eikenella.s__Eikenella_corrodens	3.24037e-05	0
+PWY-6277: superpathway of 5-aminoimidazole ribonucleotide biosynthesis|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000224865	0
+PWY-6277: superpathway of 5-aminoimidazole ribonucleotide biosynthesis|g__Gemella.s__Gemella_morbillorum	7.98567e-05	0
+PWY-6277: superpathway of 5-aminoimidazole ribonucleotide biosynthesis|g__Haemophilus.s__Haemophilus_sputorum	0	4.57658e-05
+PWY-6317: galactose degradation I (Leloir pathway)|g__Haemophilus.s__Haemophilus_sputorum	0	5.52585e-05
+PWY-6385: peptidoglycan biosynthesis III (mycobacteria)|g__Fusobacterium.s__Fusobacterium_nucleatum	5.93205e-05	0
+PWY-6386: UDP-N-acetylmuramoyl-pentapeptide biosynthesis II (lysine-containing)|g__Fusobacterium.s__Fusobacterium_nucleatum	5.79414e-05	0
+PWY-6386: UDP-N-acetylmuramoyl-pentapeptide biosynthesis II (lysine-containing)|g__Haemophilus.s__Haemophilus_sputorum	0	8.84163e-05
+PWY-6387: UDP-N-acetylmuramoyl-pentapeptide biosynthesis I (meso-diaminopimelate containing)|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000315424	0
+PWY-6387: UDP-N-acetylmuramoyl-pentapeptide biosynthesis I (meso-diaminopimelate containing)|g__Haemophilus.s__Haemophilus_sputorum	0	6.45978e-05
+PWY-6609: adenine and adenosine salvage III|g__Solobacterium.s__Solobacterium_moorei	7.63236e-05	0
+PWY-6737: starch degradation V|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000325475	0
+PWY-6737: starch degradation V|g__Haemophilus.s__Haemophilus_sputorum	0	2.82249e-05
+PWY-6936: seleno-amino acid biosynthesis|g__Haemophilus.s__Haemophilus_sputorum	0	0.000131728
+PWY-7013: L-1,2-propanediol degradation|g__Fusobacterium.s__Fusobacterium_nucleatum	8.60001e-05	0
+PWY-7111: pyruvate fermentation to isobutanol (engineered)|g__Campylobacter.s__Campylobacter_showae	3.71525e-05	0
+PWY-7111: pyruvate fermentation to isobutanol (engineered)|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000328989	0
+PWY-7111: pyruvate fermentation to isobutanol (engineered)|g__Haemophilus.s__Haemophilus_parainfluenzae	0	2.59101e-05
+PWY-7111: pyruvate fermentation to isobutanol (engineered)|g__Haemophilus.s__Haemophilus_sputorum	0	8.40352e-05
+PWY-7111: pyruvate fermentation to isobutanol (engineered)|g__Sphingomonas.s__Sphingomonas_melonis	0	8.39558e-05
+PWY-7187: pyrimidine deoxyribonucleotides de novo biosynthesis II|g__Haemophilus.s__Haemophilus_sputorum	0	6.05705e-05
+PWY-7219: adenosine ribonucleotides de novo biosynthesis|g__Alloprevotella.s__Alloprevotella_tannerae	5.85073e-05	0
+PWY-7219: adenosine ribonucleotides de novo biosynthesis|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000492195	0
+PWY-7219: adenosine ribonucleotides de novo biosynthesis|g__Gemella.s__Gemella_morbillorum	5.26713e-05	0
+PWY-7219: adenosine ribonucleotides de novo biosynthesis|g__Haemophilus.s__Haemophilus_parainfluenzae	0	7.46422e-05
+PWY-7219: adenosine ribonucleotides de novo biosynthesis|g__Haemophilus.s__Haemophilus_sputorum	0	6.60443e-05
+PWY-7219: adenosine ribonucleotides de novo biosynthesis|g__Prevotella.s__Prevotella_nigrescens	8.9932e-05	0
+PWY-7219: adenosine ribonucleotides de novo biosynthesis|g__Sphingomonas.s__Sphingomonas_melonis	0	0.000282462
+PWY-7220: adenosine deoxyribonucleotides de novo biosynthesis II|g__Haemophilus.s__Haemophilus_parainfluenzae	0	3.72573e-05
+PWY-7220: adenosine deoxyribonucleotides de novo biosynthesis II|g__Solobacterium.s__Solobacterium_moorei	3.03576e-05	0
+PWY-7221: guanosine ribonucleotides de novo biosynthesis|g__Gemella.s__Gemella_morbillorum	5.65136e-05	0
+PWY-7221: guanosine ribonucleotides de novo biosynthesis|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0.000116723
+PWY-7222: guanosine deoxyribonucleotides de novo biosynthesis II|g__Haemophilus.s__Haemophilus_parainfluenzae	0	3.72573e-05
+PWY-7222: guanosine deoxyribonucleotides de novo biosynthesis II|g__Solobacterium.s__Solobacterium_moorei	3.03576e-05	0
+PWY-7228: superpathway of guanosine nucleotides de novo biosynthesis I|g__Haemophilus.s__Haemophilus_parainfluenzae	0	9.97109e-05
+PWY-7229: superpathway of adenosine nucleotides de novo biosynthesis I|g__Haemophilus.s__Haemophilus_parainfluenzae	0	5.14902e-05
+PWY-7357: thiamin formation from pyrithiamine and oxythiamine (yeast)|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000216644	0
+PWY-7663: gondoate biosynthesis (anaerobic)|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000220377	0
+PWY-7663: gondoate biosynthesis (anaerobic)|g__Prevotella.s__Prevotella_nigrescens	0.00015199	0
+PWY66-422: D-galactose degradation V (Leloir pathway)|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000375703	0
+PWY66-422: D-galactose degradation V (Leloir pathway)|g__Haemophilus.s__Haemophilus_sputorum	0	5.52585e-05
+SER-GLYSYN-PWY: superpathway of L-serine and glycine biosynthesis I|g__Campylobacter.s__Campylobacter_showae	2.70286e-05	0
+SER-GLYSYN-PWY: superpathway of L-serine and glycine biosynthesis I|g__Prevotella.s__Prevotella_nigrescens	7.03477e-05	0
+SER-GLYSYN-PWY: superpathway of L-serine and glycine biosynthesis I|g__Sphingomonas.s__Sphingomonas_melonis	0	0.000130183
+THISYNARA-PWY: superpathway of thiamin diphosphate biosynthesis III (eukaryotes)|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000134303	0
+TRNA-CHARGING-PWY: tRNA charging|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000317852	0
+UDPNAGSYN-PWY: UDP-N-acetyl-D-glucosamine biosynthesis I|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000426467	0
+VALSYN-PWY: L-valine biosynthesis|g__Campylobacter.s__Campylobacter_showae	3.33619e-05	0
+VALSYN-PWY: L-valine biosynthesis|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000496764	0
+VALSYN-PWY: L-valine biosynthesis|g__Haemophilus.s__Haemophilus_sputorum	0	6.65565e-05
+VALSYN-PWY: L-valine biosynthesis|g__Sphingomonas.s__Sphingomonas_melonis	0	0.000128244

@@ -1,0 +1,46 @@
+PathwayL2	C1	C2
+ sorting and degradation	15237.642	1388.0987
+Aging	3237.49	0.0
+Amino acid metabolism	33953.50099999999	10490.832999999999
+Biosynthesis of other secondary metabolites	4602.267	941.803
+Cancer: overview	4793.497	10742.0
+Cancer: specific types	1104.217	0.0
+Carbohydrate metabolism	39365.31799999999	21468.036000000004
+Cardiovascular disease	1104.217	0.0
+Cell growth and death	6860.167000000001	103.776
+Cell motility	5602.389999999999	5208.664000000001
+Cellular community - prokaryotes	15851.949000000004	3307.7000000000003
+Digestive system	0.0	783.471
+Drug resistance: antimicrobial	2632.1569999999997	2322.06
+Drug resistance: antineoplastic	2872.844	0.0
+Endocrine and metabolic disease	1277.3290000000002	3960.609
+Endocrine system	4459.504000000001	6264.517
+Energy metabolism	21468.243000000002	3511.2110000000002
+Environmental adaptation	1573.076	0.0
+Excretory system	1844.64	0.0
+Folding	15237.642	1388.0987
+Glycan biosynthesis and metabolism	17469.057	7990.044000000001
+Immune system	4416.868	0.0
+Infectious disease: bacterial	5020.416	0.0
+Infectious disease: viral	0.0	3008.94
+Lipid metabolism	8676.551	3274.707
+Membrane transport	15079.485999999999	343.588
+Metabolism of cofactors and vitamins	29895.453999999998	5402.2387
+Metabolism of other amino acids	14351.751999999999	5597.127
+Metabolism of terpenoids and polyketides	6816.7570000000005	1838.6529999999998
+Nervous system	3689.28	0.0
+Neurodegenerative disease	1115.3	0.0
+Nucleotide metabolism	42401.706	7387.84
+Poorly characterized	11032.096000000001	880.7180000000002
+Protein families: genetic information processing	212461.36500000002	62101.63199999999
+Protein families: metabolism	45585.916	16057.330999999998
+Protein families: signaling and cellular processes	70012.638	40185.68199999999
+Replication and repair	28735.255000000005	7019.575000000001
+Signal transduction	12409.581000000002	5695.385
+Transcription	6335.779	794.3389999999998
+Translation	50607.98200000001	11328.994999999999
+Transport and catabolism	764.2919999999999	1470.47
+Unclassified: genetic information processing	8071.506000000001	333.19499999999994
+Unclassified: metabolism	17740.417	1623.96
+Unclassified: signaling and cellular processes	9136.834	1608.029
+Xenobiotics biodegradation and metabolism	4694.5470000000005	5968.630999999999

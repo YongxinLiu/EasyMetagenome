@@ -1,0 +1,21 @@
+DATASET_COLORSTRIP
+SEPARATOR TAB
+BORDER_WIDTH	0.5
+COLOR	#bebada
+DATASET_LABEL	Kingdom
+LEGEND_COLORS	#1b9e77
+LEGEND_LABELS	d__Bacteria
+LEGEND_SHAPES	1
+LEGEND_TITLE	Kingdom
+MARGIN	5
+STRIP_WIDTH	25
+DATA
+mix_all.9	#1b9e77	d__Bacteria
+s_ERR011348.2	#1b9e77	d__Bacteria
+mix_all.4	#1b9e77	d__Bacteria
+mix_all.5	#1b9e77	d__Bacteria
+s_ERR011349.1	#1b9e77	d__Bacteria
+mix_all.8	#1b9e77	d__Bacteria
+mix_all.2	#1b9e77	d__Bacteria
+mix_all.10	#1b9e77	d__Bacteria
+mix_all.6	#1b9e77	d__Bacteria

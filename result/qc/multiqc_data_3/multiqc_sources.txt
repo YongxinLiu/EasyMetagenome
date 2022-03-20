@@ -1,0 +1,5 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	temp | qc | C1_1_kneaddata_paired_1	/mnt/c/meta/temp/qc/C1_1_kneaddata_paired_1_fastqc.zip
+FastQC	all_sections	temp | qc | C1_1_kneaddata_paired_2	/mnt/c/meta/temp/qc/C1_1_kneaddata_paired_2_fastqc.zip
+FastQC	all_sections	temp | qc | C2_1_kneaddata_paired_1	/mnt/c/meta/temp/qc/C2_1_kneaddata_paired_1_fastqc.zip
+FastQC	all_sections	temp | qc | C2_1_kneaddata_paired_2	/mnt/c/meta/temp/qc/C2_1_kneaddata_paired_2_fastqc.zip

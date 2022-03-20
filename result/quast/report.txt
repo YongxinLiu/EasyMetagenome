@@ -1,0 +1,24 @@
+All statistics are based on contigs of size >= 500 bp, unless otherwise noted (e.g., "# contigs (>= 0 bp)" and "Total length (>= 0 bp)" include all contigs).
+
+Assembly                    megahit  metapasdes
+# contigs (>= 0 bp)         1016     8235      
+# contigs (>= 1000 bp)      17       21        
+# contigs (>= 5000 bp)      0        0         
+# contigs (>= 10000 bp)     0        0         
+# contigs (>= 25000 bp)     0        0         
+# contigs (>= 50000 bp)     0        0         
+Total length (>= 0 bp)      433449   2350648   
+Total length (>= 1000 bp)   23564    28176     
+Total length (>= 5000 bp)   0        0         
+Total length (>= 10000 bp)  0        0         
+Total length (>= 25000 bp)  0        0         
+Total length (>= 50000 bp)  0        0         
+# contigs                   185      347       
+Largest contig              2468     2280      
+Total length                128230   229085    
+GC (%)                      39.17    37.70     
+N50                         646      625       
+N75                         556      549       
+L50                         71       139       
+L75                         125      237       
+# N's per 100 kbp           0.00     0.00      

@@ -1,0 +1,37 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	temp | qc | N4_1_kneaddata_paired_1	/mnt/bai/yongxin/ehbio/train/2005meta/temp/qc/N4_1_kneaddata_paired_1_fastqc.zip
+FastQC	all_sections	temp | qc | N5_1_kneaddata_paired_1	/mnt/bai/yongxin/ehbio/train/2005meta/temp/qc/N5_1_kneaddata_paired_1_fastqc.zip
+FastQC	all_sections	temp | qc | C6_1_kneaddata_paired_1	/mnt/bai/yongxin/ehbio/train/2005meta/temp/qc/C6_1_kneaddata_paired_1_fastqc.zip
+FastQC	all_sections	temp | qc | N5_1_kneaddata_paired_2	/mnt/bai/yongxin/ehbio/train/2005meta/temp/qc/N5_1_kneaddata_paired_2_fastqc.zip
+FastQC	all_sections	temp | qc | C5_1_kneaddata_paired_1	/mnt/bai/yongxin/ehbio/train/2005meta/temp/qc/C5_1_kneaddata_paired_1_fastqc.zip
+FastQC	all_sections	temp | qc | N6_1_kneaddata_paired_2	/mnt/bai/yongxin/ehbio/train/2005meta/temp/qc/N6_1_kneaddata_paired_2_fastqc.zip
+FastQC	all_sections	temp | qc | N6_1_kneaddata_paired_1	/mnt/bai/yongxin/ehbio/train/2005meta/temp/qc/N6_1_kneaddata_paired_1_fastqc.zip
+FastQC	all_sections	temp | qc | N2_1_kneaddata_paired_1	/mnt/bai/yongxin/ehbio/train/2005meta/temp/qc/N2_1_kneaddata_paired_1_fastqc.zip
+FastQC	all_sections	temp | qc | C2_1_kneaddata_paired_2	/mnt/bai/yongxin/ehbio/train/2005meta/temp/qc/C2_1_kneaddata_paired_2_fastqc.zip
+FastQC	all_sections	temp | qc | C5_1_kneaddata_paired_2	/mnt/bai/yongxin/ehbio/train/2005meta/temp/qc/C5_1_kneaddata_paired_2_fastqc.zip
+FastQC	all_sections	temp | qc | N1_1_kneaddata_paired_2	/mnt/bai/yongxin/ehbio/train/2005meta/temp/qc/N1_1_kneaddata_paired_2_fastqc.zip
+FastQC	all_sections	temp | qc | N3_1_kneaddata_paired_2	/mnt/bai/yongxin/ehbio/train/2005meta/temp/qc/N3_1_kneaddata_paired_2_fastqc.zip
+FastQC	all_sections	temp | qc | C1_1_kneaddata_paired_2	/mnt/bai/yongxin/ehbio/train/2005meta/temp/qc/C1_1_kneaddata_paired_2_fastqc.zip
+FastQC	all_sections	temp | qc | N1_1_kneaddata_paired_1	/mnt/bai/yongxin/ehbio/train/2005meta/temp/qc/N1_1_kneaddata_paired_1_fastqc.zip
+FastQC	all_sections	temp | qc | C1_1_kneaddata_paired_1	/mnt/bai/yongxin/ehbio/train/2005meta/temp/qc/C1_1_kneaddata_paired_1_fastqc.zip
+FastQC	all_sections	temp | qc | C3_1_kneaddata_paired_1	/mnt/bai/yongxin/ehbio/train/2005meta/temp/qc/C3_1_kneaddata_paired_1_fastqc.zip
+FastQC	all_sections	temp | qc | N2_1_kneaddata_paired_2	/mnt/bai/yongxin/ehbio/train/2005meta/temp/qc/N2_1_kneaddata_paired_2_fastqc.zip
+FastQC	all_sections	temp | qc | C4_1_kneaddata_paired_2	/mnt/bai/yongxin/ehbio/train/2005meta/temp/qc/C4_1_kneaddata_paired_2_fastqc.zip
+FastQC	all_sections	temp | qc | C6_1_kneaddata_paired_2	/mnt/bai/yongxin/ehbio/train/2005meta/temp/qc/C6_1_kneaddata_paired_2_fastqc.zip
+FastQC	all_sections	temp | qc | C4_1_kneaddata_paired_1	/mnt/bai/yongxin/ehbio/train/2005meta/temp/qc/C4_1_kneaddata_paired_1_fastqc.zip
+FastQC	all_sections	temp | qc | C3_1_kneaddata_paired_2	/mnt/bai/yongxin/ehbio/train/2005meta/temp/qc/C3_1_kneaddata_paired_2_fastqc.zip
+FastQC	all_sections	temp | qc | N3_1_kneaddata_paired_1	/mnt/bai/yongxin/ehbio/train/2005meta/temp/qc/N3_1_kneaddata_paired_1_fastqc.zip
+FastQC	all_sections	temp | qc | C2_1_kneaddata_paired_1	/mnt/bai/yongxin/ehbio/train/2005meta/temp/qc/C2_1_kneaddata_paired_1_fastqc.zip
+FastQC	all_sections	temp | qc | N4_1_kneaddata_paired_2	/mnt/bai/yongxin/ehbio/train/2005meta/temp/qc/N4_1_kneaddata_paired_2_fastqc.zip
+Bowtie 2	all_sections	N1_1_kneaddata.trimmed.single.1	/mnt/bai/yongxin/ehbio/train/2005meta/temp/qc/N1_1_kneaddata.log
+Bowtie 2	all_sections	N2_1_kneaddata.trimmed.single.1	/mnt/bai/yongxin/ehbio/train/2005meta/temp/qc/N2_1_kneaddata.log
+Bowtie 2	all_sections	C6_1_kneaddata.trimmed.single.1	/mnt/bai/yongxin/ehbio/train/2005meta/temp/qc/C6_1_kneaddata.log
+Bowtie 2	all_sections	C3_1_kneaddata.trimmed.single.1	/mnt/bai/yongxin/ehbio/train/2005meta/temp/qc/C3_1_kneaddata.log
+Bowtie 2	all_sections	N4_1_kneaddata.trimmed.single.1	/mnt/bai/yongxin/ehbio/train/2005meta/temp/qc/N4_1_kneaddata.log
+Bowtie 2	all_sections	N6_1_kneaddata.trimmed.single.1	/mnt/bai/yongxin/ehbio/train/2005meta/temp/qc/N6_1_kneaddata.log
+Bowtie 2	all_sections	C1_1_kneaddata.trimmed.single.1	/mnt/bai/yongxin/ehbio/train/2005meta/temp/qc/C1_1_kneaddata.log
+Bowtie 2	all_sections	C4_1_kneaddata.trimmed.single.1	/mnt/bai/yongxin/ehbio/train/2005meta/temp/qc/C4_1_kneaddata.log
+Bowtie 2	all_sections	N5_1_kneaddata.trimmed.single.1	/mnt/bai/yongxin/ehbio/train/2005meta/temp/qc/N5_1_kneaddata.log
+Bowtie 2	all_sections	N3_1_kneaddata.trimmed.single.1	/mnt/bai/yongxin/ehbio/train/2005meta/temp/qc/N3_1_kneaddata.log
+Bowtie 2	all_sections	C5_1_kneaddata.trimmed.single.1	/mnt/bai/yongxin/ehbio/train/2005meta/temp/qc/C5_1_kneaddata.log
+Bowtie 2	all_sections	C2_1_kneaddata.trimmed.single.1	/mnt/bai/yongxin/ehbio/train/2005meta/temp/qc/C2_1_kneaddata.log

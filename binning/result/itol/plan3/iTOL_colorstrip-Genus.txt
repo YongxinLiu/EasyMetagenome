@@ -1,0 +1,21 @@
+DATASET_COLORSTRIP
+SEPARATOR TAB
+BORDER_WIDTH	0.5
+COLOR	#bebada
+DATASET_LABEL	Genus
+LEGEND_COLORS	#e41a1c	#377eb8	#4daf4a	#984ea3	#ff7f00	#ffff33	#a65628	#f781bf	#999999
+LEGEND_LABELS	g__Bacteroides	g__Butyrivibrio_A	g__CAG-177	g__CAG-180	g__CAG-273	g__CAG-465	g__Erysipelatoclostridium	g__Phascolarctobacterium	g__Ruminococcus_E
+LEGEND_SHAPES	1	1	1	1	1	1	1	1	1
+LEGEND_TITLE	Genus
+MARGIN	5
+STRIP_WIDTH	25
+DATA
+mix_all.9	#a65628	g__Erysipelatoclostridium
+s_ERR011348.2	#999999	g__Ruminococcus_E
+mix_all.4	#4daf4a	g__CAG-177
+mix_all.5	#984ea3	g__CAG-180
+s_ERR011349.1	#ff7f00	g__CAG-273
+mix_all.8	#ffff33	g__CAG-465
+mix_all.2	#377eb8	g__Butyrivibrio_A
+mix_all.10	#f781bf	g__Phascolarctobacterium
+mix_all.6	#e41a1c	g__Bacteroides

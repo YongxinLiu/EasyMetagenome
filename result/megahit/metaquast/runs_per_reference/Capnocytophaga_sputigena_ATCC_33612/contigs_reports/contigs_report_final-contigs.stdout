@@ -1,0 +1,156 @@
+Aligning contigs to reference...
+	Aligning contigs to the reference
+Filtering alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000001.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000002.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000003.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000004.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000005.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000006.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000007.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000008.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000009.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000010.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000011.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000012.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000013.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000014.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000015.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000016.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000017.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000018.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000019.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000020.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000021.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000022.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000023.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000024.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000025.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000026.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000027.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000028.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000029.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000030.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000031.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000032.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000033.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000034.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000035.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000036.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000037.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000038.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000039.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000040.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000041.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000042.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000043.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000044.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000045.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000046.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000047.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000048.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000049.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000050.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000051.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000052.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000053.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000054.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000055.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000056.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000057.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000058.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000059.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000060.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000061.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000062.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000063.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000064.1]
+	Loaded [Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000065.1]
+	Total Regions: 65
+	Total Region Length: 2997845
+Analyzing contigs...
+CONTIG: k119_184 (824bp)
+Best alignment score: 547.0 (LEN: 551, IDY: 99.27), Total number of alignments: 2
+			Looking for the best set of alignments (out of 2 total alignments)
+			The best set is below. Score: 770.0, number of alignments: 2, unaligned bases: 46
+		This contig is misassembled.
+			Real Alignment 1: 684 910 | 1 227 | 227 227 | 98.24 | Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000051.1 k119_184
+			  Indel (> 5bp) between these two alignments: insertion of length 32; 4 mismatches (number of Ns: 0)
+			Real Alignment 2: 915 1465 | 264 814 | 551 551 | 99.27 | Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000051.1 k119_184
+
+CONTIG: k119_595 (1219bp)
+Best alignment score: 834.0 (LEN: 854, IDY: 97.66), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 834.0, number of alignments: 1, unaligned bases: 365
+		Alignment: 1967 2820 | 895 42 | 854 854 | 97.66 | Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000051.1 k119_595
+
+CONTIG: k119_356 (510bp)
+Best alignment score: 490.0 (LEN: 509, IDY: 96.27), Total number of alignments: 1
+		One align captures most of this contig: 12121 12629 | 2 510 | 509 509 | 96.27 | Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000035.1 k119_356
+
+CONTIG: k119_382 (595bp)
+Best alignment score: 470.0 (LEN: 491, IDY: 95.72), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 470.0, number of alignments: 1, unaligned bases: 104
+		Alignment: 283891 284381 | 5 495 | 491 491 | 95.72 | Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000001.1 k119_382
+
+CONTIG: k119_254 (732bp)
+Best alignment score: 718.0 (LEN: 723, IDY: 99.31), Total number of alignments: 1
+		One align captures most of this contig: 304 1026 | 732 10 | 723 723 | 99.31 | Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000054.1 k119_254
+
+CONTIG: k119_787 (545bp)
+Best alignment score: 86.0 (LEN: 87, IDY: 98.85), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 86.0, number of alignments: 1, unaligned bases: 458
+		Alignment: 52029 52115 | 1 87 | 87 87 | 98.85 | Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000013.1 k119_787
+
+CONTIG: k119_133 (665bp)
+Best alignment score: 648.2 (LEN: 665, IDY: 97.48), Total number of alignments: 1
+		One align captures most of this contig: 67325 67998 | 1 665 | 674 665 | 97.48 | Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000013.1 k119_133
+
+CONTIG: k119_292 (573bp)
+Best alignment score: 515.0 (LEN: 537, IDY: 95.90), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 515.0, number of alignments: 1, unaligned bases: 36
+		Alignment: 2451 2987 | 573 37 | 537 537 | 95.9 | Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000038.1 k119_292
+
+CONTIG: k119_833 (667bp)
+Best alignment score: 341.0 (LEN: 352, IDY: 96.88), Total number of alignments: 1
+			Looking for the best set of alignments (out of 1 total alignments)
+			The best set is below. Score: 341.0, number of alignments: 1, unaligned bases: 315
+		Alignment: 134984 135335 | 312 663 | 352 352 | 96.88 | Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000008.1 k119_833
+
+Analyzing coverage...
+Writing SNPs into /mnt/c/meta/result/megahit/metaquast/runs_per_reference/Capnocytophaga_sputigena_ATCC_33612/contigs_reports/minimap_output/final-contigs.used_snps.gz
+
+Analysis is finished!
+Founded SNPs were written into /mnt/c/meta/result/megahit/metaquast/runs_per_reference/Capnocytophaga_sputigena_ATCC_33612/contigs_reports/minimap_output/final-contigs.used_snps.gz
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Scaffold gap extensive misassemblies: 0
+	Scaffold gap local misassemblies: 0
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Unaligned Contigs: 0 + 0 part
+Half Unaligned Contigs with Misassemblies: 0
+Unaligned Contig Bases: 0
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Extra Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each of these contigs was used.
+
+	Covered Bases: 5005
+
+	SNPs: 119
+	Insertions: 32
+	Deletions: 9
+

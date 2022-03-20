@@ -1,0 +1,1392 @@
+Domain	Phylum	Class	Order	Family	Genus	Species	C2	C3	C4	C5	C6	N1	N2	N3	N4	N5	N6
+Archaea	Crenarchaeota	Thermoprotei	Sulfolobales	Sulfolobaceae	Acidianus	Acidianus ambivalens	0	0	0	0	0	0	0	0	0	0	1
+Archaea	Euryarchaeota	Methanobacteria	Methanobacteriales	Methanobacteriaceae	Methanobrevibacter	Methanobrevibacter sp. AbM4	0	0	1	0	0	0	0	0	0	0	0
+Archaea	Euryarchaeota	Methanococci	Methanococcales	unclassified	Methanofervidicoccus	Methanofervidicoccus sp. A16	0	0	0	0	0	0	0	0	0	0	1
+Archaea	Euryarchaeota	Thermococci	Thermococcales	Thermococcaceae	Pyrococcus	Pyrococcus furiosus	0	0	0	1	0	0	0	0	0	0	0
+Archaea	Euryarchaeota	Thermococci	Thermococcales	Thermococcaceae	Thermococcus	Thermococcus sp. 2319x1	0	0	0	1	0	0	0	0	0	0	0
+Archaea	Euryarchaeota	Thermoplasmata	Thermoplasmatales	Cuniculiplasmataceae	Cuniculiplasma	Cuniculiplasma divulgatum	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Actinomycetales	Actinomycetaceae	Actinomyces	Actinomyces gaoshouyii	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Actinobacteria	Actinobacteria	Actinomycetales	Actinomycetaceae	Actinomyces	Actinomyces howellii	1	0	0	0	0	0	2	0	0	0	2
+Bacteria	Actinobacteria	Actinobacteria	Actinomycetales	Actinomycetaceae	Actinomyces	Actinomyces israelii	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Actinomycetales	Actinomycetaceae	Actinomyces	Actinomyces naeslundii	11	0	0	0	0	0	54	3	0	5	24
+Bacteria	Actinobacteria	Actinobacteria	Actinomycetales	Actinomycetaceae	Actinomyces	Actinomyces oris	26	2	1	1	3	0	74	4	0	8	14
+Bacteria	Actinobacteria	Actinobacteria	Actinomycetales	Actinomycetaceae	Actinomyces	Actinomyces pacaensis	0	2	2	11	1	16	3	17	4	42	0
+Bacteria	Actinobacteria	Actinobacteria	Actinomycetales	Actinomycetaceae	Actinomyces	Actinomyces qiguomingii	0	0	0	0	0	0	0	0	1	0	1
+Bacteria	Actinobacteria	Actinobacteria	Actinomycetales	Actinomycetaceae	Actinomyces	Actinomyces radicidentis	0	0	0	0	0	0	1	0	0	0	1
+Bacteria	Actinobacteria	Actinobacteria	Actinomycetales	Actinomycetaceae	Actinomyces	Actinomyces slackii	1	0	0	0	0	0	0	1	0	0	1
+Bacteria	Actinobacteria	Actinobacteria	Actinomycetales	Actinomycetaceae	Actinomyces	Actinomyces sp. 2129	0	0	0	0	0	0	1	0	0	0	1
+Bacteria	Actinobacteria	Actinobacteria	Actinomycetales	Actinomycetaceae	Actinomyces	Actinomyces sp. 299	1	1	0	0	0	0	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Actinomycetales	Actinomycetaceae	Actinomyces	Actinomyces sp. 432	0	0	0	0	0	1	2	0	0	0	1
+Bacteria	Actinobacteria	Actinobacteria	Actinomycetales	Actinomycetaceae	Actinomyces	Actinomyces sp. Chiba101	0	0	0	0	0	0	9	0	0	0	2
+Bacteria	Actinobacteria	Actinobacteria	Actinomycetales	Actinomycetaceae	Actinomyces	Actinomyces sp. dk561	1	0	0	0	0	0	0	0	0	0	1
+Bacteria	Actinobacteria	Actinobacteria	Actinomycetales	Actinomycetaceae	Actinomyces	Actinomyces sp. oral taxon 169	50	4	0	1	6	2	187	32	0	8	56
+Bacteria	Actinobacteria	Actinobacteria	Actinomycetales	Actinomycetaceae	Actinomyces	Actinomyces sp. oral taxon 171	9	2	0	0	1	0	41	12	1	5	20
+Bacteria	Actinobacteria	Actinobacteria	Actinomycetales	Actinomycetaceae	Actinomyces	Actinomyces sp. oral taxon 414	0	0	0	0	0	7	1	0	0	5	125
+Bacteria	Actinobacteria	Actinobacteria	Actinomycetales	Actinomycetaceae	Actinomyces	Actinomyces sp. oral taxon 897	1	0	0	0	0	177	2	0	0	1	6
+Bacteria	Actinobacteria	Actinobacteria	Actinomycetales	Actinomycetaceae	Actinomyces	Actinomyces sp. zg-325	1	0	0	0	0	0	2	0	0	0	1
+Bacteria	Actinobacteria	Actinobacteria	Actinomycetales	Actinomycetaceae	Actinomyces	Actinomyces sp. ZJ34	0	0	0	0	0	0	1	0	0	1	1
+Bacteria	Actinobacteria	Actinobacteria	Actinomycetales	Actinomycetaceae	Actinomyces	Actinomyces tangfeifanii	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Actinobacteria	Actinobacteria	Actinomycetales	Actinomycetaceae	Actinomyces	Actinomyces viscosus	3	2	0	0	1	0	21	2	0	2	27
+Bacteria	Actinobacteria	Actinobacteria	Actinomycetales	Actinomycetaceae	Actinotignum	Actinotignum schaalii	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Actinobacteria	Actinobacteria	Actinomycetales	Actinomycetaceae	Arcanobacterium	Arcanobacterium haemolyticum	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Actinomycetales	Actinomycetaceae	Pauljensenia	Pauljensenia hongkongensis	0	0	1	0	0	4	0	0	0	5	53
+Bacteria	Actinobacteria	Actinobacteria	Actinomycetales	Actinomycetaceae	Schaalia	Schaalia cardiffensis	3	0	0	0	0	1	0	0	1	0	0
+Bacteria	Actinobacteria	Actinobacteria	Actinomycetales	Actinomycetaceae	Schaalia	Schaalia meyeri	0	0	1	0	1	1	1	1	0	10	50
+Bacteria	Actinobacteria	Actinobacteria	Actinomycetales	Actinomycetaceae	Schaalia	Schaalia odontolytica	0	8	15	0	5	74	10	245	12	408	4
+Bacteria	Actinobacteria	Actinobacteria	Actinomycetales	Actinomycetaceae	Trueperella	Trueperella sp. 19M2397	0	0	0	0	0	0	0	1	0	3	0
+Bacteria	Actinobacteria	Actinobacteria	Bifidobacteriales	Bifidobacteriaceae	Bifidobacterium	Bifidobacterium dentium	0	0	0	0	0	11	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Bifidobacteriales	Bifidobacteriaceae	Bifidobacterium	Bifidobacterium longum	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Bifidobacteriales	Bifidobacteriaceae	Scardovia	Scardovia inopinata	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Corynebacteriales	Corynebacteriaceae	Corynebacterium	Corynebacterium deserti	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Corynebacteriales	Corynebacteriaceae	Corynebacterium	Corynebacterium doosanense	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Corynebacteriales	Corynebacteriaceae	Corynebacterium	Corynebacterium efficiens	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Corynebacteriales	Corynebacteriaceae	Corynebacterium	Corynebacterium endometrii	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Corynebacteriales	Corynebacteriaceae	Corynebacterium	Corynebacterium genitalium	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Corynebacteriales	Corynebacteriaceae	Corynebacterium	Corynebacterium jeikeium	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Corynebacteriales	Corynebacteriaceae	Corynebacterium	Corynebacterium kroppenstedtii	0	2	0	0	0	1	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Corynebacteriales	Corynebacteriaceae	Corynebacterium	Corynebacterium lactis	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Actinobacteria	Actinobacteria	Corynebacteriales	Corynebacteriaceae	Corynebacterium	Corynebacterium matruchotii	125	0	0	0	24	1	1589	0	2	7	1271
+Bacteria	Actinobacteria	Actinobacteria	Corynebacteriales	Corynebacteriaceae	Corynebacterium	Corynebacterium simulans	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Corynebacteriales	Corynebacteriaceae	Corynebacterium	Corynebacterium sp. 2183	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Corynebacteriales	Corynebacteriaceae	Corynebacterium	Corynebacterium striatum	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Corynebacteriales	Corynebacteriaceae	Corynebacterium	Corynebacterium ulcerans	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Actinobacteria	Actinobacteria	Corynebacteriales	Dietziaceae	Dietzia	Dietzia sp. oral taxon 368	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Corynebacteriales	Gordoniaceae	Gordonia	Gordonia sp. HY186	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Corynebacteriales	Mycobacteriaceae	Mycobacterium	Mycobacterium seoulense	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Actinobacteria	Actinobacteria	Corynebacteriales	Mycobacteriaceae	Mycobacterium	Mycobacterium sp. PYR15	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Actinobacteria	Actinobacteria	Corynebacteriales	Mycobacteriaceae	Mycolicibacterium	Mycolicibacterium aichiense	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Corynebacteriales	Mycobacteriaceae	Mycolicibacterium	Mycolicibacterium celeriflavum	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Actinobacteria	Actinobacteria	Corynebacteriales	Mycobacteriaceae	Mycolicibacterium	Mycolicibacterium goodii	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Actinobacteria	Actinobacteria	Corynebacteriales	Mycobacteriaceae	Mycolicibacterium	Mycolicibacterium phlei	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Corynebacteriales	Mycobacteriaceae	Mycolicibacterium	Mycolicibacterium phocaicum	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Corynebacteriales	Mycobacteriaceae	Mycolicibacterium	Mycolicibacterium sarraceniae	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Actinobacteria	Actinobacteria	Corynebacteriales	Nocardiaceae	Rhodococcus	Rhodococcus sp. B7740	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Actinobacteria	Actinobacteria	Frankiales	Frankiaceae	Frankia	Frankia sp. EAN1pec	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Frankiales	Frankiaceae	Jatrophihabitans	Jatrophihabitans sp. GAS493	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Actinobacteria	Actinobacteria	Micrococcales	Bogoriellaceae	Georgenia	Georgenia sp. Z294	0	1	0	0	0	0	0	0	0	1	0
+Bacteria	Actinobacteria	Actinobacteria	Micrococcales	Brevibacteriaceae	Brevibacterium	Brevibacterium siliguriense	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Micrococcales	Cellulomonadaceae	Cellulomonas	Cellulomonas fimi	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Micrococcales	Cellulomonadaceae	Cellulomonas	Cellulomonas flavigena	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Micrococcales	Cellulomonadaceae	Cellulomonas	Cellulomonas sp. H30R-01	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Micrococcales	Dermabacteraceae	Brachybacterium	Brachybacterium saurashtrense	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Micrococcales	Dermabacteraceae	Brachybacterium	Brachybacterium vulturis	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Actinobacteria	Actinobacteria	Micrococcales	Dermabacteraceae	Devriesea	Devriesea agamarum	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Actinobacteria	Actinobacteria	Micrococcales	Dermatophilaceae	Austwickia	Austwickia chelonae	0	0	0	0	0	0	0	1	0	1	0
+Bacteria	Actinobacteria	Actinobacteria	Micrococcales	Dermatophilaceae	Dermatophilus	Dermatophilus congolensis	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Actinobacteria	Actinobacteria	Micrococcales	Intrasporangiaceae	Intrasporangium	Intrasporangium calvum	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Micrococcales	Intrasporangiaceae	Janibacter	Janibacter limosus	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Actinobacteria	Actinobacteria	Micrococcales	Microbacteriaceae	Frondihabitans	Frondihabitans sp. PAMC 28766	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Micrococcales	Microbacteriaceae	Leifsonia	Leifsonia sp. 21MFCrub1.1	1	0	0	0	0	0	1	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Micrococcales	Microbacteriaceae	Leucobacter	Leucobacter sp. HDW9A	0	0	0	0	0	0	0	1	0	1	0
+Bacteria	Actinobacteria	Actinobacteria	Micrococcales	Microbacteriaceae	Leucobacter	Leucobacter sp. HDW9B	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Actinobacteria	Actinobacteria	Micrococcales	Microbacteriaceae	Microbacterium	Microbacterium sediminis	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Micrococcales	Microbacteriaceae	Microbacterium	Microbacterium sp. 4R-513	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Micrococcales	Microbacteriaceae	Microbacterium	Microbacterium sp. CBA3102	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Micrococcales	Microbacteriaceae	Microbacterium	Microbacterium sp. NY27	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Micrococcales	Microbacteriaceae	Microterricola	Microterricola viridarii	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Actinobacteria	Actinobacteria	Micrococcales	Microbacteriaceae	Mycetocola	Mycetocola sp. 449	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Micrococcales	Microbacteriaceae	Rathayibacter	Rathayibacter festucae	1	0	0	0	0	0	0	0	0	1	0
+Bacteria	Actinobacteria	Actinobacteria	Micrococcales	Microbacteriaceae	Rathayibacter	Rathayibacter sp. VKM Ac-2762	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Micrococcales	Microbacteriaceae	Salinibacterium	Salinibacterium sp. dk2585	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Actinobacteria	Actinobacteria	Micrococcales	Micrococcaceae	Arthrobacter	Arthrobacter alpinus	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Micrococcales	Micrococcaceae	Arthrobacter	Arthrobacter crystallopoietes	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Micrococcales	Micrococcaceae	Arthrobacter	Arthrobacter sp. QXT-31	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Actinobacteria	Actinobacteria	Micrococcales	Micrococcaceae	Kocuria	Kocuria rosea	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Actinobacteria	Actinobacteria	Micrococcales	Micrococcaceae	Micrococcus	Micrococcus luteus	0	0	1	0	0	0	0	0	0	1	0
+Bacteria	Actinobacteria	Actinobacteria	Micrococcales	Micrococcaceae	Micrococcus	Micrococcus sp. KBS0714	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Micrococcales	Micrococcaceae	Rothia	Rothia aeria	1	17	7	0	2	0	11	43	3	24	168
+Bacteria	Actinobacteria	Actinobacteria	Micrococcales	Micrococcaceae	Rothia	Rothia dentocariosa	41	2	2	4	5	1	337	10	4	99	140
+Bacteria	Actinobacteria	Actinobacteria	Micrococcales	Micrococcaceae	Rothia	Rothia mucilaginosa	7	87	1201	2	122	137	60	2421	1470	7418	42
+Bacteria	Actinobacteria	Actinobacteria	Micrococcales	Micrococcaceae	Rothia	Rothia nasimurium	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Actinobacteria	Actinobacteria	Micrococcales	Micrococcaceae	Rothia	Rothia terrae	0	0	0	0	0	0	2	0	2	0	0
+Bacteria	Actinobacteria	Actinobacteria	Micrococcales	Promicromonosporaceae	Cellulosimicrobium	Cellulosimicrobium cellulans	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Micrococcales	Promicromonosporaceae	Isoptericola	Isoptericola dokdonensis	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Micrococcales	Ruaniaceae	Haloactinobacterium	Haloactinobacterium sp. HY164	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Micrococcales	Ruaniaceae	Haloactinobacterium	Haloactinobacterium sp. RN3S43	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Actinobacteria	Actinobacteria	Micrococcales	Sanguibacteraceae	Sanguibacter	Sanguibacter sp. HDW7	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Actinobacteria	Actinobacteria	Micrococcales	unclassified	Luteimicrobium	Luteimicrobium xylanilyticum	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Micromonosporales	Micromonosporaceae	Actinoplanes	Actinoplanes missouriensis	0	0	0	1	0	0	0	0	0	1	0
+Bacteria	Actinobacteria	Actinobacteria	Micromonosporales	Micromonosporaceae	Micromonospora	Micromonospora carbonacea	1	1	0	0	0	0	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Micromonosporales	Micromonosporaceae	Micromonospora	Micromonospora purpureochromogenes	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Actinobacteria	Actinobacteria	Micromonosporales	Micromonosporaceae	Micromonospora	Micromonospora siamensis	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Actinobacteria	Actinobacteria	Nakamurellales	Nakamurellaceae	Nakamurella	Nakamurella panacisegetis	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Actinobacteria	Actinobacteria	Propionibacteriales	Nocardioidaceae	Actinopolymorpha	Actinopolymorpha singaporensis	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Actinobacteria	Actinobacteria	Propionibacteriales	Nocardioidaceae	Micropruina	Micropruina glycogenica	0	0	0	0	0	0	2	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Propionibacteriales	Nocardioidaceae	Nocardioides	Nocardioides anomalus	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Propionibacteriales	Nocardioidaceae	Nocardioides	Nocardioides sp. JQ2195	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Actinobacteria	Actinobacteria	Propionibacteriales	Propionibacteriaceae	Auraticoccus	Auraticoccus monumenti	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Propionibacteriales	Propionibacteriaceae	Cutibacterium	Cutibacterium acnes	20	23	17	0	0	15	10	1	0	1	2
+Bacteria	Actinobacteria	Actinobacteria	Propionibacteriales	Propionibacteriaceae	Cutibacterium	Cutibacterium avidum	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Propionibacteriales	Propionibacteriaceae	Cutibacterium	Cutibacterium granulosum	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Propionibacteriales	Propionibacteriaceae	Pseudopropionibacterium	Pseudopropionibacterium propionicum	33	18	0	0	2	10	1071	18	1	0	90
+Bacteria	Actinobacteria	Actinobacteria	Pseudonocardiales	Pseudonocardiaceae	Alloactinosynnema	Alloactinosynnema sp. L-07	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Pseudonocardiales	Pseudonocardiaceae	Amycolatopsis	Amycolatopsis albispora	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Actinobacteria	Actinobacteria	Pseudonocardiales	Pseudonocardiaceae	Amycolatopsis	Amycolatopsis orientalis	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Pseudonocardiales	Pseudonocardiaceae	Pseudonocardia	Pseudonocardia sp. HH130629-09	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Streptomycetales	Streptomycetaceae	Streptomyces	Streptomyces actuosus	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Streptomycetales	Streptomycetaceae	Streptomyces	Streptomyces ambofaciens	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Actinobacteria	Actinobacteria	Streptomycetales	Streptomycetaceae	Streptomyces	Streptomyces antimycoticus	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Actinobacteria	Actinobacteria	Streptomycetales	Streptomycetaceae	Streptomyces	Streptomyces bingchenggensis	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Streptomycetales	Streptomycetaceae	Streptomyces	Streptomyces clavuligerus	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Streptomycetales	Streptomycetaceae	Streptomyces	Streptomyces collinus	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Streptomycetales	Streptomycetaceae	Streptomyces	Streptomyces katrae	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Streptomycetales	Streptomycetaceae	Streptomyces	Streptomyces lunaelactis	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Streptomycetales	Streptomycetaceae	Streptomyces	Streptomyces pristinaespiralis	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Streptomycetales	Streptomycetaceae	Streptomyces	Streptomyces sp. NEAU-sy36	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Streptomycetales	Streptomycetaceae	Streptomyces	Streptomyces sp. NHF165	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Streptomycetales	Streptomycetaceae	Streptomyces	Streptomyces sp. S1D4-11	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Streptomycetales	Streptomycetaceae	Streptomyces	Streptomyces sp. SCSIO 3032	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Streptomycetales	Streptomycetaceae	Streptomyces	Streptomyces sp. TLI	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Streptomycetales	Streptomycetaceae	Streptomyces	Streptomyces sp. W1SF4	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Streptomycetales	Streptomycetaceae	Streptomyces	Streptomyces tsukubensis	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Actinobacteria	Actinobacteria	Streptomycetales	Streptomycetaceae	Streptomyces	Streptomyces venezuelae	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Actinobacteria	Actinobacteria	Streptosporangiales	Nocardiopsaceae	Thermobifida	Thermobifida fusca	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Actinobacteria	Actinobacteria	Streptosporangiales	Thermomonosporaceae	Actinomadura	Actinomadura sp. NAK00032	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Actinobacteria	Coriobacteriia	Coriobacteriales	Atopobiaceae	Lancefieldella	Lancefieldella parvula	2	1	0	0	18	27	33	0	1	5	6
+Bacteria	Actinobacteria	Coriobacteriia	Coriobacteriales	Atopobiaceae	Olsenella	Olsenella sp. oral taxon 807	0	0	0	0	1	5	0	1	0	0	88
+Bacteria	Actinobacteria	Coriobacteriia	Coriobacteriales	Atopobiaceae	Olsenella	Olsenella uli	0	0	0	0	0	5	0	0	0	0	0
+Bacteria	Actinobacteria	Coriobacteriia	Coriobacteriales	Atopobiaceae	Parolsenella	Parolsenella catena	0	0	0	0	0	1	0	0	0	1	0
+Bacteria	Actinobacteria	Coriobacteriia	Coriobacteriales	Coriobacteriaceae	Collinsella	Collinsella aerofaciens	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Actinobacteria	Coriobacteriia	Eggerthellales	Eggerthellaceae	Eggerthella	Eggerthella sp. YY7918	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Actinobacteria	Nitriliruptoria	Euzebyales	Euzebyaceae	Euzebya	Euzebya sp. DY32-46	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Actinobacteria	Rubrobacteria	Rubrobacterales	Rubrobacteraceae	Rubrobacter	Rubrobacter xylanophilus	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides cellulosilyticus	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides coprosuis	1	0	0	1	0	0	0	0	0	0	1
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides fragilis	0	1	0	0	2	0	0	0	0	1	1
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides heparinolyticus	2	1	3	3	0	0	0	0	0	0	2
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides intestinalis	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides ovatus	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides sp. CBA7301	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides sp. HF-5287	0	0	0	0	0	1	0	0	0	0	2
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides sp. M10	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides thetaiotaomicron	0	0	0	1	0	0	0	0	0	0	2
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides uniformis	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides zoogleoformans	0	0	0	0	8	1	0	0	0	0	4
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Barnesiellaceae	Barnesiella	Barnesiella viscericola	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Dysgonomonadaceae	Dysgonomonas	Dysgonomonas sp. HDW5A	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Muribaculaceae	Duncaniella	Duncaniella dubosii	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Muribaculaceae	Muribaculum	Muribaculum intestinale	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Muribaculaceae	Muribaculum	Muribaculum sp. TLL-A4	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Odoribacteraceae	Butyricimonas	Butyricimonas faecalis	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Odoribacteraceae	Odoribacter	Odoribacter splanchnicus	1	0	0	0	2	0	0	0	0	0	3
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Paludibacteraceae	Paludibacter	Paludibacter propionicigenes	0	0	0	0	0	1	1	0	1	0	0
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Porphyromonas	Porphyromonas asaccharolytica	0	0	0	2	0	2	0	0	0	1	1
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Porphyromonas	Porphyromonas cangingivalis	0	0	0	1	1	1	0	0	0	0	1
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Porphyromonas	Porphyromonas crevioricanis	0	0	0	1	1	0	1	1	0	0	2
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Porphyromonadaceae	Porphyromonas	Porphyromonas gingivalis	49	1	8	6	22	23	2	3	4	2	12
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Alloprevotella	Alloprevotella sp. E39	0	0	1	0	1	1	0	0	0	0	2
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Paraprevotella	Paraprevotella xylaniphila	0	0	0	1	0	2	0	0	0	0	0
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Prevotella dentalis	1	0	0	0	22	2	0	0	0	0	8
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Prevotella denticola	5	5	1	2	75	8	5	4	2	2	22
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Prevotella enoeca	14	6	2	4	244	21	2	2	0	21	79
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Prevotella fusca	4	7	5	1	106	7	10	1	1	5	10
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Prevotella intermedia	49	12	8	15	423	134	149	5	0	19	310
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Prevotella jejuni	48	49	13	7	1121	256	76	20	9	16	18
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Prevotella melaninogenica	440	582	295	23	12982	1174	562	93	171	297	128
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Prevotella oris	51	8	1	9	111	32	88	11	1	49	962
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Prevotella ruminicola	0	0	0	0	0	1	0	0	0	0	4
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Prevotella scopos	23	22	15	4	511	62	25	7	5	10	18
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Prevotellaceae	Prevotella	Prevotella sp. oral taxon 299	12	10	66	287	50	48	10	8	26	33	32
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Rikenellaceae	Alistipes	Alistipes communis	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Rikenellaceae	Alistipes	Alistipes finegoldii	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Rikenellaceae	Alistipes	Alistipes indistinctus	0	1	0	1	0	1	0	0	0	0	0
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Rikenellaceae	Alistipes	Alistipes megaguti	0	1	1	0	0	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Rikenellaceae	Alistipes	Alistipes onderdonkii	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Rikenellaceae	Alistipes	Alistipes shahii	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Tannerellaceae	Tannerella	Tannerella forsythia	1	10	1	3	28	40	1	2	1	5	176
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	Tannerellaceae	Tannerella	Tannerella sp. oral taxon HOT-286	43	66	11	13	113	215	358	43	11	12	2075
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	unclassified	Phocaeicola	Phocaeicola salanitronis	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Bacteroidetes	Bacteroidia	Bacteroidales	unclassified	Phocaeicola	Phocaeicola vulgatus	0	0	1	0	0	0	0	0	1	0	0
+Bacteria	Bacteroidetes	Chitinophagia	Chitinophagales	Chitinophagaceae	Arachidicoccus	Arachidicoccus soli	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Bacteroidetes	Chitinophagia	Chitinophagales	Chitinophagaceae	Chitinophaga	Chitinophaga sp. MD30	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Bacteroidetes	Chitinophagia	Chitinophagales	Chitinophagaceae	Flavisolibacter	Flavisolibacter tropicus	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Bacteroidetes	Chitinophagia	Chitinophagales	Chitinophagaceae	Niabella	Niabella ginsenosidivorans	0	0	0	0	0	0	0	0	0	0	2
+Bacteria	Bacteroidetes	Chitinophagia	Chitinophagales	Chitinophagaceae	Panacibacter	Panacibacter ginsenosidivorans	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Bacteroidetes	Cytophagia	Cytophagales	Bernardetiaceae	Bernardetia	Bernardetia litoralis	0	0	1	1	0	0	0	1	0	0	0
+Bacteria	Bacteroidetes	Cytophagia	Cytophagales	Cyclobacteriaceae	Cyclobacterium	Cyclobacterium amurskyense	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Cytophagia	Cytophagales	Cyclobacteriaceae	Cyclobacterium	Cyclobacterium marinum	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Bacteroidetes	Cytophagia	Cytophagales	Cytophagaceae	Dyadobacter	Dyadobacter fermentans	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Bacteroidetes	Cytophagia	Cytophagales	Cytophagaceae	Fibrella	Fibrella aestuarina	0	0	0	0	0	1	0	0	0	0	1
+Bacteria	Bacteroidetes	Cytophagia	Cytophagales	Cytophagaceae	Fibrella	Fibrella sp. ES10-3-2-2	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Cytophagia	Cytophagales	Cytophagaceae	Spirosoma	Spirosoma sp. KCTC 42546	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Bacteroidetes	Cytophagia	Cytophagales	Cytophagaceae	Spirosoma	Spirosoma sp. TS118	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Bacteroidetes	Cytophagia	Cytophagales	Flammeovirgaceae	Flammeovirga	Flammeovirga pectinis	1	0	0	0	0	0	0	0	1	0	0
+Bacteria	Bacteroidetes	Cytophagia	Cytophagales	Hymenobacteraceae	Hymenobacter	Hymenobacter oligotrophus	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Cytophagia	Cytophagales	Hymenobacteraceae	Hymenobacter	Hymenobacter sedentarius	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Cytophagia	Cytophagales	Hymenobacteraceae	Hymenobacter	Hymenobacter sp. DG25A	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Cytophagia	Cytophagales	Hymenobacteraceae	Hymenobacter	Hymenobacter sp. NBH84	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Cytophagia	Cytophagales	Hymenobacteraceae	Pontibacter	Pontibacter akesuensis	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Blattabacteriaceae	Blattabacterium	Blattabacterium cuenoti	0	0	1	0	0	1	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Algibacter	Algibacter sp. L1A34	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Amniculibacterium	Amniculibacterium sp. G2-70	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Aquimarina	Aquimarina sp. AD10	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Capnocytophaga	Capnocytophaga canimorsus	0	0	0	1	1	1	0	0	1	0	2
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Capnocytophaga	Capnocytophaga endodontalis	0	14	2	65	3	179	11	20	2	24	59
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Capnocytophaga	Capnocytophaga gingivalis	1	47	76	25	3	316	3	27	126	340	84
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Capnocytophaga	Capnocytophaga haemolytica	0	0	0	3	0	3	0	0	0	0	5
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Capnocytophaga	Capnocytophaga leadbetteri	3	44	23	1478	9	248	9	7	8	4	207
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Capnocytophaga	Capnocytophaga ochracea	0	0	0	5	0	13	0	3	0	0	4
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Capnocytophaga	Capnocytophaga sp. FDAARGOS	0	55	26	1627	5	248	8	12	13	8	276
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Capnocytophaga	Capnocytophaga sp. H2931	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Capnocytophaga	Capnocytophaga sp. oral taxon 323	0	1	0	7	0	12	0	0	0	1	3
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Capnocytophaga	Capnocytophaga sp. oral taxon 864	0	1	0	3	0	12	0	2	1	3	2
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Capnocytophaga	Capnocytophaga sp. oral taxon 878	1	13	3	93	5	119	1	2	3	14	98
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Capnocytophaga	Capnocytophaga sp. oral taxon 902	1	0	0	28	2	33	1	2	0	1	12
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Capnocytophaga	Capnocytophaga sputigena	2	55	8	132	10	1578	58	142	6	25	229
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Capnocytophaga	Capnocytophaga stomatis	0	1	0	2	0	0	0	0	0	0	1
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Cellulophaga	Cellulophaga baltica	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Cellulophaga	Cellulophaga lytica	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Croceibacter	Croceibacter atlanticus	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Euzebyella	Euzebyella marina	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Flavivirga	Flavivirga eckloniae	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Flavobacterium	Flavobacterium columnare	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Flavobacterium	Flavobacterium gilvum	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Flavobacterium	Flavobacterium indicum	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Flavobacterium	Flavobacterium johnsoniae	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Flavobacterium	Flavobacterium psychrophilum	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Flavobacterium	Flavobacterium sediminis	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Flavobacterium	Flavobacterium sp. CJ74	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Flavobacterium	Flavobacterium sp. HYN0086	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Flavobacterium	Flavobacterium sp. I3-2	0	0	0	0	0	2	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Flavobacterium	Flavobacterium sp. KBS0721	0	0	0	1	0	1	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Flavobacterium	Flavobacterium sp. P2-65	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Flavobacterium	Flavobacterium sp. Sr18	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Formosa	Formosa agariphila	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Formosa	Formosa sp. Hel1	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Formosa	Formosa sp. Hel1	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Formosa	Formosa sp. Hel3	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Gilvibacter	Gilvibacter sp. SZ-19	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Gramella	Gramella flava	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Gramella	Gramella forsetii	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Gramella	Gramella fulva	0	0	0	0	0	0	0	0	0	2	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Kordia	Kordia sp. SMS9	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Muriicola	Muriicola sp. MMS17-SY002	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Myroides	Myroides odoratus	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Nonlabens	Nonlabens dokdonensis	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Nonlabens	Nonlabens sp. MB-3u-79	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Polaribacter	Polaribacter haliotis	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Polaribacter	Polaribacter sp. L12M9	0	0	0	0	0	2	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Polaribacter	Polaribacter sp. MED152	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Salegentibacter	Salegentibacter salegens	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Salegentibacter	Salegentibacter sp. T436	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Siansivirga	Siansivirga zeaxanthinifaciens	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Winogradskyella	Winogradskyella sediminis	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Winogradskyella	Winogradskyella sp. J14-2	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Flavobacteriaceae	Zunongwangia	Zunongwangia profunda	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Schleiferiaceae	Owenweeksia	Owenweeksia hongkongensis	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Weeksellaceae	Bergeyella	Bergeyella cardium	0	2	2	1	0	1	1	2	2	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Weeksellaceae	Chryseobacterium	Chryseobacterium arthrosphaerae	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Weeksellaceae	Chryseobacterium	Chryseobacterium aureum	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Weeksellaceae	Chryseobacterium	Chryseobacterium camelliae	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Weeksellaceae	Chryseobacterium	Chryseobacterium gallinarum	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Weeksellaceae	Chryseobacterium	Chryseobacterium glaciei	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Weeksellaceae	Chryseobacterium	Chryseobacterium indologenes	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Weeksellaceae	Chryseobacterium	Chryseobacterium manosquense	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Weeksellaceae	Chryseobacterium	Chryseobacterium piperi	0	1	0	0	0	0	0	0	0	1	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Weeksellaceae	Chryseobacterium	Chryseobacterium shandongense	0	0	0	0	0	0	2	0	2	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Weeksellaceae	Chryseobacterium	Chryseobacterium sp.	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Weeksellaceae	Chryseobacterium	Chryseobacterium sp. 3008163	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Weeksellaceae	Chryseobacterium	Chryseobacterium sp. 6424	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Weeksellaceae	Chryseobacterium	Chryseobacterium sp. 7-3A	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Weeksellaceae	Chryseobacterium	Chryseobacterium sp. F5649	0	0	0	1	0	0	1	1	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Weeksellaceae	Chryseobacterium	Chryseobacterium sp. G0201	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Weeksellaceae	Chryseobacterium	Chryseobacterium sp. IHB B 17019	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Weeksellaceae	Chryseobacterium	Chryseobacterium sp. NEB161	0	0	1	0	0	0	0	0	1	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Weeksellaceae	Chryseobacterium	Chryseobacterium sp. T16E-39	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Weeksellaceae	Cloacibacterium	Cloacibacterium normanense	40	5	7	1	0	16	74	10	3	3	1
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Weeksellaceae	Cruoricaptor	Cruoricaptor ignavus	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Weeksellaceae	Elizabethkingia	Elizabethkingia anophelis	1	0	0	0	0	0	1	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Weeksellaceae	Elizabethkingia	Elizabethkingia bruuniana	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Weeksellaceae	Elizabethkingia	Elizabethkingia meningoseptica	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Weeksellaceae	Empedobacter	Empedobacter brevis	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Weeksellaceae	Empedobacter	Empedobacter stercoris	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Weeksellaceae	Epilithonimonas	Chryseobacterium lactis	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Weeksellaceae	Epilithonimonas	Epilithonimonas vandammei	0	1	1	0	0	0	1	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Weeksellaceae	Kaistella	Chryseobacterium haifense	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Weeksellaceae	Kaistella	Kaistella daneshvariae	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Weeksellaceae	Ornithobacterium	Ornithobacterium rhinotracheale	0	0	0	1	0	0	0	0	1	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Weeksellaceae	Planobacterium	Chryseobacterium taklimakanense	1	0	0	0	0	0	4	0	0	0	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	Weeksellaceae	Riemerella	Riemerella anatipestifer	0	0	0	2	0	0	0	0	1	1	0
+Bacteria	Bacteroidetes	Flavobacteriia	Flavobacteriales	unclassified	Candidatus Sulcia	Candidatus Sulcia muelleri	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Bacteroidetes	Sphingobacteriia	Sphingobacteriales	Sphingobacteriaceae	Mucilaginibacter	Mucilaginibacter sp. HYN0043	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Sphingobacteriia	Sphingobacteriales	Sphingobacteriaceae	Mucilaginibacter	Mucilaginibacter sp. PAMC 26640	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Sphingobacteriia	Sphingobacteriales	Sphingobacteriaceae	Pedobacter	Pedobacter sp. KBS0701	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Bacteroidetes	Sphingobacteriia	Sphingobacteriales	Sphingobacteriaceae	Sphingobacterium	Sphingobacterium sp. ML3W	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Bacteroidetes	unclassified	Bacteroidetes Order II. Incertae sedis	Rhodothermaceae	Rhodothermus	Rhodothermus marinus	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Candidatus Omnitrophica	unclassified	unclassified	unclassified	Candidatus Vampirococcus	Candidatus Vampirococcus archaeovorus	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Candidatus Saccharibacteria	Candidatus Saccharimonia	Candidatus Nanosynbacterales	Candidatus Nanosynbacteraceae	Candidatus Nanosynbacter	Candidatus Nanosynbacter lyticus	0	0	0	0	1	11	1	0	1	3	16
+Bacteria	Candidatus Saccharibacteria	unclassified	unclassified	unclassified	Candidatus Saccharimonas	Candidatus Saccharimonas aalborgensis	0	0	0	0	0	2	0	0	0	0	0
+Bacteria	Chlorobi	Chlorobia	Chlorobiales	Chlorobiaceae	Pelodictyon	Pelodictyon phaeoclathratiforme	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Chloroflexi	Thermomicrobia	Sphaerobacterales	Sphaerobacteraceae	Sphaerobacter	Sphaerobacter thermophilus	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Chloroflexi	Thermomicrobia	Thermomicrobiales	Thermomicrobiaceae	Thermomicrobium	Thermomicrobium roseum	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Cyanobacteria	unclassified	Nostocales	Calotrichaceae	Calothrix	Calothrix sp. NIES-2098	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Cyanobacteria	unclassified	Nostocales	Calotrichaceae	Calothrix	Calothrix sp. PCC 7507	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Cyanobacteria	unclassified	Nostocales	Nostocaceae	Anabaena	Anabaena cylindrica	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Cyanobacteria	unclassified	Nostocales	Nostocaceae	Nostoc	Nostoc sp. NIES-4103	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Cyanobacteria	unclassified	Nostocales	Rivulariaceae	Rivularia	Rivularia sp. PCC 7116	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Cyanobacteria	unclassified	Oscillatoriales	Coleofasciculaceae	Geitlerinema	Geitlerinema sp. PCC 7407	0	0	1	0	0	0	1	0	0	0	0
+Bacteria	Cyanobacteria	unclassified	Pleurocapsales	Dermocarpellaceae	Stanieria	Stanieria sp. NIES-3757	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Cyanobacteria	unclassified	Synechococcales	Synechococcaceae	Synechococcus	Synechococcus sp. BIOS-U3-1	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Cyanobacteria	unclassified	Synechococcales	Synechococcaceae	Synechococcus	Synechococcus sp. M16.1	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Deferribacteres	Deferribacteres	Deferribacterales	Deferribacteraceae	Flexistipes	Flexistipes sinusarabici	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Deinococcus-Thermus	Deinococci	Deinococcales	Deinococcaceae	Deinococcus	Deinococcus peraridilitoris	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Deinococcus-Thermus	Deinococci	Deinococcales	Deinococcaceae	Deinococcus	Deinococcus radiodurans	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Fibrobacteres	Fibrobacteria	Fibrobacterales	Fibrobacteraceae	Fibrobacter	Fibrobacter succinogenes	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Alkalihalobacillus	Alkalihalobacillus krulwichiae	0	0	0	0	0	0	0	2	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Anaerobacillus	Anaerobacillus isosaccharinicus	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Anoxybacillus	Anoxybacillus amylolyticus	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Bacillus	Bacillus amyloliquefaciens	0	0	0	0	0	0	0	0	0	2	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Bacillus	Bacillus cereus	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Bacillus	Bacillus coagulans	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Bacillus	Bacillus cohnii	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Bacillus	Bacillus cytotoxicus	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Bacillus	Bacillus filamentosus	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Bacillus	Bacillus flexus	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Bacillus	Bacillus lentus	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Bacillus	Bacillus marisflavi	0	0	1	0	0	0	0	1	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Bacillus	Bacillus pumilus	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Bacillus	Bacillus safensis	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Bacillus	Bacillus sonorensis	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Bacillus	Bacillus sp. DSL-17	0	0	0	0	0	0	0	2	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Bacillus	Bacillus sp. FJAT-22090	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Bacillus	Bacillus sp. HD4P25	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Bacillus	Bacillus sp. M4U3P1	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Bacillus	Bacillus sp. N3536	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Bacillus	Bacillus sp. NSP9.1	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Bacillus	Bacillus sp. PAMC26568	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Bacillus	Bacillus sp. X1(2014)	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Bacillus	Bacillus sp. Y1	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Bacillus	Bacillus subtilis	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Bacillus	Bacillus thermoamylovorans	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Bacillus	Bacillus thuringiensis	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Cytobacillus	Cytobacillus oceanisediminis	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Fictibacillus	Fictibacillus phosphorivorans	1	0	0	0	0	0	0	1	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Halobacillus	Halobacillus litoralis	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Halobacillus	Halobacillus mangrovi	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Lysinibacillus	Lysinibacillus sp. 2017	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Oceanobacillus	Oceanobacillus iheyensis	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Paraliobacillus	Paraliobacillus sp. X-1125	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Pontibacillus	Pontibacillus sp. HMF3514	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Pradoshia	Pradoshia sp. D12	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Psychrobacillus	Psychrobacillus glaciei	0	0	0	1	0	0	0	0	0	0	1
+Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Virgibacillus	Virgibacillus necropolis	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Bacillaceae	Virgibacillus	Virgibacillus sp. Bac332	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Listeriaceae	Brochothrix	Brochothrix thermosphacta	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Paenibacillaceae	Aneurinibacillus	Aneurinibacillus sp. XH2	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Paenibacillaceae	Brevibacillus	Brevibacillus brevis	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Paenibacillaceae	Paenibacillus	Paenibacillus antarcticus	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Paenibacillaceae	Paenibacillus	Paenibacillus polymyxa	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Paenibacillaceae	Paenibacillus	Paenibacillus psychroresistens	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Paenibacillaceae	Paenibacillus	Paenibacillus sp. FSL H7-0357	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Paenibacillaceae	Paenibacillus	Paenibacillus sp. FSL P4-0081	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Paenibacillaceae	Paenibacillus	Paenibacillus sp. FSL R5-0345	0	0	0	0	2	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Paenibacillaceae	Paenibacillus	Paenibacillus sp. URB8-2	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Paenibacillaceae	Paenibacillus	Paenibacillus stellifer	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Paenibacillaceae	Paenibacillus	Paenibacillus swuensis	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Paenibacillaceae	Paenibacillus	Paenibacillus xylanexedens	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Planococcaceae	Paenisporosarcina	Paenisporosarcina antarctica	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Planococcaceae	Planococcus	Planococcus kocurii	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Planococcaceae	Planococcus	Planococcus sp. PAMC 21323	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Planococcaceae	Sporosarcina	Sporosarcina sp. PTS2304	0	0	0	0	0	0	0	0	2	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Planococcaceae	Sporosarcina	Sporosarcina ureae	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Planococcaceae	Ureibacillus	Ureibacillus thermosphaericus	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Firmicutes	Bacilli	Bacillales	Planococcaceae	Viridibacillus	Viridibacillus sp. JNUCC-6	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Firmicutes	Bacilli	Bacillales	Staphylococcaceae	Jeotgalicoccus	Jeotgalicoccus saudimassiliensis	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Staphylococcaceae	Macrococcus	Macrococcus canis	0	0	0	0	0	0	1	1	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Staphylococcaceae	Macrococcus	Macrococcus sp. IME1552	0	1	0	0	0	0	0	1	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Staphylococcaceae	Salinicoccus	Salinicoccus halodurans	0	0	0	0	0	0	0	1	1	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Staphylococcaceae	Staphylococcus	Staphylococcus aureus	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Staphylococcaceae	Staphylococcus	Staphylococcus capitis	0	0	3	0	0	1	0	0	1	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Staphylococcaceae	Staphylococcus	Staphylococcus cohnii	2	176	0	0	0	83	74	1	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Staphylococcaceae	Staphylococcus	Staphylococcus epidermidis	0	2	2	0	0	10	0	1	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Staphylococcaceae	Staphylococcus	Staphylococcus hominis	2	0	1	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Staphylococcaceae	Staphylococcus	Staphylococcus lentus	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Staphylococcaceae	Staphylococcus	Staphylococcus muscae	0	0	0	2	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Staphylococcaceae	Staphylococcus	Staphylococcus pasteuri	2	0	0	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Staphylococcaceae	Staphylococcus	Staphylococcus pettenkoferi	0	1	0	0	0	0	0	0	0	1	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Staphylococcaceae	Staphylococcus	Staphylococcus pseudintermedius	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Staphylococcaceae	Staphylococcus	Staphylococcus sciuri	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Staphylococcaceae	Staphylococcus	Staphylococcus simulans	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Staphylococcaceae	Staphylococcus	Staphylococcus stepanovicii	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Staphylococcaceae	Staphylococcus	Staphylococcus warneri	0	0	0	0	0	0	2	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	Thermoactinomycetaceae	Thermoactinomyces	Thermoactinomyces vulgaris	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	unclassified	Exiguobacterium	Exiguobacterium sp. Helios	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	unclassified	Gemella	Gemella haemolysans	43	202	1312	53	36	25	12	72	3547	45	217
+Bacteria	Firmicutes	Bacilli	Bacillales	unclassified	Gemella	Gemella morbillorum	1	17	7	379	8	424	18	34	16	29	14
+Bacteria	Firmicutes	Bacilli	Bacillales	unclassified	Gemella	Gemella sanguinis	23	226	41	4	96	51	20	2703	41	330	2
+Bacteria	Firmicutes	Bacilli	Bacillales	unclassified	Gemella	Gemella sp. ND 6198	1	0	0	0	0	0	1	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Bacillales	unclassified	Gemella	Gemella sp. oral taxon 928	2	0	1	1	0	1	0	1	1	0	1
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Aerococcaceae	Abiotrophia	Abiotrophia defectiva	0	53	0	0	0	88	0	60	1	1	9
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Aerococcaceae	Aerococcus	Aerococcus christensenii	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Aerococcaceae	Aerococcus	Aerococcus sanguinicola	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Aerococcaceae	Aerococcus	Aerococcus urinaehominis	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Aerococcaceae	Aerococcus	Aerococcus viridans	0	0	0	0	0	0	0	2	0	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Carnobacteriaceae	Carnobacterium	Carnobacterium maltaromaticum	0	0	1	2	0	0	0	0	0	0	1
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Carnobacteriaceae	Dolosigranulum	Dolosigranulum pigrum	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Carnobacteriaceae	Jeotgalibaca	Jeotgalibaca ciconiae	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Carnobacteriaceae	Jeotgalibaca	Jeotgalibaca dankookensis	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Carnobacteriaceae	Jeotgalibaca	Jeotgalibaca porci	0	0	0	2	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Enterococcaceae	Enterococcus	Enterococcus avium	0	0	1	0	0	1	0	0	1	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Enterococcaceae	Enterococcus	Enterococcus cecorum	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Enterococcaceae	Enterococcus	Enterococcus durans	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Enterococcaceae	Enterococcus	Enterococcus faecalis	0	0	0	0	0	0	0	2	0	1	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Enterococcaceae	Enterococcus	Enterococcus faecium	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Enterococcaceae	Enterococcus	Enterococcus hirae	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Enterococcaceae	Enterococcus	Enterococcus mundtii	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Enterococcaceae	Enterococcus	Enterococcus wangshanyuanii	0	0	1	0	0	1	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Enterococcaceae	Melissococcus	Melissococcus plutonius	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Enterococcaceae	Vagococcus	Vagococcus penaei	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Enterococcaceae	Vagococcus	Vagococcus sp. HDW17A	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Enterococcaceae	Vagococcus	Vagococcus sp. HDW17B	0	0	1	0	0	0	0	0	1	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Enterococcaceae	Vagococcus	Vagococcus teuberi	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Lactobacillaceae	Furfurilactobacillus	Lactobacillus rossiae	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Lactobacillaceae	Lacticaseibacillus	Lactobacillus casei	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Lactobacillaceae	Lacticaseibacillus	Lactobacillus manihotivorans	0	1	0	0	0	0	1	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Lactobacillaceae	Lacticaseibacillus	Lactobacillus rhamnosus	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Lactobacillaceae	Lactiplantibacillus	Lactobacillus pentosus	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Lactobacillaceae	Lactobacillus	Lactobacillus delbrueckii	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Lactobacillaceae	Lactobacillus	Lactobacillus gasseri	0	0	0	0	0	2	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Lactobacillaceae	Lactobacillus	Lactobacillus iners	0	0	0	0	1	1	0	3	1	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Lactobacillaceae	Lactobacillus	Lactobacillus jensenii	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Lactobacillaceae	Lactobacillus	Lactobacillus kullabergensis	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Lactobacillaceae	Lactobacillus	Lactobacillus sp. 3B(2020)	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Lactobacillaceae	Lactobacillus	Lactobacillus sp. JM1	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Lactobacillaceae	Lactobacillus	Lactobacillus sp. NFFJ11	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Lactobacillaceae	Ligilactobacillus	Lactobacillus animalis	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Lactobacillaceae	Ligilactobacillus	Lactobacillus murinus	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Lactobacillaceae	Ligilactobacillus	Ligilactobacillus salivarius	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Lactobacillaceae	Limosilactobacillus	Lactobacillus gastricus	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Lactobacillaceae	Limosilactobacillus	Limosilactobacillus reuteri	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Lactobacillaceae	Pediococcus	Pediococcus acidilactici	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Lactobacillaceae	Pediococcus	Pediococcus pentosaceus	0	0	0	1	0	1	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Leuconostocaceae	Leuconostoc	Leuconostoc gelidum	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Leuconostocaceae	Leuconostoc	Leuconostoc mesenteroides	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Leuconostocaceae	Weissella	Weissella cibaria	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Leuconostocaceae	Weissella	Weissella koreensis	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Leuconostocaceae	Weissella	Weissella paramesenteroides	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Lactococcus	Lactococcus lactis	0	85	0	4	0	0	0	1	1	2	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Lactococcus	Lactococcus piscium	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Lactococcus	Lactococcus raffinolactis	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus acidominimus	0	0	0	0	0	0	0	1	0	0	1
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus agalactiae	0	1	1	1	0	4	1	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus anginosus	0	8	3	2	2	2	14	13	1	0	5
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus australis	2	21	24	3	10	22	6	475	56	64	36
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus canis	0	1	1	0	1	6	0	5	0	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus constellatus	0	1	0	0	3	2	1	2	1	1	1
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus cristatus	0	8	5	7	3	7	4	17	14	17	28
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus dysgalactiae	2	3	3	1	0	5	1	2	0	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus equi	1	1	1	0	0	1	0	2	2	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus equinus	1	0	1	0	1	0	0	4	3	1	1
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus ferus	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus gallolyticus	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus gordonii	259	43	7	3	7	63	722	97	14	27	118
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus gwangjuense	11	8	25	18	29	214	4	9	100	31	169
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus halotolerans	0	0	0	0	1	1	0	3	1	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus himalayensis	0	1	0	0	0	2	0	2	2	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus infantarius	0	0	1	0	0	0	0	0	1	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus iniae	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus intermedius	2	5	3	1	0	4	3	59	6	9	3
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus koreensis	0	6	12	0	2	3	3	84	8	86	3
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus macedonicus	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus marmotae	0	0	0	0	0	1	0	0	3	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus merionis	0	0	0	0	0	0	0	1	1	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus milleri	0	0	0	1	1	5	1	0	0	1	1
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus mitis	86	63	334	125	135	1492	33	59	1109	251	898
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus mutans	0	1	0	1	0	0	0	6	0	0	3
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus oralis	52	34	26	9	16	295	38	106	80	53	148
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus pantholopis	0	0	1	0	1	0	0	0	1	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus parasanguinis	24	13	200	0	287	19	59	116	214	80	5
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus parauberis	0	0	2	0	0	0	0	0	2	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus periodonticum	0	0	0	0	0	0	4	0	1	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus pluranimalium	0	0	0	0	0	0	1	0	0	1	1
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus pneumoniae	10	24	104	37	33	434	13	56	278	68	153
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus porcinus	0	0	0	11	0	2	1	1	0	0	1
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus pseudopneumoniae	1	9	23	10	6	98	2	9	83	17	44
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus pseudoporcinus	2	0	0	0	0	1	3	1	1	0	2
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus pyogenes	1	0	4	2	2	5	1	1	0	2	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus ratti	0	0	0	0	1	0	0	1	1	1	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus respiraculi	0	0	2	0	0	0	0	1	0	0	2
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus salivarius	18	11	27	0	45	8	2	76	38	6	2
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus sanguinis	30	31	9	5	10	180	93	67	3	36	261
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus sobrinus	0	1	1	0	0	0	0	2	0	0	1
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus sp. 116-D4	4	14	23	10	16	108	1	33	62	21	48
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus sp. 1643	3	2	7	1	2	17	2	14	9	3	8
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus sp. A12	1	16	42	0	6	6	11	700	71	75	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus sp. FDAARGOS	1	1	2	0	1	1	0	5	4	1	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus sp. HSISM1	15	3	178	0	28	16	44	77	226	56	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus sp. HSISS2	0	0	2	1	1	2	2	5	3	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus sp. HSISS3	0	0	2	0	0	0	0	5	2	1	1
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus sp. I-G2	0	4	9	0	1	2	1	73	5	45	1
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus sp. I-P16	1	3	7	0	0	2	1	50	11	68	1
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus sp. KS 6	0	0	0	0	1	0	1	1	0	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus sp. LPB0220	11	4	197	1	24	17	37	83	227	79	1
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus sp. NCTC 11567	0	0	0	3	0	1	0	0	0	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus sp. NPS 308	3	5	3	1	6	26	0	26	8	8	21
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus sp. NSJ-72	1	0	0	1	1	1	0	0	0	0	3
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus sp. oral taxon 061	2	77	34	4	9	68	6	711	60	132	4
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus sp. oral taxon 064	5	0	4	3	1	11	4	8	4	4	6
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus sp. oral taxon 431	3	338	60	19	20	47	5	271	92	111	8
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus suis	2	1	1	4	1	2	1	10	4	1	6
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus thermophilus	0	4	6	2	0	4	0	13	8	5	2
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus troglodytae	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus uberis	0	0	1	0	1	0	0	1	1	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus urinalis	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus vestibularis	0	3	1	0	2	8	0	8	3	4	2
+Bacteria	Firmicutes	Clostridia	Clostridiales	Christensenellaceae	Christensenella	Christensenella sp. Marseille-P3954	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Alkaliphilus	Alkaliphilus metalliredigens	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Caloranaerobacter	Caloranaerobacter azorensis	0	0	0	2	0	0	0	0	1	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium argentinense	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium baratii	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium beijerinckii	0	0	0	0	0	0	0	0	0	0	2
+Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium bornimense	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium botulinum	0	0	0	1	0	0	0	1	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium estertheticum	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium fermenticellae	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium intestinale	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium isatidis	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium novyi	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium perfringens	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium saccharobutylicum	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. JN-9	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium sp. SY8519	0	0	1	0	0	0	0	1	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium taeniosporum	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiaceae	Geosporobacter	Geosporobacter ferrireducens	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XIII. Incertae Sedis	Aminipila	Aminipila butyrica	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XIII. Incertae Sedis	Mogibacterium	Mogibacterium diversum	2	3	13	0	68	110	26	12	1	3	3
+Bacteria	Firmicutes	Clostridia	Clostridiales	Clostridiales Family XIII. Incertae Sedis	Mogibacterium	Mogibacterium pumilum	2	0	0	0	2	5	1	0	0	2	2
+Bacteria	Firmicutes	Clostridia	Clostridiales	Eubacteriaceae	Eubacterium	[Eubacterium] cellulosolvens	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Heliobacteriaceae	Heliobacterium	Heliobacterium modesticaldum	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Hungateiclostridiaceae	Fastidiosipila	Fastidiosipila sanguinis	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Hungateiclostridiaceae	Hungateiclostridium	Hungateiclostridium clariflavum	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Hungateiclostridiaceae	Mageeibacillus	Mageeibacillus indolicus	0	0	0	0	1	2	0	0	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Anaerobutyricum	Anaerobutyricum hallii	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Anaerocolumna	Anaerocolumna cellulosilytica	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Anaerocolumna	Anaerocolumna sp. CTTW	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Anaerostipes	Anaerostipes hadrus	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Anaerostipes	Anaerostipes rhamnosivorans	0	0	0	0	0	0	1	1	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Blautia	Blautia hansenii	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Blautia	Blautia producta	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Blautia	Blautia sp. LZLJ-3	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Butyrivibrio	Butyrivibrio fibrisolvens	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Butyrivibrio	Butyrivibrio hungatei	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Enterocloster	Enterocloster bolteae	0	0	0	0	0	2	1	3	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Enterocloster	Enterocloster clostridioformis	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Herbinix	Herbinix luporum	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Lachnoanaerobaculum	Lachnoanaerobaculum umeaense	1	25	133	333	21	33	1	71	55	8	24
+Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Lachnoclostridium	[Clostridium] hylemonae	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Lachnoclostridium	[Clostridium] scindens	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Lachnoclostridium	Lachnoclostridium phocaeense	0	0	0	1	0	0	0	2	0	1	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Lachnoclostridium	Lachnoclostridium phytofermentans	0	0	1	0	1	0	0	0	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Lachnoclostridium	Lachnoclostridium sp. YL32	0	0	0	0	0	1	1	0	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Lachnospira	Lachnospira eligens	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Lacrimispora	Lacrimispora saccharolytica	0	0	0	1	0	0	0	1	0	0	1
+Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Pseudobutyrivibrio	Pseudobutyrivibrio xylanivorans	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Lachnospiraceae	Roseburia	Roseburia intestinalis	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Oscillospiraceae	Oscillibacter	Oscillibacter sp. PEA192	0	0	1	0	0	0	0	1	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Peptococcaceae	Dehalobacterium	Dehalobacterium formicoaceticum	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Peptococcaceae	Desulfallas	Desulfallas gibsoniae	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Peptococcaceae	Desulfitobacterium	Desulfitobacterium dichloroeliminans	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Peptococcaceae	Desulfofarcimen	Desulfofarcimen acetoxidans	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Peptococcaceae	Desulfosporosinus	Desulfosporosinus meridiei	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Peptostreptococcaceae	Acetoanaerobium	Acetoanaerobium sticklandii	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Peptostreptococcaceae	Clostridioides	Clostridioides difficile	1	1	0	0	0	1	0	0	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Peptostreptococcaceae	Filifactor	Filifactor alocis	0	0	0	0	1	22	16	3	2	1	7
+Bacteria	Firmicutes	Clostridia	Clostridiales	Peptostreptococcaceae	Paraclostridium	Paraclostridium bifermentans	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Peptostreptococcaceae	Peptacetobacter	Peptacetobacter hiranonis	0	0	0	0	0	0	0	1	1	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Peptostreptococcaceae	Romboutsia	Romboutsia sp. CE17	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	Ruminococcaceae	Faecalibacterium	Faecalibacterium prausnitzii	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Clostridia	Clostridiales	unclassified	Monoglobus	Monoglobus pectinilyticus	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Clostridia	Halanaerobiales	Halanaerobiaceae	Halanaerobium	Halanaerobium hydrogeniformans	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Firmicutes	Clostridia	Halanaerobiales	unclassified	Anoxybacter	Anoxybacter fermentans	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Clostridia	Thermoanaerobacterales	Thermoanaerobacteraceae	Caldanaerobacter	Caldanaerobacter subterraneus	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Firmicutes	Clostridia	Thermoanaerobacterales	Thermoanaerobacteraceae	Thermacetogenium	Thermacetogenium phaeum	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Clostridia	Thermoanaerobacterales	Thermoanaerobacteraceae	Thermoanaerobacter	Thermoanaerobacter mathranii	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Clostridia	Thermoanaerobacterales	Thermoanaerobacterales Family III. Incertae Sedis	Thermoanaerobacterium	Thermoanaerobacterium thermosaccharolyticum	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Clostridia	Thermosediminibacterales	Tepidanaerobacteraceae	Tepidanaerobacter	Tepidanaerobacter acetatoxydans	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Firmicutes	Erysipelotrichia	Erysipelotrichales	Erysipelotrichaceae	Erysipelatoclostridium	[Clostridium] innocuum	0	0	0	0	0	0	0	0	0	0	2
+Bacteria	Firmicutes	Erysipelotrichia	Erysipelotrichales	Erysipelotrichaceae	Erysipelatoclostridium	Erysipelatoclostridium ramosum	0	0	2	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Erysipelotrichia	Erysipelotrichales	Erysipelotrichaceae	Erysipelothrix	Erysipelothrix inopinata	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Negativicutes	Selenomonadales	Selenomonadaceae	Megamonas	Megamonas funiformis	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Firmicutes	Negativicutes	Selenomonadales	Selenomonadaceae	Selenomonas	Selenomonas sp. Marseille-Q3039	0	1	0	0	5	7	0	1	0	0	16
+Bacteria	Firmicutes	Negativicutes	Selenomonadales	Selenomonadaceae	Selenomonas	Selenomonas sp. oral taxon 126	0	1	0	0	8	4	0	0	0	0	27
+Bacteria	Firmicutes	Negativicutes	Selenomonadales	Selenomonadaceae	Selenomonas	Selenomonas sp. oral taxon 136	1	0	0	0	67	12	0	0	0	0	50
+Bacteria	Firmicutes	Negativicutes	Selenomonadales	Selenomonadaceae	Selenomonas	Selenomonas sp. oral taxon 478	3	3	0	0	86	15	0	0	0	0	62
+Bacteria	Firmicutes	Negativicutes	Selenomonadales	Selenomonadaceae	Selenomonas	Selenomonas sp. oral taxon 920	2	1	1	0	48	38	2	2	0	3	217
+Bacteria	Firmicutes	Negativicutes	Selenomonadales	Selenomonadaceae	Selenomonas	Selenomonas sputigena	3	3	0	0	57	6	0	0	0	1	161
+Bacteria	Firmicutes	Negativicutes	Veillonellales	Veillonellaceae	Dialister	Dialister pneumosintes	1	0	0	15	2	2	0	1	0	2	24
+Bacteria	Firmicutes	Negativicutes	Veillonellales	Veillonellaceae	Veillonella	Veillonella atypica	105	116	142	11	3592	90	18	55	80	100	59
+Bacteria	Firmicutes	Negativicutes	Veillonellales	Veillonellaceae	Veillonella	Veillonella dispar	7	6	163	2	92	22	137	130	97	485	22
+Bacteria	Firmicutes	Negativicutes	Veillonellales	Veillonellaceae	Veillonella	Veillonella parvula	125	39	115	2	223	41	646	322	63	418	2701
+Bacteria	Firmicutes	Negativicutes	Veillonellales	Veillonellaceae	Veillonella	Veillonella rodentium	0	2	7	0	17	3	7	13	6	18	3
+Bacteria	Firmicutes	Negativicutes	Veillonellales	Veillonellaceae	Veillonella	Veillonella sp. OK1	0	2	0	0	19	0	0	0	0	0	0
+Bacteria	Firmicutes	Negativicutes	Veillonellales	Veillonellaceae	Veillonella	Veillonella sp. T1-7	9	31	376	0	159	70	313	284	201	894	26
+Bacteria	Firmicutes	Tissierellia	unclassified	unclassified	Ezakiella	Ezakiella massiliensis	1	0	1	0	0	0	0	0	1	0	0
+Bacteria	Firmicutes	Tissierellia	Tissierellales	Gottschalkiaceae	Gottschalkia	Gottschalkia acidurici	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Firmicutes	Tissierellia	Tissierellales	Peptoniphilaceae	Anaerococcus	Anaerococcus mediterraneensis	0	1	0	0	0	1	2	0	0	0	0
+Bacteria	Firmicutes	Tissierellia	Tissierellales	Peptoniphilaceae	Anaerococcus	Anaerococcus prevotii	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	Tissierellia	Tissierellales	Peptoniphilaceae	Finegoldia	Finegoldia magna	0	0	0	1	0	0	1	0	0	0	0
+Bacteria	Firmicutes	Tissierellia	Tissierellales	Peptoniphilaceae	Murdochiella	Murdochiella vaginalis	0	0	0	0	1	0	0	1	0	0	0
+Bacteria	Firmicutes	Tissierellia	Tissierellales	Peptoniphilaceae	Parvimonas	Parvimonas micra	7	3	4	8	7	121	21	6	0	5	10
+Bacteria	Firmicutes	Tissierellia	Tissierellales	Peptoniphilaceae	Peptoniphilus	Peptoniphilus harei	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Firmicutes	unclassified	unclassified	unclassified	unclassified	endosymbiont 'TC1' of Trimyema compressum	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Fusobacteriaceae	Fusobacterium	Fusobacterium gonidiaformans	0	1	0	0	0	0	0	0	1	0	1
+Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Fusobacteriaceae	Fusobacterium	Fusobacterium hwasookii	3	92	28	292	24	107	23	23	22	26	56
+Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Fusobacteriaceae	Fusobacterium	Fusobacterium mortiferum	0	0	1	0	0	0	0	0	0	0	1
+Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Fusobacteriaceae	Fusobacterium	Fusobacterium necrophorum	0	2	0	3	0	0	0	0	0	0	5
+Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Fusobacteriaceae	Fusobacterium	Fusobacterium nucleatum	80	1469	77	5969	693	881	93	179	45	379	2102
+Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Fusobacteriaceae	Fusobacterium	Fusobacterium periodonticum	0	28	144	14	5	48	2	58	120	48	2
+Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Fusobacteriaceae	Fusobacterium	Fusobacterium pseudoperiodonticum	11	615	1659	91	73	410	39	870	1405	728	43
+Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Fusobacteriaceae	Fusobacterium	Fusobacterium sp. NSJ-57	0	0	1	0	0	0	0	0	0	0	1
+Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Fusobacteriaceae	Fusobacterium	Fusobacterium sp. oral taxon 203	1	10	4	23	1	9	1	0	6	3	21
+Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Fusobacteriaceae	Fusobacterium	Fusobacterium ulcerans	0	1	0	2	0	1	0	0	0	0	0
+Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Fusobacteriaceae	Fusobacterium	Fusobacterium varium	0	0	1	2	0	1	1	0	0	3	0
+Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Fusobacteriaceae	Ilyobacter	Ilyobacter polytropus	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Leptotrichiaceae	Leptotrichia	Leptotrichia buccalis	3	7	1	79	51	1	1	4	0	5	348
+Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Leptotrichiaceae	Leptotrichia	Leptotrichia hofstadii	3	10	3	262	14	0	1	2	3	12	67
+Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Leptotrichiaceae	Leptotrichia	Leptotrichia hongkongensis	1	22	8	115	11	0	0	11	2	63	28
+Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Leptotrichiaceae	Leptotrichia	Leptotrichia shahii	1	4	2	21	20	6	3	1	0	1	63
+Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Leptotrichiaceae	Leptotrichia	Leptotrichia sp. oral taxon 212	35	567	128	1160	6	49	110	260	104	113	165
+Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Leptotrichiaceae	Leptotrichia	Leptotrichia sp. oral taxon 498	0	2	1	20	8	7	2	1	0	1	8
+Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Leptotrichiaceae	Leptotrichia	Leptotrichia sp. oral taxon 847	0	1	4	12	6	4	0	3	1	2	2
+Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Leptotrichiaceae	Leptotrichia	Leptotrichia trevisanii	0	4	9	187	29	6	11	13	6	10	344
+Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Leptotrichiaceae	Leptotrichia	Leptotrichia wadei	17	34	13	63	436	317	10	21	11	17	213
+Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Leptotrichiaceae	Pseudoleptotrichia	Pseudoleptotrichia goodfellowii	1	1	1	6	0	0	0	1	5	3	15
+Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Leptotrichiaceae	Sebaldella	Sebaldella termitidis	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Leptotrichiaceae	Sneathia	Sneathia amnii	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Fusobacteria	Fusobacteriia	Fusobacteriales	Leptotrichiaceae	Streptobacillus	Streptobacillus moniliformis	0	0	1	0	0	1	0	0	0	0	0
+Bacteria	Ignavibacteriae	Ignavibacteria	Ignavibacteriales	Melioribacteraceae	Melioribacter	Melioribacter roseus	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Planctomycetes	Planctomycetia	Isosphaerales	Isosphaeraceae	Aquisphaera	Aquisphaera giovannonii	0	0	0	2	0	0	0	0	0	0	0
+Bacteria	Planctomycetes	Planctomycetia	Pirellulales	Pirellulaceae	Pirellula	Pirellula staleyi	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	unclassified	unclassified	Phreatobacter	Phreatobacter cathodiphilus	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	unclassified	unclassified	Phreatobacter	Phreatobacter stygius	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Caulobacterales	Caulobacteraceae	Asticcacaulis	Asticcacaulis excentricus	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Caulobacterales	Caulobacteraceae	Brevundimonas	Brevundimonas diminuta	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Caulobacterales	Caulobacteraceae	Brevundimonas	Brevundimonas subvibrioides	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Caulobacterales	Caulobacteraceae	Caulobacter	Caulobacter rhizosphaerae	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Caulobacterales	Caulobacteraceae	Caulobacter	Caulobacter sp. Ji-3-8	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Caulobacterales	Caulobacteraceae	Caulobacter	Caulobacter sp. K31	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Caulobacterales	Caulobacteraceae	Caulobacter	Caulobacter vibrioides	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Caulobacterales	Caulobacteraceae	Phenylobacterium	Phenylobacterium zucineum	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Emcibacterales	Emcibacteraceae	Emcibacter	Emcibacter sp. MEBiC09520	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Pelagibacterales	Pelagibacteraceae	Candidatus Pelagibacter	Candidatus Pelagibacter sp. FZCC0015	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Aurantimonadaceae	Aureimonas	Aureimonas altamirensis	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Aurantimonadaceae	Martelella	Martelella endophytica	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Aurantimonadaceae	Martelella	Martelella mediterranea	2	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Bartonellaceae	Bartonella	Bartonella alsatica	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Bradyrhizobiaceae	Bosea	Bosea sp. AS-1	0	0	0	0	0	0	2	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Bradyrhizobiaceae	Bradyrhizobium	Bradyrhizobium amphicarpaeae	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Bradyrhizobiaceae	Bradyrhizobium	Bradyrhizobium erythrophlei	1	0	0	0	0	0	0	0	0	0	1
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Bradyrhizobiaceae	Bradyrhizobium	Bradyrhizobium guangzhouense	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Bradyrhizobiaceae	Bradyrhizobium	Bradyrhizobium lablabi	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Bradyrhizobiaceae	Bradyrhizobium	Bradyrhizobium oligotrophicum	2	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Bradyrhizobiaceae	Bradyrhizobium	Bradyrhizobium sp. CCBAU 53351	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Bradyrhizobiaceae	Bradyrhizobium	Bradyrhizobium sp. CCBAU 53421	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Bradyrhizobiaceae	Bradyrhizobium	Bradyrhizobium sp. ORS 278	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Bradyrhizobiaceae	Bradyrhizobium	Bradyrhizobium sp. SK17	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Brucellaceae	Ochrobactrum	Ochrobactrum quorumnocens	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Hyphomicrobiaceae	Blastochloris	Blastochloris viridis	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Hyphomicrobiaceae	Devosia	Devosia sp. I507	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Hyphomicrobiaceae	Filomicrobium	Candidatus Filomicrobium marinum	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Hyphomicrobiaceae	Hyphomicrobium	Hyphomicrobium sp. MC1	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Lichenihabitantaceae	Lichenihabitans	Lichenihabitans psoromatis	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Methylobacteriaceae	Methylobacterium	Methylobacterium currus	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Methylobacteriaceae	Methylobacterium	Methylobacterium sp. 17Sr1-43	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Methylobacteriaceae	Methylobacterium	Methylobacterium sp. AMS5	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Methylobacteriaceae	Methylorubrum	Methylorubrum extorquens	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Phyllobacteriaceae	Mesorhizobium	Mesorhizobium sp. M6A.T.Cr.TU.016.01.1.1	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Phyllobacteriaceae	Mesorhizobium	Mesorhizobium sp. N3	2	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Rhizobiaceae	Agrobacterium	Agrobacterium tumefaciens	0	0	0	0	0	0	1	0	0	1	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Rhizobiaceae	Ensifer	Ensifer adhaerens	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Rhizobiaceae	Neorhizobium	Neorhizobium galegae	1	0	0	0	0	1	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Rhizobiaceae	Rhizobium	Rhizobium sp. ACO-34A	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Rhizobiaceae	Sinorhizobium	Sinorhizobium americanum	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Rhizobiaceae	Sinorhizobium	Sinorhizobium meliloti	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhizobiales	Xanthobacteraceae	Labrys	Labrys sp. KNU-23	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhodobacterales	Rhodobacteraceae	Celeribacter	Celeribacter indicus	0	1	0	0	0	0	0	1	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhodobacterales	Rhodobacteraceae	Maribius	Maribius sp. THAF1	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhodobacterales	Rhodobacteraceae	Paracoccus	Paracoccus pantotrophus	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhodobacterales	Rhodobacteraceae	Paracoccus	Paracoccus sp. Arc7-R13	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhodobacterales	Rhodobacteraceae	Paracoccus	Paracoccus yeei	0	1	0	1	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhodobacterales	Rhodobacteraceae	Pelagibaca	Pelagibaca abyssi	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhodobacterales	Rhodobacteraceae	Phaeobacter	Phaeobacter gallaeciensis	0	0	0	0	0	0	0	0	0	1	1
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhodobacterales	Rhodobacteraceae	Pseudopuniceibacterium	Pseudopuniceibacterium sp. HQ09	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhodobacterales	Rhodobacteraceae	Rhodobacter	Rhodobacter sphaeroides	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhodobacterales	Rhodobacteraceae	Sagittula	Sagittula sp. P11	2	2	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhodobacterales	Rhodobacteraceae	Salipiger	Salipiger pacificus	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhodobacterales	Rhodobacteraceae	Sulfitobacter	Sulfitobacter sp. THAF37	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhodobacterales	Rhodobacteraceae	Tabrizicola	Tabrizicola piscis	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhodospirillales	Acetobacteraceae	Acetobacter	Acetobacter aceti	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhodospirillales	Acetobacteraceae	Granulibacter	Granulibacter bethesdensis	2	1	1	0	0	0	0	0	0	0	1
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhodospirillales	Acetobacteraceae	Roseococcus	Roseococcus sp. NIBR12	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhodospirillales	Rhodospirillaceae	Azospirillum	Azospirillum brasilense	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhodospirillales	Rhodospirillaceae	Azospirillum	Azospirillum lipoferum	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhodospirillales	Rhodospirillaceae	Azospirillum	Azospirillum oryzae	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhodospirillales	Rhodospirillaceae	Azospirillum	Azospirillum thiophilum	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhodospirillales	Rhodospirillaceae	Magnetospirillum	Magnetospirillum magneticum	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rhodospirillales	Rhodospirillaceae	Nitrospirillum	Nitrospirillum amazonense	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rickettsiales	Anaplasmataceae	Wolbachia	Wolbachia endosymbiont of Brugia pahangi	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rickettsiales	Anaplasmataceae	Wolbachia	Wolbachia endosymbiont of Cruorifilaria tuberocauda	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Rickettsiales	Rickettsiaceae	Rickettsia	Rickettsia bellii	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Erythrobacteraceae	Altererythrobacter	Altererythrobacter atlanticus	2	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Erythrobacteraceae	Altererythrobacter	Altererythrobacter dongtanensis	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Erythrobacteraceae	Altererythrobacter	Altererythrobacter epoxidivorans	3	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Erythrobacteraceae	Altererythrobacter	Altererythrobacter sp. BO-6	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Erythrobacteraceae	Altererythrobacter	Altererythrobacter sp. TH136	2	0	1	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Erythrobacteraceae	Altererythrobacter	Altererythrobacter sp. ZODW24	2	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Erythrobacteraceae	Croceicoccus	Croceicoccus marinus	123	37	18	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Erythrobacteraceae	Croceicoccus	Croceicoccus naphthovorans	2	0	2	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Erythrobacteraceae	Erythrobacter	Erythrobacter gangjinensis	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Erythrobacteraceae	Erythrobacter	Erythrobacter litoralis	2	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Erythrobacteraceae	Erythrobacter	Erythrobacter sp. HKB08	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Erythrobacteraceae	Erythrobacter	Erythrobacter sp. HL-111	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Erythrobacteraceae	Erythrobacter	Erythrobacter sp. KY5	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Erythrobacteraceae	Erythrobacter	Erythrobacter sp. THAF29	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Erythrobacteraceae	Porphyrobacter	Porphyrobacter sp. YT40	40	7	6	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Erythrobacteraceae	Qipengyuania	Qipengyuania sediminis	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Blastomonas	Blastomonas fulva	0	1	1	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Blastomonas	Blastomonas sp. RAC04	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Citromicrobium	Citromicrobium sp. JL477	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Novosphingobium	Novosphingobium aromaticivorans	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Novosphingobium	Novosphingobium resinovorum	3	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Novosphingobium	Novosphingobium sp. ABRDHK2	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Novosphingobium	Novosphingobium sp. ES2-1	0	0	2	0	0	0	0	0	3	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Novosphingobium	Novosphingobium sp. P6W	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Novosphingobium	Novosphingobium sp. PP1Y	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Novosphingobium	Novosphingobium tardaugens	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Novosphingopyxis	Novosphingopyxis sp. pb63	2	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Parasphingopyxis	Parasphingopyxis algicola	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Rhizorhabdus	Rhizorhabdus dicambivorans	2	1	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sandaracinobacter	Sandaracinobacter sp. M6	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingobium	Sphingobium amiense	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingobium	Sphingobium baderi	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingobium	Sphingobium barthaii	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingobium	Sphingobium chlorophenolicum	2	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingobium	Sphingobium cloacae	33	9	4	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingobium	Sphingobium japonicum	2	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingobium	Sphingobium sp. Cam5-1	2	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingobium	Sphingobium sp. KCTC 72723	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingobium	Sphingobium sp. LF-16	5	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingobium	Sphingobium sp. RAC03	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingobium	Sphingobium sp. SCG-1	5	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingobium	Sphingobium sp. SYK-6	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingobium	Sphingobium sp. TKS	0	1	1	0	0	0	1	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingobium	Sphingobium sp. YG1	3	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingobium	Sphingobium yanoikuyae	14	2	2	0	0	1	1	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingomonas	Sphingomonas alpina	14	1	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingomonas	Sphingomonas daechungensis	1	1	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingomonas	Sphingomonas ginsengisoli An et al. 2013	0	0	2	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingomonas	Sphingomonas hengshuiensis	3	0	1	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingomonas	Sphingomonas indica	1	2	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingomonas	Sphingomonas insulae	57	10	7	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingomonas	Sphingomonas koreensis	13	1	1	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingomonas	Sphingomonas melonis	1014	266	166	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingomonas	Sphingomonas panacis	6	2	1	0	0	0	0	0	0	0	1
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingomonas	Sphingomonas paucimobilis	16	4	3	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingomonas	Sphingomonas rhizophila	2	1	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingomonas	Sphingomonas sp. AAP5	6	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingomonas	Sphingomonas sp. AE3	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingomonas	Sphingomonas sp. AP4-R1	7	2	1	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingomonas	Sphingomonas sp. C33	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingomonas	Sphingomonas sp. C8-2	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingomonas	Sphingomonas sp. CL5.1	9	3	1	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingomonas	Sphingomonas sp. Cra20	5	0	1	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingomonas	Sphingomonas sp. FARSPH	90	21	17	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingomonas	Sphingomonas sp. HDW15C	2	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingomonas	Sphingomonas sp. HKS19	4	1	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingomonas	Sphingomonas sp. HMP6	6	0	0	0	0	0	1	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingomonas	Sphingomonas sp. HMP9	14	1	1	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingomonas	Sphingomonas sp. IC081	0	0	0	0	0	1	0	0	0	1	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingomonas	Sphingomonas sp. KC8	1	1	1	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingomonas	Sphingomonas sp. LK11	12	4	1	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingomonas	Sphingomonas sp. LM7	6	0	2	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingomonas	Sphingomonas sp. LMO-1	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingomonas	Sphingomonas sp. MM-1	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingomonas	Sphingomonas sp. NBWT7	7	1	3	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingomonas	Sphingomonas sp. NIC1	835	177	110	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingomonas	Sphingomonas sp. PAMC26645	8	2	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingomonas	Sphingomonas sp. sand1-3	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingomonas	Sphingomonas sp. XS-10	4	1	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingomonas	Sphingomonas sp. YZ-8	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingomonas	Sphingomonas taxi	52	15	6	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingomonas	Sphingomonas wittichii	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingopyxis	Sphingopyxis alaskensis	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingopyxis	Sphingopyxis fribergensis	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingopyxis	Sphingopyxis lindanitolerans	2	0	0	0	0	0	1	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingopyxis	Sphingopyxis macrogoltabida	1	1	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingopyxis	Sphingopyxis sp. 113P3	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingopyxis	Sphingopyxis sp. EG6	1	1	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingopyxis	Sphingopyxis sp. FD7	2	1	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingopyxis	Sphingopyxis sp. LPB0140	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingopyxis	Sphingopyxis sp. OPL5	2	0	1	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingopyxis	Sphingopyxis sp. QXT-31	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingorhabdus	Sphingorhabdus sp. JK6	2	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingorhabdus	Sphingorhabdus sp. SMR4y	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingorhabdus	Sphingorhabdus sp. YGSMI21	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingosinicella	Sphingosinicella sp. BN140058	1	1	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingosinithalassobacter	Sphingosinithalassobacter sp. CS137	6	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Sphingosinithalassobacter	Sphingosinithalassobacter sp. zrk23	2	1	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Alphaproteobacteria	Sphingomonadales	Sphingomonadaceae	Tardibacter	Tardibacter chloracetimidivorans	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Alcaligenaceae	Achromobacter	Achromobacter pestifer	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Alcaligenaceae	Achromobacter	Achromobacter sp. MFA1 R4	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Alcaligenaceae	Advenella	Advenella mimigardefordensis	0	1	0	0	0	0	1	0	2	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Alcaligenaceae	Alcaligenes	Alcaligenes faecalis	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Alcaligenaceae	Bordetella	Bordetella avium	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Alcaligenaceae	Bordetella	Bordetella sp. H567	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Alcaligenaceae	Bordetella	Bordetella sp. N	2	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Burkholderiaceae	Burkholderia	Burkholderia contaminans	0	0	0	0	0	1	4	0	1	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Burkholderiaceae	Burkholderia	Burkholderia glumae	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Burkholderiaceae	Burkholderia	Burkholderia lata	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Burkholderiaceae	Burkholderia	Burkholderia sp. CCGE1003	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Burkholderiaceae	Burkholderia	Burkholderia sp. IDO3	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Burkholderiaceae	Cupriavidus	Cupriavidus gilardii	0	0	0	0	0	0	0	0	0	2	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Burkholderiaceae	Cupriavidus	Cupriavidus metallidurans	1	0	0	0	0	0	2	0	1	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Burkholderiaceae	Cupriavidus	Cupriavidus necator	2	0	1	0	0	0	0	1	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Burkholderiaceae	Cupriavidus	Cupriavidus pauculus	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Burkholderiaceae	Cupriavidus	Cupriavidus taiwanensis	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Burkholderiaceae	Ephemeroptericola	Ephemeroptericola cinctiostellae	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Burkholderiaceae	Lautropia	Lautropia mirabilis	24	25	0	3	0	57	686	97	0	26	133
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Burkholderiaceae	Pandoraea	Pandoraea apista	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Burkholderiaceae	Pandoraea	Pandoraea fibrosis	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Burkholderiaceae	Paraburkholderia	Paraburkholderia fungorum	0	0	0	0	0	0	4	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Burkholderiaceae	Paraburkholderia	Paraburkholderia xenovorans	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Burkholderiaceae	Polynucleobacter	Polynucleobacter asymbioticus	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Burkholderiaceae	Polynucleobacter	Polynucleobacter necessarius	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Burkholderiaceae	Polynucleobacter	Polynucleobacter sp. LimPoW16	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Burkholderiaceae	Ralstonia	Ralstonia insidiosa	0	0	0	0	0	0	2	1	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Burkholderiaceae	Ralstonia	Ralstonia pickettii	1	1	0	0	0	0	11	1	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Acidovorax	Acidovorax avenae	0	0	0	0	0	0	2	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Acidovorax	Acidovorax carolinensis	0	1	0	0	0	0	2	1	0	1	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Acidovorax	Acidovorax citrulli	1	0	0	0	0	1	0	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Acidovorax	Acidovorax ebreus	4	0	0	0	0	0	5	2	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Acidovorax	Acidovorax monticola	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Acidovorax	Acidovorax sp. 1608163	1	1	0	0	0	1	2	3	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Acidovorax	Acidovorax sp. 16-35-5	0	0	0	0	0	0	2	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Acidovorax	Acidovorax sp. HDW3	1	0	0	0	0	0	3	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Acidovorax	Acidovorax sp. JMULE5	0	0	0	0	0	2	2	1	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Acidovorax	Acidovorax sp. JS42	4	0	0	0	0	2	3	1	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Acidovorax	Acidovorax sp. KKS102	2	0	0	0	0	0	3	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Acidovorax	Acidovorax sp. RAC01	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Acidovorax	Acidovorax sp. T1	0	0	0	0	0	1	1	1	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Alicycliphilus	Alicycliphilus denitrificans	3	0	0	0	0	0	1	0	0	1	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Comamonas	Comamonas aquatica	1	0	0	0	0	3	1	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Comamonas	Comamonas koreensis	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Comamonas	Comamonas testosteroni	2	0	0	0	0	0	0	1	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Comamonas	Comamonas thiooxydans	0	0	1	0	0	2	0	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Delftia	Delftia tsuruhatensis	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Diaphorobacter	Diaphorobacter aerolatus	1	0	0	0	0	0	1	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Diaphorobacter	Diaphorobacter polyhydroxybutyrativorans	1	0	0	0	0	0	2	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Diaphorobacter	Diaphorobacter sp. HDW4A	3	3	0	0	0	1	5	1	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Diaphorobacter	Diaphorobacter sp. HDW4B	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Diaphorobacter	Diaphorobacter sp. JS3050	2	2	1	0	0	0	3	2	1	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Hydrogenophaga	Hydrogenophaga sp. PBC	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Kinneretia	Kinneretia sp. DAIF2	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Limnohabitans	Limnohabitans sp. 103DPR2	0	0	1	0	0	0	0	1	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Melaminivora	Melaminivora sp. SC2-9	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Ottowia	Ottowia oryzae	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Ottowia	Ottowia sp. oral taxon 894	0	3	0	0	0	133	1	6	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Pulveribacter	Pulveribacter suum	3	0	0	0	0	0	2	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Ramlibacter	Ramlibacter tataouinensis	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Rhodoferax	Rhodoferax antarcticus	1	0	0	0	0	0	2	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Rhodoferax	Rhodoferax koreense	0	1	0	0	0	0	0	0	0	0	1
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Rhodoferax	Rhodoferax saidenbachensis	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Rhodoferax	Rhodoferax sediminis	0	0	0	0	0	0	1	0	0	0	1
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Rhodoferax	Rhodoferax sp. BAB1	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Schlegelella	Schlegelella thermodepolymerans	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Serpentinomonas	Serpentinomonas mccroryi	0	0	0	0	0	1	1	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Simplicispira	Simplicispira suum	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Variovorax	Variovorax boronicumulans	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Variovorax	Variovorax sp. 38R	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Variovorax	Variovorax sp. PAMC26660	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Variovorax	Variovorax sp. PAMC 28711	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Variovorax	Variovorax sp. PBS-H4	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Comamonadaceae	Variovorax	Variovorax sp. RA8	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Oxalobacteraceae	Collimonas	Collimonas arenae	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Oxalobacteraceae	Collimonas	Collimonas fungivorans	2	0	0	0	0	1	1	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Oxalobacteraceae	Duganella	Duganella sp. GN2-R2	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Oxalobacteraceae	Herbaspirillum	Herbaspirillum rubrisubalbicans	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Oxalobacteraceae	Herminiimonas	Herminiimonas arsenicoxydans	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Oxalobacteraceae	Janthinobacterium	Janthinobacterium agaricidamnosum	0	0	2	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Oxalobacteraceae	Janthinobacterium	Janthinobacterium sp. 1	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Oxalobacteraceae	Janthinobacterium	Janthinobacterium sp. B9-8	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Oxalobacteraceae	Janthinobacterium	Janthinobacterium sp. HH102	0	0	1	0	0	0	2	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Oxalobacteraceae	Janthinobacterium	Janthinobacterium sp. Marseille	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Oxalobacteraceae	Massilia	Massilia sp. LPB0304	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Oxalobacteraceae	Massilia	Massilia sp. NR 4-1	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	Oxalobacteraceae	Massilia	Massilia violaceinigra	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	unclassified	Aquabacterium	Aquabacterium olei	2	3	0	0	0	0	2	1	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	unclassified	Inhella	Inhella inkyongensis	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	unclassified	Sphaerotilus	Sphaerotilus natans	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Burkholderiales	unclassified	Thiomonas	Thiomonas intermedia	1	0	0	0	0	1	0	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Chromobacteriaceae	Chitinibacter	Chitinibacter sp. 2T18	2	1	1	0	0	1	2	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Chromobacteriaceae	Chromobacterium	Chromobacterium paludis	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Chromobacteriaceae	Chromobacterium	Chromobacterium sp. Rain0013	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Chromobacteriaceae	Laribacter	Laribacter hongkongensis	0	0	0	0	0	1	3	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Neisseriaceae	Alysiella	Alysiella filiformis	0	0	2	0	0	0	0	0	1	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Neisseriaceae	Conchiformibius	Conchiformibius steedae	0	0	0	0	0	0	1	0	1	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Neisseriaceae	Eikenella	Eikenella corrodens	4	31	7	0	3	48	37	26	6	21	17
+Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Neisseriaceae	Eikenella	Eikenella exigua	1	2	0	0	2	6	0	13	0	0	3
+Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Neisseriaceae	Kingella	Kingella kingae	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Neisseriaceae	Kingella	Kingella oralis	1	4	1	0	3	0	1	6	2	15	14
+Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Neisseriaceae	Neisseria	Neisseria animalis	0	0	5	0	0	2	0	4	7	0	1
+Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Neisseriaceae	Neisseria	Neisseria animaloris	0	0	4	0	0	0	1	3	2	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Neisseriaceae	Neisseria	Neisseria bacilliformis	1	1	3	1	0	1	0	5	4	3	2
+Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Neisseriaceae	Neisseria	Neisseria brasiliensis	0	3	7	0	0	2	0	4	5	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Neisseriaceae	Neisseria	Neisseria canis	0	0	1	0	2	0	0	1	0	0	1
+Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Neisseriaceae	Neisseria	Neisseria chenwenguii	0	0	7	0	0	1	0	6	2	1	1
+Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Neisseriaceae	Neisseria	Neisseria cinerea	2	7	25	0	2	57	0	39	36	8	2
+Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Neisseriaceae	Neisseria	Neisseria dentiae	0	0	3	0	0	0	0	2	5	0	3
+Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Neisseriaceae	Neisseria	Neisseria elongata	92	29	34	3	21	98	363	79	42	9	51
+Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Neisseriaceae	Neisseria	Neisseria flavescens	20	62	265	0	6	38	3	497	231	74	7
+Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Neisseriaceae	Neisseria	Neisseria gonorrhoeae	2	3	42	0	2	5	5	25	78	6	4
+Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Neisseriaceae	Neisseria	Neisseria lactamica	1	3	41	0	3	16	5	25	33	0	3
+Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Neisseriaceae	Neisseria	Neisseria meningitidis	8	12	83	0	7	28	7	108	114	13	27
+Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Neisseriaceae	Neisseria	Neisseria mucosa	149	153	2724	0	49	154	199	966	2776	166	91
+Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Neisseriaceae	Neisseria	Neisseria musculi	0	1	4	0	1	3	0	5	2	0	1
+Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Neisseriaceae	Neisseria	Neisseria polysaccharea	0	4	16	0	1	0	1	14	6	2	1
+Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Neisseriaceae	Neisseria	Neisseria shayeganii	0	0	2	0	0	0	1	2	2	1	1
+Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Neisseriaceae	Neisseria	Neisseria sicca	45	97	46	0	23	164	29	141	41	6	46
+Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Neisseriaceae	Neisseria	Neisseria sp. 10022	1	2	2	0	1	0	0	3	3	3	0
+Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Neisseriaceae	Neisseria	Neisseria sp. KEM232	1	0	3	0	0	5	0	10	1	1	1
+Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Neisseriaceae	Neisseria	Neisseria sp. oral taxon 014	14	21	17	0	139	68	4	32	23	4	804
+Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Neisseriaceae	Neisseria	Neisseria sp. ZJ785	0	1	1	0	0	3	0	8	0	2	0
+Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Neisseriaceae	Neisseria	Neisseria subflava	65	302	1337	11	34	135	28	2276	1385	2260	14
+Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Neisseriaceae	Neisseria	Neisseria wadsworthii	0	0	2	0	0	0	0	3	2	1	0
+Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Neisseriaceae	Neisseria	Neisseria weaveri	0	0	3	0	0	1	0	6	3	1	0
+Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Neisseriaceae	Neisseria	Neisseria zalophi	0	0	0	1	0	0	0	0	2	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Neisseriaceae	Neisseria	Neisseria zoodegmatis	0	1	2	0	0	1	0	6	2	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Neisseriaceae	Simonsiella	Simonsiella muelleri	0	1	3	0	0	0	0	1	0	8	1
+Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Neisseriaceae	Snodgrassella	Snodgrassella alvi	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Neisseriales	Neisseriaceae	Vitreoscilla	Vitreoscilla sp. C1	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Nitrosomonadales	Gallionellaceae	Candidatus Nitrotoga	Candidatus Nitrotoga sp. AM1P	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Nitrosomonadales	Methylophilaceae	Candidatus Methylopumilus	Candidatus Methylopumilus planktonicus	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Nitrosomonadales	Methylophilaceae	Methylophilus	Methylophilus medardicus	0	0	1	0	0	0	0	0	1	1	0
+Bacteria	Proteobacteria	Betaproteobacteria	Nitrosomonadales	Methylophilaceae	Methylophilus	Methylophilus sp. TWE2	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Nitrosomonadales	Sulfuricellaceae	Sulfuriferula	Sulfuriferula sp. AH1	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Rhodocyclales	Azonexaceae	Dechloromonas	Dechloromonas sp. HYN0024	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Rhodocyclales	Rhodocyclaceae	Azospira	Dechlorosoma suillum	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Rhodocyclales	Zoogloeaceae	Thauera	Thauera humireducens	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Proteobacteria	Betaproteobacteria	Rhodocyclales	Zoogloeaceae	Thauera	Thauera sp. MZ1T	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Proteobacteria	Deltaproteobacteria	Desulfobacterales	Desulfobacteraceae	Desulfococcus	Desulfococcus multivorans	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Proteobacteria	Deltaproteobacteria	Desulfobacterales	Desulfobacteraceae	Desulfosarcina	Desulfosarcina widdelii	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Deltaproteobacteria	Myxococcales	Archangiaceae	Stigmatella	Stigmatella aurantiaca	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Proteobacteria	Epsilonproteobacteria	Campylobacterales	Campylobacteraceae	Arcobacter	Arcobacter cloacae	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Proteobacteria	Epsilonproteobacteria	Campylobacterales	Campylobacteraceae	Arcobacter	Arcobacter cryaerophilus	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Proteobacteria	Epsilonproteobacteria	Campylobacterales	Campylobacteraceae	Campylobacter	Campylobacter avium	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Epsilonproteobacteria	Campylobacterales	Campylobacteraceae	Campylobacter	Campylobacter canadensis	0	0	0	2	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Epsilonproteobacteria	Campylobacterales	Campylobacteraceae	Campylobacter	Campylobacter concisus	57	172	141	72	1285	117	33	22	111	136	28
+Bacteria	Proteobacteria	Epsilonproteobacteria	Campylobacterales	Campylobacteraceae	Campylobacter	Campylobacter corcagiensis	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Epsilonproteobacteria	Campylobacterales	Campylobacteraceae	Campylobacter	Campylobacter curvus	0	0	0	6	4	11	2	0	1	1	22
+Bacteria	Proteobacteria	Epsilonproteobacteria	Campylobacterales	Campylobacteraceae	Campylobacter	Campylobacter fetus	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Epsilonproteobacteria	Campylobacterales	Campylobacteraceae	Campylobacter	Campylobacter geochelonis	0	0	0	1	1	0	0	0	0	0	0
+Bacteria	Proteobacteria	Epsilonproteobacteria	Campylobacterales	Campylobacteraceae	Campylobacter	Campylobacter gracilis	0	0	0	6	3	1	6	0	1	1	396
+Bacteria	Proteobacteria	Epsilonproteobacteria	Campylobacterales	Campylobacteraceae	Campylobacter	Campylobacter hepaticus	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Epsilonproteobacteria	Campylobacterales	Campylobacteraceae	Campylobacter	Campylobacter hominis	0	0	0	7	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Epsilonproteobacteria	Campylobacterales	Campylobacteraceae	Campylobacter	Campylobacter hyointestinalis	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Proteobacteria	Epsilonproteobacteria	Campylobacterales	Campylobacteraceae	Campylobacter	Campylobacter iguaniorum	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Epsilonproteobacteria	Campylobacterales	Campylobacteraceae	Campylobacter	Campylobacter pinnipediorum	0	0	0	2	2	0	0	0	0	0	0
+Bacteria	Proteobacteria	Epsilonproteobacteria	Campylobacterales	Campylobacteraceae	Campylobacter	Campylobacter rectus	2	5	1	68	0	12	8	2	0	0	14
+Bacteria	Proteobacteria	Epsilonproteobacteria	Campylobacterales	Campylobacteraceae	Campylobacter	Campylobacter showae	6	22	1	455	3	96	41	10	1	7	23
+Bacteria	Proteobacteria	Epsilonproteobacteria	Campylobacterales	Campylobacteraceae	Campylobacter	Campylobacter sp. CCUG 57310	0	0	0	5	1	0	0	0	0	0	1
+Bacteria	Proteobacteria	Epsilonproteobacteria	Campylobacterales	Campylobacteraceae	Campylobacter	Campylobacter sp. RM16192	0	0	0	1	1	0	0	0	0	0	0
+Bacteria	Proteobacteria	Epsilonproteobacteria	Campylobacterales	Campylobacteraceae	Campylobacter	Campylobacter sp. RM16704	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Proteobacteria	Epsilonproteobacteria	Campylobacterales	Campylobacteraceae	Campylobacter	Campylobacter sp. RM6137	0	0	0	1	0	0	0	0	0	0	1
+Bacteria	Proteobacteria	Epsilonproteobacteria	Campylobacterales	Campylobacteraceae	Campylobacter	Campylobacter sp. RM6914	0	0	1	1	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Epsilonproteobacteria	Campylobacterales	Campylobacteraceae	Campylobacter	Campylobacter ureolyticus	0	0	0	21	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Epsilonproteobacteria	Campylobacterales	Helicobacteraceae	Helicobacter	Helicobacter pylori	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Epsilonproteobacteria	Campylobacterales	Thiovulaceae	Sulfurimonas	Sulfurimonas autotrophica	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Epsilonproteobacteria	Campylobacterales	Thiovulaceae	Sulfurimonas	Sulfurimonas paralvinellae	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Epsilonproteobacteria	Nautiliales	Nautiliaceae	Caminibacter	Caminibacter mediatlanticus	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Epsilonproteobacteria	Nautiliales	Nautiliaceae	Nautilia	Nautilia sp. PV-1	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	unclassified	unclassified	Candidatus Reidiella	Candidatus Reidiella endopervernicosa	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	unclassified	unclassified	Gallaecimonas	Gallaecimonas mangrovi	2	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	unclassified	unclassified	Pseudohongiella	Pseudohongiella spirulinae	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Aeromonadales	Aeromonadaceae	Aeromonas	Aeromonas media	0	0	0	0	0	0	0	0	3	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Aeromonadales	Aeromonadaceae	Aeromonas	Aeromonas schubertii	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Aeromonadales	Aeromonadaceae	Aeromonas	Aeromonas sobria	2	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Aeromonadales	Aeromonadaceae	Aeromonas	Aeromonas sp. ASNIH1	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Aeromonadales	Aeromonadaceae	Aeromonas	Aeromonas sp. ASNIH4	2	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Aeromonadales	Aeromonadaceae	Oceanimonas	Oceanimonas sp. GK1	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Aeromonadales	Aeromonadaceae	Zobellella	Zobellella denitrificans	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Proteobacteria	Gammaproteobacteria	Alteromonadales	Alteromonadaceae	Alteromonas	Alteromonas sp. BL110	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Alteromonadales	Alteromonadaceae	Alteromonas	Alteromonas sp. RKMC-009	0	0	2	0	0	0	0	0	3	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Alteromonadales	Alteromonadaceae	Marinobacter	Marinobacter sp. Arc7-DN-1	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Proteobacteria	Gammaproteobacteria	Alteromonadales	Alteromonadaceae	Salinimonas	Salinimonas sediminis	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Alteromonadales	Colwelliaceae	Colwellia	Colwellia sp. 20A7	0	0	0	0	0	0	0	0	3	0	1
+Bacteria	Proteobacteria	Gammaproteobacteria	Alteromonadales	Colwelliaceae	Colwellia	Colwellia sp. Arc7-635	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Alteromonadales	Colwelliaceae	Colwellia	Colwellia sp. MT41	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Alteromonadales	Colwelliaceae	Colwellia	Colwellia sp. PAMC 21821	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Alteromonadales	Colwelliaceae	Thalassotalea	Thalassotalea sp. HSM 43	1	0	2	0	1	0	0	0	0	1	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Alteromonadales	Idiomarinaceae	Idiomarina	Idiomarina loihiensis	0	0	0	0	0	0	0	0	0	0	2
+Bacteria	Proteobacteria	Gammaproteobacteria	Alteromonadales	Idiomarinaceae	Idiomarina	Idiomarina piscisalsi	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Alteromonadales	Idiomarinaceae	Idiomarina	Idiomarina sp. OT37-5b	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Alteromonadales	Pseudoalteromonadaceae	Pseudoalteromonas	Pseudoalteromonas aliena	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Alteromonadales	Pseudoalteromonadaceae	Pseudoalteromonas	Pseudoalteromonas atlantica	0	0	1	1	0	0	0	0	0	1	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Alteromonadales	Pseudoalteromonadaceae	Pseudoalteromonas	Pseudoalteromonas espejiana	1	0	0	1	1	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Alteromonadales	Pseudoalteromonadaceae	Pseudoalteromonas	Pseudoalteromonas luteoviolacea	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Alteromonadales	Pseudoalteromonadaceae	Pseudoalteromonas	Pseudoalteromonas nigrifaciens	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Alteromonadales	Pseudoalteromonadaceae	Pseudoalteromonas	Pseudoalteromonas prydzensis	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Alteromonadales	Pseudoalteromonadaceae	Pseudoalteromonas	Pseudoalteromonas rubra	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Alteromonadales	Pseudoalteromonadaceae	Pseudoalteromonas	Pseudoalteromonas sp. A25	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Alteromonadales	Pseudoalteromonadaceae	Pseudoalteromonas	Pseudoalteromonas sp. DL-6	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Alteromonadales	Pseudoalteromonadaceae	Pseudoalteromonas	Pseudoalteromonas sp. MT33b	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Alteromonadales	Pseudoalteromonadaceae	Pseudoalteromonas	Pseudoalteromonas sp. NC201	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Alteromonadales	Pseudoalteromonadaceae	Pseudoalteromonas	Pseudoalteromonas spongiae	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Alteromonadales	Pseudoalteromonadaceae	Pseudoalteromonas	Pseudoalteromonas sp. R3	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Alteromonadales	Pseudoalteromonadaceae	Pseudoalteromonas	Pseudoalteromonas translucida	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Alteromonadales	Shewanellaceae	Parashewanella	Parashewanella spongiae	0	0	1	0	0	0	0	0	1	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Alteromonadales	Shewanellaceae	Parashewanella	Parashewanella tropica	0	0	2	0	0	0	0	0	0	1	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Alteromonadales	Shewanellaceae	Shewanella	Shewanella amazonensis	0	0	0	2	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Alteromonadales	Shewanellaceae	Shewanella	Shewanella baltica	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Alteromonadales	Shewanellaceae	Shewanella	Shewanella livingstonensis	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Alteromonadales	Shewanellaceae	Shewanella	Shewanella oneidensis	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Proteobacteria	Gammaproteobacteria	Alteromonadales	Shewanellaceae	Shewanella	Shewanella sp. Scap07	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Alteromonadales	Shewanellaceae	Shewanella	Shewanella sp. SNU WT4	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Alteromonadales	Shewanellaceae	Shewanella	Shewanella sp. YLB-06	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Alteromonadales	Shewanellaceae	Shewanella	Shewanella sp. YLB-08	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Proteobacteria	Gammaproteobacteria	Alteromonadales	Shewanellaceae	Shewanella	Shewanella woodyi	0	0	0	0	0	0	0	0	1	2	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Cardiobacteriales	Cardiobacteriaceae	Cardiobacterium	Cardiobacterium hominis	13	0	0	0	2	0	244	12	0	20	44
+Bacteria	Proteobacteria	Gammaproteobacteria	Cellvibrionales	Cellvibrionaceae	Cellvibrio	Cellvibrio sp. PSBB006	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Cellvibrionales	Cellvibrionaceae	Cellvibrio	Cellvibrio sp. PSBB023	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Cellvibrionales	Microbulbiferaceae	Microbulbifer	Microbulbifer sp. SH-1	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Proteobacteria	Gammaproteobacteria	Chromatiales	Chromatiaceae	Allochromatium	Allochromatium vinosum	0	0	0	2	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Chromatiales	Chromatiaceae	Candidatus Nitrosoglobus	Candidatus Nitrosoglobus terrae	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Chromatiales	Chromatiaceae	Nitrosococcus	Nitrosococcus watsonii	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Chromatiales	Chromatiaceae	Rheinheimera	Rheinheimera sp. D18	0	0	1	0	0	0	0	0	1	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Chromatiales	Chromatiaceae	Rheinheimera	Rheinheimera sp. LHK132	2	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Chromatiales	Ectothiorhodospiraceae	Spiribacter	Spiribacter salinus	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Chromatiales	Ectothiorhodospiraceae	Spiribacter	Spiribacter sp. 2438	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Chromatiales	Thioalkalispiraceae	Sulfurivermis	Sulfurivermis fontis	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Budviciaceae	Limnobaculum	Limnobaculum parvum	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Budviciaceae	Pragia	Pragia fontium	0	0	2	0	0	0	0	0	0	2	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Budviciaceae	Pragia	Pragia sp. CF-458	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Enterobacteriaceae	Buttiauxella	Buttiauxella agrestis	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Enterobacteriaceae	Candidatus Hamiltonella	Candidatus Hamiltonella defensa	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Enterobacteriaceae	Cedecea	Cedecea neteri	0	0	0	0	1	0	0	1	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Enterobacteriaceae	Citrobacter	Citrobacter farmeri	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Enterobacteriaceae	Citrobacter	Citrobacter freundii	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Enterobacteriaceae	Cronobacter	Cronobacter condimenti	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Enterobacteriaceae	Cronobacter	Cronobacter sp. JZ38	0	0	0	0	0	0	0	0	2	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Enterobacteriaceae	Enterobacter	Enterobacter cloacae	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Enterobacteriaceae	Enterobacter	Enterobacter oligotrophicus	2	0	0	0	0	0	2	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Enterobacteriaceae	Enterobacter	Enterobacter sp. E76	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Enterobacteriaceae	Enterobacter	Enterobacter sp. RHBSTW-00994	0	0	0	0	0	0	0	0	2	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Enterobacteriaceae	Escherichia	Escherichia coli	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Enterobacteriaceae	Escherichia	Escherichia marmotae	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Enterobacteriaceae	Klebsiella	Klebsiella aerogenes	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Enterobacteriaceae	Klebsiella	Klebsiella pneumoniae	1	1	0	1	0	1	0	1	1	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Enterobacteriaceae	Kluyvera	Kluyvera intermedia	0	1	0	0	0	0	1	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Enterobacteriaceae	Kosakonia	Kosakonia sp. SMBL-WEM22	0	0	0	0	0	0	0	0	3	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Enterobacteriaceae	Leclercia	Leclercia adecarboxylata	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Enterobacteriaceae	Leclercia	Leclercia sp. 29361	0	0	0	0	0	0	1	0	0	0	1
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Enterobacteriaceae	Leclercia	Leclercia sp. J807	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Enterobacteriaceae	Lelliottia	Lelliottia amnigena	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Enterobacteriaceae	Pseudescherichia	Pseudescherichia vulneris	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Enterobacteriaceae	Raoultella	Raoultella ornithinolytica	4	0	0	0	0	0	1	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Enterobacteriaceae	Salmonella	Salmonella enterica	0	0	0	0	1	0	0	1	1	1	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Enterobacteriaceae	Scandinavium	Scandinavium goeteborgense	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Enterobacteriaceae	Shimwellia	Shimwellia blattae	0	0	1	0	0	0	0	2	0	1	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Enterobacteriaceae	unclassified	Enterobacteriaceae endosymbiont of Donacia cinerea	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Enterobacteriaceae	unclassified	Enterobacteriaceae endosymbiont of Donacia dentata	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Enterobacteriaceae	unclassified	Enterobacteriaceae endosymbiont of Donacia proxima	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Enterobacteriaceae	unclassified	Plautia stali symbiont	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Erwiniaceae	Buchnera	Buchnera aphidicola	1	0	0	2	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Erwiniaceae	Mixta	Mixta calida	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Erwiniaceae	Mixta	Mixta theicola	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Erwiniaceae	Pantoea	Candidatus Pantoea carbekii	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Erwiniaceae	Pantoea	Pantoea rwandensis	0	0	0	0	0	0	0	1	0	1	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Erwiniaceae	Pantoea	Pantoea sp. PSNIH1	0	0	18	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Erwiniaceae	Pantoea	Pantoea sp. SO10	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Erwiniaceae	Pantoea	Pantoea stewartii	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Erwiniaceae	Tatumella	Tatumella sp. TA1	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Hafniaceae	Hafnia	Hafnia alvei	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Hafniaceae	Obesumbacterium	Obesumbacterium proteus	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Morganellaceae	Arsenophonus	Arsenophonus endosymbiont of Aphis craccivora	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Morganellaceae	Arsenophonus	Arsenophonus nasoniae	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Morganellaceae	Morganella	Morganella morganii	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Morganellaceae	Photorhabdus	Photorhabdus asymbiotica	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Morganellaceae	Photorhabdus	Photorhabdus laumondii	0	0	0	0	0	0	1	0	1	1	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Morganellaceae	Proteus	Proteus columbae	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Morganellaceae	Proteus	Proteus hauseri	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Morganellaceae	Proteus	Proteus sp. GOKU	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Morganellaceae	Proteus	Proteus sp. ZN5	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Morganellaceae	Proteus	Proteus vulgaris	0	0	1	2	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Morganellaceae	Providencia	Providencia alcalifaciens	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Morganellaceae	Providencia	Providencia rettgeri	0	0	2	0	0	0	0	1	3	0	1
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Morganellaceae	Providencia	Providencia rustigianii	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Morganellaceae	Providencia	Providencia stuartii	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Morganellaceae	Providencia	Providencia vermicola	0	0	1	0	0	0	1	0	1	0	1
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Morganellaceae	Xenorhabdus	Xenorhabdus bovienii	0	0	0	2	0	1	0	0	0	0	1
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Morganellaceae	Xenorhabdus	Xenorhabdus hominickii	0	0	1	0	0	0	0	0	1	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Pectobacteriaceae	Dickeya	Dickeya zeae	0	0	1	0	0	0	0	0	3	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Pectobacteriaceae	Pectobacterium	Pectobacterium odoriferum	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Pectobacteriaceae	Pectobacterium	Pectobacterium polaris	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Pectobacteriaceae	Sodalis	Sodalis glossinidius	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Yersiniaceae	Rahnella	Rahnella aquatilis	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Yersiniaceae	Serratia	Serratia sp. ATCC 39006	0	0	1	0	0	0	0	0	0	1	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Yersiniaceae	Yersinia	Yersinia aldovae	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Yersiniaceae	Yersinia	Yersinia enterocolitica	0	0	1	0	0	0	0	0	1	1	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Yersiniaceae	Yersinia	Yersinia frederiksenii	0	0	0	0	0	0	0	0	0	2	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Yersiniaceae	Yersinia	Yersinia ruckeri	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	unclassified	Plesiomonas	Plesiomonas shigelloides	0	0	0	2	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Legionellales	Legionellaceae	Legionella	Legionella geestiana	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Legionellales	Legionellaceae	Legionella	Legionella lansingensis	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Methylococcales	Methylococcaceae	Methylomonas	Methylomonas denitrificans	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Methylococcales	Methylococcaceae	Methylovulum	Methylovulum psychrotolerans	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Nevskiales	Sinobacteraceae	Solimonas	Solimonas sp. K1W22B-7	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Proteobacteria	Gammaproteobacteria	Nevskiales	Steroidobacteraceae	Steroidobacter	Steroidobacter denitrificans	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Oceanospirillales	Halomonadaceae	Chromohalobacter	Chromohalobacter salexigens	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Oceanospirillales	Halomonadaceae	Halomonas	Halomonas sp. GT	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Oceanospirillales	Halomonadaceae	Halomonas	Halomonas sp. YLGW01	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Oceanospirillales	Halomonadaceae	Kushneria	Kushneria marisflavi	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Oceanospirillales	Halomonadaceae	Kushneria	Kushneria sp. YCWA18	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Oceanospirillales	Halomonadaceae	Zymobacter	Zymobacter palmae	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Oceanospirillales	Kangiellaceae	Kangiella	Kangiella geojedonensis	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Oceanospirillales	Oceanospirillaceae	Bermanella	Bermanella marisrubri	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Oceanospirillales	Oceanospirillaceae	Marinobacterium	Marinobacterium aestuarii	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Proteobacteria	Gammaproteobacteria	Oceanospirillales	Oceanospirillaceae	Marinomonas	Marinomonas posidonica	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Oceanospirillales	Oceanospirillaceae	Oleispira	Oleispira antarctica	0	0	0	0	0	0	0	0	2	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Orbales	Orbaceae	Gilliamella	Gilliamella apicola	1	0	0	0	0	0	0	0	3	1	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Orbales	Orbaceae	Orbus	Orbus sp. IPMB12	0	0	0	0	0	0	0	0	2	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Actinobacillus	Actinobacillus delphinicola	2	0	1	3	0	0	0	0	1	2	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Actinobacillus	Actinobacillus equuli	2	0	1	0	0	0	0	1	1	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Actinobacillus	Actinobacillus indolicus	1	0	0	2	0	0	1	0	4	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Actinobacillus	Actinobacillus lignieresii	0	0	0	0	0	0	0	0	2	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Actinobacillus	Actinobacillus pleuropneumoniae	3	0	0	4	0	0	0	2	5	0	1
+Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Actinobacillus	Actinobacillus porcitonsillarum	6	0	1	1	0	0	0	0	11	1	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Actinobacillus	Actinobacillus succinogenes	0	0	1	0	0	0	0	0	3	0	1
+Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Actinobacillus	Actinobacillus suis	1	0	1	2	0	0	0	0	2	2	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Aggregatibacter	Aggregatibacter actinomycetemcomitans	0	1	0	51	2	4	2	1	2	4	10
+Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Aggregatibacter	Aggregatibacter aphrophilus	10	4	12	581	14	56	12	10	18	82	83
+Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Aggregatibacter	Aggregatibacter segnis	8	1	17	2976	23	170	39	7	19	18	141
+Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Avibacterium	Avibacterium paragallinarum	0	0	1	8	0	0	0	0	2	1	1
+Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Avibacterium	Avibacterium volantium	0	0	1	3	0	0	0	1	2	0	2
+Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Basfia	[Mannheimia] succiniciproducens	0	0	0	1	1	0	0	0	0	1	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Bibersteinia	Bibersteinia trehalosi	1	0	6	1	0	1	0	0	9	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Bisgaardia	Bisgaardia hudsonensis	0	0	0	2	1	0	3	0	0	2	1
+Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Frederiksenia	Frederiksenia canicola	2	0	2	1	0	0	3	1	6	1	1
+Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Gallibacterium	Gallibacterium anatis	1	0	0	1	1	0	1	0	0	1	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Glaesserella	Glaesserella parasuis	3	1	1	0	3	0	0	2	12	3	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Glaesserella	Glaesserella sp. 15-184	3	0	3	0	1	0	0	2	3	3	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Haemophilus	Haemophilus aegyptius	0	0	0	1	0	0	0	0	0	0	2
+Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Haemophilus	[Haemophilus] ducreyi	0	0	3	0	0	0	1	0	4	1	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Haemophilus	Haemophilus haemolyticus	64	26	72	38	108	20	16	31	135	133	834
+Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Haemophilus	Haemophilus influenzae	29	22	109	31	44	21	19	39	325	78	210
+Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Haemophilus	Haemophilus parahaemolyticus	215	2	1336	37	1	0	10	5	5438	11	12
+Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Haemophilus	Haemophilus parainfluenzae	627	906	2247	99	2328	25	565	1963	1866	6921	860
+Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Haemophilus	Haemophilus pittmaniae	12	3	29	23	14	3	4	21	38	62	16
+Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Haemophilus	Haemophilus sp. oral taxon 036	6	6	12	8	34	61	5	7	23	24	167
+Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Histophilus	Histophilus somni	3	0	3	3	3	1	2	1	3	1	3
+Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Mannheimia	Mannheimia granulomatis	4	0	6	3	1	0	1	2	18	1	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Mannheimia	Mannheimia haemolytica	5	0	1	0	2	0	0	0	13	0	1
+Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Mannheimia	Mannheimia sp. 16CN0041	0	0	2	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Mannheimia	Mannheimia sp. BNO311	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Mannheimia	Mannheimia sp. USDA-ARS-USMARC-1261	1	0	6	0	0	0	0	0	6	0	2
+Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Mannheimia	Mannheimia sp. ZY190616	1	0	3	1	0	0	0	0	2	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Mannheimia	Mannheimia varigena	1	0	4	1	1	0	0	0	8	2	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Otariodibacter	Otariodibacter oris	1	0	1	4	0	1	0	0	4	1	2
+Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Pasteurella	Pasteurella dagmatis	0	0	1	0	0	0	0	0	0	1	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Pasteurella	Pasteurella multocida	3	2	9	4	1	0	0	1	12	17	3
+Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Pasteurella	Pasteurella skyensis	1	0	0	1	0	0	0	0	3	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Rodentibacter	Rodentibacter heylii	0	0	2	5	1	0	1	1	5	6	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Rodentibacter	Rodentibacter pneumotropicus	3	1	1	3	1	0	2	0	3	7	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Rodentibacter	Rodentibacter sp. DSM 111151	0	0	2	6	2	0	0	0	14	3	1
+Bacteria	Proteobacteria	Gammaproteobacteria	Pasteurellales	Pasteurellaceae	Vespertiliibacter	Vespertiliibacter pulmonis	0	0	0	0	0	0	0	0	1	2	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Moraxellaceae	Acinetobacter	Acinetobacter baumannii	1	0	0	1	0	0	0	0	2	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Moraxellaceae	Acinetobacter	Acinetobacter bereziniae	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Moraxellaceae	Acinetobacter	Acinetobacter calcoaceticus	1	0	1	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Moraxellaceae	Acinetobacter	Acinetobacter defluvii	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Moraxellaceae	Acinetobacter	Acinetobacter dispersus	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Moraxellaceae	Acinetobacter	Acinetobacter equi	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Moraxellaceae	Acinetobacter	Acinetobacter gyllenbergii	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Moraxellaceae	Acinetobacter	Acinetobacter haemolyticus	0	0	0	0	0	2	2	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Moraxellaceae	Acinetobacter	Acinetobacter indicus	0	0	0	0	0	0	0	0	2	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Moraxellaceae	Acinetobacter	Acinetobacter johnsonii	1	0	0	0	0	1	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Moraxellaceae	Acinetobacter	Acinetobacter junii	10	4	1	0	0	75	9	3	0	0	1
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Moraxellaceae	Acinetobacter	Acinetobacter lwoffii	1	0	1	1	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Moraxellaceae	Acinetobacter	Acinetobacter nosocomialis	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Moraxellaceae	Acinetobacter	Acinetobacter piscicola	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Moraxellaceae	Acinetobacter	Acinetobacter pittii	0	0	0	1	0	3	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Moraxellaceae	Acinetobacter	Acinetobacter schindleri	0	1	0	0	0	1	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Moraxellaceae	Acinetobacter	Acinetobacter seifertii	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Moraxellaceae	Acinetobacter	Acinetobacter sp. NEB 394	0	0	0	0	0	1	1	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Moraxellaceae	Acinetobacter	Acinetobacter sp. WCHA45	1	0	0	0	0	2	1	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Moraxellaceae	Acinetobacter	Acinetobacter sp. WCHA55	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Moraxellaceae	Acinetobacter	Acinetobacter wuhouensis	1	0	0	0	0	1	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Moraxellaceae	Moraxella	Moraxella bovis	0	0	3	0	0	0	1	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Moraxellaceae	Moraxella	Moraxella catarrhalis	0	0	0	0	2	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Moraxellaceae	Moraxella	Moraxella cuniculi	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Moraxellaceae	Moraxella	Moraxella osloensis	4	0	0	0	0	0	10	2	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Moraxellaceae	Psychrobacter	Psychrobacter arcticus	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Moraxellaceae	Psychrobacter	Psychrobacter sp. P11G3	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Pseudomonadaceae	Azotobacter	Azotobacter salinestris	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Pseudomonadaceae	Pseudomonas	Pseudomonas aeruginosa	4	1	0	0	0	0	8	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Pseudomonadaceae	Pseudomonas	Pseudomonas agarici	0	4	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Pseudomonadaceae	Pseudomonas	Pseudomonas asturiensis	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Pseudomonadaceae	Pseudomonas	Pseudomonas azotoformans	0	18	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Pseudomonadaceae	Pseudomonas	Pseudomonas balearica	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Pseudomonadaceae	Pseudomonas	Pseudomonas chlororaphis	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Pseudomonadaceae	Pseudomonas	Pseudomonas citronellolis	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Pseudomonadaceae	Pseudomonas	Pseudomonas extremaustralis	0	0	0	0	0	0	1	0	1	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Pseudomonadaceae	Pseudomonas	Pseudomonas fluorescens	0	6	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Pseudomonadaceae	Pseudomonas	Pseudomonas frederiksbergensis	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Pseudomonadaceae	Pseudomonas	Pseudomonas lalkuanensis	0	0	0	0	0	1	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Pseudomonadaceae	Pseudomonas	Pseudomonas mendocina	1	0	0	0	1	0	1	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Pseudomonadaceae	Pseudomonas	Pseudomonas monteilii	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Pseudomonadaceae	Pseudomonas	Pseudomonas oleovorans	0	0	0	0	0	0	2	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Pseudomonadaceae	Pseudomonas	Pseudomonas protegens	0	1	0	0	0	0	0	0	0	1	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Pseudomonadaceae	Pseudomonas	Pseudomonas putida	1	0	0	0	0	2	2	2	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Pseudomonadaceae	Pseudomonas	Pseudomonas rhodesiae	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Pseudomonadaceae	Pseudomonas	Pseudomonas simiae	0	3	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Pseudomonadaceae	Pseudomonas	Pseudomonas sp. ACM7	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Pseudomonadaceae	Pseudomonas	Pseudomonas sp. DY-1	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Pseudomonadaceae	Pseudomonas	Pseudomonas sp. M30-35	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Pseudomonadaceae	Pseudomonas	Pseudomonas sp. NP-1	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Pseudomonadaceae	Pseudomonas	Pseudomonas sp. NS1(2017)	0	16	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Pseudomonadaceae	Pseudomonas	Pseudomonas sp. phDV1	1	0	0	0	0	0	4	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Pseudomonadaceae	Pseudomonas	Pseudomonas sp. R76	0	2	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Pseudomonadaceae	Pseudomonas	Pseudomonas sp. SXM-1	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Pseudomonadaceae	Pseudomonas	Pseudomonas stutzeri	0	0	0	0	0	1	2	0	0	1	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Pseudomonadaceae	Pseudomonas	Pseudomonas synxantha	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Pseudomonadaceae	Pseudomonas	Pseudomonas taetrolens	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Pseudomonadaceae	Pseudomonas	Pseudomonas tolaasii	0	2	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Thiotrichales	Francisellaceae	Allofrancisella	Allofrancisella guangzhouensis	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Thiotrichales	Francisellaceae	Francisella	Francisella halioticida	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Thiotrichales	Francisellaceae	Francisella	Francisella hispaniensis	0	0	0	0	0	0	0	1	0	0	1
+Bacteria	Proteobacteria	Gammaproteobacteria	Thiotrichales	Francisellaceae	Francisella	Francisella philomiragia	0	0	0	0	0	0	0	0	0	3	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Thiotrichales	Piscirickettsiaceae	Hydrogenovibrio	Hydrogenovibrio crunogenus	0	0	0	0	0	0	0	0	0	3	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Thiotrichales	Thiotrichaceae	Beggiatoa	Beggiatoa leptomitoformis	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Vibrionales	Vibrionaceae	Aliivibrio	Aliivibrio fischeri	0	0	0	0	1	0	0	0	0	1	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Vibrionales	Vibrionaceae	Enterovibrio	Candidatus Enterovibrio luxaltus	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Vibrionales	Vibrionaceae	Photobacterium	Photobacterium damselae	0	0	0	6	0	0	0	0	1	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Vibrionales	Vibrionaceae	Photobacterium	Photobacterium profundum	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Vibrionales	Vibrionaceae	Vibrio	Vibrio aphrogenes	0	0	0	0	1	0	0	0	0	1	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Vibrionales	Vibrionaceae	Vibrio	Vibrio chagasii	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Vibrionales	Vibrionaceae	Vibrio	Vibrio cholerae	0	0	0	0	0	0	0	0	0	1	1
+Bacteria	Proteobacteria	Gammaproteobacteria	Vibrionales	Vibrionaceae	Vibrio	Vibrio harveyi	0	0	0	0	0	0	0	0	1	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Vibrionales	Vibrionaceae	Vibrio	Vibrio metschnikovii	0	0	2	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Vibrionales	Vibrionaceae	Vibrio	Vibrio navarrensis	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Vibrionales	Vibrionaceae	Vibrio	Vibrio panuliri	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Vibrionales	Vibrionaceae	Vibrio	Vibrio ponticus	0	0	2	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Vibrionales	Vibrionaceae	Vibrio	Vibrio rumoiensis	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Vibrionales	Vibrionaceae	Vibrio	Vibrio sp. HBUAS61001	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Vibrionales	Vibrionaceae	Vibrio	Vibrio sp. ZWAL4003	0	1	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Vibrionales	Vibrionaceae	Vibrio	Vibrio tritonius	0	0	0	0	0	0	0	0	0	1	1
+Bacteria	Proteobacteria	Gammaproteobacteria	Vibrionales	Vibrionaceae	Vibrio	Vibrio vulnificus	0	0	1	0	0	0	0	0	1	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Xanthomonadales	Xanthomonadaceae	Pseudoxanthomonas	Pseudoxanthomonas mexicana	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Xanthomonadales	Xanthomonadaceae	Stenotrophomonas	Stenotrophomonas acidaminiphila	1	0	0	0	0	0	2	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Xanthomonadales	Xanthomonadaceae	Stenotrophomonas	Stenotrophomonas maltophilia	0	0	0	0	0	0	4	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Xanthomonadales	Xanthomonadaceae	Stenotrophomonas	Stenotrophomonas sp. ESTM1D	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Xanthomonadales	Xanthomonadaceae	Thermomonas	Thermomonas sp. XSG	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Xanthomonadales	Xanthomonadaceae	Xanthomonas	Xanthomonas campestris	2	1	0	0	0	3	0	1	1	1	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Xanthomonadales	Xanthomonadaceae	Xanthomonas	Xanthomonas citri	0	0	0	0	0	0	1	0	0	0	0
+Bacteria	Proteobacteria	Gammaproteobacteria	Xanthomonadales	Xanthomonadaceae	Xanthomonas	Xanthomonas sp. GW	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Proteobacteria	Oligoflexia	Bacteriovoracales	Halobacteriovoraceae	Halobacteriovorax	Halobacteriovorax marinus	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Spirochaetes	Spirochaetia	Leptospirales	Leptospiraceae	Leptospira	Leptospira tipperaryensis	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Spirochaetes	Spirochaetia	Spirochaetales	Spirochaetaceae	Oceanispirochaeta	Oceanispirochaeta crateris	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Spirochaetes	Spirochaetia	Spirochaetales	Spirochaetaceae	Sphaerochaeta	Sphaerochaeta globosa	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Spirochaetes	Spirochaetia	Spirochaetales	Spirochaetaceae	Spirochaeta	Spirochaeta africana	1	0	0	0	0	0	0	0	0	0	0
+Bacteria	Spirochaetes	Spirochaetia	Spirochaetales	Spirochaetaceae	Treponema	Treponema brennaborense	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Spirochaetes	Spirochaetia	Spirochaetales	Spirochaetaceae	Treponema	Treponema denticola	2	3	0	0	55	0	0	1	0	0	546
+Bacteria	Spirochaetes	Spirochaetia	Spirochaetales	Spirochaetaceae	Treponema	Treponema pedis	0	0	0	0	0	0	0	0	0	0	2
+Bacteria	Spirochaetes	Spirochaetia	Spirochaetales	Spirochaetaceae	Treponema	Treponema phagedenis	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Spirochaetes	Spirochaetia	Spirochaetales	Spirochaetaceae	Treponema	Treponema putidum	0	2	0	0	2	0	0	0	0	0	5
+Bacteria	Spirochaetes	Spirochaetia	Spirochaetales	Spirochaetaceae	Treponema	Treponema socranskii	1	0	0	0	2	13	4	0	1	1	93
+Bacteria	Spirochaetes	Spirochaetia	Spirochaetales	Spirochaetaceae	Treponema	Treponema sp. Marseille-Q4132	0	0	0	0	0	28	3	0	0	0	22
+Bacteria	Spirochaetes	Spirochaetia	Spirochaetales	Spirochaetaceae	Treponema	Treponema sp. OMZ 804	0	1	4	0	10	0	1	0	0	0	119
+Bacteria	Spirochaetes	Spirochaetia	Spirochaetales	Spirochaetaceae	Treponema	Treponema sp. OMZ 838	0	0	3	0	1	0	0	0	0	0	14
+Bacteria	Tenericutes	Mollicutes	Acholeplasmatales	Acholeplasmataceae	Acholeplasma	Acholeplasma hippikon	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Tenericutes	Mollicutes	Acholeplasmatales	Acholeplasmataceae	Acholeplasma	Acholeplasma palmae	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Tenericutes	Mollicutes	Entomoplasmatales	Entomoplasmataceae	Mesoplasma	Mesoplasma chauliocola	0	0	0	0	0	0	0	0	0	0	1
+Bacteria	Tenericutes	Mollicutes	Entomoplasmatales	Spiroplasmataceae	Spiroplasma	Spiroplasma clarkii	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Tenericutes	Mollicutes	Entomoplasmatales	Spiroplasmataceae	Spiroplasma	Spiroplasma culicicola	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Tenericutes	Mollicutes	Entomoplasmatales	Spiroplasmataceae	Spiroplasma	Spiroplasma taiwanense	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasmataceae	Mycoplasma	Mycoplasma agalactiae	0	0	0	0	0	0	0	0	0	0	0
+Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasmataceae	Mycoplasma	Mycoplasma bovirhinis	0	0	0	0	0	0	0	1	0	0	0
+Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasmataceae	Mycoplasma	Mycoplasma canadense	0	0	0	0	0	0	0	0	0	1	0
+Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasmataceae	Mycoplasma	Mycoplasma penetrans	0	0	1	0	0	0	0	0	0	0	0
+Bacteria	Tenericutes	Mollicutes	Mycoplasmatales	Mycoplasmataceae	Mycoplasma	Mycoplasma salivarium	1	2	0	0	0	15	0	0	0	6	17
+Bacteria	Thermotogae	Thermotogae	Thermotogales	Fervidobacteriaceae	Fervidobacterium	Fervidobacterium nodosum	0	0	0	0	1	0	0	0	0	0	0
+Bacteria	Thermotogae	Thermotogae	Thermotogales	Fervidobacteriaceae	Thermosipho	Thermosipho africanus	0	0	0	1	0	0	0	0	0	0	0
+Bacteria	Verrucomicrobia	Verrucomicrobiae	Verrucomicrobiales	Verrucomicrobiaceae	Roseimicrobium	Roseimicrobium sp. ORNL1	0	0	0	0	0	0	0	0	0	0	1
+Metazoa	Chordata	Mammalia	Primates	Hominidae	Homo	Homo sapiens	2450	2958	537	44	11	785	2099	199	118	43	30
+Viridiplantae	Streptophyta	Bryopsida	Funariales	Funariaceae	Physcomitrium	Physcomitrium patens	3	1	2	0	0	1	1	3	0	0	0
+Viridiplantae	Streptophyta	Magnoliopsida	Apiales	Apiaceae	Daucus	Daucus carota	0	1	0	0	0	0	0	2	0	0	0
+Viridiplantae	Streptophyta	Magnoliopsida	Arecales	Arecaceae	Elaeis	Elaeis guineensis	0	0	1	1	0	0	1	0	0	0	0
+Viridiplantae	Streptophyta	Magnoliopsida	Asparagales	Asparagaceae	Asparagus	Asparagus officinalis	0	1	1	0	1	0	1	0	1	0	1
+Viridiplantae	Streptophyta	Magnoliopsida	Asterales	Asteraceae	Cynara	Cynara cardunculus	0	0	0	1	0	3	1	0	0	0	1
+Viridiplantae	Streptophyta	Magnoliopsida	Asterales	Asteraceae	Helianthus	Helianthus annuus	1	3	0	4	1	0	3	2	2	0	0
+Viridiplantae	Streptophyta	Magnoliopsida	Brassicales	Brassicaceae	Brassica	Brassica napus	0	0	0	0	0	0	0	0	0	0	0
+Viridiplantae	Streptophyta	Magnoliopsida	Brassicales	Brassicaceae	Brassica	Brassica oleracea	0	1	0	0	0	0	1	0	0	0	0
+Viridiplantae	Streptophyta	Magnoliopsida	Brassicales	Brassicaceae	Camelina	Camelina sativa	2	0	0	0	0	1	0	1	0	0	0
+Viridiplantae	Streptophyta	Magnoliopsida	Caryophyllales	Chenopodiaceae	Beta	Beta vulgaris	0	0	0	3	1	1	0	0	0	0	0
+Viridiplantae	Streptophyta	Magnoliopsida	Cucurbitales	Cucurbitaceae	Cucumis	Cucumis sativus	0	0	0	0	0	0	0	1	0	0	0
+Viridiplantae	Streptophyta	Magnoliopsida	Cucurbitales	Cucurbitaceae	Cucurbita	Cucurbita pepo	0	3	2	0	0	0	3	0	1	0	0
+Viridiplantae	Streptophyta	Magnoliopsida	Fabales	Fabaceae	Arachis	Arachis duranensis	0	0	0	1	0	0	0	0	0	0	0
+Viridiplantae	Streptophyta	Magnoliopsida	Fabales	Fabaceae	Arachis	Arachis hypogaea	0	0	0	0	0	0	0	0	0	0	1
+Viridiplantae	Streptophyta	Magnoliopsida	Fabales	Fabaceae	Arachis	Arachis ipaensis	0	1	0	0	0	0	0	0	0	0	0
+Viridiplantae	Streptophyta	Magnoliopsida	Fabales	Fabaceae	Cajanus	Cajanus cajan	2	1	0	0	0	0	2	1	0	0	0
+Viridiplantae	Streptophyta	Magnoliopsida	Fabales	Fabaceae	Cicer	Cicer arietinum	0	1	0	1	0	0	0	0	0	0	0
+Viridiplantae	Streptophyta	Magnoliopsida	Fabales	Fabaceae	Glycine	Glycine max	0	0	0	0	0	0	0	0	0	0	1
+Viridiplantae	Streptophyta	Magnoliopsida	Fabales	Fabaceae	Glycine	Glycine soja	0	0	0	0	0	0	0	0	1	0	0
+Viridiplantae	Streptophyta	Magnoliopsida	Fabales	Fabaceae	Lupinus	Lupinus angustifolius	0	2	0	0	0	3	2	0	0	0	1
+Viridiplantae	Streptophyta	Magnoliopsida	Fabales	Fabaceae	Medicago	Medicago truncatula	1	0	2	1	0	0	0	0	0	0	0
+Viridiplantae	Streptophyta	Magnoliopsida	Fabales	Fabaceae	Phaseolus	Phaseolus vulgaris	0	0	1	0	1	0	2	0	0	0	1
+Viridiplantae	Streptophyta	Magnoliopsida	Fabales	Fabaceae	Vigna	Vigna angularis	0	2	0	0	1	0	0	1	0	1	1
+Viridiplantae	Streptophyta	Magnoliopsida	Fabales	Fabaceae	Vigna	Vigna radiata	0	0	0	0	0	0	0	0	1	0	0
+Viridiplantae	Streptophyta	Magnoliopsida	Fabales	Fabaceae	Vigna	Vigna unguiculata	0	0	0	1	0	0	1	0	0	0	0
+Viridiplantae	Streptophyta	Magnoliopsida	Fagales	Fagaceae	Quercus	Quercus lobata	1	3	1	0	0	0	1	2	0	1	0
+Viridiplantae	Streptophyta	Magnoliopsida	Fagales	Juglandaceae	Juglans	Juglans regia	6	5	1	0	0	4	6	0	0	0	0
+Viridiplantae	Streptophyta	Magnoliopsida	Gentianales	Rubiaceae	Coffea	Coffea arabica	0	0	0	0	0	1	0	0	0	0	0
+Viridiplantae	Streptophyta	Magnoliopsida	Lamiales	Oleaceae	Olea	Olea europaea	0	0	0	2	1	0	0	0	0	0	1
+Viridiplantae	Streptophyta	Magnoliopsida	Lamiales	Pedaliaceae	Sesamum	Sesamum indicum	0	1	0	1	0	0	0	0	0	0	0
+Viridiplantae	Streptophyta	Magnoliopsida	Malpighiales	Euphorbiaceae	Manihot	Manihot esculenta	6	3	3	1	0	0	0	1	1	0	1
+Viridiplantae	Streptophyta	Magnoliopsida	Malpighiales	Salicaceae	Populus	Populus trichocarpa	2	1	1	0	0	1	0	0	2	0	0
+Viridiplantae	Streptophyta	Magnoliopsida	Malvales	Malvaceae	Gossypium	Gossypium arboreum	1	0	0	1	0	0	1	1	0	0	0
+Viridiplantae	Streptophyta	Magnoliopsida	Malvales	Malvaceae	Gossypium	Gossypium hirsutum	1	0	0	1	1	0	2	0	1	0	1
+Viridiplantae	Streptophyta	Magnoliopsida	Malvales	Malvaceae	Gossypium	Gossypium raimondii	0	0	0	1	1	0	0	1	0	0	0
+Viridiplantae	Streptophyta	Magnoliopsida	Malvales	Malvaceae	Theobroma	Theobroma cacao	0	0	0	1	0	1	1	0	0	0	0
+Viridiplantae	Streptophyta	Magnoliopsida	Myrtales	Lythraceae	Punica	Punica granatum	0	0	0	0	0	0	0	0	1	0	0
+Viridiplantae	Streptophyta	Magnoliopsida	Nymphaeales	Nymphaeaceae	Nymphaea	Nymphaea colorata	0	2	0	0	0	0	0	0	1	2	1
+Viridiplantae	Streptophyta	Magnoliopsida	Poales	Bromeliaceae	Ananas	Ananas comosus	0	1	0	0	0	5	0	0	0	0	0
+Viridiplantae	Streptophyta	Magnoliopsida	Poales	Poaceae	Brachypodium	Brachypodium distachyon	0	0	0	0	0	0	0	0	0	0	0
+Viridiplantae	Streptophyta	Magnoliopsida	Poales	Poaceae	Oryza	Oryza brachyantha	7	7	1	3	0	5	4	0	0	0	1
+Viridiplantae	Streptophyta	Magnoliopsida	Poales	Poaceae	Oryza	Oryza sativa	0	0	0	0	0	0	0	1	0	0	1
+Viridiplantae	Streptophyta	Magnoliopsida	Poales	Poaceae	Setaria	Setaria italica	0	0	0	0	0	0	0	1	0	0	0
+Viridiplantae	Streptophyta	Magnoliopsida	Poales	Poaceae	Setaria	Setaria viridis	0	0	1	0	0	0	0	0	0	0	0
+Viridiplantae	Streptophyta	Magnoliopsida	Poales	Poaceae	Sorghum	Sorghum bicolor	0	0	0	0	0	0	0	0	0	0	0
+Viridiplantae	Streptophyta	Magnoliopsida	Poales	Poaceae	Triticum	Triticum dicoccoides	44	2	3	1	5	2	1	3	4	1	3
+Viridiplantae	Streptophyta	Magnoliopsida	Poales	Poaceae	Zea	Zea mays	0	1	0	0	0	0	0	0	0	0	0
+Viridiplantae	Streptophyta	Magnoliopsida	Ranunculales	Papaveraceae	Papaver	Papaver somniferum	0	1	1	4	0	2	0	1	0	0	1
+Viridiplantae	Streptophyta	Magnoliopsida	Rosales	Cannabaceae	Cannabis	Cannabis sativa	0	0	0	1	0	1	0	0	0	1	1
+Viridiplantae	Streptophyta	Magnoliopsida	Rosales	Rhamnaceae	Ziziphus	Ziziphus jujuba	0	1	0	0	0	1	0	1	0	0	0
+Viridiplantae	Streptophyta	Magnoliopsida	Rosales	Rosaceae	Malus	Malus domestica	0	0	0	0	1	1	0	1	1	0	1
+Viridiplantae	Streptophyta	Magnoliopsida	Rosales	Rosaceae	Prunus	Prunus dulcis	0	0	0	0	0	0	0	0	1	0	0
+Viridiplantae	Streptophyta	Magnoliopsida	Rosales	Rosaceae	Prunus	Prunus persica	0	1	0	0	0	0	0	0	0	0	0
+Viridiplantae	Streptophyta	Magnoliopsida	Rosales	Rosaceae	Rosa	Rosa chinensis	1	2	1	0	0	0	0	0	0	0	0
+Viridiplantae	Streptophyta	Magnoliopsida	Sapindales	Rutaceae	Citrus	Citrus sinensis	0	2	0	0	0	0	0	1	0	0	0
+Viridiplantae	Streptophyta	Magnoliopsida	Solanales	Convolvulaceae	Ipomoea	Ipomoea triloba	0	0	0	0	0	0	1	0	0	0	0
+Viridiplantae	Streptophyta	Magnoliopsida	Solanales	Solanaceae	Capsicum	Capsicum annuum	44	63	7	3	1	31	42	3	5	1	1
+Viridiplantae	Streptophyta	Magnoliopsida	Solanales	Solanaceae	Nicotiana	Nicotiana attenuata	0	0	0	3	0	9	2	1	0	1	0
+Viridiplantae	Streptophyta	Magnoliopsida	Solanales	Solanaceae	Solanum	Solanum lycopersicum	0	0	0	1	0	1	1	0	0	0	0
+Viridiplantae	Streptophyta	Magnoliopsida	Solanales	Solanaceae	Solanum	Solanum pennellii	1	3	0	0	0	0	1	0	0	0	0
+Viridiplantae	Streptophyta	Magnoliopsida	Vitales	Vitaceae	Vitis	Vitis riparia	0	1	0	0	1	0	0	0	0	0	0
+Viridiplantae	Streptophyta	Magnoliopsida	Vitales	Vitaceae	Vitis	Vitis vinifera	0	0	0	1	0	0	0	0	0	0	0
+Viridiplantae	Streptophyta	Magnoliopsida	Zingiberales	Musaceae	Musa	Musa acuminata	0	4	0	1	0	0	1	1	0	0	0
+Eukaryota	Apicomplexa	Aconoidasida	Haemosporida	Plasmodiidae	Plasmodium	Plasmodium berghei	0	0	0	0	0	0	0	0	0	0	0
+Eukaryota	Apicomplexa	Aconoidasida	Haemosporida	Plasmodiidae	Plasmodium	Plasmodium cynomolgi	0	1	0	0	0	0	0	0	0	0	0
+Eukaryota	Apicomplexa	Aconoidasida	Haemosporida	Plasmodiidae	Plasmodium	Plasmodium malariae	2	1	0	0	0	1	0	0	0	0	0
+Eukaryota	Apicomplexa	Aconoidasida	Haemosporida	Plasmodiidae	Plasmodium	Plasmodium relictum	0	0	0	0	0	0	0	0	0	1	0
+Eukaryota	Apicomplexa	Aconoidasida	Piroplasmida	Babesiidae	Babesia	Babesia bigemina	0	0	0	1	0	0	0	0	0	1	0
+Eukaryota	Apicomplexa	Conoidasida	Eucoccidiorida	Sarcocystidae	Toxoplasma	Toxoplasma gondii	164	193	46	1	4	49	149	10	10	2	2
+Viruses	Peploviricota	Herviviricetes	Herpesvirales	Herpesviridae	Roseolovirus	Human betaherpesvirus 7	0	0	0	0	0	0	0	0	1	0	0
+Viruses	Uroviricota	Caudoviricetes	Caudovirales	Herelleviridae	Sepunavirus	Staphylococcus virus IPLAC1C	0	1	0	0	1	0	0	0	0	0	0
+Viruses	Uroviricota	Caudoviricetes	Caudovirales	Herelleviridae	Wphvirus	Bacillus phage Nigalana	0	0	0	0	0	0	0	0	0	0	0
+Viruses	Uroviricota	Caudoviricetes	Caudovirales	Myoviridae	unclassified	Acinetobacter phage Acj61	0	0	0	0	0	0	0	0	0	0	0
+Viruses	Uroviricota	Caudoviricetes	Caudovirales	Myoviridae	unclassified	Streptococcus phage EJ-1	0	0	0	1	1	2	0	0	0	0	2
+Viruses	Uroviricota	Caudoviricetes	Caudovirales	Podoviridae	Cepunavirus	Streptococcus virus Cp1	0	0	0	1	0	0	0	0	1	0	0
+Viruses	Uroviricota	Caudoviricetes	Caudovirales	Podoviridae	Rosenblumvirus	Staphylococcus virus CSA13	2	0	0	1	0	0	0	0	0	0	0
+Viruses	Uroviricota	Caudoviricetes	Caudovirales	Siphoviridae	unclassified	Streptococcus phage PH10	0	0	0	0	0	0	0	1	0	2	0
+Viruses	Uroviricota	Caudoviricetes	Caudovirales	Siphoviridae	unclassified	Streptococcus phage phiARI0131-1	0	0	0	0	0	0	0	2	0	0	0
+Viruses	Uroviricota	Caudoviricetes	Caudovirales	Siphoviridae	unclassified	Streptococcus phage phiARI0468-4	0	0	0	0	0	1	0	0	0	0	0
+Viruses	Uroviricota	Caudoviricetes	Caudovirales	Siphoviridae	unclassified	Streptococcus phage phiARI0746	0	1	0	0	0	1	0	1	1	0	0
+Viruses	Uroviricota	Caudoviricetes	Caudovirales	Siphoviridae	unclassified	Streptococcus phage SpSL1	0	0	0	0	0	0	0	0	1	0	0

@@ -1,0 +1,101 @@
+/home/yongxin/miniconda2/envs/meta/bin/quast.py --combined-ref --colors #E31A1C --ls solid --ambiguity-usage all result/megahit/final.contigs.fa -R /mnt/c/meta/result/megahit/metaquast/quast_corrected_input/combined_reference.fasta -o /mnt/c/meta/result/megahit/metaquast/combined_reference --labels final.contigs
+
+Started: 2021-08-09 00:11:35
+
+Logging to /mnt/c/meta/result/megahit/metaquast/combined_reference/quast.log
+NOTICE: Maximum number of threads is set to 3 (use --threads option to set it manually)
+
+CWD: /mnt/c/meta
+Main parameters: 
+  MODE: meta, threads: 3, minimum contig length: 500, minimum alignment length: 65, ambiguity: all, \
+  threshold for extensive misassembly size: 1000
+
+Reference:
+  /mnt/c/meta/result/megahit/metaquast/quast_corrected_input/combined_reference.fasta ==> combined_reference
+
+Contigs:
+  Pre-processing...
+  result/megahit/final.contigs.fa ==> final.contigs
+
+2021-08-09 00:11:35
+Running Basic statistics processor...
+  Reference genome:
+    combined_reference.fasta, length = 17285411, num fragments = 234, GC % = 44.79
+WARNING:   Reference genome is fragmented. You may consider rerunning QUAST using --fragmented option. QUAST will try to detect misassemblies caused by the fragmentation and mark them fake (will be excluded from # misassemblies).
+  Contig files: 
+    final.contigs
+  Calculating N50 and L50...
+    final.contigs, N50 = 646, L50 = 71, Total length = 128230, GC % = 39.17, # N's per 100 kbp =  0.00
+  Drawing Nx plot...
+    saved to /mnt/c/meta/result/megahit/metaquast/combined_reference/basic_stats/Nx_plot.pdf
+  Drawing cumulative plot...
+    saved to /mnt/c/meta/result/megahit/metaquast/combined_reference/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /mnt/c/meta/result/megahit/metaquast/combined_reference/basic_stats/GC_content_plot.pdf
+  Drawing final.contigs GC content plot...
+    saved to /mnt/c/meta/result/megahit/metaquast/combined_reference/basic_stats/final.contigs_GC_content_plot.pdf
+Done.
+
+2021-08-09 00:11:37
+Running Contig analyzer...
+  final.contigs
+  Logging to files /mnt/c/meta/result/megahit/metaquast/combined_reference/contigs_reports/contigs_report_final-contigs.stdout and contigs_report_final-contigs.stderr...
+  Aligning contigs to the reference
+  /home/yongxin/miniconda2/envs/meta/bin/minimap2 -c -x asm10 -B5 -O4,16 --no-long-join \
+  -r 85 -N 100 -s 65 -z 200 --mask-level 1 --min-occ 200 -g 2500 --score-N 2 --cs \
+  -t 3 result/megahit/metaquast/quast_corrected_input/combined_reference.fasta result/megahit/metaquast/quast_corrected_input/final_contigs.fa \
+  > result/megahit/metaquast/combined_reference/contigs_reports/minimap_output/raw/final-contigs.coords_tmp \
+  2>> result/megahit/metaquast/combined_reference/contigs_reports/contigs_report_final-contigs.stderr
+  Alignments: result/megahit/metaquast/combined_reference/contigs_reports/alignments_final-contigs.tsv
+  Analysis is finished.
+
+  Information about interspecies translocations by references for final_contigs is saved to /mnt/c/meta/result/megahit/metaquast/combined_reference/contigs_reports/interspecies_translocations_by_refs_final_contigs.info
+  Drawing Intergenomic misassemblies (found and supposed) metaQUAST summary plot...
+    saved to /mnt/c/meta/result/megahit/metaquast/combined_reference/contigs_reports/intergenomic_misassemblies.pdf
+  Creating total report...
+    saved to /mnt/c/meta/result/megahit/metaquast/combined_reference/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+  Transposed version of total report...
+    saved to /mnt/c/meta/result/megahit/metaquast/combined_reference/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
+  Creating total report...
+    saved to /mnt/c/meta/result/megahit/metaquast/combined_reference/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+  Drawing misassemblies by types plot...
+    saved to /mnt/c/meta/result/megahit/metaquast/combined_reference/contigs_reports/misassemblies_plot.pdf
+  Drawing misassemblies FRCurve plot...
+    saved to /mnt/c/meta/result/megahit/metaquast/combined_reference/contigs_reports/misassemblies_frcurve_plot.pdf
+Done.
+
+2021-08-09 00:11:40
+Running NA-NGA calculation...
+  final.contigs, Largest alignment = 1369, NA50 = None, LA50 = None
+  Drawing cumulative plot...
+    saved to /mnt/c/meta/result/megahit/metaquast/combined_reference/aligned_stats/cumulative_plot.pdf
+  Drawing NAx plot...
+    saved to /mnt/c/meta/result/megahit/metaquast/combined_reference/aligned_stats/NAx_plot.pdf
+Done.
+
+2021-08-09 00:11:41
+Running Genome analyzer...
+  NOTICE: No file with genomic features were provided. Use the --features option if you want to specify it.
+
+  NOTICE: No file with operons were provided. Use the -O option if you want to specify it.
+  final.contigs
+  Analysis is finished.
+  Skipping drawing Genome fraction, % histogram... (less than 2 columns histogram makes no sense)
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding or --glimmer option to enable it.
+
+2021-08-09 00:11:44
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating Icarus viewers...
+  2 of 2: Creating PDF with all tables and plots...
+Done
+
+2021-08-09 00:11:46
+RESULTS:
+  Text versions of total report are saved to /mnt/c/meta/result/megahit/metaquast/combined_reference/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /mnt/c/meta/result/megahit/metaquast/combined_reference/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /mnt/c/meta/result/megahit/metaquast/combined_reference/report.html
+  PDF version (tables and plots) is saved to /mnt/c/meta/result/megahit/metaquast/combined_reference/report.pdf
+  Icarus (contig browser) is saved to /mnt/c/meta/result/megahit/metaquast/combined_reference/icarus.html

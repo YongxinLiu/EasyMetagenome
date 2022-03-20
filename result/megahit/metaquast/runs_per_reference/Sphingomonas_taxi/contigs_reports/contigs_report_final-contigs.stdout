@@ -1,0 +1,54 @@
+Aligning contigs to reference...
+	Aligning contigs to the reference
+Filtering alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Sphingomonas_taxi_NZ_CP009571.1]
+	Loaded [Sphingomonas_taxi_NZ_CP009572.1]
+	Loaded [Sphingomonas_taxi_NZ_CP009573.1]
+	Total Regions: 3
+	Total Region Length: 4061902
+Analyzing contigs...
+CONTIG: k119_72 (597bp)
+Best alignment score: 315.0 (LEN: 320, IDY: 98.44), Total number of alignments: 3
+			Looking for the best set of alignments (out of 3 total alignments)
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 1849166 1849486 | 320 1 | 321 320 | 98.44 | Sphingomonas_taxi_NZ_CP009571.1 k119_72
+		Skipping redundant alignment 3410889 3411209 | 1 320 | 321 320 | 98.44 | Sphingomonas_taxi_NZ_CP009571.1 k119_72
+		This contig has several significant sets of alignments. [An ambiguously mapped contig]
+		Using only the very best set (option --ambiguity-usage is set to "one").
+			The best set is below. Score: 315.0, number of alignments: 1, unaligned bases: 277
+		Alignment: 3894 4214 | 1 320 | 321 320 | 98.44 | Sphingomonas_taxi_NZ_CP009571.1 k119_72
+
+Analyzing coverage...
+Writing SNPs into /mnt/c/meta/result/megahit/metaquast/runs_per_reference/Sphingomonas_taxi/contigs_reports/minimap_output/final-contigs.used_snps.gz
+
+Analysis is finished!
+Founded SNPs were written into /mnt/c/meta/result/megahit/metaquast/runs_per_reference/Sphingomonas_taxi/contigs_reports/minimap_output/final-contigs.used_snps.gz
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Scaffold gap extensive misassemblies: 0
+	Scaffold gap local misassemblies: 0
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Unaligned Contigs: 0 + 0 part
+Half Unaligned Contigs with Misassemblies: 0
+Unaligned Contig Bases: 0
+
+Ambiguously Mapped Contigs: 1
+Total Bases in Ambiguously Mapped Contigs: 597
+Extra Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each of these contigs was used.
+
+	Covered Bases: 321
+
+	SNPs: 4
+	Insertions: 0
+	Deletions: 1
+

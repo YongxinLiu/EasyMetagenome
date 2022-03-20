@@ -1,0 +1,15 @@
+Number of interspecies translocations by references: 
+References                                             1  2  3  4  5  6
+Capnocytophaga_ochracea_str._Holt_25                   -  0  0  0  0  0
+Capnocytophaga_sputigena_ATCC_33612                    0  -  0  0  0  0
+Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953  0  0  -  0  0  0
+Haemophilus_sputorum_CCUG_13788                        0  0  0  -  0  0
+Prevotella_nigrescens_CC14M                            0  0  0  0  -  0
+Sphingomonas_taxi                                      0  0  0  0  0  -
+References:
+1 - Capnocytophaga_ochracea_str._Holt_25
+2 - Capnocytophaga_sputigena_ATCC_33612
+3 - Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953
+4 - Haemophilus_sputorum_CCUG_13788
+5 - Prevotella_nigrescens_CC14M
+6 - Sphingomonas_taxi

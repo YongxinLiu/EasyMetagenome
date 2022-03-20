@@ -1,0 +1,13 @@
+Sample	paired_aligned_mate_multi_halved	paired_aligned_one	paired_aligned_discord_one	overall_alignment_rate	paired_aligned_mate_one_halved	paired_aligned_mate_multi	paired_total	paired_aligned_multi	paired_aligned_none	paired_aligned_mate_one	paired_aligned_mate_none	paired_aligned_mate_none_halved	total_reads
+C1_1_kneaddata.trimmed.single.1	2.0	104	0	0.66	4.0	4	65243	319	64820	8	129628	64814.0	71992
+C2_1_kneaddata.trimmed.single.1	304.0	5510	43	33.74	249.5	608	47971	10557	31904	499	62615	31307.5	58773
+C3_1_kneaddata.trimmed.single.1	301.5	6041	39	40.88	250.0	603	49504	13845	29618	500	58055	29027.5	58252
+C4_1_kneaddata.trimmed.single.1	91.0	1301	8	5.83	63.0	182	60685	1974	57410	126	114496	57248.0	68633
+C5_1_kneaddata.trimmed.single.1	5.0	95	0	0.3	4.0	10	62110	70	61945	8	123872	61936.0	71836
+C6_1_kneaddata.trimmed.single.1	2.0	14	0	0.06	1.0	4	65249	18	65217	2	130428	65214.0	72333
+N1_1_kneaddata.trimmed.single.1	59.0	1616	6	10.55	61.5	118	60059	4568	53875	123	107497	53748.5	67785
+N2_1_kneaddata.trimmed.single.1	292.0	4620	34	29.45	219.0	584	46195	8837	32738	438	64386	32193.0	55717
+N3_1_kneaddata.trimmed.single.1	29.0	408	3	2.31	12.0	58	62104	981	60715	24	121342	60671.0	70440
+N4_1_kneaddata.trimmed.single.1	16.0	248	2	1.17	15.0	32	67807	484	67075	30	134084	67042.0	72874
+N5_1_kneaddata.trimmed.single.1	4.5	121	0	0.41	5.5	9	63270	113	63036	11	126052	63026.0	71237
+N6_1_kneaddata.trimmed.single.1	2.5	70	0	0.22	2.0	5	67139	67	67002	4	133995	66997.5	72785
