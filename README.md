@@ -5,6 +5,13 @@
 
 更新时间Update：2023/4/7
 
+![image](http://www.imeta.science/github/EasyMetagenome/result/EasyMetagenomePipeline.jpg)
+
+**图1. 易宏基因组的工作流程：分析宏基因组测序从原始数据到物种和功能组成表.**
+
+**Figure 1. EasyMetagenome Pipeline from raw data to taxonomic & functional table for analyzing metagenomic sequencing.**
+
+
 ## 文件介绍File introduction
 
 - 0Install.sh：软件和数据库安装Software and database installation
