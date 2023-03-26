@@ -1,11 +1,5 @@
 [TOC]
 
-课程安排：<http://www.ehbio.com/trainLongTerm/TrainLongTerm/metagenomeLearnGuide.html#metagenomeLearnGuide>
-
-服务器地址 <http://dc41686955.zicp.vip:17703，拷贝到chrome浏览器，打开服务器网页；用户名> meta11\_meta 密码: yishengxinMETA  宏基因组账户
-
-同时在AGIS-old和WangTong上测试
-
 # 易宏基因组流程EasyMetagenomePipeline
 
     # 版本: 1.18, 2023/4/7
