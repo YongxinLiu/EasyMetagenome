@@ -1,7 +1,10 @@
 [TOC]
 
-# 宏基因组统计绘图
+# 易宏基因组流程EasyMetagenomePipeline
 
+    # 版本: 1.18, 2023/4/7
+    # 测试环境为Windows 10+ / MacOS 10+
+    
     # 设置结果目录(通常为项目中的result，此处为演示12个样本结果result12)
     wd=/c/meta/result12
     # 设置脚本所在目录(Script Directory)
@@ -110,7 +113,7 @@
       split($1,x,"|");for(i in x){split(x[i],b,"_");a[b[1]]=b[2];} \
       print a["d"],a["p"],a["c"],a["o"],a["f"],a["g"],a["s"],$0;}' \
       kraken2/tax_count.txt > temp.txt
-    cut -f 1-7,10- temp.txt > kraken2/tax_count.spf
+    cut -f 1-7,9- temp.txt > kraken2/tax_count.spf
     sed -i '1 s/unclassified\tunclassified\tunclassified\tunclassified\tunclassified\tunclassified\tunclassified/Domain\tPhylum\tClass\tOrder\tFamily\tGenus\tSpecies/' \
       kraken2/tax_count.spf
     # 绘制热图，可选域、门、纲、目、科、属、种(Domain	Phylum	Class	Order	Family	Genus	Species)
@@ -173,7 +176,7 @@
 
     # Beta多样性距离矩阵计算
     mkdir -p kraken2/beta/
-    /c/db/win/usearch -beta_div kraken2/bracken.${tax}.norm \
+    $sd/../win/usearch -beta_div kraken2/bracken.${tax}.norm \
         -filename_prefix kraken2/beta/
 
     # PCoA分析输入文件，选择分组，输出文件，图片尺寸mm，统计见beta_pcoa_stat.txt
@@ -195,6 +198,22 @@
       --group Group --output kraken2/bracken.${tax}.stackplot \
       --legend 10 --width 89 --height 59
 
+## 基因组进化树注释table2itol
+
+    cd ../binning/result/itol/
+    ## 方案1. 分类彩带、数值热图、种标签
+    # -a 找不到输入列将终止运行（默认不执行）-c 将整数列转换为factor或具有小数点的数字，-t 偏离提示标签时转换ID列，-w 颜色带，区域宽度等， -D输出目录，-i OTU列名，-l 种标签替换ID
+    Rscript ${sd}/table2itol.R -a -c double -D plan1 -i ID -l Species -t %s -w 0.5 annotation.txt
+    # 生成注释文件中每列为单独一个文件
+
+    ## 方案2. 数值柱形图，树门背景色，属标签
+    Rscript ${sd}/table2itol.R -a -d -c none -D plan2 -b Phylum -i ID -l Genus -t %s -w 0.5 annotation.txt
+
+    ## 方案3.分类彩带、整数为柱、小数为热图
+    Rscript ${sd}/table2itol.R -c keep -D plan3 -i ID -t %s annotation.txt
+
+    ## 方案4. 将整数转化成因子生成注释文件
+    Rscript ${sd}/table2itol.R -a -c factor -D plan4 -i ID -l Genus -t %s -w 0 annotation.txt
 
 # 附录
  

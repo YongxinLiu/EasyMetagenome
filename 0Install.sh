@@ -5,7 +5,7 @@
     # 版本: 1.18, 2023/4/7
     # 测试环境为Linux Ubuntu 20.04+ / CentOS 7.7+
 
-所有软件和数据库可从官网下载，国内可备选 http://nmdc.cn/datadownload 和百度网盘 https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
+所有软件和数据库可从官网下载，国内可备选微生物所下载站 http://nmdc.cn/datadownload 和百度网盘 https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
 
 # 一、数据预处理 Data preprocessing
 
@@ -529,7 +529,7 @@ Conda: https://bioconda.github.io/recipes/drep/README.html
 
 ### drep 基因组去冗余解包安装
 
-    # 下载dRep v3.2.2
+    # 下载dRep v3.2.2无法安装依赖chechm，改用2.6.2
     wget -c http://www.imeta.science/db/conda/drep.tar.gz
     # 指定安装目录
     mkdir -p ${soft}/envs/drep
@@ -542,16 +542,23 @@ Conda: https://bioconda.github.io/recipes/drep/README.html
 
 ### drep 基因组去冗余直接安装
 
+此版本无法安装checkm依赖关系，暂时不可用
+
     mamba create -y -n drep drep=3.4.2
     conda activate drep
     dRep -h
 
-### metawrap软链checkm等依赖程序
-    
-    ln -s ${soft}/envs/metawrap/bin/checkm ${soft}/envs/drep/bin/
-    ln -s ${soft}/envs/metawrap/bin/hmm* ${soft}/envs/drep/bin/
-    ln -s ${soft}/envs/metawrap/bin/pplacer ${soft}/envs/drep/bin/
-    ln -s ${soft}/envs/metawrap/bin/guppy ${soft}/envs/drep/bin/
+### drep 数据库构建
+
+    # CheckM用于Bin完整和污染估计和物种注释
+    cd ${db}
+    mkdir -p drep/checkm && cd checkm
+    # 下载文件275 MB，解压后1.4 GB
+    wget -c https://data.ace.uq.edu.au/public/CheckM_databases/checkm_data_2015_01_16.tar.gz
+    tar -xvf *.tar.gz
+    # 设置数据库位置，直接2次回车默认为当前位置
+    checkm data setRoot `pwd`
+
 
 ## GTDB细菌基因组注释和进化分析
 
@@ -586,7 +593,7 @@ GTDB-Tk是一个软件工具包，用于根据基因组数据库分类法GTDB为
     
 ### GTDB-Tks数据库安装
 
-download-db.sh自动下载数据库，将下载至conda中的envs/gtdbtk/share/gtdbtk-2.1.0/db/
+download-db.sh自动下载数据库，将下载至conda中的envs/gtdbtk/share/gtdbtk-2.1.0/db/，我们修改为~/db/gtdb中
 
     conda activate gtdbtk
     # download-db.sh中，修改数据库下载位置，的 wget 建议改成wget -c 防止覆盖
@@ -599,11 +606,12 @@ download-db.sh自动下载数据库，将下载至conda中的envs/gtdbtk/share/g
     mkdir -p ${db}/gtdb & cd ~/db/gtdb
     # 下载解压
     wget -c https://data.gtdb.ecogenomic.org/releases/release207/207.0/auxillary_files/gtdbtk_r207_v2_data.tar.gz
-    # 备用链接
-    wget -c http://www.imeta.science/db/gtdb/gtdbtk_r207_v2_data.tar.gz
     # 再运行, gtdb配置数据库
     download-db.sh
-
+    
+    # 备用链接和手工解压
+    wget -c http://www.imeta.science/db/gtdb/gtdbtk_r207_v2_data.tar.gz
+    tar xvzf auxillary_files/gtdbtk_r207_v2_data.tar.gz -C ./  --strip 1
 
 # 常见问题
 
@@ -854,45 +862,6 @@ https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
     # KO与通路(Pathway)对应表，用于合并D级为C级
     awk 'BEGIN{FS=OFS="\t"} {print $7,$6}' ko00001.tsv | sed '1 i KO\tpathway' \
       > KO_path.list
-
-## HUMAnN3.6直接安装
-
-    # mamba 是快速版本的 conda，biconda上依赖关系无法解决
-    # mamba create -n humann3.6 metaphlan=4.0.6 humann=3.6.1 -c bioconda -y 
-    # 尝试官网教程 https://huttenhower.sph.harvard.edu/humann
-    conda create --name biobakery3 python=3.7 -y
-    conda activate biobakery3
-    conda config --add channels defaults
-    conda config --add channels bioconda
-    conda config --add channels conda-forge
-    conda config --add channels biobakery
-    conda install humann -c biobakery -y
-    conda install metaphlan -c bioconda -y
-    # 测试
-    humann_test 
-    humann -i ~/miniconda3/envs/biobakery3/lib/python3.7/site-packages/humann/tests/data/demo.fastq -o sample_results
-    # Downloading https://www.dropbox.com/sh/7qze7m7g9fe2xjg/AAA4XDP85WHon_eHvztxkamTa/file_list.txt?dl=1
-
-    # 数据库下载
-    mkdir -p ~/db/humann3
-    cd ~/db/humann3
-    # mkdir -p chocophlan uniref utility_mapping
-    humann_databases --download chocophlan full ./chocophlan --update-config yes
-    humann_databases --download uniref uniref90_diamond uniref --update-config yes
-    humann_databases --download utility_mapping full utility_mapping --update-config yes
-    humann -i ~/miniconda3/envs/biobakery3/lib/python3.7/site-packages/humann/tests/data/demo.fastq -o sample_results
-
-    # 手动下载并更新,ehbio,ty,biocloud下载
-    wget -c http://huttenhower.sph.harvard.edu/humann_data/chocophlan/full_chocophlan.v201901_v31.tar.gz
-    wget -c http://huttenhower.sph.harvard.edu/humann_data/uniprot/uniref_annotated/uniref90_annotated_v201901b_full.tar.gz
-    wget -c http://huttenhower.sph.harvard.edu/humann_data/full_mapping_v201901b.tar.gz
-    
-## Metaphlan 4直接安装
-
-    # 代码 https://github.com/biobakery/MetaPhlAn
-    # mamba create -n metaphlan4 metaphlan=4.0.6 -c bioconda -y 
-    conda create --name mpa -c conda-forge -c bioconda python=3.7 metaphlan=4.0.6
-    # 教程 https://github.com/biobakery/biobakery/wiki/metaphlan4
 
 ## 毒力因子数据库VFDB
 

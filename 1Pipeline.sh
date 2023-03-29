@@ -983,6 +983,14 @@ CARD在线分析平台：https://card.mcmaster.ca/
 
 软件和数据库布置需1-3天，演示数据分析过程超10h，30G样也需1-30天，由服务器性能决定。
 
+    # 设置并进入工作目录
+    wd=~/meta/binning
+    mkdir -p ${wd} && cd ${wd}
+    # 初始化项目
+    mkdir -p temp/qc seq result
+    # 启动metawrap环境
+    conda activate metawrap
+
 ### 准备数据和环境变量Preparing data and enviroment
 
 这里基于质控clean数据和拼接好的重叠群contigs，基于上游结果继续分析。由于上游测试数据过小，分箱无结果。 本次采用软件推荐的7G数据，我们进入一个新文件夹开展分析。
@@ -1002,12 +1010,6 @@ CARD在线分析平台：https://card.mcmaster.ca/
 
 开始分箱
 
-    # 设置并进入工作目录
-    wd=~/meta/binning
-    mkdir -p ${wd} && cd ${wd}
-    # 初始化项目
-    mkdir -p temp/qc seq result
-    
     # 质控后数据位于temp/qc中，此处需下载并解压
     cd temp/qc
     for i in `seq 7 9`;do
@@ -1060,15 +1062,12 @@ CARD在线分析平台：https://card.mcmaster.ca/
 
 ### 分箱定量Bin quantify
 
-    # 使用salmon计算每个bin在样本中相对丰度
     # 耗时3m，系统用时10m，此处可设置线程，但salmon仍调用全部资源
-
-    # 需要指定输出文件夹，包括4.3中的参数的输出目录
-    metawrap quant_bins -b temp/bin_refinement/metawrap_50_10_bins -t 2 \
-      -o temp/bin_quant -a temp/megahit/final.contigs.fa temp/seq/ERR*.fastq
+    metawrap quant_bins -b temp/bin_refinement/metawrap_50_10_bins -t 4 \
+      -o temp/bin_quant -a temp/megahit/final.contigs.fa temp/qc/ERR*.fastq
     # 文件名字改变
     # 结果包括bin丰度热图`temp/bin_quant/bin_abundance_heatmap.png`
-    # 如果想自己画图，原始数据位于`temp/bin_quant/bin_abundance_table.tab`
+    # 原始数据位于`temp/bin_quant/bin_abundance_table.tab`
     ls -l temp/bin_quant/bin_abundance_heatmap.png
 
 ## MetaWRAP单样本分箱Single sample binning(可选Opt)
@@ -1092,7 +1091,7 @@ CARD在线分析平台：https://card.mcmaster.ca/
     # 预览
     cat result/metadata.txt
     
-### 1 megahit组装Assemble
+### megahit组装Assemble
 
 单样本并行组装，13m，314m
 
@@ -1102,21 +1101,22 @@ CARD在线分析平台：https://card.mcmaster.ca/
         -1 temp/qc/{}_1.fastq -2 temp/qc/{}_2.fastq \
         -o temp/megahit_{} "
 
-### 2 分箱binning
+### 分箱binning
 
 单样本并行分箱，192p, 15m (concoct会使用所有线程)
 
     tail -n+2 result/metadata.txt|cut -f1|rush -j ${j} \
-    "metawrap binning \
+      "metawrap binning \
         -o temp/binning_{} -t ${p} \
         -a temp/megahit_{}/final_assembly.fasta \
         --metabat2 --maxbin2 --concoct \
         temp/qc/{}_*.fastq" 
+        #  > /dev/null 2>&1 
 
-### 3 分箱提纯bin refinement
+### 分箱提纯bin refinement
 
     tail -n+2 result/metadata.txt|cut -f1|rush -j ${j} \
-    "metawrap bin_refinement \
+      "metawrap bin_refinement \
       -o temp/bin_refinement_{} -t ${p} \
       -A temp/binning_{}/metabat2_bins/ \
       -B temp/binning_{}/maxbin2_bins/ \
@@ -1136,13 +1136,16 @@ CARD在线分析平台：https://card.mcmaster.ca/
     ln -s `pwd`/temp/bin_refinement/metawrap_50_10_bins/bin.* temp/drep_in/
     ls -l temp/drep_in/
     rename 'bin' 'Mx_All' temp/drep_in/bin.*
+    ls temp/drep_in/Mx*
 
     # 单样品分箱链接和重命名
     for i in `tail -n+2 result/metadata.txt|cut -f1`;do
        ln -s `pwd`/temp/bin_refinement_${i}/metawrap_50_10_bins/bin.* temp/drep_in/
-       rename "bin." "Sg_${i}" temp/drep_in/bin.*
+       rename "bin" "Sg_${i}" temp/drep_in/bin.*
     done
-    # 统计混合和单样本来源数据，10个混，5个单
+    # 删除空白中无效链接
+    rm -f temp/drep_in/*\*
+    # 统计混合和单样本来源数据，10个混，5个单；不同系统结果略有差异
     ls temp/drep_in/|cut -f 1 -d '_'|uniq -c
     # 统计混合批次/单样本来源
     ls temp/drep_in/|cut -f 2 -d '_'|cut -f 1 -d '.' |uniq -c
@@ -1156,97 +1159,69 @@ CARD在线分析平台：https://card.mcmaster.ca/
       -sa 0.95 -nc 0.30 -comp 50 -con 10 -p 5
     # 运行时如果报错，加-d参数，在temp/drep95/log/cmd_logs中查看日志
 
-主要结果temp/drep95中：
-
-*   非冗余基因组集：dereplicated\_genomes/\*.fa
-*   聚类信息表：data\_tables/Cdb.csv
-*   聚类和质量图：figures/*clustering*
-
 (可选)按株水平99%去冗余，20-30min
 
     mkdir -p temp/drep95
     dRep dereplicate temp/drep95/ \
       -g temp/drep_in/*.fa \
       -sa 0.99 -nc 0.30 -comp 50 -con 10 -p 5
+    ls -l temp/drep95/dereplicated_genomes/ | grep '.fa' | wc -l
+    
+
+主要结果temp/drep95中：
+
+*   非冗余基因组集：temp/drep95/dereplicated\_genomes/\*.fa
+*   聚类信息表：temp/drep95/data\_tables/Cdb.csv
+*   聚类和质量图：temp/drep95/figures/\*clustering\*
 
 ## 4.3 GTDB-tk物种注释和进化树
 
 启动软件所在虚拟环境
 
     conda activate gtdbtk
-
+    gtdbtk -v # 2.2.6
+    
 细菌基因组物种注释
 
-以上面鉴定的10个种为例，注意扩展名要与输入文件一致，可使用压缩格式gz。主要结果文件描述：此9个细菌基因组，结果位于tax.bac120开头的文件，如物种注释 tax.bac120.summary.tsv。古菌结果位于tax.ar122开头的文件中。
+以上面鉴定的10个种为例，注意扩展名要与输入文件一致，可使用压缩格式gz。主要结果文件描述：此9个细菌基因组，结果位于tax.bac120开头的文件，如物种注释 tax.bac120.summary.tsv。古菌结果位于tax.ar53开头的文件中。
 
-    cd ${wd}/binning
     mkdir -p temp/gtdb_classify
-    export GTDBTK_DATA_PATH="${soft}/envs/gtdbtk/share/gtdbtk-2.1.0/db"
+    export GTDBTK_DATA_PATH="~/db/gtdb"
     # 10个基因组，24p，100min 152 G内存
     gtdbtk classify_wf \
         --genome_dir temp/drep95/dereplicated_genomes \
         --out_dir temp/gtdb_classify \
-        --extension fa \
+        --extension fa --skip_ani_screen \
         --prefix tax \
-        --cpus 5
-
+        --cpus 3
+    # less -S按行查看，按q退出
+    less -S temp/gtdb_classify/tax.bac120.summary.tsv
+    less -S temp/gtdb_classify/tax.ar53.summary.tsv
+    
 多序列对齐结果建树
 
     # 以9个细菌基因组的120个单拷贝基因建树，1s
     mkdir -p temp/gtdb_infer
-    # temp/gtdb_classify/align/tax.bac120.user_msa.fasta.gz: 每个版本目录可能不同
-    gtdbtk infer \
-        --msa_file temp/gtdb_classify/align/tax.bac120.user_msa.fasta.gz \
-        --out_dir temp/gtdb_infer \
-        --prefix tax \
-        --cpus 40
+    gtdbtk infer --msa_file temp/gtdb_classify/align/tax.bac120.user_msa.fasta.gz \
+        --out_dir temp/gtdb_infer --prefix tax --cpus 3
 
-树文件可使用iTOL在线美化，也可使用GraphLan本地美化。
+树文件`tax.unrooted.tree`可使用iTOL在线美化，也可使用GraphLan本地美化。
 
-## 4.4 table2itol制作树注释文件
-
-以gtdb-tk物种注释(tax.bac120.summary.tsv)和drep基因组评估(Widb.csv)信息为注释信息
+制作树注释文件：以gtdb-tk物种注释(tax.bac120.summary.tsv)和drep基因组评估(Widb.csv)信息为注释信息
 
     mkdir -p result/itol
     # 制作分类学表
     tail -n+2 temp/gtdb_classify/tax.bac120.summary.tsv|cut -f 1-2|sed 's/;/\t/g'|sed '1 s/^/ID\tDomain\tPhylum\tClass\tOrder\tFamily\tGenus\tSpecies\n/' \
       > result/itol/tax.txt
+    head result/itol/tax.txt
     # 基因组评估信息
     sed 's/,/\t/g;s/.fa//' temp/drep95/data_tables/Widb.csv|cut -f 1-7,11|sed '1 s/genome/ID/' \
       > result/itol/genome.txt
+    head result/itol/genome.txt
     # 整合注释文件
     awk 'BEGIN{OFS=FS="\t"} NR==FNR{a[$1]=$0} NR>FNR{print $0,a[$1]}' result/itol/genome.txt result/itol/tax.txt|cut -f 1-8,10- > result/itol/annotation.txt
+    head result/itol/annotation.txt
 
-table2itol制作注释文件
-
-    cd result/itol/
-    # 设置脚本位置
-    # db=/disk1/db/script/table2itol/
-    #db=/db
-
-    ## 方案1. 分类彩带、数值热图、种标签
-    # -a 找不到输入列将终止运行（默认不执行）-c 将整数列转换为factor或具有小数点的数字，-t 偏离提示标签时转换ID列，-w 颜色带，区域宽度等， -D输出目录，-i OTU列名，-l 种标签替换ID
-    # Fatal error: ??????'./table2itol-master/table2itol.R': ?????????
-    Rscript ${db}/EasyMicrobiome/script/table2itol.R -a -c double -D plan1 -i ID -l Species -t %s -w 0.5 annotation.txt
-    # 生成注释文件中每列为单独一个文件
-
-    ## 方案2. 数值柱形图，树门背景色，属标签
-    Rscript ${db}/EasyMicrobiome/script/table2itol.R -a -d -c none -D plan2 -b Phylum -i ID -l Genus -t %s -w 0.5 annotation.txt
-
-    ## 方案3.分类彩带、整数为柱、小数为热图
-    Rscript ${db}/EasyMicrobiome/script/table2itol.R -c keep -D plan3 -i ID -t %s annotation.txt
-
-    ## 方案4. 将整数转化成因子生成注释文件
-    Rscript ${db}/EasyMicrobiome/script/table2itol.R -a -c factor -D plan4 -i ID -l Genus -t %s -w 0 annotation.txt
-
-## 4.5 PROKKA单菌基因组功能注释
-
-    conda activate metawrap-env
-    # export PERL_5LIB=${PERL5LIB}:${soft}/envs/metawrap/lib/perl5/site_perl/5.22.0/
-    i=bin1
-    time prokka result/contig/${db}.fa \
-      --kingdom Archaea,Bacteria --cpus 9 \
-      --outdir temp/prokka/${db} 
 
 # 附录：常见分析问题和补充代码
 
