@@ -1,5 +1,3 @@
-[TOC]
-
 # 易宏基因组流程EasyMetagenomePipeline
 
     # 版本: 1.18, 2023/4/7
@@ -223,6 +221,8 @@ awk的system命令批处理改名，与fastp结果统一
     # 筛选重点结果列
     cut -f 1,2,4,12,13 temp/kneaddata.txt | sed 's/_1_kneaddata//' > result/qc/sum.txt
     cat result/qc/sum.txt
+    # 对齐方式查看表格
+    csvtk -t pretty result/qc/sum.txt
 
     # 用R代码统计下质控结果
     Rscript -e "data=read.table('result/qc/sum.txt', header=T, row.names=1, sep='\t'); summary(data)"
@@ -293,7 +293,7 @@ HUMAnN2要求双端序列合并的文件作为输入，for循环根据实验设�
 
     tail -n+2 result/metadata.txt|cut -f1|rush -j 2 \
       'humann2 --input temp/concat/{1}.fq  \
-      --output temp/humann2/ --threads 1'
+      --output temp/humann2/ --threads 8'
 
     # 链接重要文件至humann2目录
     for i in `tail -n+2 result/metadata.txt|cut -f1`;do 
@@ -450,13 +450,14 @@ KO合并为高层次L2, L1通路代码
       --input result/humann2/ko.tsv \
       --output result/humann2/ 
     
-    # KO to level 1/2/3
+    # KO to level 1/2/3, 也可切换至humann3或qiime2等Python3环境下运行
     conda activate base
     summarizeAbundance.py \
       -i result/humann2/ko_unstratified.tsv \
       -m ~/db/EasyMicrobiome/kegg/KO1-4.txt \
       -c 2,3,4 -s ',+,+,' -n raw \
       -o result/humann2/KEGG
+    head result/humann2/KEGG.Pathway*
     conda deactivate
 
 
@@ -488,7 +489,7 @@ KO合并为高层次L2, L1通路代码
     # 设置结果目录，自己的数据使用result，演示用result12
     result=result12
     # 下载演示数据
-    wget http://www.imeta.science/db/EasyMetagenome/result12.zip
+    wget -c http://www.imeta.science/db/EasyMetagenome/result12.zip
     unzip result12.zip
 
 准备输入文件，修改样本品为组名(可手动修改)
@@ -507,7 +508,7 @@ KO合并为高层次L2, L1通路代码
 
 方法1. 推荐在线 <https://www.bic.ac.cn/ImageGP/> 中LEfSe一键分析
 
-方法2. (可选)LEfSe命令行分析
+方法2. LEfSe命令行分析
 
     conda activate lefse
     result=result12
@@ -557,10 +558,10 @@ Kraken2可以快速完成读长(read)层面的物种注释和定量，还可以�
 输出结果：每个样本单独输出，temp/kraken2/{1}\_report和temp/kraken2/{1}\_output
 整合输出结果：result/kraken2/taxonomy\_count.txt 物种丰度表
 
-(可选) 单样本注释，5m，50G大数据库较5G库注释比例提高10\~20%
+(可选) 单样本注释，5m，50G大数据库较5G库注释比例提高10\~20%。以C1为例，在2023/3/14版中，8g: 31.75%; 16g: 52.35%; 150g: 71.98%
 
     i=C1
-    kraken2 --db ${db}/kraken2/pluspfp/ --paired temp/qc/${i}_?.fastq \
+    kraken2 --db ${db}/kraken2/pluspfp8g/ --paired temp/qc/${i}_?.fastq \
       --threads 2 --use-names --report-zero-counts \
       --report temp/kraken2/${i}.report \
       --output temp/kraken2/${i}.output
@@ -568,7 +569,7 @@ Kraken2可以快速完成读长(read)层面的物种注释和定量，还可以�
 多样本并行生成report，1样本8线程，内存大但速度快，内存不多不建议用多线程
 
     tail -n+2 result/metadata.txt|cut -f1|rush -j 2 \
-      "kraken2 --db ${db}/kraken2/pluspfp --paired temp/qc/{1}_?.fastq \
+      "kraken2 --db ${db}/kraken2/pluspfp8g --paired temp/qc/{1}_?.fastq \
       --threads 1 --use-names --report-zero-counts \
       --report temp/kraken2/{1}.report \
       --output temp/kraken2/{1}.output"
@@ -610,7 +611,7 @@ Kraken2可以快速完成读长(read)层面的物种注释和定量，还可以�
 循环重新估计每个样品的丰度，请修改tax分别重新计算P和S各1次
 
     # 设置估算的分类级别D,P,C,O,F,G,S，常用门P和种S
-    tax=S
+    tax=P
     mkdir -p temp/bracken
     for i in `tail -n+2 result/metadata.txt|cut -f1`;do
         # i=C1
@@ -659,9 +660,9 @@ Kraken2可以快速完成读长(read)层面的物种注释和定量，还可以�
 
 # 三、组装分析流程 Assemble-based
 
-## 3.1 拼接 Assembly
+## 3.1 组装Assembly
 
-###  MEGAHIT拼接
+###  MEGAHIT组装
 
     # 启动工作环境
     conda activate megahit
@@ -684,7 +685,7 @@ Kraken2可以快速完成读长(read)层面的物种注释和定量，还可以�
     # 删除临时文件
     rm -rf temp/megahit/intermediate_contigs
 
-### (可选)metaSPAdes精细拼接
+### 方法2. metaSPAdes精细组装
 
     # 精细但使用内存和时间更多，15~65m
     /usr/bin/time -v -o metaspades.py.log metaspades.py -t 3 -m 100 \
@@ -775,7 +776,7 @@ Kraken2可以快速完成读长(read)层面的物种注释和定量，还可以�
 
     # 建索引, -t序列, -i 索引，10s
     salmon index -t result/NR/nucleotide.fa \
-      -p 9 -i temp/salmon/index 
+      -p 3 -i temp/salmon/index 
 
     # 定量，l文库类型自动选择，p线程，--meta宏基因组模式, 2个任务并行2个样
     tail -n+2 result/metadata.txt|cut -f1|rush -j 2 \
@@ -869,7 +870,7 @@ Kraken2可以快速完成读长(read)层面的物种注释和定量，还可以�
 
     # COG
     awk 'BEGIN{FS=OFS="\t"} NR==FNR{a[$1]=$2"\t"$3} NR>FNR{print a[$1],$0}' \
-      /db/EasyMicrobiome/eggnog/COG.anno result/eggnog/eggnog.COG_category.raw.txt > \
+      ${db}/EasyMicrobiome/eggnog/COG.anno result/eggnog/eggnog.COG_category.raw.txt > \
       result/eggnog/eggnog.COG_category.TPM.spf
 
 ### CAZy碳水化合物酶
@@ -902,7 +903,7 @@ Kraken2可以快速完成读长(read)层面的物种注释和定量，还可以�
       sed 's/^\t/Unannotated\t/' \
       > result/dbcan2/TPM.CAZy.raw.spf
     # 检查未注释数量，有则需要检查原因
-    # grep 'Unannotated' result/dbcan2/TPM.CAZy.raw.spf|wc -l
+    grep 'Unannotated' result/dbcan2/TPM.CAZy.raw.spf|wc -l
 
 ### CARD耐药基因
 
@@ -949,7 +950,7 @@ CARD在线分析平台：https://card.mcmaster.ca/
 
     # Generate report in default taxid output
     conda activate kraken2
-    kraken2 --db /db/kraken2/mini \
+    kraken2 --db ${db}/kraken2/pluspfp16g \
       result/NR/nucleotide.fa \
       --threads 3 \
       --report temp/NRgene.report \
@@ -959,9 +960,11 @@ CARD在线分析平台：https://card.mcmaster.ca/
       > temp/NRgene.taxid
     # Add taxonomy
     awk 'BEGIN{FS=OFS="\t"} NR==FNR{a[$1]=$0} NR>FNR{print $1,a[$2]}' \
-      /db/EasyMicrobiome/kraken2/taxonomy.txt \
+      ${db}/EasyMicrobiome/kraken2/taxonomy.txt \
       temp/NRgene.taxid \
       > result/NR/nucleotide.tax
+    
+    conda activate eggnog
     summarizeAbundance.py \
       -i result/salmon/gene.TPM \
       -m result/NR/nucleotide.tax \
@@ -1045,6 +1048,7 @@ CARD在线分析平台：https://card.mcmaster.ca/
       temp/qc/ERR*.fastq &
     # 运行过程记录见 nohup.out
     tail nohup.out
+    rm nohup.out
 
 ### 分箱提纯Bin refinement
 
@@ -1269,6 +1273,20 @@ CARD在线分析平台：https://card.mcmaster.ca/
 Error: Invalid or corrupt jarfile \~/miniconda3/envs/kneaddata/share/trimmomatic/trimmomatic；找不到程序，修改配置文件指定脚本名称
 
     sed -i 's/trimmomatic\*/trimmomatic.jar/' ~/miniconda3/envs/kneaddata/lib/python3.10/site-packages/kneaddata/config.py
+
+#### Python环境不匹配-找不到包module
+
+ModuleNotFoundError: No module named 'importlib.metadata'
+
+找不到包，一般是环境变量错误，先确定是否正常启动conda环境，没有重复启动 conda activate kneaddata。已启动检测环境变量
+
+    echo $PATH
+    # /public/software/env01/bin:/public/home/liuyongxin/miniconda3/envs/kneaddata/bin:/public/home/liuyongxin/miniconda3/condabin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
+
+确认conda环境是否为第一个路径，此处kneaddata路径前还有更高优先级的目录在前，重设PATH变量，即删除当前conda环境前的所有路径
+    
+    PATH=/public/home/liuyongxin/miniconda3/envs/kneaddata/bin:/public/home/liuyongxin/miniconda3/condabin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
+
 
 ## 读长分析HUMAnN2
 

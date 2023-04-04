@@ -23,7 +23,7 @@
     # PATH=${soft}/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:${db}/EasyMicrobiome/linux:${db}/EasyMicrobiome/script
     echo $PATH
 
-### EasyMetagenome流程
+### EasyMetagenome流程(正对照)
 
 EasyMetagenome流程，包括流程安装、使用和可视化脚本，以及测试流程数据和结果正对照，网址：https://github.com/YongxinLiu/EasyMetagenome
     
@@ -32,14 +32,15 @@ EasyMetagenome流程，包括流程安装、使用和可视化脚本，以及测
     # 可选旧版更新
     cd EasyMetagenome && git pull && cd ../
 
-    # 方法2. 网页中下载
-    # https://github.com/YongxinLiu/EasyMetagenome 中Code Download ZIP下载压缩包，上传至服务器，并解压
+    # 方法2. 网页 https://github.com/YongxinLiu/EasyMetagenome 中Code Download ZIP下载压缩包，上传至服务器，解压
+    unzip EasyMetagenome-master.zip
+    mv EasyMetagenome-master EasyMetagenome
 
     # 方法3. 备用链接下载，无法访问github时使用
-    wget -c http://www.imeta.science/db/EasyMetagenome.tar.gz
+    wget -c ftp://download.nmdc.cn/tools/soft/EasyMicrobiome.tar.gz
     tar -xvzf EasyMetagenome.tar.gz
     
-### EasyMetagenome依赖软件和数据库(EasyMicrobiome)
+### EasyMicrobiome软件和数据库(EasyMetagenome依赖)
 
 EasyMetagenome依赖流程EasyMicrobiome，包括很多脚本、常用小软件和数据库的合集，网址：https://github.com/YongxinLiu/EasyMicrobiome
     
@@ -52,21 +53,24 @@ EasyMetagenome依赖流程EasyMicrobiome，包括很多脚本、常用小软件�
 
     # 方法2. 网页中下载
     # https://github.com/YongxinLiu/EasyMicrobiome 中Code Download ZIP下载压缩包，上传至服务器，并解压
-
+    unzip EasyMicrobiome-master.zip
+    mv EasyMicrobiome-master EasyMicrobiome
+    
     # 方法3. 备用链接下载，无法访问github时使用
-    wget -c http://www.imeta.science/db/EasyMicrobiome.tar.gz
+    wget -c ftp://download.nmdc.cn/tools//EasyMicrobiome.tar.gz
     tar -xvzf EasyMicrobiome.tar.gz
     
     # 添加linux命令可执行权限
-    chmod +x ${db}/EasyMicrobiome/linux/* ${db}/EasyMicrobiome/script/*
+    chmod +x `pwd`/EasyMicrobiome/linux/* `pwd`/EasyMicrobiome/script/*
     
     # 添加环境变量
-    echo "export PATH=\"\$PATH:${db}/EasyMicrobiome/linux:${db}/EasyMicrobiome/script\"" >> ~/.bashrc
+    echo "export PATH=\"\$PATH:`pwd`/EasyMicrobiome/linux:`pwd`/EasyMicrobiome/script\"" >> ~/.bashrc
     source ~/.bashrc
-    
+    echo $PATH
+
 ### 软件管理器Conda
 
-    # 下载最新版miniconda3，~49M
+    # 下载最新版miniconda3，71M
     wget -c https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
     # 安装，-b批量，-f无提示，-p目录，许可协议打yes
     bash Miniconda3-latest-Linux-x86_64.sh -b -f -p ${soft}
@@ -81,8 +85,8 @@ EasyMetagenome依赖流程EasyMicrobiome，包括很多脚本、常用小软件�
     conda config --add channels conda-forge # Highest priority
 
     # conda默认配置文件为 ~/.condarc 查看配置文件位置
-    mamba install pandas -c conda-forge -y
     conda install mamba -c conda-forge -y
+    mamba install pandas -c conda-forge -y
     mamba install conda-pack -c conda-forge -y
     conda config --set channel_priority strict
     conda config --show-sources
@@ -97,6 +101,8 @@ EasyMetagenome依赖流程EasyMicrobiome，包括很多脚本、常用小软件�
 
 **注：直接安装、下载解压安装，二选一。一种方法不成功，尝试另一种。**
 
+BioConda: https://bioconda.github.io/recipes/kneaddata/README.html
+
 ### kneaddata直接安装
 
     # 新建 kneaddata 环境
@@ -108,13 +114,15 @@ EasyMetagenome依赖流程EasyMicrobiome，包括很多脚本、常用小软件�
 
 ### (可选)kneaddata下载解压安装
 
-    # 下载
-    wget -c http://www.imeta.science/db/conda/kneaddata.tar.gz
+    # 指定conda文件名
+    s=kneaddata
+    # 下载，可选NMDC、百度云等
+    # wget -c ftp://download.nmdc.cn/tools//conda/${s}.tar.gz
     # 指定安装目录
-    mkdir -p ${soft}/envs/kneaddata
-    tar -xvzf kneaddata.tar.gz -C ${soft}/envs/kneaddata
+    mkdir -p ${soft}/envs/${s}
+    tar -xvzf ${s}.tar.gz -C ${soft}/envs/${s}
     # 启动环境
-    conda activate kneaddata
+    conda activate ${s}
     # 初始化环境
     conda unpack
 
@@ -169,7 +177,7 @@ EasyMetagenome依赖流程EasyMicrobiome，包括很多脚本、常用小软件�
 ### HUMAnN2解包安装
 
     # 下载
-    wget -c http://www.imeta.science/db/conda/humann2.tar.gz
+    wget -c ftp://download.nmdc.cn/tools//conda/humann2.tar.gz
     # 指定安装目录
     mkdir -p ${soft}/envs/humann2
     tar -xvzf humann2.tar.gz -C ${soft}/envs/humann2
@@ -232,7 +240,7 @@ EasyMetagenome依赖流程EasyMicrobiome，包括很多脚本、常用小软件�
     
     ## metaphlan2数据库下载和配置
     mkdir -p ${db}/humann2 && cd ${db}/humann2
-    wget -c http://www.imeta.science/db/humann2/metaphlan2.tar.gz
+    wget -c ftp://download.nmdc.cn/tools//humann2/metaphlan2.tar.gz
     tar xvzf metaphlan2.tar.gz
     # 链接到软件安装目录
     mkdir -p ${soft}/envs/humann2/bin/databases
@@ -246,7 +254,7 @@ EasyMetagenome依赖流程EasyMicrobiome，包括很多脚本、常用小软件�
 
     n=lefse
     # 下载
-    wget -c http://www.imeta.science/db/conda/${n}.tar.gz
+    wget -c ftp://download.nmdc.cn/tools//conda/${n}.tar.gz
     # 指定安装目录
     mkdir -p ${soft}/envs/${n}
     tar -xvzf ${n}.tar.gz -C ${soft}/envs/${n}
@@ -274,7 +282,7 @@ kraken2 基于LCA算法的物种注释 https://ccb.jhu.edu/software/kraken/
 ### Kraken2解包安装
 
     # 下载
-    wget -c http://www.imeta.science/db/conda/kraken2.tar.gz
+    wget -c ftp://download.nmdc.cn/tools//conda/kraken2.tar.gz
     # 指定安装目录
     mkdir -p ${soft}/envs/kraken2
     tar -xvzf kraken2.tar.gz -C ${soft}/envs/kraken2
@@ -291,17 +299,25 @@ kraken2 基于LCA算法的物种注释 https://ccb.jhu.edu/software/kraken/
 
 ### Kraken2数据库安装
 
-下载数据库(NCBI每2周更新一次)，记录下载日期和大小。需根据服务器内存、使用目的选择合适方案。--standard标准模式下只下载5种数据库：古菌archaea、细菌bacteria、人类human、载体UniVec_Core、病毒viral。也可选直接下载作者构建的索引，还包括bracken的索引。链接：https://benlangmead.github.io/aws-indexes/k2 （3/14/2023版）。 
+下载数据库(NCBI每2周更新一次)，记录下载日期和大小。需根据服务器内存、使用目的选择合适方案。--standard标准模式下只下载5种**标准数据库：古菌archaea、细菌bacteria、人类human、载体UniVec_Core、病毒viral**。也可选直接下载作者构建的索引，还包括bracken的索引。链接：https://benlangmead.github.io/aws-indexes/k2 （3/14/2023版）。 
 
-方案1. 下载标准+原生动物+真菌+植物 8GB (PlusPFP-8) 
+方案1. 下载标准+原生动物+真菌 16GB (PlusPF-16) 
 
-    v=k2_pluspfp_08gb_20230314
-    mkdir -p ~/db/kraken2/pluspfp8g
+    v=k2_pluspf_16gb_20230314
+    mkdir -p ~/db/kraken2/pluspf16g
     cd ~/db/kraken2
     wget -c https://genome-idx.s3.amazonaws.com/kraken/${v}.tar.gz
-    tar xvzf ~/db/kraken2/${v}.tar.gz -C ~/db/kraken2/pluspfp8g
+    tar xvzf ~/db/kraken2/${v}.tar.gz -C ~/db/kraken2/pluspf16g
 
-方案2. 下载标准+原生动物+真菌+植物完整库 107G
+方案2. 下载标准+原生动物+真菌 69GB (PlusPF) 
+
+    v=k2_pluspf_20230314
+    mkdir -p ~/db/kraken2/pluspf16g
+    cd ~/db/kraken2
+    wget -c https://genome-idx.s3.amazonaws.com/kraken/${v}.tar.gz
+    tar xvzf ~/db/kraken2/${v}.tar.gz -C ~/db/kraken2/pluspf
+    
+方案3. 下载标准+原生动物+真菌+植物完整库 144G (PlusPFP) 
 
 指定解压目录，包括时间和类型
 
@@ -319,7 +335,7 @@ kraken2 基于LCA算法的物种注释 https://ccb.jhu.edu/software/kraken/
 ### megahit解包安装
 
     # 下载
-    wget -c http://www.imeta.science/db/conda/megahit.tar.gz
+    wget -c ftp://download.nmdc.cn/tools//conda/megahit.tar.gz
     # 指定安装目录
     mkdir -p ${soft}/envs/megahit
     tar -xvzf megahit.tar.gz -C ${soft}/envs/megahit
@@ -349,7 +365,7 @@ eggNOG http://eggnogdb.embl.de
 ### eggNOG解包安装
 
     # 下载
-    wget -c http://www.imeta.science/db/conda/eggnog.tar.gz
+    wget -c ftp://download.nmdc.cn/tools//conda/eggnog.tar.gz
     # 指定安装目录
     mkdir -p ${soft}/envs/eggnog
     tar -xvzf eggnog.tar.gz -C ${soft}/envs/eggnog
@@ -380,7 +396,7 @@ eggNOG http://eggnogdb.embl.de
     download_eggnog_data.py -y -f --data_dir ${db}/eggnog
     # 百度或微生物所备用链接下载eggnog/eggnog.tar.gz
     # 链接至默认目录
-    ln -s ${db}/eggnog ${soft}/envs/eggnog/lib/python3.9/site-packages/data
+    ln -sf ${db}/eggnog ${soft}/envs/eggnog/lib/python3.9/site-packages/data
     # 复制数据至内存中加速比对
     # cp eggnog.* /dev/shm
 
@@ -390,12 +406,12 @@ dbCAN3 http://bcb.unl.edu/dbCAN2
 
     d=08062022
     # 创建数据库存放目录并进入
-    mkdir -p ${db}/dbcan3 && cd ${db}/dbcan3
+    mkdir -p ${db}/dbcan2 && cd ${db}/dbcan2
     # 下载序列和描述(biocloud 10M)
     wget -c https://bcb.unl.edu/dbCAN2/download/Databases/V11/CAZyDB.${d}.fa
     wget -c https://bcb.unl.edu/dbCAN2/download/Databases/V11/CAZyDB.${d}.fam-activities.txt
     # 备用数据库下载并解压 
-    # wget -c http://www.imeta.science/db/dbcan2/CAZyDB.${d}.tar.gz
+    # wget -c ftp://download.nmdc.cn/tools/meta/dbcan2/CAZyDB.${d}.tar.gz
     # tar xvzf CAZyDB.${d}.tar.gz
 
     # 提取基因家簇对应注释
@@ -414,7 +430,7 @@ RGI Github: https://github.com/arpcard/rgi
 ### rgi解包安装
 
     # 下载
-    wget -c http://www.imeta.science/db/conda/rgi.tar.gz
+    wget -c ftp://download.nmdc.cn/tools//conda/rgi.tar.gz
     # 指定安装目录
     mkdir -p ${soft}/envs/rgi
     tar -xvzf rgi.tar.gz -C ${soft}/envs/rgi
@@ -456,7 +472,7 @@ RGI Github: https://github.com/arpcard/rgi
 ### metawrap下载安装
 
     # 下载
-    wget -c http://www.imeta.science/db/conda/metawrap.tar.gz
+    wget -c ftp://download.nmdc.cn/tools//conda/metawrap.tar.gz
     # 指定安装目录
     mkdir -p ${soft}/envs/metawrap
     tar -xvzf metawrap.tar.gz -C ${soft}/envs/metawrap
@@ -492,9 +508,9 @@ NCBI核酸和物种信息(以下可选)
     # 可能会出现个别库下载不完整的情况，删了重下，不要续传
     # 物种信息，压缩文件45M，解压后351M
   
-    mkdir -p ${db}/NCBI_tax
-    (cd ${db}/NCBI_tax; wget -c ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz)
-    (cd ${db}/NCBI_tax; tar -xvzf taxdump.tar.gz)
+    mkdir -p ${db}/NCBI/tax
+    (cd ${db}/NCBI/tax; wget -c ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz)
+    (cd ${db}/NCBI/tax; tar -xvzf taxdump.tar.gz)
 
 
     ## 数据库位置设置
@@ -512,7 +528,7 @@ NCBI核酸和物种信息(以下可选)
     # CONFIGURABLE PATHS FOR DATABASES (see 'Databases' section of metaWRAP README for details)
     # path to kraken standard database
     KRAKEN_DB=~/KRAKEN_DB
-    KRAKEN2_DB=/db/kraken2/pluspfp/
+    KRAKEN2_DB=~/db/kraken2/pluspf/
     
     # path to indexed human (or other host) genome (see metaWRAP website for guide). This includes .bitmask and .srprism files
     BMTAGGER_DB=~/BMTAGGER_DB
@@ -530,7 +546,7 @@ Conda: https://bioconda.github.io/recipes/drep/README.html
 ### drep 基因组去冗余解包安装
 
     # 下载dRep v3.2.2无法安装依赖chechm，改用2.6.2
-    wget -c http://www.imeta.science/db/conda/drep.tar.gz
+    wget -c ftp://download.nmdc.cn/tools//conda/drep.tar.gz
     # 指定安装目录
     mkdir -p ${soft}/envs/drep
     tar -xvzf drep.tar.gz -C ${soft}/envs/drep
@@ -571,7 +587,7 @@ GTDB-Tk是一个软件工具包，用于根据基因组数据库分类法GTDB为
 
     soft=~/miniconda3
     # 下载
-    wget -c http://www.imeta.science/db/conda/gtdbtk.tar.gz
+    wget -c ftp://download.nmdc.cn/tools//conda/gtdbtk.tar.gz
     # 指定安装目录
     mkdir -p ${soft}/envs/gtdbtk
     tar -xvzf gtdbtk.tar.gz -C ${soft}/envs/gtdbtk
@@ -610,7 +626,7 @@ download-db.sh自动下载数据库，将下载至conda中的envs/gtdbtk/share/g
     download-db.sh
     
     # 备用链接和手工解压
-    wget -c http://www.imeta.science/db/gtdb/gtdbtk_r207_v2_data.tar.gz
+    wget -c ftp://download.nmdc.cn/tools//gtdb/gtdbtk_r207_v2_data.tar.gz
     tar xvzf auxillary_files/gtdbtk_r207_v2_data.tar.gz -C ./  --strip 1
 
 # 常见问题
@@ -692,7 +708,7 @@ https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
 删除当前文件并重新下载即可
 
     rm kneaddata.tar.gz
-    wget http://www.imeta.science/db/conda/kneaddata.tar.gz
+    wget ftp://download.nmdc.cn/tools//conda/kneaddata.tar.gz
 
 ## Kraken2
 
