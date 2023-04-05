@@ -3,6 +3,7 @@
     # 版本: 1.18, 2023/4/7
     # 测试环境为Linux Ubuntu 20.04+ / CentOS 7.7+
 
+
 # 一、数据预处理 Data preprocessing
 
 ## 1.1 准备工作 Prepare
@@ -48,6 +49,7 @@
     cat -A result/metadata.txt
 
     # 用户使用filezilla上传测序文件至seq目录，本次从网络下载
+    # seq 目录下已经有测试文件，下载跳过
     cd seq/
     awk '{system("wget -c http://www.imeta.science/github/EasyMetagenome/seq/"$1"_1.fq.gz")}' <(tail -n+2 ../result/metadata.txt)
     awk '{system("wget -c http://www.imeta.science/github/EasyMetagenome/seq/"$1"_2.fq.gz")}' <(tail -n+2 ../result/metadata.txt)
@@ -96,7 +98,7 @@
     # 记录软件版本
     multiqc --version # 1.14
     # 整理fastqc报告，输出multiqc_report.html至result/qc目录
-    multiqc -d seq/ -o result/qc
+    multiqc -d seq/ -o result/qc -f 
 
 查看右侧result/qc目录中multiqc\_report.html，单击，选择`View in Web Browser`查看可交互式报告。
 
@@ -251,7 +253,7 @@ HUMAnN2要求双端序列合并的文件作为输入，for循环根据实验设�
       > temp/concat/${i}.fq; done
     # 查看样品数量和大小
     ls -shl temp/concat/*.fq
-    # 数据太大，计算时间长，可用head对单端分析截取20M序列，即3G，则为80M行，详见附录：HUMAnN2减少输入文件加速
+    # 数据太大，计算时间长，可用head对单端分析截取20M序列，即3G，行数为80M行，详见附录：HUMAnN2减少输入文件加速
 
 ## 2.2 HUMAnN2计算物种和功能组成
 
@@ -293,7 +295,7 @@ HUMAnN2要求双端序列合并的文件作为输入，for循环根据实验设�
 
     tail -n+2 result/metadata.txt|cut -f1|rush -j 2 \
       'humann2 --input temp/concat/{1}.fq  \
-      --output temp/humann2/ --threads 8'
+      --output temp/humann2/ --threads 1'
 
     # 链接重要文件至humann2目录
     for i in `tail -n+2 result/metadata.txt|cut -f1`;do 
@@ -392,8 +394,8 @@ HUMAnN2要求双端序列合并的文件作为输入，for循环根据实验设�
 组间比较，样本量少无差异，结果为4列的文件：通路名字，通路在各个分组的丰度，差异P-value，校正后的Q-value。
 演示数据2样本无法统计，此处替换为HMP的结果演示统计和绘图(上传hmp\_pathabund.pcl，替换pathabundance.pcl为hmp\_pathabund.pcl)。
 
-    wget http://www.imeta.science/github/EasyMetagenome/result/humann2/hmp_pathabund.pcl
-    mv hmp_pathabund.pcl result/humann2/
+    wget -c http://www.imeta.science/github/EasyMetagenome/result/humann2/hmp_pathabund.pcl
+    /bin/cp -f hmp_pathabund.pcl result/humann2/
     # 设置输入文件名
     pcl=result/humann2/hmp_pathabund.pcl
     # 统计表格行、列数量
@@ -454,10 +456,9 @@ KO合并为高层次L2, L1通路代码
     conda activate base
     summarizeAbundance.py \
       -i result/humann2/ko_unstratified.tsv \
-      -m ~/db/EasyMicrobiome/kegg/KO1-4.txt \
+      -m ${db}/EasyMicrobiome/kegg/KO1-4.txt \
       -c 2,3,4 -s ',+,+,' -n raw \
       -o result/humann2/KEGG
-    head result/humann2/KEGG.Pathway*
     conda deactivate
 
 
@@ -488,9 +489,9 @@ KO合并为高层次L2, L1通路代码
 
     # 设置结果目录，自己的数据使用result，演示用result12
     result=result12
-    # 下载演示数据
-    wget -c http://www.imeta.science/db/EasyMetagenome/result12.zip
-    unzip result12.zip
+    # 如果没有，请下载演示数据
+    # wget -c http://www.imeta.science/db/EasyMetagenome/result12.zip
+    # unzip result12.zip
 
 准备输入文件，修改样本品为组名(可手动修改)
 
@@ -561,7 +562,12 @@ Kraken2可以快速完成读长(read)层面的物种注释和定量，还可以�
 (可选) 单样本注释，5m，50G大数据库较5G库注释比例提高10\~20%。以C1为例，在2023/3/14版中，8g: 31.75%; 16g: 52.35%; 150g: 71.98%
 
     i=C1
-    kraken2 --db ${db}/kraken2/pluspfp8g/ --paired temp/qc/${i}_?.fastq \
+    # 根据电脑内存大小选择下面3个用哪个，可以从第一个尝试，内存不足会给出提示
+    # pluspfp
+    # pluspfp8g
+    # k2_standard
+    # mini
+    time kraken2 --db ${db}/kraken2/mini/ --paired temp/qc/${i}_?.fastq \
       --threads 2 --use-names --report-zero-counts \
       --report temp/kraken2/${i}.report \
       --output temp/kraken2/${i}.output
@@ -569,7 +575,7 @@ Kraken2可以快速完成读长(read)层面的物种注释和定量，还可以�
 多样本并行生成report，1样本8线程，内存大但速度快，内存不多不建议用多线程
 
     tail -n+2 result/metadata.txt|cut -f1|rush -j 2 \
-      "kraken2 --db ${db}/kraken2/pluspfp8g --paired temp/qc/{1}_?.fastq \
+      "kraken2 --db ${db}/kraken2/pluspfp --paired temp/qc/{1}_?.fastq \
       --threads 1 --use-names --report-zero-counts \
       --report temp/kraken2/{1}.report \
       --output temp/kraken2/{1}.output"
@@ -615,7 +621,7 @@ Kraken2可以快速完成读长(read)层面的物种注释和定量，还可以�
     mkdir -p temp/bracken
     for i in `tail -n+2 result/metadata.txt|cut -f1`;do
         # i=C1
-        bracken -d ${db}/kraken2/pluspfp \
+        bracken -d ${db}/kraken2/mini/ \
           -i temp/kraken2/${i}.report \
           -r 100 -l ${tax} -t 0 \
           -o temp/bracken/${i}; done
@@ -660,12 +666,13 @@ Kraken2可以快速完成读长(read)层面的物种注释和定量，还可以�
 
 # 三、组装分析流程 Assemble-based
 
-## 3.1 组装Assembly
 
 ###  MEGAHIT组装
 
     # 启动工作环境
     conda activate megahit
+    
+## 3.1 组装Assembly
 
     # 删除旧文件夹，否则megahit无法运行
     rm -rf temp/megahit
@@ -685,7 +692,7 @@ Kraken2可以快速完成读长(read)层面的物种注释和定量，还可以�
     # 删除临时文件
     rm -rf temp/megahit/intermediate_contigs
 
-### 方法2. metaSPAdes精细组装
+### 方法2. metaSPAdes精细拼接
 
     # 精细但使用内存和时间更多，15~65m
     /usr/bin/time -v -o metaspades.py.log metaspades.py -t 3 -m 100 \
@@ -823,6 +830,10 @@ Kraken2可以快速完成读长(read)层面的物种注释和定量，还可以�
     # 运行并记录软件版本
     conda activate eggnog
     emapper.py --version # 2.1.7
+    # emapper-2.1.10 / Expected eggNOG DB version: 5.0.2 / 
+    # Installed eggNOG DB version: 5.0.2 / (eggnog6在线可以用，本地用不了，还没释放)
+    # Diamond version found: diamond version 2.0.15 / 
+    # MMseqs2 version found: 13.45111
 
     # 运行emapper，18m，默认diamond 1e-3
     mkdir -p temp/eggnog
@@ -870,7 +881,7 @@ Kraken2可以快速完成读长(read)层面的物种注释和定量，还可以�
 
     # COG
     awk 'BEGIN{FS=OFS="\t"} NR==FNR{a[$1]=$2"\t"$3} NR>FNR{print a[$1],$0}' \
-      ${db}/EasyMicrobiome/eggnog/COG.anno result/eggnog/eggnog.COG_category.raw.txt > \
+      /db/EasyMicrobiome/eggnog/COG.anno result/eggnog/eggnog.COG_category.raw.txt > \
       result/eggnog/eggnog.COG_category.TPM.spf
 
 ### CAZy碳水化合物酶
@@ -902,6 +913,8 @@ Kraken2可以快速完成读长(read)层面的物种注释和定量，还可以�
        ${db}/EasyMicrobiome/dbcan2/CAZy_description.txt result/dbcan2/TPM.CAZy.raw.txt | \
       sed 's/^\t/Unannotated\t/' \
       > result/dbcan2/TPM.CAZy.raw.spf
+      
+    head result/dbcan2/TPM.CAZy.raw.spf
     # 检查未注释数量，有则需要检查原因
     grep 'Unannotated' result/dbcan2/TPM.CAZy.raw.spf|wc -l
 
@@ -918,6 +931,7 @@ CARD在线分析平台：https://card.mcmaster.ca/
     
     # 简化蛋白ID
     cut -f 1 -d ' ' result/NR/protein.fa > temp/protein.fa
+    # 这个错误忽略即可，不是报错，没有任何影响  grep: 写错误: 断开的管道
     grep '>' result/NR/protein.fa | head -n 3
     grep '>' temp/protein.fa | head -n 3
     # 蛋白层面注释ARG
@@ -950,7 +964,7 @@ CARD在线分析平台：https://card.mcmaster.ca/
 
     # Generate report in default taxid output
     conda activate kraken2
-    kraken2 --db ${db}/kraken2/pluspfp16g \
+    kraken2 --db /db/kraken2/mini \
       result/NR/nucleotide.fa \
       --threads 3 \
       --report temp/NRgene.report \
@@ -960,16 +974,16 @@ CARD在线分析平台：https://card.mcmaster.ca/
       > temp/NRgene.taxid
     # Add taxonomy
     awk 'BEGIN{FS=OFS="\t"} NR==FNR{a[$1]=$0} NR>FNR{print $1,a[$2]}' \
-      ${db}/EasyMicrobiome/kraken2/taxonomy.txt \
+      /db/EasyMicrobiome/kraken2/taxonomy.txt \
       temp/NRgene.taxid \
       > result/NR/nucleotide.tax
-    
-    conda activate eggnog
+    conda activate eggnog 
     summarizeAbundance.py \
       -i result/salmon/gene.TPM \
       -m result/NR/nucleotide.tax \
       -c '2,3,4,5,6,7,8,9' -s ',+,+,+,+,+,+,+,' -n raw \
       -o result/NR/tax
+      conda deactivate
     wc -l result/NR/tax*|sort -n
 
 # 四、分箱挖掘单菌基因组Binning
@@ -987,7 +1001,7 @@ CARD在线分析平台：https://card.mcmaster.ca/
 软件和数据库布置需1-3天，演示数据分析过程超10h，30G样也需1-30天，由服务器性能决定。
 
     # 设置并进入工作目录
-    wd=~/meta/binning
+    wd=${wd}/binning
     mkdir -p ${wd} && cd ${wd}
     # 初始化项目
     mkdir -p temp/qc seq result
@@ -1014,12 +1028,14 @@ CARD在线分析平台：https://card.mcmaster.ca/
 开始分箱
 
     # 质控后数据位于temp/qc中，此处需下载并解压
+    # 在线下很慢，建议直接拷贝
+    cp /db/metawrap/*.fastq ~/meta/binning/temp/qc/
     cd temp/qc
     for i in `seq 7 9`;do
         wget -c ftp.sra.ebi.ac.uk/vol1/fastq/ERR011/ERR01134${i}/ERR01134${i}_1.fastq.gz
         wget -c ftp.sra.ebi.ac.uk/vol1/fastq/ERR011/ERR01134${i}/ERR01134${i}_2.fastq.gz
     done
-    gunzip *.gz
+    gunzip -k *.gz
     # 批量修改扩展名fq为fastq
     # rename .fq .fastq *.fq
     
@@ -1029,7 +1045,7 @@ CARD在线分析平台：https://card.mcmaster.ca/
     cd temp/megahit
     # 可从EasyMetagenome目录复制，或链接下载
     wget -c http://www.imeta.science/db/metawrap/final.contigs.fa.gz
-    gunzip *.gz
+    gunzip -k *.gz
     cd ${wd}
 
 ### 分箱Binning
@@ -1048,12 +1064,13 @@ CARD在线分析平台：https://card.mcmaster.ca/
       temp/qc/ERR*.fastq &
     # 运行过程记录见 nohup.out
     tail nohup.out
-    rm nohup.out
+    rm -f nohup.out
 
 ### 分箱提纯Bin refinement
 
     # 8线程2h， 24p 1h20m
-    # rm -rf temp/bin_refinement
+    rm -rf temp/bin_refinement
+    # mkdir -p temp/bin_refinement
     nohup metawrap bin_refinement \
       -o temp/bin_refinement \
       -A temp/binning/metabat2_bins/ \
@@ -1091,7 +1108,7 @@ CARD在线分析平台：https://card.mcmaster.ca/
 并行需要样本列表，请提前编写metadata.txt保存于result中
 
     # 快速读取文件生成样本ID列表再继续编写
-    ls temp/qc/ | grep _1 | cut -f 1 -d '_' | sed '1 i SampleID' > result/metadata.txt
+    ls temp/qc/ | grep _1 | cut -f 1 -d '_' | sort -u | sed '1 i SampleID' > result/metadata.txt
     # 预览
     cat result/metadata.txt
     
@@ -1099,7 +1116,7 @@ CARD在线分析平台：https://card.mcmaster.ca/
 
 单样本并行组装，13m，314m
 
-    rm -rf temp/megahit_*
+    /bin/rm -rf temp/megahit_*
     tail -n+2 result/metadata.txt|cut -f1|rush -j ${j} \
     "metawrap assembly -m 100 -t ${p} --megahit \
         -1 temp/qc/{}_1.fastq -2 temp/qc/{}_2.fastq \
@@ -1183,6 +1200,7 @@ CARD在线分析平台：https://card.mcmaster.ca/
 启动软件所在虚拟环境
 
     conda activate gtdbtk
+    export GTDBTK_DATA_PATH="${db}/gtdb"
     gtdbtk -v # 2.2.6
     
 细菌基因组物种注释
@@ -1190,14 +1208,14 @@ CARD在线分析平台：https://card.mcmaster.ca/
 以上面鉴定的10个种为例，注意扩展名要与输入文件一致，可使用压缩格式gz。主要结果文件描述：此9个细菌基因组，结果位于tax.bac120开头的文件，如物种注释 tax.bac120.summary.tsv。古菌结果位于tax.ar53开头的文件中。
 
     mkdir -p temp/gtdb_classify
-    export GTDBTK_DATA_PATH="~/db/gtdb"
+    export GTDBTK_DATA_PATH="${db}/gtdb"
     # 10个基因组，24p，100min 152 G内存
     gtdbtk classify_wf \
         --genome_dir temp/drep95/dereplicated_genomes \
         --out_dir temp/gtdb_classify \
         --extension fa --skip_ani_screen \
         --prefix tax \
-        --cpus 3
+        --cpus 6
     # less -S按行查看，按q退出
     less -S temp/gtdb_classify/tax.bac120.summary.tsv
     less -S temp/gtdb_classify/tax.ar53.summary.tsv
@@ -1274,6 +1292,7 @@ Error: Invalid or corrupt jarfile \~/miniconda3/envs/kneaddata/share/trimmomatic
 
     sed -i 's/trimmomatic\*/trimmomatic.jar/' ~/miniconda3/envs/kneaddata/lib/python3.10/site-packages/kneaddata/config.py
 
+
 #### Python环境不匹配-找不到包module
 
 ModuleNotFoundError: No module named 'importlib.metadata'
@@ -1284,8 +1303,10 @@ ModuleNotFoundError: No module named 'importlib.metadata'
     # /public/software/env01/bin:/public/home/liuyongxin/miniconda3/envs/kneaddata/bin:/public/home/liuyongxin/miniconda3/condabin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
 
 确认conda环境是否为第一个路径，此处kneaddata路径前还有更高优先级的目录在前，重设PATH变量，即删除当前conda环境前的所有路径
-    
+
     PATH=/public/home/liuyongxin/miniconda3/envs/kneaddata/bin:/public/home/liuyongxin/miniconda3/condabin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
+
+
 
 
 ## 读长分析HUMAnN2
