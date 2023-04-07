@@ -6,6 +6,9 @@
     # 测试环境为Windows 10+ / MacOS 10+
     
     # 设置结果目录(通常为项目中的result，此处为演示12个样本结果result12)
+    # mac 也需要修改路径格式可参考如下， ~ 代表家目录
+    # wd=~/meta/result12
+    # sd=~/EasyMicrobiome/script
     wd=/c/meta/result12
     # 设置脚本所在目录(Script Directory)
     sd=/c/EasyMicrobiome/script
@@ -175,6 +178,7 @@
 ### Beta多样性
 
     # Beta多样性距离矩阵计算
+    # Mac 用不了面对的 usearch，使用在线平台 https://www.bic.ac.cn/BIC
     mkdir -p kraken2/beta/
     $sd/../win/usearch -beta_div kraken2/bracken.${tax}.norm \
         -filename_prefix kraken2/beta/
