@@ -1,0 +1,80 @@
+# Pathway	C1	C2
+UNMAPPED	17454.0083099194	23730.5023508297
+UNINTEGRATED	13541.9892468728	8824.3083215074
+UNINTEGRATED|g__Fusobacterium.s__Fusobacterium_nucleatum	6077.7497413782	0
+UNINTEGRATED|g__Sphingomonas.s__Sphingomonas_melonis	0	2905.1994540407
+UNINTEGRATED|unclassified	5442.9815662447	0
+ANAGLYCOLYSIS-PWY: glycolysis III (from glucose)	9.0133259106	0
+ARO-PWY: chorismate biosynthesis I	10.7697277850	0
+BRANCHED-CHAIN-AA-SYN-PWY: superpathway of branched chain amino acid biosynthesis	9.2298361348	0
+BRANCHED-CHAIN-AA-SYN-PWY: superpathway of branched chain amino acid biosynthesis|g__Fusobacterium.s__Fusobacterium_nucleatum	9.2298361348	0
+CALVIN-PWY: Calvin-Benson-Bassham cycle	7.8440676644	0
+COA-PWY: coenzyme A biosynthesis I (prokaryotic)	4.3391007214	8.4010766473
+DTDPRHAMSYN-PWY: dTDP-&beta;-L-rhamnose biosynthesis	10.0771981249	6.9242068775
+GLYCOGENSYNTH-PWY: glycogen biosynthesis I (from ADP-D-Glucose)	7.4473308437	0
+HISDEG-PWY: L-histidine degradation I	8.4493658936	0
+ILEUSYN-PWY: L-isoleucine biosynthesis I (from threonine)	9.0861337457	0
+ILEUSYN-PWY: L-isoleucine biosynthesis I (from threonine)|g__Fusobacterium.s__Fusobacterium_nucleatum	9.0861337457	0
+NONOXIPENT-PWY: pentose phosphate pathway (non-oxidative branch) I	6.3429106827	5.4744525547
+NONOXIPENT-PWY: pentose phosphate pathway (non-oxidative branch) I|g__Sphingomonas.s__Sphingomonas_melonis	0	5.0020842018
+OANTIGEN-PWY: O-antigen building blocks biosynthesis (E. coli)	9.2369789524	0
+P163-PWY: L-lysine fermentation to acetate and butanoate	10.7654917651	0
+P41-PWY: pyruvate fermentation to acetate and (S)-lactate I	11.7173524444	0
+PEPTIDOGLYCANSYN-PWY: peptidoglycan biosynthesis I (meso-diaminopimelate containing)	9.9966129668	0
+PHOSLIPSYN-PWY: superpathway of phospholipid biosynthesis I (bacteria)	9.8283508829	0
+PWY-1042: glycolysis IV	6.9410338464	0
+PWY-5100: pyruvate fermentation to acetate and lactate II	11.7173524444	0
+PWY-5103: L-isoleucine biosynthesis III	9.2057933827	0
+PWY-5103: L-isoleucine biosynthesis III|g__Fusobacterium.s__Fusobacterium_nucleatum	8.9239425722	0
+PWY-5188: tetrapyrrole biosynthesis I (from glutamate)	9.1415676080	0
+PWY-5667: CDP-diacylglycerol biosynthesis I	9.3908478294	0
+PWY-5667: CDP-diacylglycerol biosynthesis I|unclassified	5.8039597055	0
+PWY-5686: UMP biosynthesis I	10.1896173159	0
+PWY-5981: CDP-diacylglycerol biosynthesis III	7.7809282154	0
+PWY-6121: 5-aminoimidazole ribonucleotide biosynthesis I	12.2974724367	0
+PWY-6122: 5-aminoimidazole ribonucleotide biosynthesis II	11.8154338798	0
+PWY-6122: 5-aminoimidazole ribonucleotide biosynthesis II|g__Fusobacterium.s__Fusobacterium_nucleatum	7.7862548499	0
+PWY-6123: inosine-5'-phosphate biosynthesis I	7.1771533836	0
+PWY-6124: inosine-5'-phosphate biosynthesis II	6.7078824596	0
+PWY-6126: superpathway of adenosine nucleotides de novo biosynthesis II	0	7.7155271029
+PWY-6151: S-adenosyl-L-methionine salvage I	6.7754873015	0
+PWY-6163: chorismate biosynthesis from 3-dehydroquinate	10.8132020540	0
+PWY-6277: superpathway of 5-aminoimidazole ribonucleotide biosynthesis	11.8154338798	0
+PWY-6277: superpathway of 5-aminoimidazole ribonucleotide biosynthesis|g__Fusobacterium.s__Fusobacterium_nucleatum	7.7862548499	0
+PWY-6305: superpathway of putrescine biosynthesis	7.2126799631	0
+PWY-6317: D-galactose degradation I (Leloir pathway)	9.3616043394	0
+PWY-6317: D-galactose degradation I (Leloir pathway)|g__Fusobacterium.s__Fusobacterium_nucleatum	8.1570737117	0
+PWY-6385: peptidoglycan biosynthesis III (mycobacteria)	9.2105570431	0
+PWY-6386: UDP-N-acetylmuramoyl-pentapeptide biosynthesis II (lysine-containing)	11.5522671003	0
+PWY-6387: UDP-N-acetylmuramoyl-pentapeptide biosynthesis I (meso-diaminopimelate containing)	9.7069708014	0
+PWY-6609: adenine and adenosine salvage III	4.4987338686	0
+PWY-6700: queuosine biosynthesis I (de novo)	10.3740021052	0
+PWY-6703: preQ0 biosynthesis	5.5717660106	0
+PWY-7197: pyrimidine deoxyribonucleotide phosphorylation	0	9.1463414634
+PWY-7199: pyrimidine deoxyribonucleosides salvage	7.4409710628	0
+PWY-7220: adenosine deoxyribonucleotides de novo biosynthesis II	0	10.7751716987
+PWY-7221: guanosine ribonucleotides de novo biosynthesis	11.4420930992	0
+PWY-7221: guanosine ribonucleotides de novo biosynthesis|g__Fusobacterium.s__Fusobacterium_nucleatum	10.7845605899	0
+PWY-7222: guanosine deoxyribonucleotides de novo biosynthesis II	0	10.7751716987
+PWY-7229: superpathway of adenosine nucleotides de novo biosynthesis I	0	7.4944284212
+PWY-7663: gondoate biosynthesis (anaerobic)	9.2673419789	0
+PWY-7790: UMP biosynthesis II	10.1896173159	0
+PWY-7791: UMP biosynthesis III	13.5652003922	0
+PWY-7791: UMP biosynthesis III|g__Fusobacterium.s__Fusobacterium_nucleatum	12.3189892133	0
+PWY-7953: UDP-N-acetylmuramoyl-pentapeptide biosynthesis III (meso-diaminopimelate containing)	9.0528462534	0
+PWY-7977: L-methionine biosynthesis IV	9.7380616768	0
+PWY-7977: L-methionine biosynthesis IV|g__Fusobacterium.s__Fusobacterium_nucleatum	6.9495434191	0
+PWY-8178: pentose phosphate pathway (non-oxidative branch) II	5.9603613970	5.3956834532
+PWY-I9: L-cysteine biosynthesis VI (from L-methionine)	6.7704229610	0
+PWY0-1319: CDP-diacylglycerol biosynthesis II	9.3908478294	0
+PWY0-1319: CDP-diacylglycerol biosynthesis II|unclassified	5.8039597055	0
+PWY0-1586: peptidoglycan maturation (meso-diaminopimelate containing)	7.7556494367	0
+PWY0-1586: peptidoglycan maturation (meso-diaminopimelate containing)|unclassified	7.7556494367	0
+PWY4FS-7: phosphatidylglycerol biosynthesis I (plastidic)	10.4269425308	0
+PWY4FS-8: phosphatidylglycerol biosynthesis II (non-plastidic)	10.4269425308	0
+PWY66-429: fatty acid biosynthesis initiation (mitochondria)	9.5476978146	0
+PYRIDNUCSYN-PWY: NAD de novo biosynthesis I (from aspartate)	10.6542712086	0
+SER-GLYSYN-PWY: superpathway of L-serine and glycine biosynthesis I	6.0578332479	0
+UDPNAGSYN-PWY: UDP-N-acetyl-D-glucosamine biosynthesis I	10.2754383102	0
+VALSYN-PWY: L-valine biosynthesis	9.2235601551	0
+VALSYN-PWY: L-valine biosynthesis|g__Fusobacterium.s__Fusobacterium_nucleatum	9.2235601551	0

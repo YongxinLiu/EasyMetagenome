@@ -2,67 +2,74 @@
 
 # 易宏基因组软件和数据库 EasyMetagenome software & database
 
-    # 版本: 1.18, 2023/4/7
-    # 测试环境为Linux Ubuntu 20.04+ / CentOS 7.7+
+    # 版本Version: 1.19, 2023/7/21
+    # 操作系统Operation System: Linux Ubuntu 20.04+ / CentOS 7.7+
+    # 主页Homepage: https://github.com/YongxinLiu/EasyMetagenome
 
-所有软件和数据库可从官网下载，国内可备选微生物所下载站 http://nmdc.cn/datadownload 和百度网盘 https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
+所有软件和数据库可从官网下载，备选 All software and databases can be downloaded from the official website, optional：
+中科院微生物所Institute of Microbiology, Chinese Academy of Sciences：ftp://download.nmdc.cn/tools/ (FileZilla访问) 
+百度网盘Baidu Netdisk：https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
 
 # 一、数据预处理 Data preprocessing
 
-## 初始化：每次开始安装必须运行下面代码
+## 初始化：每次开始安装必须运行下面代码 Initialization: The following code must be run every time when installation starts
 
-安装前准备：软件和数据库位置
+安装前准备：软件和数据库位置 Before Installation: Software and Database Locations
 
-    # 数据库安装位置，默认~/db目录(无需管理权限)，管理员可安装至/db，方便大家使用
+    # 数据库安装位置Database Locations，默认~/db目录(无需管理权限)，管理员可选/d
     db=~/db
     mkdir -p ${db} && cd ${db}
-    # 软件安装位置，一般为~/miniconda3，测试服务器为/anaconda3
+    # 软件安装位置Software installation location，默认为~/miniconda3，测试服务器为/anaconda3
     soft=~/miniconda3
-    # 确定的环境，建议把全文${db}和${soft}替换为确定目录，将不再需要每次读取以上环境变量
-    # 初始化环境，可能提高软件安装成功率
+    # 经常使用的服务器环境，可把全文${db}和${soft}替换为绝对路径，将不再需要每次读取以上环境变量
+    # In the frequently used server environment, you can replace the variable ${db} and ${soft} with absolute paths, and you will no longer need to run the above environment variables every time
+    # 可选：初始化环境变量，可能提高软件安装成功率
+    # Optional: Initialize environment variables, which may improve the success rate of software installation
     # PATH=${soft}/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:${db}/EasyMicrobiome/linux:${db}/EasyMicrobiome/script
     echo $PATH
 
-### EasyMetagenome流程(正对照)
+### EasyMetagenome流程Pipeline
 
-EasyMetagenome流程，包括流程安装、使用和可视化脚本，以及测试流程数据和结果正对照，网址：https://github.com/YongxinLiu/EasyMetagenome
-    
-    # 方法1. git下载，需安装git
-    git clone https://github.com/YongxinLiu/EasyMetagenome
-    # 可选旧版更新
-    cd EasyMetagenome && git pull && cd ../
+EasyMetagenome流程，包括流程安装、使用和可视化脚本，以及流程测试数据和结果正对照，网址：https://github.com/YongxinLiu/EasyMetagenome
 
-    # 方法2. 网页 https://github.com/YongxinLiu/EasyMetagenome 中Code Download ZIP下载压缩包，上传至服务器，解压
-    unzip EasyMetagenome-master.zip
+三种下载方法：依赖尝试/任选其一至成功即可
+
+    # 方法1. 网页 https://github.com/YongxinLiu/EasyMetagenome 中Code - Download ZIP下载压缩包，上传至服务器
+    # 解压，Command 'unzip' not found使用sudo apt install unzip安装
+    unzip EasyMetagenome-master.zip 
+    # 改名
     mv EasyMetagenome-master EasyMetagenome
 
-    # 方法3. 备用链接下载，无法访问github时使用
-    wget -c ftp://download.nmdc.cn/tools/soft/EasyMicrobiome.tar.gz
-    tar -xvzf EasyMetagenome.tar.gz
+    # 方法2. 微生物所备用链接，可能不是最新版
+    wget -c ftp://download.nmdc.cn/tools/soft/EasyMetagenome.tar.gz
+    tar xvzf EasyMetagenome.tar.gz
+
+    # 方法3. git下载，需安装git
+    git clone https://github.com/YongxinLiu/EasyMetagenome
+    # 旧版更新
+    cd EasyMetagenome && git pull && cd ../
+
+### EasyMicrobiome软件和数据库合集dependencies
+
+EasyMetagenome依赖EasyMicrobiome，其包括众多脚本、软件和数据库的集合，网址：https://github.com/YongxinLiu/EasyMicrobiome
     
-### EasyMicrobiome软件和数据库(EasyMetagenome依赖)
-
-EasyMetagenome依赖流程EasyMicrobiome，包括很多脚本、常用小软件和数据库的合集，网址：https://github.com/YongxinLiu/EasyMicrobiome
-    
-    # 三种下载数据库的方法：任选其一即可
-
-    # 方法1. git下载，需安装git
-    git clone https://github.com/YongxinLiu/EasyMicrobiome
-    # 可选旧版更新
-    cd EasyMicrobiome && git pull && cd ../
-
-    # 方法2. 网页中下载
+    # 方法1. 网页中下载
     # https://github.com/YongxinLiu/EasyMicrobiome 中Code Download ZIP下载压缩包，上传至服务器，并解压
     unzip EasyMicrobiome-master.zip
     mv EasyMicrobiome-master EasyMicrobiome
     
-    # 方法3. 备用链接下载，无法访问github时使用
-    wget -c ftp://download.nmdc.cn/tools//EasyMicrobiome.tar.gz
+    # 方法2. 备用链接下载
+    wget -c ftp://download.nmdc.cn/tools/soft/EasyMicrobiome.tar.gz
     tar -xvzf EasyMicrobiome.tar.gz
     
+    # 方法3. git下载，需安装git
+    git clone https://github.com/YongxinLiu/EasyMicrobiome
+    # 旧版更新
+    cd EasyMicrobiome && git pull && cd ../
+
+    # 软件安装
     # 添加linux命令可执行权限
     chmod +x `pwd`/EasyMicrobiome/linux/* `pwd`/EasyMicrobiome/script/*
-    
     # 添加环境变量
     echo "export PATH=\"\$PATH:`pwd`/EasyMicrobiome/linux:`pwd`/EasyMicrobiome/script\"" >> ~/.bashrc
     source ~/.bashrc
@@ -70,14 +77,14 @@ EasyMetagenome依赖流程EasyMicrobiome，包括很多脚本、常用小软件�
 
 ### 软件管理器Conda
 
-    # 下载最新版miniconda3，71M
+    # 下载最新版miniconda3，70M
     wget -c https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
     # 安装，-b批量，-f无提示，-p目录，许可协议打yes
     bash Miniconda3-latest-Linux-x86_64.sh -b -f -p ${soft}
     # 激活，然后关闭终端重开，提示符前出现(base)即成功
     ${soft}/condabin/conda init
     source ~/.bashrc
-    # 查看版本，conda 23.1.0, python 3.10.9
+    # 查看版本，conda 23.3.1, python 23.3.1
     conda -V 
     python --version
     # 添加常用频道
@@ -97,22 +104,21 @@ EasyMetagenome依赖流程EasyMicrobiome，包括很多脚本、常用小软件�
 [一文掌握Conda软件安装：虚拟环境、软件通道、加速solving、跨服务器迁移](https://mp.weixin.qq.com/s/tKAU09_w7Cu7khA9M2EGEQ)
 
 
-## 宏基因组质控 kneaddata/fstqc/multiqc/fastp
+## 质控Quality control: kneaddata/fstqc/multiqc/fastp
 
 **注：直接安装、下载解压安装，二选一。一种方法不成功，尝试另一种。**
 
 BioConda: https://bioconda.github.io/recipes/kneaddata/README.html
 
-### kneaddata直接安装
+### 方法1.kneaddata直接安装
 
-    # 新建 kneaddata 环境
+    # 新建kneaddata环境
     conda create -y -n kneaddata
     conda activate kneaddata
-    # 质量评估fastqc，评估报告汇总multiqc
-    # 质量控制流程kneaddata，fastp 质控工具
+    # fastqc质量评估，multiqc评估报告汇总，kneaddata质量控制流程，fastp质控工具
     mamba install kneaddata fastqc multiqc fastp r-reshape2 -y 
 
-### (可选)kneaddata下载解压安装
+### 方法2.kneaddata下载解压安装
 
     # 指定conda文件名
     s=kneaddata
@@ -132,7 +138,7 @@ BioConda: https://bioconda.github.io/recipes/kneaddata/README.html
     kneaddata --version # 0.12.0
     trimmomatic -version # 0.39
     bowtie2 --version # 2.5.1
-    multiqc --version  # 1.13
+    multiqc --version  # 1.14
 
     # (可选)安装软件打包，生成上方下载压缩包
     n=kneaddata
@@ -151,7 +157,8 @@ BioConda: https://bioconda.github.io/recipes/kneaddata/README.html
     
     # 备用链接下载至上述目录，并解压
     cd ${db}/kneaddata/human_genome
-    wget -c ftp://download.nmdc.cn/tools/kneaddata/human_genome/Homo_sapiens_hg37_and_human_contamination_Bowtie2_v0.1.tar.gz
+    wget -c ftp://download.nmdc.cn/tools/meta/kneaddata/human_genome/Homo_sapiens_hg37_and_human_contamination_Bowtie2_v0.1.tar.gz
+    tar xvzf Homo_sapiens_hg37_and_human_contamination_Bowtie2_v0.1.tar.gz
     
 ### kneaddata自定义参考基因组索引
 
@@ -160,91 +167,112 @@ BioConda: https://bioconda.github.io/recipes/kneaddata/README.html
 自定义基因组构建索引，大多数基因组可在ensembl genome下载。此处以拟南芥为例，访问 http://plants.ensembl.org/index.html ，选择Arabidopsis thaliana —— Download DNA sequence (FASTA)，选择toplevel右键复制链接，填入下面链接处
 
     # 创建子目录
-    mkdir -p ${db}/kneaddata/ath && cd  ${db}/kneaddata/ath
+    mkdir -p ${db}/kneaddata/ath
+    cd ${db}/kneaddata/ath
     # 下载
     wget -c http://ftp.ensemblgenomes.org/pub/plants/release-51/fasta/arabidopsis_thaliana/dna/Arabidopsis_thaliana.TAIR10.dna.toplevel.fa.gz
+    # wget -c ftp://download.nmdc.cn/tools/meta/kneaddata/Arabidopsis_thaliana.TAIR10.dna.toplevel.fa.gz
     # 解压
     gunzip Arabidopsis_thaliana.TAIR10.dna.toplevel.fa.gz
     # 简化文件名
     mv Arabidopsis_thaliana.TAIR10.dna.toplevel.fa tair10.fa
     # bowtiew建索引，输入文件，输出文件前缀，9线程2分
-    time bowtie2-build -f tair10.fa tair10 --threads 9 --seed 1
+    time bowtie2-build -f tair10.fa tair10 --threads 4 --seed 1
 
-# 二、基于读长分析 Read-based (HUMAnN2)
+# 二、基于读长分析 Read-based (HUMAnN3/Kraken2)
 
-## 宏基因组基于读长的分析 HUMAnN2/Metaphlan2/graphlan
+## 宏基因组基于读长的分析 HUMAnN3/MetaPhlAn4/GraPhlAn
 
-### HUMAnN2解包安装
+HUMAnN3+MetaPhlAn4为目前最新版，目前最广泛使用的HUMAnN2安装见附录
+
+### HUMAnN3直接安装
+
+    # 安装HUMAnN3.7+MetaPhlAn4
+    conda create -n humann3
+    conda activate humann3
+    conda install humann=3.7 -c bioconda -c conda-forge
+    # 打包(可选)
+    conda pack -f -n humann3 -o humann3.tar.gz
+    
+### HUMAnN3解包安装
 
     # 下载
-    wget -c ftp://download.nmdc.cn/tools//conda/humann2.tar.gz
+    wget -c ftp://download.nmdc.cn/tools/conda/humann3.tar.gz
     # 指定安装目录
-    mkdir -p ${soft}/envs/humann2
-    tar -xvzf humann2.tar.gz -C ${soft}/envs/humann2
+    mkdir -p ${soft}/envs/humann3
+    tar -xvzf humann3.tar.gz -C ${soft}/envs/humann3
     # 启动环境
-    conda activate humann2
+    conda activate humann3
     # 初始化环境
     conda unpack
 
-### HUMAnN2直接安装
+### HUMAnN3安装测试
 
-    # mamba 是快速版本的 conda
-    mamba create -n humann2 humann2 graphlan export2graphlan -c bioconda -y
-
-### HUMAnN2安装测试
-
-    conda activate humann2
     # 记录核心软件版本
-    humann2 --version # v2.8.1
-    metaphlan2.py -v # 2.7.5 (6 February 2018)
-    diamond help | head -n 1 #  v0.8.36.98
-    graphlan.py --version # 1.1.3 (5 June 2018)
-    export2graphlan.py -h # 0.22 of 05 May
+    humann --version # v3.7
+    metaphlan -v # 4.0.6 (1 Mar 2023)
+    diamond help | head -n 1 #  v2.1.8.162
+    # 测试
+    humann_test
 
-    # 测试流程是否可用
-    humann2_test
-
-### HUMAnN2物种和功能数据库
+### HUMAnN3物种和功能数据库
 
     # 显示可用分类、泛基因组和功能数据库
-    humann2_databases
+    humann_databases
 
-    # 安装数据库(注：数据库下载慢或失败，附录有国内备份链接)
+    # 安装数据库
     cd ${db}
-    mkdir -p ${db}/humann2 # 建立下载目录
-    # 输助比对数据库 593MB
-    humann2_databases --download utility_mapping full ${db}/humann2
-    # 微生物泛基因组 5.37 GB
-    humann2_databases --download chocophlan full ${db}/humann2
-    # 功能基因diamond索引 10.3 GB
-    humann2_databases --download uniref uniref90_diamond ${db}/humann2
+    mkdir -p ${db}/humann3 # 建立下载目录
+    # 微生物泛基因组 16 GB
+    humann_databases --download chocophlan full ${db}/humann3
+    # 功能基因diamond索引 20 GB
+    humann_databases --download uniref uniref90_diamond ${db}/humann3
+    # 输助比对数据库 2.6 GB
+    humann_databases --download utility_mapping full ${db}/humann3
 
-    # humann2数据库无法下载：附录备用链接下载后手动配置
-    mkdir -p ${db}/humann2/chocophlan && cd ${db}/humann2/chocophlan
-    tar xvzf full_chocophlan_plus_viral.v0.1.1.tar.gz
-    mkdir -p ${db}/humann2/uniref && cd ${db}/humann2/uniref
-    tar xvzf uniref90_annotated_1_1.tar.gz
-    mkdir -p ${db}/humann2/utility_mapping && cd ${db}/humann2/utility_mapping
-    tar xvzf full_mapping_1_1.tar.gz
-
+    # humann3数据库无法自动下载，备用链接下载安装
+    # 手动下载，备用链接为ftp://download.nmdc.cn/tools/meta/humann3替换http://huttenhower.sph.harvard.edu/humann_data
+    wget -c http://huttenhower.sph.harvard.edu/humann_data/chocophlan/full_chocophlan.v201901_v31.tar.gz
+    wget -c http://huttenhower.sph.harvard.edu/humann_data/uniprot/uniref_annotated/uniref90_annotated_v201901b_full.tar.gz
+    wget -c http://huttenhower.sph.harvard.edu/humann_data/full_mapping_v201901b.tar.gz
+    # 安装、解压
+    mkdir -p ${db}/humann3/chocophlan
+    tar xvzf full_chocophlan.v201901_v31.tar.gz -C ${db}/humann3/chocophlan
+    mkdir -p ${db}/humann3/uniref
+    tar xvzf uniref90_annotated_v201901b_full.tar.gz -C ${db}/humann3/uniref
+    mkdir -p ${db}/humann3/utility_mapping
+    tar xvzf full_mapping_v201901b.tar.gz -C ${db}/humann3/utility_mapping
 
     # 设置数据库位置
     # 显示参数
-    humann2_config --print
+    humann_config --print
     # 如修改线程数，推荐3-8，根据实际情况调整
-    humann2_config --update run_modes threads 4
-    humann2_config --update database_folders utility_mapping ${db}/humann2/utility_mapping
-    humann2_config --update database_folders nucleotide ${db}/humann2/chocophlan
-    humann2_config --update database_folders protein ${db}/humann2/uniref
-    humann2_config --print
+    humann_config --update run_modes threads 8
+    # 设置核酸、蛋白和注释库位置
+    humann_config --update database_folders nucleotide ${db}/humann3/chocophlan
+    humann_config --update database_folders protein ${db}/humann3/uniref
+    humann_config --update database_folders utility_mapping ${db}/humann3/utility_mapping
+    # 核对设置结果
+    humann_config --print
+
+### MetaPhlAn4物种数据库
     
-    ## metaphlan2数据库下载和配置
-    mkdir -p ${db}/humann2 && cd ${db}/humann2
-    wget -c ftp://download.nmdc.cn/tools//humann2/metaphlan2.tar.gz
-    tar xvzf metaphlan2.tar.gz
-    # 链接到软件安装目录
-    mkdir -p ${soft}/envs/humann2/bin/databases
-    ln -s ${db}/humann2/metaphlan2/* ${soft}/envs/humann2/bin/databases/
+    # MetaPhlAn4数据库下载，自动会下载到conda环境中，打包30G文件不方便分享，这里手动指定位置下载
+    # 手动下载2022数据和索引3G+20G
+    mkdir -p ~/${db}/metaphlan4
+    cd ~/${db}/metaphlan4
+    wget -c http://cmprod1.cibio.unitn.it/biobakery4/metaphlan_databases/mpa_vOct22_CHOCOPhlAnSGB_202212.tar
+    wget -c http://cmprod1.cibio.unitn.it/biobakery4/metaphlan_databases/bowtie2_indexes/mpa_vOct22_CHOCOPhlAnSGB_202212_bt2.tar
+    tar xvf mpa_vOct22_CHOCOPhlAnSGB_202212.tar
+    tar xvf mpa_vOct22_CHOCOPhlAnSGB_202212_bt2.tar
+    
+    # 官方下载链接没有压缩，体积大而且下载慢，可用国内百度链接：https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315 或 微生物所FTP ftp://download.nmdc.cn/tools/meta 下载压缩包
+    mkdir -p ~/${db}/metaphlan4
+    cd ~/${db}/metaphlan4
+    wget -c ftp://download.nmdc.cn/tools/meta/metaphlan4/mpa_vOct22_CHOCOPhlAnSGB_202212.tar.gz
+    wget -c ftp://download.nmdc.cn/tools/meta/metaphlan4/mpa_vOct22_CHOCOPhlAnSGB_202212_bt2.tar.gz
+    tar xvzf mpa_vOct22_CHOCOPhlAnSGB_202212.tar.gz
+    tar xvzf mpa_vOct22_CHOCOPhlAnSGB_202212_bt2.tar.gz
 
 ## 生物标记鉴定和可视化LEfSe
 
@@ -282,7 +310,7 @@ kraken2 基于LCA算法的物种注释 https://ccb.jhu.edu/software/kraken/
 ### Kraken2解包安装
 
     # 下载
-    wget -c ftp://download.nmdc.cn/tools//conda/kraken2.tar.gz
+    wget -c ftp://download.nmdc.cn/tools/conda/kraken2.tar.gz
     # 指定安装目录
     mkdir -p ${soft}/envs/kraken2
     tar -xvzf kraken2.tar.gz -C ${soft}/envs/kraken2
@@ -299,11 +327,11 @@ kraken2 基于LCA算法的物种注释 https://ccb.jhu.edu/software/kraken/
 
 ### Kraken2数据库安装
 
-下载数据库(NCBI每2周更新一次)，记录下载日期和大小。需根据服务器内存、使用目的选择合适方案。--standard标准模式下只下载5种**标准数据库：古菌archaea、细菌bacteria、人类human、载体UniVec_Core、病毒viral**。也可选直接下载作者构建的索引，还包括bracken的索引。链接：https://benlangmead.github.io/aws-indexes/k2 （3/14/2023版）。 
+下载数据库(NCBI每2周更新一次)，记录下载日期和大小。需根据服务器内存、使用目的选择合适方案。--standard标准模式下只下载5种**标准数据库：古菌archaea、细菌bacteria、人类human、载体UniVec_Core、病毒viral**。也可选直接下载作者构建的索引，还包括bracken的索引。链接：https://benlangmead.github.io/aws-indexes/k2 （6/5/2023版）。 注：中科院网络下载较快，家里和农科院较慢
 
 方案1. 下载标准+原生动物+真菌 16GB (PlusPF-16) 
 
-    v=k2_pluspf_16gb_20230314
+    v=k2_pluspf_16gb_20230605
     mkdir -p ~/db/kraken2/pluspf16g
     cd ~/db/kraken2
     wget -c https://genome-idx.s3.amazonaws.com/kraken/${v}.tar.gz
@@ -311,7 +339,7 @@ kraken2 基于LCA算法的物种注释 https://ccb.jhu.edu/software/kraken/
 
 方案2. 下载标准+原生动物+真菌 69GB (PlusPF) 
 
-    v=k2_pluspf_20230314
+    v=k2_pluspf_20230605
     mkdir -p ~/db/kraken2/pluspf16g
     cd ~/db/kraken2
     wget -c https://genome-idx.s3.amazonaws.com/kraken/${v}.tar.gz
@@ -321,7 +349,7 @@ kraken2 基于LCA算法的物种注释 https://ccb.jhu.edu/software/kraken/
 
 指定解压目录，包括时间和类型
 
-    v=k2_pluspfp_20230314
+    v=k2_pluspfp_20230605
     mkdir -p ~/db/kraken2/pluspfp
     cd ~/db/kraken2
     wget -c https://genome-idx.s3.amazonaws.com/kraken/${v}.tar.gz
@@ -598,23 +626,24 @@ GTDB-Tk是一个软件工具包，用于根据基因组数据库分类法GTDB为
 
 ### GTDB-Tk直接安装
 
-    # gtdbtk-2.2.6, 2023-3-26
-    mamba create -y -n gtdbtk -c conda-forge -c bioconda gtdbtk=2.2.6
+    # gtdbtk-2.3.2, 2023-7-8
+    n=gtdbtk2.3
+    
+    mamba create -y -n ${n} -c conda-forge -c bioconda gtdbtk=2.3.2
     
     # conda pack软件打包一次
-    n=gtdbtk
-    # --exclude gtdbtk-2.1.0 指定排除数据库
-    conda pack -n ${n} -o ${n}.tar.gz --exclude gtdbtk-2.1.0 --ignore-editable-packages --ignore-missing-files
+    # --exclude gtdbtk-2.3.2 指定排除数据库
+    conda pack -n ${n} -o ${n}.tar.gz --exclude gtdbtk-2.3.2 --ignore-editable-packages --ignore-missing-files
     chmod 755 *
     
 ### GTDB-Tks数据库安装
 
-download-db.sh自动下载数据库，将下载至conda中的envs/gtdbtk/share/gtdbtk-2.1.0/db/，我们修改为~/db/gtdb中
+download-db.sh自动下载数据库，将下载至conda中的envs/gtdbtk/share/gtdbtk-2.3.2/db/，我们修改为~/db/gtdb中
 
-    conda activate gtdbtk
+    conda activate gtdbtk2.3
     # download-db.sh中，修改数据库下载位置，的 wget 建议改成wget -c 防止覆盖
-    sed -i 's#miniconda3/envs/gtdbtk/share/gtdbtk-2.2.6/db#db/gtdb#;s/wget /wget -c /' ${soft}/envs/gtdbtk/bin/download-db.sh
-    # 下载数据
+    sed -i 's#miniconda3/envs/gtdbtk2.3/share/gtdbtk-2.3.2/db#db/gtdb2.3#;s/wget /wget -c /' ${soft}/envs/gtdbtk2.3/bin/download-db.sh
+    # 下载数据,78G
     download-db.sh
     
 (备选)下面无法下载时手动下载和配置GTDB数据库
@@ -892,3 +921,77 @@ https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
     wget -c http://www.mgc.ac.cn/VFs/Down/VFDB_setB_pro.fas.gz
     # 解压
     gunzip *.gz
+
+## 宏基因组基于读长的分析 HUMAnN2/Metaphlan2/graphlan
+
+### HUMAnN2解包安装
+
+    # 下载
+    wget -c ftp://download.nmdc.cn/tools/conda/humann2.tar.gz
+    # 指定安装目录
+    mkdir -p ${soft}/envs/humann2
+    tar -xvzf humann2.tar.gz -C ${soft}/envs/humann2
+    # 启动环境
+    conda activate humann2
+    # 初始化环境
+    conda unpack
+
+### HUMAnN2直接安装
+
+    # mamba 是快速版本的 conda
+    mamba create -n humann2 humann2 graphlan export2graphlan -c bioconda -y
+
+### HUMAnN2安装测试
+
+    conda activate humann2
+    # 记录核心软件版本
+    humann2 --version # v2.8.1
+    metaphlan2.py -v # 2.7.5 (6 February 2018)
+    diamond help | head -n 1 #  v0.8.36.98
+    graphlan.py --version # 1.1.3 (5 June 2018)
+    export2graphlan.py -h # 0.22 of 05 May
+
+    # 测试流程是否可用
+    humann2_test
+
+### HUMAnN2物种和功能数据库
+
+    # 显示可用分类、泛基因组和功能数据库
+    humann2_databases
+
+    # 安装数据库(注：数据库下载慢或失败，附录有国内备份链接)
+    cd ${db}
+    mkdir -p ${db}/humann2 # 建立下载目录
+    # 输助比对数据库 593MB
+    humann2_databases --download utility_mapping full ${db}/humann2
+    # 微生物泛基因组 5.37 GB
+    humann2_databases --download chocophlan full ${db}/humann2
+    # 功能基因diamond索引 10.3 GB
+    humann2_databases --download uniref uniref90_diamond ${db}/humann2
+
+    # humann2数据库无法下载：附录备用链接下载后手动配置
+    mkdir -p ${db}/humann2/chocophlan && cd ${db}/humann2/chocophlan
+    tar xvzf full_chocophlan_plus_viral.v0.1.1.tar.gz
+    mkdir -p ${db}/humann2/uniref && cd ${db}/humann2/uniref
+    tar xvzf uniref90_annotated_1_1.tar.gz
+    mkdir -p ${db}/humann2/utility_mapping && cd ${db}/humann2/utility_mapping
+    tar xvzf full_mapping_1_1.tar.gz
+
+
+    # 设置数据库位置
+    # 显示参数
+    humann2_config --print
+    # 如修改线程数，推荐3-8，根据实际情况调整
+    humann2_config --update run_modes threads 4
+    humann2_config --update database_folders utility_mapping ${db}/humann2/utility_mapping
+    humann2_config --update database_folders nucleotide ${db}/humann2/chocophlan
+    humann2_config --update database_folders protein ${db}/humann2/uniref
+    humann2_config --print
+    
+    ## metaphlan2数据库下载和配置
+    mkdir -p ${db}/humann2 && cd ${db}/humann2
+    wget -c ftp://download.nmdc.cn/tools/humann2/metaphlan2.tar.gz
+    tar xvzf metaphlan2.tar.gz
+    # 链接到软件安装目录
+    mkdir -p ${soft}/envs/humann2/bin/databases
+    ln -s ${db}/humann2/metaphlan2/* ${soft}/envs/humann2/bin/databases/

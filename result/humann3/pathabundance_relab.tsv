@@ -1,0 +1,80 @@
+# Pathway	C1	C2
+UNMAPPED	0.554156	0.727329
+UNINTEGRATED	0.429951	0.270461
+UNINTEGRATED|g__Fusobacterium.s__Fusobacterium_nucleatum	0.192965	0
+UNINTEGRATED|g__Sphingomonas.s__Sphingomonas_melonis	0	0.089043
+UNINTEGRATED|unclassified	0.172812	0
+ANAGLYCOLYSIS-PWY: glycolysis III (from glucose)	0.000286168	0
+ARO-PWY: chorismate biosynthesis I	0.000341933	0
+BRANCHED-CHAIN-AA-SYN-PWY: superpathway of branched chain amino acid biosynthesis	0.000293042	0
+BRANCHED-CHAIN-AA-SYN-PWY: superpathway of branched chain amino acid biosynthesis|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000293042	0
+CALVIN-PWY: Calvin-Benson-Bassham cycle	0.000249045	0
+COA-PWY: coenzyme A biosynthesis I (prokaryotic)	0.000137764	0.000257489
+DTDPRHAMSYN-PWY: dTDP-&beta;-L-rhamnose biosynthesis	0.000319946	0.000212224
+GLYCOGENSYNTH-PWY: glycogen biosynthesis I (from ADP-D-Glucose)	0.000236449	0
+HISDEG-PWY: L-histidine degradation I	0.000268263	0
+ILEUSYN-PWY: L-isoleucine biosynthesis I (from threonine)	0.00028848	0
+ILEUSYN-PWY: L-isoleucine biosynthesis I (from threonine)|g__Fusobacterium.s__Fusobacterium_nucleatum	0.00028848	0
+NONOXIPENT-PWY: pentose phosphate pathway (non-oxidative branch) I	0.000201384	0.000167789
+NONOXIPENT-PWY: pentose phosphate pathway (non-oxidative branch) I|g__Sphingomonas.s__Sphingomonas_melonis	0	0.000153312
+OANTIGEN-PWY: O-antigen building blocks biosynthesis (E. coli)	0.000293269	0
+P163-PWY: L-lysine fermentation to acetate and butanoate	0.000341799	0
+P41-PWY: pyruvate fermentation to acetate and (S)-lactate I	0.00037202	0
+PEPTIDOGLYCANSYN-PWY: peptidoglycan biosynthesis I (meso-diaminopimelate containing)	0.000317387	0
+PHOSLIPSYN-PWY: superpathway of phospholipid biosynthesis I (bacteria)	0.000312045	0
+PWY-1042: glycolysis IV	0.000220374	0
+PWY-5100: pyruvate fermentation to acetate and lactate II	0.00037202	0
+PWY-5103: L-isoleucine biosynthesis III	0.000292279	0
+PWY-5103: L-isoleucine biosynthesis III|g__Fusobacterium.s__Fusobacterium_nucleatum	0.00028333	0
+PWY-5188: tetrapyrrole biosynthesis I (from glutamate)	0.00029024	0
+PWY-5667: CDP-diacylglycerol biosynthesis I	0.000298154	0
+PWY-5667: CDP-diacylglycerol biosynthesis I|unclassified	0.000184273	0
+PWY-5686: UMP biosynthesis I	0.000323515	0
+PWY-5981: CDP-diacylglycerol biosynthesis III	0.00024704	0
+PWY-6121: 5-aminoimidazole ribonucleotide biosynthesis I	0.000390438	0
+PWY-6122: 5-aminoimidazole ribonucleotide biosynthesis II	0.000375134	0
+PWY-6122: 5-aminoimidazole ribonucleotide biosynthesis II|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000247209	0
+PWY-6123: inosine-5'-phosphate biosynthesis I	0.000227871	0
+PWY-6124: inosine-5'-phosphate biosynthesis II	0.000212972	0
+PWY-6126: superpathway of adenosine nucleotides de novo biosynthesis II	0	0.000236477
+PWY-6151: S-adenosyl-L-methionine salvage I	0.000215118	0
+PWY-6163: chorismate biosynthesis from 3-dehydroquinate	0.000343313	0
+PWY-6277: superpathway of 5-aminoimidazole ribonucleotide biosynthesis	0.000375134	0
+PWY-6277: superpathway of 5-aminoimidazole ribonucleotide biosynthesis|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000247209	0
+PWY-6305: superpathway of putrescine biosynthesis	0.000228999	0
+PWY-6317: D-galactose degradation I (Leloir pathway)	0.000297226	0
+PWY-6317: D-galactose degradation I (Leloir pathway)|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000258983	0
+PWY-6385: peptidoglycan biosynthesis III (mycobacteria)	0.00029243	0
+PWY-6386: UDP-N-acetylmuramoyl-pentapeptide biosynthesis II (lysine-containing)	0.000366778	0
+PWY-6387: UDP-N-acetylmuramoyl-pentapeptide biosynthesis I (meso-diaminopimelate containing)	0.000308191	0
+PWY-6609: adenine and adenosine salvage III	0.000142832	0
+PWY-6700: queuosine biosynthesis I (de novo)	0.000329369	0
+PWY-6703: preQ0 biosynthesis	0.000176901	0
+PWY-7197: pyrimidine deoxyribonucleotide phosphorylation	0	0.000280331
+PWY-7199: pyrimidine deoxyribonucleosides salvage	0.000236247	0
+PWY-7220: adenosine deoxyribonucleotides de novo biosynthesis II	0	0.000330254
+PWY-7221: guanosine ribonucleotides de novo biosynthesis	0.00036328	0
+PWY-7221: guanosine ribonucleotides de novo biosynthesis|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000342404	0
+PWY-7222: guanosine deoxyribonucleotides de novo biosynthesis II	0	0.000330254
+PWY-7229: superpathway of adenosine nucleotides de novo biosynthesis I	0	0.000229701
+PWY-7663: gondoate biosynthesis (anaerobic)	0.000294233	0
+PWY-7790: UMP biosynthesis II	0.000323515	0
+PWY-7791: UMP biosynthesis III	0.000430688	0
+PWY-7791: UMP biosynthesis III|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000391121	0
+PWY-7953: UDP-N-acetylmuramoyl-pentapeptide biosynthesis III (meso-diaminopimelate containing)	0.000287423	0
+PWY-7977: L-methionine biosynthesis IV	0.000309178	0
+PWY-7977: L-methionine biosynthesis IV|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000220644	0
+PWY-8178: pentose phosphate pathway (non-oxidative branch) II	0.000189238	0.000165375
+PWY-I9: L-cysteine biosynthesis VI (from L-methionine)	0.000214957	0
+PWY0-1319: CDP-diacylglycerol biosynthesis II	0.000298154	0
+PWY0-1319: CDP-diacylglycerol biosynthesis II|unclassified	0.000184273	0
+PWY0-1586: peptidoglycan maturation (meso-diaminopimelate containing)	0.000246238	0
+PWY0-1586: peptidoglycan maturation (meso-diaminopimelate containing)|unclassified	0.000246238	0
+PWY4FS-7: phosphatidylglycerol biosynthesis I (plastidic)	0.00033105	0
+PWY4FS-8: phosphatidylglycerol biosynthesis II (non-plastidic)	0.00033105	0
+PWY66-429: fatty acid biosynthesis initiation (mitochondria)	0.000303134	0
+PYRIDNUCSYN-PWY: NAD de novo biosynthesis I (from aspartate)	0.000338268	0
+SER-GLYSYN-PWY: superpathway of L-serine and glycine biosynthesis I	0.000192333	0
+UDPNAGSYN-PWY: UDP-N-acetyl-D-glucosamine biosynthesis I	0.00032624	0
+VALSYN-PWY: L-valine biosynthesis	0.000292843	0
+VALSYN-PWY: L-valine biosynthesis|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000292843	0

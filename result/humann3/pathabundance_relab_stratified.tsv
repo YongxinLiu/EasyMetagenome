@@ -1,0 +1,18 @@
+# Pathway	C1	C2
+UNINTEGRATED|g__Fusobacterium.s__Fusobacterium_nucleatum	0.192965	0
+UNINTEGRATED|g__Sphingomonas.s__Sphingomonas_melonis	0	0.089043
+UNINTEGRATED|unclassified	0.172812	0
+BRANCHED-CHAIN-AA-SYN-PWY: superpathway of branched chain amino acid biosynthesis|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000293042	0
+ILEUSYN-PWY: L-isoleucine biosynthesis I (from threonine)|g__Fusobacterium.s__Fusobacterium_nucleatum	0.00028848	0
+NONOXIPENT-PWY: pentose phosphate pathway (non-oxidative branch) I|g__Sphingomonas.s__Sphingomonas_melonis	0	0.000153312
+PWY-5103: L-isoleucine biosynthesis III|g__Fusobacterium.s__Fusobacterium_nucleatum	0.00028333	0
+PWY-5667: CDP-diacylglycerol biosynthesis I|unclassified	0.000184273	0
+PWY-6122: 5-aminoimidazole ribonucleotide biosynthesis II|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000247209	0
+PWY-6277: superpathway of 5-aminoimidazole ribonucleotide biosynthesis|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000247209	0
+PWY-6317: D-galactose degradation I (Leloir pathway)|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000258983	0
+PWY-7221: guanosine ribonucleotides de novo biosynthesis|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000342404	0
+PWY-7791: UMP biosynthesis III|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000391121	0
+PWY-7977: L-methionine biosynthesis IV|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000220644	0
+PWY0-1319: CDP-diacylglycerol biosynthesis II|unclassified	0.000184273	0
+PWY0-1586: peptidoglycan maturation (meso-diaminopimelate containing)|unclassified	0.000246238	0
+VALSYN-PWY: L-valine biosynthesis|g__Fusobacterium.s__Fusobacterium_nucleatum	0.000292843	0
