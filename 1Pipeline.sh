@@ -450,56 +450,59 @@ barplot展示通路的物种组成，如：腺苷核苷酸合成
     path=P163-PWY
     humann_barplot --sort sum metadata \
         --input ${pcl} --focal-feature ${path} \
-        --focal-metadatum Group --last-metadatum Group \
+        --focal-metadata Group --last-metadata Group \
         --output result/humann3/barplot_${path}.pdf
 
 ### 转换为KEGG注释
 
 需要下载utility\_mapping数据库并配置成功才可以使用。详见软件和数据库安装1soft\_db.sh。
 
-支持GO、PFAM、eggNOG、level4ec、KEGG的D级KO等注释，详见`humann2_regroup_table -h`。
+支持GO、PFAM、eggNOG、level4ec、KEGG的D级KO等注释，详见`humann_regroup_table -h`。
 
     # 转换基因家族为KO(uniref90_ko)，可选eggNOG(uniref90_eggnog)或酶(uniref90_level4ec)
-    for i in `tail -n+2 result/metadata.txt|cut -f1`;do
-      humann2_regroup_table \
-        -i temp/humann2/${i}_genefamilies.tsv \
+    for i in `tail -n+2 result/metadata.txt|cut -f1`; do
+      humann_regroup_table \
+        -i temp/humann3/${i}_genefamilies.tsv \
         -g uniref90_ko \
-        -o temp/humann2/${i}_ko.tsv
+        -o temp/humann3/${i}_ko.tsv
     done
     # 合并，并修正样本名
-    humann2_join_tables \
-      --input temp/humann2/ \
+    humann_join_tables \
+      --input temp/humann3/ \
       --file_name ko \
-      --output result/humann2/ko.tsv
-    sed -i '1s/_Abundance-RPKs//g' result/humann2/ko.tsv
-    tail result/humann2/ko.tsv
+      --output result/humann3/ko.tsv
+    sed -i '1s/_Abundance-RPKs//g' result/humann3/ko.tsv
+    tail result/humann3/ko.tsv
     # 与pathabundance类似，可进行标准化renorm、分层stratified、柱状图barplot等操作
 
 KO合并为高层次L2, L1通路代码
 
-    wc -l result/humann2/ko.tsv # 3797 lines
-    grep -v '|' result/humann2/ko.tsv > result/humann2/ko_clean.tsv
-    wc -l result/humann2/ko_clean.tsv
+    wc -l result/humann3/ko.tsv # 3797 lines
+    grep -v '|' result/humann3/ko.tsv > result/humann3/ko_clean.tsv
+    wc -l result/humann3/ko_clean.tsv
     
     # 分层结果：功能和对应物种表(stratified)和功能组成表(unstratified)
-    humann2_split_stratified_table \
-      --input result/humann2/ko.tsv \
-      --output result/humann2/ 
+    humann_split_stratified_table \
+      --input result/humann3/ko.tsv \
+      --output result/humann3/ 
     
     # KO to level 1/2/3, 也可切换至humann3或qiime2等Python3环境下运行
-    conda activate base
+    # Humann3 本身是python3的环境，不再需要进入base
+    # conda activate base
     summarizeAbundance.py \
-      -i result/humann2/ko_unstratified.tsv \
+      -i result/humann3/ko_unstratified.tsv \
       -m ${db}/EasyMicrobiome/kegg/KO1-4.txt \
       -c 2,3,4 -s ',+,+,' -n raw \
       -o result/humann2/KEGG
-    conda deactivate
+    # conda deactivate
 
 
 ## 2.5 GraPhlAn图
 
+    # graphlan目前只支持python2环境
+    conda activate humann2
     # metaphlan2 to graphlan
-    export2graphlan.py --skip_rows 1,2 -i result/metaphlan2/taxonomy.tsv \
+    export2graphlan.py --skip_rows 1,2 -i result/metaphlan4/taxonomy.tsv \
       --tree temp/merged_abundance.tree.txt \
       --annotation temp/merged_abundance.annot.txt \
       --most_abundant 1000 --abundance_threshold 20 --least_biomarkers 10 \
@@ -509,8 +512,9 @@ KO合并为高层次L2, L1通路代码
     graphlan_annotate.py --annot temp/merged_abundance.annot.txt \
       temp/merged_abundance.tree.txt  temp/merged_abundance.xml
     # output PDF figure, annoat and legend
-    graphlan.py temp/merged_abundance.xml result/metaphlan2/graphlan.pdf \
+    graphlan.py temp/merged_abundance.xml result/metaphlan4/graphlan.pdf \
       --external_legends 
+    conda deactivate
 
 ## 2.6 LEfSe差异分析物种
 
