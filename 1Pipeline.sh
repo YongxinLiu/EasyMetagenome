@@ -1,20 +1,22 @@
-# 易宏基因组流程EasyMetagenomePipeline
+[TOC]
 
-    # 版本: 1.18, 2023/4/7
-    # 测试环境为Linux Ubuntu 20.04+ / CentOS 7.7+
+# 易宏基因组流程 EasyMetagenome Pipeline
+
+    # 版本Version: 1.19, 2023/7/21
+    # 操作系统Operation System: Linux Ubuntu 20.04+ / CentOS 7.7+
 
 
 # 一、数据预处理 Data preprocessing
 
-## 1.1 准备工作 Prepare
+## 1.1 准备工作 Preparing
 
 1.  首次使用请参照`0Install.sh`脚本，安装软件和数据库(大约1-3天，仅一次)
 2.  易宏基因组(EasyMetagenome)流程`1Pipeline.sh`复制到项目文件夹，如本次为meta
 3.  项目文件夹准备测序数据(seq/\*.fq.gz)和样本元数据(result/metadata.txt)
 
-### 环境变量设置(每次开始分析前必须运行)
+### 环境变量设置 Environment variable settings
 
-设置数据库、软件和工作目录
+每次开始分析前必须运行，设置数据库、软件和工作目录
 
     # Conda软件安装目录，`conda env list`查看，如/anaconda3
     soft=~/miniconda3
@@ -30,10 +32,12 @@
     # 指定某个R语言环境(可选windows下本地运行)
     # alias Rscript="/anaconda3/bin/Rscript --vanilla"
 
-### 起始文件——序列和元数据
+### 元数据和序列文件 Metadata and Sequence Files
 
     # 创建3个常用子目录：序列，临时文件和结果
     mkdir -p seq temp result
+
+元数据
 
     # 上传元数据metadata.txt至result目录，此处下载并重命名
     wget http://www.imeta.science/github/EasyMetagenome/result/metadata.txt
@@ -48,17 +52,42 @@
     sed -i 's/Male  /Male/' result/metadata.txt
     cat -A result/metadata.txt
 
+小技巧：循环批量处理样本列表
+
+    # 基于样本元数据提取样本列表命令解析
+    # 去掉表头
+    tail -n+2 result/metadata.txt
+    # 提取第一列样本名
+    tail -n+2 result/metadata.txt|cut -f1
+    # 循环处理样本
+    for i in `tail -n+2 result/metadata.txt|cut -f1`;do echo "Processing "$i; done
+    # ` 反引号为键盘左上角Esc键下面的按键，一般在数字1的左边，代表运行命令返回结果
+
+序列文件
+
     # 用户使用filezilla上传测序文件至seq目录，本次从网络下载
     # seq 目录下已经有测试文件，下载跳过
     cd seq/
     awk '{system("wget -c http://www.imeta.science/github/EasyMetagenome/seq/"$1"_1.fq.gz")}' <(tail -n+2 ../result/metadata.txt)
     awk '{system("wget -c http://www.imeta.science/github/EasyMetagenome/seq/"$1"_2.fq.gz")}' <(tail -n+2 ../result/metadata.txt)
     cd ..
-
-    # 查看文件大小
+    # ls查看文件大小，-l 列出详细信息 (l: list)，-sh 显示人类可读方式文件大小 (s: size; h: human readable)
     ls -lsh seq/*.fq.gz
-    # -l 列出详细信息 (l: list)
-    # -sh 显示人类可读方式文件大小 (s: size; h: human readable)	
+
+序列文件格式检查 
+zless/zcat查看可压缩文件，检查序列质量格式(质量值大写字母为标准Phred33格式，小写字母为Phred64，需参考附录：质量值转换)；检查双端序列ID是否重名，如重名需要改名。参考**附录 —— 质控kneaddata，去宿主后双端不匹配；序列改名**。
+
+    # 设置某个样本名为变量i，以后再无需修改
+    i=C1
+    # zless查看压缩文件，空格翻页，按q退出。
+    zless seq/${i}_1.fq.gz | head -n4
+    # zcat显示压缩文件，head指定显示行数
+    # gzip: stdout: Broken pipe： 这个不是错，忽略即可
+    zcat seq/${i}_2.fq.gz | head -n4
+
+*   "|" 为管道符，上一个命令的输出，传递给下一个命令做输入
+*   gzip: stdout: Broken pipe：管道断开。这里是人为断开，不是错误
+*   运行过程中需要仔细阅读屏幕输出的信息
 
 ### 了解工作目录和文件
 
@@ -106,23 +135,12 @@
 
     mkdir -p temp/qc
 
-小技巧：循环批量处理样本列表
-
-    # 基于样本元数据提取样本列表命令解析
-    # 去掉表头
-    tail -n+2 result/metadata.txt
-    # 提取第一列样本名
-    tail -n+2 result/metadata.txt|cut -f1
-    # 循环处理样本
-    for i in `tail -n+2 result/metadata.txt|cut -f1`;do echo "Processing "$i; done
-    # ` 反引号为键盘左上角Esc键下面的按键，一般在数字1的左边，代表运行命令返回结果
-
 ### Fastp质量控制环境样品
 
 适用于无宿主污染的环境样品，质控速度快，自动识别接头和低质量，详见：[极速的FASTQ文件质控+过滤+校正fastp](http://mp.weixin.qq.com/s/u3U-AJW7oRYTx5h13c19UQ)
 
-    # 记录软件版本，0.21.0
-    fastp -v
+    # 开头记录软件版本，0.23.4，结尾为iMeta引文
+    fastp
 
     # 单样本质控
     i=C1
@@ -144,20 +162,6 @@ kneaddata是流程，它主要依赖trimmomatic质控和去接头，bowtie2比�
     bowtie2 --version # 2.5.1
     # 可选择部分代码运行，如选中#号后面命令Run查看帮助
     # kneaddata -h # 显示帮助
-
-检查点：zless/zcat查看可压缩文件，检查序列质量格式(质量值大写字母为标准Phred33格式，小写字母为Phred64，需参考附录：质量值转换)；检查双端序列ID是否重名，如重名需要改名。参考**附录 —— 质控kneaddata，去宿主后双端不匹配；序列改名**。
-
-    # 设置某个样本名为变量i，以后再无需修改
-    i=C1
-    # zless查看压缩文件，空格翻页，按q退出。
-    zless seq/${i}_1.fq.gz | head -n4
-    # zcat显示压缩文件，head指定显示行数
-    # gzip: stdout: Broken pipe： 这个不是错，忽略即可
-    zcat seq/${i}_2.fq.gz | head -n4
-
-*   "|" 为管道符，上一个命令的输出，传递给下一个命令做输入
-*   gzip: stdout: Broken pipe：管道断开。这里是人为断开，不是错误
-*   运行过程中需要仔细阅读屏幕输出的信息
 
 #### 单样品质控
 
@@ -240,7 +244,7 @@ awk的system命令批处理改名，与fastp结果统一
     fastqc temp/qc/*.fastq -t 2
     multiqc -d temp/qc/ -o result/qc/
 
-# 二、基于读长分析 Read-based (HUMAnN2)
+# 二、基于读长分析 Read-based (HUMAnN3+MetaPhlAn4+Kraken2)
 
 ## 2.1 准备HUMAnN2输入文件
 
@@ -257,79 +261,83 @@ HUMAnN2要求双端序列合并的文件作为输入，for循环根据实验设�
 
 ## 2.2 HUMAnN2计算物种和功能组成
 
-*   物种组成调用MetaPhlAn2, bowtie2比对至核酸序列，解决有哪些微生物存在的问题；
-*   功能组成为humann2调用diamond比对至蛋白库11Gb，解决这些微生物参与哪些功能通路的问题；
+*   物种组成调用MetaPhlAn4
 *   输入文件：temp/concat/\*.fq 每个样品质控后双端合并后的fastq序列
-*   输出文件：temp/humann2/ 目录下
+*   输出文件：temp/humann3/ 目录下
     *   C1\_pathabundance.tsv
     *   C1\_pathcoverage.tsv
     *   C1\_genefamilies.tsv
 *   整合后的输出：
-    *   result/metaphlan2/taxonomy.tsv 物种丰度表
-    *   result/metaphlan2/taxonomy.spf 物种丰度表（用于stamp分析）
-    *   result/humann2/pathabundance\_relab\_unstratified.tsv 通路丰度表
-    *   result/humann2/pathabundance\_relab\_stratified.tsv 通路物种组成丰度表
+    *   result/metaphlan3/taxonomy.tsv 物种丰度表
+    *   result/metaphlan3/taxonomy.spf 物种丰度表（用于stamp分析）
+    *   result/humann3/pathabundance\_relab\_unstratified.tsv 通路丰度表
+    *   result/humann3/pathabundance\_relab\_stratified.tsv 通路物种组成丰度表
     *   stratified(每个菌对此功能通路组成的贡献)和unstratified(功能组成)
 
-启动humann2环境：仅humann2布置于自定义环境下使用
+启动humann3环境
 
     # 方法1. conda加载环境
-    conda activate humann2
+    conda activate humann3
+    # 设置metaphlan4数据库位置
+    DEFAULT_DB_FOLDER=~/db/metaphlan4
     # 方法2. source加载指定
-    # source ~/miniconda3/envs/humann2/bin/activate
+    # source ~/miniconda3/envs/humann3/bin/activate
 
 检查数据库配置是否正确
 
-    humann2 --version # v2.8.1
-    humann2_config
-    mkdir -p temp/humann2
+    humann --version # v3.7
+    humann_config
+    mkdir -p temp/humann3
 
 单样本1.25M PE150运行测试，8p，2.5M，1\~2h；0.2M, 34m；0.1M，30m；0.01M，25m；16p，18m
 
-    # CRITICAL ERROR: Can not call software version for bowtie2，见附录"Perl环境"
     i=C1
     # 34m, 123m
-    time humann2 --input temp/concat/${i}.fq --output temp/humann2 --threads 4
+    time humann --input temp/concat/${i}.fq --output temp/humann3 --threads 4
 
 多样本并行计算，测试数据约30m，系统耗时12小时
 
-    tail -n+2 result/metadata.txt|cut -f1|rush -j 2 \
-      'humann2 --input temp/concat/{1}.fq  \
-      --output temp/humann2/ --threads 1'
+     tail -n+2 result/metadata.txt|cut -f1|rush -j 2 \
+      'humann --input temp/concat/{1}.fq  \
+      --output temp/humann3/ --threads 4'
 
     # 链接重要文件至humann2目录
     for i in `tail -n+2 result/metadata.txt|cut -f1`;do 
-       ln -f temp/humann2/${i}_humann2_temp/${i}_metaphlan_bugs_list.tsv temp/humann2/
+       ln -f temp/humann3/${i}_humann_temp/${i}_metaphlan_bugs_list.tsv temp/humann3/
     done    
     # 删除临时文件，极占用空间
-    rm -rf temp/concat/* temp/humann2/*_humann2_temp
+    rm -rf temp/concat/* temp/humann3/*_humann3_temp
 
 ## 2.3 物种组成表
 
 ### 样品结果合并
 
-    mkdir -p result/metaphlan2
+    mkdir -p result/metaphlan4
     # 合并、修正样本名、预览
-    merge_metaphlan_tables.py temp/humann2/*_metaphlan_bugs_list.tsv | \
-      sed 's/_metaphlan_bugs_list//g' > result/metaphlan2/taxonomy.tsv
-    head -n5 result/metaphlan2/taxonomy.tsv
+    merge_metaphlan_tables.py temp/humann3/*_metaphlan_bugs_list.tsv | \
+      sed 's/_metaphlan_bugs_list//g' > result/metaphlan4/taxonomy.tsv
+    head -n5 result/metaphlan4/taxonomy.tsv
 
 ### 转换为stamp的spf格式
 
-    metaphlan_to_stamp.pl result/metaphlan2/taxonomy.tsv \
-      > result/metaphlan2/taxonomy.spf
-    head -n5 result/metaphlan2/taxonomy.spf
+    # metaphlan4较2增加更多unclassifed和重复结果，用sort和uniq去除
+    metaphlan_to_stamp.pl result/metaphlan4/taxonomy.tsv \
+      |sort -r | uniq > result/metaphlan4/taxonomy.spf
+    head result/metaphlan4/taxonomy.spf
     # 下载metadata.txt和taxonomy.spf使用stamp分析
     # 网络分析见附录 metaphlan2-共有或特有物种网络图
 
 ### Python绘制热图
 
+    # 此脚本4已经不存在，可以启动2的环境绘制
     # c设置颜色方案，top设置物种数量，minv最小相对丰度，s标准化方法，log为取10为底对数，xy为势图宽和高，图片可选pdf/png/svg格
+    conda activate humann2
     metaphlan_hclust_heatmap.py \
-      --in result/metaphlan2/taxonomy.tsv \
-      --out result/metaphlan2/heatmap.pdf \
+      --in result/metaphlan4/taxonomy.tsv \
+      --out result/metaphlan4/heatmap.pdf \
       -c jet --top 30 --minv 0.1 \
       -s log -x 0.4 -y 0.2
+    conda deactivate
     # 报错解决详见附录：### metaphlan_hclust_heatmap.py报错AttributeError: Unknown property axisbg
     # 帮助见 metaphlan_hclust_heatmap.py -h
     # 更多绘制见3StatPlot.sh
@@ -1308,8 +1316,308 @@ ModuleNotFoundError: No module named 'importlib.metadata'
 
 
 
-
+      
 ## 读长分析HUMAnN2
+
+### 准备HUMAnN2输入文件
+
+HUMAnN2要求双端序列合并的文件作为输入，for循环根据实验设计样本名批量双端序列合并。注意星号(\*)和问号(?)，分别代表多个和单个字符。当然大家更不能溜号，行分割的代码行末有一个\\
+
+    mkdir -p temp/concat
+    # 双端合并为单个文件
+    for i in `tail -n+2 result/metadata.txt|cut -f1`;do 
+      cat temp/qc/${i}_?.fastq \
+      > temp/concat/${i}.fq; done
+    # 查看样品数量和大小
+    ls -shl temp/concat/*.fq
+    # 数据太大，计算时间长，可用head对单端分析截取20M序列，即3G，行数为80M行，详见附录：HUMAnN2减少输入文件加速
+
+### HUMAnN2计算物种和功能组成
+
+*   物种组成调用MetaPhlAn2, bowtie2比对至核酸序列，解决有哪些微生物存在的问题；
+*   功能组成为humann2调用diamond比对至蛋白库11Gb，解决这些微生物参与哪些功能通路的问题；
+*   输入文件：temp/concat/\*.fq 每个样品质控后双端合并后的fastq序列
+*   输出文件：temp/humann2/ 目录下
+    *   C1\_pathabundance.tsv
+    *   C1\_pathcoverage.tsv
+    *   C1\_genefamilies.tsv
+*   整合后的输出：
+    *   result/metaphlan2/taxonomy.tsv 物种丰度表
+    *   result/metaphlan2/taxonomy.spf 物种丰度表（用于stamp分析）
+    *   result/humann2/pathabundance\_relab\_unstratified.tsv 通路丰度表
+    *   result/humann2/pathabundance\_relab\_stratified.tsv 通路物种组成丰度表
+    *   stratified(每个菌对此功能通路组成的贡献)和unstratified(功能组成)
+
+启动humann2环境：仅humann2布置于自定义环境下使用
+
+    # 方法1. conda加载环境
+    conda activate humann2
+    # 方法2. source加载指定
+    # source ~/miniconda3/envs/humann2/bin/activate
+
+检查数据库配置是否正确
+
+    humann2 --version # v2.8.1
+    humann2_config
+    mkdir -p temp/humann2
+
+单样本1.25M PE150运行测试，8p，2.5M，1\~2h；0.2M, 34m；0.1M，30m；0.01M，25m；16p，18m
+
+    # CRITICAL ERROR: Can not call software version for bowtie2，见附录"Perl环境"
+    i=C1
+    # 34m, 123m
+    time humann2 --input temp/concat/${i}.fq --output temp/humann2 --threads 4
+
+多样本并行计算，测试数据约30m，系统耗时12小时
+
+    tail -n+2 result/metadata.txt|cut -f1|rush -j 2 \
+      'humann2 --input temp/concat/{1}.fq  \
+      --output temp/humann2/ --threads 1'
+
+    # 链接重要文件至humann2目录
+    for i in `tail -n+2 result/metadata.txt|cut -f1`;do 
+       ln -f temp/humann2/${i}_humann2_temp/${i}_metaphlan_bugs_list.tsv temp/humann2/
+    done    
+    # 删除临时文件，极占用空间
+    rm -rf temp/concat/* temp/humann2/*_humann2_temp
+
+### 物种组成表
+
+#### 样品结果合并
+
+    mkdir -p result/metaphlan2
+    # 合并、修正样本名、预览
+    merge_metaphlan_tables.py temp/humann2/*_metaphlan_bugs_list.tsv | \
+      sed 's/_metaphlan_bugs_list//g' > result/metaphlan2/taxonomy.tsv
+    head -n5 result/metaphlan2/taxonomy.tsv
+
+#### 转换为stamp的spf格式
+
+    metaphlan_to_stamp.pl result/metaphlan2/taxonomy.tsv \
+      > result/metaphlan2/taxonomy.spf
+    head -n5 result/metaphlan2/taxonomy.spf
+    # 下载metadata.txt和taxonomy.spf使用stamp分析
+    # 网络分析见附录 metaphlan2-共有或特有物种网络图
+
+#### Python绘制热图
+
+    # c设置颜色方案，top设置物种数量，minv最小相对丰度，s标准化方法，log为取10为底对数，xy为势图宽和高，图片可选pdf/png/svg格
+    metaphlan_hclust_heatmap.py \
+      --in result/metaphlan2/taxonomy.tsv \
+      --out result/metaphlan2/heatmap.pdf \
+      -c jet --top 30 --minv 0.1 \
+      -s log -x 0.4 -y 0.2
+    # 报错解决详见附录：### metaphlan_hclust_heatmap.py报错AttributeError: Unknown property axisbg
+    # 帮助见 metaphlan_hclust_heatmap.py -h
+    # 更多绘制见3StatPlot.sh
+
+### 功能组成分析
+
+#### 功能组成合并、标准化和分层
+
+合并通路丰度(pathabundance)，含功能和对应物种组成。
+可选基因家族(genefamilies 太多)，通路覆盖度(pathcoverage)。
+注意看屏幕输出`# Gene table created: result/humann2/pathabundance.tsv`
+
+    mkdir -p result/humann2
+    humann2_join_tables --input temp/humann2 \
+      --file_name pathabundance \
+      --output result/humann2/pathabundance.tsv
+    # 样本名调整：删除列名多余信息
+    head result/humann2/pathabundance.tsv
+    sed -i 's/_Abundance//g' result/humann2/pathabundance.tsv
+    # 预览和统计
+    head result/humann2/pathabundance.tsv
+    csvtk -t stat result/humann2/pathabundance.tsv
+
+标准化为相对丰度relab(1)或百万比cpm(1,000,000)
+
+    humann2_renorm_table \
+      --input result/humann2/pathabundance.tsv \
+      --units relab \
+      --output result/humann2/pathabundance_relab.tsv
+    head -n5 result/humann2/pathabundance_relab.tsv
+
+分层结果：功能和对应物种表(stratified)和功能组成表(unstratified)
+
+    humann2_split_stratified_table \
+      --input result/humann2/pathabundance_relab.tsv \
+      --output result/humann2/ 
+    # 可以使用stamp进行统计分析
+
+#### 差异比较和柱状图
+
+两样本无法组间比较，在pcl层面替换为HMP数据进行统计和可视化。
+
+参考 <https://bitbucket.org/biobakery/humann2/wiki/Home#markdown-header-standard-workflow>
+
+*   输入数据：通路丰度表格 result/humann2/pathabundance.tsv
+*   输入数据：实验设计信息 result/metadata.txt
+*   中间数据：包含分组信息的通路丰度表格文件 result/humann2/pathabundance.pcl
+*   输出结果：result/humann2/associate.txt
+
+在通路丰度中添加分组
+
+    ## 提取样品列表
+    head -n1 result/humann2/pathabundance.tsv | sed 's/# Pathway/SampleID/' | tr '\t' '\n' > temp/header
+    ## 对应分组，本示例分组为第2列($2)，根据实际情况修改
+    awk 'BEGIN{FS=OFS="\t"}NR==FNR{a[$1]=$2}NR>FNR{print a[$1]}' result/metadata.txt temp/header | tr '\n' '\t'|sed 's/\t$/\n/' > temp/group
+    # 合成样本、分组+数据
+    cat <(head -n1 result/humann2/pathabundance.tsv) temp/group <(tail -n+2 result/humann2/pathabundance.tsv) \
+      > result/humann2/pathabundance.pcl
+    head -n5 result/humann2/pathabundance.pcl
+    tail -n5 result/humann2/pathabundance.pcl
+
+组间比较，样本量少无差异，结果为4列的文件：通路名字，通路在各个分组的丰度，差异P-value，校正后的Q-value。
+演示数据2样本无法统计，此处替换为HMP的结果演示统计和绘图(上传hmp\_pathabund.pcl，替换pathabundance.pcl为hmp\_pathabund.pcl)。
+
+    wget -c http://www.imeta.science/github/EasyMetagenome/result/humann2/hmp_pathabund.pcl
+    /bin/cp -f hmp_pathabund.pcl result/humann2/
+    # 设置输入文件名
+    pcl=result/humann2/hmp_pathabund.pcl
+    # 统计表格行、列数量
+    csvtk -t stat ${pcl}
+    head -n3 ${pcl} | cut -f 1-5
+    # 按分组KW检验，注意第二列的分组列名
+    humann2_associate --input ${pcl} \
+        --focal-metadatum Group --focal-type categorical \
+        --last-metadatum Group --fdr 0.05 \
+        --output result/humann2/associate.txt
+    wc -l result/humann2/associate.txt
+    head -n5 result/humann2/associate.txt
+
+barplot展示通路的物种组成，如：腺苷核苷酸合成
+
+    # --sort sum metadata 按丰度和分组排序
+    # 指定差异通路，如 P163-PWY / PWY-3781 / PWY66-409 / PWY1F-823
+    path=P163-PWY
+    humann2_barplot --sort sum metadata \
+        --input ${pcl} --focal-feature ${path} \
+        --focal-metadatum Group --last-metadatum Group \
+        --output result/humann2/barplot_${path}.pdf
+
+#### 转换为KEGG注释
+
+需要下载utility\_mapping数据库并配置成功才可以使用。详见软件和数据库安装1soft\_db.sh。
+
+支持GO、PFAM、eggNOG、level4ec、KEGG的D级KO等注释，详见`humann2_regroup_table -h`。
+
+    # 转换基因家族为KO(uniref90_ko)，可选eggNOG(uniref90_eggnog)或酶(uniref90_level4ec)
+    for i in `tail -n+2 result/metadata.txt|cut -f1`;do
+      humann2_regroup_table \
+        -i temp/humann2/${i}_genefamilies.tsv \
+        -g uniref90_ko \
+        -o temp/humann2/${i}_ko.tsv
+    done
+    # 合并，并修正样本名
+    humann2_join_tables \
+      --input temp/humann2/ \
+      --file_name ko \
+      --output result/humann2/ko.tsv
+    sed -i '1s/_Abundance-RPKs//g' result/humann2/ko.tsv
+    tail result/humann2/ko.tsv
+    # 与pathabundance类似，可进行标准化renorm、分层stratified、柱状图barplot等操作
+
+KO合并为高层次L2, L1通路代码
+
+    wc -l result/humann2/ko.tsv # 3797 lines
+    grep -v '|' result/humann2/ko.tsv > result/humann2/ko_clean.tsv
+    wc -l result/humann2/ko_clean.tsv
+    
+    # 分层结果：功能和对应物种表(stratified)和功能组成表(unstratified)
+    humann2_split_stratified_table \
+      --input result/humann2/ko.tsv \
+      --output result/humann2/ 
+    
+    # KO to level 1/2/3, 也可切换至humann3或qiime2等Python3环境下运行
+    conda activate base
+    summarizeAbundance.py \
+      -i result/humann2/ko_unstratified.tsv \
+      -m ${db}/EasyMicrobiome/kegg/KO1-4.txt \
+      -c 2,3,4 -s ',+,+,' -n raw \
+      -o result/humann2/KEGG
+    conda deactivate
+
+
+### GraPhlAn图
+
+    # metaphlan2 to graphlan
+    export2graphlan.py --skip_rows 1,2 -i result/metaphlan2/taxonomy.tsv \
+      --tree temp/merged_abundance.tree.txt \
+      --annotation temp/merged_abundance.annot.txt \
+      --most_abundant 1000 --abundance_threshold 20 --least_biomarkers 10 \
+      --annotations 3,4 --external_annotations 7
+    # 参数说明见PPT，或运行 export2graphlan.py --help
+    # graphlan annotation
+    graphlan_annotate.py --annot temp/merged_abundance.annot.txt \
+      temp/merged_abundance.tree.txt  temp/merged_abundance.xml
+    # output PDF figure, annoat and legend
+    graphlan.py temp/merged_abundance.xml result/metaphlan2/graphlan.pdf \
+      --external_legends 
+
+### LEfSe差异分析物种
+
+*   输入文件：物种丰度表result/metaphlan2/taxonomy.tsv
+*   输入文件：样品分组信息 result/metadata.txt
+*   中间文件：整合后用于LefSe分析的文件 result/metaphlan2/lefse.txt，这个文件可以提供给www\.ehbio.com/ImageGP 用于在线LefSE分析
+*   LefSe结果输出：result/metaphlan2/目录下lefse开头和feature开头的文件
+
+前面演示数据仅有2个样本，无法进行差异比较。下面使用result12目录中由12个样本生成的结果表进行演示
+
+    # 设置结果目录，自己的数据使用result，演示用result12
+    result=result12
+    # 如果没有，请下载演示数据
+    # wget -c http://www.imeta.science/db/EasyMetagenome/result12.zip
+    # unzip result12.zip
+
+准备输入文件，修改样本品为组名(可手动修改)
+
+    # 预览输出数据
+    head -n3 $result/metaphlan2/taxonomy.tsv
+    # 提取样本行，替换为每个样本一行，修改ID为SampleID
+    head -n1 $result/metaphlan2/taxonomy.tsv|tr '\t' '\n'|sed '1 s/ID/SampleID/' >temp/sampleid
+    head -n3 temp/sampleid
+    # 提取SampleID对应的分组Group(假设为metadata.txt中第二列$2)，替换换行\n为制表符\t，再把行末制表符\t替换回换行
+    awk 'BEGIN{OFS=FS="\t"}NR==FNR{a[$1]=$2}NR>FNR{print a[$1]}' $result/metadata.txt temp/sampleid|tr '\n' '\t'|sed 's/\t$/\n/' >groupid
+    cat groupid
+    # 合并分组和数据(替换表头)
+    cat groupid <(tail -n+2 $result/metaphlan2/taxonomy.tsv) > $result/metaphlan2/lefse.txt
+    head -n3 $result/metaphlan2/lefse.txt
+
+方法1. 推荐在线 <https://www.bic.ac.cn/ImageGP/> 中LEfSe一键分析
+
+方法2. LEfSe命令行分析
+
+    conda activate lefse
+    result=result12
+    # 格式转换为lefse内部格式
+    lefse-format_input.py $result/metaphlan2/lefse.txt \
+      temp/input.in -c 1 -o 1000000
+    # 运行lefse(样本无重复、分组将报错)
+    run_lefse.py temp/input.in temp/input.res
+
+    # 绘制物种树注释差异
+    lefse-plot_cladogram.py temp/input.res \
+      $result/metaphlan2/lefse_cladogram.pdf --format pdf
+
+    # 绘制所有差异features柱状图
+    lefse-plot_res.py temp/input.res \
+      $result/metaphlan2/lefse_res.pdf --format pdf
+        
+    # 绘制单个features柱状图
+    # 查看显著差异features，按丰度排序
+    grep -v '-' temp/input.res | sort -k3,3n 
+    # 手动选择指定feature绘图，如Firmicutes
+    lefse-plot_features.py -f one --format pdf \
+      --feature_name "k__Bacteria.p__Firmicutes" \
+      temp/input.in temp/input.res \
+      $result/metaphlan2/lefse_Firmicutes.pdf
+
+    # 批量绘制所有差异features柱状图
+    lefse-plot_features.py -f diff \
+      --archive none --format pdf \
+      temp/input.in temp/input.res \
+      $result/metaphlan2/lefse_
 
 ### HUMAnN2减少输入文件加速
 
