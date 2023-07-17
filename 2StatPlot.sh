@@ -2,64 +2,66 @@
 
 # 易宏基因组流程EasyMetagenomePipeline
 
-    # 版本: 1.18, 2023/4/7
+    # 版本: 1.19, 2023/7/21
     # 测试环境为Windows 10+ / MacOS 10+
     
     # 设置结果目录(通常为项目中的result，此处为演示12个样本结果result12)
     # mac 也需要修改路径格式可参考如下， ~ 代表家目录
     # wd=~/meta/result12
     # sd=~/EasyMicrobiome/script
-    wd=/c/meta/result12
+    wd=/d/BaiduNetdiskDownload/EasyMetagenome/result12
     # 设置脚本所在目录(Script Directory)
-    sd=/c/EasyMicrobiome/script
+    sd=/d/BaiduNetdiskDownload/EasyMicrobiome/script
+    PATH=$PATH:$sd/../win:$sd
     # 进入结果目录
     cd $wd
 
-## 物种Metaphlan2
+## 物种Metaphlan4
 
 ### 热图
 
     # 显示脚本帮助 help
     Rscript ${sd}/metaphlan_hclust_heatmap.R -h
     # 按指定分类汇总、排序并取Top25种绘制热图
-    # -i输入MetaPhlAn2结果转换的spf文件；
+    # -i输入metaphlan4结果转换的spf文件；
     # -t指定分类级别，可选Kingdom/Phylum/Class/Order/Family/Genus/Species/Strain(界门纲目科属种株)，推荐门，目，属
     # -n 输出物种数量，默认为25，最大值为该类型的数量
     # -w、-e指定图片的宽和高，单位为毫米(mm)
     # -o输出图pdf、表txt前缀，默认Heatmap+(-t)+(-n)
 
     # 科水平Top25热图
+    csvtk -t stat metaphlan4/taxonomy.spf
     Rscript $sd/metaphlan_hclust_heatmap.R \
-      -i metaphlan2/taxonomy.spf \
+      -i metaphlan4/taxonomy.spf \
       -t Family -n 25 \
       -w 183 -e 118 \
-      -o metaphlan2/HeatmapFamily
+      -o metaphlan4/HeatmapFamily
 
     # 属水平的Top30
     Rscript $sd/metaphlan_hclust_heatmap.R \
-      -i metaphlan2/taxonomy.spf \
+      -i metaphlan4/taxonomy.spf \
       -t Genus -n 30 \
       -w 183 -e 118 \
-      -o metaphlan2/HeatmapGenus
+      -o metaphlan4/HeatmapGenus
 
 ### 维恩图
 
     ### 筛选>0.5%的分类
     awk 'BEGIN{OFS=FS="\t"}{if(FNR==1) {for(i=2;i<=NF;i++) a[i]=$i;} \
        else {for(i=2;i<=NF;i++) if($i>0.5) print $1, a[i];}}' \
-       metaphlan2/taxonomy.tsv \
-       > metaphlan2/taxonomy_high.tsv
-    wc -l metaphlan2/taxonomy_high.tsv
+       metaphlan4/taxonomy.tsv \
+       > metaphlan4/taxonomy_high.tsv
+    wc -l metaphlan4/taxonomy_high.tsv
     # 本地、或网络绘制 http://www.ehbio.com/test/venn/#/
     # 引文：Tong Chen, Haiyan Zhang, Yu Liu, Yong-Xin Liu & Luqi Huang. (2021). EVenn: Easy to create repeatable and editable Venn diagrams and Venn networks online. Journal of Genetics and Genomics, doi: 10.1016/j.jgg.2021.07.007
     # 5组比较:-f输入文件,-a/b/c/d/g分组名,-w/u为宽高英寸,-p输出文件名后缀
-    bash ${sd}/sp_vennDiagram.sh -f metaphlan2/taxonomy_high.tsv \
+    bash ${sd}/sp_vennDiagram.sh -f metaphlan4/taxonomy_high.tsv \
       -a C1 -b C2 -c N1 -d N2 -g N3 \
       -w 4 -u 4 \
       -p C1_C2_N1_N2_N3
     
     
-## 功能HUMAnN2
+## 功能HUMAnN3
 
 ### 分组聚类热图
 
@@ -67,14 +69,14 @@
     cut -f 1-2 metadata.txt > group.txt
     # -f输入文件，-H水平聚类，u/v图片宽/高，-P添加行注释文件，-Q添加列注释
     bash $sd/sp_pheatmap.sh \
-      -f humann2/pathabundance_relab_unstratified.tsv \
+      -f humann3/pathabundance_relab_unstratified.tsv \
       -H 'TRUE' -u 20 -v 50 \
       -Q group.txt
     # 结果为 输入文件名+pheamap.r/pdf，代码和图片
 
     # 水平标准化，-d row，可选column
     bash $sd/sp_pheatmap.sh \
-      -f humann2/pathabundance_relab_unstratified.tsv \
+      -f humann3/pathabundance_relab_unstratified.tsv \
       -H 'TRUE' -u 20 -v 50 \
       -Q group.txt -d row
 

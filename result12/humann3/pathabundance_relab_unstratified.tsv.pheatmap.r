@@ -66,7 +66,7 @@ draw_colnames_custom <- function (coln, gaps, ...){
 assignInNamespace(x="draw_colnames", value="draw_colnames_custom",
 	ns=asNamespace("pheatmap"))
 
-data <- read.table(file="humann2/pathabundance_relab_unstratified.tsv", sep="\t", header=T, row.names=1,
+data <- read.table(file="humann3/pathabundance_relab_unstratified.tsv", sep="\t", header=T, row.names=1,
 	check.names=F, quote="", comment="")
 
 if ("FALSE" != "FALSE"){
@@ -148,7 +148,7 @@ legend_breaks=legend_breaks, show_rownames=TRUE, show_colnames=TRUE,
 main="", annotation_col=annotation_col,
 annotation_row=annotation_row,
 annotation_colors = ann_colors,
-fontsize=14, filename="humann2/pathabundance_relab_unstratified.tsv.pheatmap.pdf", width=20,
+fontsize=14, filename="humann3/pathabundance_relab_unstratified.tsv.pheatmap.pdf", width=20,
 height=50)
 
 
