@@ -1,568 +1,618 @@
 # Pathway	C1	C2	C3	C4	C5	C6	N1	N2	N3	N4	N5	N6
-UNMAPPED	34979.5292159364	48051.2594401112	0.0000000000	38176.1424008683	31279.4957878321	23481.0725827863	33142.4336319276	28521.9345177768	30980.1132527962	36530.7582675511	34033.9700331892	65786.3990444856
-UNINTEGRATED	18364.1604780461	11622.5185523160	0.0000000000	21343.3831512192	20319.7938755907	19525.2336770687	10077.4660191455	3422.0028300781	21192.1210782982	35080.6239364380	28024.9641277134	20728.2873908108
-UNINTEGRATED|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	5132.4780149944	0	0	0	0	0	0	0
-UNINTEGRATED|g__Capnocytophaga.s__Capnocytophaga_leadbetteri	0	0	0	0	8150.5157118292	0	0	0	0	0	0	0
-UNINTEGRATED|g__Fusobacterium.s__Fusobacterium_nucleatum	8348.3936226813	0	0	0	10429.7221990176	0	0	0	0	0	0	0
-UNINTEGRATED|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	725.4425461481	0	0	0	0	0	7076.6009201053	0	0
-UNINTEGRATED|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	427.2935595546	0	956.0667100934	0	0	0	1525.4188018188	8140.3825383874	300.7032497409
-UNINTEGRATED|g__Haemophilus.s__Haemophilus_sp_HMSC71H05	0	0	0	526.8478081383	0	0	0	0	0	0	0	0
-UNINTEGRATED|g__Haemophilus.s__Haemophilus_sputorum	0	0	0	0	0	0	0	0	0	342.8832379896	0	0
-UNINTEGRATED|g__Neisseria.s__Neisseria_flavescens	0	0	0	4642.1208416914	0	0	0	0	3945.2296405888	5373.4262486944	0	0
-UNINTEGRATED|g__Neisseria.s__Neisseria_perflava	0	0	0	0	0	0	0	0	0	0	859.7712105848	0
-UNINTEGRATED|g__Neisseria.s__Neisseria_subflava	0	0	0	4030.7388246023	0	0	0	0	2867.7022628731	4889.3389435335	0	0
-UNINTEGRATED|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	8661.3991260250	0	0	0	0	0	0
-UNINTEGRATED|g__Rothia.s__Rothia_mucilaginosa	0	0	0	0	0	0	0	0	0	0	4687.1773111345	0
-UNINTEGRATED|g__Streptococcus.s__Streptococcus_australis	0	0	0	0	0	0	0	0	1242.1719160201	0	0	0
-UNINTEGRATED|g__Streptococcus.s__Streptococcus_infantis	0	0	0	0	0	0	0	0	1483.9716500953	0	0	0
-UNINTEGRATED|g__Streptococcus.s__Streptococcus_mitis	0	0	0	0	0	0	1657.6394141538	0	0	1682.3165595969	724.6461149927	0
-UNINTEGRATED|g__Streptococcus.s__Streptococcus_sp_A12	0	0	0	0	0	0	0	0	611.1984336559	0	0	0
-UNINTEGRATED|g__Streptococcus.s__Streptococcus_sp_F0442	0	0	0	0	0	0	0	0	685.0730794692	0	0	0
-UNINTEGRATED|g__Veillonella.s__Veillonella_atypica	0	0	0	0	0	5679.6437170497	0	0	0	0	0	0
-UNINTEGRATED|g__Veillonella.s__Veillonella_infantium	0	0	0	0	0	0	0	0	0	0	510.0228859274	0
-UNINTEGRATED|g__Veillonella.s__Veillonella_rogosae	0	0	0	0	0	0	0	0	0	0	3525.3950675681	0
-UNINTEGRATED|unclassified	7062.9367223832	0	0	3985.0071221816	8249.5444627046	0	2630.2946065530	1612.3739928015	7975.6087149252	10584.9285336076	6542.9007992935	7098.5545635144
-1CMET2-PWY: N10-formyl-tetrahydrofolate biosynthesis	0	0	0	0	0	18.8074822301	0	0	21.2306992481	32.7187886454	18.4343402089	0
-1CMET2-PWY: N10-formyl-tetrahydrofolate biosynthesis|g__Neisseria.s__Neisseria_flavescens	0	0	0	0	0	0	0	0	0	7.3588214937	0	0
-1CMET2-PWY: N10-formyl-tetrahydrofolate biosynthesis|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	16.6093128305	0	0	0	0	0	0
-ANAEROFRUCAT-PWY: homolactic fermentation	0	0	0	14.2255460045	0	18.8775077435	0	0	0	0	0	0
-ANAGLYCOLYSIS-PWY: glycolysis III (from glucose)	0	0	0	16.8238646710	20.2651268668	23.4216576386	0	0	24.7979302876	28.9227993702	13.6834979399	0
-ANAGLYCOLYSIS-PWY: glycolysis III (from glucose)|g__Streptococcus.s__Streptococcus_infantis	0	0	0	0	0	0	0	0	4.6040261844	0	0	0
-ARGININE-SYN4-PWY: L-ornithine de novo  biosynthesis	0	0	0	0	11.7545161314	0	0	0	0	0	0	0
-ARGSYN-PWY: L-arginine biosynthesis I (via L-ornithine)	0	0	0	0	0	0	0	0	0	22.1347329005	0	0
-ARGSYN-PWY: L-arginine biosynthesis I (via L-ornithine)|g__Neisseria.s__Neisseria_flavescens	0	0	0	0	0	0	0	0	0	5.2238068348	0	0
-ARGSYN-PWY: L-arginine biosynthesis I (via L-ornithine)|g__Neisseria.s__Neisseria_subflava	0	0	0	0	0	0	0	0	0	6.3680512041	0	0
-ARGSYNBSUB-PWY: L-arginine biosynthesis II (acetyl cycle)	0	0	0	11.5122444202	0	0	0	0	0	25.2510608978	0	0
-ARGSYNBSUB-PWY: L-arginine biosynthesis II (acetyl cycle)|g__Neisseria.s__Neisseria_flavescens	0	0	0	0	0	0	0	0	0	6.3426269797	0	0
-ARGSYNBSUB-PWY: L-arginine biosynthesis II (acetyl cycle)|g__Neisseria.s__Neisseria_subflava	0	0	0	0	0	0	0	0	0	9.6908368684	0	0
-ARO-PWY: chorismate biosynthesis I	16.7123552845	0	0	0	0	0	0	0	19.5285242016	28.5503055536	15.9915700237	0
-ASPASN-PWY: superpathway of L-aspartate and L-asparagine biosynthesis	0	0	0	12.3024282267	0	20.5483050149	0	0	0	20.7199880340	16.0996735118	8.4076750492
-ASPASN-PWY: superpathway of L-aspartate and L-asparagine biosynthesis|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	11.3863409456	0	0
-ASPASN-PWY: superpathway of L-aspartate and L-asparagine biosynthesis|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	14.4776069582	0
-ASPASN-PWY: superpathway of L-aspartate and L-asparagine biosynthesis|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	14.6862998318	0	0	0	0	0	0
-ASPASN-PWY: superpathway of L-aspartate and L-asparagine biosynthesis|unclassified	0	0	0	10.7852500567	0	0	0	0	0	0	0	8.4076750492
-BRANCHED-CHAIN-AA-SYN-PWY: superpathway of branched amino acid biosynthesis	13.4970767214	0	0	29.6028711166	24.8471233735	10.4256892121	11.1535946382	0	16.1075146699	40.6587943691	27.8388844005	0
-BRANCHED-CHAIN-AA-SYN-PWY: superpathway of branched amino acid biosynthesis|g__Fusobacterium.s__Fusobacterium_nucleatum	13.4970767214	0	0	0	13.6966934470	0	0	0	0	0	0	0
-BRANCHED-CHAIN-AA-SYN-PWY: superpathway of branched amino acid biosynthesis|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	9.2930083929	0	0
-BRANCHED-CHAIN-AA-SYN-PWY: superpathway of branched amino acid biosynthesis|g__Neisseria.s__Neisseria_flavescens	0	0	0	3.7498596253	0	0	0	0	0	3.1516341147	0	0
-BRANCHED-CHAIN-AA-SYN-PWY: superpathway of branched amino acid biosynthesis|g__Streptococcus.s__Streptococcus_australis	0	0	0	0	0	0	0	0	1.5947573062	0	0	0
-BRANCHED-CHAIN-AA-SYN-PWY: superpathway of branched amino acid biosynthesis|g__Streptococcus.s__Streptococcus_infantis	0	0	0	0	0	0	0	0	3.1900748877	0	0	0
-BRANCHED-CHAIN-AA-SYN-PWY: superpathway of branched amino acid biosynthesis|g__Streptococcus.s__Streptococcus_sp_A12	0	0	0	0	0	0	0	0	0.8922800742	0	0	0
-BRANCHED-CHAIN-AA-SYN-PWY: superpathway of branched amino acid biosynthesis|g__Veillonella.s__Veillonella_atypica	0	0	0	0	0	9.9784551846	0	0	0	0	0	0
-BRANCHED-CHAIN-AA-SYN-PWY: superpathway of branched amino acid biosynthesis|unclassified	0	0	0	0	0	0	0	0	0	0	8.0671450555	0
-CALVIN-PWY: Calvin-Benson-Bassham cycle	11.3843805595	0	0	19.0802255448	27.0445501462	23.7667186055	0	0	26.5439788294	26.0364139221	16.0356220594	0
-CALVIN-PWY: Calvin-Benson-Bassham cycle|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	19.9587419025	0	0	0	0	0	0	0
-CALVIN-PWY: Calvin-Benson-Bassham cycle|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	15.4402496853	0
-CITRULBIO-PWY: L-citrulline biosynthesis	0	0	0	0	11.2579447571	0	0	0	0	0	0	0
-COA-PWY-1: coenzyme A biosynthesis II (mammalian)	0	0	0	14.1908210655	21.2497882378	25.0786958943	0	0	12.5639958850	21.1157219042	24.1916598480	0
-COA-PWY-1: coenzyme A biosynthesis II (mammalian)|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	14.1536081757	0	0	0	0	0	0	0
-COA-PWY-1: coenzyme A biosynthesis II (mammalian)|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	20.7035152134	0
-COA-PWY-1: coenzyme A biosynthesis II (mammalian)|g__Neisseria.s__Neisseria_flavescens	0	0	0	0	0	0	0	0	0	2.6297537798	0	0
-COA-PWY-1: coenzyme A biosynthesis II (mammalian)|g__Neisseria.s__Neisseria_subflava	0	0	0	0	0	0	0	0	0	7.0037949461	0	0
-COA-PWY-1: coenzyme A biosynthesis II (mammalian)|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	17.2435321283	0	0	0	0	0	0
-COA-PWY: coenzyme A biosynthesis I	0	9.4185371050	0	9.2929943414	17.0294252806	25.0786958943	0	0	13.9714720603	22.4634085185	19.5206392105	0
-COA-PWY: coenzyme A biosynthesis I|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	15.1563126183	0	0	0	0	0	0	0
-COA-PWY: coenzyme A biosynthesis I|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	2.2402692586	0	0	0	0	0	0	18.5482882171	0
-COA-PWY: coenzyme A biosynthesis I|g__Haemophilus.s__Haemophilus_sp_HMSC71H05	0	0	0	4.7877433770	0	0	0	0	0	0	0	0
-COA-PWY: coenzyme A biosynthesis I|g__Neisseria.s__Neisseria_flavescens	0	0	0	0	0	0	0	0	0	2.1036024191	0	0
-COA-PWY: coenzyme A biosynthesis I|g__Neisseria.s__Neisseria_subflava	0	0	0	0	0	0	0	0	0	8.4124956446	0	0
-COA-PWY: coenzyme A biosynthesis I|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	17.2435321283	0	0	0	0	0	0
-COMPLETE-ARO-PWY: superpathway of aromatic amino acid biosynthesis	17.4366158220	0	0	0	0	0	0	0	21.0081384636	30.6680808131	17.4582890981	0
-DAPLYSINESYN-PWY: L-lysine biosynthesis I	0	0	0	0	0	0	0	0	14.1537594566	17.6145393302	0	0
-DENOVOPURINE2-PWY: superpathway of purine nucleotides de novo biosynthesis II	0	0	0	0	0	0	0	0	0	35.6344142321	33.8924481925	0
-DTDPRHAMSYN-PWY: dTDP-L-rhamnose biosynthesis I	16.5418153042	11.1193261563	0	0	31.1935512020	10.4634887095	0	0	0	16.2182460239	15.0791938562	0
-DTDPRHAMSYN-PWY: dTDP-L-rhamnose biosynthesis I|g__Fusobacterium.s__Fusobacterium_nucleatum	0	0	0	0	18.5242822381	0	0	0	0	0	0	0
-DTDPRHAMSYN-PWY: dTDP-L-rhamnose biosynthesis I|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	11.0469400348	0
-DTDPRHAMSYN-PWY: dTDP-L-rhamnose biosynthesis I|g__Neisseria.s__Neisseria_subflava	0	0	0	0	0	0	0	0	0	3.3558945497	0	0
-DTDPRHAMSYN-PWY: dTDP-L-rhamnose biosynthesis I|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	6.5676145131	0	0	0	0	0	0
-FASYN-ELONG-PWY: fatty acid elongation -- saturated	0	0	0	14.8195905107	16.1729058263	0	0	0	0	24.1891835743	0	16.1293986008
-FASYN-ELONG-PWY: fatty acid elongation -- saturated|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	15.4762689851	0	0	0	0	0	0	0
-FASYN-ELONG-PWY: fatty acid elongation -- saturated|g__Neisseria.s__Neisseria_flavescens	0	0	0	3.1225604996	0	0	0	0	0	5.3403057475	0	0
-FASYN-ELONG-PWY: fatty acid elongation -- saturated|g__Neisseria.s__Neisseria_subflava	0	0	0	5.9713488432	0	0	0	0	0	6.5073382470	0	0
-FASYN-INITIAL-PWY: superpathway of fatty acid biosynthesis initiation (E. coli)	0	0	0	14.4774779066	20.2964264116	0	0	0	14.0598925959	18.3351816172	23.9805546433	0
-FASYN-INITIAL-PWY: superpathway of fatty acid biosynthesis initiation (E. coli)|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	21.9653626401	0
-FASYN-INITIAL-PWY: superpathway of fatty acid biosynthesis initiation (E. coli)|g__Neisseria.s__Neisseria_subflava	0	0	0	5.7554523453	0	0	0	0	0	0	0	0
-FERMENTATION-PWY: mixed acid fermentation	0	0	0	0	0	0	0	0	0	31.3426516851	15.2387813712	0
-FERMENTATION-PWY: mixed acid fermentation|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	14.0041814746	0	0
-FERMENTATION-PWY: mixed acid fermentation|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	12.7965700462	0
-FUCCAT-PWY: fucose degradation	0	0	0	0	0	0	0	0	0	24.1177192049	0	0
-FUCCAT-PWY: fucose degradation|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	21.8775902674	0	0
-GLCMANNANAUT-PWY: superpathway of N-acetylglucosamine, N-acetylmannosamine and N-acetylneuraminate degradation	0	0	0	0	18.5348669906	0	9.1363461115	0	10.2496069082	13.4984954387	20.1564055858	0
-GLCMANNANAUT-PWY: superpathway of N-acetylglucosamine, N-acetylmannosamine and N-acetylneuraminate degradation|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	12.6695322467	0	0	0	0	0	0	0
-GLCMANNANAUT-PWY: superpathway of N-acetylglucosamine, N-acetylmannosamine and N-acetylneuraminate degradation|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	17.0489751178	0
-GLUCONEO-PWY: gluconeogenesis I	0	0	0	15.4842360519	18.4143133163	19.6021644662	0	0	0	0	0	0
-GLUCOSE1PMETAB-PWY: glucose and glucose-1-phosphate degradation	0	0	0	0	0	11.9331742243	0	0	0	16.4404874810	15.5766759933	12.2033929046
-GLUTORN-PWY: L-ornithine biosynthesis	0	0	0	0	0	0	0	0	0	20.0550357523	0	0
-GLUTORN-PWY: L-ornithine biosynthesis|g__Neisseria.s__Neisseria_flavescens	0	0	0	0	0	0	0	0	0	3.8376840782	0	0
-GLUTORN-PWY: L-ornithine biosynthesis|g__Neisseria.s__Neisseria_subflava	0	0	0	0	0	0	0	0	0	8.6601020833	0	0
-GLYCOCAT-PWY: glycogen degradation I (bacterial)	0	0	0	0	17.4313009335	0	0	0	0	21.8301375981	16.7083397873	0
-GLYCOGENSYNTH-PWY: glycogen biosynthesis I (from ADP-D-Glucose)	0	0	0	0	11.6319090676	0	0	0	9.0443636832	15.4423826373	18.7263170953	0
-GLYCOGENSYNTH-PWY: glycogen biosynthesis I (from ADP-D-Glucose)|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	13.2587733750	0
-GLYCOLYSIS: glycolysis I (from glucose 6-phosphate)	0	0	0	16.2943631562	17.6255971517	19.4130550727	0	0	0	0	12.7997921462	0
-HEME-BIOSYNTHESIS-II: heme biosynthesis I (aerobic)	0	0	0	10.3334767590	16.1625912460	12.0453439755	0	0	0	16.2511873176	0	0
-HEME-BIOSYNTHESIS-II: heme biosynthesis I (aerobic)|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	9.7219701883	0	0	0	0	0	0	0
-HEME-BIOSYNTHESIS-II: heme biosynthesis I (aerobic)|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	10.6894987409	0	0
-HEME-BIOSYNTHESIS-II: heme biosynthesis I (aerobic)|g__Veillonella.s__Veillonella_atypica	0	0	0	0	0	11.2175560194	0	0	0	0	0	0
-HISDEG-PWY: L-histidine degradation I	12.9799906345	0	0	0	13.6046408308	13.9160560967	0	0	0	0	0	0
-HISDEG-PWY: L-histidine degradation I|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	13.9160560967	0	0	0	0	0	0
-HISTSYN-PWY: L-histidine biosynthesis	0	0	0	0	0	12.5505613953	0	0	0	0	0	0
-HOMOSER-METSYN-PWY: L-methionine biosynthesis I	0	0	0	8.9701817478	0	0	8.2229328460	6.6436435811	0	29.8191892177	39.6538620399	0
-HOMOSER-METSYN-PWY: L-methionine biosynthesis I|g__Streptococcus.s__Streptococcus_mitis	0	0	0	0	0	0	0	0	0	8.2113208467	0	0
-HOMOSER-METSYN-PWY: L-methionine biosynthesis I|unclassified	0	0	0	0	0	0	0	6.6436435811	0	10.7569983873	0	0
-HSERMETANA-PWY: L-methionine biosynthesis III	0	0	0	0	12.3714416237	0	0	0	0	18.6698225113	20.4037699074	0
-HSERMETANA-PWY: L-methionine biosynthesis III|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	3.6626498310	0	0
-HSERMETANA-PWY: L-methionine biosynthesis III|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	18.6719478833	0
-ILEUSYN-PWY: L-isoleucine biosynthesis I (from threonine)	13.7720704625	0	0	33.3297033603	32.4999970171	12.0870401899	11.4178665077	0	25.7274881640	42.8370408055	51.4789141284	0
-ILEUSYN-PWY: L-isoleucine biosynthesis I (from threonine)|g__Fusobacterium.s__Fusobacterium_nucleatum	13.7720704625	0	0	0	13.7547732303	0	0	0	0	0	0	0
-ILEUSYN-PWY: L-isoleucine biosynthesis I (from threonine)|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	13.5819962898	0	0
-ILEUSYN-PWY: L-isoleucine biosynthesis I (from threonine)|g__Neisseria.s__Neisseria_flavescens	0	0	0	6.3465777866	0	0	0	0	0	4.4937557757	0	0
-ILEUSYN-PWY: L-isoleucine biosynthesis I (from threonine)|g__Streptococcus.s__Streptococcus_australis	0	0	0	0	0	0	0	0	4.4271949515	0	0	0
-ILEUSYN-PWY: L-isoleucine biosynthesis I (from threonine)|g__Streptococcus.s__Streptococcus_infantis	0	0	0	0	0	0	0	0	4.2015571377	0	0	0
-ILEUSYN-PWY: L-isoleucine biosynthesis I (from threonine)|g__Streptococcus.s__Streptococcus_sp_A12	0	0	0	0	0	0	0	0	0.9278327693	0	0	0
-ILEUSYN-PWY: L-isoleucine biosynthesis I (from threonine)|g__Streptococcus.s__Streptococcus_sp_F0442	0	0	0	0	0	0	0	0	1.4049877064	0	0	0
-ILEUSYN-PWY: L-isoleucine biosynthesis I (from threonine)|g__Veillonella.s__Veillonella_atypica	0	0	0	0	0	11.3498383526	0	0	0	0	0	0
-ILEUSYN-PWY: L-isoleucine biosynthesis I (from threonine)|unclassified	0	0	0	0	0	0	0	0	0	0	9.1102654229	0
-LACTOSECAT-PWY: lactose and galactose degradation I	0	0	0	0	0	0	8.7105098467	0	27.2539220391	0	0	0
-LACTOSECAT-PWY: lactose and galactose degradation I|g__Streptococcus.s__Streptococcus_australis	0	0	0	0	0	0	0	0	13.1432422752	0	0	0
-LACTOSECAT-PWY: lactose and galactose degradation I|g__Streptococcus.s__Streptococcus_sp_A12	0	0	0	0	0	0	0	0	5.3714742723	0	0	0
-MET-SAM-PWY: superpathway of S-adenosyl-L-methionine biosynthesis	0	0	0	10.7653065850	0	0	0	0	0	29.2810556046	27.2749502802	0
-METSYN-PWY: L-homoserine and L-methionine biosynthesis	0	0	0	10.2915076337	0	0	0	0	0	31.7187545942	28.2517565819	0
-NAD-BIOSYNTHESIS-II: NAD salvage pathway II	0	0	0	0	0	0	0	0	0	31.5133611698	0	0
-NAD-BIOSYNTHESIS-II: NAD salvage pathway II|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	21.5961722010	0	0
-NAGLIPASYN-PWY: lipid IVA biosynthesis	0	0	0	17.2406208277	0	0	0	0	13.4751931894	0	0	0
-NAGLIPASYN-PWY: lipid IVA biosynthesis|g__Neisseria.s__Neisseria_flavescens	0	0	0	6.5227044024	0	0	0	0	4.2935005989	0	0	0
-NAGLIPASYN-PWY: lipid IVA biosynthesis|g__Neisseria.s__Neisseria_subflava	0	0	0	7.0734972971	0	0	0	0	5.6152018541	0	0	0
-NONOXIPENT-PWY: pentose phosphate pathway (non-oxidative branch)	10.8727433548	0	0	16.8517624379	15.2121881394	11.8506478408	0	0	22.9500680107	21.3762465950	19.4550318146	0
-NONOXIPENT-PWY: pentose phosphate pathway (non-oxidative branch)|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	14.5553853360	0	0	0	0	0	0	0
-NONOXIPENT-PWY: pentose phosphate pathway (non-oxidative branch)|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	16.7934901002	0
-NONOXIPENT-PWY: pentose phosphate pathway (non-oxidative branch)|g__Neisseria.s__Neisseria_flavescens	0	0	0	9.7657526818	0	0	0	0	0	0	0	0
-NONOXIPENT-PWY: pentose phosphate pathway (non-oxidative branch)|g__Neisseria.s__Neisseria_subflava	0	0	0	4.8740181364	0	0	0	0	0	0	0	0
-OANTIGEN-PWY: O-antigen building blocks biosynthesis (E. coli)	14.0202995590	0	0	0	0	0	0	0	0	12.8158419596	14.1508753913	0
-P108-PWY: pyruvate fermentation to propanoate I	0	0	0	0	0	0	0	0	0	0	8.0319136162	0
-P125-PWY: superpathway of (R,R)-butanediol biosynthesis	0	0	0	0	0	0	0	0	10.1311536064	0	0	0
-P163-PWY: L-lysine fermentation to acetate and butanoate	11.7100655447	0	0	0	14.7878795100	0	0	0	0	0	0	0
-P185-PWY: formaldehyde assimilation III (dihydroxyacetone cycle)	0	0	0	0	18.2418031338	0	0	0	0	0	0	0
-P42-PWY: incomplete reductive TCA cycle	0	0	0	0	0	0	0	0	0	0	12.3986522808	0
-PANTO-PWY: phosphopantothenate biosynthesis I	0	0	0	0	10.4797590690	0	0	0	0	0	0	0
-PENTOSE-P-PWY: pentose phosphate pathway	0	0	0	0	0	0	0	0	0	21.5893961293	17.4296407098	0
-PENTOSE-P-PWY: pentose phosphate pathway|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	16.2090299269	0
-PEPTIDOGLYCANSYN-PWY: peptidoglycan biosynthesis I (meso-diaminopimelate containing)	16.0957738219	0	0	0	20.6290822691	23.2566371160	0	0	19.1271336324	29.7430808335	18.8995870173	0
-PEPTIDOGLYCANSYN-PWY: peptidoglycan biosynthesis I (meso-diaminopimelate containing)|g__Fusobacterium.s__Fusobacterium_nucleatum	13.3864578475	0	0	0	0	0	0	0	0	0	0	0
-PEPTIDOGLYCANSYN-PWY: peptidoglycan biosynthesis I (meso-diaminopimelate containing)|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	8.7580745207	0	0
-PEPTIDOGLYCANSYN-PWY: peptidoglycan biosynthesis I (meso-diaminopimelate containing)|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	19.0665796653	0	0	0	0	0	0
-PHOSLIPSYN-PWY: superpathway of phospholipid biosynthesis I (bacteria)	11.4234186001	0	0	0	18.5571296086	16.8620446461	0	0	12.4637973355	35.9342015808	24.5860455079	0
-PHOSLIPSYN-PWY: superpathway of phospholipid biosynthesis I (bacteria)|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	16.8939249288	0	0
-PPGPPMET-PWY: ppGpp biosynthesis	0	0	0	19.5406718221	0	20.9603293620	0	0	0	30.6947246590	18.5400838483	0
-PPGPPMET-PWY: ppGpp biosynthesis|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	17.1261243822	0
-PPGPPMET-PWY: ppGpp biosynthesis|g__Neisseria.s__Neisseria_flavescens	0	0	0	3.9200945953	0	0	0	0	0	0	0	0
-PPGPPMET-PWY: ppGpp biosynthesis|g__Neisseria.s__Neisseria_subflava	0	0	0	6.4643773666	0	0	0	0	0	0	0	0
-PWY-1042: glycolysis IV (plant cytosol)	0	0	0	12.1887544571	20.1264986768	32.1420593754	0	0	0	0	18.2420982404	0
-PWY-1042: glycolysis IV (plant cytosol)|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	2.9742233972	0	0	0	0	0	0	16.7707800723	0
-PWY-1042: glycolysis IV (plant cytosol)|g__Haemophilus.s__Haemophilus_sp_HMSC71H05	0	0	0	3.9252290305	0	0	0	0	0	0	0	0
-PWY-1269: CMP-3-deoxy-D-manno-octulosonate biosynthesis I	0	0	0	8.7029541391	12.1609789598	0	0	0	0	24.8134808105	24.0689827273	0
-PWY-1269: CMP-3-deoxy-D-manno-octulosonate biosynthesis I|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	8.3875897601	0	0	0	0	0	0	0
-PWY-1269: CMP-3-deoxy-D-manno-octulosonate biosynthesis I|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	14.0923968245	0	0
-PWY-1269: CMP-3-deoxy-D-manno-octulosonate biosynthesis I|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	15.5882716813	0
-PWY-1269: CMP-3-deoxy-D-manno-octulosonate biosynthesis I|g__Neisseria.s__Neisseria_flavescens	0	0	0	0	0	0	0	0	0	4.7990401920	0	0
-PWY-1269: CMP-3-deoxy-D-manno-octulosonate biosynthesis I|g__Neisseria.s__Neisseria_perflava	0	0	0	0	0	0	0	0	0	0	7.3590417103	0
-PWY-1269: CMP-3-deoxy-D-manno-octulosonate biosynthesis I|g__Neisseria.s__Neisseria_subflava	0	0	0	0	0	0	0	0	0	8.4971544199	0	0
-PWY-241: C4 photosynthetic carbon assimilation cycle, NADP-ME type	0	0	0	0	0	0	0	0	0	14.8907921163	0	0
-PWY-2723: trehalose degradation V	0	0	0	0	0	0	0	0	0	10.8126633329	0	0
-PWY-2941: L-lysine biosynthesis II	0	0	0	0	0	0	0	0	0	15.6022829672	0	0
-PWY-2942: L-lysine biosynthesis III	0	0	0	12.5431796855	14.9105167558	28.4677407993	0	0	13.3702048955	17.3151076936	16.6764508865	0
-PWY-2942: L-lysine biosynthesis III|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	22.0892470492	0	0	0	0	0	0
-PWY-3001: superpathway of L-isoleucine biosynthesis I	0	0	0	17.0119430420	19.8643640039	13.6484333793	0	0	14.3325985437	31.2387542318	27.1231515454	0
-PWY-3001: superpathway of L-isoleucine biosynthesis I|g__Neisseria.s__Neisseria_flavescens	0	0	0	2.3271238554	0	0	0	0	0	0	0	0
-PWY-3781: aerobic respiration I (cytochrome c)	0	0	0	48.2080494948	0	0	0	0	27.7155467745	26.9338564843	10.1681109057	0
-PWY-3781: aerobic respiration I (cytochrome c)|g__Neisseria.s__Neisseria_flavescens	0	0	0	12.2863192577	0	0	0	0	13.0869850259	3.8497138292	0	0
-PWY-3781: aerobic respiration I (cytochrome c)|g__Neisseria.s__Neisseria_subflava	0	0	0	23.5117001106	0	0	0	0	12.9097268305	10.4769018926	0	0
-PWY-3841: folate transformations II	0	0	0	0	0	22.1690565311	11.3881113597	0	21.9137534991	35.2480747392	19.1340272882	0
-PWY-3841: folate transformations II|g__Neisseria.s__Neisseria_flavescens	0	0	0	0	0	0	0	0	0	7.6752827668	0	0
-PWY-3841: folate transformations II|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	19.9435295103	0	0	0	0	0	0
-PWY-3841: folate transformations II|g__Streptococcus.s__Streptococcus_mitis	0	0	0	0	0	0	6.7574689545	0	0	0	0	0
-PWY-4041: &gamma;-glutamyl cycle	0	0	0	0	14.3570226647	0	0	0	10.3828567960	0	17.6520441996	0
-PWY-4041: &gamma;-glutamyl cycle|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	11.4226693001	0	0	0	0	0	0	0
-PWY-4041: &gamma;-glutamyl cycle|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	16.5606336064	0
-PWY-4041: &gamma;-glutamyl cycle|unclassified	0	0	0	0	0	0	0	0	8.0717759827	0	0	0
-PWY-4242: pantothenate and coenzyme A biosynthesis III	0	0	0	8.9374064443	14.8727009564	15.7000415628	0	0	12.0417129514	0	20.6198830665	0
-PWY-4242: pantothenate and coenzyme A biosynthesis III|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	12.2837178122	0	0	0	0	0	0	0
-PWY-4242: pantothenate and coenzyme A biosynthesis III|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	18.8182781822	0
-PWY-4981: L-proline biosynthesis II (from arginine)	0	0	0	0	9.0555880038	0	0	0	0	0	0	0
-PWY-5030: L-histidine degradation III	0	0	0	0	0	15.1921422650	0	0	0	0	0	0
-PWY-5030: L-histidine degradation III|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	14.9942112295	0	0	0	0	0	0
-PWY-5083: NAD/NADH phosphorylation and dephosphorylation	0	0	0	0	0	0	0	0	0	0	11.5505445424	0
-PWY-5097: L-lysine biosynthesis VI	0	0	0	0	0	0	0	0	14.0068227333	16.7057181586	20.6774827921	0
-PWY-5100: pyruvate fermentation to acetate and lactate II	9.3657565509	0	0	0	15.0569724688	0	0	0	16.1535676149	14.8176167494	27.2948202387	0
-PWY-5100: pyruvate fermentation to acetate and lactate II|g__Rothia.s__Rothia_mucilaginosa	0	0	0	0	0	0	0	0	0	0	11.5822699090	0
-PWY-5103: L-isoleucine biosynthesis III	15.5932416349	0	0	28.8256914479	34.9199736541	10.1922342185	10.1224175711	0	14.5147971666	39.6664828976	27.8388844005	0
-PWY-5103: L-isoleucine biosynthesis III|g__Fusobacterium.s__Fusobacterium_nucleatum	15.5932416349	0	0	0	16.0815277472	0	0	0	0	0	0	0
-PWY-5103: L-isoleucine biosynthesis III|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	7.0901684873	0	0
-PWY-5103: L-isoleucine biosynthesis III|g__Neisseria.s__Neisseria_flavescens	0	0	0	3.0956188335	0	0	0	0	0	2.1909413926	0	0
-PWY-5103: L-isoleucine biosynthesis III|g__Streptococcus.s__Streptococcus_australis	0	0	0	0	0	0	0	0	1.3005006178	0	0	0
-PWY-5103: L-isoleucine biosynthesis III|g__Streptococcus.s__Streptococcus_infantis	0	0	0	0	0	0	0	0	3.1900748877	0	0	0
-PWY-5103: L-isoleucine biosynthesis III|g__Streptococcus.s__Streptococcus_sp_A12	0	0	0	0	0	0	0	0	0.8448626508	0	0	0
-PWY-5103: L-isoleucine biosynthesis III|g__Veillonella.s__Veillonella_atypica	0	0	0	0	0	9.7643941543	0	0	0	0	0	0
-PWY-5103: L-isoleucine biosynthesis III|unclassified	0	0	0	0	0	0	0	0	0	0	7.9440384822	0
-PWY-5104: L-isoleucine biosynthesis IV	0	0	0	0	0	0	0	0	0	0	19.6715359635	0
-PWY-5154: L-arginine biosynthesis III (via N-acetyl-L-citrulline)	0	0	0	0	0	0	0	0	0	16.9508917913	0	0
-PWY-5173: superpathway of acetyl-CoA biosynthesis	0	0	0	0	0	0	0	0	10.5747839742	12.0954850626	21.5234872588	0
-PWY-5173: superpathway of acetyl-CoA biosynthesis|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	4.5023638398	0	0
-PWY-5173: superpathway of acetyl-CoA biosynthesis|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	16.4443995715	0
-PWY-5188: tetrapyrrole biosynthesis I (from glutamate)	10.7994709474	0	0	14.4526711997	17.5995619884	0	0	0	9.0897206619	34.3900955357	20.2552196617	0
-PWY-5188: tetrapyrrole biosynthesis I (from glutamate)|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	13.3461432789	0	0
-PWY-5188: tetrapyrrole biosynthesis I (from glutamate)|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	11.0189277939	0
-PWY-5188: tetrapyrrole biosynthesis I (from glutamate)|g__Neisseria.s__Neisseria_flavescens	0	0	0	7.7704262889	0	0	0	0	0	4.1294794322	0	0
-PWY-5188: tetrapyrrole biosynthesis I (from glutamate)|g__Neisseria.s__Neisseria_subflava	0	0	0	3.1784285037	0	0	0	0	0	3.6405207354	0	0
-PWY-5188: tetrapyrrole biosynthesis I (from glutamate)|unclassified	7.1412998627	0	0	0	0	0	0	0	0	0	0	0
-PWY-5189: tetrapyrrole biosynthesis II (from glycine)	6.3171288802	0	0	14.2418658760	0	0	0	0	0	0	0	0
-PWY-5189: tetrapyrrole biosynthesis II (from glycine)|g__Neisseria.s__Neisseria_flavescens	0	0	0	7.0952861105	0	0	0	0	0	0	0	0
-PWY-5189: tetrapyrrole biosynthesis II (from glycine)|g__Neisseria.s__Neisseria_subflava	0	0	0	5.2985263617	0	0	0	0	0	0	0	0
-PWY-5189: tetrapyrrole biosynthesis II (from glycine)|unclassified	6.3171288802	0	0	0	0	0	0	0	0	0	0	0
-PWY-5347: superpathway of L-methionine biosynthesis (transsulfuration)	0	0	0	11.2899035997	0	0	0	0	0	28.6119286340	26.4695199663	0
-PWY-5367: petroselinate biosynthesis	0	0	0	0	0	0	0	0	20.4720221834	0	0	0
-PWY-5367: petroselinate biosynthesis|g__Streptococcus.s__Streptococcus_infantis	0	0	0	0	0	0	0	0	12.9469074541	0	0	0
-PWY-5384: sucrose degradation IV (sucrose phosphorylase)	0	0	0	0	0	0	0	0	0	16.4656165662	12.3819782240	0
-PWY-5484: glycolysis II (from fructose 6-phosphate)	0	0	0	14.4963360925	14.7925987490	16.4945742751	0	0	0	0	11.8515517891	0
-PWY-5659: GDP-mannose biosynthesis	0	0	0	0	0	0	0	0	0	0	16.2362349874	0
-PWY-5659: GDP-mannose biosynthesis|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	10.4345076548	0
-PWY-5667: CDP-diacylglycerol biosynthesis I	10.0242918910	0	0	10.2778373063	17.8181149230	19.1559994426	0	0	13.7460226514	49.8469738376	32.0475122105	0
-PWY-5667: CDP-diacylglycerol biosynthesis I|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	15.4609283426	0	0	0	0	0	0	0
-PWY-5667: CDP-diacylglycerol biosynthesis I|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	17.6125002176	0	0
-PWY-5667: CDP-diacylglycerol biosynthesis I|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	15.0371542333	0
-PWY-5667: CDP-diacylglycerol biosynthesis I|g__Neisseria.s__Neisseria_subflava	0	0	0	0	0	0	0	0	0	2.0565551700	0	0
-PWY-5667: CDP-diacylglycerol biosynthesis I|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	16.3687313107	0	0	0	0	0	0
-PWY-5667: CDP-diacylglycerol biosynthesis I|unclassified	9.4816164179	0	0	0	8.8787123267	0	0	0	0	0	0	0
-PWY-5686: UMP biosynthesis	15.0606943528	0	0	18.8079256297	13.2418430340	26.4510746777	7.0951059318	0	24.3142927540	32.1368791510	17.7747791315	0
-PWY-5686: UMP biosynthesis|g__Fusobacterium.s__Fusobacterium_nucleatum	14.7348470048	0	0	0	0	0	0	0	0	0	0	0
-PWY-5686: UMP biosynthesis|g__Neisseria.s__Neisseria_flavescens	0	0	0	3.2578448806	0	0	0	0	5.2887008957	0	0	0
-PWY-5686: UMP biosynthesis|g__Neisseria.s__Neisseria_subflava	0	0	0	4.4064446980	0	0	0	0	6.0398017077	0	0	0
-PWY-5686: UMP biosynthesis|unclassified	0	0	0	0	0	0	6.4567696394	0	0	0	0	0
-PWY-5695: urate biosynthesis/inosine 5'-phosphate degradation	8.6663815086	0	0	0	12.9310187364	15.4622419199	0	0	19.0307773814	42.2814612124	20.8750071858	14.4525745274
-PWY-5695: urate biosynthesis/inosine 5'-phosphate degradation|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	12.6316239092	0
-PWY-5695: urate biosynthesis/inosine 5'-phosphate degradation|unclassified	0	0	0	0	0	0	0	0	16.2401226893	0	0	0
-PWY-5791: 1,4-dihydroxy-2-naphthoate biosynthesis II (plants)	0	0	0	0	0	0	0	0	0	0	13.3242751184	0
-PWY-5837: 1,4-dihydroxy-2-naphthoate biosynthesis I	0	0	0	0	0	0	0	0	0	0	13.3242751184	0
-PWY-5897: superpathway of menaquinol-11 biosynthesis	0	0	0	0	0	0	0	0	0	0	19.8686576585	0
-PWY-5898: superpathway of menaquinol-12 biosynthesis	0	0	0	0	0	0	0	0	0	0	19.8686576585	0
-PWY-5899: superpathway of menaquinol-13 biosynthesis	0	0	0	0	0	0	0	0	0	0	19.8686576585	0
-PWY-5913: TCA cycle VI (obligate autotrophs)	0	0	0	0	0	0	0	0	0	35.6821348582	19.5925634245	0
-PWY-5913: TCA cycle VI (obligate autotrophs)|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	14.8559741131	0	0
-PWY-5913: TCA cycle VI (obligate autotrophs)|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	19.2337731373	0
-PWY-5918: superpathay of heme biosynthesis from glutamate	0	0	0	12.2952363161	0	0	0	0	0	20.4958155062	0	0
-PWY-5973: cis-vaccenate biosynthesis	0	0	0	15.4740785401	12.1414561075	24.1271716536	0	0	19.6210571722	18.8672008193	0	0
-PWY-5973: cis-vaccenate biosynthesis|g__Neisseria.s__Neisseria_flavescens	0	0	0	2.6588849074	0	0	0	0	0	6.1366555626	0	0
-PWY-5973: cis-vaccenate biosynthesis|g__Neisseria.s__Neisseria_subflava	0	0	0	6.8788931043	0	0	0	0	0	6.4497175894	0	0
-PWY-5973: cis-vaccenate biosynthesis|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	19.4026871474	0	0	0	0	0	0
-PWY-5989: stearate biosynthesis II (bacteria and plants)	0	0	0	10.8463341703	15.2404352554	0	0	0	0	20.6857707710	0	9.0206949484
-PWY-5989: stearate biosynthesis II (bacteria and plants)|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	14.8213090782	0	0	0	0	0	0	0
-PWY-5989: stearate biosynthesis II (bacteria and plants)|g__Neisseria.s__Neisseria_flavescens	0	0	0	2.1149101163	0	0	0	0	0	1.5539931886	0	0
-PWY-5989: stearate biosynthesis II (bacteria and plants)|g__Neisseria.s__Neisseria_subflava	0	0	0	5.5451665103	0	0	0	0	0	6.5115504258	0	0
-PWY-6121: 5-aminoimidazole ribonucleotide biosynthesis I	14.4468791927	0	0	13.1108245764	21.1594211969	12.9724040324	0	0	15.9770577762	28.8987703903	25.2212569756	0
-PWY-6121: 5-aminoimidazole ribonucleotide biosynthesis I|g__Fusobacterium.s__Fusobacterium_nucleatum	0	0	0	0	9.2219888828	0	0	0	0	0	0	0
-PWY-6121: 5-aminoimidazole ribonucleotide biosynthesis I|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	10.1257809551	0
-PWY-6121: 5-aminoimidazole ribonucleotide biosynthesis I|g__Rothia.s__Rothia_mucilaginosa	0	0	0	0	0	0	0	0	0	0	13.9426448797	0
-PWY-6121: 5-aminoimidazole ribonucleotide biosynthesis I|g__Streptococcus.s__Streptococcus_australis	0	0	0	0	0	0	0	0	1.7756497807	0	0	0
-PWY-6121: 5-aminoimidazole ribonucleotide biosynthesis I|g__Streptococcus.s__Streptococcus_infantis	0	0	0	0	0	0	0	0	5.0061457567	0	0	0
-PWY-6121: 5-aminoimidazole ribonucleotide biosynthesis I|g__Streptococcus.s__Streptococcus_sp_F0442	0	0	0	0	0	0	0	0	3.6094240906	0	0	0
-PWY-6121: 5-aminoimidazole ribonucleotide biosynthesis I|g__Veillonella.s__Veillonella_atypica	0	0	0	0	0	11.3163026299	0	0	0	0	0	0
-PWY-6121: 5-aminoimidazole ribonucleotide biosynthesis I|unclassified	0	0	0	0	0	0	0	0	0	11.7347364960	0	0
-PWY-6122: 5-aminoimidazole ribonucleotide biosynthesis II	13.1519208097	0	0	21.1894875365	19.3869373807	15.4917080818	0	0	14.2576850255	27.5407524849	29.6055136554	0
-PWY-6122: 5-aminoimidazole ribonucleotide biosynthesis II|g__Fusobacterium.s__Fusobacterium_nucleatum	0	0	0	0	8.0337146817	0	0	0	0	0	0	0
-PWY-6122: 5-aminoimidazole ribonucleotide biosynthesis II|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	12.7650932387	0
-PWY-6122: 5-aminoimidazole ribonucleotide biosynthesis II|g__Neisseria.s__Neisseria_flavescens	0	0	0	5.7047380138	0	0	0	0	0	0	0	0
-PWY-6122: 5-aminoimidazole ribonucleotide biosynthesis II|g__Neisseria.s__Neisseria_subflava	0	0	0	8.2151885866	0	0	0	0	0	0	0	0
-PWY-6122: 5-aminoimidazole ribonucleotide biosynthesis II|g__Rothia.s__Rothia_mucilaginosa	0	0	0	0	0	0	0	0	0	0	15.4339251923	0
-PWY-6122: 5-aminoimidazole ribonucleotide biosynthesis II|g__Streptococcus.s__Streptococcus_australis	0	0	0	0	0	0	0	0	1.5463917526	0	0	0
-PWY-6122: 5-aminoimidazole ribonucleotide biosynthesis II|g__Streptococcus.s__Streptococcus_infantis	0	0	0	0	0	0	0	0	4.2836993057	0	0	0
-PWY-6122: 5-aminoimidazole ribonucleotide biosynthesis II|g__Streptococcus.s__Streptococcus_sp_F0442	0	0	0	0	0	0	0	0	3.4549398915	0	0	0
-PWY-6122: 5-aminoimidazole ribonucleotide biosynthesis II|g__Veillonella.s__Veillonella_atypica	0	0	0	0	0	12.4058949377	0	0	0	0	0	0
-PWY-6122: 5-aminoimidazole ribonucleotide biosynthesis II|unclassified	0	0	0	0	0	0	0	0	0	12.3519537649	0	0
-PWY-6123: inosine-5'-phosphate biosynthesis I	0	0	0	10.3927140382	18.6733131948	0	0	0	30.6360842536	26.3527172080	34.1904490432	0
-PWY-6123: inosine-5'-phosphate biosynthesis I|g__Neisseria.s__Neisseria_subflava	0	0	0	0	0	0	0	0	7.0476343612	0	0	0
-PWY-6123: inosine-5'-phosphate biosynthesis I|g__Rothia.s__Rothia_mucilaginosa	0	0	0	0	0	0	0	0	0	0	11.9540740180	0
-PWY-6124: inosine-5'-phosphate biosynthesis II	0	0	0	11.5543766607	23.8815842029	0	0	0	28.7441262864	30.0844568738	32.8728818095	0
-PWY-6124: inosine-5'-phosphate biosynthesis II|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	11.2923084805	0	0	0	0	0	0	0
-PWY-6124: inosine-5'-phosphate biosynthesis II|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	12.9889530934	0	0
-PWY-6124: inosine-5'-phosphate biosynthesis II|g__Neisseria.s__Neisseria_flavescens	0	0	0	0	0	0	0	0	0	3.7998175263	0	0
-PWY-6124: inosine-5'-phosphate biosynthesis II|g__Neisseria.s__Neisseria_subflava	0	0	0	0	0	0	0	0	0	5.7787942828	0	0
-PWY-6125: superpathway of guanosine nucleotides de novo biosynthesis II	0	0	0	14.3133829461	0	21.7184492260	0	0	0	43.2782420788	38.5623126582	0
-PWY-6125: superpathway of guanosine nucleotides de novo biosynthesis II|g__Veillonella.s__Veillonella_rogosae	0	0	0	0	0	0	0	0	0	0	7.8774418646	0
-PWY-6125: superpathway of guanosine nucleotides de novo biosynthesis II|unclassified	0	0	0	0	0	0	0	0	0	13.1653251321	0	0
-PWY-6126: superpathway of adenosine nucleotides de novo biosynthesis II	21.3266293366	0	0	18.2957426689	18.2841075687	21.7303449655	0	0	28.7802491702	51.9942090815	32.9613569195	20.2780592347
-PWY-6126: superpathway of adenosine nucleotides de novo biosynthesis II|g__Fusobacterium.s__Fusobacterium_nucleatum	15.8899339526	0	0	0	0	0	0	0	0	0	0	0
-PWY-6126: superpathway of adenosine nucleotides de novo biosynthesis II|unclassified	0	0	0	0	0	0	0	0	0	15.8846505792	0	12.2731082200
-PWY-6147: 6-hydroxymethyl-dihydropterin diphosphate biosynthesis I	0	0	0	20.4712913556	9.2059944358	9.9528418767	0	0	0	8.0353555645	0	0
-PWY-6151: S-adenosyl-L-methionine cycle I	10.9052350596	0	0	16.2172235774	35.6546578811	21.0842004652	0	0	25.4788561392	41.3580678248	39.9729970846	8.7614714998
-PWY-6151: S-adenosyl-L-methionine cycle I|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	15.7213069553	0	0	0	0	0	0	0
-PWY-6151: S-adenosyl-L-methionine cycle I|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	18.0065773728	0	0
-PWY-6151: S-adenosyl-L-methionine cycle I|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	18.3732585908	0
-PWY-6151: S-adenosyl-L-methionine cycle I|g__Neisseria.s__Neisseria_flavescens	0	0	0	4.6276203040	0	0	0	0	3.3064999502	0	0	0
-PWY-6151: S-adenosyl-L-methionine cycle I|g__Neisseria.s__Neisseria_subflava	0	0	0	5.0005001017	0	0	0	0	6.4512383536	5.1373638473	0	0
-PWY-6151: S-adenosyl-L-methionine cycle I|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	18.5663251310	0	0	0	0	0	0
-PWY-6151: S-adenosyl-L-methionine cycle I|g__Rothia.s__Rothia_mucilaginosa	0	0	0	0	0	0	0	0	0	0	14.7844824900	0
-PWY-6151: S-adenosyl-L-methionine cycle I|unclassified	0	0	0	0	0	0	0	0	0	10.8485596469	0	0
-PWY-6163: chorismate biosynthesis from 3-dehydroquinate	17.7812940622	0	0	0	0	0	0	0	17.9605742970	28.4969542520	13.8174422932	0
-PWY-6163: chorismate biosynthesis from 3-dehydroquinate|g__Fusobacterium.s__Fusobacterium_nucleatum	11.6087621310	0	0	0	0	0	0	0	0	0	0	0
-PWY-6168: flavin biosynthesis III (fungi)	0	0	0	0	14.4484480288	0	0	0	0	27.7120460506	11.6233836945	0
-PWY-6168: flavin biosynthesis III (fungi)|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	14.1805484561	0	0
-PWY-6168: flavin biosynthesis III (fungi)|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	10.7924861383	0
-PWY-621: sucrose degradation III (sucrose invertase)	0	0	0	0	0	0	0	0	0	21.3110749442	16.9879647120	7.0878523551
-PWY-621: sucrose degradation III (sucrose invertase)|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	15.1882952008	0	0
-PWY-621: sucrose degradation III (sucrose invertase)|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	14.9998481193	0
-PWY-621: sucrose degradation III (sucrose invertase)|unclassified	0	0	0	0	0	0	0	0	0	0	0	7.0878523551
-PWY-6277: superpathway of 5-aminoimidazole ribonucleotide biosynthesis	13.1519208097	0	0	21.1894875365	19.3869373807	15.4917080818	0	0	14.2576850255	27.5407524849	29.6055136554	0
-PWY-6277: superpathway of 5-aminoimidazole ribonucleotide biosynthesis|g__Fusobacterium.s__Fusobacterium_nucleatum	0	0	0	0	8.0337146817	0	0	0	0	0	0	0
-PWY-6277: superpathway of 5-aminoimidazole ribonucleotide biosynthesis|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	12.7650932387	0
-PWY-6277: superpathway of 5-aminoimidazole ribonucleotide biosynthesis|g__Neisseria.s__Neisseria_flavescens	0	0	0	5.7047380138	0	0	0	0	0	0	0	0
-PWY-6277: superpathway of 5-aminoimidazole ribonucleotide biosynthesis|g__Neisseria.s__Neisseria_subflava	0	0	0	8.2151885866	0	0	0	0	0	0	0	0
-PWY-6277: superpathway of 5-aminoimidazole ribonucleotide biosynthesis|g__Rothia.s__Rothia_mucilaginosa	0	0	0	0	0	0	0	0	0	0	15.4339251923	0
-PWY-6277: superpathway of 5-aminoimidazole ribonucleotide biosynthesis|g__Streptococcus.s__Streptococcus_australis	0	0	0	0	0	0	0	0	1.5463917526	0	0	0
-PWY-6277: superpathway of 5-aminoimidazole ribonucleotide biosynthesis|g__Streptococcus.s__Streptococcus_infantis	0	0	0	0	0	0	0	0	4.2836993057	0	0	0
-PWY-6277: superpathway of 5-aminoimidazole ribonucleotide biosynthesis|g__Streptococcus.s__Streptococcus_sp_F0442	0	0	0	0	0	0	0	0	3.4549398915	0	0	0
-PWY-6277: superpathway of 5-aminoimidazole ribonucleotide biosynthesis|g__Veillonella.s__Veillonella_atypica	0	0	0	0	0	12.4058949377	0	0	0	0	0	0
-PWY-6277: superpathway of 5-aminoimidazole ribonucleotide biosynthesis|unclassified	0	0	0	0	0	0	0	0	0	12.3519537649	0	0
-PWY-6282: palmitoleate biosynthesis I (from (5Z)-dodec-5-enoate)	0	0	0	13.9590650999	14.9902181561	0	0	0	0	21.5904310992	0	14.5033966866
-PWY-6282: palmitoleate biosynthesis I (from (5Z)-dodec-5-enoate)|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	14.4541736970	0	0	0	0	0	0	0
-PWY-6282: palmitoleate biosynthesis I (from (5Z)-dodec-5-enoate)|g__Neisseria.s__Neisseria_flavescens	0	0	0	2.7675276753	0	0	0	0	0	5.1791734481	0	0
-PWY-6282: palmitoleate biosynthesis I (from (5Z)-dodec-5-enoate)|g__Neisseria.s__Neisseria_subflava	0	0	0	5.7007818968	0	0	0	0	0	6.1291981560	0	0
-PWY-6305: putrescine biosynthesis IV	12.9454530114	0	0	0	0	0	0	0	0	0	0	0
-PWY-6317: galactose degradation I (Leloir pathway)	12.3256976023	0	0	0	18.2825850138	0	0	0	0	0	16.8113524816	0
-PWY-6317: galactose degradation I (Leloir pathway)|g__Fusobacterium.s__Fusobacterium_nucleatum	12.3256976023	0	0	0	0	0	0	0	0	0	0	0
-PWY-6353: purine nucleotides degradation II (aerobic)	0	0	0	0	0	0	0	0	0	0	13.1884882719	0
-PWY-6385: peptidoglycan biosynthesis III (mycobacteria)	14.9035597209	0	0	0	22.0393277075	26.0921190589	0	0	19.5150207884	32.3624802014	19.0697870622	0
-PWY-6385: peptidoglycan biosynthesis III (mycobacteria)|g__Fusobacterium.s__Fusobacterium_nucleatum	13.5200243783	0	0	0	0	0	0	0	0	0	0	0
-PWY-6385: peptidoglycan biosynthesis III (mycobacteria)|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	10.4765596606	0	0
-PWY-6385: peptidoglycan biosynthesis III (mycobacteria)|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	21.8180297349	0	0	0	0	0	0
-PWY-6386: UDP-N-acetylmuramoyl-pentapeptide biosynthesis II (lysine-containing)	17.5725218487	0	0	11.7019427092	21.3565380773	21.3631201327	0	0	16.0578918535	32.2563558264	22.0522462882	0
-PWY-6386: UDP-N-acetylmuramoyl-pentapeptide biosynthesis II (lysine-containing)|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	10.5933468363	0	0
-PWY-6386: UDP-N-acetylmuramoyl-pentapeptide biosynthesis II (lysine-containing)|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	19.0454868665	0	0	0	0	0	0
-PWY-6387: UDP-N-acetylmuramoyl-pentapeptide biosynthesis I (meso-diaminopimelate containing)	15.4180036461	0	0	0	22.5142774058	24.6468474181	0	0	18.2529505747	29.7225090284	21.1429986791	0
-PWY-6387: UDP-N-acetylmuramoyl-pentapeptide biosynthesis I (meso-diaminopimelate containing)|g__Fusobacterium.s__Fusobacterium_nucleatum	13.6161656011	0	0	0	0	0	0	0	0	0	0	0
-PWY-6387: UDP-N-acetylmuramoyl-pentapeptide biosynthesis I (meso-diaminopimelate containing)|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	9.7770194999	0	0
-PWY-6387: UDP-N-acetylmuramoyl-pentapeptide biosynthesis I (meso-diaminopimelate containing)|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	22.2988722802	0	0	0	0	0	0
-PWY-6471: peptidoglycan biosynthesis IV (Enterococcus faecium)	0	0	0	0	0	0	0	0	0	0	18.3243832147	0
-PWY-6519: 8-amino-7-oxononanoate biosynthesis I	0	0	0	0	15.3570988402	0	0	0	0	0	0	0
-PWY-6519: 8-amino-7-oxononanoate biosynthesis I|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	14.8941072845	0	0	0	0	0	0	0
-PWY-6606: guanosine nucleotides degradation II	0	0	0	0	0	0	0	0	0	0	9.5791522833	0
-PWY-6608: guanosine nucleotides degradation III	0	0	0	0	0	17.4672040661	0	0	19.0307773814	0	12.2563846604	0
-PWY-6609: adenine and adenosine salvage III	7.5328159673	0	0	9.8211800166	14.3701189202	15.2201984460	14.3559881980	0	22.4222790921	27.3914769875	19.2779002244	0
-PWY-6609: adenine and adenosine salvage III|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	7.5794493423	0	0
-PWY-6609: adenine and adenosine salvage III|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	10.6880427522	0	0	0	0	14.6592962974	0
-PWY-6609: adenine and adenosine salvage III|g__Streptococcus.s__Streptococcus_mitis	0	0	0	0	0	0	10.6953900734	0	0	0	0	0
-PWY-6609: adenine and adenosine salvage III|unclassified	0	0	0	8.0160917828	0	0	0	0	22.4222790921	0	0	0
-PWY-6700: queuosine biosynthesis	14.1765662381	0	0	19.4401519588	23.6998895447	27.1147624573	10.9154695072	0	9.0174189816	23.3019824261	27.1183914846	0
-PWY-6700: queuosine biosynthesis|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	11.5112630150	0	0	0	0	0	0	0
-PWY-6700: queuosine biosynthesis|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	9.4322010224	0	0
-PWY-6700: queuosine biosynthesis|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	15.9252859411	0
-PWY-6700: queuosine biosynthesis|g__Neisseria.s__Neisseria_flavescens	0	0	0	7.5219496620	0	0	0	0	0	0	0	0
-PWY-6700: queuosine biosynthesis|g__Neisseria.s__Neisseria_subflava	0	0	0	9.2608409469	0	0	0	0	0	0	0	0
-PWY-6700: queuosine biosynthesis|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	19.5046660630	0	0	0	0	0	0
-PWY-6700: queuosine biosynthesis|unclassified	14.1765662381	0	0	0	0	0	0	0	8.7549238581	8.6216214105	0	0
-PWY-6703: preQ0 biosynthesis	0	0	0	0	0	27.9514482659	0	0	14.7957466181	19.0133747974	0	0
-PWY-6703: preQ0 biosynthesis|g__Veillonella.s__Veillonella_atypica	0	0	0	0	0	11.3619794588	0	0	0	0	0	0
-PWY-6737: starch degradation V	9.7805357869	0	0	12.5797727841	17.6785813405	0	0	0	0	23.6708163985	25.7340288345	0
-PWY-6737: starch degradation V|g__Fusobacterium.s__Fusobacterium_nucleatum	9.7805357869	0	0	0	0	0	0	0	0	0	0	0
-PWY-6737: starch degradation V|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	13.1936278666	0	0
-PWY-6737: starch degradation V|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	3.5108250439	0	0	0	0	0	0	21.7032027319	0
-PWY-6803: phosphatidylcholine acyl editing	0	0	0	9.2313817626	0	0	0	0	0	22.7268821385	0	0
-PWY-6803: phosphatidylcholine acyl editing|g__Neisseria.s__Neisseria_flavescens	0	0	0	2.1007838313	0	0	0	0	0	1.1869333646	0	0
-PWY-6803: phosphatidylcholine acyl editing|g__Neisseria.s__Neisseria_subflava	0	0	0	6.5570333304	0	0	0	0	0	13.5232356440	0	0
-PWY-6897: thiamin salvage II	0	0	0	0	0	25.3803680668	0	0	0	30.1620658542	0	0
-PWY-6897: thiamin salvage II|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	11.5738148996	0	0
-PWY-6936: seleno-amino acid biosynthesis	0	0	0	10.2309447066	30.7378323829	0	12.1145106465	0	22.3877642272	30.4338884555	35.0814544598	0
-PWY-6936: seleno-amino acid biosynthesis|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	10.0512927152	0	0	0	0	0	0	0
-PWY-6936: seleno-amino acid biosynthesis|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	17.9645673968	0	0
-PWY-6936: seleno-amino acid biosynthesis|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	13.0752469191	0
-PWY-6936: seleno-amino acid biosynthesis|g__Rothia.s__Rothia_mucilaginosa	0	0	0	0	0	0	0	0	0	0	14.6869438862	0
-PWY-6936: seleno-amino acid biosynthesis|g__Veillonella.s__Veillonella_infantium	0	0	0	0	0	0	0	0	0	0	4.3010023865	0
-PWY-6936: seleno-amino acid biosynthesis|g__Veillonella.s__Veillonella_rogosae	0	0	0	0	0	0	0	0	0	0	3.2833983173	0
-PWY-6936: seleno-amino acid biosynthesis|unclassified	0	0	0	0	0	0	6.7321657427	0	0	8.9714924003	0	0
-PWY-7111: pyruvate fermentation to isobutanol (engineered)	11.6630086497	0	0	41.4918466703	32.4999970171	12.5968572125	11.4178665077	0	33.4958021927	43.6579283306	51.4789141284	5.7020701433
-PWY-7111: pyruvate fermentation to isobutanol (engineered)|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	16.7294673201	0	0	0	0	0	0	0
-PWY-7111: pyruvate fermentation to isobutanol (engineered)|g__Fusobacterium.s__Fusobacterium_nucleatum	11.6630086497	0	0	0	13.0661184016	0	0	0	0	0	0	0
-PWY-7111: pyruvate fermentation to isobutanol (engineered)|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	4.7685995308	0	0	0	0	0	11.2645482211	0	0
-PWY-7111: pyruvate fermentation to isobutanol (engineered)|g__Haemophilus.s__Haemophilus_sputorum	0	0	0	0	0	0	0	0	0	2.3298029700	0	0
-PWY-7111: pyruvate fermentation to isobutanol (engineered)|g__Neisseria.s__Neisseria_flavescens	0	0	0	6.1423985910	0	0	0	0	4.4441779633	4.0604860617	0	0
-PWY-7111: pyruvate fermentation to isobutanol (engineered)|g__Neisseria.s__Neisseria_subflava	0	0	0	13.4740814090	0	0	0	0	3.9988308085	12.7001366479	0	0
-PWY-7111: pyruvate fermentation to isobutanol (engineered)|g__Rothia.s__Rothia_mucilaginosa	0	0	0	0	0	0	0	0	0	0	15.7861914291	0
-PWY-7111: pyruvate fermentation to isobutanol (engineered)|g__Streptococcus.s__Streptococcus_australis	0	0	0	0	0	0	0	0	3.7495079988	0	0	0
-PWY-7111: pyruvate fermentation to isobutanol (engineered)|g__Streptococcus.s__Streptococcus_infantis	0	0	0	0	0	0	0	0	5.9918213630	0	0	0
-PWY-7111: pyruvate fermentation to isobutanol (engineered)|g__Streptococcus.s__Streptococcus_sp_A12	0	0	0	0	0	0	0	0	0.8092052412	0	0	0
-PWY-7111: pyruvate fermentation to isobutanol (engineered)|g__Streptococcus.s__Streptococcus_sp_F0442	0	0	0	0	0	0	0	0	1.8964836033	0	0	0
-PWY-7111: pyruvate fermentation to isobutanol (engineered)|g__Veillonella.s__Veillonella_atypica	0	0	0	0	0	10.0916366098	0	0	0	0	0	0
-PWY-7111: pyruvate fermentation to isobutanol (engineered)|unclassified	0	0	0	0	0	0	0	0	0	13.5181110403	8.3772353554	5.7020701433
-PWY-7115: C4 photosynthetic carbon assimilation cycle, NAD-ME type	0	0	0	0	0	0	0	0	0	18.8971901208	0	0
-PWY-7117: C4 photosynthetic carbon assimilation cycle, PEPCK type	0	0	0	0	0	0	0	0	0	0	22.6208616707	0
-PWY-7117: C4 photosynthetic carbon assimilation cycle, PEPCK type|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	21.4694077417	0
-PWY-7184: pyrimidine deoxyribonucleotides de novo biosynthesis I	0	0	0	0	0	0	0	0	0	40.3309468896	39.4854374776	0
-PWY-7184: pyrimidine deoxyribonucleotides de novo biosynthesis I|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	19.3408018801	0
-PWY-7187: pyrimidine deoxyribonucleotides de novo biosynthesis II	0	0	0	15.1885609429	0	0	0	0	22.5644608885	46.1079530523	33.1600981710	0
-PWY-7197: pyrimidine deoxyribonucleotide phosphorylation	0	13.2694946982	0	0	0	0	0	0	0	41.4735965309	32.8120730421	0
-PWY-7197: pyrimidine deoxyribonucleotide phosphorylation|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	8.3362278569	20.1693051172	0
-PWY-7197: pyrimidine deoxyribonucleotide phosphorylation|unclassified	0	0	0	0	0	0	0	0	0	9.1349672964	0	0
-PWY-7198: pyrimidine deoxyribonucleotides de novo biosynthesis IV	0	0	0	0	0	0	0	0	0	0	32.7297059675	0
-PWY-7199: pyrimidine deoxyribonucleosides salvage	0	0	0	0	13.2673626736	9.8998541052	8.7353468430	0	8.0836816612	0	27.2895069445	0
-PWY-7199: pyrimidine deoxyribonucleosides salvage|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	11.5237663316	0	0	0	0	0	0	0
-PWY-7199: pyrimidine deoxyribonucleosides salvage|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	9.8998541052	0	0	0	0	0	0
-PWY-7204: pyridoxal 5'-phosphate salvage II (plants)	0	0	0	0	0	0	0	0	0	8.0004151539	0	0
-PWY-7208: superpathway of pyrimidine nucleobases salvage	0	0	0	16.6112775539	0	11.1931307529	0	0	0	19.9301579457	30.4850802902	9.8093337733
-PWY-7208: superpathway of pyrimidine nucleobases salvage|g__Veillonella.s__Veillonella_infantium	0	0	0	0	0	0	0	0	0	0	2.0741508945	0
-PWY-7208: superpathway of pyrimidine nucleobases salvage|g__Veillonella.s__Veillonella_rogosae	0	0	0	0	0	0	0	0	0	0	7.6653907679	0
-PWY-7210: pyrimidine deoxyribonucleotides biosynthesis from CTP	0	11.9587138818	0	0	0	0	0	0	0	0	0	0
-PWY-7219: adenosine ribonucleotides de novo biosynthesis	22.1272014179	9.5943985388	0	24.9594991014	22.8336299515	25.6214485521	14.5735204054	0	33.1454410016	60.7290709301	30.0423447762	21.6441607588
-PWY-7219: adenosine ribonucleotides de novo biosynthesis|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	9.6088756602	0	0	0	0	0	0	0
-PWY-7219: adenosine ribonucleotides de novo biosynthesis|g__Fusobacterium.s__Fusobacterium_nucleatum	18.5024281186	0	0	0	0	0	0	0	0	0	0	0
-PWY-7219: adenosine ribonucleotides de novo biosynthesis|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	19.8764053715	0	0
-PWY-7219: adenosine ribonucleotides de novo biosynthesis|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	21.8469108779	0	0	0	0	0	0
-PWY-7219: adenosine ribonucleotides de novo biosynthesis|unclassified	0	0	0	18.5918531426	0	0	10.5082545760	0	10.3993275174	17.9805291391	11.7071200383	19.1655260662
-PWY-7220: adenosine deoxyribonucleotides de novo biosynthesis II	25.0477713300	14.6583231340	0	14.6022051242	25.6741479440	35.4427490803	0	0	39.9679464692	49.1187650943	49.9840845702	19.1006713373
-PWY-7220: adenosine deoxyribonucleotides de novo biosynthesis II|g__Capnocytophaga.s__Capnocytophaga_leadbetteri	0	0	0	0	10.0597844734	0	0	0	0	0	0	0
-PWY-7220: adenosine deoxyribonucleotides de novo biosynthesis II|g__Fusobacterium.s__Fusobacterium_nucleatum	13.6752529578	0	0	0	12.9640425108	0	0	0	0	0	0	0
-PWY-7220: adenosine deoxyribonucleotides de novo biosynthesis II|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	19.9264101560	0	0
-PWY-7220: adenosine deoxyribonucleotides de novo biosynthesis II|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	22.2232035830	0
-PWY-7220: adenosine deoxyribonucleotides de novo biosynthesis II|g__Neisseria.s__Neisseria_flavescens	0	0	0	4.1152263374	0	0	0	0	0	0	0	0
-PWY-7220: adenosine deoxyribonucleotides de novo biosynthesis II|g__Neisseria.s__Neisseria_subflava	0	0	0	4.4005535976	0	0	0	0	0	0	0	0
-PWY-7220: adenosine deoxyribonucleotides de novo biosynthesis II|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	15.5833943075	0	0	0	0	0	0
-PWY-7220: adenosine deoxyribonucleotides de novo biosynthesis II|g__Veillonella.s__Veillonella_infantium	0	0	0	0	0	0	0	0	0	0	2.4086712164	0
-PWY-7220: adenosine deoxyribonucleotides de novo biosynthesis II|g__Veillonella.s__Veillonella_rogosae	0	0	0	0	0	0	0	0	0	0	7.5188372297	0
-PWY-7220: adenosine deoxyribonucleotides de novo biosynthesis II|unclassified	9.1208628306	0	0	3.8680283920	0	0	0	0	10.5516050043	18.0003554967	15.6463455895	10.0397895545
-PWY-7221: guanosine ribonucleotides de novo biosynthesis	19.2844281852	9.7626744643	0	14.2506615985	19.0677200921	21.4193982621	0	0	16.2867148492	41.3874502226	43.3208727505	9.6463607315
-PWY-7221: guanosine ribonucleotides de novo biosynthesis|g__Fusobacterium.s__Fusobacterium_nucleatum	18.0601649163	0	0	0	11.6634131678	0	0	0	0	0	0	0
-PWY-7221: guanosine ribonucleotides de novo biosynthesis|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	11.7860492985	0
-PWY-7221: guanosine ribonucleotides de novo biosynthesis|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	16.8305488983	0	0	0	0	0	0
-PWY-7221: guanosine ribonucleotides de novo biosynthesis|g__Veillonella.s__Veillonella_infantium	0	0	0	0	0	0	0	0	0	0	1.3032954757	0
-PWY-7221: guanosine ribonucleotides de novo biosynthesis|g__Veillonella.s__Veillonella_rogosae	0	0	0	0	0	0	0	0	0	0	8.3593802295	0
-PWY-7221: guanosine ribonucleotides de novo biosynthesis|unclassified	0	0	0	0	0	0	0	0	15.3201860423	14.8116208509	8.3427448511	0
-PWY-7222: guanosine deoxyribonucleotides de novo biosynthesis II	25.0477713300	14.6583231340	0	14.6022051242	25.6741479440	35.4427490803	0	0	39.9679464692	49.1187650943	49.9840845702	19.1006713373
-PWY-7222: guanosine deoxyribonucleotides de novo biosynthesis II|g__Capnocytophaga.s__Capnocytophaga_leadbetteri	0	0	0	0	10.0597844734	0	0	0	0	0	0	0
-PWY-7222: guanosine deoxyribonucleotides de novo biosynthesis II|g__Fusobacterium.s__Fusobacterium_nucleatum	13.6752529578	0	0	0	12.9640425108	0	0	0	0	0	0	0
-PWY-7222: guanosine deoxyribonucleotides de novo biosynthesis II|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	19.9264101560	0	0
-PWY-7222: guanosine deoxyribonucleotides de novo biosynthesis II|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	22.2232035830	0
-PWY-7222: guanosine deoxyribonucleotides de novo biosynthesis II|g__Neisseria.s__Neisseria_flavescens	0	0	0	4.1152263374	0	0	0	0	0	0	0	0
-PWY-7222: guanosine deoxyribonucleotides de novo biosynthesis II|g__Neisseria.s__Neisseria_subflava	0	0	0	4.4005535976	0	0	0	0	0	0	0	0
-PWY-7222: guanosine deoxyribonucleotides de novo biosynthesis II|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	15.5833943075	0	0	0	0	0	0
-PWY-7222: guanosine deoxyribonucleotides de novo biosynthesis II|g__Veillonella.s__Veillonella_infantium	0	0	0	0	0	0	0	0	0	0	2.4086712164	0
-PWY-7222: guanosine deoxyribonucleotides de novo biosynthesis II|g__Veillonella.s__Veillonella_rogosae	0	0	0	0	0	0	0	0	0	0	7.5188372297	0
-PWY-7222: guanosine deoxyribonucleotides de novo biosynthesis II|unclassified	9.1208628306	0	0	3.8680283920	0	0	0	0	10.5516050043	18.0003554967	15.6463455895	10.0397895545
-PWY-7228: superpathway of guanosine nucleotides de novo biosynthesis I	0	11.1651655259	0	15.2288975173	0	25.0768247441	0	0	0	40.4380009374	46.5459950859	11.7206632246
-PWY-7228: superpathway of guanosine nucleotides de novo biosynthesis I|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	13.9969751815	0
-PWY-7228: superpathway of guanosine nucleotides de novo biosynthesis I|g__Veillonella.s__Veillonella_infantium	0	0	0	0	0	0	0	0	0	0	1.5919794559	0
-PWY-7228: superpathway of guanosine nucleotides de novo biosynthesis I|g__Veillonella.s__Veillonella_rogosae	0	0	0	0	0	0	0	0	0	0	8.2929943854	0
-PWY-7228: superpathway of guanosine nucleotides de novo biosynthesis I|unclassified	0	0	0	0	0	0	0	0	0	11.7941061280	0	0
-PWY-7229: superpathway of adenosine nucleotides de novo biosynthesis I	22.6667990707	0	0	20.6573629449	21.1588935494	20.6893149793	0	0	31.8446371376	54.9405230980	31.7592558627	21.0238313970
-PWY-7229: superpathway of adenosine nucleotides de novo biosynthesis I|g__Fusobacterium.s__Fusobacterium_nucleatum	17.3624255307	0	0	0	0	0	0	0	0	0	0	0
-PWY-7229: superpathway of adenosine nucleotides de novo biosynthesis I|unclassified	0	0	0	0	0	0	0	0	0	17.7119553459	0	13.6466561888
-PWY-7234: inosine-5'-phosphate biosynthesis III	0	0	0	0	0	0	0	0	28.4422525667	20.2402723061	30.9181182784	0
-PWY-7237: myo-, chiro- and scillo-inositol degradation	0	0	0	0	0	0	0	0	0	0	10.7512931004	0
-PWY-724: superpathway of L-lysine, L-threonine and L-methionine biosynthesis II	0	0	0	0	0	0	0	0	13.4289997839	0	0	0
-PWY-7279: aerobic respiration II (cytochrome c) (yeast)	0	0	0	0	0	0	0	0	17.5845030353	0	10.1681109057	0
-PWY-7279: aerobic respiration II (cytochrome c) (yeast)|g__Neisseria.s__Neisseria_flavescens	0	0	0	0	0	0	0	0	13.0869850259	0	0	0
-PWY-7282: 4-amino-2-methyl-5-phosphomethylpyrimidine biosynthesis (yeast)	0	0	0	0	0	0	0	0	0	12.9907706868	0	0
-PWY-7357: thiamin formation from pyrithiamine and oxythiamine (yeast)	0	0	0	0	0	22.6803769718	0	0	0	33.5930186514	0	0
-PWY-7357: thiamin formation from pyrithiamine and oxythiamine (yeast)|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	13.6345068908	0	0
-PWY-7357: thiamin formation from pyrithiamine and oxythiamine (yeast)|g__Streptococcus.s__Streptococcus_mitis	0	0	0	0	0	0	0	0	0	7.3827980805	0	0
-PWY-7357: thiamin formation from pyrithiamine and oxythiamine (yeast)|unclassified	0	0	0	0	0	0	0	0	0	8.3733161396	0	0
-PWY-7388: octanoyl-[acyl-carrier protein] biosynthesis (mitochondria, yeast)	14.2785142579	0	0	12.6579317841	18.6416126481	0	0	0	19.7007231283	24.0785261189	0	0
-PWY-7388: octanoyl-[acyl-carrier protein] biosynthesis (mitochondria, yeast)|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	13.4480648684	0	0	0	0	0	0	0
-PWY-7388: octanoyl-[acyl-carrier protein] biosynthesis (mitochondria, yeast)|g__Neisseria.s__Neisseria_flavescens	0	0	0	4.7098402019	0	0	0	0	0	4.7560095609	0	0
-PWY-7388: octanoyl-[acyl-carrier protein] biosynthesis (mitochondria, yeast)|g__Neisseria.s__Neisseria_subflava	0	0	0	5.1984461818	0	0	0	0	0	5.8099743522	0	0
-PWY-7400: L-arginine biosynthesis IV (archaebacteria)	0	0	0	0	0	0	0	0	0	21.7605136484	0	0
-PWY-7400: L-arginine biosynthesis IV (archaebacteria)|g__Neisseria.s__Neisseria_flavescens	0	0	0	0	0	0	0	0	0	5.1753431251	0	0
-PWY-7400: L-arginine biosynthesis IV (archaebacteria)|g__Neisseria.s__Neisseria_subflava	0	0	0	0	0	0	0	0	0	6.3765908603	0	0
-PWY-7539: 6-hydroxymethyl-dihydropterin diphosphate biosynthesis III (Chlamydia)	0	0	0	11.6900148310	13.4090921205	9.8680927469	0	0	0	8.8371267451	0	0
-PWY-7663: gondoate biosynthesis (anaerobic)	18.5542039972	0	0	15.3388096538	19.5860944376	21.9140856695	0	0	20.5984742094	33.1528016752	15.2498444047	20.3726627952
-PWY-7663: gondoate biosynthesis (anaerobic)|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	18.5735924884	0	0	0	0	0	0	0
-PWY-7663: gondoate biosynthesis (anaerobic)|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	14.7342104669	4.4064995869
-PWY-7663: gondoate biosynthesis (anaerobic)|g__Neisseria.s__Neisseria_flavescens	0	0	0	4.4174489232	0	0	0	0	0	5.4127198917	0	0
-PWY-7663: gondoate biosynthesis (anaerobic)|g__Neisseria.s__Neisseria_subflava	0	0	0	6.6021264450	0	0	0	0	0	7.1939461910	0	0
-PWY-7663: gondoate biosynthesis (anaerobic)|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	17.6838168336	0	0	0	0	0	0
-PWY-7664: oleate biosynthesis IV (anaerobic)	0	0	0	15.7939881654	15.4070027703	0	0	0	0	23.0638577838	0	15.5956606678
-PWY-7664: oleate biosynthesis IV (anaerobic)|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	14.8607857182	0	0	0	0	0	0	0
-PWY-7664: oleate biosynthesis IV (anaerobic)|g__Neisseria.s__Neisseria_flavescens	0	0	0	3.0109685282	0	0	0	0	0	5.4757019933	0	0
-PWY-7664: oleate biosynthesis IV (anaerobic)|g__Neisseria.s__Neisseria_subflava	0	0	0	5.7765398155	0	0	0	0	0	6.1853728752	0	0
-PWY-841: superpathway of purine nucleotides de novo biosynthesis I	0	0	0	0	0	0	0	0	0	35.9533816266	25.9640911307	0
-PWY0-1061: superpathway of L-alanine biosynthesis	0	0	0	0	0	0	0	0	0	34.6792067967	19.4896350155	0
-PWY0-1061: superpathway of L-alanine biosynthesis|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	12.5330223271	0
-PWY0-1241: ADP-L-glycero-&beta;-D-manno-heptose biosynthesis	0	0	0	0	7.8633118422	0	0	0	0	11.9883009049	12.6928831162	0
-PWY0-1261: anhydromuropeptides recycling	0	0	0	0	0	0	0	0	0	10.2935377505	20.0538044353	0
-PWY0-1296: purine ribonucleosides degradation	0	0	0	0	0	0	21.4631700559	0	19.8714218456	16.8396296517	0	0
-PWY0-1319: CDP-diacylglycerol biosynthesis II	10.0242918910	0	0	10.2778373063	17.8181149230	19.1559994426	0	0	13.7460226514	49.8469738376	32.0475122105	0
-PWY0-1319: CDP-diacylglycerol biosynthesis II|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	15.4609283426	0	0	0	0	0	0	0
-PWY0-1319: CDP-diacylglycerol biosynthesis II|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	17.6125002176	0	0
-PWY0-1319: CDP-diacylglycerol biosynthesis II|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	15.0371542333	0
-PWY0-1319: CDP-diacylglycerol biosynthesis II|g__Neisseria.s__Neisseria_subflava	0	0	0	0	0	0	0	0	0	2.0565551700	0	0
-PWY0-1319: CDP-diacylglycerol biosynthesis II|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	16.3687313107	0	0	0	0	0	0
-PWY0-1319: CDP-diacylglycerol biosynthesis II|unclassified	9.4816164179	0	0	0	8.8787123267	0	0	0	0	0	0	0
-PWY0-1479: tRNA processing	0	0	0	0	0	0	0	0	15.6915167648	19.1783931085	19.6332054519	0
-PWY0-1479: tRNA processing|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	14.9119873065	0	0
-PWY0-1586: peptidoglycan maturation (meso-diaminopimelate containing)	13.0385132925	0	0	66.9526459363	42.0865250377	0	5.3280154786	0	41.3722362844	83.9222412458	48.5499004896	11.3223300378
-PWY0-1586: peptidoglycan maturation (meso-diaminopimelate containing)|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	36.3701976543	0	0	0	0	0	0	0
-PWY0-1586: peptidoglycan maturation (meso-diaminopimelate containing)|g__Fusobacterium.s__Fusobacterium_nucleatum	13.0385132925	0	0	0	0	0	0	0	0	0	0	0
-PWY0-1586: peptidoglycan maturation (meso-diaminopimelate containing)|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	17.2073053084	0	0
-PWY0-1586: peptidoglycan maturation (meso-diaminopimelate containing)|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	38.6201775074	0
-PWY0-1586: peptidoglycan maturation (meso-diaminopimelate containing)|g__Neisseria.s__Neisseria_flavescens	0	0	0	22.8636235308	0	0	0	0	11.6832340132	25.1196074041	0	0
-PWY0-1586: peptidoglycan maturation (meso-diaminopimelate containing)|g__Neisseria.s__Neisseria_subflava	0	0	0	25.0755341231	0	0	0	0	17.6785144708	33.0238804269	0	0
-PWY0-1586: peptidoglycan maturation (meso-diaminopimelate containing)|g__Streptococcus.s__Streptococcus_mitis	0	0	0	0	0	0	0	0	0	0	9.7919216646	0
-PWY0-1586: peptidoglycan maturation (meso-diaminopimelate containing)|unclassified	0	0	0	6.4464141821	0	0	4.3010752688	0	10.2860012292	0	0	11.3223300378
-PWY0-162: superpathway of pyrimidine ribonucleotides de novo biosynthesis	0	0	0	16.8939749857	0	0	0	0	0	0	18.0433360362	0
-PWY0-166: superpathway of pyrimidine deoxyribonucleotides de novo biosynthesis (E. coli)	0	0	0	0	0	0	0	0	0	43.9816901434	36.8808291518	0
-PWY0-166: superpathway of pyrimidine deoxyribonucleotides de novo biosynthesis (E. coli)|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	19.1865390738	0
-PWY0-845: superpathway of pyridoxal 5'-phosphate biosynthesis and salvage	0	0	0	0	0	0	0	0	0	9.5946011625	13.9977385660	0
-PWY0-862: (5Z)-dodec-5-enoate biosynthesis	0	0	0	17.7803760027	14.4919397576	0	0	0	0	21.7167842159	14.1703873613	14.9366363515
-PWY0-862: (5Z)-dodec-5-enoate biosynthesis|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	14.1124587394	0	0	0	0	0	0	0
-PWY0-862: (5Z)-dodec-5-enoate biosynthesis|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	13.8697057135	0
-PWY0-862: (5Z)-dodec-5-enoate biosynthesis|g__Neisseria.s__Neisseria_flavescens	0	0	0	2.8740220342	0	0	0	0	0	5.6672837698	0	0
-PWY0-862: (5Z)-dodec-5-enoate biosynthesis|g__Neisseria.s__Neisseria_subflava	0	0	0	5.5357427064	0	0	0	0	0	5.8025785029	0	0
-PWY4FS-7: phosphatidylglycerol biosynthesis I (plastidic)	11.8336034647	0	0	0	17.9889428293	12.7174968735	0	0	10.8076590592	44.0464166872	34.6947355693	0
-PWY4FS-7: phosphatidylglycerol biosynthesis I (plastidic)|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	19.7370513691	0	0
-PWY4FS-7: phosphatidylglycerol biosynthesis I (plastidic)|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	15.6944040427	0
-PWY4FS-8: phosphatidylglycerol biosynthesis II (non-plastidic)	11.8336034647	0	0	0	17.9889428293	12.7174968735	0	0	10.8076590592	44.0464166872	34.6947355693	0
-PWY4FS-8: phosphatidylglycerol biosynthesis II (non-plastidic)|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	19.7370513691	0	0
-PWY4FS-8: phosphatidylglycerol biosynthesis II (non-plastidic)|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	15.6944040427	0
-PWY66-400: glycolysis VI (metazoan)	0	0	0	11.8749407292	20.2573457613	0	0	0	0	0	13.5876988498	0
-PWY66-422: D-galactose degradation V (Leloir pathway)	12.3256976023	0	0	0	18.8131097626	0	0	0	0	10.5528745597	23.4961220304	0
-PWY66-422: D-galactose degradation V (Leloir pathway)|g__Fusobacterium.s__Fusobacterium_nucleatum	12.3256976023	0	0	0	0	0	0	0	0	0	0	0
-PYRIDNUCSYN-PWY: NAD biosynthesis I (from aspartate)	14.4055492778	0	0	0	0	17.3000829411	0	0	0	0	0	0
-PYRIDNUCSYN-PWY: NAD biosynthesis I (from aspartate)|g__Fusobacterium.s__Fusobacterium_nucleatum	11.6619573090	0	0	0	0	0	0	0	0	0	0	0
-PYRIDNUCSYN-PWY: NAD biosynthesis I (from aspartate)|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	14.7646017731	0	0	0	0	0	0
-PYRIDOXSYN-PWY: pyridoxal 5'-phosphate biosynthesis I	0	0	0	0	0	0	0	0	0	14.7335941461	10.2893508433	0
-RIBOSYN2-PWY: flavin biosynthesis I (bacteria and plants)	0	0	0	13.5787819757	14.0097047118	0	0	0	0	29.3065160521	12.1263364602	0
-RIBOSYN2-PWY: flavin biosynthesis I (bacteria and plants)|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	11.3083095907	0
-RIBOSYN2-PWY: flavin biosynthesis I (bacteria and plants)|g__Neisseria.s__Neisseria_subflava	0	0	0	6.8214854878	0	0	0	0	0	6.5551735125	0	0
-SALVADEHYPOX-PWY: adenosine nucleotides degradation II	0	0	0	0	0	0	0	0	17.9735961172	0	10.0629835513	0
-SER-GLYSYN-PWY: superpathway of L-serine and glycine biosynthesis I	0	0	0	15.7751210848	0	9.4178632728	0	0	0	26.5693497902	22.9794776489	0
-SER-GLYSYN-PWY: superpathway of L-serine and glycine biosynthesis I|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	16.2798241600	0	0
-SER-GLYSYN-PWY: superpathway of L-serine and glycine biosynthesis I|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	18.5553518671	0
-SER-GLYSYN-PWY: superpathway of L-serine and glycine biosynthesis I|g__Neisseria.s__Neisseria_subflava	0	0	0	4.7733393624	0	0	0	0	0	0	0	0
-SO4ASSIM-PWY: sulfate reduction I (assimilatory)	0	0	0	0	0	0	0	0	10.8595992190	0	0	0
-SO4ASSIM-PWY: sulfate reduction I (assimilatory)|g__Neisseria.s__Neisseria_flavescens	0	0	0	0	0	0	0	0	2.5038813039	0	0	0
-SO4ASSIM-PWY: sulfate reduction I (assimilatory)|g__Neisseria.s__Neisseria_subflava	0	0	0	0	0	0	0	0	6.8001503225	0	0	0
-THISYNARA-PWY: superpathway of thiamin diphosphate biosynthesis III (eukaryotes)	0	0	0	7.3832312630	0	25.1314344771	0	0	0	20.7665889115	0	0
-THRESYN-PWY: superpathway of L-threonine biosynthesis	0	0	0	13.0503965279	16.8696227955	18.9595957842	0	0	12.7762678850	26.7114168143	23.9364779369	0
-THRESYN-PWY: superpathway of L-threonine biosynthesis|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	13.1214992608	0	0	0	0	0	0	0
-THRESYN-PWY: superpathway of L-threonine biosynthesis|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	20.5516184960	0
-THRESYN-PWY: superpathway of L-threonine biosynthesis|g__Neisseria.s__Neisseria_flavescens	0	0	0	1.8355687242	0	0	0	0	0	0	0	0
-THRESYN-PWY: superpathway of L-threonine biosynthesis|g__Neisseria.s__Neisseria_subflava	0	0	0	5.3078588121	0	0	0	0	0	0	0	0
-TRNA-CHARGING-PWY: tRNA charging	0	0	0	0	21.0551104805	23.1378407470	0	0	19.4484014959	34.0921663376	24.4421653308	0
-TRNA-CHARGING-PWY: tRNA charging|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	8.8203948662	0	0
-TRNA-CHARGING-PWY: tRNA charging|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	16.8912557708	0	0	0	0	0	0
-TRPSYN-PWY: L-tryptophan biosynthesis	0	0	0	16.0756155765	0	0	0	0	0	23.3803154870	19.4671871014	0
-TRPSYN-PWY: L-tryptophan biosynthesis|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	16.6180312077	0	0
-UDPNAGSYN-PWY: UDP-N-acetyl-D-glucosamine biosynthesis I	14.7048942163	0	0	17.9498958483	22.4792608091	0	0	0	22.0409169307	14.6278230890	16.3592391295	14.3762559961
-UDPNAGSYN-PWY: UDP-N-acetyl-D-glucosamine biosynthesis I|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	12.4380681316	0	0	0	0	0	0	0
-UDPNAGSYN-PWY: UDP-N-acetyl-D-glucosamine biosynthesis I|g__Neisseria.s__Neisseria_flavescens	0	0	0	7.7179216654	0	0	0	0	8.0011394654	0	0	0
-UDPNAGSYN-PWY: UDP-N-acetyl-D-glucosamine biosynthesis I|g__Neisseria.s__Neisseria_subflava	0	0	0	7.6639858831	0	0	0	0	3.1009225749	0	0	0
-UDPNAGSYN-PWY: UDP-N-acetyl-D-glucosamine biosynthesis I|unclassified	0	0	0	0	0	0	0	0	0	9.4856782100	0	0
-VALSYN-PWY: L-valine biosynthesis	13.7720704625	0	0	33.3297033603	32.4999970171	12.0870401899	11.4178665077	0	25.7274881640	42.8370408055	51.4789141284	0
-VALSYN-PWY: L-valine biosynthesis|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	16.7294673201	0	0	0	0	0	0	0
-VALSYN-PWY: L-valine biosynthesis|g__Fusobacterium.s__Fusobacterium_nucleatum	13.7720704625	0	0	0	13.7547732303	0	0	0	0	0	0	0
-VALSYN-PWY: L-valine biosynthesis|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	8.6927413514	0	0	0	0	0	13.5819962898	0	0
-VALSYN-PWY: L-valine biosynthesis|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	12.9280464454	0
-VALSYN-PWY: L-valine biosynthesis|g__Neisseria.s__Neisseria_flavescens	0	0	0	6.3465777866	0	0	0	0	0	4.4937557757	0	0
-VALSYN-PWY: L-valine biosynthesis|g__Neisseria.s__Neisseria_subflava	0	0	0	2.0254587848	0	0	0	0	0	7.8752093820	0	0
-VALSYN-PWY: L-valine biosynthesis|g__Streptococcus.s__Streptococcus_australis	0	0	0	0	0	0	0	0	4.4271949515	0	0	0
-VALSYN-PWY: L-valine biosynthesis|g__Streptococcus.s__Streptococcus_infantis	0	0	0	0	0	0	0	0	4.2015571377	0	0	0
-VALSYN-PWY: L-valine biosynthesis|g__Streptococcus.s__Streptococcus_sp_A12	0	0	0	0	0	0	0	0	0.9278327693	0	0	0
-VALSYN-PWY: L-valine biosynthesis|g__Streptococcus.s__Streptococcus_sp_F0442	0	0	0	0	0	0	0	0	1.4049877064	0	0	0
-VALSYN-PWY: L-valine biosynthesis|g__Veillonella.s__Veillonella_atypica	0	0	0	0	0	11.3498383526	0	0	0	0	0	0
-VALSYN-PWY: L-valine biosynthesis|unclassified	0	0	0	0	0	0	0	0	0	16.2036420274	9.1102654229	0
+UNMAPPED	17454.0083099194	23730.5023508297	0.0000000000	20263.5386335756	16420.1329690630	12317.6849363429	25126.5749749150	0.0000000000	18589.4670548639	18648.2213970206	18719.1344972315	29362.4380051070
+UNINTEGRATED	13541.9892468728	8824.3083215074	0.0000000000	15909.0036265964	14311.6534845937	12946.9268600262	10467.7817966915	0.0000000000	18759.6309693295	25174.5859273966	21215.4884605422	14227.7590642614
+UNINTEGRATED|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	4293.5390920027	0	0	0	0	0	0	0
+UNINTEGRATED|g__Capnocytophaga.s__Capnocytophaga_leadbetteri	0	0	0	0	1776.1267699636	0	0	0	0	0	0	0
+UNINTEGRATED|g__Fusobacterium.s__Fusobacterium_nucleatum	6077.7497413782	0	0	0	6958.2327714775	0	0	0	0	0	0	0
+UNINTEGRATED|g__Gemella.s__Gemella_sanguinis	0	0	0	0	0	0	0	0	1081.2446779911	0	0	0
+UNINTEGRATED|g__Haemophilus.s__Haemophilus_influenzae	0	0	0	0	0	0	0	0	0	0	863.7825449698	0
+UNINTEGRATED|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	247.5661219265	0	0	0	0	0	3967.5533214835	0	0
+UNINTEGRATED|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	491.3430043914	0	0	780.1817121270	420.4060885029	6319.1335580056	184.8992462933
+UNINTEGRATED|g__Neisseria.s__Neisseria_flavescens	0	0	0	2810.4962512874	0	0	0	0	2040.2638937644	2758.2738125188	471.0218632478	0
+UNINTEGRATED|g__Neisseria.s__Neisseria_meningitidis	0	0	0	763.8463532708	0	0	0	0	772.9213222663	850.1661990017	0	0
+UNINTEGRATED|g__Neisseria.s__Neisseria_subflava	0	0	0	3247.0992882157	0	0	0	0	2706.2514188576	2516.2282197625	0	0
+UNINTEGRATED|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	5439.7229373279	0	0	0	0	0	0
+UNINTEGRATED|g__Rothia.s__Rothia_mucilaginosa	0	0	0	0	0	0	0	0	0	0	3292.5077392533	0
+UNINTEGRATED|g__Sphingomonas.s__Sphingomonas_melonis	0	2905.1994540407	0	0	0	0	0	0	0	0	0	0
+UNINTEGRATED|g__Streptococcus.s__Streptococcus_australis	0	0	0	0	0	0	0	0	915.7047851215	0	0	0
+UNINTEGRATED|g__Streptococcus.s__Streptococcus_infantis	0	0	0	0	0	0	0	0	796.8478945805	0	0	0
+UNINTEGRATED|g__Streptococcus.s__Streptococcus_mitis	0	0	0	0	0	0	2845.3737352087	0	0	2603.5031904419	470.5089355963	0
+UNINTEGRATED|g__Streptococcus.s__Streptococcus_sp_A12	0	0	0	0	0	0	0	0	465.3469885640	0	0	0
+UNINTEGRATED|g__Veillonella.s__Veillonella_atypica	0	0	0	0	0	2720.0647087464	0	0	0	0	0	0
+UNINTEGRATED|g__Veillonella.s__Veillonella_dispar	0	0	0	0	0	0	0	0	0	0	394.3081135891	0
+UNINTEGRATED|g__Veillonella.s__Veillonella_infantium	0	0	0	0	0	0	0	0	0	0	412.3734575042	0
+UNINTEGRATED|g__Veillonella.s__Veillonella_rogosae	0	0	0	0	0	0	0	0	0	0	1830.4442556268	0
+UNINTEGRATED|unclassified	5442.9815662447	0	0	3135.6309774270	2193.4830234663	0	3401.9817344489	0	3243.5159720230	4434.5318296907	2481.2339604069	4711.8569333443
+1CMET2-PWY: folate transformations III (E. coli)	0	0	0	8.8118215999	0	14.4075938291	0	0	11.6573488935	13.6228536631	13.8420945596	0
+1CMET2-PWY: folate transformations III (E. coli)|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	8.6533979409	0	0	0	0	0	0
+ANAEROFRUCAT-PWY: homolactic fermentation	0	0	0	9.3303024632	9.8009794246	9.9711529503	0	0	11.3441001305	12.1547451837	8.3993978444	0
+ANAGLYCOLYSIS-PWY: glycolysis III (from glucose)	9.0133259106	0	0	12.1524716262	14.4209373451	16.1482280344	0	0	18.6443731099	16.1186319619	10.5387562029	0
+ANAGLYCOLYSIS-PWY: glycolysis III (from glucose)|g__Streptococcus.s__Streptococcus_infantis	0	0	0	0	0	0	0	0	3.7083711043	0	0	0
+ARGININE-SYN4-PWY: L-ornithine biosynthesis II	0	0	0	0	6.0529702041	0	0	0	0	0	0	0
+ARGSYN-PWY: L-arginine biosynthesis I (via L-ornithine)	0	0	0	0	0	0	0	0	0	10.7196765935	0	0
+ARGSYNBSUB-PWY: L-arginine biosynthesis II (acetyl cycle)	0	0	0	0	0	0	0	0	8.3528728284	12.5919828561	0	0
+ARGSYNBSUB-PWY: L-arginine biosynthesis II (acetyl cycle)|g__Neisseria.s__Neisseria_flavescens	0	0	0	0	0	0	0	0	0	3.1137142568	0	0
+ARGSYNBSUB-PWY: L-arginine biosynthesis II (acetyl cycle)|g__Neisseria.s__Neisseria_subflava	0	0	0	0	0	0	0	0	0	4.2206138419	0	0
+ARO-PWY: chorismate biosynthesis I	10.7697277850	0	0	0	7.6136825258	9.1234969982	0	0	13.7720796836	19.1419739480	15.3277754851	0
+ARO-PWY: chorismate biosynthesis I|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	7.7557552628	0
+ASPASN-PWY: superpathway of L-aspartate and L-asparagine biosynthesis	0	0	0	13.9644187766	0	13.2328587388	0	0	9.4528416876	13.0979658257	12.2451842979	0
+ASPASN-PWY: superpathway of L-aspartate and L-asparagine biosynthesis|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	6.7384183435	0	0
+ASPASN-PWY: superpathway of L-aspartate and L-asparagine biosynthesis|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	9.4583347024	0
+ASPASN-PWY: superpathway of L-aspartate and L-asparagine biosynthesis|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	10.1959345942	0	0	0	0	0	0
+ASPASN-PWY: superpathway of L-aspartate and L-asparagine biosynthesis|unclassified	0	0	0	0	0	0	0	0	4.6314164415	0	0	0
+BRANCHED-CHAIN-AA-SYN-PWY: superpathway of branched chain amino acid biosynthesis	9.2298361348	0	0	21.9567454658	18.9353601183	0	8.0119763523	0	10.0009614295	24.0665412198	25.2190240571	0
+BRANCHED-CHAIN-AA-SYN-PWY: superpathway of branched chain amino acid biosynthesis|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	8.4281705535	0	0	0	0	0	0	0
+BRANCHED-CHAIN-AA-SYN-PWY: superpathway of branched chain amino acid biosynthesis|g__Fusobacterium.s__Fusobacterium_nucleatum	9.2298361348	0	0	0	7.8569906145	0	0	0	0	0	0	0
+BRANCHED-CHAIN-AA-SYN-PWY: superpathway of branched chain amino acid biosynthesis|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	4.7588531340	0	0
+BRANCHED-CHAIN-AA-SYN-PWY: superpathway of branched chain amino acid biosynthesis|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	8.1505222230	0
+BRANCHED-CHAIN-AA-SYN-PWY: superpathway of branched chain amino acid biosynthesis|g__Neisseria.s__Neisseria_flavescens	0	0	0	0.9775184543	0	0	0	0	0	0	0	0
+CALVIN-PWY: Calvin-Benson-Bassham cycle	7.8440676644	0	0	13.7431495590	17.3496584185	12.6931372509	0	0	17.7417325776	19.6525113860	12.4762709085	0
+CALVIN-PWY: Calvin-Benson-Bassham cycle|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	13.4474066686	0	0	0	0	0	0	0
+CALVIN-PWY: Calvin-Benson-Bassham cycle|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	9.3201248132	0
+CALVIN-PWY: Calvin-Benson-Bassham cycle|g__Neisseria.s__Neisseria_flavescens	0	0	0	2.4046148811	0	0	0	0	2.3881604277	0	0	0
+CALVIN-PWY: Calvin-Benson-Bassham cycle|g__Neisseria.s__Neisseria_subflava	0	0	0	3.9206424086	0	0	0	0	2.1555892614	0	0	0
+CITRULBIO-PWY: L-citrulline biosynthesis	0	0	0	0	5.6690996677	0	0	0	0	0	0	0
+COA-PWY-1: superpathway of coenzyme A biosynthesis III (mammals)	0	0	0	6.5230756799	13.0934317357	7.3894008878	0	0	7.8212976528	11.9247567999	14.0356754976	0
+COA-PWY-1: superpathway of coenzyme A biosynthesis III (mammals)|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	8.2360262089	0	0	0	0	0	0	0
+COA-PWY-1: superpathway of coenzyme A biosynthesis III (mammals)|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	12.3293813535	0
+COA-PWY-1: superpathway of coenzyme A biosynthesis III (mammals)|g__Neisseria.s__Neisseria_flavescens	0	0	0	0	0	0	0	0	0	1.4845893429	0	0
+COA-PWY-1: superpathway of coenzyme A biosynthesis III (mammals)|g__Neisseria.s__Neisseria_subflava	0	0	0	0	0	0	0	0	0	2.1560427132	0	0
+COA-PWY: coenzyme A biosynthesis I (prokaryotic)	4.3391007214	8.4010766473	0	6.2134117073	11.3836110990	10.5157719636	0	0	11.8542064417	13.9028126506	12.5291244315	0
+COA-PWY: coenzyme A biosynthesis I (prokaryotic)|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	9.0117152298	0	0	0	0	0	0	0
+COA-PWY: coenzyme A biosynthesis I (prokaryotic)|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	4.7877433770	0	11.7223791599	0
+COA-PWY: coenzyme A biosynthesis I (prokaryotic)|g__Neisseria.s__Neisseria_flavescens	0	0	0	0	0	0	0	0	0	4.0399241457	0	0
+COA-PWY: coenzyme A biosynthesis I (prokaryotic)|g__Neisseria.s__Neisseria_subflava	0	0	0	0	0	0	0	0	0	2.1011138512	0	0
+COA-PWY: coenzyme A biosynthesis I (prokaryotic)|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	10.4479363564	0	0	0	0	0	0
+COMPLETE-ARO-PWY: superpathway of aromatic amino acid biosynthesis	0	0	0	0	8.2820898238	9.0627483537	0	0	14.5964886236	20.0992840677	14.0058656139	0
+DAPLYSINESYN-PWY: L-lysine biosynthesis I	0	0	0	0	0	0	0	0	12.8765275644	13.1980782723	16.3165620742	0
+DTDPRHAMSYN-PWY: dTDP-&beta;-L-rhamnose biosynthesis	10.0771981249	6.9242068775	0	0	13.6685310681	8.2990517092	0	0	6.5432558475	6.2281053708	13.0359875773	0
+DTDPRHAMSYN-PWY: dTDP-&beta;-L-rhamnose biosynthesis|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	8.2596276285	0
+DTDPRHAMSYN-PWY: dTDP-&beta;-L-rhamnose biosynthesis|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	7.6410930376	0	0	0	0	0	0
+FASYN-ELONG-PWY: fatty acid elongation -- saturated	0	0	0	13.4240243983	19.4534252048	0	5.5960192642	0	11.4487201037	12.6082808916	8.7123157083	9.0006146759
+FASYN-ELONG-PWY: fatty acid elongation -- saturated|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	12.4970541073	0	0	0	0	0	0	0
+FASYN-ELONG-PWY: fatty acid elongation -- saturated|g__Neisseria.s__Neisseria_flavescens	0	0	0	2.0665245996	0	0	0	0	0	2.6540280260	0	0
+FERMENTATION-PWY: mixed acid fermentation	0	0	0	0	7.6297499453	0	0	0	0	22.7623371116	10.4802648409	0
+FERMENTATION-PWY: mixed acid fermentation|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	8.9573088012	0	0
+FERMENTATION-PWY: mixed acid fermentation|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	9.4977499378	0
+FUCCAT-PWY: fucose degradation	0	0	0	0	0	0	0	0	0	16.8613789865	0	0
+FUCCAT-PWY: fucose degradation|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	15.1247992399	0	0
+GLCMANNANAUT-PWY: superpathway of N-acetylglucosamine, N-acetylmannosamine and N-acetylneuraminate degradation	0	0	0	0	13.6200171828	0	4.5230071797	0	7.0175191168	12.1954628105	12.7791259669	0
+GLCMANNANAUT-PWY: superpathway of N-acetylglucosamine, N-acetylmannosamine and N-acetylneuraminate degradation|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	7.9337044752	0	0	0	0	0	0	0
+GLCMANNANAUT-PWY: superpathway of N-acetylglucosamine, N-acetylmannosamine and N-acetylneuraminate degradation|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	5.8161117330	0	0
+GLCMANNANAUT-PWY: superpathway of N-acetylglucosamine, N-acetylmannosamine and N-acetylneuraminate degradation|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	10.5764163308	0
+GLUCONEO-PWY: gluconeogenesis I	0	0	0	8.5409863438	12.7132054820	12.2199735670	0	0	0	11.5525353209	11.6295019859	0
+GLUCOSE1PMETAB-PWY: glucose and glucose-1-phosphate degradation	0	0	0	0	0	13.9988680192	0	0	0	0	17.5975516450	6.2701864269
+GLUCOSE1PMETAB-PWY: glucose and glucose-1-phosphate degradation|unclassified	0	0	0	0	0	0	0	0	0	0	3.6296073271	0
+GLUTORN-PWY: L-ornithine biosynthesis I	0	0	0	0	0	0	0	0	0	9.2952544667	0	0
+GLYCOGENSYNTH-PWY: glycogen biosynthesis I (from ADP-D-Glucose)	7.4473308437	0	0	0	6.8007095298	0	5.7204147301	0	9.9452915037	11.1000454947	11.2625479474	0
+GLYCOGENSYNTH-PWY: glycogen biosynthesis I (from ADP-D-Glucose)|g__Neisseria.s__Neisseria_flavescens	0	0	0	0	0	0	0	0	1.1198341727	0	0	0
+GLYCOGENSYNTH-PWY: glycogen biosynthesis I (from ADP-D-Glucose)|g__Neisseria.s__Neisseria_meningitidis	0	0	0	0	0	0	0	0	1.7641085832	0	0	0
+GLYCOGENSYNTH-PWY: glycogen biosynthesis I (from ADP-D-Glucose)|g__Neisseria.s__Neisseria_subflava	0	0	0	0	0	0	0	0	1.8482173164	0	0	0
+GLYCOLYSIS-E-D: superpathway of glycolysis and the Entner-Doudoroff pathway	0	0	0	0	0	0	0	0	0	10.8222908551	0	0
+GLYCOLYSIS: glycolysis I (from glucose 6-phosphate)	0	0	0	11.5035644753	13.3277112381	11.6477143831	0	0	12.9799746768	13.9014969612	10.4756665837	0
+HEME-BIOSYNTHESIS-II-1: heme b biosynthesis V (aerobic)	0	0	0	8.6586853435	0	0	0	0	0	7.5383098414	0	0
+HEME-BIOSYNTHESIS-II-1: heme b biosynthesis V (aerobic)|g__Neisseria.s__Neisseria_flavescens	0	0	0	3.2250038783	0	0	0	0	0	0	0	0
+HEME-BIOSYNTHESIS-II-1: heme b biosynthesis V (aerobic)|g__Neisseria.s__Neisseria_subflava	0	0	0	3.4242757285	0	0	0	0	0	0	0	0
+HEME-BIOSYNTHESIS-II: heme b biosynthesis I (aerobic)	0	0	0	8.6586853435	10.0591283861	5.6888966407	0	0	0	9.6079778209	0	0
+HEME-BIOSYNTHESIS-II: heme b biosynthesis I (aerobic)|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	6.7028407277	0	0	0	0	0	0	0
+HEME-BIOSYNTHESIS-II: heme b biosynthesis I (aerobic)|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	7.7827667308	0	0
+HEME-BIOSYNTHESIS-II: heme b biosynthesis I (aerobic)|g__Neisseria.s__Neisseria_flavescens	0	0	0	3.2250038783	0	0	0	0	0	0	0	0
+HEME-BIOSYNTHESIS-II: heme b biosynthesis I (aerobic)|g__Neisseria.s__Neisseria_subflava	0	0	0	3.4242757285	0	0	0	0	0	0	0	0
+HEMESYN2-PWY: heme b biosynthesis II (oxygen-independent)	0	0	0	12.9832089097	14.7401778801	5.7299544603	0	0	8.9902964058	8.5948547529	12.0437934723	0
+HEMESYN2-PWY: heme b biosynthesis II (oxygen-independent)|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	6.9641766971	0	0	0	0	0	0	0
+HEMESYN2-PWY: heme b biosynthesis II (oxygen-independent)|g__Capnocytophaga.s__Capnocytophaga_leadbetteri	0	0	0	0	6.3581638263	0	0	0	0	0	0	0
+HEMESYN2-PWY: heme b biosynthesis II (oxygen-independent)|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	5.8646616541	0	0
+HEMESYN2-PWY: heme b biosynthesis II (oxygen-independent)|g__Neisseria.s__Neisseria_flavescens	0	0	0	4.5803069837	0	0	0	0	0	0	0	0
+HEMESYN2-PWY: heme b biosynthesis II (oxygen-independent)|g__Neisseria.s__Neisseria_subflava	0	0	0	2.1684050013	0	0	0	0	0	0	0	0
+HISDEG-PWY: L-histidine degradation I	8.4493658936	0	0	0	7.1129938864	7.6064851323	0	0	0	0	0	0
+HISDEG-PWY: L-histidine degradation I|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	7.6064851323	0	0	0	0	0	0
+HISTSYN-PWY: L-histidine biosynthesis	0	0	0	0	0	7.0165391492	0	0	8.7731005805	5.3117196977	0	0
+HOMOSER-METSYN-PWY: L-methionine biosynthesis I	0	0	0	0	0	0	0	0	0	9.9418877532	0	0
+HSERMETANA-PWY: L-methionine biosynthesis III	0	0	0	0	7.3113426859	0	0	0	0	11.3593559297	18.4061310868	0
+HSERMETANA-PWY: L-methionine biosynthesis III|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	0.7775563323	0	0
+HSERMETANA-PWY: L-methionine biosynthesis III|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	9.8842769346	0
+HSERMETANA-PWY: L-methionine biosynthesis III|unclassified	0	0	0	0	0	0	0	0	0	0	6.3871645203	0
+ILEUSYN-PWY: L-isoleucine biosynthesis I (from threonine)	9.0861337457	0	0	22.6464926469	19.6255349761	6.2204602939	7.8404793172	0	10.4490656586	26.7242275350	27.5150647878	0
+ILEUSYN-PWY: L-isoleucine biosynthesis I (from threonine)|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	9.1904986489	0	0	0	0	0	0	0
+ILEUSYN-PWY: L-isoleucine biosynthesis I (from threonine)|g__Fusobacterium.s__Fusobacterium_nucleatum	9.0861337457	0	0	0	7.7803418604	0	0	0	0	0	0	0
+ILEUSYN-PWY: L-isoleucine biosynthesis I (from threonine)|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	4.5819703226	0	0
+ILEUSYN-PWY: L-isoleucine biosynthesis I (from threonine)|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	9.2237824801	0
+ILEUSYN-PWY: L-isoleucine biosynthesis I (from threonine)|g__Neisseria.s__Neisseria_flavescens	0	0	0	0.9278048531	0	0	0	0	0	0	0	0
+ILEUSYN-PWY: L-isoleucine biosynthesis I (from threonine)|g__Veillonella.s__Veillonella_atypica	0	0	0	0	0	5.8679706601	0	0	0	0	0	0
+LACTOSECAT-PWY: lactose and galactose degradation I	0	0	0	0	0	0	5.9436097506	0	15.5657960302	0	0	0
+LACTOSECAT-PWY: lactose and galactose degradation I|g__Streptococcus.s__Streptococcus_australis	0	0	0	0	0	0	0	0	9.8763902958	0	0	0
+LACTOSECAT-PWY: lactose and galactose degradation I|g__Streptococcus.s__Streptococcus_sp_A12	0	0	0	0	0	0	0	0	1.9750479530	0	0	0
+LIPASYN-PWY: phospholipases	0	0	0	6.7307692308	0	0	0	0	0	0	0	0
+LIPASYN-PWY: phospholipases|g__Neisseria.s__Neisseria_flavescens	0	0	0	1.9380623041	0	0	0	0	0	0	0	0
+LIPASYN-PWY: phospholipases|g__Neisseria.s__Neisseria_meningitidis	0	0	0	1.3924718200	0	0	0	0	0	0	0	0
+LIPASYN-PWY: phospholipases|g__Neisseria.s__Neisseria_subflava	0	0	0	3.4002351067	0	0	0	0	0	0	0	0
+MET-SAM-PWY: superpathway of S-adenosyl-L-methionine biosynthesis	0	0	0	0	0	0	0	0	0	12.0103094724	0	0
+METSYN-PWY: superpathway of L-homoserine and L-methionine biosynthesis	0	0	0	0	0	0	0	0	0	12.9408032961	0	0
+NAGLIPASYN-PWY: lipid IVA biosynthesis (E. coli)	0	0	0	7.1403789940	9.0190453459	0	0	0	7.9085877798	7.5526130249	0	0
+NAGLIPASYN-PWY: lipid IVA biosynthesis (E. coli)|g__Neisseria.s__Neisseria_flavescens	0	0	0	0	0	0	0	0	1.0079341836	0	0	0
+NAGLIPASYN-PWY: lipid IVA biosynthesis (E. coli)|g__Neisseria.s__Neisseria_subflava	0	0	0	3.0761227524	0	0	0	0	0	0	0	0
+NONMEVIPP-PWY: methylerythritol phosphate pathway I	0	0	0	7.5303363398	11.4348154871	16.0165683876	0	0	0	11.6522171051	17.2069461004	0
+NONMEVIPP-PWY: methylerythritol phosphate pathway I|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	10.0065027323	0	0	0	0	0	0
+NONOXIPENT-PWY: pentose phosphate pathway (non-oxidative branch) I	6.3429106827	5.4744525547	0	10.8895201712	10.4088147455	6.4448926632	0	0	12.8270420158	13.0013332704	12.6746477205	5.6955238438
+NONOXIPENT-PWY: pentose phosphate pathway (non-oxidative branch) I|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	9.3630871436	0	0	0	0	0	0	0
+NONOXIPENT-PWY: pentose phosphate pathway (non-oxidative branch) I|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	4.1985157372	0	0	0	0	9.6119990775	0
+NONOXIPENT-PWY: pentose phosphate pathway (non-oxidative branch) I|g__Neisseria.s__Neisseria_flavescens	0	0	0	4.8859216329	0	0	0	0	0	0	0	0
+NONOXIPENT-PWY: pentose phosphate pathway (non-oxidative branch) I|g__Neisseria.s__Neisseria_subflava	0	0	0	3.3958791382	0	0	0	0	0	0	0	0
+NONOXIPENT-PWY: pentose phosphate pathway (non-oxidative branch) I|g__Sphingomonas.s__Sphingomonas_melonis	0	5.0020842018	0	0	0	0	0	0	0	0	0	0
+OANTIGEN-PWY: O-antigen building blocks biosynthesis (E. coli)	9.2369789524	0	0	0	9.7482562203	0	0	0	0	0	11.1929910724	0
+P108-PWY: pyruvate fermentation to propanoate I	0	0	0	0	0	0	0	0	0	0	4.2385498381	0
+P125-PWY: superpathway of (R,R)-butanediol biosynthesis	0	0	0	0	0	0	0	0	5.8075882986	0	0	0
+P161-PWY: acetylene degradation (anaerobic)	0	0	0	0	0	0	4.6511627907	0	7.8418387999	0	0	0
+P161-PWY: acetylene degradation (anaerobic)|unclassified	0	0	0	0	0	0	4.6511627907	0	0	0	0	0
+P163-PWY: L-lysine fermentation to acetate and butanoate	10.7654917651	0	0	0	8.8909566590	0	0	0	0	0	0	0
+P164-PWY: purine nucleobases degradation I (anaerobic)	0	0	0	0	0	0	0	0	0	6.5028921171	0	0
+P185-PWY: formaldehyde assimilation III (dihydroxyacetone cycle)	0	0	0	0	10.0514709446	0	0	0	0	0	0	0
+P41-PWY: pyruvate fermentation to acetate and (S)-lactate I	11.7173524444	0	0	0	9.4453145646	0	5.6576114288	0	11.7279326006	12.2307767746	16.4804523963	0
+P41-PWY: pyruvate fermentation to acetate and (S)-lactate I|g__Rothia.s__Rothia_mucilaginosa	0	0	0	0	0	0	0	0	0	0	7.1460322647	0
+P41-PWY: pyruvate fermentation to acetate and (S)-lactate I|unclassified	0	0	0	0	0	0	0	0	0	4.6935150997	0	0
+P42-PWY: incomplete reductive TCA cycle	0	0	0	0	0	0	0	0	0	0	7.2408978042	0
+P441-PWY: superpathway of N-acetylneuraminate degradation	0	0	0	0	0	0	0	0	0	0	10.1310715545	0
+PANTO-PWY: phosphopantothenate biosynthesis I	0	0	0	0	5.6073472687	4.8271575208	0	0	0	0	0	0
+PENTOSE-P-PWY: pentose phosphate pathway	0	0	0	10.5699350157	0	0	0	0	11.3903209866	16.3649367421	14.5311322331	0
+PENTOSE-P-PWY: pentose phosphate pathway|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	9.9096823505	0
+PENTOSE-P-PWY: pentose phosphate pathway|g__Neisseria.s__Neisseria_flavescens	0	0	0	4.4199960592	0	0	0	0	0	0	0	0
+PENTOSE-P-PWY: pentose phosphate pathway|g__Neisseria.s__Neisseria_subflava	0	0	0	3.3893206101	0	0	0	0	0	0	0	0
+PEPTIDOGLYCANSYN-PWY: peptidoglycan biosynthesis I (meso-diaminopimelate containing)	9.9966129668	0	0	0	12.8498642122	14.7219195301	0	0	15.4895877956	16.6450463722	18.5025259744	0
+PEPTIDOGLYCANSYN-PWY: peptidoglycan biosynthesis I (meso-diaminopimelate containing)|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	1.5979214259	0	0
+PEPTIDOGLYCANSYN-PWY: peptidoglycan biosynthesis I (meso-diaminopimelate containing)|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	10.8127727379	0	0	0	0	0	0
+PHOSLIPSYN-PWY: superpathway of phospholipid biosynthesis I (bacteria)	9.8283508829	0	0	0	12.5830986983	0	0	0	11.0405425399	21.9589204799	10.4454982241	0
+PHOSLIPSYN-PWY: superpathway of phospholipid biosynthesis I (bacteria)|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	8.7179843427	0	0	0	0	0	0	0
+PHOSLIPSYN-PWY: superpathway of phospholipid biosynthesis I (bacteria)|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	10.7138196306	0	0
+PPGPPMET-PWY: ppGpp metabolism	0	0	0	10.9859356935	0	11.2833500191	0	0	0	19.2196188149	10.9961843161	0
+PPGPPMET-PWY: ppGpp metabolism|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	10.4913404428	0
+PWY-1042: glycolysis IV	6.9410338464	0	0	12.3438601367	15.3986132561	19.3808641017	0	0	9.9589283888	0	18.8353004347	0
+PWY-1042: glycolysis IV|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	8.8834252334	0	0	0	0	0	0	0
+PWY-1042: glycolysis IV|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	11.5266393443	0
+PWY-1042: glycolysis IV|g__Streptococcus.s__Streptococcus_infantis	0	0	0	0	0	0	0	0	1.3926459967	0	0	0
+PWY-1042: glycolysis IV|unclassified	0	0	0	0	0	0	0	0	0	0	5.0363738109	0
+PWY-1269: CMP-3-deoxy-D-manno-octulosonate biosynthesis	0	0	0	6.0249677342	7.1066127601	7.0161236304	0	0	0	17.4498864547	16.6473052037	0
+PWY-1269: CMP-3-deoxy-D-manno-octulosonate biosynthesis|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	4.3946385410	0	0	0	0	0	0	0
+PWY-1269: CMP-3-deoxy-D-manno-octulosonate biosynthesis|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	8.4467103080	0	0
+PWY-1269: CMP-3-deoxy-D-manno-octulosonate biosynthesis|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	11.0007402685	0
+PWY-1269: CMP-3-deoxy-D-manno-octulosonate biosynthesis|g__Neisseria.s__Neisseria_flavescens	0	0	0	0	0	0	0	0	0	0	1.1469758556	0
+PWY-1269: CMP-3-deoxy-D-manno-octulosonate biosynthesis|g__Neisseria.s__Neisseria_subflava	0	0	0	0	0	0	0	0	0	2.1755508160	0	0
+PWY-241: C4 photosynthetic carbon assimilation cycle, NADP-ME type	0	0	0	0	0	0	0	0	0	8.4164213404	0	0
+PWY-2941: L-lysine biosynthesis II	0	0	0	0	0	0	0	0	11.8961955669	10.7193698816	9.4120067330	0
+PWY-2942: L-lysine biosynthesis III	0	0	0	6.5521608555	7.9580902784	16.2975636873	0	0	11.9432108157	17.4161628881	15.0656876873	0
+PWY-2942: L-lysine biosynthesis III|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	6.5899726396	0	0	0	0	0	0	0
+PWY-2942: L-lysine biosynthesis III|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	10.0708546498	0
+PWY-2942: L-lysine biosynthesis III|g__Neisseria.s__Neisseria_subflava	0	0	0	0	0	0	0	0	1.1717666290	0	0	0
+PWY-2942: L-lysine biosynthesis III|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	12.5736011751	0	0	0	0	0	0
+PWY-3001: superpathway of L-isoleucine biosynthesis I	0	0	0	12.8394233399	0	0	0	0	10.7396630000	0	16.9050775423	0
+PWY-3841: folate transformations II (plants)	0	0	0	8.9154625774	0	21.3637444801	0	0	12.2927538106	22.1757780611	19.5751611461	0
+PWY-3841: folate transformations II (plants)|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	6.6500506838	0	0
+PWY-3841: folate transformations II (plants)|g__Neisseria.s__Neisseria_flavescens	0	0	0	1.0327853213	0	0	0	0	0	1.2291295579	0	0
+PWY-3841: folate transformations II (plants)|g__Neisseria.s__Neisseria_subflava	0	0	0	0	0	0	0	0	0	3.9975734736	0	0
+PWY-3841: folate transformations II (plants)|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	10.6993572861	0	0	0	0	0	0
+PWY-3841: folate transformations II (plants)|g__Rothia.s__Rothia_mucilaginosa	0	0	0	0	0	0	0	0	0	0	5.0831392473	0
+PWY-4041: &gamma;-glutamyl cycle	0	0	0	0	7.2263227435	0	0	0	7.1793246243	0	12.1631874832	0
+PWY-4041: &gamma;-glutamyl cycle|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	5.7154521331	0	0	0	0	0	0	0
+PWY-4041: &gamma;-glutamyl cycle|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	11.7779612295	0
+PWY-4041: &gamma;-glutamyl cycle|unclassified	0	0	0	0	0	0	0	0	5.3386609252	0	0	0
+PWY-5030: L-histidine degradation III	0	0	0	0	0	8.4955258724	0	0	0	0	0	0
+PWY-5030: L-histidine degradation III|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	8.2867759554	0	0	0	0	0	0
+PWY-5097: L-lysine biosynthesis VI	0	0	0	0	0	0	0	0	11.9359568931	12.7819829123	15.7687173477	0
+PWY-5097: L-lysine biosynthesis VI|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	10.1980812456	0
+PWY-5097: L-lysine biosynthesis VI|g__Neisseria.s__Neisseria_subflava	0	0	0	0	0	0	0	0	1.2906105294	0	0	0
+PWY-5100: pyruvate fermentation to acetate and lactate II	11.7173524444	0	0	0	9.4453145646	0	5.6576114288	0	11.7279326006	12.2307767746	16.4804523963	0
+PWY-5100: pyruvate fermentation to acetate and lactate II|g__Rothia.s__Rothia_mucilaginosa	0	0	0	0	0	0	0	0	0	0	7.1460322647	0
+PWY-5100: pyruvate fermentation to acetate and lactate II|unclassified	0	0	0	0	0	0	0	0	0	4.6935150997	0	0
+PWY-5103: L-isoleucine biosynthesis III	9.2057933827	0	0	21.3581312804	19.5203233437	5.7222037376	7.1965962761	0	9.3114091379	25.1420290172	25.9319462080	5.1430988191
+PWY-5103: L-isoleucine biosynthesis III|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	8.0693492946	0	0	0	0	0	0	0
+PWY-5103: L-isoleucine biosynthesis III|g__Fusobacterium.s__Fusobacterium_nucleatum	8.9239425722	0	0	0	9.2023279207	0	0	0	0	0	0	0
+PWY-5103: L-isoleucine biosynthesis III|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	3.8255930925	0	0
+PWY-5103: L-isoleucine biosynthesis III|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	8.4890377897	0
+PWY-5103: L-isoleucine biosynthesis III|g__Neisseria.s__Neisseria_flavescens	0	0	0	0.6636706409	0	0	0	0	0	0	0	0
+PWY-5103: L-isoleucine biosynthesis III|g__Veillonella.s__Veillonella_atypica	0	0	0	0	0	5.4799525071	0	0	0	0	0	0
+PWY-5154: L-arginine biosynthesis III (via N-acetyl-L-citrulline)	0	0	0	0	0	0	0	0	0	8.0525243322	0	0
+PWY-5188: tetrapyrrole biosynthesis I (from glutamate)	9.1415676080	0	0	9.6891447549	12.2440114710	0	0	0	5.9047438626	19.6034131586	16.0544341699	0
+PWY-5188: tetrapyrrole biosynthesis I (from glutamate)|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	7.4712564163	0	0
+PWY-5188: tetrapyrrole biosynthesis I (from glutamate)|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	9.8422506228	0
+PWY-5188: tetrapyrrole biosynthesis I (from glutamate)|g__Neisseria.s__Neisseria_flavescens	0	0	0	3.2634697111	0	0	0	0	0	1.7585320174	0	0
+PWY-5188: tetrapyrrole biosynthesis I (from glutamate)|g__Neisseria.s__Neisseria_meningitidis	0	0	0	1.6301416857	0	0	0	0	0	0	0	0
+PWY-5188: tetrapyrrole biosynthesis I (from glutamate)|g__Neisseria.s__Neisseria_subflava	0	0	0	0.8042104198	0	0	0	0	0	1.9167186706	0	0
+PWY-5189: tetrapyrrole biosynthesis II (from glycine)	0	0	0	10.0955712867	0	0	0	0	0	8.0516129426	0	0
+PWY-5189: tetrapyrrole biosynthesis II (from glycine)|g__Neisseria.s__Neisseria_flavescens	0	0	0	3.0411705235	0	0	0	0	0	0	0	0
+PWY-5189: tetrapyrrole biosynthesis II (from glycine)|g__Neisseria.s__Neisseria_meningitidis	0	0	0	1.3639511036	0	0	0	0	0	0	0	0
+PWY-5347: superpathway of L-methionine biosynthesis (transsulfuration)	0	0	0	0	0	0	0	0	0	13.1043067862	0	0
+PWY-5367: petroselinate biosynthesis	0	0	0	0	0	0	0	0	10.8990895478	0	0	0
+PWY-5367: petroselinate biosynthesis|g__Streptococcus.s__Streptococcus_infantis	0	0	0	0	0	0	0	0	7.4887316399	0	0	0
+PWY-5384: sucrose degradation IV (sucrose phosphorylase)	0	0	0	0	0	8.3382535674	0	0	0	9.1872730824	10.3758958374	0
+PWY-5484: glycolysis II (from fructose 6-phosphate)	0	0	0	9.6348709458	10.7058443797	9.6914259360	0	0	10.5058332313	11.8266364128	8.8210011764	0
+PWY-5659: GDP-mannose biosynthesis	0	0	0	0	9.7778935824	0	0	0	0	0	13.2170478436	0
+PWY-5659: GDP-mannose biosynthesis|g__Fusobacterium.s__Fusobacterium_nucleatum	0	0	0	0	6.4720461024	0	0	0	0	0	0	0
+PWY-5659: GDP-mannose biosynthesis|unclassified	0	0	0	0	0	0	0	0	0	0	3.4092898292	0
+PWY-5667: CDP-diacylglycerol biosynthesis I	9.3908478294	0	0	7.7442650292	12.7081168517	11.2484943510	0	0	17.5214030461	30.4664787720	20.3284846207	0
+PWY-5667: CDP-diacylglycerol biosynthesis I|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	11.1597737634	0	0	0	0	0	0	0
+PWY-5667: CDP-diacylglycerol biosynthesis I|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	12.1939586762	0	0
+PWY-5667: CDP-diacylglycerol biosynthesis I|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	15.7887904743	0
+PWY-5667: CDP-diacylglycerol biosynthesis I|g__Neisseria.s__Neisseria_flavescens	0	0	0	0	0	0	0	0	0.7097232079	0	0	0
+PWY-5667: CDP-diacylglycerol biosynthesis I|g__Neisseria.s__Neisseria_meningitidis	0	0	0	0	0	0	0	0	1.1581979738	0	0	0
+PWY-5667: CDP-diacylglycerol biosynthesis I|g__Neisseria.s__Neisseria_subflava	0	0	0	0	0	0	0	0	2.8343142428	3.1607906750	0	0
+PWY-5667: CDP-diacylglycerol biosynthesis I|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	9.2100527196	0	0	0	0	0	0
+PWY-5667: CDP-diacylglycerol biosynthesis I|unclassified	5.8039597055	0	0	0	0	0	0	0	0	0	0	0
+PWY-5686: UMP biosynthesis I	10.1896173159	0	0	15.1117540253	9.2470489394	14.0080689190	4.8520975207	0	16.6412026546	22.5692926088	13.9314199029	5.3379654887
+PWY-5686: UMP biosynthesis I|g__Neisseria.s__Neisseria_flavescens	0	0	0	2.8168109848	0	0	0	0	2.3114192212	0	0	0
+PWY-5686: UMP biosynthesis I|g__Neisseria.s__Neisseria_subflava	0	0	0	4.4236418042	0	0	0	0	5.2970013798	0	0	0
+PWY-5686: UMP biosynthesis I|g__Rothia.s__Rothia_mucilaginosa	0	0	0	0	0	0	0	0	0	0	6.4812805646	0
+PWY-5695: inosine 5'-phosphate degradation	0	0	0	12.1217488486	10.1293613566	10.7097304729	0	0	15.6538219138	28.1849025250	11.5034319159	7.2669249166
+PWY-5695: inosine 5'-phosphate degradation|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	4.2751772059	0	0
+PWY-5695: inosine 5'-phosphate degradation|g__Neisseria.s__Neisseria_subflava	0	0	0	0	0	0	0	0	0	5.0753185087	0	0
+PWY-5695: inosine 5'-phosphate degradation|unclassified	0	0	0	0	0	0	0	0	0	0	0	7.0300130053
+PWY-5837: 2-carboxy-1,4-naphthoquinol biosynthesis	0	0	0	0	0	0	0	0	0	0	10.7098772416	0
+PWY-5855: ubiquinol-7 biosynthesis (early decarboxylation)	0	0	0	8.3902395538	0	0	0	0	0	0	0	0
+PWY-5897: superpathway of menaquinol-11 biosynthesis	0	0	0	0	0	0	0	0	0	0	14.1869240798	0
+PWY-5898: superpathway of menaquinol-12 biosynthesis	0	0	0	0	0	0	0	0	0	0	14.1869240798	0
+PWY-5899: superpathway of menaquinol-13 biosynthesis	0	0	0	0	0	0	0	0	0	0	14.1869240798	0
+PWY-5913: partial TCA cycle (obligate autotrophs)	0	0	0	8.1092888360	0	0	0	0	13.2015659117	24.1418203705	9.2395095716	0
+PWY-5913: partial TCA cycle (obligate autotrophs)|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	8.2599212551	0	0
+PWY-5913: partial TCA cycle (obligate autotrophs)|g__Neisseria.s__Neisseria_flavescens	0	0	0	0	0	0	0	0	1.7132815817	1.0559502509	0	0
+PWY-5913: partial TCA cycle (obligate autotrophs)|g__Neisseria.s__Neisseria_meningitidis	0	0	0	0	0	0	0	0	0.6476668929	0	0	0
+PWY-5913: partial TCA cycle (obligate autotrophs)|g__Neisseria.s__Neisseria_subflava	0	0	0	0	0	0	0	0	5.3435436524	6.6019109566	0	0
+PWY-5918: superpathway of heme b biosynthesis from glutamate	0	0	0	9.0989568440	0	0	0	0	0	12.1957221438	0	0
+PWY-5918: superpathway of heme b biosynthesis from glutamate|g__Neisseria.s__Neisseria_flavescens	0	0	0	2.6910539576	0	0	0	0	0	0	0	0
+PWY-5920: superpathway of heme b biosynthesis from glycine	0	0	0	0	0	0	0	0	0	8.7519478358	0	0
+PWY-5941: glycogen degradation II	0	0	0	11.5264104563	11.2136535769	0	9.4361730862	0	17.1496910113	19.8807368354	19.0798787714	0
+PWY-5941: glycogen degradation II|g__Neisseria.s__Neisseria_flavescens	0	0	0	1.6361687041	0	0	0	0	3.9269112671	0	0	0
+PWY-5941: glycogen degradation II|g__Neisseria.s__Neisseria_meningitidis	0	0	0	0.7979272237	0	0	0	0	1.3424319493	0	0	0
+PWY-5941: glycogen degradation II|g__Neisseria.s__Neisseria_subflava	0	0	0	3.1859162985	0	0	0	0	2.1129907226	0	0	0
+PWY-5941: glycogen degradation II|g__Streptococcus.s__Streptococcus_australis	0	0	0	0	0	0	0	0	2.1117437115	0	0	0
+PWY-5941: glycogen degradation II|g__Streptococcus.s__Streptococcus_sp_A12	0	0	0	0	0	0	0	0	1.6920879551	0	0	0
+PWY-5971: palmitate biosynthesis (type II fatty acid synthase)	0	0	0	0	0	0	0	0	11.5622745338	0	0	0
+PWY-5973: cis-vaccenate biosynthesis	0	0	0	15.1255159739	17.3638787517	18.1631143998	5.5124851759	0	12.8326584763	9.8544106137	5.9997071198	0
+PWY-5973: cis-vaccenate biosynthesis|g__Neisseria.s__Neisseria_flavescens	0	0	0	1.6144862383	0	0	0	0	0	4.6007027583	0	0
+PWY-5973: cis-vaccenate biosynthesis|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	10.8793599859	0	0	0	0	0	0
+PWY-5973: cis-vaccenate biosynthesis|g__Streptococcus.s__Streptococcus_infantis	0	0	0	0	0	0	0	0	5.3357853586	0	0	0
+PWY-5973: cis-vaccenate biosynthesis|g__Veillonella.s__Veillonella_atypica	0	0	0	0	0	5.4600054600	0	0	0	0	0	0
+PWY-5981: CDP-diacylglycerol biosynthesis III	7.7809282154	0	0	0	9.9513220807	0	0	0	0	0	0	0
+PWY-5989: stearate biosynthesis II (bacteria and plants)	0	0	0	0	17.7803034996	0	0	0	8.9768751283	10.8685528202	7.9023206002	4.8240885372
+PWY-5989: stearate biosynthesis II (bacteria and plants)|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	11.9884316353	0	0	0	0	0	0	0
+PWY-5989: stearate biosynthesis II (bacteria and plants)|g__Neisseria.s__Neisseria_flavescens	0	0	0	0	0	0	0	0	0	1.6078183160	0	0
+PWY-6121: 5-aminoimidazole ribonucleotide biosynthesis I	12.2974724367	0	0	11.0024315614	14.6247890470	7.4439215785	4.5876265155	0	10.4446854654	21.0210646046	21.2246812148	0
+PWY-6121: 5-aminoimidazole ribonucleotide biosynthesis I|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	9.0901286253	0
+PWY-6121: 5-aminoimidazole ribonucleotide biosynthesis I|g__Rothia.s__Rothia_mucilaginosa	0	0	0	0	0	0	0	0	0	0	8.9360439560	0
+PWY-6121: 5-aminoimidazole ribonucleotide biosynthesis I|g__Streptococcus.s__Streptococcus_australis	0	0	0	0	0	0	0	0	2.2573147375	0	0	0
+PWY-6121: 5-aminoimidazole ribonucleotide biosynthesis I|g__Streptococcus.s__Streptococcus_infantis	0	0	0	0	0	0	0	0	3.2503397887	0	0	0
+PWY-6121: 5-aminoimidazole ribonucleotide biosynthesis I|unclassified	0	0	0	0	0	0	0	0	0	9.2609377848	0	0
+PWY-6122: 5-aminoimidazole ribonucleotide biosynthesis II	11.8154338798	0	0	11.2837634886	13.8505459211	8.3707289673	4.6342193891	0	9.2353093240	20.3488657696	21.8674642580	0
+PWY-6122: 5-aminoimidazole ribonucleotide biosynthesis II|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	7.0212661941	0	0	0	0	0	0	0
+PWY-6122: 5-aminoimidazole ribonucleotide biosynthesis II|g__Fusobacterium.s__Fusobacterium_nucleatum	7.7862548499	0	0	0	0	0	0	0	0	0	0	0
+PWY-6122: 5-aminoimidazole ribonucleotide biosynthesis II|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	8.2871974310	0
+PWY-6122: 5-aminoimidazole ribonucleotide biosynthesis II|g__Neisseria.s__Neisseria_flavescens	0	0	0	2.6982698666	0	0	0	0	0	0	0	0
+PWY-6122: 5-aminoimidazole ribonucleotide biosynthesis II|g__Neisseria.s__Neisseria_subflava	0	0	0	5.4037209555	0	0	0	0	0	0	0	0
+PWY-6122: 5-aminoimidazole ribonucleotide biosynthesis II|g__Rothia.s__Rothia_mucilaginosa	0	0	0	0	0	0	0	0	0	0	10.1980947345	0
+PWY-6122: 5-aminoimidazole ribonucleotide biosynthesis II|g__Streptococcus.s__Streptococcus_australis	0	0	0	0	0	0	0	0	2.0867288673	0	0	0
+PWY-6122: 5-aminoimidazole ribonucleotide biosynthesis II|g__Streptococcus.s__Streptococcus_infantis	0	0	0	0	0	0	0	0	2.7632508453	0	0	0
+PWY-6122: 5-aminoimidazole ribonucleotide biosynthesis II|g__Streptococcus.s__Streptococcus_sp_A12	0	0	0	0	0	0	0	0	1.7619212396	0	0	0
+PWY-6122: 5-aminoimidazole ribonucleotide biosynthesis II|unclassified	0	0	0	0	0	0	0	0	0	9.9286176755	0	0
+PWY-6123: inosine-5'-phosphate biosynthesis I	7.1771533836	0	0	5.8006666785	8.5558582829	9.5396952159	0	0	19.0136231596	17.9870281409	23.7778050915	0
+PWY-6123: inosine-5'-phosphate biosynthesis I|g__Neisseria.s__Neisseria_flavescens	0	0	0	0	0	0	0	0	2.4075133100	2.7391009735	0	0
+PWY-6123: inosine-5'-phosphate biosynthesis I|g__Neisseria.s__Neisseria_subflava	0	0	0	0	0	0	0	0	3.6475179326	1.5238493007	0	0
+PWY-6123: inosine-5'-phosphate biosynthesis I|g__Rothia.s__Rothia_mucilaginosa	0	0	0	0	0	0	0	0	0	0	7.7202373871	0
+PWY-6124: inosine-5'-phosphate biosynthesis II	6.7078824596	0	0	6.3673219398	7.7665450156	8.7785309216	0	0	17.8026836282	16.5259527649	23.3835873179	0
+PWY-6124: inosine-5'-phosphate biosynthesis II|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	6.9664355527	0	0	0	0	0	0	0
+PWY-6124: inosine-5'-phosphate biosynthesis II|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	6.8452326899	0	0
+PWY-6124: inosine-5'-phosphate biosynthesis II|g__Neisseria.s__Neisseria_flavescens	0	0	0	0	0	0	0	0	0	2.4719844838	0	0
+PWY-6124: inosine-5'-phosphate biosynthesis II|g__Neisseria.s__Neisseria_subflava	0	0	0	0	0	0	0	0	0	1.8045782165	0	0
+PWY-6125: superpathway of guanosine nucleotides de novo biosynthesis II	0	0	0	9.0355510859	0	13.3506668681	0	0	9.8553687282	23.6803234666	16.3712335648	6.0552645374
+PWY-6125: superpathway of guanosine nucleotides de novo biosynthesis II|g__Veillonella.s__Veillonella_rogosae	0	0	0	0	0	0	0	0	0	0	3.7322698044	0
+PWY-6126: superpathway of adenosine nucleotides de novo biosynthesis II	0	7.7155271029	0	12.1610609538	0	16.9133707286	0	0	14.4073707038	29.1085123144	24.8659087455	7.7303354458
+PWY-6126: superpathway of adenosine nucleotides de novo biosynthesis II|g__Neisseria.s__Neisseria_subflava	0	0	0	5.0209489493	0	0	0	0	0	0	0	0
+PWY-6126: superpathway of adenosine nucleotides de novo biosynthesis II|unclassified	0	0	0	0	0	0	0	0	0	0	0	5.3577049161
+PWY-6147: 6-hydroxymethyl-dihydropterin diphosphate biosynthesis I	0	0	0	16.5529259733	9.1119604965	5.0998889246	0	0	0	9.3258357094	0	0
+PWY-6151: S-adenosyl-L-methionine salvage I	6.7754873015	0	0	14.1133126014	19.3398569624	11.4860014358	0	0	15.9327065093	25.4269883232	30.8240366989	4.7708417130
+PWY-6151: S-adenosyl-L-methionine salvage I|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	9.6981452297	0	0	0	0	0	0	0
+PWY-6151: S-adenosyl-L-methionine salvage I|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	9.0542596013	0	0
+PWY-6151: S-adenosyl-L-methionine salvage I|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	12.4605802607	0
+PWY-6151: S-adenosyl-L-methionine salvage I|g__Neisseria.s__Neisseria_flavescens	0	0	0	3.7711371144	0	0	0	0	3.7492975073	3.9810604706	0	0
+PWY-6151: S-adenosyl-L-methionine salvage I|g__Neisseria.s__Neisseria_meningitidis	0	0	0	0	0	0	0	0	0	0.3756382893	0	0
+PWY-6151: S-adenosyl-L-methionine salvage I|g__Neisseria.s__Neisseria_subflava	0	0	0	2.6454386084	0	0	0	0	2.5821889477	2.6438093258	0	0
+PWY-6151: S-adenosyl-L-methionine salvage I|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	11.4860014358	0	0	0	0	0	0
+PWY-6151: S-adenosyl-L-methionine salvage I|g__Rothia.s__Rothia_mucilaginosa	0	0	0	0	0	0	0	0	0	0	8.9230387904	0
+PWY-6151: S-adenosyl-L-methionine salvage I|g__Streptococcus.s__Streptococcus_australis	0	0	0	0	0	0	0	0	1.3213095491	0	0	0
+PWY-6151: S-adenosyl-L-methionine salvage I|g__Streptococcus.s__Streptococcus_sp_A12	0	0	0	0	0	0	0	0	1.7382491223	0	0	0
+PWY-6151: S-adenosyl-L-methionine salvage I|unclassified	0	0	0	0	5.4392700751	0	0	0	0	0	0	0
+PWY-6163: chorismate biosynthesis from 3-dehydroquinate	10.8132020540	0	0	0	6.4854827764	8.3245801134	0	0	14.9598546066	20.7262219968	15.0516302224	0
+PWY-6163: chorismate biosynthesis from 3-dehydroquinate|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	8.3035022327	0
+PWY-6163: chorismate biosynthesis from 3-dehydroquinate|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	6.4769628573	0	0	0	0	0	0
+PWY-6163: chorismate biosynthesis from 3-dehydroquinate|unclassified	0	0	0	0	0	0	0	0	0	6.4264662442	0	0
+PWY-621: sucrose degradation III (sucrose invertase)	0	0	0	0	0	8.1585630693	0	0	0	9.5872878254	4.6133095659	5.6035510108
+PWY-621: sucrose degradation III (sucrose invertase)|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	5.6816836723	0	0
+PWY-6277: superpathway of 5-aminoimidazole ribonucleotide biosynthesis	11.8154338798	0	0	11.2837634886	13.8505459211	8.3707289673	4.6342193891	0	9.2353093240	20.3488657696	21.8674642580	0
+PWY-6277: superpathway of 5-aminoimidazole ribonucleotide biosynthesis|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	7.0212661941	0	0	0	0	0	0	0
+PWY-6277: superpathway of 5-aminoimidazole ribonucleotide biosynthesis|g__Fusobacterium.s__Fusobacterium_nucleatum	7.7862548499	0	0	0	0	0	0	0	0	0	0	0
+PWY-6277: superpathway of 5-aminoimidazole ribonucleotide biosynthesis|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	8.2871974310	0
+PWY-6277: superpathway of 5-aminoimidazole ribonucleotide biosynthesis|g__Neisseria.s__Neisseria_flavescens	0	0	0	2.6982698666	0	0	0	0	0	0	0	0
+PWY-6277: superpathway of 5-aminoimidazole ribonucleotide biosynthesis|g__Neisseria.s__Neisseria_subflava	0	0	0	5.4037209555	0	0	0	0	0	0	0	0
+PWY-6277: superpathway of 5-aminoimidazole ribonucleotide biosynthesis|g__Rothia.s__Rothia_mucilaginosa	0	0	0	0	0	0	0	0	0	0	10.1980947345	0
+PWY-6277: superpathway of 5-aminoimidazole ribonucleotide biosynthesis|g__Streptococcus.s__Streptococcus_australis	0	0	0	0	0	0	0	0	2.0867288673	0	0	0
+PWY-6277: superpathway of 5-aminoimidazole ribonucleotide biosynthesis|g__Streptococcus.s__Streptococcus_infantis	0	0	0	0	0	0	0	0	2.7632508453	0	0	0
+PWY-6277: superpathway of 5-aminoimidazole ribonucleotide biosynthesis|g__Streptococcus.s__Streptococcus_sp_A12	0	0	0	0	0	0	0	0	1.7619212396	0	0	0
+PWY-6277: superpathway of 5-aminoimidazole ribonucleotide biosynthesis|unclassified	0	0	0	0	0	0	0	0	0	9.9286176755	0	0
+PWY-6282: palmitoleate biosynthesis I (from (5Z)-dodec-5-enoate)	0	0	0	12.8137490269	18.7370794824	0	5.2287450728	0	11.0370574668	11.1558221244	7.7373992279	8.0860486077
+PWY-6282: palmitoleate biosynthesis I (from (5Z)-dodec-5-enoate)|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	11.8762098009	0	0	0	0	0	0	0
+PWY-6282: palmitoleate biosynthesis I (from (5Z)-dodec-5-enoate)|g__Neisseria.s__Neisseria_flavescens	0	0	0	1.7551214536	0	0	0	0	0	2.2441379530	0	0
+PWY-6284: superpathway of unsaturated fatty acids biosynthesis (E. coli)	0	0	0	0	0	0	0	0	10.4368719224	0	0	0
+PWY-6305: superpathway of putrescine biosynthesis	7.2126799631	0	0	0	7.0108874959	0	0	0	0	0	0	0
+PWY-6317: D-galactose degradation I (Leloir pathway)	9.3616043394	0	0	5.9612298877	13.8380678721	0	0	0	0	6.9953211513	15.4887549408	0
+PWY-6317: D-galactose degradation I (Leloir pathway)|g__Fusobacterium.s__Fusobacterium_nucleatum	8.1570737117	0	0	0	0	0	0	0	0	0	0	0
+PWY-6385: peptidoglycan biosynthesis III (mycobacteria)	9.2105570431	0	0	11.0199939472	13.9317446401	16.0189325295	0	0	15.9072880704	17.7139638994	19.0219487545	0
+PWY-6385: peptidoglycan biosynthesis III (mycobacteria)|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	1.6442598287	0	0
+PWY-6385: peptidoglycan biosynthesis III (mycobacteria)|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	12.8215220159	0	0	0	0	0	0
+PWY-6386: UDP-N-acetylmuramoyl-pentapeptide biosynthesis II (lysine-containing)	11.5522671003	0	0	12.2834450468	13.7156678845	14.5687887520	0	0	14.8615344122	18.0585572781	19.2866520782	0
+PWY-6386: UDP-N-acetylmuramoyl-pentapeptide biosynthesis II (lysine-containing)|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	1.5791500480	0	0
+PWY-6386: UDP-N-acetylmuramoyl-pentapeptide biosynthesis II (lysine-containing)|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	10.7583421025	0	0	0	0	0	0
+PWY-6387: UDP-N-acetylmuramoyl-pentapeptide biosynthesis I (meso-diaminopimelate containing)	9.7069708014	0	0	10.6827986217	13.7953401173	15.2510503393	0	0	15.2003771204	16.5123900285	17.8363669815	0
+PWY-6387: UDP-N-acetylmuramoyl-pentapeptide biosynthesis I (meso-diaminopimelate containing)|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	1.3492432597	0	0
+PWY-6387: UDP-N-acetylmuramoyl-pentapeptide biosynthesis I (meso-diaminopimelate containing)|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	13.3585915699	0	0	0	0	0	0
+PWY-6519: 8-amino-7-oxononanoate biosynthesis I	0	0	0	0	16.1809057335	0	0	0	0	0	0	0
+PWY-6519: 8-amino-7-oxononanoate biosynthesis I|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	11.7893263272	0	0	0	0	0	0	0
+PWY-6608: guanosine nucleotides degradation III	0	0	0	0	0	12.1211303325	0	0	15.6538219138	8.2316916233	7.6040917235	0
+PWY-6609: adenine and adenosine salvage III	4.4987338686	0	0	14.3021420997	10.6799594962	9.2366563304	7.5000000000	0	14.3410712487	18.9256385187	11.7109255371	0
+PWY-6609: adenine and adenosine salvage III|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	3.8600723764	0	0
+PWY-6609: adenine and adenosine salvage III|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	5.8241118229	0	0	0	0	9.3970242756	0
+PWY-6609: adenine and adenosine salvage III|g__Streptococcus.s__Streptococcus_mitis	0	0	0	0	0	0	7.5000000000	0	0	0	0	0
+PWY-6609: adenine and adenosine salvage III|unclassified	0	0	0	5.9080477280	0	0	0	0	0	0	0	0
+PWY-6628: superpathway of L-phenylalanine biosynthesis	0	0	0	0	0	0	0	0	9.4790917485	13.8295290940	10.3114660283	0
+PWY-6630: superpathway of L-tyrosine biosynthesis	0	0	0	0	0	0	0	0	0	12.4985873483	9.7271686300	0
+PWY-6700: queuosine biosynthesis I (de novo)	10.3740021052	0	0	13.1254048539	17.4788478984	17.8153512832	7.7354141280	0	6.1696760646	14.3566157724	19.2834894221	0
+PWY-6700: queuosine biosynthesis I (de novo)|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	7.5653755561	0	0	0	0	0	0	0
+PWY-6700: queuosine biosynthesis I (de novo)|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	8.5248896331	0	0
+PWY-6700: queuosine biosynthesis I (de novo)|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	9.7527707991	0
+PWY-6700: queuosine biosynthesis I (de novo)|g__Neisseria.s__Neisseria_flavescens	0	0	0	4.2535238704	0	0	0	0	0	0	0	0
+PWY-6700: queuosine biosynthesis I (de novo)|g__Neisseria.s__Neisseria_subflava	0	0	0	5.0229858581	0	0	0	0	0	0	0	0
+PWY-6700: queuosine biosynthesis I (de novo)|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	13.6365595233	0	0	0	0	0	0
+PWY-6703: preQ0 biosynthesis	5.5717660106	0	0	10.6761986800	0	15.3415647233	0	0	9.7537786402	15.4218997704	0	0
+PWY-6703: preQ0 biosynthesis|g__Neisseria.s__Neisseria_subflava	0	0	0	0	0	0	0	0	0	4.9814832918	0	0
+PWY-6703: preQ0 biosynthesis|g__Veillonella.s__Veillonella_atypica	0	0	0	0	0	9.5219056168	0	0	0	0	0	0
+PWY-6803: phosphatidylcholine acyl editing	0	0	0	0	0	0	0	0	8.2568807339	13.4033641429	0	0
+PWY-6803: phosphatidylcholine acyl editing|g__Neisseria.s__Neisseria_flavescens	0	0	0	0	0	0	0	0	0.5739405463	1.3685902869	0	0
+PWY-6803: phosphatidylcholine acyl editing|g__Neisseria.s__Neisseria_meningitidis	0	0	0	0	0	0	0	0	2.7523277628	0	0	0
+PWY-6803: phosphatidylcholine acyl editing|g__Neisseria.s__Neisseria_subflava	0	0	0	0	0	0	0	0	4.6266775768	7.5050237682	0	0
+PWY-6823: molybdopterin biosynthesis	0	0	0	0	0	0	0	0	0	0	11.7221788499	0
+PWY-6823: molybdopterin biosynthesis|g__Haemophilus.s__Haemophilus_influenzae	0	0	0	0	0	0	0	0	0	0	2.3925562848	0
+PWY-6823: molybdopterin biosynthesis|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	6.4324018918	0
+PWY-6897: thiamine diphosphate salvage II	0	0	0	0	0	13.7702866360	0	0	6.4171122995	17.2241752570	0	0
+PWY-6897: thiamine diphosphate salvage II|g__Streptococcus.s__Streptococcus_mitis	0	0	0	0	0	0	0	0	0	2.4963237057	0	0
+PWY-6922: L-N&delta;-acetylornithine biosynthesis	0	0	0	0	6.4810650213	0	0	0	0	0	0	0
+PWY-6936: seleno-amino acid biosynthesis (plants)	0	0	0	0	15.6916129794	0	5.1981755424	0	19.6682309432	16.2438359069	16.2408836374	0
+PWY-6936: seleno-amino acid biosynthesis (plants)|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	5.7185746453	0	0	0	0	0	0	0
+PWY-6936: seleno-amino acid biosynthesis (plants)|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	9.2680437520	0	0
+PWY-6936: seleno-amino acid biosynthesis (plants)|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	7.7543985812	0
+PWY-6936: seleno-amino acid biosynthesis (plants)|g__Neisseria.s__Neisseria_flavescens	0	0	0	0	0	0	0	0	4.1942898548	0	0	0
+PWY-6936: seleno-amino acid biosynthesis (plants)|g__Neisseria.s__Neisseria_subflava	0	0	0	0	0	0	0	0	3.4712208962	0	0	0
+PWY-6936: seleno-amino acid biosynthesis (plants)|g__Veillonella.s__Veillonella_dispar	0	0	0	0	0	0	0	0	0	0	2.0773783883	0
+PWY-702: L-methionine biosynthesis II	0	0	0	12.0854003349	0	0	5.3119051397	0	20.5320671438	13.3826555070	12.6654095742	0
+PWY-702: L-methionine biosynthesis II|g__Rothia.s__Rothia_mucilaginosa	0	0	0	0	0	0	0	0	0	0	8.6242633765	0
+PWY-7111: pyruvate fermentation to isobutanol (engineered)	0	0	0	23.7296628830	0	6.8701208966	6.7315326941	0	14.2313806336	27.1063913904	13.7927658028	0
+PWY-7111: pyruvate fermentation to isobutanol (engineered)|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	3.3379413258	0	0
+PWY-7111: pyruvate fermentation to isobutanol (engineered)|g__Neisseria.s__Neisseria_flavescens	0	0	0	0.6097985697	0	0	0	0	0	0	0	0
+PWY-7111: pyruvate fermentation to isobutanol (engineered)|g__Neisseria.s__Neisseria_subflava	0	0	0	4.3168445453	0	0	0	0	0	4.2718903425	0	0
+PWY-7115: C4 photosynthetic carbon assimilation cycle, NAD-ME type	0	0	0	0	0	0	0	0	0	10.7784325309	13.5392204782	0
+PWY-7115: C4 photosynthetic carbon assimilation cycle, NAD-ME type|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	9.9853135472	0
+PWY-7117: C4 photosynthetic carbon assimilation cycle, PEPCK type	0	0	0	0	0	0	0	0	0	0	14.6529498925	0
+PWY-7117: C4 photosynthetic carbon assimilation cycle, PEPCK type|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	10.9308248199	0
+PWY-7197: pyrimidine deoxyribonucleotide phosphorylation	0	9.1463414634	0	5.9055118110	0	0	0	0	6.5386187168	21.3515618496	17.1823411144	8.6230727725
+PWY-7197: pyrimidine deoxyribonucleotide phosphorylation|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	11.7233294256	0
+PWY-7197: pyrimidine deoxyribonucleotide phosphorylation|g__Neisseria.s__Neisseria_subflava	0	0	0	2.8522669899	0	0	0	0	0	0	0	0
+PWY-7197: pyrimidine deoxyribonucleotide phosphorylation|unclassified	0	0	0	0	0	0	0	0	0	0	0	4.3684274196
+PWY-7198: pyrimidine deoxyribonucleotides de novo biosynthesis IV	0	0	0	0	0	0	0	0	0	0	16.9337454042	0
+PWY-7199: pyrimidine deoxyribonucleosides salvage	7.4409710628	0	0	0	8.8592057286	9.7245803544	8.7310702737	0	4.1114997237	0	25.2346237955	0
+PWY-7199: pyrimidine deoxyribonucleosides salvage|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	7.8383433910	0	0	0	0	0	0	0
+PWY-7199: pyrimidine deoxyribonucleosides salvage|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	9.4442497349	0
+PWY-7199: pyrimidine deoxyribonucleosides salvage|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	7.9610791685	0	0	0	0	0	0
+PWY-7204: pyridoxal 5'-phosphate salvage II (plants)	0	0	0	0	0	0	0	0	0	5.0268096515	0	0
+PWY-7208: superpathway of pyrimidine nucleobases salvage	0	0	0	13.0060359604	0	12.2497901333	0	0	6.6743935893	12.7811290842	24.7065501073	6.3874125918
+PWY-7208: superpathway of pyrimidine nucleobases salvage|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	7.4956755718	0
+PWY-7208: superpathway of pyrimidine nucleobases salvage|g__Neisseria.s__Neisseria_subflava	0	0	0	1.5327170875	0	0	0	0	0	0	0	0
+PWY-7208: superpathway of pyrimidine nucleobases salvage|g__Veillonella.s__Veillonella_rogosae	0	0	0	0	0	0	0	0	0	0	4.5236107031	0
+PWY-7208: superpathway of pyrimidine nucleobases salvage|unclassified	0	0	0	6.7258829549	0	0	0	0	0	0	0	0
+PWY-7220: adenosine deoxyribonucleotides de novo biosynthesis II	0	10.7751716987	0	8.5257047407	0	18.1167654439	0	0	8.8600615948	22.6848604603	28.9849613658	11.8179007052
+PWY-7220: adenosine deoxyribonucleotides de novo biosynthesis II|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	8.3665338645	0
+PWY-7220: adenosine deoxyribonucleotides de novo biosynthesis II|g__Neisseria.s__Neisseria_subflava	0	0	0	6.3583687416	0	0	0	0	0	0	0	0
+PWY-7220: adenosine deoxyribonucleotides de novo biosynthesis II|g__Streptococcus.s__Streptococcus_mitis	0	0	0	0	0	0	0	0	0	5.6236341732	0	0
+PWY-7220: adenosine deoxyribonucleotides de novo biosynthesis II|g__Veillonella.s__Veillonella_infantium	0	0	0	0	0	0	0	0	0	0	1.2071249223	0
+PWY-7220: adenosine deoxyribonucleotides de novo biosynthesis II|g__Veillonella.s__Veillonella_rogosae	0	0	0	0	0	0	0	0	0	0	5.1844088211	0
+PWY-7220: adenosine deoxyribonucleotides de novo biosynthesis II|unclassified	0	0	0	0	0	0	0	0	0	0	0	4.8406995146
+PWY-7221: guanosine ribonucleotides de novo biosynthesis	11.4420930992	0	0	10.7543895515	10.2501291112	14.4634474238	0	0	12.7271762369	26.4134427186	17.5929955523	5.8022117872
+PWY-7221: guanosine ribonucleotides de novo biosynthesis|g__Fusobacterium.s__Fusobacterium_nucleatum	10.7845605899	0	0	0	7.5002411458	0	0	0	0	0	0	0
+PWY-7221: guanosine ribonucleotides de novo biosynthesis|g__Gemella.s__Gemella_sanguinis	0	0	0	0	0	0	0	0	4.4794788837	0	0	0
+PWY-7221: guanosine ribonucleotides de novo biosynthesis|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	4.3549391083	0	0
+PWY-7221: guanosine ribonucleotides de novo biosynthesis|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	2.7910559882	7.1556032972	0
+PWY-7221: guanosine ribonucleotides de novo biosynthesis|g__Neisseria.s__Neisseria_subflava	0	0	0	4.7386786082	0	0	0	0	0	0	0	0
+PWY-7221: guanosine ribonucleotides de novo biosynthesis|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	10.7439355063	0	0	0	0	0	0
+PWY-7221: guanosine ribonucleotides de novo biosynthesis|g__Veillonella.s__Veillonella_rogosae	0	0	0	0	0	0	0	0	0	0	5.2973887251	0
+PWY-7221: guanosine ribonucleotides de novo biosynthesis|unclassified	0	0	0	0	0	0	0	0	1.2979793762	6.7390132996	0	4.1533479455
+PWY-7222: guanosine deoxyribonucleotides de novo biosynthesis II	0	10.7751716987	0	8.5257047407	0	18.1167654439	0	0	8.8600615948	22.6848604603	28.9849613658	11.8179007052
+PWY-7222: guanosine deoxyribonucleotides de novo biosynthesis II|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	8.3665338645	0
+PWY-7222: guanosine deoxyribonucleotides de novo biosynthesis II|g__Neisseria.s__Neisseria_subflava	0	0	0	6.3583687416	0	0	0	0	0	0	0	0
+PWY-7222: guanosine deoxyribonucleotides de novo biosynthesis II|g__Streptococcus.s__Streptococcus_mitis	0	0	0	0	0	0	0	0	0	5.6236341732	0	0
+PWY-7222: guanosine deoxyribonucleotides de novo biosynthesis II|g__Veillonella.s__Veillonella_infantium	0	0	0	0	0	0	0	0	0	0	1.2071249223	0
+PWY-7222: guanosine deoxyribonucleotides de novo biosynthesis II|g__Veillonella.s__Veillonella_rogosae	0	0	0	0	0	0	0	0	0	0	5.1844088211	0
+PWY-7222: guanosine deoxyribonucleotides de novo biosynthesis II|unclassified	0	0	0	0	0	0	0	0	0	0	0	4.8406995146
+PWY-7228: superpathway of guanosine nucleotides de novo biosynthesis I	0	0	0	9.8084483602	0	15.8666477427	0	0	10.9036833694	24.6433693357	20.7795442996	7.1186858814
+PWY-7228: superpathway of guanosine nucleotides de novo biosynthesis I|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	7.7892924136	0
+PWY-7228: superpathway of guanosine nucleotides de novo biosynthesis I|g__Neisseria.s__Neisseria_subflava	0	0	0	5.2041036269	0	0	0	0	0	0	0	0
+PWY-7228: superpathway of guanosine nucleotides de novo biosynthesis I|g__Veillonella.s__Veillonella_rogosae	0	0	0	0	0	0	0	0	0	0	5.3171986148	0
+PWY-7228: superpathway of guanosine nucleotides de novo biosynthesis I|unclassified	0	0	0	0	0	0	0	0	0	0	0	4.5404633247
+PWY-7229: superpathway of adenosine nucleotides de novo biosynthesis I	0	7.4944284212	0	14.5416587931	0	17.1490435363	0	0	18.4126785619	31.8558225096	25.0636760844	7.4522018630
+PWY-7229: superpathway of adenosine nucleotides de novo biosynthesis I|g__Neisseria.s__Neisseria_subflava	0	0	0	4.8734575566	0	0	0	0	0	0	0	0
+PWY-7229: superpathway of adenosine nucleotides de novo biosynthesis I|unclassified	0	0	0	0	0	0	0	0	0	0	0	5.7407642049
+PWY-7234: inosine-5'-phosphate biosynthesis III	0	0	0	4.8509613478	8.5558582829	9.3627143598	0	0	16.7428665101	16.2665034603	21.6546370951	0
+PWY-7238: sucrose biosynthesis II	0	0	0	12.4687555086	10.1130688874	0	8.8576753848	0	18.2215855715	29.3161504155	19.3206730761	0
+PWY-7238: sucrose biosynthesis II|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	8.5682787739	0	0
+PWY-7238: sucrose biosynthesis II|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	3.2199536150	10.8488514698	0
+PWY-7238: sucrose biosynthesis II|g__Neisseria.s__Neisseria_flavescens	0	0	0	1.4789982108	0	0	0	0	3.6976200285	0	0	0
+PWY-7238: sucrose biosynthesis II|g__Neisseria.s__Neisseria_meningitidis	0	0	0	1.0630595445	0	0	0	0	1.5049266541	0	0	0
+PWY-7238: sucrose biosynthesis II|g__Neisseria.s__Neisseria_subflava	0	0	0	3.0685898968	0	0	0	0	2.0443402037	0	0	0
+PWY-7238: sucrose biosynthesis II|g__Streptococcus.s__Streptococcus_australis	0	0	0	0	0	0	0	0	2.2533659454	0	0	0
+PWY-7238: sucrose biosynthesis II|g__Streptococcus.s__Streptococcus_sp_A12	0	0	0	0	0	0	0	0	1.8349339614	0	0	0
+PWY-724: superpathway of L-lysine, L-threonine and L-methionine biosynthesis II	0	0	0	0	0	0	0	0	10.7989428368	0	11.9401627586	0
+PWY-724: superpathway of L-lysine, L-threonine and L-methionine biosynthesis II|g__Neisseria.s__Neisseria_subflava	0	0	0	0	0	0	0	0	1.4822922166	0	0	0
+PWY-7282: 4-amino-2-methyl-5-diphosphomethylpyrimidine biosynthesis II	0	0	0	0	0	0	0	0	0	6.5297508036	0	0
+PWY-7345: superpathway of anaerobic sucrose degradation	0	0	0	0	0	0	0	0	0	0	9.2196244590	0
+PWY-7356: thiamine diphosphate salvage IV (yeast)	0	0	0	0	0	0	0	0	0	14.4833200911	0	0
+PWY-7356: thiamine diphosphate salvage IV (yeast)|g__Streptococcus.s__Streptococcus_mitis	0	0	0	0	0	0	0	0	0	6.2912701425	0	0
+PWY-7357: thiamine phosphate formation from pyrithiamine and oxythiamine (yeast)	0	0	0	0	0	11.9184051924	0	0	6.1601642710	19.4633772735	0	0
+PWY-7357: thiamine phosphate formation from pyrithiamine and oxythiamine (yeast)|g__Streptococcus.s__Streptococcus_mitis	0	0	0	0	0	0	0	0	0	5.3995559353	0	0
+PWY-7357: thiamine phosphate formation from pyrithiamine and oxythiamine (yeast)|unclassified	0	0	0	0	0	0	0	0	0	3.4321139014	0	0
+PWY-7383: anaerobic energy metabolism (invertebrates, cytosol)	0	0	0	0	0	0	0	0	0	0	11.7350536551	0
+PWY-7400: L-arginine biosynthesis IV (archaebacteria)	0	0	0	0	0	0	0	0	0	10.2247011597	0	0
+PWY-7560: methylerythritol phosphate pathway II	0	0	0	0	11.1390044914	0	0	0	0	10.6754497740	0	0
+PWY-7663: gondoate biosynthesis (anaerobic)	9.2673419789	0	0	14.6096335235	20.5654096654	17.2165825677	5.6487030157	0	11.5825269170	17.5564471206	11.3630242399	10.9066506651
+PWY-7663: gondoate biosynthesis (anaerobic)|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	13.2962219207	0	0	0	0	0	0	0
+PWY-7663: gondoate biosynthesis (anaerobic)|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	9.6947506130	1.8701086562
+PWY-7663: gondoate biosynthesis (anaerobic)|g__Neisseria.s__Neisseria_flavescens	0	0	0	3.8980182169	0	0	0	0	0	5.4121074261	0	0
+PWY-7663: gondoate biosynthesis (anaerobic)|g__Neisseria.s__Neisseria_subflava	0	0	0	3.9186495384	0	0	0	0	0	1.8675576987	0	0
+PWY-7663: gondoate biosynthesis (anaerobic)|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	9.8347220325	0	0	0	0	0	0
+PWY-7663: gondoate biosynthesis (anaerobic)|g__Streptococcus.s__Streptococcus_mitis	0	0	0	0	0	0	4.9699744651	0	0	0	0	0
+PWY-7663: gondoate biosynthesis (anaerobic)|g__Veillonella.s__Veillonella_atypica	0	0	0	0	0	5.9790732436	0	0	0	0	0	0
+PWY-7664: oleate biosynthesis IV (anaerobic)	0	0	0	14.0542257743	19.2333148472	0	5.5572876296	0	10.9248218154	12.2945002667	8.9729189537	8.6970965609
+PWY-7664: oleate biosynthesis IV (anaerobic)|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	11.7099972551	0	0	0	0	0	0	0
+PWY-7664: oleate biosynthesis IV (anaerobic)|g__Neisseria.s__Neisseria_flavescens	0	0	0	1.9498243742	0	0	0	0	0	2.4921711428	0	0
+PWY-7790: UMP biosynthesis II	10.1896173159	0	0	11.9062365473	0	14.0080689190	4.8520975207	0	12.6741916455	0	12.3568144417	5.3379654887
+PWY-7790: UMP biosynthesis II|g__Neisseria.s__Neisseria_flavescens	0	0	0	2.7684454595	0	0	0	0	2.3114192212	0	0	0
+PWY-7790: UMP biosynthesis II|g__Neisseria.s__Neisseria_subflava	0	0	0	3.7361150448	0	0	0	0	5.2970013798	0	0	0
+PWY-7791: UMP biosynthesis III	13.5652003922	0	0	11.9062365473	8.6976988610	14.0080689190	4.8520975207	0	12.6741916455	0	12.3568144417	5.3379654887
+PWY-7791: UMP biosynthesis III|g__Fusobacterium.s__Fusobacterium_nucleatum	12.3189892133	0	0	0	0	0	0	0	0	0	0	0
+PWY-7791: UMP biosynthesis III|g__Neisseria.s__Neisseria_flavescens	0	0	0	2.7684454595	0	0	0	0	2.3114192212	0	0	0
+PWY-7791: UMP biosynthesis III|g__Neisseria.s__Neisseria_subflava	0	0	0	3.7361150448	0	0	0	0	5.2970013798	0	0	0
+PWY-7851: coenzyme A biosynthesis II (eukaryotic)	0	0	0	6.2134117073	11.3836110990	10.5157719636	0	0	7.3298134411	11.3578882105	12.5291244315	0
+PWY-7851: coenzyme A biosynthesis II (eukaryotic)|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	8.6688499326	0	0	0	0	0	0	0
+PWY-7851: coenzyme A biosynthesis II (eukaryotic)|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	11.7223791599	0
+PWY-7851: coenzyme A biosynthesis II (eukaryotic)|g__Neisseria.s__Neisseria_flavescens	0	0	0	0	0	0	0	0	0	1.4825507700	0	0
+PWY-7851: coenzyme A biosynthesis II (eukaryotic)|g__Neisseria.s__Neisseria_subflava	0	0	0	0	0	0	0	0	0	2.1011138512	0	0
+PWY-7851: coenzyme A biosynthesis II (eukaryotic)|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	10.4479363564	0	0	0	0	0	0
+PWY-7858: (5Z)-dodecenoate biosynthesis II	0	0	0	12.8696563406	0	0	0	0	0	9.4761507741	7.0694024480	0
+PWY-7883: anhydromuropeptides recycling II	0	0	0	0	0	0	0	0	0	0	9.4922612930	0
+PWY-7953: UDP-N-acetylmuramoyl-pentapeptide biosynthesis III (meso-diaminopimelate containing)	9.0528462534	0	0	0	11.8926835287	13.9032205482	0	0	12.7754737664	13.2462486520	17.4174401026	0
+PWY-7953: UDP-N-acetylmuramoyl-pentapeptide biosynthesis III (meso-diaminopimelate containing)|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	10.1755948471	0	0	0	0	0	0
+PWY-7953: UDP-N-acetylmuramoyl-pentapeptide biosynthesis III (meso-diaminopimelate containing)|g__Veillonella.s__Veillonella_rogosae	0	0	0	0	0	0	0	0	0	0	4.1472477695	0
+PWY-7977: L-methionine biosynthesis IV	9.7380616768	0	0	0	8.4573955718	10.5079973392	0	0	0	9.1490941227	19.8748950382	0
+PWY-7977: L-methionine biosynthesis IV|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	7.4187994435	0	0	0	0	0	0	0
+PWY-7977: L-methionine biosynthesis IV|g__Fusobacterium.s__Fusobacterium_nucleatum	6.9495434191	0	0	0	0	0	0	0	0	0	0	0
+PWY-7977: L-methionine biosynthesis IV|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	0.5349957330	0	0
+PWY-7977: L-methionine biosynthesis IV|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	10.4707048517	0
+PWY-7977: L-methionine biosynthesis IV|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	9.1589214956	0	0	0	0	0	0
+PWY-8004: Entner-Doudoroff pathway I	0	0	0	0	0	0	0	0	0	14.8060046971	0	0
+PWY-8073: lipid IVA biosynthesis (P. putida)	0	0	0	7.1403789940	9.0190453459	0	0	0	7.9085877798	7.5526130249	0	0
+PWY-8073: lipid IVA biosynthesis (P. putida)|g__Neisseria.s__Neisseria_flavescens	0	0	0	0	0	0	0	0	1.0079341836	0	0	0
+PWY-8073: lipid IVA biosynthesis (P. putida)|g__Neisseria.s__Neisseria_subflava	0	0	0	3.0761227524	0	0	0	0	0	0	0	0
+PWY-8178: pentose phosphate pathway (non-oxidative branch) II	5.9603613970	5.3956834532	0	11.3091298051	10.1755623085	7.5885141432	0	0	10.6924790201	11.9463485192	13.3530966748	6.5832912777
+PWY-8178: pentose phosphate pathway (non-oxidative branch) II|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	8.5698131855	0	0	0	0	0	0	0
+PWY-8178: pentose phosphate pathway (non-oxidative branch) II|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	9.8860836093	0
+PWY-8178: pentose phosphate pathway (non-oxidative branch) II|g__Neisseria.s__Neisseria_flavescens	0	0	0	3.6712666274	0	0	0	0	0	0	0	0
+PWY-8178: pentose phosphate pathway (non-oxidative branch) II|g__Neisseria.s__Neisseria_subflava	0	0	0	3.2347773116	0	0	0	0	0	0	0	0
+PWY-8187: L-arginine degradation XIII (reductive Stickland reaction)	0	0	0	0	5.0638793081	0	0	0	11.7203078608	0	0	0
+PWY-841: superpathway of purine nucleotides de novo biosynthesis I	0	0	0	8.2505060842	0	0	0	0	11.5981207661	21.4729460612	20.3404248828	0
+PWY-I9: L-cysteine biosynthesis VI (from L-methionine)	6.7704229610	0	0	14.3710148041	0	0	0	0	8.9527514181	10.9958194323	23.4513976950	0
+PWY-I9: L-cysteine biosynthesis VI (from L-methionine)|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	8.9982003599	0
+PWY0-1061: superpathway of L-alanine biosynthesis	0	0	0	7.8755634813	0	0	0	0	0	15.8536742722	16.8724920106	0
+PWY0-1061: superpathway of L-alanine biosynthesis|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	7.6560018194	0
+PWY0-1061: superpathway of L-alanine biosynthesis|g__Neisseria.s__Neisseria_flavescens	0	0	0	1.5646479263	0	0	0	0	0	0	0	0
+PWY0-1241: ADP-L-glycero-&beta;-D-manno-heptose biosynthesis	0	0	0	0	7.0529237826	0	0	0	0	6.6778494717	12.4263415218	0
+PWY0-1241: ADP-L-glycero-&beta;-D-manno-heptose biosynthesis|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	9.4797960716	0
+PWY0-1261: anhydromuropeptides recycling I	0	0	0	0	10.1966861567	0	0	0	0	9.2480833197	16.2532253573	0
+PWY0-1296: purine ribonucleosides degradation	0	0	0	0	0	0	10.2795339524	0	9.6771961102	12.0927278659	0	0
+PWY0-1297: superpathway of purine deoxyribonucleosides degradation	0	0	0	0	0	0	6.3272030416	0	6.4048399288	0	0	0
+PWY0-1319: CDP-diacylglycerol biosynthesis II	9.3908478294	0	0	7.7442650292	12.7081168517	11.2484943510	0	0	17.5214030461	30.4664787720	20.3284846207	0
+PWY0-1319: CDP-diacylglycerol biosynthesis II|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	11.1597737634	0	0	0	0	0	0	0
+PWY0-1319: CDP-diacylglycerol biosynthesis II|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	12.1939586762	0	0
+PWY0-1319: CDP-diacylglycerol biosynthesis II|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	15.7887904743	0
+PWY0-1319: CDP-diacylglycerol biosynthesis II|g__Neisseria.s__Neisseria_flavescens	0	0	0	0	0	0	0	0	0.7097232079	0	0	0
+PWY0-1319: CDP-diacylglycerol biosynthesis II|g__Neisseria.s__Neisseria_meningitidis	0	0	0	0	0	0	0	0	1.1581979738	0	0	0
+PWY0-1319: CDP-diacylglycerol biosynthesis II|g__Neisseria.s__Neisseria_subflava	0	0	0	0	0	0	0	0	2.8343142428	3.1607906750	0	0
+PWY0-1319: CDP-diacylglycerol biosynthesis II|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	9.2100527196	0	0	0	0	0	0
+PWY0-1319: CDP-diacylglycerol biosynthesis II|unclassified	5.8039597055	0	0	0	0	0	0	0	0	0	0	0
+PWY0-1477: ethanolamine utilization	0	0	0	0	0	0	4.6511627907	0	7.8418387999	0	0	0
+PWY0-1477: ethanolamine utilization|unclassified	0	0	0	0	0	0	4.6511627907	0	0	0	0	0
+PWY0-1479: tRNA processing	0	0	0	10.6896351548	0	0	0	0	10.7925649742	12.0582011935	13.4415359007	0
+PWY0-1479: tRNA processing|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	10.4050250800	0	0
+PWY0-1479: tRNA processing|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	6.0686618953	0
+PWY0-1586: peptidoglycan maturation (meso-diaminopimelate containing)	7.7556494367	0	0	42.9054348562	29.2205762707	10.4493505294	2.2742905849	0	26.4220956828	54.3698298576	37.0333524721	9.7749595626
+PWY0-1586: peptidoglycan maturation (meso-diaminopimelate containing)|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	26.1232674031	0	0	0	0	0	0	0
+PWY0-1586: peptidoglycan maturation (meso-diaminopimelate containing)|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	17.1188268290	0	0
+PWY0-1586: peptidoglycan maturation (meso-diaminopimelate containing)|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	26.2360777324	0
+PWY0-1586: peptidoglycan maturation (meso-diaminopimelate containing)|g__Neisseria.s__Neisseria_flavescens	0	0	0	6.7899961409	0	0	0	0	3.1445837383	8.8174712210	0	0
+PWY0-1586: peptidoglycan maturation (meso-diaminopimelate containing)|g__Neisseria.s__Neisseria_meningitidis	0	0	0	2.3189230094	0	0	0	0	3.3556528184	5.5824079806	0	0
+PWY0-1586: peptidoglycan maturation (meso-diaminopimelate containing)|g__Neisseria.s__Neisseria_subflava	0	0	0	12.6897419416	0	0	0	0	11.1945737861	18.4609832537	0	0
+PWY0-1586: peptidoglycan maturation (meso-diaminopimelate containing)|g__Streptococcus.s__Streptococcus_mitis	0	0	0	0	0	0	0	0	0	0	6.3795853270	0
+PWY0-1586: peptidoglycan maturation (meso-diaminopimelate containing)|g__Veillonella.s__Veillonella_atypica	0	0	0	0	0	6.2827225131	0	0	0	0	0	0
+PWY0-1586: peptidoglycan maturation (meso-diaminopimelate containing)|unclassified	7.7556494367	0	0	8.6643875987	0	0	2.2742905849	0	6.0430180548	0	0	9.7749595626
+PWY0-162: superpathway of pyrimidine ribonucleotides de novo biosynthesis	0	0	0	12.2585439236	0	0	0	0	9.3679065584	0	14.6673246947	0
+PWY0-162: superpathway of pyrimidine ribonucleotides de novo biosynthesis|g__Neisseria.s__Neisseria_subflava	0	0	0	3.7635355057	0	0	0	0	0	0	0	0
+PWY0-845: superpathway of pyridoxal 5'-phosphate biosynthesis and salvage	0	0	0	0	0	0	0	0	0	4.9942301307	8.3749906276	0
+PWY0-862: (5Z)-dodecenoate biosynthesis I	0	0	0	15.9568564463	18.9474674085	0	5.5064718278	0	10.2965869029	12.6147527905	11.0755161038	8.3228785050
+PWY0-862: (5Z)-dodecenoate biosynthesis I|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	10.8028543438	0	0	0	0	0	0	0
+PWY0-862: (5Z)-dodecenoate biosynthesis I|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	9.8815337973	0
+PWY0-862: (5Z)-dodecenoate biosynthesis I|g__Neisseria.s__Neisseria_flavescens	0	0	0	1.8132914283	0	0	0	0	0	2.3047621135	0	0
+PWY4FS-7: phosphatidylglycerol biosynthesis I (plastidic)	10.4269425308	0	0	0	10.2801361926	0	0	0	8.8035536095	25.1597444730	23.1662355617	0
+PWY4FS-7: phosphatidylglycerol biosynthesis I (plastidic)|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	7.5792143289	0	0	0	0	0	0	0
+PWY4FS-7: phosphatidylglycerol biosynthesis I (plastidic)|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	12.9852412475	0	0
+PWY4FS-8: phosphatidylglycerol biosynthesis II (non-plastidic)	10.4269425308	0	0	0	10.2801361926	0	0	0	8.8035536095	25.1597444730	23.1662355617	0
+PWY4FS-8: phosphatidylglycerol biosynthesis II (non-plastidic)|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	7.5792143289	0	0	0	0	0	0	0
+PWY4FS-8: phosphatidylglycerol biosynthesis II (non-plastidic)|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	12.9852412475	0	0
+PWY66-389: phytol degradation	0	0	0	0	0	0	0	0	7.9344960442	0	0	0
+PWY66-389: phytol degradation|g__Neisseria.s__Neisseria_flavescens	0	0	0	0	0	0	0	0	0.5251391361	0	0	0
+PWY66-389: phytol degradation|g__Neisseria.s__Neisseria_subflava	0	0	0	0	0	0	0	0	3.6184046991	0	0	0
+PWY66-399: gluconeogenesis III	0	0	0	0	0	0	0	0	0	0	10.2213662915	0
+PWY66-429: fatty acid biosynthesis initiation (mitochondria)	9.5476978146	0	0	13.7293550121	19.4757909129	8.8540025261	0	0	18.1568815623	9.5986919628	15.7988064488	0
+PWY66-429: fatty acid biosynthesis initiation (mitochondria)|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	5.7470011645	0	0	0	0	0	0	0
+PWY66-429: fatty acid biosynthesis initiation (mitochondria)|g__Capnocytophaga.s__Capnocytophaga_leadbetteri	0	0	0	0	5.8808015208	0	0	0	0	0	0	0
+PWY66-429: fatty acid biosynthesis initiation (mitochondria)|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	13.6200402722	0
+PWY66-429: fatty acid biosynthesis initiation (mitochondria)|g__Neisseria.s__Neisseria_flavescens	0	0	0	6.2898490977	0	0	0	0	5.0245690951	2.7613445589	0	0
+PWY66-429: fatty acid biosynthesis initiation (mitochondria)|g__Neisseria.s__Neisseria_subflava	0	0	0	1.9508348713	0	0	0	0	2.8927928110	5.0574613366	0	0
+PYRIDNUCSYN-PWY: NAD de novo biosynthesis I (from aspartate)	10.6542712086	0	0	7.4623880956	0	9.9777234472	0	0	0	0	0	0
+PYRIDNUCSYN-PWY: NAD de novo biosynthesis I (from aspartate)|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	8.9931891973	0	0	0	0	0	0
+PYRIDOXSYN-PWY: pyridoxal 5'-phosphate biosynthesis I	0	0	0	5.7999470306	0	0	0	0	0	7.8228402080	5.9171472419	0
+PYRIDOXSYN-PWY: pyridoxal 5'-phosphate biosynthesis I|g__Neisseria.s__Neisseria_flavescens	0	0	0	1.1430816018	0	0	0	0	0	0	0	0
+RIBOSYN2-PWY: flavin biosynthesis I (bacteria and plants)	0	0	0	10.5241628212	13.6967929834	0	0	0	9.1248815074	16.4384385288	15.1223554052	0
+RIBOSYN2-PWY: flavin biosynthesis I (bacteria and plants)|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	7.8493648965	0	0
+RIBOSYN2-PWY: flavin biosynthesis I (bacteria and plants)|g__Neisseria.s__Neisseria_subflava	0	0	0	4.0440098501	0	0	0	0	0	0	0	0
+RIBOSYN2-PWY: flavin biosynthesis I (bacteria and plants)|unclassified	0	0	0	0	5.3320447304	0	0	0	0	0	0	0
+SALVADEHYPOX-PWY: adenosine nucleotides degradation II	0	0	0	0	0	0	0	0	15.4545817850	0	0	0
+SER-GLYSYN-PWY: superpathway of L-serine and glycine biosynthesis I	6.0578332479	0	0	9.5854445075	0	6.7710447836	0	0	5.6244204012	15.4017245773	16.2070813252	0
+SER-GLYSYN-PWY: superpathway of L-serine and glycine biosynthesis I|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	9.3536862618	0	0
+SER-GLYSYN-PWY: superpathway of L-serine and glycine biosynthesis I|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	12.2620464067	0
+SER-GLYSYN-PWY: superpathway of L-serine and glycine biosynthesis I|g__Neisseria.s__Neisseria_flavescens	0	0	0	1.1108406751	0	0	0	0	0	0	0	0
+SER-GLYSYN-PWY: superpathway of L-serine and glycine biosynthesis I|g__Neisseria.s__Neisseria_subflava	0	0	0	3.6657180431	0	0	0	0	0	0	0	0
+SO4ASSIM-PWY: assimilatory sulfate reduction I	0	0	0	0	0	0	0	0	6.2483948662	0	0	0
+SO4ASSIM-PWY: assimilatory sulfate reduction I|g__Neisseria.s__Neisseria_flavescens	0	0	0	0	0	0	0	0	1.3617864229	0	0	0
+SO4ASSIM-PWY: assimilatory sulfate reduction I|g__Neisseria.s__Neisseria_subflava	0	0	0	0	0	0	0	0	3.6270419081	0	0	0
+THISYNARA-PWY: superpathway of thiamine diphosphate biosynthesis III (eukaryotes)	0	0	0	0	0	8.3993560248	0	0	0	9.7797975254	0	0
+THRESYN-PWY: superpathway of L-threonine biosynthesis	0	0	0	10.6228006771	7.5425701457	10.2195674741	0	0	12.3256121638	18.4337365225	15.6179691844	0
+THRESYN-PWY: superpathway of L-threonine biosynthesis|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	10.5763364141	0
+THRESYN-PWY: superpathway of L-threonine biosynthesis|g__Neisseria.s__Neisseria_flavescens	0	0	0	1.1665620202	0	0	0	0	1.4342831111	0	0	0
+THRESYN-PWY: superpathway of L-threonine biosynthesis|g__Neisseria.s__Neisseria_subflava	0	0	0	2.7281251237	0	0	0	0	1.0637787019	0	0	0
+TRNA-CHARGING-PWY: tRNA charging	0	0	0	10.1860119822	14.4272449014	14.4289614640	0	0	13.9537822346	23.2354826594	16.9919657470	0
+TRNA-CHARGING-PWY: tRNA charging|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	0	0	0	0	0	0	6.1168426242	0	0
+TRNA-CHARGING-PWY: tRNA charging|g__Prevotella.s__Prevotella_melaninogenica	0	0	0	0	0	10.1492029059	0	0	0	0	0	0
+UDPNAGSYN-PWY: UDP-N-acetyl-D-glucosamine biosynthesis I	10.2754383102	0	0	11.0190919418	16.9834886822	0	0	0	17.8163616090	14.3150052461	14.0485604350	8.1256563429
+UDPNAGSYN-PWY: UDP-N-acetyl-D-glucosamine biosynthesis I|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	8.2366510813	0	0	0	0	0	0	0
+UDPNAGSYN-PWY: UDP-N-acetyl-D-glucosamine biosynthesis I|g__Gemella.s__Gemella_sanguinis	0	0	0	0	0	0	0	0	4.7853148904	0	0	0
+UDPNAGSYN-PWY: UDP-N-acetyl-D-glucosamine biosynthesis I|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0	7.1602535668	0
+UDPNAGSYN-PWY: UDP-N-acetyl-D-glucosamine biosynthesis I|g__Neisseria.s__Neisseria_flavescens	0	0	0	2.1988208333	0	0	0	0	0	0	0	0
+UDPNAGSYN-PWY: UDP-N-acetyl-D-glucosamine biosynthesis I|g__Neisseria.s__Neisseria_meningitidis	0	0	0	0.5923169560	0	0	0	0	0	0	0	0
+UDPNAGSYN-PWY: UDP-N-acetyl-D-glucosamine biosynthesis I|g__Neisseria.s__Neisseria_subflava	0	0	0	3.8297241678	0	0	0	0	0	0	0	0
+UDPNAGSYN-PWY: UDP-N-acetyl-D-glucosamine biosynthesis I|g__Veillonella.s__Veillonella_dispar	0	0	0	0	0	0	0	0	0	0	1.0978789615	0
+UDPNAGSYN-PWY: UDP-N-acetyl-D-glucosamine biosynthesis I|g__Veillonella.s__Veillonella_rogosae	0	0	0	0	0	0	0	0	0	0	4.1501712408	0
+UDPNAGSYN-PWY: UDP-N-acetyl-D-glucosamine biosynthesis I|unclassified	0	0	0	0	4.5108453903	0	0	0	0	5.3815631902	0	0
+VALSYN-PWY: L-valine biosynthesis	9.2235601551	0	0	23.6286959817	19.6367513106	6.4642366150	8.4855234449	0	12.0777965085	27.2452412693	27.5200591970	4.8978999864
+VALSYN-PWY: L-valine biosynthesis|g__Aggregatibacter.s__Aggregatibacter_segnis	0	0	0	0	9.7817100280	0	0	0	0	0	0	0
+VALSYN-PWY: L-valine biosynthesis|g__Fusobacterium.s__Fusobacterium_nucleatum	9.2235601551	0	0	0	8.1483461698	0	0	0	0	0	0	0
+VALSYN-PWY: L-valine biosynthesis|g__Haemophilus.s__Haemophilus_parahaemolyticus	0	0	0	4.6303952373	0	0	0	0	0	5.9396259679	0	0
+VALSYN-PWY: L-valine biosynthesis|g__Haemophilus.s__Haemophilus_parainfluenzae	0	0	0	0	0	0	0	0	0	0.5592355329	9.9174806705	0
+VALSYN-PWY: L-valine biosynthesis|g__Neisseria.s__Neisseria_flavescens	0	0	0	2.3500252134	0	0	0	0	0	2.2757808381	0	0
+VALSYN-PWY: L-valine biosynthesis|g__Neisseria.s__Neisseria_subflava	0	0	0	3.6292934769	0	0	0	0	0	3.8749495864	0	0
+VALSYN-PWY: L-valine biosynthesis|g__Rothia.s__Rothia_mucilaginosa	0	0	0	0	0	0	0	0	0	0	7.7397495198	0
+VALSYN-PWY: L-valine biosynthesis|g__Streptococcus.s__Streptococcus_australis	0	0	0	0	0	0	0	0	1.4502110998	0	0	0
+VALSYN-PWY: L-valine biosynthesis|g__Streptococcus.s__Streptococcus_infantis	0	0	0	0	0	0	0	0	2.6531629870	0	0	0
+VALSYN-PWY: L-valine biosynthesis|g__Streptococcus.s__Streptococcus_sp_A12	0	0	0	0	0	0	0	0	1.6221194873	0	0	0
+VALSYN-PWY: L-valine biosynthesis|g__Veillonella.s__Veillonella_atypica	0	0	0	0	0	6.0844213462	0	0	0	0	0	0
+VALSYN-PWY: L-valine biosynthesis|g__Veillonella.s__Veillonella_dispar	0	0	0	0	0	0	0	0	0	0	2.0417516030	0
+VALSYN-PWY: L-valine biosynthesis|unclassified	0	0	0	0	0	0	0	0	0	0	6.3064292148	4.8978999864
