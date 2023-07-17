@@ -70,6 +70,11 @@ EasyMetagenome依赖EasyMicrobiome，其包括众多脚本、软件和数据库�
     # 软件安装
     # 添加linux命令可执行权限
     chmod +x `pwd`/EasyMicrobiome/linux/* `pwd`/EasyMicrobiome/script/*
+    
+    # 去掉windows引入的换行符
+    find ${db}/EasyMicrobiome/script -maxdepth 1 -type f -exec sed -i 's/\r//' {} \;
+    find ${db}/EasyMicrobiome/linux -maxdepth 1 -type f -exec sed -i 's/\r//' {} \;
+
     # 添加环境变量
     echo "export PATH=\"\$PATH:`pwd`/EasyMicrobiome/linux:`pwd`/EasyMicrobiome/script\"" >> ~/.bashrc
     source ~/.bashrc
@@ -273,6 +278,10 @@ HUMAnN3+MetaPhlAn4为目前最新版，目前最广泛使用的HUMAnN2安装见�
     wget -c ftp://download.nmdc.cn/tools/meta/metaphlan4/mpa_vOct22_CHOCOPhlAnSGB_202212_bt2.tar.gz
     tar xvzf mpa_vOct22_CHOCOPhlAnSGB_202212.tar.gz
     tar xvzf mpa_vOct22_CHOCOPhlAnSGB_202212_bt2.tar.gz
+    
+    # 下载后，数据库软连接到环境里面
+    mkdir -p ${soft}/anaconda3/envs/humann3/lib/python3.10/site-packages/metaphlan/metaphlan_databases
+    ln -s `pwd`/* ${soft}/anaconda3/envs/humann3/lib/python3.10/site-packages/metaphlan/metaphlan_databases
 
 ## 生物标记鉴定和可视化LEfSe
 
