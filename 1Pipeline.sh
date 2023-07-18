@@ -518,10 +518,10 @@ KO合并为高层次L2, L1通路代码
 
 ## 2.6 LEfSe差异分析物种
 
-*   输入文件：物种丰度表result/metaphlan2/taxonomy.tsv
+*   输入文件：物种丰度表result/metaphlan4/taxonomy.tsv
 *   输入文件：样品分组信息 result/metadata.txt
-*   中间文件：整合后用于LefSe分析的文件 result/metaphlan2/lefse.txt，这个文件可以提供给www\.ehbio.com/ImageGP 用于在线LefSE分析
-*   LefSe结果输出：result/metaphlan2/目录下lefse开头和feature开头的文件
+*   中间文件：整合后用于LefSe分析的文件 result/metaphlan4/lefse.txt，这个文件可以提供给www\.ehbio.com/ImageGP 用于在线LefSE分析
+*   LefSe结果输出：result/metaphlan4/目录下lefse开头和feature开头的文件
 
 前面演示数据仅有2个样本，无法进行差异比较。下面使用result12目录中由12个样本生成的结果表进行演示
 
@@ -605,22 +605,22 @@ Kraken2可以快速完成读长(read)层面的物种注释和定量，还可以�
     # pluspfp8g
     # k2_standard
     # mini
-    time kraken2 --db ${db}/kraken2/mini/ --paired temp/qc/${i}_?.fastq \
-      --threads 2 --use-names --report-zero-counts \
+    time kraken2 --db ${db}/kraken2/pluspf16g/ --paired temp/qc/${i}_?.fastq \
+      --threads 1 --use-names --report-zero-counts \
       --report temp/kraken2/${i}.report \
       --output temp/kraken2/${i}.output
 
 多样本并行生成report，1样本8线程，内存大但速度快，内存不多不建议用多线程
 
-    tail -n+2 result/metadata.txt|cut -f1|rush -j 2 \
-      "kraken2 --db ${db}/kraken2/pluspfp --paired temp/qc/{1}_?.fastq \
+    tail -n+2 result/metadata.txt | cut -f1 | rush -j 2 \
+      "kraken2 --db ${db}/kraken2/pluspf16g --paired temp/qc/{1}_?.fastq \
       --threads 1 --use-names --report-zero-counts \
       --report temp/kraken2/{1}.report \
       --output temp/kraken2/{1}.output"
 
 使用krakentools转换report为mpa格式
 
-    for i in `tail -n+2 result/metadata.txt|cut -f1`;do
+    for i in `tail -n+2 result/metadata.txt | cut -f1`;do
       kreport2mpa.py -r temp/kraken2/${i}.report \
         --display-header -o temp/kraken2/${i}.mpa; done
 
@@ -657,20 +657,20 @@ Kraken2可以快速完成读长(read)层面的物种注释和定量，还可以�
     # 设置估算的分类级别D,P,C,O,F,G,S，常用门P和种S
     tax=P
     mkdir -p temp/bracken
-    for i in `tail -n+2 result/metadata.txt|cut -f1`;do
+    for i in `tail -n+2 result/metadata.txt | cut -f1`;do
         # i=C1
-        bracken -d ${db}/kraken2/mini/ \
+        bracken -d ${db}/kraken2/pluspf16g/ \
           -i temp/kraken2/${i}.report \
           -r 100 -l ${tax} -t 0 \
           -o temp/bracken/${i}; done
     # bracken结果合并成表
     # 输出结果行数相同，但不一定顺序一致，要按表头排序
     # 仅提取第6列reads count，并添加样本名
-    tail -n+2 result/metadata.txt|cut -f1|rush -j 1 \
+    tail -n+2 result/metadata.txt | cut -f1 | rush -j 1 \
       'tail -n+2 temp/bracken/{1} | LC_ALL=C sort | cut -f6 | sed "1 s/^/{1}\n/" > temp/bracken/{1}.count'
     # 提取第一样本品行名为表行名
     h=`tail -n1 result/metadata.txt|cut -f1`
-    tail -n+2 temp/bracken/${h}|sort|cut -f1 | \
+    tail -n+2 temp/bracken/${h} | sort | cut -f1 | \
       sed "1 s/^/Taxonomy\n/" > temp/bracken/0header.count
     # 检查文件数，为n+1
     ls temp/bracken/*count | wc
@@ -698,7 +698,7 @@ Kraken2可以快速完成读长(read)层面的物种注释和定量，还可以�
 
 分析后清理每条序列的注释大文件
 
-    rm -rf temp/kraken2/*.output
+    /bin/rm -rf temp/kraken2/*.output
 
 多样性分析/物种组成，详见3StatPlot.sh，Kraken2结果筛选序列见附录
 
@@ -710,10 +710,15 @@ Kraken2可以快速完成读长(read)层面的物种注释和定量，还可以�
     # 启动工作环境
     conda activate megahit
     
+    megahit -v # MEGAHIT v1.2.9
+    metaspades.py -v # SPAdes genome assembler v3.15.4 [metaSPAdes mode]
+    quast.py -v # QUAST v5.0.2
+    prodigal -v #Prodigal V2.6.3: February, 2016
+    
 ## 3.1 组装Assembly
 
     # 删除旧文件夹，否则megahit无法运行
-    rm -rf temp/megahit
+    /bin/rm -rf temp/megahit
     # 组装，10~30m，TB级数据需几天至几周
     megahit -t 3 \
         -1 `tail -n+2 result/metadata.txt|cut -f1|sed 's/^/temp\/qc\//;s/$/_1.fastq/'|tr '\n' ','|sed 's/,$//'` \
@@ -732,6 +737,7 @@ Kraken2可以快速完成读长(read)层面的物种注释和定量，还可以�
 
 ### 方法2. metaSPAdes精细拼接
 
+
     # 精细但使用内存和时间更多，15~65m
     /usr/bin/time -v -o metaspades.py.log metaspades.py -t 3 -m 100 \
       `tail -n+2 result/metadata.txt|cut -f1|sed 's/^/temp\/qc\//;s/$/_1.fastq/'|sed 's/^/-1 /'| tr '\n' ' '` \
@@ -747,12 +753,12 @@ Kraken2可以快速完成读长(read)层面的物种注释和定量，还可以�
     mkdir -p result/metaspades/
     ln -f temp/metaspades/contigs.fasta result/metaspades/
     # 删除临时文件
-    rm -rf temp/metaspades
+    /bin/rm -rf temp/metaspades
 
 注：metaSPAdes支持二、三代混合组装，见附录，此外还有OPERA-MS组装二、三代方案
 
 ### QUAST评估
-
+ 
     # QUAST评估，生成report文本tsv/txt、网页html、PDF等格式报告
     quast.py result/megahit/final.contigs.fa \
       -o result/megahit/quast -t 2
@@ -775,7 +781,7 @@ Kraken2可以快速完成读长(read)层面的物种注释和定量，还可以�
     # 输入文件：组装的序列 result/megahit/final.contigs.fa
     # 输出文件：prodigal预测的基因序列 temp/prodigal/gene.fa
     # 基因大，可参考附录prodigal拆分基因文件，并行计算
-
+    
     mkdir -p temp/prodigal
     # prodigal的meta模式预测基因，>和2>&1记录分析过程至gene.log
     prodigal -i result/megahit/final.contigs.fa \
@@ -824,7 +830,7 @@ Kraken2可以快速完成读长(read)层面的物种注释和定量，还可以�
       -p 3 -i temp/salmon/index 
 
     # 定量，l文库类型自动选择，p线程，--meta宏基因组模式, 2个任务并行2个样
-    tail -n+2 result/metadata.txt|cut -f1|rush -j 2 \
+    tail -n+2 result/metadata.txt | cut -f1 | rush -j 2 \
       "salmon quant -i temp/salmon/index -l A -p 3 --meta \
         -1 temp/qc/{1}_1.fastq -2 temp/qc/{1}_2.fastq \
         -o temp/salmon/{1}.quant"
@@ -867,7 +873,7 @@ Kraken2可以快速完成读长(read)层面的物种注释和定量，还可以�
 
     # 运行并记录软件版本
     conda activate eggnog
-    emapper.py --version # 2.1.7
+    emapper.py --version 
     # emapper-2.1.10 / Expected eggNOG DB version: 5.0.2 / 
     # Installed eggNOG DB version: 5.0.2 / (eggnog6在线可以用，本地用不了，还没释放)
     # Diamond version found: diamond version 2.0.15 / 
@@ -931,7 +937,7 @@ Kraken2可以快速完成读长(read)层面的物种注释和定量，还可以�
     diamond blastp \
       --db ${db}/dbcan2/CAZyDB.08062022 \
       --query result/NR/protein.fa \
-      --threads 9 -e 1e-3 --outfmt 6 --max-target-seqs 1 --quiet \
+      --threads 2 -e 1e-3 --outfmt 6 --max-target-seqs 1 --quiet \
       --out temp/dbcan2/gene_diamond.f6
     wc -l temp/dbcan2/gene_diamond.f6
     # 整理比对数据为表格 
@@ -1002,7 +1008,7 @@ CARD在线分析平台：https://card.mcmaster.ca/
 
     # Generate report in default taxid output
     conda activate kraken2
-    kraken2 --db /db/kraken2/mini \
+    kraken2 --db /db/kraken2/pluspf16g \
       result/NR/nucleotide.fa \
       --threads 3 \
       --report temp/NRgene.report \
@@ -1067,7 +1073,7 @@ CARD在线分析平台：https://card.mcmaster.ca/
 
     # 质控后数据位于temp/qc中，此处需下载并解压
     # 在线下很慢，建议直接拷贝
-    cp /db/metawrap/*.fastq ~/meta/binning/temp/qc/
+    /bin/cp -rf /db/metawrap/*.fastq ~/meta/binning/temp/qc/
     cd temp/qc
     for i in `seq 7 9`;do
         wget -c ftp.sra.ebi.ac.uk/vol1/fastq/ERR011/ERR01134${i}/ERR01134${i}_1.fastq.gz
@@ -1102,12 +1108,12 @@ CARD在线分析平台：https://card.mcmaster.ca/
       temp/qc/ERR*.fastq &
     # 运行过程记录见 nohup.out
     tail nohup.out
-    rm -f nohup.out
+    /bin/rm -f nohup.out
 
 ### 分箱提纯Bin refinement
 
     # 8线程2h， 24p 1h20m
-    rm -rf temp/bin_refinement
+    /bin/rm -rf temp/bin_refinement
     # mkdir -p temp/bin_refinement
     nohup metawrap bin_refinement \
       -o temp/bin_refinement \
@@ -1237,14 +1243,15 @@ CARD在线分析平台：https://card.mcmaster.ca/
 
 启动软件所在虚拟环境
 
-    conda activate gtdbtk
+    conda activate gtdbtk2.3
     export GTDBTK_DATA_PATH="${db}/gtdb"
-    gtdbtk -v # 2.2.6
+    gtdbtk -v # 2.3.2
     
 细菌基因组物种注释
 
 以上面鉴定的10个种为例，注意扩展名要与输入文件一致，可使用压缩格式gz。主要结果文件描述：此9个细菌基因组，结果位于tax.bac120开头的文件，如物种注释 tax.bac120.summary.tsv。古菌结果位于tax.ar53开头的文件中。
 
+    cd ${wd}/binning
     mkdir -p temp/gtdb_classify
     export GTDBTK_DATA_PATH="${db}/gtdb"
     # 10个基因组，24p，100min 152 G内存
@@ -1253,10 +1260,11 @@ CARD在线分析平台：https://card.mcmaster.ca/
         --out_dir temp/gtdb_classify \
         --extension fa --skip_ani_screen \
         --prefix tax \
-        --cpus 6
+        --cpus 3
     # less -S按行查看，按q退出
-    less -S temp/gtdb_classify/tax.bac120.summary.tsv
-    less -S temp/gtdb_classify/tax.ar53.summary.tsv
+    # less -S temp/gtdb_classify/tax.bac120.summary.tsv
+    head temp/gtdb_classify/tax.bac120.summary.tsv
+    head temp/gtdb_classify/tax.ar53.summary.tsv
     
 多序列对齐结果建树
 
