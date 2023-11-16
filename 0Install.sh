@@ -2,11 +2,11 @@
 
 # 易宏基因组软件和数据库 EasyMetagenome software & database
 
-    # 版本Version: 1.19, 2023/7/21
-    # 操作系统Operation System: Linux Ubuntu 20.04+ / CentOS 7.7+
+    # 版本Version: 1.20, 2023/11/23
+    # 操作系统Operation System: Linux Ubuntu 22.04+ / CentOS 8+
     # 主页Homepage: https://github.com/YongxinLiu/EasyMetagenome
 
-所有软件和数据库可从官网下载，备选 All software and databases can be downloaded from the official website, optional：
+所有软件和数据库可从官网下载，All software and databases can be downloaded from the official website, 备选 optional：
 中科院微生物所Institute of Microbiology, Chinese Academy of Sciences：ftp://download.nmdc.cn/tools/ (FileZilla访问) 
 百度网盘Baidu Netdisk：https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
 
@@ -16,7 +16,7 @@
 
 安装前准备：软件和数据库位置 Before Installation: Software and Database Locations
 
-    # 数据库安装位置Database Locations，默认~/db目录(无需管理权限)，管理员可选/d
+    # 数据库安装位置Database Locations，默认~/db目录(无需管理权限)，管理员可选/db
     db=~/db
     mkdir -p ${db} && cd ${db}
     # 软件安装位置Software installation location，默认为~/miniconda3，测试服务器为/anaconda3
@@ -25,7 +25,7 @@
     # In the frequently used server environment, you can replace the variable ${db} and ${soft} with absolute paths, and you will no longer need to run the above environment variables every time
     # 可选：初始化环境变量，可能提高软件安装成功率
     # Optional: Initialize environment variables, which may improve the success rate of software installation
-    # PATH=${soft}/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:${db}/EasyMicrobiome/linux:${db}/EasyMicrobiome/script
+    PATH=${soft}/bin:${soft}/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:${db}/EasyMicrobiome/linux:${db}/EasyMicrobiome/script
     echo $PATH
 
 ### EasyMetagenome流程Pipeline
@@ -70,11 +70,6 @@ EasyMetagenome依赖EasyMicrobiome，其包括众多脚本、软件和数据库�
     # 软件安装
     # 添加linux命令可执行权限
     chmod +x `pwd`/EasyMicrobiome/linux/* `pwd`/EasyMicrobiome/script/*
-    
-    # 去掉windows引入的换行符
-    find ${db}/EasyMicrobiome/script -maxdepth 1 -type f -exec sed -i 's/\r//' {} \;
-    find ${db}/EasyMicrobiome/linux -maxdepth 1 -type f -exec sed -i 's/\r//' {} \;
-
     # 添加环境变量
     echo "export PATH=\"\$PATH:`pwd`/EasyMicrobiome/linux:`pwd`/EasyMicrobiome/script\"" >> ~/.bashrc
     source ~/.bashrc
@@ -89,7 +84,7 @@ EasyMetagenome依赖EasyMicrobiome，其包括众多脚本、软件和数据库�
     # 激活，然后关闭终端重开，提示符前出现(base)即成功
     ${soft}/condabin/conda init
     source ~/.bashrc
-    # 查看版本，conda 23.3.1, python 23.3.1
+    # 查看版本，conda 23.7.3, python 3.11.4
     conda -V 
     python --version
     # 添加常用频道
@@ -128,7 +123,7 @@ BioConda: https://bioconda.github.io/recipes/kneaddata/README.html
     # 指定conda文件名
     s=kneaddata
     # 下载，可选NMDC、百度云等
-    # wget -c ftp://download.nmdc.cn/tools//conda/${s}.tar.gz
+    wget -c ftp://download.nmdc.cn/tools/conda/${s}.tar.gz
     # 指定安装目录
     mkdir -p ${soft}/envs/${s}
     tar -xvzf ${s}.tar.gz -C ${soft}/envs/${s}
@@ -143,27 +138,34 @@ BioConda: https://bioconda.github.io/recipes/kneaddata/README.html
     kneaddata --version # 0.12.0
     trimmomatic -version # 0.39
     bowtie2 --version # 2.5.1
-    multiqc --version  # 1.14
+    multiqc --version  # 1.15
 
-    # (可选)安装软件打包，生成上方下载压缩包
+    # (可选)安装软件打包，f覆盖输出文件，ignore跳过修改检测
     n=kneaddata
-    # f可覆盖输出文件，ignore可以跳过修改检测
     conda pack -f --ignore-missing-files -n ${n} -o ${n}.tar.gz
-    chmod 755 *
-    
+
 ### kneaddata数据库下载
 
     # 查看可用数据库
     kneaddata_database
     # 包括人基因组bowtie2/bmtagger、人类转录组、核糖体RNA和小鼠基因组
-    # 下载人基因组bowtie2索引 3.44 GB
-    mkdir -p ${db}/kneaddata/human_genome
-    kneaddata_database --download human_genome bowtie2 ${db}/kneaddata/human_genome
     
-    # 备用链接下载至上述目录，并解压
-    cd ${db}/kneaddata/human_genome
+    # 下载人基因组bowtie2索引 3.44 GB
+    mkdir -p ${db}/kneaddata/human
+    kneaddata_database --download human_genome bowtie2 ${db}/kneaddata/human
+    
+    # 备用链接下载人类基因组至上述目录，并解压
+    cd ${db}/kneaddata/human
     wget -c ftp://download.nmdc.cn/tools/meta/kneaddata/human_genome/Homo_sapiens_hg37_and_human_contamination_Bowtie2_v0.1.tar.gz
     tar xvzf Homo_sapiens_hg37_and_human_contamination_Bowtie2_v0.1.tar.gz
+
+    # 下载小鼠基因组bowtie2索引 2.83 GB
+    mkdir -p ${db}/kneaddata/mouse
+    kneaddata_database --download mouse_C57BL bowtie2 ${db}/kneaddata/mouse
+    # 备用手动下载
+    cd ${db}/kneaddata/mouse
+    wget -c http://huttenhower.sph.harvard.edu/kneadData_databases/mouse_C57BL_6NJ_Bowtie2_v0.1.tar.gz
+    tar xvzf mouse_C57BL_6NJ_Bowtie2_v0.1.tar.gz
     
 ### kneaddata自定义参考基因组索引
 
@@ -176,13 +178,12 @@ BioConda: https://bioconda.github.io/recipes/kneaddata/README.html
     cd ${db}/kneaddata/ath
     # 下载
     wget -c http://ftp.ensemblgenomes.org/pub/plants/release-51/fasta/arabidopsis_thaliana/dna/Arabidopsis_thaliana.TAIR10.dna.toplevel.fa.gz
-    # wget -c ftp://download.nmdc.cn/tools/meta/kneaddata/Arabidopsis_thaliana.TAIR10.dna.toplevel.fa.gz
+    mv Arabidopsis_thaliana.TAIR10.dna.toplevel.fa.gz tair10.fa.gz
+    # wget -c ftp://download.nmdc.cn/tools/meta/kneaddata/tair10.fa.gz
     # 解压
-    gunzip Arabidopsis_thaliana.TAIR10.dna.toplevel.fa.gz
-    # 简化文件名
-    mv Arabidopsis_thaliana.TAIR10.dna.toplevel.fa tair10.fa
-    # bowtiew建索引，输入文件，输出文件前缀，9线程2分
-    time bowtie2-build -f tair10.fa tair10 --threads 4 --seed 1
+    gunzip tair10.fa.gz
+    # bowtiew建索引，输入文件，输出文件前缀，4线程2分
+    bowtie2-build -f tair10.fa tair10 --threads 4
 
 # 二、基于读长分析 Read-based (HUMAnN3/Kraken2)
 
@@ -236,10 +237,9 @@ HUMAnN3+MetaPhlAn4为目前最新版，目前最广泛使用的HUMAnN2安装见�
     humann_databases --download utility_mapping full ${db}/humann3
 
     # humann3数据库无法自动下载，备用链接下载安装
-    # 手动下载，备用链接为ftp://download.nmdc.cn/tools/meta/humann3替换http://huttenhower.sph.harvard.edu/humann_data
-    wget -c http://huttenhower.sph.harvard.edu/humann_data/chocophlan/full_chocophlan.v201901_v31.tar.gz
-    wget -c http://huttenhower.sph.harvard.edu/humann_data/uniprot/uniref_annotated/uniref90_annotated_v201901b_full.tar.gz
-    wget -c http://huttenhower.sph.harvard.edu/humann_data/full_mapping_v201901b.tar.gz
+    wget -c ftp://download.nmdc.cn/tools/meta/humann3/full_chocophlan.v201901_v31.tar.gz
+    wget -c ftp://download.nmdc.cn/tools/meta/humann3/uniref90_annotated_v201901b_full.tar.gz
+    wget -c ftp://download.nmdc.cn/tools/meta/humann3/full_mapping_v201901b.tar.gz
     # 安装、解压
     mkdir -p ${db}/humann3/chocophlan
     tar xvzf full_chocophlan.v201901_v31.tar.gz -C ${db}/humann3/chocophlan
@@ -262,26 +262,24 @@ HUMAnN3+MetaPhlAn4为目前最新版，目前最广泛使用的HUMAnN2安装见�
 
 ### MetaPhlAn4物种数据库
     
-    # MetaPhlAn4数据库下载，自动会下载到conda环境中，打包30G文件不方便分享，这里手动指定位置下载
-    # 手动下载2022数据和索引3G+20G
-    mkdir -p ~/${db}/metaphlan4
-    cd ~/${db}/metaphlan4
+    # MetaPhlAn4数据库下载2022数据和索引3G+20G
+    mkdir -p ${db}/metaphlan4
+    cd ${db}/metaphlan4
+    
+    # 官网下载
     wget -c http://cmprod1.cibio.unitn.it/biobakery4/metaphlan_databases/mpa_vOct22_CHOCOPhlAnSGB_202212.tar
     wget -c http://cmprod1.cibio.unitn.it/biobakery4/metaphlan_databases/bowtie2_indexes/mpa_vOct22_CHOCOPhlAnSGB_202212_bt2.tar
     tar xvf mpa_vOct22_CHOCOPhlAnSGB_202212.tar
     tar xvf mpa_vOct22_CHOCOPhlAnSGB_202212_bt2.tar
     
-    # 官方下载链接没有压缩，体积大而且下载慢，可用国内百度链接：https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315 或 微生物所FTP ftp://download.nmdc.cn/tools/meta 下载压缩包
-    mkdir -p ~/${db}/metaphlan4
-    cd ~/${db}/metaphlan4
+    # 官方没有压缩体积大下载慢，备用国内百度链接：https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315 或 微生物所FTP ftp://download.nmdc.cn/tools/meta 下载压缩包
     wget -c ftp://download.nmdc.cn/tools/meta/metaphlan4/mpa_vOct22_CHOCOPhlAnSGB_202212.tar.gz
     wget -c ftp://download.nmdc.cn/tools/meta/metaphlan4/mpa_vOct22_CHOCOPhlAnSGB_202212_bt2.tar.gz
     tar xvzf mpa_vOct22_CHOCOPhlAnSGB_202212.tar.gz
     tar xvzf mpa_vOct22_CHOCOPhlAnSGB_202212_bt2.tar.gz
-    
-    # 下载后，数据库软连接到环境里面
-    mkdir -p ${soft}/anaconda3/envs/humann3/lib/python3.10/site-packages/metaphlan/metaphlan_databases
-    ln -s `pwd`/* ${soft}/anaconda3/envs/humann3/lib/python3.10/site-packages/metaphlan/metaphlan_databases
+    # 可选(制作下载文件和md5值)
+    gunzip mpa_vOct22_CHOCOPhlAnSGB_202212_bt2.tar.gz
+    md5sum mpa_vOct22_CHOCOPhlAnSGB_202212_bt2.tar > mpa_vOct22_CHOCOPhlAnSGB_202212_bt2.md5
 
 ## 生物标记鉴定和可视化LEfSe
 
@@ -291,7 +289,7 @@ HUMAnN3+MetaPhlAn4为目前最新版，目前最广泛使用的HUMAnN2安装见�
 
     n=lefse
     # 下载
-    wget -c ftp://download.nmdc.cn/tools//conda/${n}.tar.gz
+    wget -c ftp://download.nmdc.cn/tools/conda/${n}.tar.gz
     # 指定安装目录
     mkdir -p ${soft}/envs/${n}
     tar -xvzf ${n}.tar.gz -C ${soft}/envs/${n}
@@ -304,19 +302,12 @@ HUMAnN3+MetaPhlAn4为目前最新版，目前最广泛使用的HUMAnN2安装见�
 
     mamba create -n lefse lefse -c bioconda -y
 
-Rstudio中运行命令调用R版本问题的解决
-
-    # 在Rstudio中默认调用Rstudio的R，具体写在/etc/rstudio/rserver.conf
-    # 或在R中用Sys.getenv()["R_HOME"]，在rpy2中print(robjects.r)可以查看其调用的r版本
-    # 指定lefse调用的R版本，需根据conda实际目录修改
-    sed -i "2 i os.environ['R_HOME'] = '~/miniconda3/envs/meta/lib/R/'" \
-      ~/miniconda3/envs/meta/share/lefse-1.0.8.post1-1/lefse.py
 
 ## 物种注释Kraken2/bracken/krakentools/krona
 
 kraken2 基于LCA算法的物种注释 https://ccb.jhu.edu/software/kraken/
 
-### Kraken2解包安装
+Kraken2解包安装
 
     # 下载
     wget -c ftp://download.nmdc.cn/tools/conda/kraken2.tar.gz
@@ -327,47 +318,53 @@ kraken2 基于LCA算法的物种注释 https://ccb.jhu.edu/software/kraken/
     conda activate kraken2
     # 初始化环境
     conda unpack
-    # 记录软件版本
-    kraken2 --version # 2.1.2
 
-### Kraken2直接安装
+Kraken2直接安装，居然只安了2.0.7
 
     mamba create -n kraken2 -y -c bioconda kraken2 bracken krakentools krona r-optparse
 
+记录软件版本
+
+    kraken2 --version # 2.1.2
+
 ### Kraken2数据库安装
 
-下载数据库(NCBI每2周更新一次)，记录下载日期和大小。需根据服务器内存、使用目的选择合适方案。--standard标准模式下只下载5种**标准数据库：古菌archaea、细菌bacteria、人类human、载体UniVec_Core、病毒viral**。也可选直接下载作者构建的索引，还包括bracken的索引。链接：https://benlangmead.github.io/aws-indexes/k2 （6/5/2023版）。 注：中科院网络下载较快，家里和农科院较慢
+下载数据库(NCBI每2周更新一次)，记录下载日期和大小。需根据服务器内存、使用目的选择合适方案。--standard标准模式下只下载5种**标准数据库：古菌archaea、细菌bacteria、人类human、载体UniVec_Core、病毒viral**。也可选直接下载作者构建的索引，还包括bracken的索引。链接：https://benlangmead.github.io/aws-indexes/k2 （10/9/2023版）。 注：中科院网络下载较快，家里和农科院较慢，有时新版会有错误，可以退回旧版
 
 方案1. 下载标准+原生动物+真菌 16GB (PlusPF-16) 
 
-    v=k2_pluspf_16gb_20230605
+    v=k2_pluspf_16gb_20231009
     mkdir -p ~/db/kraken2/pluspf16g
     cd ~/db/kraken2
     wget -c https://genome-idx.s3.amazonaws.com/kraken/${v}.tar.gz
+    # 备用链接
+    wget -c ftp://download.nmdc.cn/tools/meta/kraken2/${v}.tar.gz
     tar xvzf ~/db/kraken2/${v}.tar.gz -C ~/db/kraken2/pluspf16g
 
 方案2. 下载标准+原生动物+真菌 69GB (PlusPF) 
 
-    v=k2_pluspf_20230605
-    mkdir -p ~/db/kraken2/pluspf16g
+    v=k2_pluspf_20231009
+    mkdir -p ~/db/kraken2/pluspf
     cd ~/db/kraken2
     wget -c https://genome-idx.s3.amazonaws.com/kraken/${v}.tar.gz
+    # 备用链接
+    wget -c ftp://download.nmdc.cn/tools/meta/kraken2/${v}.tar.gz
     tar xvzf ~/db/kraken2/${v}.tar.gz -C ~/db/kraken2/pluspf
     
 方案3. 下载标准+原生动物+真菌+植物完整库 144G (PlusPFP) 
 
 指定解压目录，包括时间和类型
 
-    v=k2_pluspfp_20230605
+    v=k2_pluspfp_20231009
     mkdir -p ~/db/kraken2/pluspfp
     cd ~/db/kraken2
     wget -c https://genome-idx.s3.amazonaws.com/kraken/${v}.tar.gz
     tar xvzf ${db}/kraken2/${v}.tar.gz -C pluspfp
 
 
-# 三、组装分析流程 Assemble-based
+# 三、组装 Assemble-based
 
-## 基因组拼接、注释和定量 megahit/spades/quast/cd-hit/emboss/salmon/prodigal
+## 组装、注释和定量 megahit/spades/quast/cd-hit/emboss/salmon/prodigal
 
 ### megahit解包安装
 
@@ -391,7 +388,7 @@ kraken2 基于LCA算法的物种注释 https://ccb.jhu.edu/software/kraken/
     megahit -v # MEGAHIT v1.2.9
     metaspades.py -v # metaSPAdes v3.15.4
     metaquast.py -v # MetaQUAST v5.0.2
-    cd-hit -v # CD-HIT v4.8.1
+    cd-hit -v | grep version # CD-HIT v4.8.1
     embossversion # EMBOSS v6.6
     salmon -v # salmon v1.8
 
@@ -402,7 +399,7 @@ eggNOG http://eggnogdb.embl.de
 ### eggNOG解包安装
 
     # 下载
-    wget -c ftp://download.nmdc.cn/tools//conda/eggnog.tar.gz
+    wget -c ftp://download.nmdc.cn/tools/conda/eggnog.tar.gz
     # 指定安装目录
     mkdir -p ${soft}/envs/eggnog
     tar -xvzf eggnog.tar.gz -C ${soft}/envs/eggnog
@@ -417,11 +414,11 @@ eggNOG http://eggnogdb.embl.de
     conda create -n eggnog -y
     conda activate eggnog
     # 安装eggnog比对工具emapper
-    conda install eggnog-mapper=2.1.10 -y -c bioconda -c conda-forge
+    conda install eggnog-mapper -y -c bioconda -c conda-forge
 
 ### eggNOG安装测试    
     
-    emapper.py --version # 2.1.7
+    emapper.py --version # 2.1.12
     #  Expected eggNOG DB version: 5.0.2 / Installed eggNOG DB version: 5.0.2 / 
     #  Diamond version found: diamond version 2.0.15 / MMseqs2 version found: 13.45111
 
@@ -429,11 +426,16 @@ eggNOG http://eggnogdb.embl.de
 
     # 下载常用数据库，注意设置下载位置
     mkdir -p ${db}/eggnog && cd ${db}/eggnog
-    # -y默认同意，-f强制下载，eggnog.db.gz 7.9G+4.9G
+    # -y默认同意，-f强制下载，eggnog.db.gz 6.3G+4.9G，解压后48G
     download_eggnog_data.py -y -f --data_dir ${db}/eggnog
-    # 百度或微生物所备用链接下载eggnog/eggnog.tar.gz
-    # 链接至默认目录
-    ln -sf ${db}/eggnog ${soft}/envs/eggnog/lib/python3.9/site-packages/data
+    
+    # 百度或微生物所备用链接下载eggnog.tar.gz
+    wget -c ftp://download.nmdc.cn/tools/meta/eggnog/eggnog.tar.gz
+    tar xvzf eggnog.tar.gz
+    # 查看版本时会显示默认数据位置
+    emapper.py --version # 2.1.12
+    # 链接至默认目录，注意按实际情况修改
+    ln -sf ${db}/eggnog ${soft}/envs/eggnog/lib/python3.9/site-packages/data/
     # 复制数据至内存中加速比对
     # cp eggnog.* /dev/shm
 
@@ -441,22 +443,24 @@ eggNOG http://eggnogdb.embl.de
 
 dbCAN3 http://bcb.unl.edu/dbCAN2
 
-    d=08062022
     # 创建数据库存放目录并进入
-    mkdir -p ${db}/dbcan2 && cd ${db}/dbcan2
-    # 下载序列和描述(biocloud 10M)
-    wget -c https://bcb.unl.edu/dbCAN2/download/Databases/V11/CAZyDB.${d}.fa
-    wget -c https://bcb.unl.edu/dbCAN2/download/Databases/V11/CAZyDB.${d}.fam-activities.txt
-    # 备用数据库下载并解压 
-    # wget -c ftp://download.nmdc.cn/tools/meta/dbcan2/CAZyDB.${d}.tar.gz
-    # tar xvzf CAZyDB.${d}.tar.gz
-
+    mkdir -p ${db}/dbcan3 && cd ${db}/dbcan3
+    # 下载序列和描述
+    wget -c https://bcb.unl.edu/dbCAN2/download/Databases/V12/CAZyDB.07262023.fa
+    wget -c https://bcb.unl.edu/dbCAN2/download/Databases/V12/CAZyDB.08062022.fam-activities.txt
     # 提取基因家簇对应注释
-    grep -v '#' CAZyDB.${d}.fam-activities.txt | sed 's/  //'| \
+    grep -v '#' CAZyDB.08062022.fam-activities.txt | sed 's/  //'| \
       sed '1 i CAZy\tDescription' > CAZy_description.txt
-    # diamond建索引，1G，1-18m
-    diamond --version # 2.0.15
-    diamond makedb --in CAZyDB.${d}.fa --db CAZyDB.${d}
+    # 打包压缩
+    tar -cvzf CAZyDB.tar.gz CAZyDB.07262023.fa CAZyDB.08062022.fam-activities.txt CAZy_description.txt
+    
+    # 备用数据库下载并解压(待上传)
+    wget -c ftp://download.nmdc.cn/tools/meta/dbcan3/CAZyDB.tar.gz
+    tar xvzf CAZyDB.tar.gz
+
+    # diamond建索引，1G，11s
+    diamond --version # 2.1.8
+    time diamond makedb --in CAZyDB.07262023.fa --db CAZyDB
 
 
 ## 抗生素抗性基CARD/rgi
@@ -467,7 +471,7 @@ RGI Github: https://github.com/arpcard/rgi
 ### rgi解包安装
 
     # 下载
-    wget -c ftp://download.nmdc.cn/tools//conda/rgi.tar.gz
+    wget -c ftp://download.nmdc.cn/tools/conda/rgi.tar.gz
     # 指定安装目录
     mkdir -p ${soft}/envs/rgi
     tar -xvzf rgi.tar.gz -C ${soft}/envs/rgi
@@ -478,26 +482,29 @@ RGI Github: https://github.com/arpcard/rgi
 
 ### rgi直接安装
 
-    mamba create -y -n rgi rgi
-    conda activate rgi
+    mamba create -y -n rgi6 rgi=6.0.3
+    conda activate rgi6
+    # (可选)打包，待上传
+    n=rgi6
+    conda pack -f --ignore-missing-files -n ${n} -o ${n}.tar.gz
 
 ### rgi版本和数据库部署
 
-    # 查看版本 5.2.1
+    # 查看版本 6.0.3
     rgi main -v
     
     # 数据库部署
-    mkdir -p ${db}/card
-    cd ${db}/card
-    # 下载最新版数据库，3.7M (2023-1-27, 3.2.6)
+    mkdir -p ${db}/card && cd ${db}/card
+    # 下载最新版数据库，3.8M (2023-10-2, 3.2.8)
     wget -c https://card.mcmaster.ca/latest/data
-    # 解压后34M
+    # 解压后35M
     tar -xvf data ./card.json
     # 加载数据库
     rgi load --card_json card.json
     # 宏基因组分析扩展数据库和加载
     rgi card_annotation -i card.json
-    rgi load -i card.json --card_annotation card_database_v3.2.6.fasta
+    mv card_database_v3.2.8_all.fasta card.fasta
+    rgi load -i card.json --card_annotation card.fasta
     
 
 # 四、分箱挖掘单菌基因组Binning
@@ -509,7 +516,7 @@ RGI Github: https://github.com/arpcard/rgi
 ### metawrap下载安装
 
     # 下载
-    wget -c ftp://download.nmdc.cn/tools//conda/metawrap.tar.gz
+    wget -c ftp://download.nmdc.cn/tools/conda/metawrap.tar.gz
     # 指定安装目录
     mkdir -p ${soft}/envs/metawrap
     tar -xvzf metawrap.tar.gz -C ${soft}/envs/metawrap
@@ -525,7 +532,7 @@ RGI Github: https://github.com/arpcard/rgi
 
 ### metawrap相关数据库   
     
-    cd ${db}
+    cd ${db} 
     
 CheckM用于Bin完整和污染估计和物种注释
 
@@ -536,7 +543,7 @@ CheckM用于Bin完整和污染估计和物种注释
     # 设置数据库位置，直接2次回车默认为当前位置
     checkm data setRoot
 
-NCBI核酸和物种信息(以下可选)
+NCBI核酸和物种信息(可选)
 
     # 核酸
     mkdir -p ${db}/NCBI/nt
@@ -582,8 +589,8 @@ Conda: https://bioconda.github.io/recipes/drep/README.html
 
 ### drep 基因组去冗余解包安装
 
-    # 下载dRep v3.2.2无法安装依赖chechm，改用2.6.2
-    wget -c ftp://download.nmdc.cn/tools//conda/drep.tar.gz
+    # 下载dRep v3.2.3无法安装依赖chechm，仍用旧版2.6.2(500M)，这个压缩包没有checkm且版本为3.4.2
+    wget -c ftp://download.nmdc.cn/tools/conda/drep.tar.gz
     # 指定安装目录
     mkdir -p ${soft}/envs/drep
     tar -xvzf drep.tar.gz -C ${soft}/envs/drep
@@ -595,23 +602,47 @@ Conda: https://bioconda.github.io/recipes/drep/README.html
 
 ### drep 基因组去冗余直接安装
 
-此版本无法安装checkm依赖关系，暂时不可用
-
-    mamba create -y -n drep drep=3.4.2
+    # 2023/9/12尝试，仍无法安装checkm
+    mamba create -y -n drep drep=3.4.3
     conda activate drep
+    # 不满足依赖关系
+    mamba install checkm-genome -y
     dRep -h
 
 ### drep 数据库构建
 
-    # CheckM用于Bin完整和污染估计和物种注释
-    cd ${db}
-    mkdir -p drep/checkm && cd checkm
+CheckM用于Bin完整和污染估计和物种注释，安装过metawrap已经下载完成
+
+    mkdir -p ${db}/checkm && cd ${db}/checkm
     # 下载文件275 MB，解压后1.4 GB
     wget -c https://data.ace.uq.edu.au/public/CheckM_databases/checkm_data_2015_01_16.tar.gz
     tar -xvf *.tar.gz
     # 设置数据库位置，直接2次回车默认为当前位置
     checkm data setRoot `pwd`
 
+## coverm基因组定量
+
+conda安装
+
+    conda create -n coverm -y
+    conda activate coverm
+    conda install coverm -c bioconda -y
+    # conda安装后打包(可选)
+    conda pack -f --ignore-missing-files -n coverm -o coverm.tar.gz
+
+压缩包安装
+
+    # 指定conda文件名
+    s=coverm
+    # 下载，可选NMDC、百度云等
+    # wget -c ftp://download.nmdc.cn/tools/conda/${s}.tar.gz
+    # 指定安装目录
+    mkdir -p ~/miniconda3/envs/${s}
+    tar -xvzf ${s}.tar.gz -C ~/miniconda3/envs/${s}
+    # 启动环境
+    conda activate ${s}
+    # 初始化环境
+    conda unpack
 
 ## GTDB细菌基因组注释和进化分析
 
@@ -620,11 +651,24 @@ GTDB-Tk是一个软件工具包，用于根据基因组数据库分类法GTDB为
 本次测试版本为 gtdbtk-2.2.6，Release 07-RS207v2 (11th May 2022)。
 硬件要求：内存200Gb，硬盘66Gb，64核1小时可分析1000个细菌基因组
 
+### GTDB-Tk直接安装
+
+    # gtdbtk-2.3.2, 2023-7-8
+    n=gtdbtk2.3
+    mamba create -y -n ${n} -c conda-forge -c bioconda gtdbtk=2.3.2
+    # 检查版本
+    gtdbtk -v # 2.3.2
+
+    # conda pack软件打包一次
+    # --exclude gtdbtk-2.3.2 指定排除数据库
+    conda pack -n ${n} -o ${n}.tar.gz --exclude gtdbtk-2.3.2 --ignore-editable-packages --ignore-missing-files
+    chmod 755 *
+    
 ### GTDB-Tk解包安装
 
     soft=~/miniconda3
-    # 下载
-    wget -c ftp://download.nmdc.cn/tools//conda/gtdbtk.tar.gz
+    # 下载，目前为2.1，需更新为2.3
+    wget -c ftp://download.nmdc.cn/tools/conda/gtdbtk.tar.gz
     # 指定安装目录
     mkdir -p ${soft}/envs/gtdbtk
     tar -xvzf gtdbtk.tar.gz -C ${soft}/envs/gtdbtk
@@ -632,18 +676,6 @@ GTDB-Tk是一个软件工具包，用于根据基因组数据库分类法GTDB为
     conda activate gtdbtk
     # 初始化环境
     conda unpack
-
-### GTDB-Tk直接安装
-
-    # gtdbtk-2.3.2, 2023-7-8
-    n=gtdbtk2.3
-    
-    mamba create -y -n ${n} -c conda-forge -c bioconda gtdbtk=2.3.2
-    
-    # conda pack软件打包一次
-    # --exclude gtdbtk-2.3.2 指定排除数据库
-    conda pack -n ${n} -o ${n}.tar.gz --exclude gtdbtk-2.3.2 --ignore-editable-packages --ignore-missing-files
-    chmod 755 *
     
 ### GTDB-Tks数据库安装
 
@@ -657,15 +689,45 @@ download-db.sh自动下载数据库，将下载至conda中的envs/gtdbtk/share/g
     
 (备选)下面无法下载时手动下载和配置GTDB数据库
 
-    mkdir -p ${db}/gtdb & cd ~/db/gtdb
+    mkdir -p ${db}/gtdb2.3 && cd ${db}/gtdb2.3
     # 下载解压
-    wget -c https://data.gtdb.ecogenomic.org/releases/release207/207.0/auxillary_files/gtdbtk_r207_v2_data.tar.gz
+    wget -c https://data.gtdb.ecogenomic.org/releases/release214/214.0/auxillary_files/gtdbtk_r214_data.tar.gz
     # 再运行, gtdb配置数据库
     download-db.sh
+
+    # 备用链接和手工解压，指定安装完整路径
+    wget -c ftp://download.nmdc.cn/tools/meta/gtdb/gtdbtk_r214_data.tar.gz
+    tar xvzf gtdbtk_r207_v2_data.tar.gz -C ./  --strip 1
+    conda env config vars set GTDBTK_DATA_PATH="/data/meta/db/gtdb/"
+
+# 5 单菌基因组、病毒组等其他软件
+
+## CheckM2
+
+Conda主页：https://bioconda.github.io/recipes/checkm2/README.html
+
+软件主页：https://github.com/chklovski/CheckM2
+
+    # 软件安装
+    mamba create --name checkm2 checkm2
+    conda activate checkm2
+    checkm2 -h # CheckM2 v1.0.1
+    # 数据库安装
+    mkdir ~/db/checkm2
+    checkm2 database --download --path ~/db/checkm2
+    # 报错：checkm2.zenodo_backpack.ZenodoConnectionException: Connection error: HTTPSConnectionPool(host='zenodo.org', port=443): Max retries exceeded with url: /record/5571251 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f335c64abe0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+    # 在github中搜索和查找issues无解答，提新issue https://github.com/chklovski/CheckM2/issues
+    # 数据库 https://zenodo.org/records/5571251  下载，需要VPN
     
-    # 备用链接和手工解压
-    wget -c ftp://download.nmdc.cn/tools//gtdb/gtdbtk_r207_v2_data.tar.gz
-    tar xvzf auxillary_files/gtdbtk_r207_v2_data.tar.gz -C ./  --strip 1
+    export CHECKM2DB="path/to/database"
+    # 测试
+    checkm2 testrun
+    
+    # 运行，输入目录或文件列表
+    checkm2 predict --threads 30 --input <folder_with_bins> --output-directory <output_folder> 
+    checkm2 predict --threads 30 --input ../bin1.fa ../../bin2.fna /some/other/directory/bin3.fasta --output-directory <output_folder> 
+
+
 
 # 常见问题
 
@@ -673,7 +735,7 @@ download-db.sh自动下载数据库，将下载至conda中的envs/gtdbtk/share/g
 
 ### 国家微生物科学数据中心 —— 数据下载
 
-http://nmdc.cn/datadownload
+http://nmdc.cn/datadownload，可以使用Filezilla直接连接 ftp://download.nmdc.cn/tools
 
 本资源由宏基因组平台发起，微生物所提供服务器，宏基因组团队负责维护的常用软件、扩增子和宏基因组数据库的国内下载链接，解决常用数据库下载慢、或无法下载的问题。同时提供定制的软件、数据库索引，节约大家下载时间，节省数据库编制索引的计算资源消耗。
 
@@ -748,6 +810,14 @@ https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
     rm kneaddata.tar.gz
     wget ftp://download.nmdc.cn/tools//conda/kneaddata.tar.gz
 
+### Lefse在Rstudio中运行命令调用R版本问题的解决
+
+    # 在Rstudio中默认调用Rstudio的R，具体写在/etc/rstudio/rserver.conf
+    # 或在R中用Sys.getenv()["R_HOME"]，在rpy2中print(robjects.r)可以查看其调用的r版本
+    # 指定lefse调用的R版本，需根据conda实际目录修改
+    sed -i "2 i os.environ['R_HOME'] = '~/miniconda3/envs/meta/lib/R/'" \
+      ~/miniconda3/envs/meta/share/lefse-1.0.8.post1-1/lefse.py
+      
 ## Kraken2
 
 ### 定制数据库
@@ -1004,3 +1074,7 @@ https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
     # 链接到软件安装目录
     mkdir -p ${soft}/envs/humann2/bin/databases
     ln -s ${db}/humann2/metaphlan2/* ${soft}/envs/humann2/bin/databases/
+
+    n=kneaddata
+    conda pack -f --ignore-missing-files -n ${n} -o ${n}.tar.gz
+    
