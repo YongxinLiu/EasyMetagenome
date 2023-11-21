@@ -2,7 +2,7 @@
 
 # 易宏基因组流程EasyMetagenomePipeline
 
-    # 版本: 1.19, 2023/7/21
+    # 版本: 1.20, 2023/11/23
     # 测试环境为Windows 10+ / MacOS 10+
     
     # 设置结果目录(通常为项目中的result，此处为演示12个样本结果result12)
