@@ -139,7 +139,7 @@ if (ann_colors[1][1] == "NA") {
 }
 
 pheatmap(data, kmean_k=NA, color=color_vector,
-scale="row", border_color=NA,
+scale="none", border_color=NA,
 cluster_rows=TRUE, cluster_cols=TRUE,
 breaks=legend_breaks, clustering_method="complete",
 clustering_distance_rows="correlation",

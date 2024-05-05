@@ -47,21 +47,36 @@
 
 ### 维恩图
 
-    ### 筛选>0.5%的分类
+    ### 筛选每个样本>0.5%的分类单元，包括界门纲目科属种
     awk 'BEGIN{OFS=FS="\t"}{if(FNR==1) {for(i=2;i<=NF;i++) a[i]=$i;} \
        else {for(i=2;i<=NF;i++) if($i>0.5) print $1, a[i];}}' \
-       metaphlan4/taxonomy.tsv \
-       > metaphlan4/taxonomy_high.tsv
+       metaphlan4/taxonomy.tsv > metaphlan4/taxonomy_high.tsv
     wc -l metaphlan4/taxonomy_high.tsv
-    # 本地、或网络绘制 http://www.ehbio.com/test/venn/#/
-    # 引文：Tong Chen, Haiyan Zhang, Yu Liu, Yong-Xin Liu & Luqi Huang. (2021). EVenn: Easy to create repeatable and editable Venn diagrams and Venn networks online. Journal of Genetics and Genomics, doi: 10.1016/j.jgg.2021.07.007
-    # 5组比较:-f输入文件,-a/b/c/d/g分组名,-w/u为宽高英寸,-p输出文件名后缀
+    # 在线绘制，支持实时查看元素交集 http://www.ehbio.com/test/venn/#/
+    # 引文：Mei Yang, Tong Chen, Yong-Xin Liu, Luqi Huang. 2024. Visualizing set relationships: 
+    # EVenn's comprehensive approach to Venn diagrams. iMeta 3: e184. https://doi.org/10.1002/imt2.184
+    # 本地5组比较:-f输入文件,-a/b/c/d/g分组名,-w/u为宽高英寸,-p输出文件名后缀
     bash ${sd}/sp_vennDiagram.sh -f metaphlan4/taxonomy_high.tsv \
       -a C1 -b C2 -c N1 -d N2 -g N3 \
       -w 4 -u 4 \
       -p C1_C2_N1_N2_N3
     
-    
+    # 求均值再两组比较
+    sed -i '/^#/d' metaphlan4/taxonomy.tsv
+    Rscript ${sd}/otu_mean.R --input metaphlan4/taxonomy.tsv \
+      --metadata metadata.txt \
+      --group Group --thre 0 \
+      --scale F --all TRUE --type mean \
+      --output metaphlan4/group_mean.txt    
+    ### 筛选每个组>0.5%的分类单元，包括界门纲目科属种
+    awk 'BEGIN{OFS=FS="\t"}{if(FNR==1) {for(i=2;i<=NF;i++) a[i]=$i;} \
+       else {for(i=2;i<=NF;i++) if($i>0.5) print $1, a[i];}}' \
+       metaphlan4/group_mean.txt > metaphlan4/group_high.tsv
+    bash ${sd}/sp_vennDiagram.sh -f metaphlan4/group_high.tsv \
+      -a Cancer -b Normal -c All \
+      -w 4 -u 4 \
+      -p Cancer_Normal_All      
+      
 ## 功能HUMAnN3
 
 ### 分组聚类热图
