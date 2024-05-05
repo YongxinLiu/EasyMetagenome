@@ -2,16 +2,17 @@
 
 # 易宏基因组流程EasyMetagenomePipeline
 
-    # 版本: 1.20, 2023/11/23
+    # 版本: 1.21, 2024/5/17
     # 测试环境为Windows 10+ / MacOS 10+
     
-    # 设置结果目录(通常为项目中的result，此处为演示12个样本结果result12)
-    # mac 也需要修改路径格式可参考如下， ~ 代表家目录
+    # 设置结果目录(通常为项目中的result，此处为12个样本结果result12)
+    # 可选癌症cancer/result或年龄age/result各18个样本数据示例
+    # mac/linux 需要修改路径格式如下， ~ 代表家目录
     # wd=~/meta/result12
     # sd=~/EasyMicrobiome/script
-    wd=/d/BaiduNetdiskDownload/EasyMetagenome/result12
-    # 设置脚本所在目录(Script Directory)
-    sd=/d/BaiduNetdiskDownload/EasyMicrobiome/script
+    wd=/d/EasyMetagenome/result12
+    # 设置脚本所在目录(Script Directory)，系统为win/mac/linux
+    sd=/d/EasyMicrobiome/script
     PATH=$PATH:$sd/../win:$sd
     # 进入结果目录
     cd $wd
