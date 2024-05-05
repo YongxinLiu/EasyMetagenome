@@ -6,7 +6,7 @@
     # 测试环境为Windows 10+ / MacOS 10+
     
     # 设置结果目录(通常为项目中的result，此处为12个样本结果result12)
-    # 可选癌症cancer/result或年龄age/result各18个样本数据示例
+    # 可选癌症cancer或年龄age各18个样本数据示例
     # mac/linux 需要修改路径格式如下， ~ 代表家目录
     # wd=~/meta/result12
     # sd=~/EasyMicrobiome/script

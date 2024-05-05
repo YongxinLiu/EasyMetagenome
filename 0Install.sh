@@ -2,7 +2,7 @@
 
 # 易宏基因组软件和数据库 EasyMetagenome software & database
 
-    # 版本Version: 1.20, 2023/11/23
+    # 版本Version: 1.21, 2024/5/19
     # 操作系统Operation System: Linux Ubuntu 22.04+ / CentOS 8+
     # 主页Homepage: https://github.com/YongxinLiu/EasyMetagenome
 
@@ -310,30 +310,35 @@ kraken2 基于LCA算法的物种注释 https://ccb.jhu.edu/software/kraken/
 Kraken2解包安装
 
     # 下载
-    wget -c ftp://download.nmdc.cn/tools/conda/kraken2.tar.gz
+    n=kraken2.1.3
+    wget -c ftp://download.nmdc.cn/tools/conda/${n}.gz
     # 指定安装目录
-    mkdir -p ${soft}/envs/kraken2
-    tar -xvzf kraken2.tar.gz -C ${soft}/envs/kraken2
+    mkdir -p ${soft}/envs/${n}
+    tar -xvzf ${n}.tar.gz -C ${soft}/envs/${n}
     # 启动环境
-    conda activate kraken2
+    conda activate ${n}
     # 初始化环境
     conda unpack
 
-Kraken2直接安装，居然只安了2.0.7
+Kraken2安装指定版本，2024年5月为2.1.3
 
-    mamba create -n kraken2 -y -c bioconda kraken2 bracken krakentools krona r-optparse
-
-记录软件版本
-
-    kraken2 --version # 2.1.2
+    n=kraken2.1.3
+    mamba create -n ${n} -y -c bioconda kraken2=2.1.3
+    conda activate ${n}
+    mamba install bracken krakentools krona r-optparse
+    # 记录软件版本
+    kraken2 --version # 2.1.3
+    less `type bracken | cut -f2 -d '('|cut -f 1 -d ')'`|grep 'VERSION' # 2.8
+    # 打包
+    conda pack -f --ignore-missing-files -n ${n} -o ${n}.tar.gz
 
 ### Kraken2数据库安装
 
-下载数据库(NCBI每2周更新一次)，记录下载日期和大小。需根据服务器内存、使用目的选择合适方案。--standard标准模式下只下载5种**标准数据库：古菌archaea、细菌bacteria、人类human、载体UniVec_Core、病毒viral**。也可选直接下载作者构建的索引，还包括bracken的索引。链接：https://benlangmead.github.io/aws-indexes/k2 （10/9/2023版）。 注：中科院网络下载较快，家里和农科院较慢，有时新版会有错误，可以退回旧版
+下载数据库(NCBI每2周更新一次)，记录下载日期和大小。需根据服务器内存、使用目的选择合适方案。--standard标准模式下只下载5种**标准数据库：古菌archaea、细菌bacteria、人类human、载体UniVec_Core、病毒viral**。也可选直接下载作者构建的索引，还包括bracken的索引。链接：https://benlangmead.github.io/aws-indexes/k2 （1/12/2024版）。 注：中科院网络下载较快，家里和农科院较慢，有时新版会有错误，可以退回旧版
 
 方案1. 下载标准+原生动物+真菌 16GB (PlusPF-16) 
 
-    v=k2_pluspf_16gb_20231009
+    v=k2_pluspf_16gb_20240112
     mkdir -p ~/db/kraken2/pluspf16g
     cd ~/db/kraken2
     wget -c https://genome-idx.s3.amazonaws.com/kraken/${v}.tar.gz
@@ -343,7 +348,7 @@ Kraken2直接安装，居然只安了2.0.7
 
 方案2. 下载标准+原生动物+真菌 69GB (PlusPF) 
 
-    v=k2_pluspf_20231009
+    v=k2_pluspf_20240112
     mkdir -p ~/db/kraken2/pluspf
     cd ~/db/kraken2
     wget -c https://genome-idx.s3.amazonaws.com/kraken/${v}.tar.gz
@@ -355,7 +360,7 @@ Kraken2直接安装，居然只安了2.0.7
 
 指定解压目录，包括时间和类型
 
-    v=k2_pluspfp_20231009
+    v=k2_pluspfp_20240112
     mkdir -p ~/db/kraken2/pluspfp
     cd ~/db/kraken2
     wget -c https://genome-idx.s3.amazonaws.com/kraken/${v}.tar.gz
@@ -503,7 +508,7 @@ RGI Github: https://github.com/arpcard/rgi
     rgi load --card_json card.json
     # 宏基因组分析扩展数据库和加载
     rgi card_annotation -i card.json
-    mv card_database_v3.2.8_all.fasta card.fasta
+    mv card_database_v3.2.9_all.fasta card.fasta
     rgi load -i card.json --card_annotation card.fasta
     
 
@@ -1077,4 +1082,11 @@ https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
 
     n=kneaddata
     conda pack -f --ignore-missing-files -n ${n} -o ${n}.tar.gz
-    
+
+
+### 删除env环境
+
+    # 删除env环境
+    conda env remove --name qiime2-2023.7
+    conda env remove --name qiime2-amplicon-2024.2
+    conda env remove --name picrust2

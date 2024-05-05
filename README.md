@@ -1,9 +1,9 @@
 # 易宏基因组——简单易用的宏基因组分析流程 
 # EasyMetagenome - the easy-to-use metagenome analysis pipeline
 
-版本Version：v1.20
+版本Version：v1.21
 
-更新时间Update：2023/11/23
+更新时间Update：2024/5/17
 
 ![image](http://www.imeta.science/github/EasyMetagenome/result/EasyMetagenomePipeline.jpg)
 

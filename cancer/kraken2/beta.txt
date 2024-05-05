@@ -1,0 +1,37 @@
+#0	temp/bracken/C1.brk (15421667 reads)
+#1	temp/bracken/C2.brk (14181070 reads)
+#2	temp/bracken/C3.brk (17546163 reads)
+#3	temp/bracken/C4.brk (15773605 reads)
+#4	temp/bracken/C5.brk (15068760 reads)
+#5	temp/bracken/C6.brk (15827137 reads)
+#6	temp/bracken/E1.brk (15151072 reads)
+#7	temp/bracken/E2.brk (9244564 reads)
+#8	temp/bracken/E3.brk (14549668 reads)
+#9	temp/bracken/E4.brk (11385253 reads)
+#10	temp/bracken/E5.brk (17281254 reads)
+#11	temp/bracken/E6.brk (16181494 reads)
+#12	temp/bracken/H1.brk (13578272 reads)
+#13	temp/bracken/H2.brk (11983464 reads)
+#14	temp/bracken/H3.brk (11193369 reads)
+#15	temp/bracken/H4.brk (14033555 reads)
+#16	temp/bracken/H5.brk (12109939 reads)
+#17	temp/bracken/H6.brk (10428108 reads)
+x	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17
+0	0.000	0.514	0.549	0.500	0.541	0.657	0.879	0.892	0.699	0.837	0.926	0.627	0.708	0.757	0.729	0.736	0.798	0.779
+1	x.xxx	0.000	0.452	0.487	0.484	0.597	0.867	0.898	0.681	0.861	0.927	0.752	0.753	0.783	0.733	0.750	0.812	0.804
+2	x.xxx	x.xxx	0.000	0.416	0.503	0.555	0.884	0.900	0.700	0.857	0.931	0.754	0.726	0.730	0.704	0.750	0.814	0.792
+3	x.xxx	x.xxx	x.xxx	0.000	0.356	0.599	0.841	0.901	0.681	0.828	0.892	0.700	0.693	0.738	0.692	0.727	0.807	0.779
+4	x.xxx	x.xxx	x.xxx	x.xxx	0.000	0.599	0.851	0.873	0.731	0.820	0.910	0.674	0.686	0.724	0.700	0.704	0.804	0.765
+5	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	0.000	0.821	0.887	0.824	0.841	0.953	0.567	0.734	0.816	0.804	0.791	0.846	0.858
+6	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	0.000	0.855	0.697	0.601	0.896	0.845	0.841	0.875	0.861	0.880	0.887	0.863
+7	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	0.000	0.811	0.858	0.899	0.820	0.895	0.938	0.931	0.956	0.917	0.944
+8	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	0.000	0.757	0.884	0.775	0.827	0.855	0.819	0.842	0.883	0.868
+9	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	0.000	0.859	0.869	0.823	0.818	0.827	0.801	0.823	0.815
+10	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	0.000	0.931	0.916	0.919	0.923	0.912	0.892	0.911
+11	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	0.000	0.813	0.886	0.851	0.858	0.909	0.896
+12	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	0.000	0.383	0.473	0.507	0.468	0.463
+13	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	0.000	0.370	0.522	0.457	0.371
+14	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	0.000	0.536	0.424	0.375
+15	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	0.000	0.586	0.628
+16	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	0.000	0.374
+17	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	x.xxx	0.000
