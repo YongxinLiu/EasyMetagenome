@@ -1,27 +1,27 @@
-Phylum	C3	C4	C5	C6	N1	N2	N3	N4	N5	N6
-Proteobacteria	2631	9179	4624	4211	1758	2572	6615	13040	10248	4145
-Firmicutes	1783	3744	1131	5351	4527	2455	7204	6963	3727	5669
-Bacteroidetes	1022	590	3874	15870	4834	1470	435	410	907	4874
-Fusobacteria	2870	2086	8321	1378	1848	297	1447	1733	1414	3485
-Actinobacteria	181	1254	21	196	506	3539	2820	1504	8082	2212
-Chordata	2958	537	44	11	785	2099	199	118	43	30
-Spirochaetes	6	7	2	71	41	8	1	1	1	803
-Apicomplexa	195	46	2	4	50	149	10	10	4	2
-Streptophyta	121	29	39	16	74	82	30	23	8	20
-Tenericutes	2	1	1	1	15	0	2	0	7	18
-Candidatus Saccharibacteria	0	0	0	1	13	1	0	1	3	16
-Uroviricota	2	0	3	2	4	0	4	3	2	2
-Cyanobacteria	1	3	0	1	0	1	0	1	1	0
-Euryarchaeota	0	1	2	0	0	0	0	0	0	1
-Planctomycetes	1	0	2	0	0	0	0	0	0	0
-Chloroflexi	0	0	0	0	0	1	0	0	0	1
-Thermotogae	0	0	1	1	0	0	0	0	0	0
-Candidatus Omnitrophica	1	0	0	0	0	0	0	0	0	0
-Chlorobi	0	1	0	0	0	0	0	0	0	0
-Crenarchaeota	0	0	0	0	0	0	0	0	0	1
-Deferribacteres	0	0	0	0	0	0	0	0	0	1
-Deinococcus-Thermus	0	0	0	0	1	0	0	0	0	0
-Fibrobacteres	0	0	1	0	0	0	0	0	0	0
-Ignavibacteriae	0	0	1	0	0	0	0	0	0	0
-Peploviricota	0	0	0	0	0	0	0	1	0	0
-Verrucomicrobia	0	0	0	0	0	0	0	0	0	1
+Phylum	C2	C3	C4	C5	C6	N1	N2	N3	N4	N5	N6
+Proteobacteria	4180	2631	9179	4624	4211	1758	2572	6615	13040	10248	4145
+Firmicutes	905	1783	3744	1131	5351	4527	2455	7204	6963	3727	5669
+Bacteroidetes	804	1022	590	3874	15870	4834	1470	435	410	907	4874
+Fusobacteria	156	2870	2086	8321	1378	1848	297	1447	1733	1414	3485
+Actinobacteria	358	181	1254	21	196	506	3539	2820	1504	8082	2212
+Chordata	2450	2958	537	44	11	785	2099	199	118	43	30
+Spirochaetes	4	6	7	2	71	41	8	1	1	1	803
+Apicomplexa	166	195	46	2	4	50	149	10	10	4	2
+Streptophyta	123	121	29	39	16	74	82	30	23	8	20
+Tenericutes	1	2	1	1	1	15	0	2	0	7	18
+Candidatus Saccharibacteria	0	0	0	0	1	13	1	0	1	3	16
+Uroviricota	2	2	0	3	2	4	0	4	3	2	2
+Cyanobacteria	1	1	3	0	1	0	1	0	1	1	0
+Euryarchaeota	1	0	1	2	0	0	0	0	0	0	1
+Planctomycetes	0	1	0	2	0	0	0	0	0	0	0
+Chloroflexi	0	0	0	0	0	0	1	0	0	0	1
+Thermotogae	0	0	0	1	1	0	0	0	0	0	0
+Candidatus Omnitrophica	0	1	0	0	0	0	0	0	0	0	0
+Chlorobi	0	0	1	0	0	0	0	0	0	0	0
+Crenarchaeota	0	0	0	0	0	0	0	0	0	0	1
+Deferribacteres	0	0	0	0	0	0	0	0	0	0	1
+Deinococcus-Thermus	0	0	0	0	0	1	0	0	0	0	0
+Fibrobacteres	0	0	0	1	0	0	0	0	0	0	0
+Ignavibacteriae	0	0	0	1	0	0	0	0	0	0	0
+Peploviricota	0	0	0	0	0	0	0	0	1	0	0
+Verrucomicrobia	0	0	0	0	0	0	0	0	0	0	1
