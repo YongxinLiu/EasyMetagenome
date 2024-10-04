@@ -126,21 +126,22 @@ kneaddata是流程主要依赖bowtie2比对宿主，然后筛选非宿主序列�
 
     # 创建目录、启动环境、记录版本
     mkdir -p temp/hr
+    mkdir -p tmp
     conda activate kneaddata
     kneaddata --version # 0.12.0
 
 多样品并行去宿主，此步占用原始数据5x空间，j5p3,18s3h；j3p16,18s1h
 
     time tail -n+2 result/metadata.txt|cut -f1|rush -j 2 \
-      "sed '1~4 s/ 1:/.1:/;1~4 s/$/\/1/' temp/qc/{}_1.fastq > /tmp/{}_1.fastq; \
-      sed '1~4 s/ 2:/.1:/;1~4 s/$/\/2/' temp/qc/{}_2.fastq > /tmp/{}_2.fastq; \
-      kneaddata -i1 /tmp/{1}_1.fastq -i2 /tmp/{1}_2.fastq \
+      "sed '1~4 s/ 1:/.1:/;1~4 s/$/\/1/' temp/qc/{1}_1.fastq > tmp/{1}_1.fastq; \
+      sed '1~4 s/ 2:/.1:/;1~4 s/$/\/2/' temp/qc/{1}_2.fastq > tmp/{1}_2.fastq; \
+      kneaddata -i1 tmp/{1}_1.fastq -i2 tmp/{1}_2.fastq \
       -o temp/hr --output-prefix {1} \
       --bypass-trim --bypass-trf --reorder \
       --bowtie2-options '--very-sensitive --dovetail' \
       -db ${db}/kneaddata/human/hg37dec_v0.1 \
       --remove-intermediate-output -v -t 3; \
-      rm /tmp/{}_1.fastq /tmp/{}_2.fastq"
+      rm tmp/{1}_1.fastq tmp/{1}_2.fastq"
 
     # 查看大小，*匹配任意多个字符，?匹配任意一个字符
     ls -shtr temp/hr/*_paired_?.fastq
