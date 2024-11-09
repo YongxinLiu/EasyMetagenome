@@ -2,7 +2,7 @@
 
 # 易宏基因组流程 EasyMetagenome Pipeline
 
-    # 版本Version: 1.21, 2024/5/17
+    # 版本Version: 1.22, 2024/11/9
     # 操作系统Operation System: Linux Ubuntu 22.04+ / CentOS 7.7+
 
 # 一、数据预处理 Data preprocessing

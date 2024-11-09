@@ -2,7 +2,7 @@
 
 # 易宏基因组流程EasyMetagenomePipeline
 
-    # 版本: 1.21, 2024/5/17
+    # 版本Version: 1.22, 2024/11/9
     # 测试环境为Windows 10+ / MacOS 10+
     
     # 设置结果目录(通常为项目中的result，此处为12个样本结果result12)
@@ -133,8 +133,7 @@
     awk 'BEGIN{OFS=FS="\t"}{delete a; a["d"]="unclassified";a["p"]="unclassified";a["c"]="unclassified";a["o"]="unclassified";a["f"]="unclassified";a["g"]="unclassified";a["s"]="unclassified"; \
       split($1,x,"|");for(i in x){split(x[i],b,"_");a[b[1]]=b[2];} \
       print a["d"],a["p"],a["c"],a["o"],a["f"],a["g"],a["s"],$0;}' \
-      kraken2/tax_count.txt > temp.txt
-    cut -f 1-7,9- temp.txt > kraken2/tax_count.spf
+      kraken2/tax_count.txt > kraken2/tax_count.spf 
     sed -i '1 s/unclassified\tunclassified\tunclassified\tunclassified\tunclassified\tunclassified\tunclassified/Domain\tPhylum\tClass\tOrder\tFamily\tGenus\tSpecies/' \
       kraken2/tax_count.spf
     # 绘制热图，可选域、门、纲、目、科、属、种(Domain	Phylum	Class	Order	Family	Genus	Species)

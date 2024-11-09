@@ -2,7 +2,7 @@
 
 # 易宏基因组软件和数据库 EasyMetagenome software & database
 
-    # 版本Version: 1.21, 2024/5/19
+    # 版本Version: 1.22, 2024/11/9
     # 操作系统Operation System: Linux Ubuntu 22.04+ / CentOS 8+
     # 主页Homepage: https://github.com/YongxinLiu/EasyMetagenome
 
