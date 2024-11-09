@@ -1,9 +1,9 @@
 # 易宏基因组——简单易用的宏基因组分析流程 
 # EasyMetagenome - the easy-to-use metagenome analysis pipeline
 
-版本Version：v1.21
+版本Version：v1.22
 
-更新时间Update：2024/5/17
+更新时间Update：2024/11/9
 
 ![image](http://www.imeta.science/github/EasyMetagenome/result/EasyMetagenomePipeline.jpg)
 
@@ -46,4 +46,4 @@ If used this script, please cited
 
 **Yong-Xin Liu**, Yuan Qin, **Tong Chen**, Meiping Lu, Xubo Qian, Xiaoxuan Guo, Yang Bai. 2021. A practical guide to amplicon and metagenomic analysis of microbiome data. Protein & Cell 12: 315-330. https://doi.org/10.1007/s13238-020-00724-8 (Highly Cited)
  
-Copyright 2016-2023 Yong-Xin Liu <liuyongxin@caas.cn>, Tong Chen <chent@nrc.ac.cn>
+Copyright 2016-2025 Yong-Xin Liu <liuyongxin@caas.cn>, Tong Chen <chent@nrc.ac.cn>

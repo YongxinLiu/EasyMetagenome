@@ -2236,13 +2236,17 @@ cd-hit-est-2d比较，只有M X N的计算量
 9. 更新Kraken2数据库为20231009版本，新增alpha, beta多样性、Krona网页、Pavian桑基图
 10. 新增可选的checkm2评估
 
-**1.21 2023.11.24**
+**1.21 2024.5.4**
 1. format_dbcan2list.pl更新，解决结果丢失第一列结果的bug，新增了Evalue，及按Evalue筛选的参数
 2. 新增viwarp软件数据库：iPHoP.latest_rw.tar.gz(116G)、METABOLIC_test_files.tgz(2G)
 3. kraken2数据库更新为2024版，kraken2从2.1.2升级为2.1.3，环境名为kraken2.1.3，且bracken2.5升级为2.8，解决结果校正后大量为0的Bug；
 4. 测试数据新增不同疾病程度、不同年龄组；
 5. CARD更新为2024版，v3.2.9
 
+**1.22 2024.11.9**
+1. PPT更新为2024.11版
+2. kraken2/tax_count.spf 格式更新，解决缺失一个样本的问题；
+3. CAZy数据库更新为2024版
 
 **正在开发中功能**
 
