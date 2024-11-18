@@ -103,7 +103,7 @@ Rscript $sd/metaphlan_hclust_heatmap.R \
 
 ```
 # 此步骤需要在linux环境中运行，请在linux环境中安装humann2，在humann2环境下运行
-# 处理 taxonomy2.spf 文件，生成 taxonomy_modified.spf
+# 处理 taxonomy.spf 文件，生成 taxonomy_modified.spf
 ${sd}/taxonomy_modified.sh
 #整体结构图
 #安装humann2
@@ -196,6 +196,7 @@ Rscript ${sd}/compare_stamp.R \
 
 ```
 ## 处理物种数据用于后续SparCC网络分析
+# 此处以其中一组进行举例，其它分组重复运行即可
 Rscript ${sd}/SparCC_data_processing.R \
       --i result12/metaphlan4/Species.txt \
       --g result12/metadata.txt
