@@ -34,6 +34,7 @@ Rscript $sd/metaphlan4_alpha.R \
 ## 绘制alpha多样性指数
 # 绘制Alpha多样性指数，结果为输入文件+类型richness/shannon/shannon/invsimpson/Pielou_evenness
 # Rscript $sd/alpha_boxplot.R -h # 查看参数
+# 样式1：用字母a,b标明显著性
 Rscript $sd/alpha_boxplot.R \
   -i metaphlan4/alpha.txt \
   -a shannon \
@@ -49,20 +50,41 @@ Rscript $sd/alpha_boxplot.R -i metaphlan4/alpha.txt -a ${i} \
   -o metaphlan4/
 done
 
+# 样式2：用p值标明显著性  
+Rscript $sd/alpha_boxplot_new.R \
+  -i metaphlan4/alpha.txt \
+  -a shannon \
+  -d metadata.txt \
+  -n Group \
+  -o metaphlan4/ \
+  -w 49 -e 79
+  
+# 批量计算6种指数的箱线图+统计
+for i in observed_species shannon simpson invsimpson Pielou_evenness;do
+Rscript $sd/alpha_boxplot_new.R -i metaphlan4/alpha.txt -a ${i} \
+  -d metadata.txt -n Group -w 49 -e 79 \
+  -o metaphlan4/
+done
+  
+
+
 ### Beta多样性(Metaphlan4)
-# 此处计算Bray-curtis距离
+# 可选计算分类级别-t：1-界；2-门；3-纲；4-目；5-科；6-属；7-种
+# 可选距离-m："bray", "euclidean", "jaccard", "manhattan"等
+# 这里以物种水平和bray-curtis距离举例
 Rscript ${sd}/metaphlan4_beta.R -h
 Rscript $sd/metaphlan4_beta.R \
   -i metaphlan4/taxonomy.tsv \
   -g metadata.txt \
   -t 7 \
+  -m bray \
   -o metaphlan4/beta
   
 # PCoA分析输入文件，选择分组，输出文件，图片尺寸mm，统计见beta_pcoa_stat.txt
 # 可选距离有 bray_curtis, euclidean, jaccard, manhattan
 # 此处可能报错“duplicated row.names”,需要给beta.txt增加行名后运行
 Rscript $sd/beta_pcoa.R \
-  --input metaphlan4/beta.txt \
+  --input metaphlan4/beta_bray.txt \
   --design metadata.txt \
   --group Group \
   --width 89 --height 59 \
@@ -152,12 +174,21 @@ bash ${sd}/sp_vennDiagram.sh -f metaphlan4/group_high.tsv \
 ### 箱线图(metaphlan4)
 
 ```
+# 整体丰度箱线图
 for tax in Phylum Family Genus Species; do
 Rscript $sd/metaphlan_boxplot.R \
       -i metaphlan4/taxonomy.spf \
       -t ${tax} \
       -n 30 \
-      -o  metaphlan4/boxplot_${tax};done
+      -o metaphlan4/boxplot_${tax};done
+      
+# 组间比较箱线图
+for tax in Phylum Family Genus Species; do
+Rscript $sd/metaphlan4_boxplot_compare.R \
+      -i metaphlan4/taxonomy.spf \
+      -t ${tax} \
+      -n 30 \
+      -o metaphlan4/boxplot_${tax};done
 ```
 
 ### 堆叠柱状图
@@ -173,6 +204,14 @@ Rscript ${sd}/tax_stackplot.R \
       --input metaphlan4/${tax}.txt --design metadata.txt \
       --group Group --output metaphlan4/${tax}.stackplot \
       --legend 10 --width 120 --height 70; done
+      
+# 排序分面堆叠柱状图
+for tax in Kingdom Phylum Genus Species; do
+Rscript ${sd}/tax_stackplot_order.R \
+      --input metaphlan4/${tax}.txt --design metadata.txt \
+      --group Group --output metaphlan4/${tax}.stackplot \
+      --legend 10 --width 120 --height 70; done
+
 ```
 
 
@@ -189,6 +228,26 @@ Rscript ${sd}/compare_stamp.R \
       --method "t.test" --pvalue 0.2 --fdr "none" \
       --width 100 --height 300 \
       --output metaphlan4/stamp_${compare}
+```
+
+
+### MaAsLin2差异物种分析火山图
+
+# 同样适用于功能通路差异分析
+
+```
+# 差异分析
+Rscript ${sd}/compare_MaAsLin2.R \
+      --i metaphlan4/Species.txt \
+      --m metadata.txt \
+      --o metaphlan4/
+      
+# 根据差异分析结果绘制火山图
+Rscript ${sd}/compare_valcano.R \
+      --i metaphlan4/MaAsLin2_overall_difference.csv \
+      --d metaphlan4/MaAsLin2_enriched_depleted.csv \
+      --o metaphlan4/
+
 ```
 
 
@@ -462,8 +521,9 @@ Rscript ${sd}/tax_stackplot.R \
 
 ```
 compare="Normal-Cancer"
+tax=S
 Rscript ${sd}/compare_stamp.R \
-      --input kraken2/bracken.S.0.01-H --metadata metadata.txt \
+      --input kraken2/bracken.${tax}.0.01-H --metadata metadata.txt \
       --group Group --compare ${compare} --threshold 0.1 \
       --method "t.test" --pvalue 0.1 --fdr "none" \
       --width 100 --height 200 \
@@ -499,10 +559,11 @@ Rscript ${sd}/table2itol.R -a -c factor -D plan4 -i ID -l Genus -t %s -w 0 annot
 cd ${wd}
 cd ..
 Rscript ${sd}/MAG_sample_rare.R \
-      --input result/coverm/MAG_table.txt \
-      --taxonomy result/coverm/taxonomy_MAG.txt \
-      --output result/coverm/
+      --input binning/result/coverm/abundance.tsv \
+      --taxonomy binning/result/coverm/taxonomy_MAG.txt \
+      --output binning/result/coverm/
 ```
+
 
 ### MAGs不同功能数据库注释结果比较UpSet图
 
@@ -518,7 +579,10 @@ Rscript ${sd}/common_upset.R \
         --o result/eggnog/
 
 # 提取交集并绘制交集组成饼图
-Rscript ${sd}/upset_intersection_composition.R
+Rscript ${sd}/upset_intersection_composition.R \
+        --input result/eggnog/data_venn2.txt \
+        --composition result/eggnog/COGs_data.txt \
+        --output result/eggnog/
 
 ```
 
@@ -544,20 +608,26 @@ Rscript ${sd}/MAG_quality_taxonomy.R \
 ### MAGs系统发育分析树状图
 
 ```
-Rscript ${sd}/phylogenetic_tree.R
+# 肠道微生物样本示例
+Rscript ${sd}/phylogenetic_tree.R \
+        --input result/gtdb_95/tax.unrooted.tree \
+        --annotation result/gtdb_95/annotation2.txt \
+        --output result/gtdb_95/
 
+# 环境样本示例
+Rscript ${sd}/phylogenetic_tree_env.R \
+        --input result/gtdb_95/tax.unrooted2.tree \
+        --annotation result/gtdb_95/annotation3.txt \
+        --output result/gtdb_95/
 ```
 
 ### MAGs耐药基因丰度热图
 
 ```
-# 处理RGI数据
-# 这里还有问题需要修改
-bash ${sd}/RGI_data_processing.sh
-
 Rscript ${sd}/functional_gene_heatmap.R \
-        --i result/dbcan3/ARG_final.txt \
-        --g result/dbcan3/group_ARG.txt
+        --input binning/temp/ARG2/ARG_final.txt \
+        --group binning/temp/ARG2/group_ARG.txt \
+        --output binning/temp/
 
 ```
 
