@@ -257,8 +257,9 @@ Rscript ${sd}/compare_valcano.R \
 ## 处理物种数据用于后续SparCC网络分析
 # 此处以其中一组进行举例，其它分组重复运行即可
 Rscript ${sd}/SparCC_data_processing.R \
-      --i result12/metaphlan4/Species.txt \
-      --g result12/metadata.txt
+      --input result12/metaphlan4/Species.txt \
+      --group result12/metadata.txt \
+      --output result12/metaphlan4/
 
 ## SparCC相关性(Correlation)和显著性(p value)计算
 # 以下命令行需在linux环境中运行
@@ -295,8 +296,9 @@ mv example/basis_corr/sxtr_sparcc_Cancer.tsv sxtr_cov_mat_Cancer.tsv
 
 ## 可视化
 Rscript ${sd}/SparCC_visualization.R \
-      --i result12/metaphlan4/sxtr_cov_mat_Cancer.tsv \
-      --P result12/metaphlan4/sxtr_pvals_cancer.two_sided.tsv
+      --Correlation result12/metaphlan4/sxtr_cov_mat_Cancer.tsv \
+      --Pvalue result12/metaphlan4/sxtr_pvals_cancer.two_sided.tsv \
+      --output result12/metaphlan4/
 
 ```
 
