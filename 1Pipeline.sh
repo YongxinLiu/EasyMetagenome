@@ -2,7 +2,7 @@
 
 # 易宏基因组流程 EasyMetagenome Pipeline
 
-    # 版本Version: 1.21, 2024/5/17
+    # 版本Version: 1.22, 2024/11/18
     # 操作系统Operation System: Linux Ubuntu 22.04+ / CentOS 7.7+ 
 
 # 一、数据预处理 Data preprocessing
@@ -1007,6 +1007,7 @@ CARD在线分析平台：https://card.mcmaster.ca/
 ### 数据和环境变量 Data and enviroment
 
 这里基于质控clean数据和拼接好的重叠群contigs，基于上游结果继续分析。由于上游测试数据过小，分箱无结果。 本次采用软件推荐的7G数据，我们进入一个新文件夹开展分析。
+如果上游测试数据过小分箱吴结果，可下载通过百度网盘分享的文件：链接：https://pan.baidu.com/s/1HdHkp2Qk7ZDWfcsJZxuhrA 提取码：5678
 
 输入输出文件介绍：
 
