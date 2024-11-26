@@ -6,7 +6,7 @@
 
 更新时间Update：2024/11/26
 
-![image](http://www.imeta.science/github/EasyMetagenome/result/EasyMetagenomePipeline.jpg)
+![image](https://github.com/baidefeng/EasyMetagenome/blob/master/result/EasyMetagenomePipeline2.jpg)
 
 **图1. 易宏基因组的工作流程：分析宏基因组测序从原始数据到物种和功能组成表.**
 
