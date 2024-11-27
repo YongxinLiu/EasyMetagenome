@@ -16,8 +16,6 @@
 
 The process from raw data to species and functional composition tables can be divided into four steps: 1. Data preprocessing, including pre-analysis preparation (installing software and database, setting environmental variables and checking metadata and sequence files), Fastp quality control and Kneaddata host removal. 2. Read-based analysis (HUMAnN3+MetaPhlAn4+Kraken2), including preparation of HUMAnN input files, calculation of species and functional composition by HUMAnN, arrangement of species composition tables, functional composition analysis, GraPhlAn map drawing, LEfSe differential analysis of species and Kraken2+Bracken species annotation and abundance estimation. 3. Assembly analysis, including assembly, gene prediction/de-redundancy and quantification, functional gene annotation and Kraken2 gene species annotation. 4. Binning and mining of single bacterial genomes, including MetaWRAP mixed sample binning, dRep de-redundant species/strain genome sets, CoverM genome quantification, GTDB-tk species annotation and evolutionary tree.
 
-
-
 ## &#x20;目录 Table of contents
 
 ### EasyMetagenome
@@ -64,8 +62,6 @@ The process from raw data to species and functional composition tables can be di
 *   environment.yml
 
     当前版本运行环境 Current version operating environment
-
-
 
 ## 流程文件介绍 Pipeline file introduction
 
