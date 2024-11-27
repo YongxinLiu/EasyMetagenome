@@ -3,7 +3,7 @@
 # 易宏基因组流程EasyMetagenomePipeline
 
 ```
-# 版本: 1.21, 2024/5/17
+# 版本: 1.22, 2024/11/26
 # 测试环境为Windows 10+ / MacOS 10+
 
 # 设置结果目录(通常为项目中的result，此处为12个样本结果result12)
@@ -23,7 +23,7 @@ cd $wd
 ## 物种Metaphlan4
 
 ```
-### Alpha多样性(Metaphlan4)
+### Alpha多样性指数计算(Metaphlan4)
 Rscript ${sd}/metaphlan4_alpha.R -h
 Rscript $sd/metaphlan4_alpha.R \
   -i metaphlan4/taxonomy.tsv \
@@ -31,7 +31,7 @@ Rscript $sd/metaphlan4_alpha.R \
   -t 7 \
   -o metaphlan4/alpha
   
-## 绘制alpha多样性指数
+### 绘制alpha多样性指数箱线图
 # 绘制Alpha多样性指数，结果为输入文件+类型richness/shannon/shannon/invsimpson/Pielou_evenness
 # Rscript $sd/alpha_boxplot.R -h # 查看参数
 # 样式1：用字母a,b标明显著性
@@ -43,7 +43,7 @@ Rscript $sd/alpha_boxplot.R \
   -o metaphlan4/ \
   -w 89 -e 59
   
-# 批量计算6种指数的箱线图+统计
+### 批量计算6种指数的箱线图+统计
 for i in observed_species shannon simpson invsimpson Pielou_evenness;do
 Rscript $sd/alpha_boxplot.R -i metaphlan4/alpha.txt -a ${i} \
   -d metadata.txt -n Group -w 89 -e 59 \
@@ -68,7 +68,7 @@ done
   
 
 
-### Beta多样性(Metaphlan4)
+### Beta多样性距离矩阵计算(Metaphlan4)
 # 可选计算分类级别-t：1-界；2-门；3-纲；4-目；5-科；6-属；7-种
 # 可选距离-m："bray", "euclidean", "jaccard", "manhattan"等
 # 这里以物种水平和bray-curtis距离举例
@@ -79,7 +79,8 @@ Rscript $sd/metaphlan4_beta.R \
   -t 7 \
   -m bray \
   -o metaphlan4/beta
-  
+
+### Beta多样性PCoA分析  
 # PCoA分析输入文件，选择分组，输出文件，图片尺寸mm，统计见beta_pcoa_stat.txt
 # 可选距离有 bray_curtis, euclidean, jaccard, manhattan
 # 此处可能报错“duplicated row.names”,需要给beta.txt增加行名后运行
@@ -139,7 +140,7 @@ Rscript ${sd}/graphlan_plot_new.r --input metaphlan4/taxonomy_modified.spf\
 ### 维恩图
 
 ```
-### 筛选每个样本>0.5%的分类单元，包括界门纲目科属种
+# 筛选每个样本>0.5%的分类单元，包括界门纲目科属种
 awk 'BEGIN{OFS=FS="\t"}{if(FNR==1) {for(i=2;i<=NF;i++) a[i]=$i;} \
    else {for(i=2;i<=NF;i++) if($i>0.5) print $1, a[i];}}' \
    metaphlan4/taxonomy.tsv > metaphlan4/taxonomy_high.tsv
@@ -160,7 +161,7 @@ Rscript ${sd}/otu_mean.R --input metaphlan4/taxonomy.tsv \
   --group Group --thre 0 \
   --scale F --all TRUE --type mean \
   --output metaphlan4/group_mean.txt    
-### 筛选每个组>0.5%的分类单元，包括界门纲目科属种
+# 筛选每个组>0.5%的分类单元，包括界门纲目科属种
 awk 'BEGIN{OFS=FS="\t"}{if(FNR==1) {for(i=2;i<=NF;i++) a[i]=$i;} \
    else {for(i=2;i<=NF;i++) if($i>0.5) print $1, a[i];}}' \
    metaphlan4/group_mean.txt > metaphlan4/group_high.tsv
@@ -171,7 +172,7 @@ bash ${sd}/sp_vennDiagram.sh -f metaphlan4/group_high.tsv \
 
 ```
 
-### 箱线图(metaphlan4)
+### 丰度箱线图(metaphlan4)
 
 ```
 # 整体丰度箱线图
@@ -553,9 +554,9 @@ Rscript ${sd}/table2itol.R -a -c factor -D plan4 -i ID -l Genus -t %s -w 0 annot
 
 ```
 
-## MAG分析
+## MAGs分析
 
-### MAG与样本稀疏曲线
+### MAGs与样本稀疏曲线
 
 ```
 cd ${wd}
@@ -612,8 +613,8 @@ Rscript ${sd}/MAG_quality_taxonomy.R \
 ```
 # 肠道微生物样本示例
 Rscript ${sd}/phylogenetic_tree.R \
-        --input result/gtdb_95/tax.unrooted.tree \
-        --annotation result/gtdb_95/annotation2.txt \
+        --input result/gtdb_95/tax.unrooted4.tree \
+        --annotation result/gtdb_95/annotation4.txt \
         --output result/gtdb_95/
 
 # 环境样本示例
@@ -621,6 +622,13 @@ Rscript ${sd}/phylogenetic_tree_env.R \
         --input result/gtdb_95/tax.unrooted2.tree \
         --annotation result/gtdb_95/annotation3.txt \
         --output result/gtdb_95/
+        
+
+Rscript ${sd}/phylogenetic_tree_env.R \
+        --input result/gtdb_95/tax.unrooted4.tree \
+        --annotation result/gtdb_95/annotation4.txt \
+        --output result/gtdb_95/        
+
 ```
 
 ### MAGs耐药基因丰度热图
