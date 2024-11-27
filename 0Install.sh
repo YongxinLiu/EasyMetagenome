@@ -33,7 +33,8 @@
 EasyMetagenome流程，包括流程安装、使用和可视化脚本，以及流程测试数据和结果正对照，网址：https://github.com/YongxinLiu/EasyMetagenome
 
 三种下载方法：依赖尝试/任选其一至成功即可
-
+    
+    cd ${db}
     # 方法1. 网页 https://github.com/YongxinLiu/EasyMetagenome 中Code - Download ZIP下载压缩包，上传至服务器
     # 解压，Command 'unzip' not found使用sudo apt install unzip安装
     unzip EasyMetagenome-master.zip 
@@ -66,7 +67,7 @@ EasyMetagenome依赖EasyMicrobiome，其包括众多脚本、软件和数据库�
     git clone https://github.com/YongxinLiu/EasyMicrobiome
     # 旧版更新
     cd EasyMicrobiome && git pull && cd ../
-
+    
     # 软件安装
     # 添加linux命令可执行权限
     chmod +x `pwd`/EasyMicrobiome/linux/* `pwd`/EasyMicrobiome/script/*
@@ -77,25 +78,29 @@ EasyMetagenome依赖EasyMicrobiome，其包括众多脚本、软件和数据库�
 
 ### 软件管理器Conda
 
-    # 下载最新版miniconda3，70M
+    # 下载最新版miniconda3 v24.9.2 , 安装日期2024/11/12, 141.47 Mb  
     wget -c https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+    
     # 安装，-b批量，-f无提示，-p目录，许可协议打yes
-    bash Miniconda3-latest-Linux-x86_64.sh -b -f -p ${soft}
+    bash Miniconda3-latest-Linux-x86_64.sh -b -f 
     # 激活，然后关闭终端重开，提示符前出现(base)即成功
-    ${soft}/condabin/conda init
+    ~/miniconda3/condabin/conda init
     source ~/.bashrc
-    # 查看版本，conda 23.7.3, python 3.11.4
-    conda -V 
-    python --version
+    # 查看版本，conda 24.9.2, python 3.12.2
+    conda -V  # 24.9.2
+    python --version  # 3.12.2
     # 添加常用频道
     conda config --add channels bioconda # 生物软件
     conda config --add channels conda-forge # Highest priority
-
+    
     # conda默认配置文件为 ~/.condarc 查看配置文件位置
-    conda install mamba -c conda-forge -y
-    mamba install pandas -c conda-forge -y
-    mamba install conda-pack -c conda-forge -y
-    conda config --set channel_priority strict
+    conda install mamba -c conda-forge -c bioconda -y
+    mamba install pandas -c conda-forge -c bioconda -y
+    mamba install conda-pack -c conda-forge -c bioconda -y
+    
+    #conda config --set channel_priority strict #设置严格的仓库优先级（最好不要使用）
+    #conda config --set channel_priority flexible #禁用仓库优先级
+    
     conda config --show-sources
     # 查看虚拟环境列表 
     conda env list
@@ -122,6 +127,7 @@ BioConda: https://bioconda.github.io/recipes/kneaddata/README.html
 
     # 指定conda文件名
     s=kneaddata
+    soft=~/miniconda3
     # 下载，可选NMDC、百度云等
     wget -c ftp://download.nmdc.cn/tools/conda/${s}.tar.gz
     # 指定安装目录
@@ -137,19 +143,24 @@ BioConda: https://bioconda.github.io/recipes/kneaddata/README.html
     fastqc -v # v0.12.1
     kneaddata --version # 0.12.0
     trimmomatic -version # 0.39
-    bowtie2 --version # 2.5.1
-    multiqc --version  # 1.15
-
-    # (可选)安装软件打包，f覆盖输出文件，ignore跳过修改检测
+    bowtie2 --version # 2.5.4
+    multiqc --version  # 1.25.1
+    fastp --version # 0.24.0
+    
+    #3.打包--------------------
+    #安装软件打包，f覆盖输出文件，ignore跳过修改检测
+    mkdir -p ~/project/EasyMetagenome/package
+    cd ~/project/EasyMetagenome/package
     n=kneaddata
     conda pack -f --ignore-missing-files -n ${n} -o ${n}.tar.gz
+    cd ..
 
 ### kneaddata数据库下载
 
     # 查看可用数据库
     kneaddata_database
     # 包括人基因组bowtie2/bmtagger、人类转录组、核糖体RNA和小鼠基因组
-    
+    db=~/db
     # 下载人基因组bowtie2索引 3.44 GB
     mkdir -p ${db}/kneaddata/human
     kneaddata_database --download human_genome bowtie2 ${db}/kneaddata/human
@@ -158,7 +169,7 @@ BioConda: https://bioconda.github.io/recipes/kneaddata/README.html
     cd ${db}/kneaddata/human
     wget -c ftp://download.nmdc.cn/tools/meta/kneaddata/human_genome/Homo_sapiens_hg37_and_human_contamination_Bowtie2_v0.1.tar.gz
     tar xvzf Homo_sapiens_hg37_and_human_contamination_Bowtie2_v0.1.tar.gz
-
+    
     # 下载小鼠基因组bowtie2索引 2.83 GB
     mkdir -p ${db}/kneaddata/mouse
     kneaddata_database --download mouse_C57BL bowtie2 ${db}/kneaddata/mouse
@@ -193,12 +204,23 @@ HUMAnN3+MetaPhlAn4为目前最新版，目前最广泛使用的HUMAnN2安装见�
 
 ### HUMAnN3直接安装
 
-    # 安装HUMAnN3.7+MetaPhlAn4
+    #1.更新--------------------
     conda create -n humann3
     conda activate humann3
-    conda install humann=3.7 -c bioconda -c conda-forge
-    # 打包(可选)
-    conda pack -f -n humann3 -o humann3.tar.gz
+    conda install metaphlan=4.1.1 humann=3.9  -c bioconda -c conda-forge -y
+    humann --version # v3.9
+    metaphlan -v # version 4.1.1 (11 Mar 2024)
+    
+    #2.测试--------------------
+    # 测试
+    humann_test #无报错最后显示 OK
+    
+    #3.打包--------------------
+    #安装软件打包，f覆盖输出文件，ignore跳过修改检测
+    cd package
+    n=humann3
+    conda pack -f --ignore-missing-files -n ${n} -o ${n}.tar.gz
+    cd ..
     
 ### HUMAnN3解包安装
 
@@ -225,7 +247,7 @@ HUMAnN3+MetaPhlAn4为目前最新版，目前最广泛使用的HUMAnN2安装见�
 
     # 显示可用分类、泛基因组和功能数据库
     humann_databases
-
+    
     # 安装数据库
     cd ${db}
     mkdir -p ${db}/humann3 # 建立下载目录
@@ -235,7 +257,7 @@ HUMAnN3+MetaPhlAn4为目前最新版，目前最广泛使用的HUMAnN2安装见�
     humann_databases --download uniref uniref90_diamond ${db}/humann3
     # 输助比对数据库 2.6 GB
     humann_databases --download utility_mapping full ${db}/humann3
-
+    
     # humann3数据库无法自动下载，备用链接下载安装
     wget -c ftp://download.nmdc.cn/tools/meta/humann3/full_chocophlan.v201901_v31.tar.gz
     wget -c ftp://download.nmdc.cn/tools/meta/humann3/uniref90_annotated_v201901b_full.tar.gz
@@ -245,9 +267,9 @@ HUMAnN3+MetaPhlAn4为目前最新版，目前最广泛使用的HUMAnN2安装见�
     tar xvzf full_chocophlan.v201901_v31.tar.gz -C ${db}/humann3/chocophlan
     mkdir -p ${db}/humann3/uniref
     tar xvzf uniref90_annotated_v201901b_full.tar.gz -C ${db}/humann3/uniref
-    mkdir -p ${db}/humann3/utility_mapping
+    mkdir -p ${db}/humann3/utility_mapping			66	
     tar xvzf full_mapping_v201901b.tar.gz -C ${db}/humann3/utility_mapping
-
+    
     # 设置数据库位置
     # 显示参数
     humann_config --print
@@ -262,28 +284,29 @@ HUMAnN3+MetaPhlAn4为目前最新版，目前最广泛使用的HUMAnN2安装见�
 
 ### MetaPhlAn4物种数据库
     
-    # MetaPhlAn4数据库下载2022数据和索引3G+20G
-    mkdir -p ${db}/metaphlan4
-    cd ${db}/metaphlan4
+    # MetaPhlAn4数据库下载2024数据和索引2.98G+19.87G
+    cd ~/project/EasyMetagenome
+    mkdir -p ~/db/metaphlan4
+    cd ~/db/metaphlan4
     
     # 官网下载
-    wget -c http://cmprod1.cibio.unitn.it/biobakery4/metaphlan_databases/mpa_vOct22_CHOCOPhlAnSGB_202212.tar
-    wget -c http://cmprod1.cibio.unitn.it/biobakery4/metaphlan_databases/bowtie2_indexes/mpa_vOct22_CHOCOPhlAnSGB_202212_bt2.tar
-    tar xvf mpa_vOct22_CHOCOPhlAnSGB_202212.tar
-    tar xvf mpa_vOct22_CHOCOPhlAnSGB_202212_bt2.tar
+    wget -c http://cmprod1.cibio.unitn.it/biobakery4/metaphlan_databases/mpa_vOct22_CHOCOPhlAnSGB_202403.tar
+    wget -c http://cmprod1.cibio.unitn.it/biobakery4/metaphlan_databases/bowtie2_indexes/mpa_vOct22_CHOCOPhlAnSGB_202403_bt2.tar
+    tar xvf mpa_vOct22_CHOCOPhlAnSGB_202403.tar
+    tar xvf mpa_vOct22_CHOCOPhlAnSGB_202403_bt2.tar
     
     # 官方没有压缩体积大下载慢，备用国内百度链接：https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315 或 微生物所FTP ftp://download.nmdc.cn/tools/meta 下载压缩包
-    wget -c ftp://download.nmdc.cn/tools/meta/metaphlan4/mpa_vOct22_CHOCOPhlAnSGB_202212.tar.gz
-    wget -c ftp://download.nmdc.cn/tools/meta/metaphlan4/mpa_vOct22_CHOCOPhlAnSGB_202212_bt2.tar.gz
-    tar xvzf mpa_vOct22_CHOCOPhlAnSGB_202212.tar.gz
-    tar xvzf mpa_vOct22_CHOCOPhlAnSGB_202212_bt2.tar.gz
+    wget -c ftp://download.nmdc.cn/tools/meta/metaphlan4/mpa_vOct22_CHOCOPhlAnSGB_202403.tar.gz
+    wget -c ftp://download.nmdc.cn/tools/meta/metaphlan4/mpa_vOct22_CHOCOPhlAnSGB_202403_bt2.tar.gz
+    tar xvzf mpa_vOct22_CHOCOPhlAnSGB_202403.tar.gz
+    tar xvzf mpa_vOct22_CHOCOPhlAnSGB_202403_bt2.tar.gz
     # 可选(制作下载文件和md5值)
-    gunzip mpa_vOct22_CHOCOPhlAnSGB_202212_bt2.tar.gz
-    md5sum mpa_vOct22_CHOCOPhlAnSGB_202212_bt2.tar > mpa_vOct22_CHOCOPhlAnSGB_202212_bt2.md5
+    gunzip mpa_vOct22_CHOCOPhlAnSGB_202403_bt2.tar.gz
+    md5sum mpa_vOct22_CHOCOPhlAnSGB_202403_bt2.tar > mpa_vOct22_CHOCOPhlAnSGB_202403_bt2.md5
 
 ## 生物标记鉴定和可视化LEfSe
 
-方法1. 在线ImageGP http://www.bic.ac.cn/ImageGP/ 选择左侧LEfSe
+方法1. 在线ImageGP <http://www.bic.ac.cn/ImageGP/> 选择左侧LEfSe
 
 方法2. 下载conda预安装包解压
 
@@ -297,6 +320,8 @@ HUMAnN3+MetaPhlAn4为目前最新版，目前最广泛使用的HUMAnN2安装见�
     conda activate ${n}
     # 初始化环境
     conda unpack
+
+    run_lefse.py -h #LEfSe 1.0
 
 方法3. 直接安装：经常无法安装，安装的代码也有可能存在问题
 
@@ -323,12 +348,12 @@ Kraken2解包安装
 Kraken2安装指定版本，2024年5月为2.1.3
 
     n=kraken2.1.3
-    mamba create -n ${n} -y -c bioconda kraken2=2.1.3
+    mamba create -n ${n} -y -c bioconda kraken2=2.1.3 python=3.9
     conda activate ${n}
-    mamba install bracken krakentools krona r-optparse
+    mamba install bracken krakentools krona r-optparse -y
     # 记录软件版本
     kraken2 --version # 2.1.3
-    less `type bracken | cut -f2 -d '('|cut -f 1 -d ')'`|grep 'VERSION' # 2.8
+    less `type bracken | cut -f2 -d '('|cut -f 1 -d ')'`|grep 'VERSION' # 2.9
     # 打包
     conda pack -f --ignore-missing-files -n ${n} -o ${n}.tar.gz
 
@@ -338,7 +363,7 @@ Kraken2安装指定版本，2024年5月为2.1.3
 
 方案1. 下载标准+原生动物+真菌 16GB (PlusPF-16) 
 
-    v=k2_pluspf_16gb_20240112
+    v=k2_pluspf_16gb_20240904
     mkdir -p ~/db/kraken2/pluspf16g
     cd ~/db/kraken2
     wget -c https://genome-idx.s3.amazonaws.com/kraken/${v}.tar.gz
@@ -348,7 +373,7 @@ Kraken2安装指定版本，2024年5月为2.1.3
 
 方案2. 下载标准+原生动物+真菌 69GB (PlusPF) 
 
-    v=k2_pluspf_20240112
+    v=k2_pluspf_20240904
     mkdir -p ~/db/kraken2/pluspf
     cd ~/db/kraken2
     wget -c https://genome-idx.s3.amazonaws.com/kraken/${v}.tar.gz
@@ -360,7 +385,7 @@ Kraken2安装指定版本，2024年5月为2.1.3
 
 指定解压目录，包括时间和类型
 
-    v=k2_pluspfp_20240112
+    v=k2_pluspfp_20240904
     mkdir -p ~/db/kraken2/pluspfp
     cd ~/db/kraken2
     wget -c https://genome-idx.s3.amazonaws.com/kraken/${v}.tar.gz
@@ -391,15 +416,20 @@ Kraken2安装指定版本，2024年5月为2.1.3
 ### megahit安装后测试
 
     megahit -v # MEGAHIT v1.2.9
-    metaspades.py -v # metaSPAdes v3.15.4
-    metaquast.py -v # MetaQUAST v5.0.2
+    metaspades.py -v # metaSPAdes v4.0.0
+    metaquast.py -v # MetaQUAST v5.3.0
     cd-hit -v | grep version # CD-HIT v4.8.1
     embossversion # EMBOSS v6.6
-    salmon -v # salmon v1.8
+    salmon -v # salmon v1.10.3
+    
+    #打包
+    cd ~/project/EasyMetagenome/package
+    n=megahit
+    conda pack -f --ignore-missing-files -n ${n} -o ${n}.tar.gz
 
 ## 蛋白同源综合注释eggNOG
 
-eggNOG http://eggnogdb.embl.de
+eggNOG [http://eggnogdb.embl.de](http://eggnogdb.embl.de/)
 
 ### eggNOG解包安装
 
@@ -416,10 +446,10 @@ eggNOG http://eggnogdb.embl.de
 ### eggNOG直接安装
 
     # 新建环境并进入
-    conda create -n eggnog -y
+    mamba create -n eggnog -y
     conda activate eggnog
     # 安装eggnog比对工具emapper
-    conda install eggnog-mapper -y -c bioconda -c conda-forge
+    mamba install eggnog-mapper -y -c bioconda -c conda-forge
 
 ### eggNOG安装测试    
     
@@ -433,16 +463,29 @@ eggNOG http://eggnogdb.embl.de
     mkdir -p ${db}/eggnog && cd ${db}/eggnog
     # -y默认同意，-f强制下载，eggnog.db.gz 6.3G+4.9G，解压后48G
     download_eggnog_data.py -y -f --data_dir ${db}/eggnog
-    
+
     # 百度或微生物所备用链接下载eggnog.tar.gz
     wget -c ftp://download.nmdc.cn/tools/meta/eggnog/eggnog.tar.gz
     tar xvzf eggnog.tar.gz
-    # 查看版本时会显示默认数据位置
-    emapper.py --version # 2.1.12
+
     # 链接至默认目录，注意按实际情况修改
-    ln -sf ${db}/eggnog ${soft}/envs/eggnog/lib/python3.9/site-packages/data/
+    mkdir -p ${soft}/envs/eggnog/lib/python3.12/site-packages/data/
+    ln -sf /data/meta/db/eggnog/eggnog.db ${soft}/envs/eggnog/lib/python3.12/site-packages/data/
+
     # 复制数据至内存中加速比对
     # cp eggnog.* /dev/shm
+    
+### eggNOG安装测试
+
+    emapper.py --version # 2.1.12
+    # Expected eggNOG DB version: 5.0.2 / Installed eggNOG DB version: 5.0.2 / 
+    # Diamond version found: diamond version 2.1.10 / MMseqs2 version found: 15.6f452 / 
+    # Compatible novel families DB version: 1.0.1
+    
+    #打包
+    cd ~/project/EasyMetagenome/package
+    n=eggnog
+    conda pack -f --ignore-missing-files -n ${n} -o ${n}.tar.gz
 
 ### 碳水化合物CAZy
 
@@ -451,7 +494,7 @@ dbCAN3 http://bcb.unl.edu/dbCAN2
     # 创建数据库存放目录并进入
     mkdir -p ${db}/dbcan3 && cd ${db}/dbcan3
     # 下载序列和描述
-    wget -c https://bcb.unl.edu/dbCAN2/download/Databases/V12/CAZyDB.07262023.fa
+    wget -c https://bcb.unl.edu/dbCAN2/download/Databases/V12/CAZyDB.07262023.fa   #1 Gb
     wget -c https://bcb.unl.edu/dbCAN2/download/Databases/V12/CAZyDB.08062022.fam-activities.txt
     # 提取基因家簇对应注释
     grep -v '#' CAZyDB.08062022.fam-activities.txt | sed 's/  //'| \
@@ -462,13 +505,13 @@ dbCAN3 http://bcb.unl.edu/dbCAN2
     # 备用数据库下载并解压(待上传)
     wget -c ftp://download.nmdc.cn/tools/meta/dbcan3/CAZyDB.tar.gz
     tar xvzf CAZyDB.tar.gz
-
+    
     # diamond建索引，1G，11s
-    diamond --version # 2.1.8
+    diamond --version # 2.1.10
     time diamond makedb --in CAZyDB.07262023.fa --db CAZyDB
 
 
-## 抗生素抗性基CARD/rgi
+## 抗生素抗性基因CARD/rgi
 
 CARD官网：https://card.mcmaster.ca
 RGI Github: https://github.com/arpcard/rgi
@@ -481,7 +524,7 @@ RGI Github: https://github.com/arpcard/rgi
     mkdir -p ${soft}/envs/rgi
     tar -xvzf rgi.tar.gz -C ${soft}/envs/rgi
     # 启动环境
-    conda activate rgi
+    conda activate rgi6
     # 初始化环境
     conda unpack
 
@@ -489,7 +532,8 @@ RGI Github: https://github.com/arpcard/rgi
 
     mamba create -y -n rgi6 rgi=6.0.3
     conda activate rgi6
-    # (可选)打包，待上传
+    # (可选)打包
+    cd ~/project/EasyMetagenome/package
     n=rgi6
     conda pack -f --ignore-missing-files -n ${n} -o ${n}.tar.gz
 
@@ -500,7 +544,7 @@ RGI Github: https://github.com/arpcard/rgi
     
     # 数据库部署
     mkdir -p ${db}/card && cd ${db}/card
-    # 下载最新版数据库，3.8M (2023-10-2, 3.2.8)
+    # 下载最新版数据库，3.8M (2024-08-26,3.3.0)
     wget -c https://card.mcmaster.ca/latest/data
     # 解压后35M
     tar -xvf data ./card.json
@@ -508,7 +552,7 @@ RGI Github: https://github.com/arpcard/rgi
     rgi load --card_json card.json
     # 宏基因组分析扩展数据库和加载
     rgi card_annotation -i card.json
-    mv card_database_v3.2.9_all.fasta card.fasta
+    mv card_database_v3.3.0_all.fasta card.fasta
     rgi load -i card.json --card_annotation card.fasta
     
 
@@ -532,8 +576,14 @@ RGI Github: https://github.com/arpcard/rgi
 
 ### metawrap conda安装
 
-    mamba create -y --name metawrap --channel ursky metawrap-mg=1.3.2
+    mamba create -y --name metawrap --channel ursky -c conda-forge -c bioconda metawrap-mg=1.3.2
     conda activate metawrap
+    metawrap -h # 1.3.2
+    
+    # (可选)打包
+    cd ~/project/EasyMetagenome/package
+    n=metawrap
+    conda pack -f --ignore-missing-files -n ${n} -o ${n}.tar.gz
 
 ### metawrap相关数据库   
     
@@ -556,12 +606,12 @@ NCBI核酸和物种信息(可选)
     (cd ${db}/NCBI/nt; for i in *.tar.gz; do tar xzf $i; done)
     # 可能会出现个别库下载不完整的情况，删了重下，不要续传
     # 物种信息，压缩文件45M，解压后351M
-  
+    
     mkdir -p ${db}/NCBI/tax
     (cd ${db}/NCBI/tax; wget -c ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz)
     (cd ${db}/NCBI/tax; tar -xvzf taxdump.tar.gz)
-
-
+    
+    
     ## 数据库位置设置
     which config-metawrap
     # 配置文件通常为~/miniconda3/envs/metawrap/bin/config-metawrap
@@ -594,7 +644,7 @@ Conda: https://bioconda.github.io/recipes/drep/README.html
 
 ### drep 基因组去冗余解包安装
 
-    # 下载dRep v3.2.3无法安装依赖chechm，仍用旧版2.6.2(500M)，这个压缩包没有checkm且版本为3.4.2
+    # 下载dRep v3.5.0
     wget -c ftp://download.nmdc.cn/tools/conda/drep.tar.gz
     # 指定安装目录
     mkdir -p ${soft}/envs/drep
@@ -607,12 +657,49 @@ Conda: https://bioconda.github.io/recipes/drep/README.html
 
 ### drep 基因组去冗余直接安装
 
-    # 2023/9/12尝试，仍无法安装checkm
-    mamba create -y -n drep drep=3.4.3
+    # 2024/11/13安装drep最新版 v3.5.0
+    conda create -y -n drep
     conda activate drep
-    # 不满足依赖关系
-    mamba install checkm-genome -y
-    dRep -h
+    
+    #使用清华源加速安装
+    pip install drep==3.5.0  -i https://pypi.tuna.tsinghua.edu.cn/simple
+    conda install -c bioconda numpy matplotlib pysam -y
+    conda install -c bioconda hmmer prodigal pplacer -y
+    pip3 install checkm-genome -i https://pypi.tuna.tsinghua.edu.cn/simple
+    mamba install -c bioconda mash fastANI -y
+    
+    
+    #checkm_data数据库下载
+    #checkm_data数据从https://zenodo.org/record/7401545/files/checkm_data_2015_01_16.tar.gz（需vpn）或https://data.ace.uq.edu.au/public/CheckM_databases/checkm_data_2015_01_16.tar.gz网址下载，然后放到~/miniconda3/envs/drep/checkm_data/中解压
+    
+    cd ~/miniconda3/envs/drep/checkm_data/ 
+    wget -c https://data.ace.uq.edu.au/public/CheckM_databases/checkm_data_2015_01_16.tar.gz
+    tar -xvf checkm_data_2015_01_16.tar.gz
+    
+    #指定checkm数据库位置
+    export CHECKM_DATA_PATH=~/miniconda3/envs/drep/checkm_data/
+    
+    # 查看checkm-genome 和 drep版本
+    checkm -h # v1.2.3
+    dRep -h  # v3.5.0
+    dRep check_dependencies #查看依赖项安装情况，确保mash、checkm、prodigal、fastANI显示all good
+    
+    #测试dRep
+    conda activate drep
+    mkdir -p ~/project/EasyMetagenome/temp/drep_in
+    cd ~/project/EasyMetagenome/temp/drep_in
+    cp /data1/liuyongxin/age/meta/temp/drep_in/Gp_EAB* ./
+    cd ~/project/EasyMetagenome
+    mkdir -p temp/drep95
+    time dRep dereplicate temp/drep95/ \
+        -g temp/drep_in/*.fa  \
+        -sa 0.95 -nc 0.30 -comp 50 -con 10 -p 5   #log文件内显示 Finished the dereplicate operation!
+    
+    #打包
+    cd ~/project/EasyMetagenome/package
+    n=drep
+    conda pack -f --ignore-missing-files -n ${n} -o ${n}.tar.gz
+    cd ..
 
 ### drep 数据库构建
 
@@ -629,9 +716,9 @@ CheckM用于Bin完整和污染估计和物种注释，安装过metawrap已经下
 
 conda安装
 
-    conda create -n coverm -y
+    mamba create -n coverm -c bioconda coverm -y
     conda activate coverm
-    conda install coverm -c bioconda -y
+    coverm -V #0.7.0
     # conda安装后打包(可选)
     conda pack -f --ignore-missing-files -n coverm -o coverm.tar.gz
 
@@ -653,70 +740,71 @@ conda安装
 
 Github: https://github.com/Ecogenomics/GTDBTk
 GTDB-Tk是一个软件工具包，用于根据基因组数据库分类法GTDB为细菌和古细菌基因组分配客观的分类法。它旨在与最近的进展一起使用，从而可以直接对环境样本中获得数百或数千个由宏基因组组装的基因组（MAG）进行物种分类注释。它也可以用于分离和单细胞的基因组物种注释。
-本次测试版本为 gtdbtk-2.2.6，Release 07-RS207v2 (11th May 2022)。
-硬件要求：内存200Gb，硬盘66Gb，64核1小时可分析1000个细菌基因组
+本次测试版本为 gtdbtk-2.4.0，Release 09-RS220 (24th April 2024)。
+硬件要求：内存>256Gb，硬盘>256Gb，64核1小时可分析1000个细菌基因组
 
 ### GTDB-Tk直接安装
 
-    # gtdbtk-2.3.2, 2023-7-8
-    n=gtdbtk2.3
-    mamba create -y -n ${n} -c conda-forge -c bioconda gtdbtk=2.3.2
+    # gtdbtk-2.4.0, 2024-5-5
+    n=gtdbtk2.4
+    mamba create -y -n ${n} -c conda-forge -c bioconda gtdbtk=2.4.0
     # 检查版本
-    gtdbtk -v # 2.3.2
-
-    # conda pack软件打包一次
-    # --exclude gtdbtk-2.3.2 指定排除数据库
-    conda pack -n ${n} -o ${n}.tar.gz --exclude gtdbtk-2.3.2 --ignore-editable-packages --ignore-missing-files
+    conda activate ${n}
+    gtdbtk -v # 2.4.0
+    
+    # conda pack软件打包一次, --exclude排除数据库
+    conda pack -n ${n} -o ${n}.tar.gz --exclude gtdbtk-2.4.0 --ignore-editable-packages --ignore-missing-files
     chmod 755 *
     
 ### GTDB-Tk解包安装
 
     soft=~/miniconda3
-    # 下载，目前为2.1，需更新为2.3
-    wget -c ftp://download.nmdc.cn/tools/conda/gtdbtk.tar.gz
+    n=gtdbtk2.4
+    wget -c ftp://download.nmdc.cn/tools/conda/${n}.tar.gz
     # 指定安装目录
-    mkdir -p ${soft}/envs/gtdbtk
-    tar -xvzf gtdbtk.tar.gz -C ${soft}/envs/gtdbtk
+    mkdir -p ${soft}/envs/${n}
+    tar -xvzf ${n}.tar.gz -C ${soft}/envs/${n}
     # 启动环境
-    conda activate gtdbtk
+    conda activate ${n}
     # 初始化环境
     conda unpack
     
 ### GTDB-Tks数据库安装
 
-download-db.sh自动下载数据库，将下载至conda中的envs/gtdbtk/share/gtdbtk-2.3.2/db/，我们修改为~/db/gtdb中
+download-db.sh自动下载数据库，将下载至conda中的envs/gtdbtk/share/gtdbtk-2.4.0/db/，我们修改为~/db/gtdb中
 
-    conda activate gtdbtk2.3
+    conda activate gtdbtk2.4
     # download-db.sh中，修改数据库下载位置，的 wget 建议改成wget -c 防止覆盖
-    sed -i 's#miniconda3/envs/gtdbtk2.3/share/gtdbtk-2.3.2/db#db/gtdb2.3#;s/wget /wget -c /' ${soft}/envs/gtdbtk2.3/bin/download-db.sh
-    # 下载数据,78G
+    sed -i 's#miniconda3/envs/gtdbtk2.4/share/gtdbtk-2.4.0/db#db/gtdb2.4#;s/wget /wget -c /' ${soft}/envs/gtdbtk2.4/bin/download-db.sh
+    # 下载数据,101G
     download-db.sh
     
-(备选)下面无法下载时手动下载和配置GTDB数据库
+(备选)上面无法下载时手动下载和配置GTDB数据库
 
-    mkdir -p ${db}/gtdb2.3 && cd ${db}/gtdb2.3
-    # 下载解压
-    wget -c https://data.gtdb.ecogenomic.org/releases/release214/214.0/auxillary_files/gtdbtk_r214_data.tar.gz
-    # 再运行, gtdb配置数据库
-    download-db.sh
-
-    # 备用链接和手工解压，指定安装完整路径
-    wget -c ftp://download.nmdc.cn/tools/meta/gtdb/gtdbtk_r214_data.tar.gz
-    tar xvzf gtdbtk_r207_v2_data.tar.gz -C ./  --strip 1
-    conda env config vars set GTDBTK_DATA_PATH="/data/meta/db/gtdb/"
+    mkdir -p ${db}/gtdb2.4 && cd ${db}/gtdb2.4
+    # 下载
+    wget -c https://data.gtdb.ecogenomic.org/releases/latest/auxillary_files/gtdbtk_package/full_package/gtdbtk_data.tar.gz
+    
+    # 备用链接
+    wget -c https://data.ace.uq.edu.au/public/gtdb/data/releases/latest/auxillary_files/gtdbtk_package/full_package/gtdbtk_data.tar.gz
+    # 手工解压，指定安装完整路径
+    tar xvzf gtdbtk_data.tar.gz -C ./  --strip 1
+    conda env config vars set GTDBTK_DATA_PATH="${db}/gtdb/2404"
 
 # 5 单菌基因组、病毒组等其他软件
 
 ## CheckM2
+
+[metawrap下载安装](http://127.0.0.1:3334/milkdown/#4QPx-1732175063664)
 
 Conda主页：https://bioconda.github.io/recipes/checkm2/README.html
 
 软件主页：https://github.com/chklovski/CheckM2
 
     # 软件安装
-    mamba create --name checkm2 checkm2
+    mamba create --name checkm2 checkm2 -y
     conda activate checkm2
-    checkm2 -h # CheckM2 v1.0.1
+    checkm2 -h # CheckM2 v1.0.2
     # 数据库安装
     mkdir ~/db/checkm2
     checkm2 database --download --path ~/db/checkm2
@@ -724,13 +812,65 @@ Conda主页：https://bioconda.github.io/recipes/checkm2/README.html
     # 在github中搜索和查找issues无解答，提新issue https://github.com/chklovski/CheckM2/issues
     # 数据库 https://zenodo.org/records/5571251  下载，需要VPN
     
-    export CHECKM2DB="path/to/database"
+    # 备用数据库下载并解压(待上传)
+    wget -c ftp://download.nmdc.cn/tools/meta/CheckM2_database/uniref100.KO.1.dmnd.tar.gz
+    tar xvzf uniref100.KO.1.dmnd.tar.gz
+    
+    #指定数据库
+    export CHECKM2DB="/data/meta/db/checkm2/CheckM2_database/uniref100.KO.1.dmnd"  
     # 测试
     checkm2 testrun
     
     # 运行，输入目录或文件列表
     checkm2 predict --threads 30 --input <folder_with_bins> --output-directory <output_folder> 
     checkm2 predict --threads 30 --input ../bin1.fa ../../bin2.fna /some/other/directory/bin3.fasta --output-directory <output_folder> 
+    
+    #打包
+    cd ~/project/EasyMetagenome/package
+    n=checkm2
+    conda pack -f --ignore-missing-files -n ${n} -o ${n}.tar.gz
+    cd ..
+
+
+# 泛基因组鉴定软件anvio-8安装
+
+安装 https://anvio.org/install/linux/stable/
+
+    # 软件安装
+    #anvio安装 https://anvio.org/install/linux/stable/
+    conda create -y --name anvio-8 python=3.10
+    conda activate anvio-8
+
+    # 安装依赖
+    mamba install -y -c conda-forge -c bioconda python=3.10 \
+            sqlite prodigal idba mcl muscle=3.8.1551 famsa hmmer diamond \
+            blast megahit spades bowtie2 bwa graphviz "samtools>=1.9" \
+            trimal iqtree trnascan-se fasttree vmatch r-base r-tidyverse \
+            r-optparse r-stringi r-magrittr bioconductor-qvalue meme ghostscript \
+            nodejs fastANI
+
+    # install anvi'o
+    curl -L https://github.com/merenlab/anvio/releases/download/v8/anvio-8.tar.gz \
+            --output temp/anvio-8.tar.gz
+    mv anvio-8.tar.gz anvio8.tar.gz
+    # 安装 
+    wget -c 
+    pip install temp/anvio8.tar.gz -i https://pypi.tuna.tsinghua.edu.cn/simple  #使用清华源加速安装
+    #查看是否安装成功，弹出帮助页面即成功
+    anvi-merge -h  
+
+    #打包，方便安装
+    cd ~/project/EasyMetagenome/package
+    n=anvio-8
+    conda pack -f --ignore-missing-files -n ${n} -o ${n}.tar.gz
+    cd ..
+
+    #安装
+    cd ~/project/EasyMetagenome/package
+    n=anvio-8
+    tar -xvzf ${n}.tar.gz -C ~/miniconda3/envs/${n}
+    conda create --name ${n} --clone ~/miniconda3/envs/${n}
+    conda activate ${n}
 
 
 
@@ -772,7 +912,7 @@ https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
     tar -zcvf kraken2.tar.gz kraken2idx/ | split -b 19G -d -a 1 - kraken2.tar.gz.
     # 分割后合并及解压缩
     cat kraken2.tar.gz.* | tar -zxv
-
+    
     # 附tar打包用法，c创建、v输出过程，z压缩，f文件 ，x解压
     单个文件压缩打包 tar -cvzf my.tar.gz file1
     多个文件压缩打包 tar -cvzf my.tar.gz file1 file2 file*
