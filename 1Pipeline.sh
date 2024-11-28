@@ -392,12 +392,10 @@ barplot展示通路的物种组成，如：腺苷核苷酸合成
     graphlan.py temp/merged_abundance.xml result/metaphlan4/graphlan.pdf \
       --external_legends 
     # GraPhlAn Plot
-    ${sd}/taxonomy_modified.sh
     cd result
-    Rscript ${sd}/graphlan_plot_new.r --input metaphlan4/taxonomy_modified.spf \
-    	--design metadata.txt \
-    	--type heatmap \
-    	--output metaphlan4/Heat_Structures
+    bash ./taxonomy_modified.sh
+    Rscript ./graphlan_plot54.r --input metaphlan4/taxonomy_modified2.spf \
+    	--design metadata.txt --type heatmap --output metaphlan4/Heat_Structures
     cd ..
 
 ## 2.6 LEfSe差异分析物种
