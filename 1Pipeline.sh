@@ -66,8 +66,7 @@
 zless/zcat查看可压缩文件，检查序列质量格式(质量值大写字母为标准Phred33格式，小写字母为Phred64，需参考附录：质量值转换)；检查双端序列ID是否重名，如重名需要改名。参考**附录 —— 质控kneaddata，去宿主后双端不匹配；序列改名**。
 
     # 设置某个样本名为变量i，以后再无需修改
-    #i=C1
-    i=FC1
+    i=C1
     # zless查看压缩文件，空格翻页，q退出; head指定显示行数
     zless seq/${i}_1.fq.gz | head -n4
 
@@ -96,8 +95,7 @@ zless/zcat查看可压缩文件，检查序列质量格式(质量值大写字母
     fastp
     
     # 单样本质控
-    #i=C1
-    i=FC1 # 33 seconds
+    i=C1
     fastp -i seq/${i}_1.fq.gz  -I seq/${i}_2.fq.gz \
       -o temp/qc/${i}_1.fastq -O temp/qc/${i}_2.fastq
     
