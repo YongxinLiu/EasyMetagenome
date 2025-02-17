@@ -715,7 +715,7 @@ Pavian桑基图：https://fbreitwieser.shinyapps.io/pavian/ 在线可视化:，�
     grep -c 'partial=00' temp/prodigal/gene.fa 
     # 提取完整基因(完整片段获得的基因全为完整，如成环的细菌基因组)
     grep 'partial=00' temp/prodigal/gene.fa | cut -f1 -d ' '| sed 's/>//' > temp/prodigal/full_length.id
-    seqkit grep -f temp/prodigal/full_length.id temp/prodigal/gene.fa > temp/prodigal/full_length.fa
+    seqkit grep -n -r -p "partial=00" temp/prodigal/gene.fa > temp/prodigal/full_length.fa
     seqkit stat temp/prodigal/full_length.fa
     
     # 如果是单样本组装可批量运行
