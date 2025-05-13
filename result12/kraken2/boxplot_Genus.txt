@@ -1,587 +1,587 @@
-Genus	C3	C4	C5	C6	N1	N2	N3	N4	N5	N6
-Haemophilus	965	3808	237	2529	130	620	2066	7829	7230	2101
-Prevotella	701	406	352	15645	1745	927	151	215	452	1591
-Neisseria	702	4679	16	291	782	646	4270	4807	2561	1061
-Fusobacterium	2218	1915	6396	796	1457	159	1130	1599	1187	2232
-Streptococcus	769	1399	288	717	3216	1126	3374	2825	1367	1999
-Rothia	106	1210	6	129	138	410	2474	1480	7541	350
-Veillonella	196	803	15	4102	226	1121	804	447	1915	2811
-Gemella	445	1361	437	140	501	51	2810	3605	404	234
-Capnocytophaga	231	138	3469	38	2763	91	217	160	420	982
-Homo	2958	537	44	11	785	2099	199	118	43	30
-Leptotrichia	651	169	1919	581	390	138	316	127	224	1238
-Aggregatibacter	6	29	3608	39	230	53	18	39	104	234
-Campylobacter	199	144	652	1300	237	90	35	114	145	486
-Tannerella	76	12	16	141	255	359	45	12	17	2251
-Corynebacterium	3	0	1	25	4	1590	1	2	8	1272
-Pseudopropionibacterium	18	0	0	2	10	1071	18	1	0	90
-Actinomyces	13	3	13	12	204	401	71	6	78	285
-Lautropia	25	0	3	0	57	686	97	0	26	133
-Treponema	6	7	1	70	41	8	1	1	1	802
-Selenomonas	9	1	0	271	82	2	3	0	4	533
-Schaalia	8	16	0	6	76	11	246	13	418	54
-Sphingomonas	518	325	0	0	1	1	0	0	1	1
-Lachnoanaerobaculum	25	133	333	21	33	1	71	55	8	24
-Toxoplasma	193	46	1	4	49	149	10	10	2	2
-Staphylococcus	179	6	3	0	95	76	5	1	1	0
-Cardiobacterium	0	0	0	2	0	244	12	0	20	44
-Mogibacterium	3	13	0	70	115	27	12	1	5	5
-Eikenella	33	7	0	5	54	37	39	6	21	20
-Abiotrophia	53	0	0	0	88	0	60	1	1	9
-Parvimonas	3	4	8	7	121	21	6	0	5	10
-Capsicum	63	7	3	1	31	42	3	5	1	1
-Ottowia	3	0	0	0	133	1	6	0	0	0
-Acinetobacter	6	3	3	0	88	13	5	6	1	1
-Cloacibacterium	5	7	1	0	16	74	10	3	3	1
-Olsenella	0	0	0	1	10	0	1	0	0	88
-Porphyromonas	1	8	10	24	26	3	4	4	3	16
-Lactococcus	85	0	4	0	0	0	2	2	2	0
-Pseudomonas	57	1	1	2	4	23	2	1	3	1
-Lancefieldella	1	0	0	18	27	33	0	1	5	6
-Mannheimia	0	22	5	4	0	1	2	48	3	3
-Cutibacterium	24	18	0	0	15	10	1	0	1	2
-Rodentibacter	1	5	14	4	0	3	1	22	16	1
-Pauljensenia	0	1	0	0	4	0	0	0	5	53
-Actinobacillus	0	5	12	0	0	1	3	29	5	2
-Croceicoccus	37	20	0	0	0	0	0	0	0	0
-Pasteurella	2	10	5	1	0	0	1	15	18	3
-Filifactor	0	0	0	1	22	16	3	2	1	7
-Kingella	4	1	0	4	0	1	6	2	15	14
-Acidovorax	2	0	0	0	7	26	9	1	1	0
-Dialister	0	0	15	2	2	0	1	0	2	24
-Mycoplasma	2	1	0	0	15	0	1	0	7	17
-Bacteroides	2	3	5	11	3	0	0	0	1	14
-Glaesserella	1	4	0	4	0	0	4	15	6	0
-Candidatus Nanosynbacter	0	0	0	1	11	1	0	1	3	16
-Pseudoleptotrichia	1	1	6	0	0	0	1	5	3	15
-Triticum	2	3	1	5	2	1	3	4	1	3
-Bacillus	1	5	3	3	1	1	6	1	3	0
-Sphingobium	14	7	0	0	1	2	0	0	0	0
-Diaphorobacter	5	1	0	0	1	11	3	1	1	0
-Oryza	7	1	3	0	5	4	1	0	0	2
-Pantoea	0	19	0	1	0	1	1	0	1	0
-Avibacterium	0	2	11	0	0	0	1	4	1	3
-Chryseobacterium	1	5	4	0	0	3	4	4	1	0
-unclassified	1	2	2	1	4	0	5	2	2	2
-Histophilus	0	3	3	3	1	2	1	3	1	3
-Moraxella	0	3	0	2	0	11	2	1	0	0
-Vibrio	1	7	1	1	0	0	1	2	4	2
-Bibersteinia	0	6	1	0	1	0	0	9	0	0
-Juglans	5	1	0	0	4	6	0	0	0	0
-Nicotiana	0	0	3	0	9	2	1	0	1	0
-Ralstonia	1	0	0	0	0	13	2	0	0	0
-Clostridium	1	1	3	1	1	0	3	2	0	3
-Frederiksenia	0	2	1	0	0	3	1	6	1	1
-Helianthus	3	0	4	1	0	3	2	2	0	0
-Pseudoalteromonas	0	1	4	2	0	0	1	5	2	0
-Lactobacillus	1	0	1	2	3	0	3	1	1	2
-Providencia	0	3	1	1	0	1	1	5	0	2
-Simonsiella	1	3	0	0	0	0	1	0	8	1
-Enterococcus	0	4	1	0	2	0	3	2	1	0
-Otariodibacter	0	1	4	0	1	0	0	4	1	2
-Porphyrobacter	7	6	0	0	0	0	0	0	0	0
-Bifidobacterium	0	0	0	0	11	0	1	0	0	0
-Gossypium	0	0	3	2	0	3	2	1	0	1
-Shewanella	0	1	2	0	1	0	1	1	4	2
-Bergeyella	2	2	1	0	1	1	2	2	0	0
-Flavobacterium	0	0	3	1	4	0	0	0	0	3
-Lachnoclostridium	1	1	1	1	2	1	2	0	1	0
-Manihot	3	3	1	0	0	0	1	1	0	1
-Paenibacillus	0	0	1	4	1	1	2	1	0	0
-Papaver	1	1	4	0	2	0	1	0	0	1
-Streptomyces	2	2	0	0	0	2	1	0	1	2
-Bisgaardia	0	0	2	1	0	3	0	0	2	1
-Cucurbita	3	2	0	0	0	3	0	1	0	0
-Vigna	2	0	1	1	0	1	1	1	1	1
-Alistipes	2	1	2	1	1	0	0	1	0	0
-Burkholderia	0	0	0	0	2	5	0	1	0	0
-Comamonas	0	1	0	0	5	1	1	0	0	0
-Cupriavidus	0	1	0	0	0	3	1	1	2	0
-Lupinus	2	0	0	0	3	2	0	0	0	1
-Novosphingobium	1	3	0	0	0	1	0	3	0	0
-Photobacterium	0	0	6	0	0	0	0	2	0	0
-Physcomitrium	1	2	0	0	1	1	3	0	0	0
-Quercus	3	1	0	0	0	1	2	0	1	0
-Sphingopyxis	4	1	0	0	1	1	0	1	0	0
-Xanthomonas	1	0	0	0	3	1	1	1	1	0
-Colwellia	0	0	0	1	0	0	1	3	1	1
-Enterocloster	0	0	0	0	2	2	3	0	0	0
-Janthinobacterium	0	3	0	0	0	2	1	0	1	0
-Musa	4	0	1	0	0	1	1	0	0	0
-Proteus	1	1	2	0	0	0	0	2	0	1
-Solanum	3	0	1	0	1	2	0	0	0	0
-Stenotrophomonas	0	1	0	0	0	6	0	0	0	0
-Yersinia	0	1	2	0	0	0	0	1	3	0
-Alteromonas	0	2	0	0	0	0	0	3	1	0
-Ananas	1	0	0	0	5	0	0	0	0	0
-Aquabacterium	3	0	0	0	0	2	1	0	0	0
-Asparagus	1	1	0	1	0	1	0	1	0	1
-Cynara	0	0	1	0	3	1	0	0	0	1
-Enterobacter	0	0	0	0	0	2	0	2	1	1
-Francisella	0	0	0	0	0	1	1	0	3	1
-Nymphaea	2	0	0	0	0	0	0	1	2	1
-Rhodoferax	1	0	0	0	0	3	0	0	0	2
-Xenorhabdus	0	1	2	0	1	0	0	1	0	1
-Aerococcus	0	0	0	0	0	0	4	1	0	0
-Aeromonas	0	0	0	1	0	0	0	4	0	0
-Alloprevotella	0	1	0	1	1	0	0	0	0	2
-Anaerococcus	2	0	0	0	1	2	0	0	0	0
-Beta	0	0	3	1	1	0	0	0	0	0
-Bradyrhizobium	1	0	0	0	0	3	0	0	0	1
-Chitinibacter	1	1	0	0	1	2	0	0	0	0
-Klebsiella	1	0	1	0	1	0	1	1	0	0
-Malus	0	0	0	1	1	0	1	1	0	1
-Odoribacter	0	0	0	2	0	0	0	0	0	3
-Paraburkholderia	1	0	0	0	0	4	0	0	0	0
-Parashewanella	0	3	0	0	0	0	0	1	1	0
-Phaseolus	0	1	0	1	0	2	0	0	0	1
-Populus	1	1	0	0	1	0	0	2	0	0
-Pragia	0	2	0	0	0	0	0	0	2	1
-Vagococcus	1	2	0	0	0	0	0	2	0	0
-Advenella	1	0	0	0	0	1	0	2	0	0
-Cajanus	1	0	0	0	0	2	1	0	0	0
-Cannabis	0	0	1	0	1	0	0	0	1	1
-Carnobacterium	0	1	2	0	0	0	0	0	0	1
-Dickeya	0	1	0	0	0	0	0	3	0	0
-Epilithonimonas	1	1	0	0	0	2	0	0	0	0
-Erysipelatoclostridium	0	2	0	0	0	0	0	0	0	2
-Gallibacterium	0	0	1	1	0	1	0	0	1	0
-Gilliamella	0	0	0	0	0	0	0	3	1	0
-Gramella	0	1	0	0	1	0	0	0	2	0
-Idiomarina	0	0	1	0	0	0	0	1	0	2
-Jeotgalibaca	0	0	2	0	1	0	1	0	0	0
-Lacticaseibacillus	2	0	0	0	1	1	0	0	0	0
-Laribacter	0	0	0	0	1	3	0	0	0	0
-Macrococcus	1	0	0	0	0	1	2	0	0	0
-Methylophilus	0	1	0	0	0	1	0	1	1	0
-Mycolicibacterium	0	0	0	0	1	0	0	0	1	2
-Olea	0	0	2	1	0	0	0	0	0	1
-Paracoccus	2	0	1	0	1	0	0	0	0	0
-Photorhabdus	1	0	0	0	0	1	0	1	1	0
-Planobacterium	0	0	0	0	0	4	0	0	0	0
-Plasmodium	2	0	0	0	1	0	0	0	1	0
-Polaribacter	0	0	0	0	2	0	0	2	0	0
-Riemerella	0	0	2	0	0	0	0	1	1	0
-Salmonella	0	0	0	1	0	0	1	1	1	0
-Shimwellia	0	1	0	0	0	0	2	0	1	0
-Thalassotalea	0	2	0	1	0	0	0	0	1	0
-Trueperella	0	0	0	0	0	0	1	0	3	0
-Variovorax	0	1	0	0	0	3	0	0	0	0
-Alysiella	0	2	0	0	0	0	0	1	0	0
-Anaerostipes	0	0	0	0	0	1	2	0	0	0
-Arachis	1	0	1	0	0	0	0	0	0	1
-Arthrobacter	0	1	0	0	0	1	0	0	1	0
-Basfia	0	0	1	1	0	0	0	0	1	0
-Bernardetia	0	1	1	0	0	0	1	0	0	0
-Blastomonas	2	1	0	0	0	0	0	0	0	0
-Caloranaerobacter	0	0	2	0	0	0	0	1	0	0
-Citrus	2	0	0	0	0	0	1	0	0	0
-Collimonas	1	0	0	0	1	1	0	0	0	0
-Cronobacter	0	0	0	0	0	0	0	2	1	0
-Daucus	1	0	0	0	0	0	2	0	0	0
-Elaeis	0	1	1	0	0	1	0	0	0	0
-Elizabethkingia	0	0	0	0	1	2	0	0	0	0
-Granulibacter	1	1	0	0	0	0	0	0	0	1
-Hydrogenovibrio	0	0	0	0	0	0	0	0	3	0
-Kosakonia	0	0	0	0	0	0	0	3	0	0
-Lacrimispora	0	0	1	0	0	0	1	0	0	1
-Leclercia	0	0	0	0	0	1	0	0	0	2
-Leucobacter	0	0	0	0	0	0	1	0	1	1
-Ligilactobacillus	0	0	0	0	0	0	2	0	1	0
-Mageeibacillus	0	0	0	1	2	0	0	0	0	0
-Medicago	0	2	1	0	0	0	0	0	0	0
-Micrococcus	1	1	0	0	0	0	0	0	1	0
-Micromonospora	1	0	0	0	0	0	0	0	0	2
-Paludibacter	0	0	0	0	1	1	0	1	0	0
-Paraprevotella	0	0	1	0	2	0	0	0	0	0
-Pediococcus	0	0	1	0	1	0	1	0	0	0
-Phocaeicola	0	1	0	0	0	0	0	1	0	1
-Rosa	2	1	0	0	0	0	0	0	0	0
-Sporosarcina	0	0	0	0	0	0	1	2	0	0
-Theobroma	0	0	1	0	1	1	0	0	0	0
-Vespertiliibacter	0	0	0	0	0	0	0	1	2	0
-Vitis	1	0	1	1	0	0	0	0	0	0
-Weissella	1	0	0	0	0	0	2	0	0	0
-Ziziphus	1	0	0	0	1	0	1	0	0	0
-Achromobacter	0	0	0	0	0	1	1	0	0	0
-Actinoplanes	0	0	1	0	0	0	0	0	1	0
-Agrobacterium	0	0	0	0	0	1	0	0	1	0
-Alicycliphilus	0	0	0	0	0	1	0	0	1	0
-Aliivibrio	0	0	0	1	0	0	0	0	1	0
-Alkalihalobacillus	0	0	0	0	0	0	2	0	0	0
-Allochromatium	0	0	2	0	0	0	0	0	0	0
-Anaerocolumna	0	0	1	0	0	0	0	1	0	0
-Aquisphaera	0	0	2	0	0	0	0	0	0	0
-Arcobacter	0	0	0	1	0	0	1	0	0	0
-Austwickia	0	0	0	0	0	0	1	0	1	0
-Babesia	0	0	1	0	0	0	0	0	1	0
-Blattabacterium	0	1	0	0	1	0	0	0	0	0
-Blautia	0	0	0	0	0	0	1	1	0	0
-Bosea	0	0	0	0	0	2	0	0	0	0
-Brachybacterium	0	0	0	0	0	1	0	0	0	1
-Brassica	1	0	0	0	0	1	0	0	0	0
-Buchnera	0	0	2	0	0	0	0	0	0	0
-Butyrivibrio	0	1	0	0	1	0	0	0	0	0
-Calothrix	0	0	0	0	0	0	0	1	1	0
-Camelina	0	0	0	0	1	0	1	0	0	0
-Candidatus Saccharimonas	0	0	0	0	2	0	0	0	0	0
-Cedecea	0	0	0	1	0	0	1	0	0	0
-Celeribacter	1	0	0	0	0	0	1	0	0	0
-Cellulomonas	0	0	0	0	0	2	0	0	0	0
-Cellvibrio	1	1	0	0	0	0	0	0	0	0
-Cepunavirus	0	0	1	0	0	0	0	1	0	0
-Cicer	1	0	1	0	0	0	0	0	0	0
-Citrobacter	0	0	1	0	0	0	0	0	1	0
-Clostridioides	1	0	0	0	1	0	0	0	0	0
-Conchiformibius	0	0	0	0	0	1	0	1	0	0
-Cyclobacterium	0	0	1	0	0	0	0	1	0	0
-Empedobacter	0	0	0	0	0	1	0	0	1	0
-Ezakiella	0	1	0	0	0	0	0	1	0	0
-Fibrella	0	0	0	0	1	0	0	0	0	1
-Finegoldia	0	0	1	0	0	1	0	0	0	0
-Geitlerinema	0	1	0	0	0	1	0	0	0	0
-Georgenia	1	0	0	0	0	0	0	0	1	0
-Glycine	0	0	0	0	0	0	0	1	0	1
-Haloactinobacterium	0	0	0	0	0	1	0	0	1	0
-Halobacillus	0	1	0	1	0	0	0	0	0	0
-Kaistella	0	0	0	0	0	0	0	1	0	1
-Kluyvera	1	0	0	0	0	1	0	0	0	0
-Legionella	0	0	0	0	0	1	1	0	0	0
-Leuconostoc	2	0	0	0	0	0	0	0	0	0
-Limnohabitans	0	1	0	0	0	0	1	0	0	0
-Massilia	0	0	0	0	0	1	0	1	0	0
-Methylobacterium	1	0	0	0	0	0	1	0	0	0
-Microbacterium	0	0	0	1	1	0	0	0	0	0
-Micropruina	0	0	0	0	0	2	0	0	0	0
-Mucilaginibacter	0	0	2	0	0	0	0	0	0	0
-Murdochiella	0	0	0	1	0	0	1	0	0	0
-Muribaculum	0	0	0	1	1	0	0	0	0	0
-Mycobacterium	0	0	0	0	0	0	0	0	1	1
-Niabella	0	0	0	0	0	0	0	0	0	2
-Nocardioides	1	0	0	0	0	0	0	0	1	0
-Nonlabens	0	0	0	1	1	0	0	0	0	0
-Oleispira	0	0	0	0	0	0	0	2	0	0
-Orbus	0	0	0	0	0	0	0	2	0	0
-Ornithobacterium	0	0	1	0	0	0	0	1	0	0
-Oscillibacter	0	1	0	0	0	0	1	0	0	0
-Pandoraea	0	0	0	0	0	1	1	0	0	0
-Parolsenella	0	0	0	0	1	0	0	0	1	0
-Pectobacterium	0	0	0	0	0	0	0	1	1	0
-Peptacetobacter	0	0	0	0	0	0	1	1	0	0
-Phaeobacter	0	0	0	0	0	0	0	0	1	1
-Planococcus	0	0	0	1	1	0	0	0	0	0
-Plesiomonas	0	0	2	0	0	0	0	0	0	0
-Polynucleobacter	0	0	1	0	1	0	0	0	0	0
-Prunus	1	0	0	0	0	0	0	1	0	0
-Psychrobacillus	0	0	1	0	0	0	0	0	0	1
-Pulveribacter	0	0	0	0	0	2	0	0	0	0
-Rheinheimera	0	1	0	0	0	0	0	1	0	0
-Sagittula	2	0	0	0	0	0	0	0	0	0
-Salinicoccus	0	0	0	0	0	0	1	1	0	0
-Sepunavirus	1	0	0	1	0	0	0	0	0	0
-Serpentinomonas	0	0	0	0	1	1	0	0	0	0
-Serratia	0	1	0	0	0	0	0	0	1	0
-Sesamum	1	0	1	0	0	0	0	0	0	0
-Setaria	0	1	0	0	0	0	1	0	0	0
-Spiroplasma	0	0	1	1	0	0	0	0	0	0
-Spirosoma	0	0	0	0	0	0	0	0	0	2
-Streptobacillus	0	1	0	0	1	0	0	0	0	0
-Thauera	0	0	0	0	0	2	0	0	0	0
-Winogradskyella	0	0	0	1	0	1	0	0	0	0
-Wolbachia	0	0	0	0	0	0	0	0	2	0
-Acetoanaerobium	0	1	0	0	0	0	0	0	0	0
-Acetobacter	0	1	0	0	0	0	0	0	0	0
-Acholeplasma	0	0	0	0	0	0	1	0	0	0
-Acidianus	0	0	0	0	0	0	0	0	0	1
-Actinomadura	0	0	0	0	0	0	1	0	0	0
-Actinopolymorpha	0	0	0	0	0	0	0	0	1	0
-Actinotignum	0	0	0	0	0	0	0	0	1	0
-Alcaligenes	0	0	0	0	0	1	0	0	0	0
-Algibacter	0	0	0	0	1	0	0	0	0	0
-Alloactinosynnema	0	0	0	0	0	0	1	0	0	0
-Allofrancisella	0	1	0	0	0	0	0	0	0	0
-Altererythrobacter	0	1	0	0	0	0	0	0	0	0
-Aminipila	0	0	0	1	0	0	0	0	0	0
-Amycolatopsis	0	0	0	0	0	0	0	0	1	0
-Anabaena	0	0	0	1	0	0	0	0	0	0
-Anaerobacillus	0	0	0	0	1	0	0	0	0	0
-Anaerobutyricum	0	0	0	0	0	0	1	0	0	0
-Aneurinibacillus	0	0	0	0	0	0	0	0	1	0
-Anoxybacillus	0	0	0	0	1	0	0	0	0	0
-Anoxybacter	0	0	1	0	0	0	0	0	0	0
-Aquimarina	0	0	0	0	1	0	0	0	0	0
-Arachidicoccus	0	0	0	0	0	0	1	0	0	0
-Arcanobacterium	0	0	0	1	0	0	0	0	0	0
-Arsenophonus	0	0	0	0	1	0	0	0	0	0
-Auraticoccus	1	0	0	0	0	0	0	0	0	0
-Azospira	0	0	0	0	0	1	0	0	0	0
-Azospirillum	0	0	0	0	0	0	1	0	0	0
-Azotobacter	0	0	0	0	1	0	0	0	0	0
-Barnesiella	0	0	0	0	0	0	0	0	1	0
-Bartonella	0	0	0	0	0	0	0	1	0	0
-Bermanella	0	0	1	0	0	0	0	0	0	0
-Blastochloris	0	0	0	0	0	1	0	0	0	0
-Bordetella	0	0	0	0	0	1	0	0	0	0
-Brevibacillus	0	0	0	0	0	0	1	0	0	0
-Brevibacterium	0	1	0	0	0	0	0	0	0	0
-Brevundimonas	0	1	0	0	0	0	0	0	0	0
-Brochothrix	0	0	0	0	0	0	0	1	0	0
-Buttiauxella	0	0	0	1	0	0	0	0	0	0
-Butyricimonas	0	0	0	0	0	0	0	0	0	1
-Caldanaerobacter	0	0	0	0	0	0	0	0	1	0
-Candidatus Hamiltonella	0	0	0	0	0	0	0	1	0	0
-Candidatus Methylopumilus	0	0	0	1	0	0	0	0	0	0
-Candidatus Nitrosoglobus	0	0	0	0	0	1	0	0	0	0
-Candidatus Nitrotoga	0	0	0	1	0	0	0	0	0	0
-Candidatus Pelagibacter	0	0	0	1	0	0	0	0	0	0
-Candidatus Reidiella	0	0	0	0	1	0	0	0	0	0
-Candidatus Sulcia	0	0	0	0	0	0	0	0	0	1
-Candidatus Vampirococcus	1	0	0	0	0	0	0	0	0	0
-Caulobacter	0	0	0	0	0	1	0	0	0	0
-Cellulosimicrobium	0	0	0	0	0	1	0	0	0	0
-Chitinophaga	0	0	0	0	1	0	0	0	0	0
-Christensenella	0	0	0	0	0	1	0	0	0	0
-Chromobacterium	0	0	0	0	0	0	0	1	0	0
-Coffea	0	0	0	0	1	0	0	0	0	0
-Collinsella	0	0	0	0	1	0	0	0	0	0
-Croceibacter	0	0	0	0	1	0	0	0	0	0
-Cruoricaptor	0	1	0	0	0	0	0	0	0	0
-Cucumis	0	0	0	0	0	0	1	0	0	0
-Cytobacillus	0	0	0	0	0	0	0	1	0	0
-Dechloromonas	0	1	0	0	0	0	0	0	0	0
-Dehalobacterium	0	0	0	0	0	0	1	0	0	0
-Deinococcus	0	0	0	0	1	0	0	0	0	0
-Delftia	0	0	0	0	1	0	0	0	0	0
-Dermatophilus	0	0	0	0	0	0	0	0	1	0
-Desulfitobacterium	0	0	0	0	1	0	0	0	0	0
-Desulfococcus	0	0	0	0	0	1	0	0	0	0
-Desulfosarcina	0	1	0	0	0	0	0	0	0	0
-Desulfosporosinus	0	1	0	0	0	0	0	0	0	0
-Devosia	0	0	0	0	0	1	0	0	0	0
-Devriesea	0	0	0	0	0	0	0	0	1	0
-Dietzia	1	0	0	0	0	0	0	0	0	0
-Dolosigranulum	0	0	0	0	0	1	0	0	0	0
-Duncaniella	0	0	0	0	0	0	0	0	0	1
-Dyadobacter	0	0	0	0	1	0	0	0	0	0
-Dysgonomonas	0	0	0	1	0	0	0	0	0	0
-Eggerthella	0	1	0	0	0	0	0	0	0	0
-Emcibacter	0	0	0	0	0	1	0	0	0	0
-Enterovibrio	0	0	0	0	0	0	0	0	1	0
-Ephemeroptericola	0	0	0	0	0	0	1	0	0	0
-Escherichia	0	0	1	0	0	0	0	0	0	0
-Euzebyella	0	0	0	1	0	0	0	0	0	0
-Exiguobacterium	0	0	0	0	0	1	0	0	0	0
-Faecalibacterium	1	0	0	0	0	0	0	0	0	0
-Fastidiosipila	0	0	0	0	0	0	1	0	0	0
-Fervidobacterium	0	0	0	1	0	0	0	0	0	0
-Fibrobacter	0	0	1	0	0	0	0	0	0	0
-Fictibacillus	0	0	0	0	0	0	1	0	0	0
-Filomicrobium	0	0	0	0	0	0	0	1	0	0
-Flammeovirga	0	0	0	0	0	0	0	1	0	0
-Flavisolibacter	0	0	0	0	0	0	0	0	1	0
-Flavivirga	0	0	1	0	0	0	0	0	0	0
-Flexistipes	0	0	0	0	0	0	0	0	0	1
-Formosa	0	0	0	0	1	0	0	0	0	0
-Frankia	0	0	0	0	1	0	0	0	0	0
-Frondihabitans	0	0	0	0	0	0	1	0	0	0
-Furfurilactobacillus	0	0	0	0	1	0	0	0	0	0
-Geosporobacter	0	0	0	1	0	0	0	0	0	0
-Gilvibacter	0	0	0	0	1	0	0	0	0	0
-Gordonia	0	0	0	1	0	0	0	0	0	0
-Gottschalkia	0	0	0	0	0	0	0	0	1	0
-Hafnia	0	0	0	0	0	0	1	0	0	0
-Halanaerobium	0	0	0	0	0	0	0	1	0	0
-Halobacteriovorax	0	0	1	0	0	0	0	0	0	0
-Halomonas	0	0	0	0	0	0	0	0	1	0
-Helicobacter	0	0	1	0	0	0	0	0	0	0
-Herbaspirillum	0	0	0	0	0	0	0	1	0	0
-Herbinix	0	0	1	0	0	0	0	0	0	0
-Herminiimonas	0	1	0	0	0	0	0	0	0	0
-Hungateiclostridium	0	0	1	0	0	0	0	0	0	0
-Hydrogenophaga	0	0	0	0	0	1	0	0	0	0
-Ilyobacter	0	0	0	0	0	0	0	1	0	0
-Inhella	0	0	0	0	0	1	0	0	0	0
-Ipomoea	0	0	0	0	0	1	0	0	0	0
-Isoptericola	0	0	0	0	0	1	0	0	0	0
-Janibacter	0	0	0	0	0	0	0	0	1	0
-Jatrophihabitans	0	0	0	0	0	0	0	0	0	1
-Jeotgalicoccus	0	0	1	0	0	0	0	0	0	0
-Kangiella	0	0	0	0	0	0	0	0	1	0
-Kinneretia	1	0	0	0	0	0	0	0	0	0
-Kocuria	0	0	0	0	0	0	0	1	0	0
-Kushneria	0	0	0	0	0	0	0	0	1	0
-Lachnospira	0	0	0	0	0	0	1	0	0	0
-Lactiplantibacillus	0	0	0	0	0	0	0	1	0	0
-Leifsonia	0	0	0	0	0	1	0	0	0	0
-Lelliottia	0	0	1	0	0	0	0	0	0	0
-Leptospira	0	0	0	1	0	0	0	0	0	0
-Lichenihabitans	0	0	0	0	0	0	0	1	0	0
-Limnobaculum	0	0	0	0	0	0	0	0	0	1
-Limosilactobacillus	0	0	0	0	0	0	0	0	0	1
-Lysinibacillus	0	0	0	0	0	0	0	1	0	0
-Maribius	0	0	0	1	0	0	0	0	0	0
-Marinobacter	0	0	0	0	0	0	0	0	0	1
-Marinobacterium	0	0	0	0	0	0	0	0	0	1
-Marinomonas	0	1	0	0	0	0	0	0	0	0
-Megamonas	0	0	0	0	1	0	0	0	0	0
-Melaminivora	0	0	0	0	1	0	0	0	0	0
-Melioribacter	0	0	1	0	0	0	0	0	0	0
-Melissococcus	0	0	0	1	0	0	0	0	0	0
-Mesoplasma	0	0	0	0	0	0	0	0	0	1
-Methanobrevibacter	0	1	0	0	0	0	0	0	0	0
-Methanofervidicoccus	0	0	0	0	0	0	0	0	0	1
-Methylomonas	0	0	1	0	0	0	0	0	0	0
-Methylovulum	0	0	0	0	0	0	0	1	0	0
-Microbulbifer	0	0	0	0	0	0	0	0	0	1
-Microterricola	0	0	0	0	0	0	0	0	1	0
-Mixta	0	0	0	0	0	0	0	1	0	0
-Monoglobus	0	1	0	0	0	0	0	0	0	0
-Morganella	0	0	1	0	0	0	0	0	0	0
-Muriicola	0	0	0	0	0	1	0	0	0	0
-Mycetocola	0	0	0	0	1	0	0	0	0	0
-Myroides	0	0	0	0	0	0	0	0	1	0
-Nakamurella	0	0	0	0	0	0	0	0	0	1
-Nautilia	0	0	0	0	0	0	0	1	0	0
-Neorhizobium	0	0	0	0	1	0	0	0	0	0
-Nitrosococcus	0	0	1	0	0	0	0	0	0	0
-Nitrospirillum	1	0	0	0	0	0	0	0	0	0
-Obesumbacterium	0	0	1	0	0	0	0	0	0	0
-Oceanimonas	0	0	0	0	0	1	0	0	0	0
-Oceanispirochaeta	0	0	1	0	0	0	0	0	0	0
-Oceanobacillus	0	0	0	0	0	0	0	1	0	0
-Ochrobactrum	0	0	0	0	0	1	0	0	0	0
-Owenweeksia	0	0	1	0	0	0	0	0	0	0
-Paenisporosarcina	0	0	1	0	0	0	0	0	0	0
-Panacibacter	0	0	0	0	0	0	0	0	1	0
-Parasphingopyxis	0	1	0	0	0	0	0	0	0	0
-Pedobacter	0	0	0	1	0	0	0	0	0	0
-Pelodictyon	0	1	0	0	0	0	0	0	0	0
-Peptoniphilus	1	0	0	0	0	0	0	0	0	0
-Phenylobacterium	1	0	0	0	0	0	0	0	0	0
-Phreatobacter	1	0	0	0	0	0	0	0	0	0
-Pirellula	1	0	0	0	0	0	0	0	0	0
-Pontibacillus	0	0	0	1	0	0	0	0	0	0
-Pontibacter	0	0	0	0	0	0	0	0	1	0
-Pradoshia	0	0	1	0	0	0	0	0	0	0
-Pseudescherichia	0	0	0	0	0	0	0	1	0	0
-Pseudobutyrivibrio	0	1	0	0	0	0	0	0	0	0
-Pseudohongiella	0	1	0	0	0	0	0	0	0	0
-Pseudonocardia	0	0	0	0	1	0	0	0	0	0
-Pseudopuniceibacterium	0	0	0	0	0	0	0	0	0	1
-Psychrobacter	0	0	0	0	0	0	1	0	0	0
-Punica	0	0	0	0	0	0	0	1	0	0
-Pyrococcus	0	0	1	0	0	0	0	0	0	0
-Rahnella	1	0	0	0	0	0	0	0	0	0
-Raoultella	0	0	0	0	0	1	0	0	0	0
-Rathayibacter	0	0	0	0	0	0	0	0	1	0
-Rhizobium	0	0	0	0	0	0	0	0	1	0
-Rhizorhabdus	1	0	0	0	0	0	0	0	0	0
-Rhodococcus	0	0	0	0	0	0	0	0	0	1
-Rhodothermus	0	0	1	0	0	0	0	0	0	0
-Rivularia	1	0	0	0	0	0	0	0	0	0
-Roseburia	0	0	0	0	0	0	0	0	1	0
-Roseimicrobium	0	0	0	0	0	0	0	0	0	1
-Rosenblumvirus	0	0	1	0	0	0	0	0	0	0
-Roseococcus	0	0	0	0	0	0	0	0	1	0
-Roseolovirus	0	0	0	0	0	0	0	1	0	0
-Rubrobacter	0	0	0	0	0	1	0	0	0	0
-Salegentibacter	0	0	0	0	0	0	0	0	0	1
-Salinibacterium	0	0	0	0	0	0	0	0	1	0
-Salinimonas	0	0	0	0	1	0	0	0	0	0
-Salipiger	0	1	0	0	0	0	0	0	0	0
-Sanguibacter	0	0	0	0	0	0	0	0	1	0
-Scandinavium	0	0	0	0	0	0	0	0	0	1
-Sebaldella	0	0	0	0	0	0	0	1	0	0
-Siansivirga	0	1	0	0	0	0	0	0	0	0
-Simplicispira	0	0	1	0	0	0	0	0	0	0
-Sinorhizobium	1	0	0	0	0	0	0	0	0	0
-Sneathia	0	0	0	1	0	0	0	0	0	0
-Snodgrassella	0	1	0	0	0	0	0	0	0	0
-Sodalis	0	1	0	0	0	0	0	0	0	0
-Solimonas	0	0	0	0	0	0	0	0	0	1
-Sphaerobacter	0	0	0	0	0	0	0	0	0	1
-Sphaerochaeta	0	0	0	0	0	0	0	0	0	1
-Sphaerotilus	0	0	0	0	0	0	0	1	0	0
-Sphingobacterium	0	0	0	0	0	0	0	0	1	0
-Sphingorhabdus	1	0	0	0	0	0	0	0	0	0
-Sphingosinicella	1	0	0	0	0	0	0	0	0	0
-Sphingosinithalassobacter	1	0	0	0	0	0	0	0	0	0
-Spiribacter	0	0	0	0	0	0	0	0	1	0
-Stanieria	0	1	0	0	0	0	0	0	0	0
-Stigmatella	0	0	0	0	1	0	0	0	0	0
-Sulfitobacter	0	1	0	0	0	0	0	0	0	0
-Sulfuriferula	0	0	0	1	0	0	0	0	0	0
-Sulfurimonas	0	0	1	0	0	0	0	0	0	0
-Sulfurivermis	1	0	0	0	0	0	0	0	0	0
-Synechococcus	0	1	0	0	0	0	0	0	0	0
-Tatumella	0	0	1	0	0	0	0	0	0	0
-Tepidanaerobacter	0	0	0	0	0	0	0	0	1	0
-Thermacetogenium	0	0	1	0	0	0	0	0	0	0
-Thermoactinomyces	0	0	0	1	0	0	0	0	0	0
-Thermobifida	0	0	0	0	0	0	0	0	1	0
-Thermococcus	0	0	1	0	0	0	0	0	0	0
-Thermomicrobium	0	0	0	0	0	1	0	0	0	0
-Thermomonas	0	0	0	0	0	1	0	0	0	0
-Thermosipho	0	0	1	0	0	0	0	0	0	0
-Thiomonas	0	0	0	0	1	0	0	0	0	0
-Ureibacillus	0	0	0	0	0	0	0	0	0	1
-Virgibacillus	0	0	0	0	0	0	1	0	0	0
-Viridibacillus	0	0	0	0	0	0	0	0	0	1
-Vitreoscilla	0	0	0	0	1	0	0	0	0	0
-Zea	1	0	0	0	0	0	0	0	0	0
-Zobellella	0	0	0	0	0	0	0	0	0	1
-Zunongwangia	0	0	0	0	1	0	0	0	0	0
-Zymobacter	1	0	0	0	0	0	0	0	0	0
-Alkaliphilus	0	0	0	0	0	0	0	0	0	0
-Amniculibacterium	0	0	0	0	0	0	0	0	0	0
-Asticcacaulis	0	0	0	0	0	0	0	0	0	0
-Aureimonas	0	0	0	0	0	0	0	0	0	0
-Beggiatoa	0	0	0	0	0	0	0	0	0	0
-Brachypodium	0	0	0	0	0	0	0	0	0	0
-Caminibacter	0	0	0	0	0	0	0	0	0	0
-Cellulophaga	0	0	0	0	0	0	0	0	0	0
-Chromohalobacter	0	0	0	0	0	0	0	0	0	0
-Citromicrobium	0	0	0	0	0	0	0	0	0	0
-Cuniculiplasma	0	0	0	0	0	0	0	0	0	0
-Desulfallas	0	0	0	0	0	0	0	0	0	0
-Desulfofarcimen	0	0	0	0	0	0	0	0	0	0
-Duganella	0	0	0	0	0	0	0	0	0	0
-Ensifer	0	0	0	0	0	0	0	0	0	0
-Erysipelothrix	0	0	0	0	0	0	0	0	0	0
-Erythrobacter	0	0	0	0	0	0	0	0	0	0
-Eubacterium	0	0	0	0	0	0	0	0	0	0
-Euzebya	0	0	0	0	0	0	0	0	0	0
-Gallaecimonas	0	0	0	0	0	0	0	0	0	0
-Heliobacterium	0	0	0	0	0	0	0	0	0	0
-Hymenobacter	0	0	0	0	0	0	0	0	0	0
-Hyphomicrobium	0	0	0	0	0	0	0	0	0	0
-Intrasporangium	0	0	0	0	0	0	0	0	0	0
-Kordia	0	0	0	0	0	0	0	0	0	0
-Labrys	0	0	0	0	0	0	0	0	0	0
-Luteimicrobium	0	0	0	0	0	0	0	0	0	0
-Magnetospirillum	0	0	0	0	0	0	0	0	0	0
-Martelella	0	0	0	0	0	0	0	0	0	0
-Mesorhizobium	0	0	0	0	0	0	0	0	0	0
-Methylorubrum	0	0	0	0	0	0	0	0	0	0
-Nostoc	0	0	0	0	0	0	0	0	0	0
-Novosphingopyxis	0	0	0	0	0	0	0	0	0	0
-Paraclostridium	0	0	0	0	0	0	0	0	0	0
-Paraliobacillus	0	0	0	0	0	0	0	0	0	0
-Pelagibaca	0	0	0	0	0	0	0	0	0	0
-Pseudoxanthomonas	0	0	0	0	0	0	0	0	0	0
-Qipengyuania	0	0	0	0	0	0	0	0	0	0
-Ramlibacter	0	0	0	0	0	0	0	0	0	0
-Rhodobacter	0	0	0	0	0	0	0	0	0	0
-Rickettsia	0	0	0	0	0	0	0	0	0	0
-Romboutsia	0	0	0	0	0	0	0	0	0	0
-Sandaracinobacter	0	0	0	0	0	0	0	0	0	0
-Scardovia	0	0	0	0	0	0	0	0	0	0
-Schlegelella	0	0	0	0	0	0	0	0	0	0
-Sorghum	0	0	0	0	0	0	0	0	0	0
-Spirochaeta	0	0	0	0	0	0	0	0	0	0
-Steroidobacter	0	0	0	0	0	0	0	0	0	0
-Tabrizicola	0	0	0	0	0	0	0	0	0	0
-Tardibacter	0	0	0	0	0	0	0	0	0	0
-Thermoanaerobacter	0	0	0	0	0	0	0	0	0	0
-Thermoanaerobacterium	0	0	0	0	0	0	0	0	0	0
-Wphvirus	0	0	0	0	0	0	0	0	0	0
+Genus	C1	C2	C3	C4	C5	C6	N1	N2	N3	N4	N5	N6
+Haemophilus	12	953	965	3808	237	2529	130	620	2066	7829	7230	2101
+Fusobacterium	6700	95	2218	1915	6396	796	1457	159	1130	1599	1187	2232
+Prevotella	1415	647	701	406	352	15645	1745	927	151	215	452	1591
+Neisseria	111	401	702	4679	16	291	782	646	4270	4807	2561	1061
+Streptococcus	134	554	769	1399	288	717	3216	1126	3374	2825	1367	1999
+Capnocytophaga	6789	8	231	138	3469	38	2763	91	217	160	420	982
+Rothia	3	49	106	1210	6	129	138	410	2474	1480	7541	350
+Veillonella	82	246	196	803	15	4102	226	1121	804	447	1915	2811
+Gemella	872	70	445	1361	437	140	501	51	2810	3605	404	234
+Homo	71	2450	2958	537	44	11	785	2099	199	118	43	30
+Leptotrichia	366	60	651	169	1919	581	390	138	316	127	224	1238
+Aggregatibacter	213	18	6	29	3608	39	230	53	18	39	104	234
+Campylobacter	379	65	199	144	652	1300	237	90	35	114	145	486
+Tannerella	89	44	76	12	16	141	255	359	45	12	17	2251
+Sphingomonas	8	2202	518	325	0	0	1	1	0	0	1	1
+Corynebacterium	1	126	3	0	1	25	4	1590	1	2	8	1272
+Pseudopropionibacterium	0	33	18	0	0	2	10	1071	18	1	0	90
+Actinomyces	7	105	13	3	13	12	204	401	71	6	78	285
+Lautropia	0	24	25	0	3	0	57	686	97	0	26	133
+Treponema	2	3	6	7	1	70	41	8	1	1	1	802
+Selenomonas	5	9	9	1	0	271	82	2	3	0	4	533
+Filifactor	833	0	0	0	0	1	22	16	3	2	1	7
+Schaalia	2	3	8	16	0	6	76	11	246	13	418	54
+Lachnoanaerobaculum	42	1	25	133	333	21	33	1	71	55	8	24
+Toxoplasma	3	164	193	46	1	4	49	149	10	10	2	2
+Eikenella	280	5	33	7	0	5	54	37	39	6	21	20
+Parvimonas	235	7	3	4	8	7	121	21	6	0	5	10
+Staphylococcus	1	6	179	6	3	0	95	76	5	1	1	0
+Cardiobacterium	0	13	0	0	0	2	0	244	12	0	20	44
+Mogibacterium	18	4	3	13	0	70	115	27	12	1	5	5
+Abiotrophia	3	0	53	0	0	0	88	0	60	1	1	9
+Capsicum	4	44	63	7	3	1	31	42	3	5	1	1
+Ottowia	59	1	3	0	0	0	133	1	6	0	0	0
+Porphyromonas	37	49	1	8	10	24	26	3	4	4	3	16
+Croceicoccus	0	125	37	20	0	0	0	0	0	0	0	0
+Cloacibacterium	1	40	5	7	1	0	16	74	10	3	3	1
+Acinetobacter	0	17	6	3	3	0	88	13	5	6	1	1
+Lancefieldella	36	2	1	0	0	18	27	33	0	1	5	6
+Pseudomonas	0	9	57	1	1	2	4	23	2	1	3	1
+Mannheimia	0	12	0	22	5	4	0	1	2	48	3	3
+Olsenella	0	0	0	0	0	1	10	0	1	0	0	88
+Lactococcus	0	0	85	0	4	0	0	0	2	2	2	0
+Sphingobium	0	70	14	7	0	0	1	2	0	0	0	0
+Cutibacterium	0	20	24	18	0	0	15	10	1	0	1	2
+Actinobacillus	0	15	0	5	12	0	0	1	3	29	5	2
+Rodentibacter	1	3	1	5	14	4	0	3	1	22	16	1
+Triticum	0	44	2	3	1	5	2	1	3	4	1	3
+Pauljensenia	0	0	0	1	0	0	4	0	0	0	5	53
+Pasteurella	1	4	2	10	5	1	0	0	1	15	18	3
+Acidovorax	0	13	2	0	0	0	7	26	9	1	1	0
+Dialister	12	1	0	0	15	2	2	0	1	0	2	24
+Bacteroides	12	3	2	3	5	11	3	0	0	0	1	14
+Porphyrobacter	0	40	7	6	0	0	0	0	0	0	0	0
+Pseudoleptotrichia	19	1	1	1	6	0	0	0	1	5	3	15
+Kingella	0	1	4	1	0	4	0	1	6	2	15	14
+Mycoplasma	2	1	2	1	0	0	15	0	1	0	7	17
+Glaesserella	0	6	1	4	0	4	0	0	4	15	6	0
+Candidatus Nanosynbacter	0	0	0	0	0	1	11	1	0	1	3	16
+Oryza	1	7	7	1	3	0	5	4	1	0	0	2
+Diaphorobacter	0	7	5	1	0	0	1	11	3	1	1	0
+Bacillus	1	2	1	5	3	3	1	1	6	1	3	0
+Chryseobacterium	1	2	1	5	4	0	0	3	4	4	1	0
+Histophilus	0	3	0	3	3	3	1	2	1	3	1	3
+Moraxella	0	4	0	3	0	2	0	11	2	1	0	0
+Pantoea	0	0	0	19	0	1	0	1	1	0	1	0
+unclassified	2	0	1	2	2	1	4	0	5	2	2	2
+Avibacterium	0	0	0	2	11	0	0	0	1	4	1	3
+Juglans	0	6	5	1	0	0	4	6	0	0	0	0
+Clostridium	4	1	1	1	3	1	1	0	3	2	0	3
+Vibrio	0	0	1	7	1	1	0	0	1	2	4	2
+Bibersteinia	0	1	0	6	1	0	1	0	0	9	0	0
+Pseudoalteromonas	1	2	0	1	4	2	0	0	1	5	2	0
+Sphingopyxis	0	10	4	1	0	0	1	1	0	1	0	0
+Frederiksenia	0	2	0	2	1	0	0	3	1	6	1	1
+Helianthus	1	1	3	0	4	1	0	3	2	2	0	0
+Nicotiana	1	0	0	0	3	0	9	2	1	0	1	0
+Ralstonia	0	1	1	0	0	0	0	13	2	0	0	0
+Streptomyces	0	7	2	2	0	0	0	2	1	0	1	2
+Gossypium	2	2	0	0	3	2	0	3	2	1	0	1
+Lactobacillus	2	0	1	0	1	2	3	0	3	1	1	2
+Manihot	0	6	3	3	1	0	0	0	1	1	0	1
+Bergeyella	3	0	2	2	1	0	1	1	2	2	0	0
+Enterococcus	1	0	0	4	1	0	2	0	3	2	1	0
+Flavobacterium	1	2	0	0	3	1	4	0	0	0	0	3
+Otariodibacter	0	1	0	1	4	0	1	0	0	4	1	2
+Providencia	0	0	0	3	1	1	0	1	1	5	0	2
+Simonsiella	0	0	1	3	0	0	0	0	1	0	8	1
+Bifidobacterium	1	0	0	0	0	0	11	0	1	0	0	0
+Novosphingobium	0	5	1	3	0	0	0	1	0	3	0	0
+Alistipes	4	0	2	1	2	1	1	0	0	1	0	0
+Altererythrobacter	0	11	0	1	0	0	0	0	0	0	0	0
+Comamonas	0	4	0	1	0	0	5	1	1	0	0	0
+Cupriavidus	0	4	0	1	0	0	0	3	1	1	2	0
+Shewanella	0	0	0	1	2	0	1	0	1	1	4	2
+Bradyrhizobium	0	6	1	0	0	0	0	3	0	0	0	1
+Paenibacillus	1	0	0	0	1	4	1	1	2	1	0	0
+Papaver	1	0	1	1	4	0	2	0	1	0	0	1
+Physcomitrium	0	3	1	2	0	0	1	1	3	0	0	0
+Xanthomonas	0	3	1	0	0	0	3	1	1	1	1	0
+Burkholderia	0	2	0	0	0	0	2	5	0	1	0	0
+Cucurbita	1	0	3	2	0	0	0	3	0	1	0	0
+Lachnoclostridium	0	0	1	1	1	1	2	1	2	0	1	0
+Lupinus	2	0	2	0	0	0	3	2	0	0	0	1
+Quercus	1	1	3	1	0	0	0	1	2	0	1	0
+Vigna	1	0	2	0	1	1	0	1	1	1	1	1
+Aeromonas	0	4	0	0	0	1	0	0	0	4	0	0
+Alloprevotella	4	0	0	1	0	1	1	0	0	0	0	2
+Bisgaardia	0	0	0	0	2	1	0	3	0	0	2	1
+Musa	2	0	4	0	1	0	0	1	1	0	0	0
+Photobacterium	1	0	0	0	6	0	0	0	0	2	0	0
+Rhodoferax	1	2	1	0	0	0	0	3	0	0	0	2
+Sphingosinithalassobacter	0	8	1	0	0	0	0	0	0	0	0	0
+Aquabacterium	0	2	3	0	0	0	0	2	1	0	0	0
+Asparagus	2	0	1	1	0	1	0	1	0	1	0	1
+Enterobacter	0	2	0	0	0	0	0	2	0	2	1	1
+Janthinobacterium	0	1	0	3	0	0	0	2	1	0	1	0
+Nymphaea	2	0	2	0	0	0	0	0	0	1	2	1
+Plasmodium	2	2	2	0	0	0	1	0	0	0	1	0
+Solanum	0	1	3	0	1	0	1	2	0	0	0	0
+Stenotrophomonas	0	1	0	1	0	0	0	6	0	0	0	0
+Chitinibacter	0	2	1	1	0	0	1	2	0	0	0	0
+Colwellia	0	0	0	0	0	1	0	0	1	3	1	1
+Enterocloster	0	0	0	0	0	0	2	2	3	0	0	0
+Erythrobacter	0	7	0	0	0	0	0	0	0	0	0	0
+Klebsiella	0	2	1	0	1	0	1	0	1	1	0	0
+Malus	2	0	0	0	0	1	1	0	1	1	0	1
+Odoribacter	1	1	0	0	0	2	0	0	0	0	0	3
+Populus	0	2	1	1	0	0	1	0	0	2	0	0
+Proteus	0	0	1	1	2	0	0	0	0	2	0	1
+Yersinia	0	0	0	1	2	0	0	0	0	1	3	0
+Alteromonas	0	0	0	2	0	0	0	0	0	3	1	0
+Ananas	0	0	1	0	0	0	5	0	0	0	0	0
+Cajanus	0	2	1	0	0	0	0	2	1	0	0	0
+Cynara	0	0	0	0	1	0	3	1	0	0	0	1
+Elaeis	3	0	0	1	1	0	0	1	0	0	0	0
+Francisella	0	0	0	0	0	0	0	1	1	0	3	1
+Mycolicibacterium	0	2	0	0	0	0	1	0	0	0	1	2
+Phaseolus	1	0	0	1	0	1	0	2	0	0	0	1
+Variovorax	0	2	0	1	0	0	0	3	0	0	0	0
+Xenorhabdus	0	0	0	1	2	0	1	0	0	1	0	1
+Aerococcus	0	0	0	0	0	0	0	0	4	1	0	0
+Alicycliphilus	0	3	0	0	0	0	0	1	0	0	1	0
+Anaerococcus	0	0	2	0	0	0	1	2	0	0	0	0
+Bernardetia	2	0	0	1	1	0	0	0	1	0	0	0
+Beta	0	0	0	0	3	1	1	0	0	0	0	0
+Camelina	1	2	0	0	0	0	1	0	1	0	0	0
+Clostridioides	2	1	1	0	0	0	1	0	0	0	0	0
+Collimonas	0	2	1	0	0	0	1	1	0	0	0	0
+Finegoldia	3	0	0	0	1	0	0	1	0	0	0	0
+Gallibacterium	0	1	0	0	1	1	0	1	0	0	1	0
+Gilliamella	0	1	0	0	0	0	0	0	0	3	1	0
+Granulibacter	0	2	1	1	0	0	0	0	0	0	0	1
+Paraburkholderia	0	0	1	0	0	0	0	4	0	0	0	0
+Parashewanella	0	0	0	3	0	0	0	0	0	1	1	0
+Peptacetobacter	3	0	0	0	0	0	0	0	1	1	0	0
+Planobacterium	0	1	0	0	0	0	0	4	0	0	0	0
+Pragia	0	0	0	2	0	0	0	0	0	0	2	1
+Pulveribacter	0	3	0	0	0	0	0	2	0	0	0	0
+Raoultella	0	4	0	0	0	0	0	1	0	0	0	0
+Riemerella	1	0	0	0	2	0	0	0	0	1	1	0
+Thalassotalea	0	1	0	2	0	1	0	0	0	0	1	0
+Vagococcus	0	0	1	2	0	0	0	0	0	2	0	0
+Vitis	2	0	1	0	1	1	0	0	0	0	0	0
+Advenella	0	0	1	0	0	0	0	1	0	2	0	0
+Azospirillum	0	3	0	0	0	0	0	0	1	0	0	0
+Bordetella	0	3	0	0	0	0	0	1	0	0	0	0
+Buchnera	1	1	0	0	2	0	0	0	0	0	0	0
+Cannabis	0	0	0	0	1	0	1	0	0	0	1	1
+Carnobacterium	0	0	0	1	2	0	0	0	0	0	0	1
+Caulobacter	0	3	0	0	0	0	0	1	0	0	0	0
+Cicer	2	0	1	0	1	0	0	0	0	0	0	0
+Dickeya	0	0	0	1	0	0	0	0	0	3	0	0
+Elizabethkingia	0	1	0	0	0	0	1	2	0	0	0	0
+Epilithonimonas	0	0	1	1	0	0	0	2	0	0	0	0
+Erysipelatoclostridium	0	0	0	2	0	0	0	0	0	0	0	2
+Formosa	2	1	0	0	0	0	1	0	0	0	0	0
+Gramella	0	0	0	1	0	0	1	0	0	0	2	0
+Hymenobacter	1	3	0	0	0	0	0	0	0	0	0	0
+Idiomarina	0	0	0	0	1	0	0	0	0	1	0	2
+Jeotgalibaca	0	0	0	0	2	0	1	0	1	0	0	0
+Lacticaseibacillus	0	0	2	0	0	0	1	1	0	0	0	0
+Laribacter	0	0	0	0	0	0	1	3	0	0	0	0
+Leclercia	0	1	0	0	0	0	0	1	0	0	0	2
+Macrococcus	0	0	1	0	0	0	0	1	2	0	0	0
+Mageeibacillus	1	0	0	0	0	1	2	0	0	0	0	0
+Medicago	0	1	0	2	1	0	0	0	0	0	0	0
+Methylophilus	0	0	0	1	0	0	0	1	0	1	1	0
+Microbacterium	0	2	0	0	0	1	1	0	0	0	0	0
+Micromonospora	0	1	1	0	0	0	0	0	0	0	0	2
+Olea	0	0	0	0	2	1	0	0	0	0	0	1
+Paludibacter	1	0	0	0	0	0	1	1	0	1	0	0
+Paracoccus	0	0	2	0	1	0	1	0	0	0	0	0
+Paraprevotella	1	0	0	0	1	0	2	0	0	0	0	0
+Pediococcus	1	0	0	0	1	0	1	0	1	0	0	0
+Phocaeicola	1	0	0	1	0	0	0	0	0	1	0	1
+Photorhabdus	0	0	1	0	0	0	0	1	0	1	1	0
+Polaribacter	0	0	0	0	0	0	2	0	0	2	0	0
+Rheinheimera	0	2	0	1	0	0	0	0	0	1	0	0
+Rosa	0	1	2	1	0	0	0	0	0	0	0	0
+Sagittula	0	2	2	0	0	0	0	0	0	0	0	0
+Salmonella	0	0	0	0	0	1	0	0	1	1	1	0
+Shimwellia	0	0	0	1	0	0	0	0	2	0	1	0
+Sphingorhabdus	0	3	1	0	0	0	0	0	0	0	0	0
+Trueperella	0	0	0	0	0	0	0	0	1	0	3	0
+Acetoanaerobium	2	0	0	1	0	0	0	0	0	0	0	0
+Alysiella	0	0	0	2	0	0	0	0	0	1	0	0
+Anaerostipes	0	0	0	0	0	0	0	1	2	0	0	0
+Arachis	0	0	1	0	1	0	0	0	0	0	0	1
+Arthrobacter	0	0	0	1	0	0	0	1	0	0	1	0
+Basfia	0	0	0	0	1	1	0	0	0	0	1	0
+Blastomonas	0	0	2	1	0	0	0	0	0	0	0	0
+Blautia	1	0	0	0	0	0	0	0	1	1	0	0
+Brassica	1	0	1	0	0	0	0	1	0	0	0	0
+Caloranaerobacter	0	0	0	0	2	0	0	0	0	1	0	0
+Cellulomonas	0	1	0	0	0	0	0	2	0	0	0	0
+Citrus	0	0	2	0	0	0	0	0	1	0	0	0
+Cronobacter	0	0	0	0	0	0	0	0	0	2	1	0
+Daucus	0	0	1	0	0	0	0	0	2	0	0	0
+Deinococcus	2	0	0	0	0	0	1	0	0	0	0	0
+Ezakiella	0	1	0	1	0	0	0	0	0	1	0	0
+Fibrella	1	0	0	0	0	0	1	0	0	0	0	1
+Hydrogenovibrio	0	0	0	0	0	0	0	0	0	0	3	0
+Kosakonia	0	0	0	0	0	0	0	0	0	3	0	0
+Lacrimispora	0	0	0	0	1	0	0	0	1	0	0	1
+Leucobacter	0	0	0	0	0	0	0	0	1	0	1	1
+Ligilactobacillus	0	0	0	0	0	0	0	0	2	0	1	0
+Martelella	0	3	0	0	0	0	0	0	0	0	0	0
+Massilia	0	1	0	0	0	0	0	1	0	1	0	0
+Mesorhizobium	0	3	0	0	0	0	0	0	0	0	0	0
+Methylobacterium	0	1	1	0	0	0	0	0	1	0	0	0
+Micrococcus	0	0	1	1	0	0	0	0	0	0	1	0
+Murdochiella	1	0	0	0	0	1	0	0	1	0	0	0
+Polynucleobacter	1	0	0	0	1	0	1	0	0	0	0	0
+Rathayibacter	0	2	0	0	0	0	0	0	0	0	1	0
+Rhizorhabdus	0	2	1	0	0	0	0	0	0	0	0	0
+Rosenblumvirus	0	2	0	0	1	0	0	0	0	0	0	0
+Spiroplasma	1	0	0	0	1	1	0	0	0	0	0	0
+Sporosarcina	0	0	0	0	0	0	0	0	1	2	0	0
+Theobroma	0	0	0	0	1	0	1	1	0	0	0	0
+Vespertiliibacter	0	0	0	0	0	0	0	0	0	1	2	0
+Weissella	0	0	1	0	0	0	0	0	2	0	0	0
+Ziziphus	0	0	1	0	0	0	1	0	1	0	0	0
+Acholeplasma	1	0	0	0	0	0	0	0	1	0	0	0
+Achromobacter	0	0	0	0	0	0	0	1	1	0	0	0
+Actinoplanes	0	0	0	0	1	0	0	0	0	0	1	0
+Agrobacterium	0	0	0	0	0	0	0	1	0	0	1	0
+Aliivibrio	0	0	0	0	0	1	0	0	0	0	1	0
+Alkalihalobacillus	0	0	0	0	0	0	0	0	2	0	0	0
+Allochromatium	0	0	0	0	2	0	0	0	0	0	0	0
+Amycolatopsis	0	1	0	0	0	0	0	0	0	0	1	0
+Anaerocolumna	0	0	0	0	1	0	0	0	0	1	0	0
+Anoxybacter	1	0	0	0	1	0	0	0	0	0	0	0
+Aquisphaera	0	0	0	0	2	0	0	0	0	0	0	0
+Arcobacter	0	0	0	0	0	1	0	0	1	0	0	0
+Arsenophonus	0	1	0	0	0	0	1	0	0	0	0	0
+Austwickia	0	0	0	0	0	0	0	0	1	0	1	0
+Babesia	0	0	0	0	1	0	0	0	0	0	1	0
+Blattabacterium	0	0	0	1	0	0	1	0	0	0	0	0
+Bosea	0	0	0	0	0	0	0	2	0	0	0	0
+Brachybacterium	0	0	0	0	0	0	0	1	0	0	0	1
+Brevundimonas	0	1	0	1	0	0	0	0	0	0	0	0
+Butyrivibrio	0	0	0	1	0	0	1	0	0	0	0	0
+Calothrix	0	0	0	0	0	0	0	0	0	1	1	0
+Candidatus Saccharimonas	0	0	0	0	0	0	2	0	0	0	0	0
+Cedecea	0	0	0	0	0	1	0	0	1	0	0	0
+Celeribacter	0	0	1	0	0	0	0	0	1	0	0	0
+Cellulophaga	2	0	0	0	0	0	0	0	0	0	0	0
+Cellvibrio	0	0	1	1	0	0	0	0	0	0	0	0
+Cepunavirus	0	0	0	0	1	0	0	0	0	1	0	0
+Chromobacterium	0	1	0	0	0	0	0	0	0	1	0	0
+Citrobacter	0	0	0	0	1	0	0	0	0	0	1	0
+Conchiformibius	0	0	0	0	0	0	0	1	0	1	0	0
+Cyclobacterium	0	0	0	0	1	0	0	0	0	1	0	0
+Empedobacter	0	0	0	0	0	0	0	1	0	0	1	0
+Escherichia	0	1	0	0	1	0	0	0	0	0	0	0
+Euzebyella	1	0	0	0	0	1	0	0	0	0	0	0
+Fastidiosipila	1	0	0	0	0	0	0	0	1	0	0	0
+Fervidobacterium	1	0	0	0	0	1	0	0	0	0	0	0
+Fictibacillus	0	1	0	0	0	0	0	0	1	0	0	0
+Flammeovirga	0	1	0	0	0	0	0	0	0	1	0	0
+Gallaecimonas	0	2	0	0	0	0	0	0	0	0	0	0
+Geitlerinema	0	0	0	1	0	0	0	1	0	0	0	0
+Georgenia	0	0	1	0	0	0	0	0	0	0	1	0
+Geosporobacter	1	0	0	0	0	1	0	0	0	0	0	0
+Glycine	0	0	0	0	0	0	0	0	0	1	0	1
+Haloactinobacterium	0	0	0	0	0	0	0	1	0	0	1	0
+Halobacillus	0	0	0	1	0	1	0	0	0	0	0	0
+Halomonas	0	1	0	0	0	0	0	0	0	0	1	0
+Kaistella	0	0	0	0	0	0	0	0	0	1	0	1
+Kluyvera	0	0	1	0	0	0	0	1	0	0	0	0
+Kushneria	0	1	0	0	0	0	0	0	0	0	1	0
+Legionella	0	0	0	0	0	0	0	1	1	0	0	0
+Leifsonia	0	1	0	0	0	0	0	1	0	0	0	0
+Leuconostoc	0	0	2	0	0	0	0	0	0	0	0	0
+Limnohabitans	0	0	0	1	0	0	0	0	1	0	0	0
+Limosilactobacillus	1	0	0	0	0	0	0	0	0	0	0	1
+Micropruina	0	0	0	0	0	0	0	2	0	0	0	0
+Mixta	0	1	0	0	0	0	0	0	0	1	0	0
+Mucilaginibacter	0	0	0	0	2	0	0	0	0	0	0	0
+Muribaculum	0	0	0	0	0	1	1	0	0	0	0	0
+Mycobacterium	0	0	0	0	0	0	0	0	0	0	1	1
+Neorhizobium	0	1	0	0	0	0	1	0	0	0	0	0
+Niabella	0	0	0	0	0	0	0	0	0	0	0	2
+Nocardioides	0	0	1	0	0	0	0	0	0	0	1	0
+Nonlabens	0	0	0	0	0	1	1	0	0	0	0	0
+Novosphingopyxis	0	2	0	0	0	0	0	0	0	0	0	0
+Oleispira	0	0	0	0	0	0	0	0	0	2	0	0
+Orbus	0	0	0	0	0	0	0	0	0	2	0	0
+Ornithobacterium	0	0	0	0	1	0	0	0	0	1	0	0
+Oscillibacter	0	0	0	1	0	0	0	0	1	0	0	0
+Pandoraea	0	0	0	0	0	0	0	1	1	0	0	0
+Parolsenella	0	0	0	0	0	0	1	0	0	0	1	0
+Pectobacterium	0	0	0	0	0	0	0	0	0	1	1	0
+Phaeobacter	0	0	0	0	0	0	0	0	0	0	1	1
+Phreatobacter	0	1	1	0	0	0	0	0	0	0	0	0
+Planococcus	0	0	0	0	0	1	1	0	0	0	0	0
+Plesiomonas	0	0	0	0	2	0	0	0	0	0	0	0
+Pradoshia	1	0	0	0	1	0	0	0	0	0	0	0
+Prunus	0	0	1	0	0	0	0	0	0	1	0	0
+Psychrobacillus	0	0	0	0	1	0	0	0	0	0	0	1
+Psychrobacter	0	1	0	0	0	0	0	0	1	0	0	0
+Salegentibacter	1	0	0	0	0	0	0	0	0	0	0	1
+Salinicoccus	0	0	0	0	0	0	0	0	1	1	0	0
+Sepunavirus	0	0	1	0	0	1	0	0	0	0	0	0
+Serpentinomonas	0	0	0	0	0	0	1	1	0	0	0	0
+Serratia	0	0	0	1	0	0	0	0	0	0	1	0
+Sesamum	0	0	1	0	1	0	0	0	0	0	0	0
+Setaria	0	0	0	1	0	0	0	0	1	0	0	0
+Sinorhizobium	0	1	1	0	0	0	0	0	0	0	0	0
+Sphingobacterium	1	0	0	0	0	0	0	0	0	0	1	0
+Sphingosinicella	0	1	1	0	0	0	0	0	0	0	0	0
+Spiribacter	0	1	0	0	0	0	0	0	0	0	1	0
+Spirosoma	0	0	0	0	0	0	0	0	0	0	0	2
+Streptobacillus	0	0	0	1	0	0	1	0	0	0	0	0
+Sulfurimonas	0	1	0	0	1	0	0	0	0	0	0	0
+Synechococcus	1	0	0	1	0	0	0	0	0	0	0	0
+Thauera	0	0	0	0	0	0	0	2	0	0	0	0
+Thiomonas	0	1	0	0	0	0	1	0	0	0	0	0
+Virgibacillus	1	0	0	0	0	0	0	0	1	0	0	0
+Winogradskyella	0	0	0	0	0	1	0	1	0	0	0	0
+Wolbachia	0	0	0	0	0	0	0	0	0	0	2	0
+Acetobacter	0	0	0	1	0	0	0	0	0	0	0	0
+Acidianus	0	0	0	0	0	0	0	0	0	0	0	1
+Actinomadura	0	0	0	0	0	0	0	0	1	0	0	0
+Actinopolymorpha	0	0	0	0	0	0	0	0	0	0	1	0
+Actinotignum	0	0	0	0	0	0	0	0	0	0	1	0
+Alcaligenes	0	0	0	0	0	0	0	1	0	0	0	0
+Algibacter	0	0	0	0	0	0	1	0	0	0	0	0
+Alkaliphilus	1	0	0	0	0	0	0	0	0	0	0	0
+Alloactinosynnema	0	0	0	0	0	0	0	0	1	0	0	0
+Allofrancisella	0	0	0	1	0	0	0	0	0	0	0	0
+Aminipila	0	0	0	0	0	1	0	0	0	0	0	0
+Amniculibacterium	0	1	0	0	0	0	0	0	0	0	0	0
+Anabaena	0	0	0	0	0	1	0	0	0	0	0	0
+Anaerobacillus	0	0	0	0	0	0	1	0	0	0	0	0
+Anaerobutyricum	0	0	0	0	0	0	0	0	1	0	0	0
+Aneurinibacillus	0	0	0	0	0	0	0	0	0	0	1	0
+Anoxybacillus	0	0	0	0	0	0	1	0	0	0	0	0
+Aquimarina	0	0	0	0	0	0	1	0	0	0	0	0
+Arachidicoccus	0	0	0	0	0	0	0	0	1	0	0	0
+Arcanobacterium	0	0	0	0	0	1	0	0	0	0	0	0
+Asticcacaulis	0	1	0	0	0	0	0	0	0	0	0	0
+Auraticoccus	0	0	1	0	0	0	0	0	0	0	0	0
+Aureimonas	0	1	0	0	0	0	0	0	0	0	0	0
+Azospira	0	0	0	0	0	0	0	1	0	0	0	0
+Azotobacter	0	0	0	0	0	0	1	0	0	0	0	0
+Barnesiella	0	0	0	0	0	0	0	0	0	0	1	0
+Bartonella	0	0	0	0	0	0	0	0	0	1	0	0
+Beggiatoa	1	0	0	0	0	0	0	0	0	0	0	0
+Bermanella	0	0	0	0	1	0	0	0	0	0	0	0
+Blastochloris	0	0	0	0	0	0	0	1	0	0	0	0
+Brachypodium	1	0	0	0	0	0	0	0	0	0	0	0
+Brevibacillus	0	0	0	0	0	0	0	0	1	0	0	0
+Brevibacterium	0	0	0	1	0	0	0	0	0	0	0	0
+Brochothrix	0	0	0	0	0	0	0	0	0	1	0	0
+Buttiauxella	0	0	0	0	0	1	0	0	0	0	0	0
+Butyricimonas	0	0	0	0	0	0	0	0	0	0	0	1
+Caldanaerobacter	0	0	0	0	0	0	0	0	0	0	1	0
+Caminibacter	1	0	0	0	0	0	0	0	0	0	0	0
+Candidatus Hamiltonella	0	0	0	0	0	0	0	0	0	1	0	0
+Candidatus Methylopumilus	0	0	0	0	0	1	0	0	0	0	0	0
+Candidatus Nitrosoglobus	0	0	0	0	0	0	0	1	0	0	0	0
+Candidatus Nitrotoga	0	0	0	0	0	1	0	0	0	0	0	0
+Candidatus Pelagibacter	0	0	0	0	0	1	0	0	0	0	0	0
+Candidatus Reidiella	0	0	0	0	0	0	1	0	0	0	0	0
+Candidatus Sulcia	0	0	0	0	0	0	0	0	0	0	0	1
+Candidatus Vampirococcus	0	0	1	0	0	0	0	0	0	0	0	0
+Cellulosimicrobium	0	0	0	0	0	0	0	1	0	0	0	0
+Chitinophaga	0	0	0	0	0	0	1	0	0	0	0	0
+Christensenella	0	0	0	0	0	0	0	1	0	0	0	0
+Chromohalobacter	0	1	0	0	0	0	0	0	0	0	0	0
+Citromicrobium	0	1	0	0	0	0	0	0	0	0	0	0
+Coffea	0	0	0	0	0	0	1	0	0	0	0	0
+Collinsella	0	0	0	0	0	0	1	0	0	0	0	0
+Croceibacter	0	0	0	0	0	0	1	0	0	0	0	0
+Cruoricaptor	0	0	0	1	0	0	0	0	0	0	0	0
+Cucumis	0	0	0	0	0	0	0	0	1	0	0	0
+Cuniculiplasma	0	1	0	0	0	0	0	0	0	0	0	0
+Cytobacillus	0	0	0	0	0	0	0	0	0	1	0	0
+Dechloromonas	0	0	0	1	0	0	0	0	0	0	0	0
+Dehalobacterium	0	0	0	0	0	0	0	0	1	0	0	0
+Delftia	0	0	0	0	0	0	1	0	0	0	0	0
+Dermatophilus	0	0	0	0	0	0	0	0	0	0	1	0
+Desulfallas	1	0	0	0	0	0	0	0	0	0	0	0
+Desulfitobacterium	0	0	0	0	0	0	1	0	0	0	0	0
+Desulfococcus	0	0	0	0	0	0	0	1	0	0	0	0
+Desulfofarcimen	1	0	0	0	0	0	0	0	0	0	0	0
+Desulfosarcina	0	0	0	1	0	0	0	0	0	0	0	0
+Desulfosporosinus	0	0	0	1	0	0	0	0	0	0	0	0
+Devosia	0	0	0	0	0	0	0	1	0	0	0	0
+Devriesea	0	0	0	0	0	0	0	0	0	0	1	0
+Dietzia	0	0	1	0	0	0	0	0	0	0	0	0
+Dolosigranulum	0	0	0	0	0	0	0	1	0	0	0	0
+Duganella	0	1	0	0	0	0	0	0	0	0	0	0
+Duncaniella	0	0	0	0	0	0	0	0	0	0	0	1
+Dyadobacter	0	0	0	0	0	0	1	0	0	0	0	0
+Dysgonomonas	0	0	0	0	0	1	0	0	0	0	0	0
+Eggerthella	0	0	0	1	0	0	0	0	0	0	0	0
+Emcibacter	0	0	0	0	0	0	0	1	0	0	0	0
+Ensifer	0	1	0	0	0	0	0	0	0	0	0	0
+Enterovibrio	0	0	0	0	0	0	0	0	0	0	1	0
+Ephemeroptericola	0	0	0	0	0	0	0	0	1	0	0	0
+Erysipelothrix	1	0	0	0	0	0	0	0	0	0	0	0
+Eubacterium	1	0	0	0	0	0	0	0	0	0	0	0
+Euzebya	0	1	0	0	0	0	0	0	0	0	0	0
+Exiguobacterium	0	0	0	0	0	0	0	1	0	0	0	0
+Faecalibacterium	0	0	1	0	0	0	0	0	0	0	0	0
+Fibrobacter	0	0	0	0	1	0	0	0	0	0	0	0
+Filomicrobium	0	0	0	0	0	0	0	0	0	1	0	0
+Flavisolibacter	0	0	0	0	0	0	0	0	0	0	1	0
+Flavivirga	0	0	0	0	1	0	0	0	0	0	0	0
+Flexistipes	0	0	0	0	0	0	0	0	0	0	0	1
+Frankia	0	0	0	0	0	0	1	0	0	0	0	0
+Frondihabitans	0	0	0	0	0	0	0	0	1	0	0	0
+Furfurilactobacillus	0	0	0	0	0	0	1	0	0	0	0	0
+Gilvibacter	0	0	0	0	0	0	1	0	0	0	0	0
+Gordonia	0	0	0	0	0	1	0	0	0	0	0	0
+Gottschalkia	0	0	0	0	0	0	0	0	0	0	1	0
+Hafnia	0	0	0	0	0	0	0	0	1	0	0	0
+Halanaerobium	0	0	0	0	0	0	0	0	0	1	0	0
+Halobacteriovorax	0	0	0	0	1	0	0	0	0	0	0	0
+Helicobacter	0	0	0	0	1	0	0	0	0	0	0	0
+Heliobacterium	0	1	0	0	0	0	0	0	0	0	0	0
+Herbaspirillum	0	0	0	0	0	0	0	0	0	1	0	0
+Herbinix	0	0	0	0	1	0	0	0	0	0	0	0
+Herminiimonas	0	0	0	1	0	0	0	0	0	0	0	0
+Hungateiclostridium	0	0	0	0	1	0	0	0	0	0	0	0
+Hydrogenophaga	0	0	0	0	0	0	0	1	0	0	0	0
+Hyphomicrobium	0	1	0	0	0	0	0	0	0	0	0	0
+Ilyobacter	0	0	0	0	0	0	0	0	0	1	0	0
+Inhella	0	0	0	0	0	0	0	1	0	0	0	0
+Intrasporangium	0	1	0	0	0	0	0	0	0	0	0	0
+Ipomoea	0	0	0	0	0	0	0	1	0	0	0	0
+Isoptericola	0	0	0	0	0	0	0	1	0	0	0	0
+Janibacter	0	0	0	0	0	0	0	0	0	0	1	0
+Jatrophihabitans	0	0	0	0	0	0	0	0	0	0	0	1
+Jeotgalicoccus	0	0	0	0	1	0	0	0	0	0	0	0
+Kangiella	0	0	0	0	0	0	0	0	0	0	1	0
+Kinneretia	0	0	1	0	0	0	0	0	0	0	0	0
+Kocuria	0	0	0	0	0	0	0	0	0	1	0	0
+Kordia	1	0	0	0	0	0	0	0	0	0	0	0
+Labrys	0	1	0	0	0	0	0	0	0	0	0	0
+Lachnospira	0	0	0	0	0	0	0	0	1	0	0	0
+Lactiplantibacillus	0	0	0	0	0	0	0	0	0	1	0	0
+Lelliottia	0	0	0	0	1	0	0	0	0	0	0	0
+Leptospira	0	0	0	0	0	1	0	0	0	0	0	0
+Lichenihabitans	0	0	0	0	0	0	0	0	0	1	0	0
+Limnobaculum	0	0	0	0	0	0	0	0	0	0	0	1
+Luteimicrobium	0	1	0	0	0	0	0	0	0	0	0	0
+Lysinibacillus	0	0	0	0	0	0	0	0	0	1	0	0
+Magnetospirillum	0	1	0	0	0	0	0	0	0	0	0	0
+Maribius	0	0	0	0	0	1	0	0	0	0	0	0
+Marinobacter	0	0	0	0	0	0	0	0	0	0	0	1
+Marinobacterium	0	0	0	0	0	0	0	0	0	0	0	1
+Marinomonas	0	0	0	1	0	0	0	0	0	0	0	0
+Megamonas	0	0	0	0	0	0	1	0	0	0	0	0
+Melaminivora	0	0	0	0	0	0	1	0	0	0	0	0
+Melioribacter	0	0	0	0	1	0	0	0	0	0	0	0
+Melissococcus	0	0	0	0	0	1	0	0	0	0	0	0
+Mesoplasma	0	0	0	0	0	0	0	0	0	0	0	1
+Methanobrevibacter	0	0	0	1	0	0	0	0	0	0	0	0
+Methanofervidicoccus	0	0	0	0	0	0	0	0	0	0	0	1
+Methylomonas	0	0	0	0	1	0	0	0	0	0	0	0
+Methylorubrum	0	1	0	0	0	0	0	0	0	0	0	0
+Methylovulum	0	0	0	0	0	0	0	0	0	1	0	0
+Microbulbifer	0	0	0	0	0	0	0	0	0	0	0	1
+Microterricola	0	0	0	0	0	0	0	0	0	0	1	0
+Monoglobus	0	0	0	1	0	0	0	0	0	0	0	0
+Morganella	0	0	0	0	1	0	0	0	0	0	0	0
+Muriicola	0	0	0	0	0	0	0	1	0	0	0	0
+Mycetocola	0	0	0	0	0	0	1	0	0	0	0	0
+Myroides	0	0	0	0	0	0	0	0	0	0	1	0
+Nakamurella	0	0	0	0	0	0	0	0	0	0	0	1
+Nautilia	0	0	0	0	0	0	0	0	0	1	0	0
+Nitrosococcus	0	0	0	0	1	0	0	0	0	0	0	0
+Nitrospirillum	0	0	1	0	0	0	0	0	0	0	0	0
+Nostoc	0	1	0	0	0	0	0	0	0	0	0	0
+Obesumbacterium	0	0	0	0	1	0	0	0	0	0	0	0
+Oceanimonas	0	0	0	0	0	0	0	1	0	0	0	0
+Oceanispirochaeta	0	0	0	0	1	0	0	0	0	0	0	0
+Oceanobacillus	0	0	0	0	0	0	0	0	0	1	0	0
+Ochrobactrum	0	0	0	0	0	0	0	1	0	0	0	0
+Owenweeksia	0	0	0	0	1	0	0	0	0	0	0	0
+Paenisporosarcina	0	0	0	0	1	0	0	0	0	0	0	0
+Panacibacter	0	0	0	0	0	0	0	0	0	0	1	0
+Paraclostridium	1	0	0	0	0	0	0	0	0	0	0	0
+Paraliobacillus	1	0	0	0	0	0	0	0	0	0	0	0
+Parasphingopyxis	0	0	0	1	0	0	0	0	0	0	0	0
+Pedobacter	0	0	0	0	0	1	0	0	0	0	0	0
+Pelagibaca	0	1	0	0	0	0	0	0	0	0	0	0
+Pelodictyon	0	0	0	1	0	0	0	0	0	0	0	0
+Peptoniphilus	0	0	1	0	0	0	0	0	0	0	0	0
+Phenylobacterium	0	0	1	0	0	0	0	0	0	0	0	0
+Pirellula	0	0	1	0	0	0	0	0	0	0	0	0
+Pontibacillus	0	0	0	0	0	1	0	0	0	0	0	0
+Pontibacter	0	0	0	0	0	0	0	0	0	0	1	0
+Pseudescherichia	0	0	0	0	0	0	0	0	0	1	0	0
+Pseudobutyrivibrio	0	0	0	1	0	0	0	0	0	0	0	0
+Pseudohongiella	0	0	0	1	0	0	0	0	0	0	0	0
+Pseudonocardia	0	0	0	0	0	0	1	0	0	0	0	0
+Pseudopuniceibacterium	0	0	0	0	0	0	0	0	0	0	0	1
+Pseudoxanthomonas	0	1	0	0	0	0	0	0	0	0	0	0
+Punica	0	0	0	0	0	0	0	0	0	1	0	0
+Pyrococcus	0	0	0	0	1	0	0	0	0	0	0	0
+Qipengyuania	0	1	0	0	0	0	0	0	0	0	0	0
+Rahnella	0	0	1	0	0	0	0	0	0	0	0	0
+Ramlibacter	0	1	0	0	0	0	0	0	0	0	0	0
+Rhizobium	0	0	0	0	0	0	0	0	0	0	1	0
+Rhodobacter	0	1	0	0	0	0	0	0	0	0	0	0
+Rhodococcus	0	0	0	0	0	0	0	0	0	0	0	1
+Rhodothermus	0	0	0	0	1	0	0	0	0	0	0	0
+Rickettsia	1	0	0	0	0	0	0	0	0	0	0	0
+Rivularia	0	0	1	0	0	0	0	0	0	0	0	0
+Romboutsia	1	0	0	0	0	0	0	0	0	0	0	0
+Roseburia	0	0	0	0	0	0	0	0	0	0	1	0
+Roseimicrobium	0	0	0	0	0	0	0	0	0	0	0	1
+Roseococcus	0	0	0	0	0	0	0	0	0	0	1	0
+Roseolovirus	0	0	0	0	0	0	0	0	0	1	0	0
+Rubrobacter	0	0	0	0	0	0	0	1	0	0	0	0
+Salinibacterium	0	0	0	0	0	0	0	0	0	0	1	0
+Salinimonas	0	0	0	0	0	0	1	0	0	0	0	0
+Salipiger	0	0	0	1	0	0	0	0	0	0	0	0
+Sandaracinobacter	0	1	0	0	0	0	0	0	0	0	0	0
+Sanguibacter	0	0	0	0	0	0	0	0	0	0	1	0
+Scandinavium	0	0	0	0	0	0	0	0	0	0	0	1
+Scardovia	1	0	0	0	0	0	0	0	0	0	0	0
+Schlegelella	0	1	0	0	0	0	0	0	0	0	0	0
+Sebaldella	0	0	0	0	0	0	0	0	0	1	0	0
+Siansivirga	0	0	0	1	0	0	0	0	0	0	0	0
+Simplicispira	0	0	0	0	1	0	0	0	0	0	0	0
+Sneathia	0	0	0	0	0	1	0	0	0	0	0	0
+Snodgrassella	0	0	0	1	0	0	0	0	0	0	0	0
+Sodalis	0	0	0	1	0	0	0	0	0	0	0	0
+Solimonas	0	0	0	0	0	0	0	0	0	0	0	1
+Sorghum	1	0	0	0	0	0	0	0	0	0	0	0
+Sphaerobacter	0	0	0	0	0	0	0	0	0	0	0	1
+Sphaerochaeta	0	0	0	0	0	0	0	0	0	0	0	1
+Sphaerotilus	0	0	0	0	0	0	0	0	0	1	0	0
+Spirochaeta	0	1	0	0	0	0	0	0	0	0	0	0
+Stanieria	0	0	0	1	0	0	0	0	0	0	0	0
+Steroidobacter	0	1	0	0	0	0	0	0	0	0	0	0
+Stigmatella	0	0	0	0	0	0	1	0	0	0	0	0
+Sulfitobacter	0	0	0	1	0	0	0	0	0	0	0	0
+Sulfuriferula	0	0	0	0	0	1	0	0	0	0	0	0
+Sulfurivermis	0	0	1	0	0	0	0	0	0	0	0	0
+Tabrizicola	0	1	0	0	0	0	0	0	0	0	0	0
+Tardibacter	0	1	0	0	0	0	0	0	0	0	0	0
+Tatumella	0	0	0	0	1	0	0	0	0	0	0	0
+Tepidanaerobacter	0	0	0	0	0	0	0	0	0	0	1	0
+Thermacetogenium	0	0	0	0	1	0	0	0	0	0	0	0
+Thermoactinomyces	0	0	0	0	0	1	0	0	0	0	0	0
+Thermoanaerobacter	1	0	0	0	0	0	0	0	0	0	0	0
+Thermoanaerobacterium	1	0	0	0	0	0	0	0	0	0	0	0
+Thermobifida	0	0	0	0	0	0	0	0	0	0	1	0
+Thermococcus	0	0	0	0	1	0	0	0	0	0	0	0
+Thermomicrobium	0	0	0	0	0	0	0	1	0	0	0	0
+Thermomonas	0	0	0	0	0	0	0	1	0	0	0	0
+Thermosipho	0	0	0	0	1	0	0	0	0	0	0	0
+Ureibacillus	0	0	0	0	0	0	0	0	0	0	0	1
+Viridibacillus	0	0	0	0	0	0	0	0	0	0	0	1
+Vitreoscilla	0	0	0	0	0	0	1	0	0	0	0	0
+Wphvirus	1	0	0	0	0	0	0	0	0	0	0	0
+Zea	0	0	1	0	0	0	0	0	0	0	0	0
+Zobellella	0	0	0	0	0	0	0	0	0	0	0	1
+Zunongwangia	0	0	0	0	0	0	1	0	0	0	0	0
+Zymobacter	0	0	1	0	0	0	0	0	0	0	0	0

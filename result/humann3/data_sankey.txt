@@ -1,0 +1,32 @@
+H2	H3	KO
+Amino acid metabolism	"Valine, leucine and isoleucine degradation"	K00186
+Amino acid metabolism	Tryptophan metabolism	K01556
+Carbohydrate metabolism	Pyruvate metabolism	K20370
+Carbohydrate metabolism	Glycolysis / Gluconeogenesis	K00382
+Carbohydrate metabolism	Butanoate metabolism	K00004
+Carbohydrate metabolism	C5-Branched dibasic acid metabolism	K01703
+Carbohydrate metabolism	Fructose and mannose metabolism	K00863
+Carbohydrate metabolism	Glycolysis / Gluconeogenesis	K01623
+Energy metabolism	Sulfur metabolism	K00395
+Energy metabolism	Methane metabolism	K11779
+Energy metabolism	Oxidative phosphorylation	K02111
+Energy metabolism	Oxidative phosphorylation	K02115
+Membrane transport	ABC transporters	K17317
+Membrane transport	ABC transporters	K13893
+Metabolism of cofactors and vitamins	Ubiquinone and other terpenoid-quinone biosynthesis	K01911
+Metabolism of cofactors and vitamins	Thiamine metabolism	K21219
+Metabolism of cofactors and vitamins	Porphyrin and chlorophyll metabolism	K02189
+Protein families: metabolism	Peptidases and inhibitors	K02278
+Protein families: metabolism	Lipid biosynthesis proteins	K12440
+Protein families: metabolism	Lipid biosynthesis proteins	K12441
+Signal transduction	Two-component system	K08475
+Signal transduction	Two-component system	K02584
+Unclassified: metabolism	Energy metabolism	K16887
+Unclassified: metabolism	Enzymes with EC numbers	K18008
+Unclassified: metabolism	Enzymes with EC numbers	K19713
+Unclassified: metabolism	Enzymes with EC numbers	K20037
+Unclassified: metabolism	Enzymes with EC numbers	K18700
+Unclassified: metabolism	Enzymes with EC numbers	K17992
+Unclassified: metabolism	Enzymes with EC numbers	K18330
+Xenobiotics biodegradation and metabolism	Benzoate degradation	K19515
+Xenobiotics biodegradation and metabolism	Ethylbenzene degradation	K18092
