@@ -2,7 +2,7 @@
 
 # 易宏基因组流程 EasyMetagenome Pipeline
 
-    # 版本Version: 1.22, 2024/11/18
+    # 版本Version: 1.24, 2025/11/6
     # 操作系统Operation System: Linux Ubuntu 22.04+ / CentOS 7.7+ 
 
 # 一、数据预处理 Data preprocessing
@@ -14,7 +14,7 @@
 3.  项目文件夹准备测序数据(seq/*.fq.gz)和样本元数据(result/metadata.txt)
 
 **环境变量设置 Environment variable settings**
-**分析前必须运行，设置数据库、软件和工作目录**
+**分析前必须运行The follwoing paragraph must run before，设置数据库、软件和工作目录**
 
     # Conda软件安装目录，`conda env list`查看，如/anaconda3
     soft=~/miniconda3
@@ -32,30 +32,33 @@
 
 **元数据和序列文件 Metadata and Sequence Files**
 
-元数据
+元数据metadata
 
-    # 上传元数据metadata.txt至result目录，此处下载并重命名
+    # 编写元数据metadata.txt并保存至result目录，此处下载演示
     wget http://www.imeta.science/github/EasyMetagenome/result/metadata.txt
     mv metadata.txt result/metadata.txt
-    # 检查文件格式，^I为制表符，$为Linux换行，^M$为Windows回车，^M为Mac换行符
+
+    # 预览Preview: 检查文件格式，^I为制表符，$为Linux换行，^M$为Windows回车，^M为Mac换行符
     cat -A result/metadata.txt
-    
-    # 根据样本文件生成元数据，可筛选子集，如EB开头
-    ls seq/EB*|grep '_1'|cut -f1 -d '_'|cut -f 2 -d '/'|sed'1 i SampleID'>result/metadataEB.txt
-    cp result/metadataEB.txt result/metadata.txt
-    
-    # 元数据细节优化
-    # 转换Windows回车为Linux换行，去除空格
+    # 格式化Format：转换Windows回车为Linux换行，去除空格
     sed -i 's/\r//;s/ //g' result/metadata.txt
     cat -A result/metadata.txt
 
-序列文件
+序列文件sequencing data
 
-    # 用户使用filezilla上传测序文件至seq目录，本次从网络下载
+    # 用户使用filezilla上传测序文件至seq目录
+    # 本次测试国家生信息中心GSA网络下载，同时提供iMeta、百度网盘备用站点数据下载链接
     # seq 目录下已经有测试文件，下载跳过
     cd seq/
+    # 站点1. GSA下载链接，按实验设计编号批量下载并改名
+    awk '{system("wget -c ftp://download.big.ac.cn/gsa/"$5"/"$6"/"$6"_f1.fq.gz -O seq/"$1"_1.fq.gz")}' \
+        <(tail -n+2 result/metadata.txt)
+    awk '{system("wget -c ftp://download.big.ac.cn/gsa/"$5"/"$6"/"$6"_r2.fq.gz -O seq/"$1"_2.fq.gz")}' \
+        <(tail -n+2 result/metadata.txt)
+    # 站点2. iMeta下载链接
     awk '{system("wget -c http://www.imeta.science/github/EasyMetagenome/seq/"$1"_1.fq.gz")}' <(tail -n+2 ../result/metadata.txt)
     awk '{system("wget -c http://www.imeta.science/github/EasyMetagenome/seq/"$1"_2.fq.gz")}' <(tail -n+2 ../result/metadata.txt)
+    # 站点3. 百度网盘链接中 /db/meta/seq 目录: https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
     cd ..
     # ls查看文件大小，-l 列出详细信息 (l: list)，-sh 显示人类可读方式文件大小 (s: size; h: human readable)
     ls -lsh seq/*.fq.gz

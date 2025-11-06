@@ -2,15 +2,15 @@
 
 # 易宏基因组软件和数据库 EasyMetagenome software & database
 
-    # 版本Version: 1.22, 2024/11/9
+    # 版本Version: 1.24, 2025/11/6
     # 操作系统Operation System: Linux Ubuntu 22.04+ / CentOS 8+
     # 主页Homepage: https://github.com/YongxinLiu/EasyMetagenome
 
-所有软件和数据库可从官网下载，All software and databases can be downloaded from the official website, 备选 optional：
-中科院微生物所Institute of Microbiology, Chinese Academy of Sciences：ftp://download.nmdc.cn/tools/ (FileZilla访问) 
-百度网盘Baidu Netdisk：https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
+所有软件和数据库可从官网下载 All software and databases downloaded from the website, 备选 Backup source：
+中科院微生物所 Institute of Microbiology, Chinese Academy of Sciences：ftp://download.nmdc.cn/tools/ (FileZilla访问) 
+百度网盘 Baidu Netdisk：https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
 
-# 一、数据预处理 Data preprocessing
+# 一、初始化和流程安装 Initialization and pipeline installation
 
 ## 初始化：每次开始安装必须运行下面代码 Initialization: The following code must be run every time when installation starts
 
@@ -41,33 +41,37 @@ EasyMetagenome流程，包括流程安装、使用和可视化脚本，以及流
     # 改名
     mv EasyMetagenome-master EasyMetagenome
 
-    # 方法2. 微生物所备用链接，可能不是最新版
-    wget -c ftp://download.nmdc.cn/tools/soft/EasyMetagenome.tar.gz
-    tar xvzf EasyMetagenome.tar.gz
+    # 方法2. 百度网盘链接中 /db/soft/EasyMetagenome.tar.gz : https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
 
     # 方法3. git下载，需安装git
     git clone https://github.com/YongxinLiu/EasyMetagenome
     # 旧版更新
     cd EasyMetagenome && git pull && cd ../
 
+    # 方法4. 微生物所或用链接，可能不是最新版
+    wget -c ftp://download.nmdc.cn/tools/soft/EasyMetagenome.tar.gz
+    tar xvzf EasyMetagenome.tar.gz
+
+
 ### EasyMicrobiome软件和数据库合集dependencies
 
 EasyMetagenome依赖EasyMicrobiome，其包括众多脚本、软件和数据库的集合，网址：https://github.com/YongxinLiu/EasyMicrobiome
     
-    # 方法1. 网页中下载
-    # https://github.com/YongxinLiu/EasyMicrobiome 中Code Download ZIP下载压缩包，上传至服务器，并解压
+    # 方法1. GitHub https://github.com/YongxinLiu/EasyMicrobiome 中Code Download ZIP下载压缩包，上传至服务器，并解压
     unzip EasyMicrobiome-master.zip
     mv EasyMicrobiome-master EasyMicrobiome
     
-    # 方法2. 备用链接下载
-    wget -c ftp://download.nmdc.cn/tools/soft/EasyMicrobiome.tar.gz
-    tar -xvzf EasyMicrobiome.tar.gz
-    
+    # 方法2. 百度网盘链接中 /db/soft/EasyMicrobioe.tar.gz : https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
+   
     # 方法3. git下载，需安装git
     git clone https://github.com/YongxinLiu/EasyMicrobiome
     # 旧版更新
     cd EasyMicrobiome && git pull && cd ../
-    
+
+    # 方法4. 备用链接下载
+    wget -c ftp://download.nmdc.cn/tools/soft/EasyMicrobiome.tar.gz
+    tar -xvzf EasyMicrobiome.tar.gz
+     
     # 软件安装
     # 添加linux命令可执行权限
     chmod +x `pwd`/EasyMicrobiome/linux/* `pwd`/EasyMicrobiome/script/*
@@ -108,6 +112,8 @@ EasyMetagenome依赖EasyMicrobiome，其包括众多脚本、软件和数据库�
 更多conda中文安装使用教程参考：[Nature Method：Bioconda解决生物软件安装的烦恼](https://mp.weixin.qq.com/s/SzJswztVB9rHVh3Ak7jpfA)
 [一文掌握Conda软件安装：虚拟环境、软件通道、加速solving、跨服务器迁移](https://mp.weixin.qq.com/s/tKAU09_w7Cu7khA9M2EGEQ)
 
+
+# 一、数据预处理 Data preprocessing
 
 ## 质控Quality control: kneaddata/fstqc/multiqc/fastp
 

@@ -2,9 +2,9 @@
 
 # EasyMetagenome - A user-friendly and flexible pipeline for shotgun metagenomic analysis in microbiome research
 
-版本Version：v1.23
+版本Version：v1.24
 
-更新时间Update：2024/11/26
+更新时间Update：2025/11/6
 
 ![image](https://github.com/baidefeng/EasyMetagenome/blob/master/result/EasyMetagenomePipeline2.jpg)
 
@@ -347,10 +347,8 @@ Used in the terminal command line or RStudio's terminal environment. You can dis
 If used this script, please cited
 
 使用此脚本，请引用下文：
-Bai, Defeng, **Tong Chen**, Jiani Xun, Chuang Ma, Hao Luo, Haifei Yang, Chen Cao, Xiaofeng Cao, Jianzhou Cui, Yuan‐Ping Deng, Zhaochao Deng, Wenxin Dong, Fangtian Fu, Min Fu, Yi‐Tian Fu, He Gao, Jingping Ge, Qinglong Gong, Lunda Gu, Peng Guo, Yuhao Guo, Tang Hai, Hao Liu, Jieqiang He, Zi‐Yang He, Huiyu Hou, Can Huang, Shuai Ji, ChangHai Jiang, Gui‐Lai Jiang, Lingjuan Jiang, Ling N. Jin, Yuhe Kan, Da Kang, Jin Kou, Ka‐Lung Lam, Changchao Li, Chong Li, Fuyi Li, Liwei Li, Miao Li, Xin Li, Ye Li, Zheng‐Tao Li, Jing Liang, Yongxin Lin, Changzhen Liu, Danni Liu, Fengqin Liu, Jia Liu, Tianrui Liu, Tingting Liu, Xinyuan Liu, Yaqun Liu, Bangyan Liu, Minghao Liu, Wenbo Lou, Yaning Luan, Yuanyuan Luo, Hujie Lv, Tengfei Ma, Zongjiong Mai, Jiayuan Mo, Dongze Niu, Zhuo Pan, Heyuan Qi, Zhanyao Shi, Chunjiao Song, Fuxiang Sun, Yan Sun, Sihui Tian, Xiulin Wan, Guoliang Wang, Hongyang Wang, Hongyu Wang, Huanhuan Wang, Jing Wang, Jun Wang, Kang Wang, Leli Wang, Shao‐kun Wang, Xinlong Wang, Yao Wang, Zufei Xiao, Huichun Xing, Yifan Xu, Shu‐yan Yan, Li Yang, Song Yang, Yuanming Yang, Xiaofang Yao, Salsabeel Yousuf, Hao Yu, Yu Lei, Zhengrong Yuan, Meiyin Zeng, Chunfang Zhang, Chunge Zhang, Huimin Zhang, Jing Zhang, Na Zhang, Tianyuan Zhang, Yi‐Bo Zhang, Yupeng Zhang, Zheng Zhang, Mingda Zhou, Yuanping Zhou, Chengshuai Zhu, Lin Zhu, Yue Zhu, Zhihao Zhu, Hongqin Zou, Anna Zuo, Wenxuan Dong, Tao Wen, Shifu Chen, Guoliang Li, Yunyun Gao, **Yong‐Xin Liu**. 2025. “EasyMetagenome: A User‐Friendly and Flexible Pipeline for Shotgun Metagenomic Analysis in Microbiome Research.” **iMeta** 4: e70001. <https://doi.org/10.1002/imt2.70001>
-
-**Yong-Xin Liu**, Lei Chen, Tengfei Ma, Xiaofang Li, Maosheng Zheng, Xin Zhou, Liang Chen, Xubo Qian, Jiao Xi, Hongye Lu, Huiluo Cao, Xiaoya Ma, Bian Bian, Pengfan Zhang, Jiqiu Wu, Ren-You Gan, Baolei Jia, Linyang Sun, Zhicheng Ju, Yunyun Gao, Tao Wen, **Tong Chen**. 2023. EasyAmplicon: An easy-to-use, open-source, reproducible, and community-based pipeline for amplicon data analysis in microbiome research. **iMeta** 2: e83. <https://doi.org/10.1002/imt2.83>
+Bai, Defeng, **Tong Chen**, ..., Yong‐Xin Liu**. 2025. “EasyMetagenome: A User‐Friendly and Flexible Pipeline for Shotgun Metagenomic Analysis in Microbiome Research.” **iMeta** 4: e70001. <https://doi.org/10.1002/imt2.70001>
 
 **Yong-Xin Liu**, Yuan Qin, **Tong Chen**, Meiping Lu, Xubo Qian, Xiaoxuan Guo, Yang Bai. 2021. A practical guide to amplicon and metagenomic analysis of microbiome data. Protein & Cell 12: 315-330. <https://doi.org/10.1007/s13238-020-00724-8> (Highly Cited)
 
-Copyright 2016-2025 Yong-Xin Liu <liuyongxin@caas.cn>, Tong Chen <chent@nrc.ac.cn>
+Copyright 2016-2026 Yong-Xin Liu <liuyongxin@caas.cn>, Tong Chen <chent@nrc.ac.cn>
