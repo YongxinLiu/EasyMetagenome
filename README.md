@@ -74,7 +74,7 @@ The process from raw data to species and functional composition tables can be di
     1.  EasyMetagenome流程安装 EasyMetagenome pipeline installation
     2.  EasyMicrobiome软件和数据库合集 EasyMicrobiome software and database collection
     3.  软件管理器Conda Software Manager Conda
-*   质控Quality control: kneaddata/fstqc/multiqc/fastp
+*   质控Quality control: kneaddata/fastqc/multiqc/fastp
 
     1.  方法1.kneaddata直接安装 Method 1. kneaddata direct installation
     2.  方法2.kneaddata下载解压安装 Method 2. Download and decompress kneaddata and install it
@@ -352,3 +352,4 @@ Bai, Defeng, **Tong Chen**, ..., Yong‐Xin Liu**. 2025. “EasyMetagenome: A Us
 **Yong-Xin Liu**, Yuan Qin, **Tong Chen**, Meiping Lu, Xubo Qian, Xiaoxuan Guo, Yang Bai. 2021. A practical guide to amplicon and metagenomic analysis of microbiome data. Protein & Cell 12: 315-330. <https://doi.org/10.1007/s13238-020-00724-8> (Highly Cited)
 
 Copyright 2016-2026 Yong-Xin Liu <liuyongxin@caas.cn>, Tong Chen <chent@nrc.ac.cn>
+
