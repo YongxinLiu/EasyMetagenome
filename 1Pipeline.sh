@@ -82,7 +82,7 @@ zless/zcat查看可压缩文件，检查序列质量格式(质量值大写字母
     # ├── seq
     # │   ├── C1_1.fq.gz
     # │   ├── ...
-    # │   └── N1_2.fq.gz
+    # │   └── Y1_2.fq.gz
     # └── temp
 
 *   1pipeline.sh是分析流程代码；
@@ -98,7 +98,7 @@ zless/zcat查看可压缩文件，检查序列质量格式(质量值大写字母
     fastp
     
     # 单样本质控
-    i=C1
+    i=`tail -n+2 result/metadata.txt|cut -f1|head -n1`
     fastp -i seq/${i}_1.fq.gz  -I seq/${i}_2.fq.gz \
       -o temp/qc/${i}_1.fastq -O temp/qc/${i}_2.fastq
     
@@ -130,20 +130,26 @@ kneaddata是流程主要依赖bowtie2比对宿主，然后筛选非宿主序列�
     # 创建目录、启动环境、记录版本
     mkdir -p temp/hr
     conda activate kneaddata
-    kneaddata --version # 0.12.0
+    kneaddata --version # v0.12.3
 
-多样品并行去宿主，此步占用原始数据5x空间，j5p3,18s3h；j3p16,18s1h
+    # 单样本去宿主
+    i=`tail -n+2 result/metadata.txt|cut -f1 | head -n1`
+    kneaddata -i1 temp/qc/${i}_1.fastq -i2 temp/qc/${i}_2.fastq \
+        -o temp/hr \
+        --bypass-trim --bypass-trf --reorder \
+        --bowtie2-options '--very-sensitive --dovetail' \
+        -db ${db}/kneaddata/human/hg_39 \
+        --remove-intermediate-output -v -t 3
 
-    time tail -n+2 result/metadata.txt|cut -f1|rush -j 2 \
-      "sed '1~4 s/ 1:/.1:/;1~4 s/$/\/1/' temp/qc/{}_1.fastq > /tmp/{}_1.fastq; \
-      sed '1~4 s/ 2:/.1:/;1~4 s/$/\/2/' temp/qc/{}_2.fastq > /tmp/{}_2.fastq; \
-      kneaddata -i1 /tmp/{1}_1.fastq -i2 /tmp/{1}_2.fastq \
-      -o temp/hr --output-prefix {1} \
-      --bypass-trim --bypass-trf --reorder \
-      --bowtie2-options '--very-sensitive --dovetail' \
-      -db ${db}/kneaddata/human/hg37dec_v0.1 \
-      --remove-intermediate-output -v -t 3; \
-      rm /tmp/{}_1.fastq /tmp/{}_2.fastq"
+    # 多样本去宿主,此步占用原始数据5x空间,3m
+    time tail -n+3 result/metadata.txt | cut -f1 | rush -j 2 \
+      "kneaddata \
+        -i1 temp/qc/{1}_1.fastq -i2 temp/qc/{1}_2.fastq \
+        -o temp/hr/ \
+        --bypass-trim --bypass-trf --reorder \
+        --bowtie2-options '--very-sensitive --dovetail' \
+        -db ${db}/kneaddata/human/hg_39 \
+        --remove-intermediate-output -v -t 3"
 
     # 查看大小，*匹配任意多个字符，?匹配任意一个字符
     ls -shtr temp/hr/*_paired_?.fastq
@@ -151,9 +157,9 @@ kneaddata是流程主要依赖bowtie2比对宿主，然后筛选非宿主序列�
 简化改名
     
     # Ubuntu系统改名
-    rename 's/paired_//' temp/hr/*.fastq
+    rename 's/_1_kneaddata_paired//' temp/hr/*.fastq
     # CentOS系统改名
-    rename 'paired_' '' temp/hr/*.fastq
+    rename '_1_kneaddata_paired' '' temp/hr/*.fastq
 
 质控结果汇总
 
@@ -175,8 +181,12 @@ kneaddata是流程主要依赖bowtie2比对宿主，然后筛选非宿主序列�
     ls -l temp/hr/
     # 确认去宿主结果后，可以删除质控后中间文件
     rm temp/qc/*.fastq
+    # 人类数据建议发布去宿主后的文件，减少隐私泄露风险
+    
 
-# 二、基于读长分析 Read-based (HUMAnN3+MetaPhlAn4+Kraken2)
+# 二、基于读长分析 Read-based (HUMAnN4+MetaPhlAn4+Kraken2)
+
+HUMAnN 4.0教程 https://docs.google.com/document/d/1rCx5JkuO7wCKWrL8_-UJx_FkopJAfcDFtZktgPspak0/edit?pli=1&tab=t.0
 
 ## 2.1 准备HUMAnN输入文件
 
@@ -195,10 +205,10 @@ HUMAnN要求双端序列合并的文件作为输入，for循环根据实验设�
 
 *   物种组成调用MetaPhlAn4
 *   输入文件：temp/concat/*.fq 每个样品质控后双端合并后的fastq序列
-*   输出文件：temp/humann3/ 目录下
-    *   C1_pathabundance.tsv
-    *   C1_pathcoverage.tsv
-    *   C1_genefamilies.tsv
+*   输出文件：temp/humann4/ 目录下
+    *   Y1_pathabundance.tsv
+    *   Y1_pathcoverage.tsv
+    *   Y1_genefamilies.tsv
 *   整合后的输出：
     *   result/metaphlan4/taxonomy.tsv 物种丰度表
     *   result/metaphlan4/taxonomy.spf 物种丰度表（用于stamp分析）
@@ -206,80 +216,85 @@ HUMAnN要求双端序列合并的文件作为输入，for循环根据实验设�
     *   result/humann3/pathabundance_relab_stratified.tsv 通路物种组成丰度表
     *   stratified(每个菌对此功能通路组成的贡献)和unstratified(功能组成)
 
-启动humann3环境，检查数据库配置
+启动humann4环境，检查数据库配置
 
-    conda activate humann3
-    # 备选source加载指定环境
-    # source ~/miniconda3/envs/humann3/bin/activate
-    mkdir -p temp/humann3
-    humann --version # v3.7
+    conda activate humann4
+    mkdir -p temp/humann4
+    humann --version # v4.0.0.alpha.1
     humann_config
 
-单样本1.25M PE150运行测试，8p，2.5M，1\~2h；0.2M, 34m；0.1M，30m；0.01M，25m；16p，18m
+单样本测试：Y1大小657M，8p, 15min
 
-    i=C1
-    # 3p,26m; 数据库使用ssd缩短到19m；16p,8m
-    time humann --input temp/concat/${i}.fq --output temp/humann3 --threads 3 --metaphlan-options '--bowtie2db /db/metaphlan4 --index mpa_vOct22_CHOCOPhlAnSGB_202212 --offline'
-
-多样本并行计算，测试数据约30m，推荐16p，3h/6G；
+    i=`tail -n+2 result/metadata.txt|cut -f1 | head -n1`
+    time humann \
+      --input temp/concat/${i}.fq \
+      --threads 8 \
+      --metaphlan-options "--input_type fastq --bowtie2db ${db}/metaphlan4 --index mpa_vOct22_CHOCOPhlAnSGB_202403 --offline -t rel_ab_w_read_stats --nproc 8" \
+      --output temp/humann4 
+      
+多样本并行计算，测试数据6个样本双并行：50m，推荐16p，3h/6G；
 
     # 如果服务器性能好，请设置--threads值为8/16/32
-    tail -n+2 result/metadata.txt | cut -f1 | rush -j 2 \
-      "humann --input temp/concat/{1}.fq  \
-      --output temp/humann3/ --threads 3 --metaphlan-options '--bowtie2db /db/metaphlan4 --index mpa_vOct22_CHOCOPhlAnSGB_202212 --offline'"
+    time tail -n+2 result/metadata.txt | cut -f1 | sed 's/_1$//' | rush -j 2 \
+      "humann --input temp/concat/{1}.fq \
+        --threads 8 \
+        --metaphlan-options '--input_type fastq --bowtie2db ${db}/metaphlan4 --index mpa_vOct22_CHOCOPhlAnSGB_202403 --offline -t rel_ab_w_read_stats --nproc 8'  \
+        --output temp/humann4/ "
 
     # 移动重要文件至humann3目录
     # $(cmd) 与 `cmd` 通常是等价的；`cmd`写法更简单，但要注意反引号是键盘左上角ESC下面的按键，$(cmd)更通用，适合嵌套使用
     for i in $(tail -n+2 result/metadata.txt | cut -f1); do  
        mv temp/humann3/${i}_humann_temp/${i}_metaphlan_bugs_list.tsv temp/humann3/
     done
-    # 删除临时文件，极占用空间
+    # Deleting temporary files save space 删除临时文件节省空间
     /bin/rm -rf temp/concat/* temp/humann3/*_humann_temp
 
-(可选)单独运行MetaPhlAn4
+(Optional) Run MetaPhlAn4 separately (可选)单独运行MetaPhlAn4
 
-    mkdir -p temp/humann3
-    i=C1
-    # 仅物种注释极快4p, 2m, 1m读取数据库
-    time metaphlan --input_type fastq temp/qc/${i}_1.fastq \
-      temp/humann3/${i}.txt --bowtie2db /db/metaphlan4 --index mpa_vOct22_CHOCOPhlAnSGB_202212 --offline \
+    mkdir -p temp/metaphlan4
+    i=`tail -n+2 result/metadata.txt|cut -f1 | head -n1`
+    # taxonomy classification 4p, 6min, 3min for database loading
+    time metaphlan --input_type fastq temp/hr/${i}_1.fastq \
+      temp/metaphlan4/${i}.txt --bowtie2db ${db}/metaphlan4 --index mpa_vOct22_CHOCOPhlAnSGB_202403 --offline \
       --nproc 4
 
-## 2.3 物种组成表
+## 2.3 Taxonomic composition table 物种组成表
 
-**样品结果合并**
+**Sample merging 样品结果合并**
 
     mkdir -p result/metaphlan4
-    # 合并、修正样本名、预览
-    merge_metaphlan_tables.py temp/humann3/*_metaphlan_bugs_list.tsv | \
-      sed 's/_metaphlan_bugs_list//g' | tail -n+2 | sed '1 s/clade_name/ID/' | sed '2i #metaphlan4'> result/metaphlan4/taxonomy.tsv
+    # Merge, correct sample names, preview 合并、修正样本名、预览
+    merge_metaphlan_tables.py temp/humann4/*_metaphlan_profile.tsv | sed 's/_1_metaphlan//g' | tail -n+2 | sed '1 s/clade_name/ID/' | sed '2i #metaphlan4' \
+      > result/metaphlan4/taxonomy.tsv
     csvtk -t stat result/metaphlan4/taxonomy.tsv
     head -n5 result/metaphlan4/taxonomy.tsv
 
-**转换为stamp的spf格式**
+**Format to stamp spf(转换为STAMP输入spf格式)**
 
-    # metaphlan4较2增加更多unclassified和重复结果，用sort和uniq去除
+    # metaphlan4 have duplicate rows，redandency by sort & uniq 
     metaphlan_to_stamp.pl result/metaphlan4/taxonomy.tsv \
       |sort -r | uniq > result/metaphlan4/taxonomy.spf
+    # stat and view, 14 columns, 274 rows
+    csvtk -t stat result/metaphlan4/taxonomy.spf
     head result/metaphlan4/taxonomy.spf
-    # STAMP不支持unclassified，需要过滤掉再使用
+    # STAMP not support unclassified, filtered left 203 row
     grep -v 'unclassified' result/metaphlan4/taxonomy.spf > result/metaphlan4/taxonomy2.spf
+    csvtk -t stat result/metaphlan4/taxonomy2.spf
     head result/metaphlan4/taxonomy2.spf
-    # 下载metadata.txt和taxonomy2.spf使用stamp分析
+    # Download metadata.txt & taxonomy2.spf, and open in STAMP software 结果文件可用STAMP分析
 
-## 2.4 功能组成分析
+## 2.4 Functional composition analysis 功能组成分析
 
-功能组成样本合并合并
+Samples merging table 样本合并为功能组成表
 
-    mkdir -p result/humann3
-    humann_join_tables --input temp/humann3 \
+    mkdir -p result/humann4
+    humann_join_tables --input temp/humann4 \
       --file_name pathabundance \
-      --output result/humann3/pathabundance.tsv
-    # 样本名调整：删除列名多余信息
-    sed -i 's/_Abundance//g' result/humann3/pathabundance.tsv
-    # 统计和预览
-    csvtk -t stat result/humann3/pathabundance.tsv
-    head -n5 result/humann3/pathabundance.tsv
+      --output result/humann4/path.tsv
+    # format sampleID, stat and view, 样本名统一、统计和预览
+    sed -i 's/_Abundance//g' result/humann4/path.tsv
+    csvtk -t stat result/humann4/path.tsv
+    head -n5 result/humann4/path.tsv
 
 标准化为相对丰度relab(1)或百万比cpm(1,000,000)
 
@@ -466,9 +481,9 @@ barplot展示通路的物种组成，如：腺苷核苷酸合成
 Kraken2可以快速完成读长(read)层面的物种注释和定量，还可以进行重叠群(contig)、基因(gene)、宏基因组组装基因组(MAG/bin)层面的序列物种注释。
 
     # 启动kraken2工作环境
-    conda activate kraken2.1.3
+    conda activate kraken2.1.6
     # 记录软件版本
-    kraken2 --version # 2.1.2
+    kraken2 --version # 2.1.6
     mkdir -p temp/kraken2
 
 ### Kraken2物种注释
@@ -2570,9 +2585,11 @@ cd-hit-est-2d比较，只有M X N的计算量
 1.增加了4.5功能注释-耐药基因的处理步骤
 2.增加了6(可选)泛基因组分析部分
 
+**1.24 2025.11.6**
+1. 更新fastp 0.23.4至1.0.1
+
 
 **正在开发中功能**
-
 1.  rgi应用于菌群分析及结果展示
 2.  antisamsh应用于菌群分析及结果展示
 3.  cazy应用于菌群分析及结果展示

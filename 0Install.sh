@@ -10,7 +10,7 @@
 中科院微生物所 Institute of Microbiology, Chinese Academy of Sciences：ftp://download.nmdc.cn/tools/ (FileZilla访问) 
 百度网盘 Baidu Netdisk：https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
 
-# 一、初始化和流程安装 Initialization and pipeline installation
+# 零、初始化和流程安装 Initialization and pipeline installation
 
 ## 初始化：每次开始安装必须运行下面代码 Initialization: The following code must be run every time when installation starts
 
@@ -61,7 +61,7 @@ EasyMetagenome依赖EasyMicrobiome，其包括众多脚本、软件和数据库�
     unzip EasyMicrobiome-master.zip
     mv EasyMicrobiome-master EasyMicrobiome
     
-    # 方法2. 百度网盘链接中 /db/soft/EasyMicrobioe.tar.gz : https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
+    # 方法2. 百度网盘链接中 /db/soft/EasyMicrobiome.tar.gz : https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
    
     # 方法3. git下载，需安装git
     git clone https://github.com/YongxinLiu/EasyMicrobiome
@@ -82,29 +82,28 @@ EasyMetagenome依赖EasyMicrobiome，其包括众多脚本、软件和数据库�
 
 ### 软件管理器Conda
 
-    # 下载最新版miniconda3 v24.9.2 , 安装日期2024/11/12, 141.47 Mb  
+    # 下载最新版miniconda3 v25.9.1 , 安装日期2025/10/22, 154.6 Mb   
     wget -c https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-    
     # 安装，-b批量，-f无提示，-p目录，许可协议打yes
     bash Miniconda3-latest-Linux-x86_64.sh -b -f 
     # 激活，然后关闭终端重开，提示符前出现(base)即成功
     ~/miniconda3/condabin/conda init
     source ~/.bashrc
-    # 查看版本，conda 24.9.2, python 3.12.2
-    conda -V  # 24.9.2
-    python --version  # 3.12.2
+    # 查看版本，conda 25.9.1, python 3.13.9
+    conda -V  # 25.9.1
+    python --version  # 3.13.9
     # 添加常用频道
     conda config --add channels bioconda # 生物软件
     conda config --add channels conda-forge # Highest priority
-    
+    conda config --add channels defaults
+   
     # conda默认配置文件为 ~/.condarc 查看配置文件位置
+    conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/main
+    conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/r
     conda install mamba -c conda-forge -c bioconda -y
     mamba install pandas -c conda-forge -c bioconda -y
     mamba install conda-pack -c conda-forge -c bioconda -y
-    
-    #conda config --set channel_priority strict #设置严格的仓库优先级（最好不要使用）
-    #conda config --set channel_priority flexible #禁用仓库优先级
-    
+
     conda config --show-sources
     # 查看虚拟环境列表 
     conda env list
@@ -147,16 +146,13 @@ BioConda: https://bioconda.github.io/recipes/kneaddata/README.html
 ### kneaddata安装测试
 
     fastqc -v # v0.12.1
-    kneaddata --version # 0.12.0
-    trimmomatic -version # 0.39
+    kneaddata --version # 0.12.3
+    trimmomatic -version # 0.40
     bowtie2 --version # 2.5.4
-    multiqc --version  # 1.25.1
-    fastp --version # 0.24.0
+    multiqc --version  # 1.31
+    fastp --version # 1.0.1
     
-    #3.打包--------------------
-    #安装软件打包，f覆盖输出文件，ignore跳过修改检测
-    mkdir -p ~/project/EasyMetagenome/package
-    cd ~/project/EasyMetagenome/package
+    # 软件打包--移植给同行使用
     n=kneaddata
     conda pack -f --ignore-missing-files -n ${n} -o ${n}.tar.gz
     cd ..
@@ -167,14 +163,15 @@ BioConda: https://bioconda.github.io/recipes/kneaddata/README.html
     kneaddata_database
     # 包括人基因组bowtie2/bmtagger、人类转录组、核糖体RNA和小鼠基因组
     db=~/db
-    # 下载人基因组bowtie2索引 3.44 GB
     mkdir -p ${db}/kneaddata/human
+
+    # 方法1. 自动下载解压人类T2T基因组bowtie2索引 3.6 GB
     kneaddata_database --download human_genome bowtie2 ${db}/kneaddata/human
     
-    # 备用链接下载人类基因组至上述目录，并解压
-    cd ${db}/kneaddata/human
-    wget -c ftp://download.nmdc.cn/tools/meta/kneaddata/human_genome/Homo_sapiens_hg37_and_human_contamination_Bowtie2_v0.1.tar.gz
-    tar xvzf Homo_sapiens_hg37_and_human_contamination_Bowtie2_v0.1.tar.gz
+    # 方法2. 手动下载官网、备用链接或百度云人类基因组并解压
+    # wget -c https://huttenhower.sph.harvard.edu/kneadData_databases/Homo_sapiens_hg39_T2T_Bowtie2_v0.1.tar.gz
+    wget -c ftp://download.nmdc.cn/tools/meta/kneaddata/human/Homo_sapiens_hg39_T2T_Bowtie2_v0.1.tar.gz
+    tar xvzf Homo_sapiens_hg39_T2T_Bowtie2_v0.1.tar.gz
     
     # 下载小鼠基因组bowtie2索引 2.83 GB
     mkdir -p ${db}/kneaddata/mouse
@@ -191,20 +188,139 @@ BioConda: https://bioconda.github.io/recipes/kneaddata/README.html
 自定义基因组构建索引，大多数基因组可在ensembl genome下载。此处以拟南芥为例，访问 http://plants.ensembl.org/index.html ，选择Arabidopsis thaliana —— Download DNA sequence (FASTA)，选择toplevel右键复制链接，填入下面链接处
 
     # 创建子目录
+    conda activate kneaddata
     mkdir -p ${db}/kneaddata/ath
     cd ${db}/kneaddata/ath
     # 下载
     wget -c http://ftp.ensemblgenomes.org/pub/plants/release-51/fasta/arabidopsis_thaliana/dna/Arabidopsis_thaliana.TAIR10.dna.toplevel.fa.gz
     mv Arabidopsis_thaliana.TAIR10.dna.toplevel.fa.gz tair10.fa.gz
-    # wget -c ftp://download.nmdc.cn/tools/meta/kneaddata/tair10.fa.gz
-    # 解压
+    # 解压，建索引
     gunzip tair10.fa.gz
-    # bowtiew建索引，输入文件，输出文件前缀，4线程2分
     bowtie2-build -f tair10.fa tair10 --threads 4
+
 
 # 二、基于读长分析 Read-based (HUMAnN3/Kraken2)
 
-## 宏基因组基于读长的分析 HUMAnN3/MetaPhlAn4/GraPhlAn
+HUMAnN v4.0.0.alpha.1 + MetaPhlAn4 v4.1.1为目前最新兼容，目前最广泛使用的HUMAnN3和HUMAnN2安装见附录
+
+## 宏基因组基于读长的分析 HUMAnN4/MetaPhlAn4
+
+### 方法1. HUMAnN4直接安装
+
+    #1.更新--------------------humann4测试版只适配metaphlan4.1.1
+    conda create -n humann4
+    conda activate humann4
+    conda install -c biobakery humann=4.0.0a1
+    conda install -c bioconda metaphlan=4.1.1
+    humann --version # v4.0.0.alpha.1
+    metaphlan -v # version 4.1.1 (11 Mar 2024)
+
+    #2.测试--------------------
+    humann_test #无报错最后显示 OK
+
+    #3.打包--------------------
+    #安装软件打包，f覆盖输出文件，ignore跳过修改检测
+    n=humann4
+    conda pack -f --ignore-missing-files -n ${n} -o ${n}.tar.gz
+
+### 方法2. Conda环境解压安装
+
+    # 指定conda文件名
+    s=humann4
+    soft=~/miniconda3
+    # 下载，可选微生物所nmdc 或 百度云/db/conda/humann4.tar.gz
+    wget -c ftp://download.nmdc.cn/tools/conda/${s}.tar.gz
+    mkdir -p ${soft}/envs/${s}
+    tar -xvzf ${s}.tar.gz -C ${soft}/envs/${s}
+    conda activate ${s}
+    conda unpack
+    
+### 方法3. HUMAnN4源码安装
+
+    # 准备环境
+    conda create -n humann4 python=3.9 -y
+    conda activate humann4
+    conda install -c bioconda bowtie2 diamond blastp
+
+    # 从源码克隆并安装
+    git clone https://github.com/biobakery/humann.git
+    cd humann
+    git checkout humann-4.0.0.alpha.1   # 或最新分支
+    python setup.py install
+
+    ### HUMAnN4安装测试
+    # 记录核心软件版本
+    humann --version # v4.0.0.alpha.1
+    metaphlan -v # 4.1.1 (11 Mar 2024)
+    diamond help | head -n 1 #  v2.0.15.153
+    # 测试
+    humann_test
+
+### HUMAnN4物种和功能数据库
+
+    # 建立数据库安装目录 database directory
+    db=~/db
+    mkdir -p ${db}/humann4 && cd ${db}/humann4
+    mkdir -p chocophlan chocophlan_ec uniref utility_mapping
+    # 显示可用分类、泛基因组和功能数据库
+    conda activate humann4
+    humann_databases
+
+    # 方法1. wget或百度下载并解压
+    # chocophlan full 42G, 5min
+    wget -c http://huttenhower.sph.harvard.edu/humann_data/chocophlan/chocophlan.v4_alpha.tar.gz
+    time tar xvzf chocophlan.v4_alpha.tar.gz -C ${db}/humann4/chocophlan
+    # chocophlan ec_filtered, 6.5G, 1min
+    wget -c http://huttenhower.sph.harvard.edu/humann_data/chocophlan/chocophlan_EC_FILTERED.v4_alpha.tar.gz
+    time tar xvzf chocophlan_EC_FILTERED.v4_alpha.tar.gz -C ${db}/humann4/chocophlan_ec
+    # uniref, 893M, 13s 1.6G
+    wget -c http://huttenhower.sph.harvard.edu/humann_data/uniprot/uniref_ec_filtered/uniref90_annotated_v4_alpha_ec_filtered.tar.gz
+    time tar xvzf uniref90_annotated_v4_alpha_ec_filtered.tar.gz -C ${db}/humann4/uniref
+    ls -lh ${db}/humann4/uniref/humann4_protein_database_filtered_v2019_06.dmnd
+    # uniref, 2.7G, 19s
+    wget -c http://huttenhower.sph.harvard.edu/humann_data/full_mapping_v4_alpha.tar.gz
+    time tar xvzf full_mapping_v4_alpha.tar.gz -C ${db}/humann4/utility_mapping
+
+    # 方法2. 程序自动安装数据库
+    # 微生物泛基因组 42 GB
+    humann_databases --download chocophlan full ${db}/humann4
+    # 微生物泛基因组 ec过滤版 6.5 GB
+    humann_databases --download chocophlan ec_filtered ${db}/humann4
+    # 功能基因diamond索引 1.6G? 20 GB
+    humann_databases --download uniref uniref90_ec_filtered_diamond ${db}/humann4 
+    # 输助比对数据库 2.7 GB
+    humann_databases --download utility_mapping full ${db}/humann4
+
+    # 设置数据库位置
+    # 显示参数
+    humann_config --print
+    # 如修改线程数，推荐3-8，根据实际情况调整
+    humann_config --update run_modes threads 8
+    # 设置核酸、蛋白和注释库位置
+    humann_config --update database_folders nucleotide ${db}/humann4/chocophlan
+    humann_config --update database_folders protein ${db}/humann4/uniref
+    humann_config --update database_folders utility_mapping ${db}/humann4/utility_mapping
+    # 核对设置结果
+    humann_config --print
+
+### MetaPhlAn4物种数据库
+
+    # 为了适配humann4需要安装mpa_vOct22_CHOCOPhlAnSGB_202403 MetaPhlAn4数据库下载2024数据和索引2.98G+19.87G
+    mkdir -p ${db}/metaphlan4 && cd ${db}/metaphlan4
+
+    # 官网下载 2.7G, 13s; 19G, 3m;
+    wget -c http://cmprod1.cibio.unitn.it/biobakery4/metaphlan_databases/mpa_vOct22_CHOCOPhlAnSGB_202403.tar
+    time tar xvf mpa_vOct22_CHOCOPhlAnSGB_202403.tar
+    wget -c http://cmprod1.cibio.unitn.it/biobakery4/metaphlan_databases/bowtie2_indexes/mpa_vOct22_CHOCOPhlAnSGB_202403_bt2.tar
+    time tar xvf mpa_vOct22_CHOCOPhlAnSGB_202403_bt2.tar
+
+    # 备用：百度网盘 或 微生物所
+    https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315 或 微生物所FTP ftp://download.nmdc.cn/tools/meta 下载压缩包
+    wget -c ftp://download.nmdc.cn/tools/meta/metaphlan4/mpa_vOct22_CHOCOPhlAnSGB_202403.tar
+    wget -c ftp://download.nmdc.cn/tools/meta/metaphlan4/mpa_vOct22_CHOCOPhlAnSGB_202403_bt2.tar.gz
+    tar xvf mpa_vOct22_CHOCOPhlAnSGB_202403.tar
+    tar xvzf mpa_vOct22_CHOCOPhlAnSGB_202403_bt2.tar.gz
+
 
 HUMAnN3+MetaPhlAn4为目前最新版，目前最广泛使用的HUMAnN2安装见附录
 
@@ -338,64 +454,56 @@ HUMAnN3+MetaPhlAn4为目前最新版，目前最广泛使用的HUMAnN2安装见�
 
 kraken2 基于LCA算法的物种注释 https://ccb.jhu.edu/software/kraken/
 
-Kraken2解包安装
-
-    # 下载
-    n=kraken2.1.3
+    # 方法1. Kraken2 Conda包本地解压安装
+    n=kraken2.1.6
+    # 下载 nmdc 或 百度网盘
     wget -c ftp://download.nmdc.cn/tools/conda/${n}.gz
     # 指定安装目录
     mkdir -p ${soft}/envs/${n}
-    tar -xvzf ${n}.tar.gz -C ${soft}/envs/${n}
-    # 启动环境
+    time tar -xvzf ${n}.tar.gz -C ${soft}/envs/${n}
+    # 启动并初始化环境
     conda activate ${n}
-    # 初始化环境
     conda unpack
 
-Kraken2安装指定版本，2024年5月为2.1.3
-
-    n=kraken2.1.3
+    # 方法2. Kraken2在线安装指定版本，2025年11月为2.1.6
+    n=kraken2.1.6
     mamba create -n ${n} -y -c bioconda kraken2=2.1.3 python=3.9
     conda activate ${n}
     mamba install bracken krakentools krona r-optparse -y
     # 记录软件版本
-    kraken2 --version # 2.1.3
+    kraken2 --version # 2.1.6
     less `type bracken | cut -f2 -d '('|cut -f 1 -d ')'`|grep 'VERSION' # 2.9
     # 打包
     conda pack -f --ignore-missing-files -n ${n} -o ${n}.tar.gz
 
 ### Kraken2数据库安装
 
-下载数据库(NCBI每2周更新一次)，记录下载日期和大小。需根据服务器内存、使用目的选择合适方案。--standard标准模式下只下载5种**标准数据库：古菌archaea、细菌bacteria、人类human、载体UniVec_Core、病毒viral**。也可选直接下载作者构建的索引，还包括bracken的索引。链接：https://benlangmead.github.io/aws-indexes/k2 （1/12/2024版）。 注：中科院网络下载较快，家里和农科院较慢，有时新版会有错误，可以退回旧版
+数据库链接：https://benlangmead.github.io/aws-indexes/k2 (2025年10月)。 
 
-方案1. 下载标准+原生动物+真菌 16GB (PlusPF-16) 
+    # 设置版本号，当前为20250714，并建立目录
+    db=~/db
+    v=20250714
+    mkdir -p ${db}/kraken2 && cd ${db}/kraken2
+    mkdir -p pluspf16g pluspf pluspfp
 
-    v=k2_pluspf_16gb_20240904
-    mkdir -p ~/db/kraken2/pluspf16g
-    cd ~/db/kraken2
-    wget -c https://genome-idx.s3.amazonaws.com/kraken/${v}.tar.gz
-    # 备用链接
-    wget -c ftp://download.nmdc.cn/tools/meta/kraken2/${v}.tar.gz
-    tar xvzf ~/db/kraken2/${v}.tar.gz -C ~/db/kraken2/pluspf16g
+方案1. 下载标准+原生动物+真菌，压缩包11.2G，解压14.9GB (PlusPF-16) 
 
-方案2. 下载标准+原生动物+真菌 69GB (PlusPF) 
+    # 官网、微生物所备用链接，或百度网盘下载并上传至kraken2目录
+    wget -c https://genome-idx.s3.amazonaws.com/kraken/k2_pluspf_16_GB_${v}.tar.gz
+    # wget -c ftp://download.nmdc.cn/tools/meta/kraken2/k2_pluspf_16_GB_${v}.tar.gz
+    time tar xvzf ${db}/kraken2/k2_pluspf_16_GB_${v}.tar.gz -C ~/db/kraken2/pluspf16g # 1min
 
-    v=k2_pluspf_20240904
-    mkdir -p ~/db/kraken2/pluspf
-    cd ~/db/kraken2
-    wget -c https://genome-idx.s3.amazonaws.com/kraken/${v}.tar.gz
-    # 备用链接
-    wget -c ftp://download.nmdc.cn/tools/meta/kraken2/${v}.tar.gz
-    tar xvzf ~/db/kraken2/${v}.tar.gz -C ~/db/kraken2/pluspf
+方案2. 下载标准+原生动物+真菌，压缩包77.5G，解压100.6G (PlusPF) 
+
+    wget -c https://genome-idx.s3.amazonaws.com/kraken/k2_pluspf_${v}.tar.gz
+    # wget -c ftp://download.nmdc.cn/tools/meta/kraken2/k2_pluspf_${v}.tar.gz
+    time tar xvzf ${db}/kraken2/k2_pluspf_${v}.tar.gz -C ~/db/kraken2/pluspf # 1min
     
-方案3. 下载标准+原生动物+真菌+植物完整库 144G (PlusPFP) 
+方案3. 下载标准+原生动物+真菌+植物完整库，压缩包158.8G，解压214.5G (PlusPFP) 
 
-指定解压目录，包括时间和类型
-
-    v=k2_pluspfp_20240904
-    mkdir -p ~/db/kraken2/pluspfp
-    cd ~/db/kraken2
-    wget -c https://genome-idx.s3.amazonaws.com/kraken/${v}.tar.gz
-    tar xvzf ${db}/kraken2/${v}.tar.gz -C pluspfp
+    wget -c https://genome-idx.s3.amazonaws.com/kraken/k2_pluspfp_${v}.tar.gz
+    # wget -c ftp://download.nmdc.cn/tools/meta/kraken2/k2_pluspf_${v}.tar.gz
+    time tar xvzf ${db}/kraken2/k2_pluspfp_${v}.tar.gz -C pluspfp # 6min
 
 
 # 三、组装 Assemble-based
@@ -1230,9 +1338,13 @@ https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
     conda pack -f --ignore-missing-files -n ${n} -o ${n}.tar.gz
 
 
-### 删除env环境
+### Conda用法补充
 
     # 删除env环境
     conda env remove --name qiime2-2023.7
-    conda env remove --name qiime2-amplicon-2024.2
     conda env remove --name picrust2
+
+    # 仓库优先级
+    conda config --set channel_priority strict # 设置严格的仓库优先级（最好不要使用）
+    conda config --set channel_priority flexible # 禁用仓库优先级
+    
