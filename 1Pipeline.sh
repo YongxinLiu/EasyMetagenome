@@ -281,11 +281,11 @@ HUMAnN要求双端序列合并的文件作为输入，for循环根据实验设�
     grep -v 'unclassified' result/metaphlan4/taxonomy.spf > result/metaphlan4/taxonomy2.spf
     csvtk -t stat result/metaphlan4/taxonomy2.spf
     head result/metaphlan4/taxonomy2.spf
-    # Download metadata.txt & taxonomy2.spf, and open in STAMP software 结果文件可用STAMP分析
+    # Download metadata.txt & taxonomy2.spf, and open in STAMP software 结果文件下载可用STAMP分析
 
-## 2.4 Functional composition analysis 功能组成分析
+## 2.4 Functional composition analysis (功能组成分析)
 
-Samples merging table 样本合并为功能组成表
+Samples merging table (样本合并为功能组成表)
 
     mkdir -p result/humann4
     humann_join_tables --input temp/humann4 \
@@ -296,100 +296,111 @@ Samples merging table 样本合并为功能组成表
     csvtk -t stat result/humann4/path.tsv
     head -n5 result/humann4/path.tsv
 
-标准化为相对丰度relab(1)或百万比cpm(1,000,000)
+Normolization to relative abundance relab(1) or per million cpm(1,000,000) (标准化为相对丰度relab或百万比cpm)
 
     humann_renorm_table \
-      --input result/humann3/pathabundance.tsv \
+      --input result/humann4/path.tsv \
       --units relab \
-      --output result/humann3/pathabundance_relab.tsv
-    head -n5 result/humann3/pathabundance_relab.tsv
+      --output result/humann4/path_relab.tsv
+    head -n5 result/humann4/path_relab.tsv
 
-分层结果：功能和对应物种表(stratified)和功能组成表(unstratified)
+Stratify into function related species (stratified) and function only (unstratified) 分层为功能包括物种组成和仅功能组成
 
     humann_split_stratified_table \
-      --input result/humann3/pathabundance_relab.tsv \
-      --output result/humann3/ 
+      --input result/humann4/path_relab.tsv \
+      --output result/humann4/ 
 
-### 差异比较和柱状图
+### Difference comparison and bar chart (差异比较和柱状图)
 
-两样本无法组间比较，在pcl层面替换为HMP数据进行统计和可视化。
+* Input: Pathway abundance table result/humann4/path.tsv and experimental design result/metadata.txt
+* Intermediate: Pathway abundance table file containing grouping information result/humann4/path.pcl
+* Output: result/humann4/associate.txt
+*   输入数据：通路丰度表格 result/humann4/path.tsv和实验设计 result/metadata.txt
+*   中间数据：包含分组信息的通路丰度表格文件 result/humann4/path.pcl
+*   输出结果：result/humann4/associate.txt
 
-*   输入数据：通路丰度表格 result/humann3/pathabundance.tsv和实验设计 result/metadata.txt
-*   中间数据：包含分组信息的通路丰度表格文件 result/humann3/pathabundance.pcl
-*   输出结果：result/humann3/associate.txt
+Add grouping to pathway abundance (在通路丰度中添加分组)
 
-在通路丰度中添加分组
+    # List of samples ID (提取样品列表)
+    head -n1 result/humann4/path.tsv | sed 's/# Pathway HUMAnN v4.0.0.alpha.1/SampleID/' | tr '\t' '\n' > temp/header
+    # The sample corresponds to group; in this example group is the 3rd column ($3) 样本对应分组，本示例分组为第3列($3)
+    awk 'BEGIN{FS=OFS="\t"}NR==FNR{a[$1]=$3}NR>FNR{print a[$1]}' result/metadata.txt temp/header | tr '\n' '\t'|sed 's/\t$/\n/' > temp/group
+    # replace grouping
+    cat <(head -n1 result/humann4/path.tsv) temp/group <(tail -n+2 result/humann4/path.tsv) \
+      > result/humann4/path.pcl
+    head -n5 result/humann4/path.pcl
+    tail -n5 result/humann4/path.pcl
 
-    ## 提取样品列表
-    head -n1 result/humann3/pathabundance.tsv | sed 's/# Pathway/SampleID/' | tr '\t' '\n' > temp/header
-    ## 对应分组，本示例分组为第2列($2)，根据实际情况修改
-    awk 'BEGIN{FS=OFS="\t"}NR==FNR{a[$1]=$2}NR>FNR{print a[$1]}' result/metadata.txt temp/header | tr '\n' '\t'|sed 's/\t$/\n/' > temp/group
-    # 合成样本、分组+数据
-    cat <(head -n1 result/humann3/pathabundance.tsv) temp/group <(tail -n+2 result/humann3/pathabundance.tsv) \
-      > result/humann3/pathabundance.pcl
-    head -n5 result/humann3/pathabundance.pcl
-    tail -n5 result/humann3/pathabundance.pcl
+For intergroup comparisons, small sample sizes may no significant differences
+组间比较，样本量少无差异
 
-组间比较，样本量少无差异，结果为4列的文件：通路名字，通路在各个分组的丰度，差异P-value，校正后的Q-value。
-演示数据2样本无法统计，此处替换为HMP的结果演示统计和绘图(上传hmp\_pathabund.pcl，替换pathabundance.pcl为hmp\_pathabund.pcl)。
-
-    wget -c http://www.imeta.science/github/EasyMetagenome/result/humann2/hmp_pathabund.pcl
-    /bin/cp -f hmp_pathabund.pcl result/humann3/
-    # 设置输入文件名
-    pcl=result/humann3/hmp_pathabund.pcl
-    # 统计表格行、列数量
+    # Backup demo data from HMP (hmp_pathabund.pcl replace to path.pcl)
+    # wget -c http://www.imeta.science/github/EasyMetagenome/result/humann2/hmp_pathabund.pcl
+    # cp -f hmp_pathabund.pcl result/humann4/path.pcl
+    # Set input file 设置输入文件名
+    pcl=result/humann4/path.pcl
+    # Count the number of rows and columns in the table 7x4789 (统计表格行、列数量)
     csvtk -t stat ${pcl}
     head -n3 ${pcl} | cut -f 1-5
-    # 按分组KW检验，注意第二列的分组列名
+    # For the KW test with grouping, note the grouping column names in the second column 按分组KW检验，注意第二列的分组列名
     humann_associate --input ${pcl} \
         --focal-metadatum Group --focal-type categorical \
-        --last-metadatum Group --fdr 0.05 \
-        --output result/humann3/associate.txt
-    wc -l result/humann3/associate.txt
-    head -n5 result/humann3/associate.txt
+        --last-metadatum Group --fdr 0.2 \
+        --output result/humann4/associate.txt
+    # 4 colume include ID, mean, P-value and Q-value, 322 rows
+    csvtk -t stat result/humann4/associate.txt
+    head -n5 result/humann4/associate.txt
 
-barplot展示通路的物种组成，如：腺苷核苷酸合成
+barplot show pathway taxonomic composition:  L-lysine fermentation to acetate and butanoate 
+柱状图展示通路的物种组成，如：L-赖氨酸发酵生成乙酸和丁酸
 
-    # 指定差异通路，如 P163-PWY / 1CMET2-PWY，--sort sum metadata 按丰度和分组排序 
+    # Set significant pathway ID from associate.txt，--sort sum metadata 按丰度和分组排序 
+    # eg. P163-PWY (P 0.03, Q 0.09)/ 1CMET2-PWY (P 0.12, Q 0.18)
     path=P163-PWY
+    grep $path result/humann4/associate.txt
     humann_barplot \
         --input ${pcl} --focal-feature ${path} \
         --focal-metadata Group --last-metadata Group \
-        --output result/humann3/barplot_${path}.pdf --sort sum metadata 
+        --output result/humann4/barplot_${path}.pdf --sort sum metadata 
 
-### KEGG注释
+### KEGG annotation (注释)
 
-支持GO、PFAM、eggNOG、level4ec、KEGG的D级KO等注释，详见`humann_regroup_table -h`。
+Support GO, PFAM, eggNOG, level4ec, KEGG, etc. Detail see `humann_regroup_table -h`。
 
-    # 转换基因家族为KO(uniref90_ko)，可选eggNOG(uniref90_eggnog)或酶(uniref90_level4ec)
+    # regroup gene family into KO(uniref90_ko), options eggNOG(uniref90_eggnog) or EC(uniref90_level4ec)
     for i in `tail -n+2 result/metadata.txt|cut -f1`;do
       humann_regroup_table \
-        -i temp/humann3/${i}_genefamilies.tsv \
+        -i temp/humann4/${i}_2_genefamilies.tsv \
         -g uniref90_ko \
-        -o temp/humann3/${i}_ko.tsv
+        -o temp/humann4/${i}_ko.tsv
     done
-    # 合并，并修正样本名
+    # Merge sample and correct name 合并并修正样本名
     humann_join_tables \
-      --input temp/humann3/ \
+      --input temp/humann4/ \
       --file_name ko \
-      --output result/humann3/ko.tsv
-    sed -i '1s/_Abundance-RPKs//g' result/humann3/ko.tsv
-    tail result/humann3/ko.tsv
-    # 与pathabundance类似，可进行标准化renorm、分层stratified、柱状图barplot等操作
+      --output result/humann4/ko.tsv
+    sed -i '1s/_Abundance-RPKs//g' result/humann4/ko.tsv
+    tail result/humann4/ko.tsv
 
-    # 分层结果：功能和对应物种表(stratified)和功能组成表(unstratified)
+Similar to pathabundance, it can perform operations such as normalization, stratified, and barplot.
+与pathabundance类似，可进行标准化renorm、分层stratified、柱状图barplot等操作
+
+Stratify into function related species (stratified) and function only (unstratified)
+分层为功能包括物种组成和仅功能组成
+
     humann_split_stratified_table \
-      --input result/humann3/ko.tsv \
-      --output result/humann3/ 
-    wc -l result/humann3/ko*
+      --input result/humann4/ko.tsv \
+      --output result/humann4/ 
+    wc -l result/humann4/ko*
+
+KO to level 1/2/3, 9, 53 and 332 respectively KO合并为更高层级L3/L2/L1
     
-    # KO合并为高层次L2, L1通路代码KO to level 1/2/3
     summarizeAbundance.py \
-      -i result/humann3/ko_unstratified.tsv \
+      -i result/humann4/ko_unstratified.tsv \
       -m ${db}/EasyMicrobiome/kegg/KO1-4.txt \
       -c 2,3,4 -s ',+,+,' -n raw \
-      -o result/humann3/KEGG
-    wc -l result/humann3/KEGG*
+      -o result/humann4/KEGG
+    wc -l result/humann4/KEGG*
     
 ## 2.5 GraPhlAn图
 

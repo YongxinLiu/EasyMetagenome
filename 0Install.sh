@@ -322,109 +322,25 @@ HUMAnN v4.0.0.alpha.1 + MetaPhlAn4 v4.1.1为目前最新兼容，目前最广泛
     tar xvzf mpa_vOct22_CHOCOPhlAnSGB_202403_bt2.tar.gz
 
 
-HUMAnN3+MetaPhlAn4为目前最新版，目前最广泛使用的HUMAnN2安装见附录
+### 绘图工具graphlan
 
-### HUMAnN3直接安装
+方法1. conda安装包解压安装
 
-    #1.更新--------------------
-    conda create -n humann3
-    conda activate humann3
-    conda install metaphlan=4.1.1 humann=3.9  -c bioconda -c conda-forge -y
-    humann --version # v3.9
-    metaphlan -v # version 4.1.1 (11 Mar 2024)
-    
-    #2.测试--------------------
-    # 测试
-    humann_test #无报错最后显示 OK
-    
-    #3.打包--------------------
-    #安装软件打包，f覆盖输出文件，ignore跳过修改检测
-    cd package
-    n=humann3
-    conda pack -f --ignore-missing-files -n ${n} -o ${n}.tar.gz
-    cd ..
-    
-### HUMAnN3解包安装
-
-    # 下载
-    wget -c ftp://download.nmdc.cn/tools/conda/humann3.tar.gz
-    # 指定安装目录
-    mkdir -p ${soft}/envs/humann3
-    tar -xvzf humann3.tar.gz -C ${soft}/envs/humann3
+    n=graphlan
+    # Download from NMDC ftp://download.nmdc.cn/tools/ or BaiduNetdisk https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
+    wget -c ftp://download.nmdc.cn/tools/conda/${n}.tar.gz
+    mkdir -p ${soft}/envs/${n}
+    tar -xvzf ${n}.tar.gz -C ${soft}/envs/${n}
     # 启动环境
-    conda activate humann3
+    conda activate ${n}
     # 初始化环境
     conda unpack
 
-### HUMAnN3安装测试
+方法2. conda安装
 
-    # 记录核心软件版本
-    humann --version # v3.7
-    metaphlan -v # 4.0.6 (1 Mar 2023)
-    diamond help | head -n 1 #  v2.1.8.162
-    # 测试
-    humann_test
+    conda create -n graphlan graphlan export2graphlan -c bioconda -y
+    graphlan.py --version # GraPhlAn version 1.1.3 (5 June 2018)
 
-### HUMAnN3物种和功能数据库
-
-    # 显示可用分类、泛基因组和功能数据库
-    humann_databases
-    
-    # 安装数据库
-    cd ${db}
-    mkdir -p ${db}/humann3 # 建立下载目录
-    # 微生物泛基因组 16 GB
-    humann_databases --download chocophlan full ${db}/humann3
-    # 功能基因diamond索引 20 GB
-    humann_databases --download uniref uniref90_diamond ${db}/humann3
-    # 输助比对数据库 2.6 GB
-    humann_databases --download utility_mapping full ${db}/humann3
-    
-    # humann3数据库无法自动下载，备用链接下载安装
-    wget -c ftp://download.nmdc.cn/tools/meta/humann3/full_chocophlan.v201901_v31.tar.gz
-    wget -c ftp://download.nmdc.cn/tools/meta/humann3/uniref90_annotated_v201901b_full.tar.gz
-    wget -c ftp://download.nmdc.cn/tools/meta/humann3/full_mapping_v201901b.tar.gz
-    # 安装、解压
-    mkdir -p ${db}/humann3/chocophlan
-    tar xvzf full_chocophlan.v201901_v31.tar.gz -C ${db}/humann3/chocophlan
-    mkdir -p ${db}/humann3/uniref
-    tar xvzf uniref90_annotated_v201901b_full.tar.gz -C ${db}/humann3/uniref
-    mkdir -p ${db}/humann3/utility_mapping			66	
-    tar xvzf full_mapping_v201901b.tar.gz -C ${db}/humann3/utility_mapping
-    
-    # 设置数据库位置
-    # 显示参数
-    humann_config --print
-    # 如修改线程数，推荐3-8，根据实际情况调整
-    humann_config --update run_modes threads 8
-    # 设置核酸、蛋白和注释库位置
-    humann_config --update database_folders nucleotide ${db}/humann3/chocophlan
-    humann_config --update database_folders protein ${db}/humann3/uniref
-    humann_config --update database_folders utility_mapping ${db}/humann3/utility_mapping
-    # 核对设置结果
-    humann_config --print
-
-### MetaPhlAn4物种数据库
-    
-    # MetaPhlAn4数据库下载2024数据和索引2.98G+19.87G
-    cd ~/project/EasyMetagenome
-    mkdir -p ~/db/metaphlan4
-    cd ~/db/metaphlan4
-    
-    # 官网下载
-    wget -c http://cmprod1.cibio.unitn.it/biobakery4/metaphlan_databases/mpa_vOct22_CHOCOPhlAnSGB_202403.tar
-    wget -c http://cmprod1.cibio.unitn.it/biobakery4/metaphlan_databases/bowtie2_indexes/mpa_vOct22_CHOCOPhlAnSGB_202403_bt2.tar
-    tar xvf mpa_vOct22_CHOCOPhlAnSGB_202403.tar
-    tar xvf mpa_vOct22_CHOCOPhlAnSGB_202403_bt2.tar
-    
-    # 官方没有压缩体积大下载慢，备用国内百度链接：https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315 或 微生物所FTP ftp://download.nmdc.cn/tools/meta 下载压缩包
-    wget -c ftp://download.nmdc.cn/tools/meta/metaphlan4/mpa_vOct22_CHOCOPhlAnSGB_202403.tar.gz
-    wget -c ftp://download.nmdc.cn/tools/meta/metaphlan4/mpa_vOct22_CHOCOPhlAnSGB_202403_bt2.tar.gz
-    tar xvzf mpa_vOct22_CHOCOPhlAnSGB_202403.tar.gz
-    tar xvzf mpa_vOct22_CHOCOPhlAnSGB_202403_bt2.tar.gz
-    # 可选(制作下载文件和md5值)
-    gunzip mpa_vOct22_CHOCOPhlAnSGB_202403_bt2.tar.gz
-    md5sum mpa_vOct22_CHOCOPhlAnSGB_202403_bt2.tar > mpa_vOct22_CHOCOPhlAnSGB_202403_bt2.md5
 
 ## 生物标记鉴定和可视化LEfSe
 
@@ -1336,6 +1252,111 @@ https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
 
     n=kneaddata
     conda pack -f --ignore-missing-files -n ${n} -o ${n}.tar.gz
+
+
+HUMAnN3+MetaPhlAn4为目前最新版，目前最广泛使用的HUMAnN2安装见附录
+
+### HUMAnN3直接安装
+
+    #1.更新--------------------
+    conda create -n humann3
+    conda activate humann3
+    conda install metaphlan=4.1.1 humann=3.9  -c bioconda -c conda-forge -y
+    humann --version # v3.9
+    metaphlan -v # version 4.1.1 (11 Mar 2024)
+    
+    #2.测试--------------------
+    # 测试
+    humann_test #无报错最后显示 OK
+    
+    #3.打包--------------------
+    #安装软件打包，f覆盖输出文件，ignore跳过修改检测
+    cd package
+    n=humann3
+    conda pack -f --ignore-missing-files -n ${n} -o ${n}.tar.gz
+    cd ..
+    
+### HUMAnN3解包安装
+
+    # 下载
+    wget -c ftp://download.nmdc.cn/tools/conda/humann3.tar.gz
+    # 指定安装目录
+    mkdir -p ${soft}/envs/humann3
+    tar -xvzf humann3.tar.gz -C ${soft}/envs/humann3
+    # 启动环境
+    conda activate humann3
+    # 初始化环境
+    conda unpack
+
+### HUMAnN3安装测试
+
+    # 记录核心软件版本
+    humann --version # v3.7
+    metaphlan -v # 4.0.6 (1 Mar 2023)
+    diamond help | head -n 1 #  v2.1.8.162
+    # 测试
+    humann_test
+
+### HUMAnN3物种和功能数据库
+
+    # 显示可用分类、泛基因组和功能数据库
+    humann_databases
+    
+    # 安装数据库
+    cd ${db}
+    mkdir -p ${db}/humann3 # 建立下载目录
+    # 微生物泛基因组 16 GB
+    humann_databases --download chocophlan full ${db}/humann3
+    # 功能基因diamond索引 20 GB
+    humann_databases --download uniref uniref90_diamond ${db}/humann3
+    # 输助比对数据库 2.6 GB
+    humann_databases --download utility_mapping full ${db}/humann3
+    
+    # humann3数据库无法自动下载，备用链接下载安装
+    wget -c ftp://download.nmdc.cn/tools/meta/humann3/full_chocophlan.v201901_v31.tar.gz
+    wget -c ftp://download.nmdc.cn/tools/meta/humann3/uniref90_annotated_v201901b_full.tar.gz
+    wget -c ftp://download.nmdc.cn/tools/meta/humann3/full_mapping_v201901b.tar.gz
+    # 安装、解压
+    mkdir -p ${db}/humann3/chocophlan
+    tar xvzf full_chocophlan.v201901_v31.tar.gz -C ${db}/humann3/chocophlan
+    mkdir -p ${db}/humann3/uniref
+    tar xvzf uniref90_annotated_v201901b_full.tar.gz -C ${db}/humann3/uniref
+    mkdir -p ${db}/humann3/utility_mapping			66	
+    tar xvzf full_mapping_v201901b.tar.gz -C ${db}/humann3/utility_mapping
+    
+    # 设置数据库位置
+    # 显示参数
+    humann_config --print
+    # 如修改线程数，推荐3-8，根据实际情况调整
+    humann_config --update run_modes threads 8
+    # 设置核酸、蛋白和注释库位置
+    humann_config --update database_folders nucleotide ${db}/humann3/chocophlan
+    humann_config --update database_folders protein ${db}/humann3/uniref
+    humann_config --update database_folders utility_mapping ${db}/humann3/utility_mapping
+    # 核对设置结果
+    humann_config --print
+
+### MetaPhlAn4物种数据库
+    
+    # MetaPhlAn4数据库下载2024数据和索引2.98G+19.87G
+    cd ~/project/EasyMetagenome
+    mkdir -p ~/db/metaphlan4
+    cd ~/db/metaphlan4
+    
+    # 官网下载
+    wget -c http://cmprod1.cibio.unitn.it/biobakery4/metaphlan_databases/mpa_vOct22_CHOCOPhlAnSGB_202403.tar
+    wget -c http://cmprod1.cibio.unitn.it/biobakery4/metaphlan_databases/bowtie2_indexes/mpa_vOct22_CHOCOPhlAnSGB_202403_bt2.tar
+    tar xvf mpa_vOct22_CHOCOPhlAnSGB_202403.tar
+    tar xvf mpa_vOct22_CHOCOPhlAnSGB_202403_bt2.tar
+    
+    # 官方没有压缩体积大下载慢，备用国内百度链接：https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315 或 微生物所FTP ftp://download.nmdc.cn/tools/meta 下载压缩包
+    wget -c ftp://download.nmdc.cn/tools/meta/metaphlan4/mpa_vOct22_CHOCOPhlAnSGB_202403.tar.gz
+    wget -c ftp://download.nmdc.cn/tools/meta/metaphlan4/mpa_vOct22_CHOCOPhlAnSGB_202403_bt2.tar.gz
+    tar xvzf mpa_vOct22_CHOCOPhlAnSGB_202403.tar.gz
+    tar xvzf mpa_vOct22_CHOCOPhlAnSGB_202403_bt2.tar.gz
+    # 可选(制作下载文件和md5值)
+    gunzip mpa_vOct22_CHOCOPhlAnSGB_202403_bt2.tar.gz
+    md5sum mpa_vOct22_CHOCOPhlAnSGB_202403_bt2.tar > mpa_vOct22_CHOCOPhlAnSGB_202403_bt2.md5
 
 
 ### Conda用法补充

@@ -1,28 +1,27 @@
+# EasyMetagenome - A user-friendly and flexible pipeline for shotgun metagenomic analysis in microbiome research
 # 易宏基因组——简单易用的宏基因组分析流程
 
-# EasyMetagenome - A user-friendly and flexible pipeline for shotgun metagenomic analysis in microbiome research
+Version(版本)：v1.24
 
-版本Version：v1.24
-
-更新时间Update：2025/11/6
+Update(更新)：2025/11/6
 
 ![image](https://github.com/baidefeng/EasyMetagenome/blob/master/result/EasyMetagenomePipeline2.jpg)
-
-**图1. 易宏基因组的工作流程：分析宏基因组测序从原始数据到物种和功能组成表.**
-
-从原始数据到物种和功能组成表可分为四步进行：1.数据的预处理,包括分析前准备工作(安装软件和数据库、环境变量设置和元数据和序列文件检查)、Fastp质量控制和Kneaddata去宿主。2.基于读长分析(HUMAnN3+MetaPhlAn4+Kraken2), 包括准备HUMAnN输入文件、HUMAnN计算物种和功能组成、物种组成表整理、功能组成分析、GraPhlAn图绘制、LEfSe差异分析物种和Kraken2+Bracken物种注释和丰度估计。3.组装分析，包括组装、基因预测/去冗余和定量、功能基因注释和Kraken2基因物种注释。4.分箱挖掘单菌基因组，包括MetaWRAP混合样本分箱、dRep去冗余种/株基因组集、CoverM基因组定量、GTDB-tk物种注释和进化树
 
 **Figure 1. EasyMetagenome Pipeline from raw data to taxonomic & functional table for analyzing metagenomic sequencing.**
 
 The process from raw data to species and functional composition tables can be divided into four steps: 1. Data preprocessing, including pre-analysis preparation (installing software and database, setting environmental variables and checking metadata and sequence files), Fastp quality control and Kneaddata host removal. 2. Read-based analysis (HUMAnN3+MetaPhlAn4+Kraken2), including preparation of HUMAnN input files, calculation of species and functional composition by HUMAnN, arrangement of species composition tables, functional composition analysis, GraPhlAn map drawing, LEfSe differential analysis of species and Kraken2+Bracken species annotation and abundance estimation. 3. Assembly analysis, including assembly, gene prediction/de-redundancy and quantification, functional gene annotation and Kraken2 gene species annotation. 4. Binning and mining of single bacterial genomes, including MetaWRAP mixed sample binning, dRep de-redundant species/strain genome sets, CoverM genome quantification, GTDB-tk species annotation and evolutionary tree.
 
-## &#x20;目录 Table of contents
+**图1. 易宏基因组的工作流程：分析宏基因组测序从原始数据到物种和功能组成表.**
 
-### EasyMetagenome
+从原始数据到物种和功能组成表可分为四步进行：1.数据的预处理,包括分析前准备工作(安装软件和数据库、环境变量设置和元数据和序列文件检查)、Fastp质量控制和Kneaddata去宿主。2.基于读长分析(HUMAnN4+MetaPhlAn4+Kraken2), 包括准备HUMAnN输入文件、HUMAnN计算物种和功能组成、物种组成表整理、功能组成分析、GraPhlAn图绘制、LEfSe差异分析物种和Kraken2+Bracken物种注释和丰度估计。3.组装分析，包括组装、基因预测/去冗余和定量、功能基因注释和Kraken2基因物种注释。4.分箱挖掘单菌基因组，包括MetaWRAP混合样本分箱、dRep去冗余种/株基因组集、CoverM基因组定量、GTDB-tk物种注释和进化树
+
+## Table of contents (目录)
+
+### EasyMetagenome (易宏基因组)
 
 *   01PPT
-
-    01PPT文件夹中包含宏基因组分析相关基础知识介绍和经验总结 01PPT folder contains the basic knowledge introduction and experience summary of metagenomic analysis
+    01PPT folder contains the basic knowledge introduction and experience summary of metagenomic analysis.
+    01PPT文件夹中包含宏基因组分析相关基础知识介绍和经验总结。
 *   seq
 
     seq文件夹包含测试用fastq压缩文件  The seq folder contains the fastq compressed files for testing
