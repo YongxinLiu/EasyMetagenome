@@ -322,21 +322,22 @@ HUMAnN v4.0.0.alpha.1 + MetaPhlAn4 v4.1.1为目前最新兼容，目前最广泛
     tar xvzf mpa_vOct22_CHOCOPhlAnSGB_202403_bt2.tar.gz
 
 
-### 绘图工具graphlan
+### GraPhlAn high-quality circular representations of taxonomic and phylogenetic trees 高颜值物种或进化树
 
-方法1. conda安装包解压安装
+Method 1. Unzip and install the conda installation package
+方法1. Conda安装包解压安装
 
     n=graphlan
-    # Download from NMDC ftp://download.nmdc.cn/tools/ or BaiduNetdisk https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
+    # Download from NMDC ftp://download.nmdc.cn/tools/conda or BaiduNetdisk db/conda from https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
     wget -c ftp://download.nmdc.cn/tools/conda/${n}.tar.gz
     mkdir -p ${soft}/envs/${n}
     tar -xvzf ${n}.tar.gz -C ${soft}/envs/${n}
-    # 启动环境
+    # activate and initial conda enviroment 启动和初始化环境
     conda activate ${n}
-    # 初始化环境
     conda unpack
 
-方法2. conda安装
+Method 2. Conda installation
+方法2. Conda安装
 
     conda create -n graphlan graphlan export2graphlan -c bioconda -y
     graphlan.py --version # GraPhlAn version 1.1.3 (5 June 2018)

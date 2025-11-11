@@ -402,28 +402,32 @@ KO to level 1/2/3, 9, 53 and 332 respectively KO合并为更高层级L3/L2/L1
       -o result/humann4/KEGG
     wc -l result/humann4/KEGG*
     
-## 2.5 GraPhlAn图
+## 2.5 GraPhlAn taxonomic and phylogenetic trees 高颜值物种或进化树
 
-    # metaphlan2 to graphlan
-    conda activate humann2
+Method 1. Use export2graphlan to create plotting files
+方法1. 使用export2graphlan制作绘图文件
+
+    conda activate graphlan
+    # Detail parameters in PPT or run `export2graphlan.py --help`
     export2graphlan.py --skip_rows 1,2 -i result/metaphlan4/taxonomy.tsv \
       --tree temp/merged_abundance.tree.txt \
       --annotation temp/merged_abundance.annot.txt \
-      --most_abundant 1000 --abundance_threshold 20 --least_biomarkers 10 \
+      --most_abundant 100 --abundance_threshold 20 --least_biomarkers 10 \
       --annotations 3,4 --external_annotations 7
-    # 参数说明见PPT，或运行 export2graphlan.py --help
     # graphlan annotation
     graphlan_annotate.py --annot temp/merged_abundance.annot.txt \
       temp/merged_abundance.tree.txt  temp/merged_abundance.xml
     # output PDF figure, annoat and legend
-    graphlan.py temp/merged_abundance.xml result/metaphlan4/graphlan.pdf \
-      --external_legends 
+    graphlan.py temp/merged_abundance.xml result/metaphlan4/graphlan.pdf --external_legends 
+
+方法2. 使用export2graphlan制作绘图文件
+
     # GraPhlAn Plot
-    cd result
-    bash ./taxonomy_modified.sh
-    Rscript ./graphlan_plot55.r --input metaphlan4/taxonomy_modified.spf \
-    	--design metadata.txt --type heatmap --output metaphlan4/Heat_Structures
-    cd ..
+    bash ${db}/EasyMicrobiome/script/taxonomy_modified.sh \
+      -i result/metaphlan4/taxonomy.spf \
+      -o result/metaphlan4/taxonomy_modified.spf
+    Rscript ${db}/EasyMicrobiome/script/graphlan_plot55.r --input result/metaphlan4/taxonomy_modified.spf \
+    	--design result/metadata.txt --type heatmap --output metaphlan4/graphlanHeatmap
 
 ## 2.6 LEfSe差异分析物种
 
