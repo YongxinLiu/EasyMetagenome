@@ -1,65 +1,76 @@
 [TOC]
 
-# 易宏基因组流程 EasyMetagenome Pipeline
+# EasyMetagenome Pipeline (易宏基因组流程 )
 
-    # 版本Version: 1.24, 2025/11/6
-    # 操作系统Operation System: Linux Ubuntu 22.04+ / CentOS 7.7+ 
+    # Authors(作者): Yong-Xin Liu(刘永鑫), Defeng Bai(白德凤), Tong Chen(陈同) et al.
+    # Version(版本): 1.24, 2025/11/12
+    # Operation System(操作系统): Linux Ubuntu 22.04+ / CentOS 7.7+ 
 
-# 一、数据预处理 Data preprocessing
+# 1. Data preprocessing(数据预处理)
 
-## 1.1 准备工作 Preparing
+## 1.1 Preparing(准备工作)
 
+1. First-time use, please refer to the `0Install.sh` to install the software and database (approximately 1-3 days, only once).
+2. Copy the EasyMetagenome workflow `1Pipeline.sh` to the project folder, e.g., in this case, `meta`.
+3. Prepare the sequencing data (seq/*.fq.gz) and sample metadata (result/metadata.txt) in the project folder.
 1.  首次使用请参照`0Install.sh`脚本，安装软件和数据库(大约1-3天，仅一次)
 2.  易宏基因组(EasyMetagenome)流程`1Pipeline.sh`复制到项目文件夹，如本次为meta
 3.  项目文件夹准备测序数据(seq/*.fq.gz)和样本元数据(result/metadata.txt)
 
-**环境变量设置 Environment variable settings**
-**分析前必须运行The follwoing paragraph must run before，设置数据库、软件和工作目录**
+**Software, database and work directory settings(数据库、软件和工作目录设置)**
+**The follwoing paragraph must run before(分析前必须运行)**
 
-    # Conda软件安装目录，`conda env list`查看，如/anaconda3
+    # Conda directory(软件安装目录), e.g. /anaconda3 , `conda env list` view software list,
     soft=~/miniconda3
-    # 数据库database(db)位置，如管理员/db，个人~/db
+    # database(db, 数据库位置), e.g. /db or ~/db
     db=~/db
-    # 设置工作目录work directory(wd)，如meta
+    # work directory(wd, 工作目录)，e.g. meta
     wd=~/meta
-    # 创建并进入工作目录
+    # Create and enter the working directory 创建并进入工作目录
     mkdir -p $wd && cd $wd
-    # 创建3个常用子目录：序列，临时文件和结果
+    # Create sequences, temporary files, and a results directory 创建序列，临时文件和结果目录
     mkdir -p seq temp result
-    # 添加分析所需的软件、脚本至环境变量，添加至~/.bashrc中自动加载
+    # Add software/scripts to environment variables 添加软件/脚本至环境变量
     PATH=$soft/bin:$soft/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$db/EasyMicrobiome/linux:$db/EasyMicrobiome/script
     echo $PATH
 
-**元数据和序列文件 Metadata and Sequence Files**
+**Metadata and sequence files (元数据和序列文件) **
 
-元数据metadata
+Metadata (元数据)
 
-    # 编写元数据metadata.txt并保存至result目录，此处下载演示
+    # Edit metadata in Excel then save txt format in result, demo in result or download (编写元数据metadata.txt并保存至result目录，此处下载演示)
     wget http://www.imeta.science/github/EasyMetagenome/result/metadata.txt
     mv metadata.txt result/metadata.txt
 
     # 预览Preview: 检查文件格式，^I为制表符，$为Linux换行，^M$为Windows回车，^M为Mac换行符
     cat -A result/metadata.txt
     # 格式化Format：转换Windows回车为Linux换行，去除空格
-    sed -i 's/\r//;s/ //g' result/metadata.txt
+    sed -i 's/\r//' result/metadata.txt
     cat -A result/metadata.txt
 
-序列文件sequencing data
+Sequencing data (序列文件)
 
-    # 用户使用filezilla上传测序文件至seq目录
+    # Using filezilla upload to seq directory (用户使用filezilla上传测序文件至seq目录)
+    # This test uses theChina National Center for Bioinformation's GSA network for downloading data. Backup links are also provided via iMeta and BaiduNetDisk.
     # 本次测试国家生信息中心GSA网络下载，同时提供iMeta、百度网盘备用站点数据下载链接
-    # seq 目录下已经有测试文件，下载跳过
-    cd seq/
-    # 站点1. GSA下载链接，按实验设计编号批量下载并改名
-    awk '{system("wget -c ftp://download.big.ac.cn/gsa/"$5"/"$6"/"$6"_f1.fq.gz -O seq/"$1"_1.fq.gz")}' \
+    
+    # Site 1. GSA download links and batch rename by metadata (站点1. 国家生信息中心下载链接，按实验设计编号批量下载并改名)
+    # GSA: https://ngdc.cncb.ac.cn/gsa/ search CRA032890, find link test one example C3
+    wget -c ftp://download.big.ac.cn/gsa5/CRA032890/1/CRR2274865/CRR2274865_r1.fq.gz -O seq/C3_1.fq.gz
+    wget -c ftp://download.big.ac.cn/gsa5/CRA032890/1/CRR2274865/CRR2274865_r2.fq.gz -O seq/C3_2.fq.gz
+    awk 'BEGIN{OFS=FS="\t"}{system("wget -c ftp://download.big.ac.cn/gsa5/"$8"/"$9"/"$9"_r1.fq.gz -O seq/"$1"_1.fq.gz")}' \
         <(tail -n+2 result/metadata.txt)
-    awk '{system("wget -c ftp://download.big.ac.cn/gsa/"$5"/"$6"/"$6"_r2.fq.gz -O seq/"$1"_2.fq.gz")}' \
+    awk 'BEGIN{OFS=FS="\t"}{system("wget -c ftp://download.big.ac.cn/gsa5/"$8"/"$9"/"$9"_r2.fq.gz -O seq/"$1"_2.fq.gz")}' \
         <(tail -n+2 result/metadata.txt)
-    # 站点2. iMeta下载链接
+
+    # Site 2. iMeta Science download link （站点2. iMeta下载链接）
+    cd seq
     awk '{system("wget -c http://www.imeta.science/github/EasyMetagenome/seq/"$1"_1.fq.gz")}' <(tail -n+2 ../result/metadata.txt)
     awk '{system("wget -c http://www.imeta.science/github/EasyMetagenome/seq/"$1"_2.fq.gz")}' <(tail -n+2 ../result/metadata.txt)
-    # 站点3. 百度网盘链接中 /db/meta/seq 目录: https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
     cd ..
+
+    # Site 3. BaiduNetDisk (站点3. 百度网盘) in /db/meta/seq directory from https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
+
     # ls查看文件大小，-l 列出详细信息 (l: list)，-sh 显示人类可读方式文件大小 (s: size; h: human readable)
     ls -lsh seq/*.fq.gz
     # 统计
@@ -429,16 +440,16 @@ Method 1. Use export2graphlan to create plotting files
     Rscript ${db}/EasyMicrobiome/script/graphlan_plot55.r --input result/metaphlan4/taxonomy_modified.spf \
     	--design result/metadata.txt --type heatmap --output metaphlan4/graphlanHeatmap
 
-## 2.6 LEfSe差异分析物种
+## 2.6 LEfSe 差异分析物种
 
-*   输入文件：物种丰度表result/metaphlan2/taxonomy.tsv
+*   输入文件：物种丰度表result/metaphlan4/taxonomy.tsv
 *   输入文件：样品分组信息 result/metadata.txt
-*   中间文件：整合后用于LefSe分析的文件 result/metaphlan2/lefse.txt，这个文件可以提供给www\.ehbio.com/ImageGP 用于在线LefSE分析
+*   中间文件：整合后用于LefSe分析的文件 result/metaphlan4/lefse.txt，可选 www.ehbio.com/ImageGP 在线LefSE分析
 *   LefSe结果输出：result/metaphlan2/目录下lefse开头和feature开头的文件
 
-前面演示数据仅有2个样本，无法进行差异比较。下面使用result12目录中由12个样本生成的结果表进行演示
+前面演示数据仅有6个样本，无差异差异。下面使用result12目录中由12个样本生成的结果表进行演示
 
-    # 设置结果目录，自己的数据使用result，演示用result12
+    # 设置结果目录，自己的数据使用result，此用演示12个样本结果用result12
     result=result12
     # 如果没有，请下载演示数据
     wget -c http://www.imeta.science/db/EasyMetagenome/result12.zip
@@ -447,10 +458,12 @@ Method 1. Use export2graphlan to create plotting files
 准备输入文件，修改样本品为组名(可手动修改)
 
     # 提取样本行替换为每个样本一行，修改ID为SampleID
-    head -n1 $result/metaphlan2/taxonomy.tsv|tr '\t' '\n'|sed '1 s/ID/SampleID/' >temp/sampleid
+    sed -i 's/\r//g' $result/metaphlan2/taxonomy.tsv
+    head -n1 $result/metaphlan2/taxonomy.tsv|tr '\t' '\n'|sed '1 s/ID/SampleID/' > temp/sampleid
     head -n3 temp/sampleid
     # 提取SampleID对应的分组Group(假设为metadata.txt中第二列$2)，替换换行\n为制表符\t，再把行末制表符\t替换回换行
-    awk 'BEGIN{OFS=FS="\t"}NR==FNR{a[$1]=$2}NR>FNR{print a[$1]}' $result/metadata.txt temp/sampleid|tr '\n' '\t'|sed 's/\t$/\n/' >groupid
+    awk 'BEGIN{OFS=FS="\t"}NR==FNR{a[$1]=$2}NR>FNR{print a[$1]}' \
+      $result/metadata.txt temp/sampleid|tr '\n' '\t'|sed 's/\t$/\n/' >groupid
     cat groupid
     # 合并分组和数据(替换表头)
     cat groupid <(tail -n+2 $result/metaphlan2/taxonomy.tsv) > $result/metaphlan2/lefse.txt
@@ -460,13 +473,16 @@ Method 1. Use export2graphlan to create plotting files
 
 方法2. LEfSe命令行分析
 
+    # 最新版教程：https://github.com/SegataLab/lefse/blob/master/example/bioconda-lefse_run.sh
     conda activate lefse
     result=result12
+    lefse_run.py -h # LEfSe 1.1.01
     # 格式转换为lefse内部格式
-    lefse-format_input.py $result/metaphlan2/lefse.txt \
+    lefse_format_input.py $result/metaphlan2/lefse.txt \
       temp/input.in -c 1 -o 1000000
+    # KeyError: 'subject', demo: https://raw.githubusercontent.com/biobakery/biobakery/master/test_suite/biobakery_tests/data/lefse/input/hmp_small_aerobiosis.txt
     # 运行lefse(样本必须有重复和分组)
-    run_lefse.py temp/input.in temp/input.res
+    lefse_run.py temp/input.in temp/input.res
 
     # 绘制物种树注释差异
     lefse-plot_cladogram.py temp/input.res \
@@ -491,37 +507,39 @@ Method 1. Use export2graphlan to create plotting files
       temp/input.in temp/input.res \
       $result/metaphlan2/lefse_
 
-## 2.7 Kraken2+Bracken物种注释和丰度估计
+## 2.7 Kraken2+Bracken taxonomic classification and abundance estimation 物种注释和丰度估计
 
+Kraken2 can quickly perform species annotation and quantification at the read level, 
+and can also perform sequence species annotation at the contig, gene, and metagenomic assembly (MAG/bin) levels.
 Kraken2可以快速完成读长(read)层面的物种注释和定量，还可以进行重叠群(contig)、基因(gene)、宏基因组组装基因组(MAG/bin)层面的序列物种注释。
 
-    # 启动kraken2工作环境
+    # Start the Kraken2 working environment(启动kraken2工作环境)
     conda activate kraken2.1.6
-    # 记录软件版本
+    # Record software version(记录软件版本)
     kraken2 --version # 2.1.6
     mkdir -p temp/kraken2
 
-### Kraken2物种注释
+### Kraken2 taxonomic classification 物种注释
 
-输入：temp/qc/{1}_?.fastq 质控后的数据，{1}代表样本名；
-参考数据库：-db ${db}/kraken2/pluspf16g/
-输出结果：每个样本单独输出，temp/kraken2/中的{1}_report和{1}_output
-整合物种丰度表输出结果：result/kraken2/taxonomy_count.txt 
+Input(输入): temp/hr/{1}_?.fastq, {1} representative sample name 代表样本名
+Database(数据库): -db ${db}/kraken2/pluspf16g/
+Output(输出结果): temp/kraken2/{1}_report and {1}_output
+Feature table(物种丰度表): result/kraken2/taxonomy_count.txt 
 
-(可选) 单样本注释，5m，50G大数据库较5G库注释比例提高10~20%。以C1为例，在2023/3/14版中，8g: 31.75%; 16g: 52.35%; 150g: 71.98%；同为16g，2023/10/9版本为63.88%
-
-    # 根据电脑内存由小到大选择下面3个数据库
-    # pluspf16g/pluspf(55G)/pluspfp(120G)
+    # Select a database based on server memory size or specific analytical needs
+    # 根据服务器内存大小或具体分析需求选择数据库
+    # pluspf16g for small memory / pluspf(100G) for human/animial / pluspfp(214G) for plant/soil
     type=pluspf16g
-    # demon sample
-    i=C1
+    # demon sample, 2min
+    i=`tail -n+2 result/metadata.txt|cut -f1 | head -n1`
     time kraken2 --db ${db}/kraken2/${type}/ \
       --paired temp/hr/${i}_?.fastq \
       --threads 2 --use-names --report-zero-counts \
       --report temp/kraken2/${i}.report \
       --output temp/kraken2/${i}.output
 
-多样本并行生成report，1样本8线程逐个运行，内存大但速度快，不建议用多任务并行
+Batch processing of multiple samples to generate reports consumes a lot of memory but is fast; therefore, multi-task parallelism is not recommended.
+多样本批处理生成report，内存消耗大但速度快，不建议用多任务并行
 
     for i in `tail -n+2 result/metadata.txt | cut -f1`;do
       kraken2 --db ${db}/kraken2/${type} \

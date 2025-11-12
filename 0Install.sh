@@ -345,22 +345,17 @@ Method 2. Conda installation
 
 ## 生物标记鉴定和可视化LEfSe
 
-方法1. 在线ImageGP <http://www.bic.ac.cn/ImageGP/> 选择左侧LEfSe
+方法1. 在线ImageGP <http://www.bic.ac.cn/ImageGP/> 选择左侧LEfSe
 
 方法2. 下载conda预安装包解压
 
     n=lefse
-    # 下载
     wget -c ftp://download.nmdc.cn/tools/conda/${n}.tar.gz
-    # 指定安装目录
     mkdir -p ${soft}/envs/${n}
     tar -xvzf ${n}.tar.gz -C ${soft}/envs/${n}
-    # 启动环境
     conda activate ${n}
-    # 初始化环境
     conda unpack
-
-    run_lefse.py -h #LEfSe 1.0
+    lefse_run.py -h # LEfSe 1.1.01
 
 方法3. 直接安装：经常无法安装，安装的代码也有可能存在问题
 
