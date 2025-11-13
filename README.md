@@ -38,58 +38,57 @@ The process from raw data to species and functional composition tables can be di
     The binning folder stores the result files used for binning analysis
     binning文件夹保存用于分箱分析的结果文件  
 *   appendix
-
     1.  history
-
-        history文件夹保存分析流程的历史版本  The history folder stores historical versions of the analysis process
+        The history folder stores historical versions of the analysis process
+        history文件夹保存分析流程的历史版本
     2.  makefile
+        makefile version of EasyMetagenome 
     3.  statplot\_example
+        The statplot\_example folder contains two examples of visualizing metagenomic analysis results
+        statplot\_example文件夹包含宏基因组分析结果可视化两个案例  
 
-        statplot\_example文件夹包含宏基因组分析结果可视化两个案例  The statplot\_example folder contains two examples of visualizing metagenomic analysis results
 *   0Install.sh
-
-    软件和数据库安装流程 Software and database installation pipeline
+    Software and database installation pipeline
+    软件和数据库安装流程
 *   1Pipeline.sh
-
-    分析流程 Analysis pipeline
+    Analysis pipeline 分析流程
 *   2StatPlot.sh
-
-    统计和可视化 Statistics and visualization
+    Statistics and visualization 统计和可视化 
 *   3Init.sh
-
-    初始设置 Initial Setup
+    Initial Setup 初始设置 
 *   environment.yml
+    Current version operating environment
+    当前版本运行环境 
 
-    当前版本运行环境 Current version operating environment
+## Pipeline file introduction 流程文件介绍 
 
-## 流程文件介绍 Pipeline file introduction
+## 0Install.sh：Software and database installation 软件和数据库安装
 
-## 0Install.sh：软件和数据库安装Software and database installation
+### 1. Data preprocessing (一、数据预处理 )
 
-### 一、数据预处理 1. Data preprocessing
+*   Initialization 初始化 
 
-*   初始化 Initialization
+    1.  EasyMetagenome pipeline installation 流程安装 
+    2.  EasyMicrobiome software and database collection 软件和数据库合集 
+    3.  Software manager Conda 软件管理器
+*   Quality control(质控): kneaddata/fastqc/multiqc/fastp
 
-    1.  EasyMetagenome流程安装 EasyMetagenome pipeline installation
-    2.  EasyMicrobiome软件和数据库合集 EasyMicrobiome software and database collection
-    3.  软件管理器Conda Software Manager Conda
-*   质控Quality control: kneaddata/fastqc/multiqc/fastp
+    1.  Method 1. kneaddata direct installation 方法1.kneaddata直接安装 
+    2.  Method 2. Download and decompress kneaddata and install it 方法2.kneaddata下载解压安装 
+    3.  kneaddata installation test 安装测试 
+    4.  kneaddata database download 数据库下载 
+    5.  kneaddata custom reference genome index 自定义参考基因组索引
 
-    1.  方法1.kneaddata直接安装 Method 1. kneaddata direct installation
-    2.  方法2.kneaddata下载解压安装 Method 2. Download and decompress kneaddata and install it
-    3.  kneaddata安装测试 kneaddata installation test
-    4.  kneaddata数据库下载 kneaddata database download
-    5.  kneaddata自定义参考基因组索引 kneaddata custom reference genome index
+### 2. Read-based (HUMAnN4/MetaPhlAn4/Kraken2) (二、基于读长分析)
 
-### 二、基于读长分析 2. Read-based (HUMAnN3/Kraken2)
+*   Metagenomic read-based analysis（HUMAnN3/MetaPhlAn4/GraPhlAn）宏基因组基于读长的分析 
 
-*   宏基因组基于读长的分析 Metagenomic read-based analysis（HUMAnN3/MetaPhlAn4/GraPhlAn）
-
-    1.  HUMAnN3直接安装 HUMAnN3 direct installation
+    1.  HUMAnN4 direct installation 直接安装 
     2.  HUMAnN3解包安装 HUMAnN3 unpacking and installation
     3.  HUMAnN3安装测试 HUMAnN3 installation test
     4.  HUMAnN3物种和功能数据库 HUMAnN3 species and function database
     5.  MetaPhlAn4物种数据库 MetaPhlAn4 species database
+    
 *   物种注释 Species annotation (Kraken2/bracken/krakentools/krona)
 
     1.  Kraken2解包安装 Unpack and install Kraken2
