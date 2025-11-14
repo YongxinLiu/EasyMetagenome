@@ -42,9 +42,11 @@ Metadata (元数据)
     wget http://www.imeta.science/github/EasyMetagenome/result/metadata.txt
     mv metadata.txt result/metadata.txt
 
-    # 预览Preview: 检查文件格式，^I为制表符，$为Linux换行，^M$为Windows回车，^M为Mac换行符
+    # Format check: ^I is tab, $ is linux new line, ^M$ is windows new line, ^M is Mac new line
+    # 格式预览，^I为制表符，$为Linux换行，^M$为Windows回车，^M为Mac换行符
     cat -A result/metadata.txt
-    # 格式化Format：转换Windows回车为Linux换行，去除空格
+    # Format windows ^M$ to linux $, delete ^M in regulation expression is '\r'
+    # 转换Windows回车为Linux换行，即删除^M (正则表达式为\r)
     sed -i 's/\r//' result/metadata.txt
     cat -A result/metadata.txt
 
@@ -71,19 +73,28 @@ Sequencing data (序列文件)
 
     # Site 3. BaiduNetDisk (站点3. 百度网盘) in /db/meta/seq directory from https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
 
-    # ls查看文件大小，-l 列出详细信息 (l: list)，-sh 显示人类可读方式文件大小 (s: size; h: human readable)
+    # ls show file info, -l (l: list) show detail, -sh s: size, h: human readable
+    # ls查看文件大小等信息，-l 列出详细信息 (l: list)，-sh 显示人类可读方式文件大小 (s: size; h: human readable)
     ls -lsh seq/*.fq.gz
-    # 统计
+    # Statistic basic info of sequences 统计序列信息
     time seqkit stat seq/*.fq.gz > result/seqkit.txt
 
-序列文件格式检查 
-zless/zcat查看可压缩文件，检查序列质量格式(质量值大写字母为标准Phred33格式，小写字母为Phred64，需参考附录：质量值转换)；检查双端序列ID是否重名，如重名需要改名。参考**附录 —— 质控kneaddata，去宿主后双端不匹配；序列改名**。
+**Sequence file format check (序列文件格式检查)**
+Use zless/zcat to view compressible files and check the sequence quality format 
+(quality values in uppercase are in standard Phred33 format, lowercase in Phred64 format);
+check if the pair-end sequence IDs have duplicate names, and if so, rename them. 
+Refer to **Appendix – Quality Control kneaddata: End-to-End Mismatch After Host Removal; Sequence Renaming**.
+zless/zcat查看可压缩文件，检查序列质量格式(质量值大写字母为标准Phred33格式，小写字母为Phred64)；
+检查双端序列ID是否重名，如重名需要改名。参考**附录 —— 质控kneaddata，去宿主后双端不匹配；序列改名**。
 
-    # 设置某个样本名为变量i，以后再无需修改
+    # Set a sample name be variable i, which can be reused multiple times, reducing the number of modifications required.
+    # 设置某个样本名为变量i，后面可多次重用，减少修改次数
     i=C1
+    # zless is used to view compressed files; spacebar to turn pages, q to exit; head specifies the number of lines to display.
     # zless查看压缩文件，空格翻页，q退出; head指定显示行数
     zless seq/${i}_1.fq.gz | head -n4
 
+**Summary of Working Directory and File Structure**
 **工作目录和文件结构总结**
 
 
@@ -96,25 +107,31 @@ zless/zcat查看可压缩文件，检查序列质量格式(质量值大写字母
     # │   └── Y1_2.fq.gz
     # └── temp
 
+* `1pipeline.sh` is the analysis workflow code;
+* The `seq` directory contains 6 samples of short-reads paired-end 150 bp sequencing and 12 sequence files;
+* `temp` is a temporary folder that stores intermediate analysis files. It can be deleted entirely after analysis to save space;
+* `result` contains important node files and formatted analysis results figures. `metadata.txt` is also located here.
 *   1pipeline.sh是分析流程代码；
 *   seq目录中有2个样本Illumina双端测序，4个序列文件；
 *   temp是临时文件夹，存储分析中间文件，结束可全部删除节约空间
-*   result是重要节点文件和整理化的分析结果图表，
-    *   实验设计metadata.txt也在此
+*   result是重要节点文件和整理化的分析结果图表，实验设计metadata.txt也在此
 
-## 1.2 Fastp质量控制 Quality Control
+## 1.2 Fastp Quality Control(质量控制)
 
+    # Create a directory to record software versions and citations
     # 创建目录，记录软件版本和引文
     mkdir -p temp/qc result/qc
     fastp
     
-    # 单样本质控
+    # Single sample quality control (单样本质控)
     i=`tail -n+2 result/metadata.txt|cut -f1|head -n1`
     fastp -i seq/${i}_1.fq.gz  -I seq/${i}_2.fq.gz \
       -o temp/qc/${i}_1.fastq -O temp/qc/${i}_2.fastq
     
+    # Multiple samples are processed in parallel; this step requires 5 times the space of the original data.
     # 多样本并行，此步占用原始数据5x空间
-    # -j 2: 表示同时处理2个样本；j3,18s,8m; 目前6个样本j2, 2m4.247s
+    # -j 2: indicates processing 2 samples simultaneously; for 6 samples, j2, 2minmutes 
+    # -j 2: 表示同时处理2个样本；6个样本j2, 2分钟(minutes, m)
     time tail -n+2 result/metadata.txt|cut -f1|rush -j 2 \
       "fastp -i seq/{1}_1.fq.gz -I seq/{1}_2.fq.gz \
         -j temp/qc/{1}_fastp.json -h temp/qc/{1}_fastp.html \
