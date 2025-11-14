@@ -95,6 +95,7 @@ EasyMetagenome依赖EasyMicrobiome，其包括众多脚本、软件和数据库�
     # 添加常用频道
     conda config --add channels bioconda # 生物软件
     conda config --add channels conda-forge # Highest priority
+    conda config --show-sources
 
     # conda默认配置文件为 ~/.condarc 查看配置文件位置
     conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/main
@@ -103,7 +104,6 @@ EasyMetagenome依赖EasyMicrobiome，其包括众多脚本、软件和数据库�
     mamba install pandas -c conda-forge -c bioconda -y
     mamba install conda-pack -c conda-forge -c bioconda -y
 
-    conda config --show-sources
     # 查看虚拟环境列表 
     conda env list
 
@@ -148,7 +148,7 @@ BioConda: https://bioconda.github.io/recipes/kneaddata/README.html
     kneaddata --version # 0.12.3
     trimmomatic -version # 0.40
     bowtie2 --version # 2.5.4
-    multiqc --version  # 1.31
+    multiqc --version  # 1.32
     fastp --version # 1.0.1
     
     # 软件打包--移植给同行使用
@@ -353,6 +353,7 @@ Method 2. Conda installation
     mkdir -p ${soft}/envs/${n}
     tar -xvzf ${n}.tar.gz -C ${soft}/envs/${n}
     conda activate ${n}
+    chmod 755 ${soft}/envs/lefse/lib/python3.9/site-packages/lefse/*
     conda unpack
     lefse_run.py -h # LEfSe 1.1.01
 

@@ -450,24 +450,31 @@ Method 1. Use export2graphlan to create plotting files
 前面演示数据仅有6个样本，无差异差异。下面使用result12目录中由12个样本生成的结果表进行演示
 
     # 设置结果目录，自己的数据使用result，此用演示12个样本结果用result12
-    result=result12
+    result=result
     # 如果没有，请下载演示数据
-    wget -c http://www.imeta.science/db/EasyMetagenome/result12.zip
-    unzip result12.zip
+    # wget -c http://www.imeta.science/db/EasyMetagenome/result12.zip
+    # unzip result12.zip
 
 准备输入文件，修改样本品为组名(可手动修改)
 
     # 提取样本行替换为每个样本一行，修改ID为SampleID
-    sed -i 's/\r//g' $result/metaphlan2/taxonomy.tsv
-    head -n1 $result/metaphlan2/taxonomy.tsv|tr '\t' '\n'|sed '1 s/ID/SampleID/' > temp/sampleid
+    sed -i 's/\r//g' $result/metaphlan4/taxonomy.tsv
+    head -n1 $result/metaphlan4/taxonomy.tsv|tr '\t' '\n'|sed '1 s/ID/SampleID/' > temp/sampleid
     head -n3 temp/sampleid
     # 提取SampleID对应的分组Group(假设为metadata.txt中第二列$2)，替换换行\n为制表符\t，再把行末制表符\t替换回换行
-    awk 'BEGIN{OFS=FS="\t"}NR==FNR{a[$1]=$2}NR>FNR{print a[$1]}' \
-      $result/metadata.txt temp/sampleid|tr '\n' '\t'|sed 's/\t$/\n/' >groupid
-    cat groupid
+    awk 'BEGIN{OFS=FS="\t"}NR==FNR{a[$1]=$3}NR>FNR{print a[$1]}' \
+      $result/metadata.txt temp/sampleid|tr '\n' '\t'|sed 's/\t$/\n/' >temp/groupid
+    cat temp/groupid
+    sed 's/SampleID/subject_id/' temp/sampleid | tr '\n' '\t'|sed 's/\t$/\n/' > temp/sampleid2
     # 合并分组和数据(替换表头)
-    cat groupid <(tail -n+2 $result/metaphlan2/taxonomy.tsv) > $result/metaphlan2/lefse.txt
-    head -n3 $result/metaphlan2/lefse.txt
+    cat groupid temp/sampleid2 <(tail -n+2 $result/metaphlan4/taxonomy.tsv) | grep -v '#' > $result/metaphlan4/lefse.txt
+    head -n3 $result/metaphlan4/lefse.txt
+    # 解决输入lefse文件格式问题，生成第二行 site，生成第三行 subject_id，-1代表值未知
+    # awk 'NR==1{print; printf "site"; for(i=2;i<=NF;i++) printf "\t-1"; print ""; 
+    #       printf "subject_id"; for(i=2;i<=NF;i++) printf "\t-1"; print ""; 
+    #       next} $0!="#metaphlan4"{print}' result/metaphlan4/lefse0.txt \
+    #       > result/metaphlan4/lefse.txt
+    # head result/metaphlan4/lefse.txt
 
 方法1. 推荐在线 <https://www.bic.ac.cn/ImageGP/> 中LEfSe一键分析
 
@@ -475,37 +482,36 @@ Method 1. Use export2graphlan to create plotting files
 
     # 最新版教程：https://github.com/SegataLab/lefse/blob/master/example/bioconda-lefse_run.sh
     conda activate lefse
-    result=result12
+    result=result
     lefse_run.py -h # LEfSe 1.1.01
-    # 格式转换为lefse内部格式
-    lefse_format_input.py $result/metaphlan2/lefse.txt \
-      temp/input.in -c 1 -o 1000000
-    # KeyError: 'subject', demo: https://raw.githubusercontent.com/biobakery/biobakery/master/test_suite/biobakery_tests/data/lefse/input/hmp_small_aerobiosis.txt
+    # 转换lefse格式，s 2  correction for dependent comparison
+    lefse_format_input.py $result/metaphlan4/lefse.txt \
+      temp/input.in -c 1 -s 2 -u 3 -o 1000000
     # 运行lefse(样本必须有重复和分组)
     lefse_run.py temp/input.in temp/input.res
 
     # 绘制物种树注释差异
-    lefse-plot_cladogram.py temp/input.res \
-      $result/metaphlan2/lefse_cladogram.pdf --format pdf
+    lefse_plot_cladogram.py temp/input.res \
+      $result/metaphlan4/lefse_cladogram.pdf --format pdf
 
     # 绘制所有差异features柱状图
-    lefse-plot_res.py temp/input.res \
-      $result/metaphlan2/lefse_res.pdf --format pdf
+    lefse_plot_res.py temp/input.res \
+      $result/metaphlan4/lefse_res.pdf --format pdf
         
     # 绘制单个features柱状图
     # 查看显著差异features，按丰度排序
-    grep -v '-' temp/input.res | sort -k3,3n 
+    grep -v '-' temp/input.res | sort -k3,3n
     # 手动选择指定feature绘图，如Firmicutes
-    lefse-plot_features.py -f one --format pdf \
-      --feature_name "k__Bacteria.p__Firmicutes" \
+    lefse_plot_features.py -f one --format pdf \
+      --feature_name "k__Bacteria.p__Actinobacteria" \
       temp/input.in temp/input.res \
-      $result/metaphlan2/lefse_Firmicutes.pdf
+      $result/metaphlan4/lefse_Actinobacteria.pdf
 
     # 批量绘制所有差异features柱状图
-    lefse-plot_features.py -f diff \
+    lefse_plot_features.py -f diff \
       --archive none --format pdf \
       temp/input.in temp/input.res \
-      $result/metaphlan2/lefse_
+      $result/metaphlan4/lefse_
 
 ## 2.7 Kraken2+Bracken taxonomic classification and abundance estimation 物种注释和丰度估计
 
@@ -554,6 +560,11 @@ Batch processing of multiple samples to generate reports consumes a lot of memor
       kreport2mpa.py -r temp/kraken2/${i}.report \
         --display-header -o temp/kraken2/${i}.mpa; done
 
+    # 按照百分比展示(可选)
+    for i in `tail -n+2 result/metadata.txt | cut -f1`;do
+      kreport2mpa.py -r temp/kraken2/${i}.report \
+        --percentages --display-header -o temp/kraken2/${i}.p.mpa; done
+  
 合并样本为表格
 
     mkdir -p result/kraken2
