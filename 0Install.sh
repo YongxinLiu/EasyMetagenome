@@ -95,8 +95,7 @@ EasyMetagenome依赖EasyMicrobiome，其包括众多脚本、软件和数据库�
     # 添加常用频道
     conda config --add channels bioconda # 生物软件
     conda config --add channels conda-forge # Highest priority
-    conda config --add channels defaults
-   
+
     # conda默认配置文件为 ~/.condarc 查看配置文件位置
     conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/main
     conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/r
