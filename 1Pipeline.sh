@@ -138,7 +138,7 @@ zless/zcat查看可压缩文件，检查序列质量格式(质量值大写字母
         -o temp/qc/{1}_1.fastq  -O temp/qc/{1}_2.fastq \
         > temp/qc/{1}.log 2>&1"
     
-    # 质控后结果汇总
+    # Summary of Quality Control Results (质控后结果汇总)
     echo -e "SampleID\tRaw\tClean" > temp/fastp
     for i in `tail -n+2 result/metadata.txt|cut -f1`;do
         echo -e -n "$i\t" >> temp/fastp
@@ -146,21 +146,23 @@ zless/zcat查看可压缩文件，检查序列质量格式(质量值大写字母
         echo "" >> temp/fastp
         done
     sed -i 's/ //g;s/\t$//' temp/fastp
-    # 按metadata排序
+    # Sort by metadata (按metadata排序)
     awk 'BEGIN{FS=OFS="\t"}NR==FNR{a[$1]=$0}NR>FNR{print a[$1]}' temp/fastp result/metadata.txt \
       > result/qc/fastp.txt
     cat result/qc/fastp.txt
     
-## 1.3 KneadData去宿主 Host removal
+## 1.3 KneadData Host removal去宿主
 
+The kneaddata relies on bowtie2 to align with the host sequence, and then filters out non-host sequences for downstream analysis.
 kneaddata是流程主要依赖bowtie2比对宿主，然后筛选非宿主序列用于下游分析。
 
+    # Create directories, activate the environment, and record versions.
     # 创建目录、启动环境、记录版本
     mkdir -p temp/hr
     conda activate kneaddata
     kneaddata --version # v0.12.3
 
-    # 单样本去宿主
+    # Single-sample host removal (单样本去宿主)
     i=`tail -n+2 result/metadata.txt|cut -f1 | head -n1`
     kneaddata -i1 temp/qc/${i}_1.fastq -i2 temp/qc/${i}_2.fastq \
         -o temp/hr \
@@ -169,6 +171,7 @@ kneaddata是流程主要依赖bowtie2比对宿主，然后筛选非宿主序列�
         -db ${db}/kneaddata/human/hg_39 \
         --remove-intermediate-output -v -t 3
 
+    # Multi-sample host removal, this step occupies 5 times the space of the original data, 3m
     # 多样本去宿主,此步占用原始数据5x空间,3m
     time tail -n+3 result/metadata.txt | cut -f1 | rush -j 2 \
       "kneaddata \
@@ -179,36 +182,41 @@ kneaddata是流程主要依赖bowtie2比对宿主，然后筛选非宿主序列�
         -db ${db}/kneaddata/human/hg_39 \
         --remove-intermediate-output -v -t 3"
 
+    # To check the size, * matches any number of characters, and ? matches any single character.
     # 查看大小，*匹配任意多个字符，?匹配任意一个字符
     ls -shtr temp/hr/*_paired_?.fastq
 
-简化改名
+Simplified renaming (简化改名)
     
-    # Ubuntu系统改名
+    # Ubuntu System renaming (Ubuntu系统改名)
     rename 's/_1_kneaddata_paired//' temp/hr/*.fastq
-    # CentOS系统改名
+    # CentOS System renaming (CentOS系统改名)
     rename '_1_kneaddata_paired' '' temp/hr/*.fastq
 
-质控结果汇总
+Summary of Quality Control Results (质控结果汇总)
 
     kneaddata_read_count_table --input temp/hr \
       --output temp/kneaddata.txt
-    # 筛选重点结果列
+    # Filter key results column (筛选重点结果列)
     cut -f 1,2,5,6 temp/kneaddata.txt | sed 's/_1_kneaddata//' > result/qc/sum.txt
-    # 对齐方式查看表格
+    # View table alignment (对齐方式查看表格)
     csvtk -t pretty result/qc/sum.txt
 
-校验ID是否配对
+Verify if the IDs match in pair-end reads (校验ID是否配对)
 
     paste <(head -n40 temp/hr/`tail -n+2 result/metadata.txt|cut -f1|head -n1`_1.fastq|grep @)    <(head -n40 temp/hr/`tail -n+2 result/metadata.txt|cut -f1|head -n1`_2.fastq|grep @)
 
+Large file cleanup: samples with high host content can save >90% of space.
 大文件清理，高宿主含量样本可节约>90%空间
 
+    # Using the absolute path of a command ensures that it is a parameterless command. Administrators can use aliases to define commands with parameters, which can affect the operation results.
     # 使用命令的绝对路径确保使用无参数的命令，管理员用alias自定义命令含参数，影响操作结果
     /bin/rm -rf temp/hr/*contam* temp/hr/*unmatched* temp/hr/reformatted* temp/hr/_temp*
     ls -l temp/hr/
+    # After confirming the host removal results, the intermediate files after quality control can be deleted
     # 确认去宿主结果后，可以删除质控后中间文件
     rm temp/qc/*.fastq
+    # Human data should be published as dehosted files to reduce the risk of privacy leaks.
     # 人类数据建议发布去宿主后的文件，减少隐私泄露风险
     
 
