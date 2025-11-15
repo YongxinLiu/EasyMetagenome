@@ -1,1 +1,13 @@
 [/disk2/home/meta2024/EasyMetagenome]    46  [2025-11-15 08:22:05][meta2024][]cd ../EasyMetagenome/
+[/disk2/home/meta2024/EasyMetagenome]    47  [2025-11-15 08:22:23][meta2024][]git add .
+[/disk2/home/meta2024/EasyMetagenome]    48  [2025-11-15 08:22:29][meta2024][]git commit -m "v1.24 (2025.11)" 
+[/disk2/home/meta2024/EasyMetagenome]    48  [2025-11-15 08:22:29][meta2024][]git commit -m "v1.24 (2025.11)" 
+[/disk2/home/meta2024/EasyMetagenome]    49  [2025-11-15 08:22:57][meta2024][]git config --global user.email "woodcorpse@163.com"
+[/disk2/home/meta2024/EasyMetagenome]    50  [2025-11-15 08:23:09][meta2024][]git config --global user.name "YongxinLiu"
+[/disk2/home/meta2024/EasyMetagenome]    51  [2025-11-15 08:23:13][meta2024][]git commit -m "v1.24 (2025.11)" 
+[/disk2/home/meta2024/EasyMetagenome]    52  [2025-11-15 08:23:39][meta2024][]git push origin master
+[/disk2/home/meta2024/EasyMetagenome]    52  [2025-11-15 08:23:39][meta2024][]git push origin master
+[/disk2/home/meta2024/EasyMetagenome]    52  [2025-11-15 08:23:39][meta2024][]git push origin master
+[/data/ysx/home/meta2024/EasyMetagenome]    53  [2025-11-15 08:23:39][meta2024][]git push origin master
+[/data/ysx/home/meta2024/EasyMetagenome]    54  [2025-11-15 21:11:44][meta2024][]pwd
+[/disk2/home/meta2024/EasyMetagenome]    58  [2025-11-15 21:35:55][meta2024][]cd EasyMetagenome/

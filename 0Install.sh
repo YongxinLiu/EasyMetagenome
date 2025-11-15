@@ -6,76 +6,87 @@
     # Version(版本): 1.24, 2025/11/12
     # Homepage(主页): https://github.com/YongxinLiu/EasyMetagenome
 
-所有软件和数据库可从官网下载 All software and databases downloaded from the website, 备选 Backup source：
-中科院微生物所 Institute of Microbiology, Chinese Academy of Sciences：ftp://download.nmdc.cn/tools/ (FileZilla访问) 
-百度网盘 Baidu Netdisk：https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
+All software and databases downloaded from the website (所有软件和数据库可从官网下载)
+备选 Backup source：
+Backup1. Institute of Microbiology, Chinese Academy of Sciences(中科院微生物所)：ftp://download.nmdc.cn/tools/ (FileZilla访问) 
+Backup2. Baidu Netdisk(百度网盘)：https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
 
-# 零、初始化和流程安装 Initialization and pipeline installation
+# 0. Initialization and pipeline installation (零、初始化和流程安装 )
 
-## 初始化：每次开始安装必须运行下面代码 Initialization: The following code must be run every time when installation starts
+## Initialization: The following code must be run every time when installation starts (初始化：每次开始安装必须运行下面代码)
 
-安装前准备：软件和数据库位置 Before Installation: Software and Database Locations
+Software and Database Locations(软件和数据库位置)
 
-    # 数据库安装位置Database Locations，默认~/db目录(无需管理权限)，管理员可选/db
+    # Database Locations, default ~/db directory(No administrative privileges required), administrator can select /db
+    # 数据库安装位置，默认~/db目录(无需管理权限)，管理员可选/db
     db=~/db
     mkdir -p ${db} && cd ${db}
-    # 软件安装位置Software installation location，默认为~/miniconda3，测试服务器为/anaconda3
+    # Software installation location, default ~/miniconda3 , the test server is /anaconda3
+    # 软件安装位置，默认为 ~/miniconda3 ，测试服务器为 /anaconda3
     soft=~/miniconda3
-    # 经常使用的服务器环境，可把全文${db}和${soft}替换为绝对路径，将不再需要每次读取以上环境变量
     # In the frequently used server environment, you can replace the variable ${db} and ${soft} with absolute paths, and you will no longer need to run the above environment variables every time
-    # 可选：初始化环境变量，可能提高软件安装成功率
+    # 经常使用的服务器环境，可把全文${db}和${soft}替换为绝对路径，将不再需要每次读取以上环境变量
     # Optional: Initialize environment variables, which may improve the success rate of software installation
+    # 可选：初始化环境变量，可能提高软件安装成功率
     PATH=${soft}/bin:${soft}/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:${db}/EasyMicrobiome/linux:${db}/EasyMicrobiome/script
     echo $PATH
 
-### EasyMetagenome流程Pipeline
+### EasyMetagenome Pipeline (流程)
 
-EasyMetagenome流程，包括流程安装、使用和可视化脚本，以及流程测试数据和结果正对照，网址：https://github.com/YongxinLiu/EasyMetagenome
+The EasyMetagenome workflow, including workflow installation, usage, and visualization scripts, 
+as well as workflow test data and result comparisons, can be found at:
+EasyMetagenome流程，包括流程安装、使用和可视化脚本，以及流程测试数据和结果正对照，网址：
+https://github.com/YongxinLiu/EasyMetagenome
 
-三种下载方法：依赖尝试/任选其一至成功即可
+Each site provides 2-4 download or installation methods: try them one by one and any one method work is OK.
+每处提供2-4种下载或安装方法：依次尝试，任意一种成功即可。
     
     cd ${db}
+
+    # Method 1. Download ZIP archive at https://github.com/YongxinLiu/EasyMetagenome, `Code` - `Download` and upload it to the server.
     # 方法1. 网页 https://github.com/YongxinLiu/EasyMetagenome 中Code - Download ZIP下载压缩包，上传至服务器
-    # 解压，Command 'unzip' not found使用sudo apt install unzip安装
+    # Command 'unzip' not found, using `sudo apt install unzip` (解压，缺少使用sudo apt安装)
     unzip EasyMetagenome-master.zip 
-    # 改名
+    # rename 改名
     mv EasyMetagenome-master EasyMetagenome
 
-    # 方法2. 百度网盘链接中 /db/soft/EasyMetagenome.tar.gz : https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
+    # Method 2. Baidu Netdisk (方法2. 百度网盘) https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315 /db/soft/EasyMetagenome.tar.gz
 
-    # 方法3. git下载，需安装git
+    # Method 3. Download by Git (needs Git installed)（方法3. git下载，需安装git）
     git clone https://github.com/YongxinLiu/EasyMetagenome
-    # 旧版更新
+    # Old version update (旧版更新)
     cd EasyMetagenome && git pull && cd ../
 
-    # 方法4. 微生物所或用链接，可能不是最新版
+    # Method 4. Backup link for the Institute of Microbiology (方法4. 微生物所备用链接)
     wget -c ftp://download.nmdc.cn/tools/soft/EasyMetagenome.tar.gz
     tar xvzf EasyMetagenome.tar.gz
 
 
-### EasyMicrobiome软件和数据库合集dependencies
+### EasyMicrobiome: dependencies soft and scripts for pipeline (软件和数据库合集)
 
+EasyMetagenome depends on EasyMicrobiome, which includes a collection of scripts, 
+software, and databases. (https://github.com/YongxinLiu/EasyMicrobiome)
 EasyMetagenome依赖EasyMicrobiome，其包括众多脚本、软件和数据库的集合，网址：https://github.com/YongxinLiu/EasyMicrobiome
     
-    # 方法1. GitHub https://github.com/YongxinLiu/EasyMicrobiome 中Code Download ZIP下载压缩包，上传至服务器，并解压
+    # Method 1. Download ZIP archive at https://github.com/YongxinLiu/EasyMicrobiome, `Code` - `Download` and upload it to the server.
+    # 方法1. 网页 https://github.com/YongxinLiu/EasyMicrobiome 中Code - Download ZIP下载压缩包，上传至服务器
     unzip EasyMicrobiome-master.zip
     mv EasyMicrobiome-master EasyMicrobiome
     
-    # 方法2. 百度网盘链接中 /db/soft/EasyMicrobiome.tar.gz : https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
+    # Method 2. Baidu Netdisk (方法2. 百度网盘) https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315 /db/soft/EasyMicrobiome.tar.gz
    
-    # 方法3. git下载，需安装git
+    # Method 3. Download by Git（方法3. git下载）
     git clone https://github.com/YongxinLiu/EasyMicrobiome
-    # 旧版更新
+    # Old version update (旧版更新)
     cd EasyMicrobiome && git pull && cd ../
 
-    # 方法4. 备用链接下载
+    # Method 4. Backup link for the Institute of Microbiology (方法4. 微生物所备用链接)
     wget -c ftp://download.nmdc.cn/tools/soft/EasyMicrobiome.tar.gz
     tar -xvzf EasyMicrobiome.tar.gz
      
-    # 软件安装
-    # 添加linux命令可执行权限
+    # Add command execute permissions (添加命令可执行权限)
     chmod +x `pwd`/EasyMicrobiome/linux/* `pwd`/EasyMicrobiome/script/*
-    # 添加环境变量
+    # Add environment variables (添加环境变量)
     echo "export PATH=\"\$PATH:`pwd`/EasyMicrobiome/linux:`pwd`/EasyMicrobiome/script\"" >> ~/.bashrc
     source ~/.bashrc
     echo $PATH
