@@ -5,6 +5,7 @@
     # Authors(作者): Yong-Xin Liu(刘永鑫), Defeng Bai(白德凤), Tong Chen(陈同) et al.
     # Version(版本): 1.24, 2025/11/12
     # Operation System(操作系统): Linux Ubuntu 22.04+ / CentOS 7.7+ 
+    # Homepage(主页): https://github.com/YongxinLiu/EasyMetagenome
 
 # 1. Data preprocessing(数据预处理)
 
