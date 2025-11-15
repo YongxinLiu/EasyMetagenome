@@ -204,30 +204,35 @@ mouse genome download (小鼠基因组下载)
     cd ${db}/kneaddata/mouse
     # wget -c http://huttenhower.sph.harvard.edu/kneadData_databases/mouse_C57BL_6NJ_Bowtie2_v0.1.tar.gz
     wget -c ftp://download.nmdc.cn/tools/meta/kneaddata/mouse/Homo_sapiens_hg39_T2T_Bowtie2_v0.1.tar.gz
-    tar xvzf mouse_C57BL_6NJ_Bowtie2_v0.1.tar.gz
+    time tar xvzf mouse_C57BL_6NJ_Bowtie2_v0.1.tar.gz
     cd $db
     
-### kneaddata自定义参考基因组索引
+### kneaddata Custom reference genome index (自定义参考基因组索引)
 
-**(任何构建好的 bowtie2 索引都可，放置位置不限；如果有多个宿主，可以把多个宿主参考基因组序列合并后构建索引)**
+**Reference genome index by Bowtie2, if there are multiple hosts, the reference genome sequences can be merged then index.**
+**参考基因组采用bowtie2索引即可；如果有多个宿主可以基因组序列合并后构建索引**
 
-自定义基因组构建索引，大多数基因组可在ensembl genome下载。此处以拟南芥为例，访问 http://plants.ensembl.org/index.html ，选择Arabidopsis thaliana —— Download DNA sequence (FASTA)，选择toplevel右键复制链接，填入下面链接处
+Part of the genome can be downloaded from the ensembl genome. Using Arabidopsis thaliana as an example, 
+visit http://plants.ensembl.org/index.html, select *Arabidopsis thaliana* — Download DNA sequence (FASTA), 
+select toplevel, right-click and copy the link, then paste it into the link field below.
+部分基因组可在ensembl genome下载。此处以拟南芥为例，访问 http://plants.ensembl.org/index.html ，
+选择Arabidopsis thaliana —— Download DNA sequence (FASTA)，选择toplevel右键复制链接，填入下面链接处
 
-    # 创建子目录
     conda activate kneaddata
+    # Create directories(创建目录)
     mkdir -p ${db}/kneaddata/ath
     cd ${db}/kneaddata/ath
-    # 下载
+    # Download host genome (下载宿主基因组）
     wget -c http://ftp.ensemblgenomes.org/pub/plants/release-51/fasta/arabidopsis_thaliana/dna/Arabidopsis_thaliana.TAIR10.dna.toplevel.fa.gz
     mv Arabidopsis_thaliana.TAIR10.dna.toplevel.fa.gz tair10.fa.gz
-    # 解压，建索引
+    # unzip and index, 3 minutes (解压，建索引，120M 3分钟)
     gunzip tair10.fa.gz
-    bowtie2-build -f tair10.fa tair10 --threads 4
+    time bowtie2-build -f tair10.fa tair10 --threads 4
 
 
-# 二、基于读长分析 Read-based (HUMAnN3/Kraken2)
+# 2. Read-based HUMAnN4/Kraken2 (二、基于读长分析)
 
-HUMAnN v4.0.0.alpha.1 + MetaPhlAn4 v4.1.1为目前最新兼容，目前最广泛使用的HUMAnN3和HUMAnN2安装见附录
+HUMAnN v4.0.0.alpha.1 + MetaPhlAn4 v4.1.1, HUMAnN3and HUMAnN2 see appendix
 
 ## 宏基因组基于读长的分析 HUMAnN4/MetaPhlAn4
 

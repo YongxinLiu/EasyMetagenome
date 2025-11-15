@@ -40,7 +40,7 @@
 Metadata (元数据)
 
     # Edit metadata in Excel then save txt format in result, demo in result or download (编写元数据metadata.txt并保存至result目录，此处下载演示)
-    wget http://www.imeta.science/github/EasyMetagenome/result/metadata.txt
+    wget -c http://www.imeta.science/github/EasyMetagenome/result/metadata.txt
     mv metadata.txt result/metadata.txt
 
     # Format check: ^I is tab, $ is linux new line, ^M$ is windows new line, ^M is Mac new line
@@ -79,6 +79,7 @@ Sequencing data (序列文件)
     ls -lsh seq/*.fq.gz
     # Statistic basic info of sequences 统计序列信息
     time seqkit stat seq/*.fq.gz > result/seqkit.txt
+    cat result/seqkit.txt
 
 **Sequence file format check (序列文件格式检查)**
 Use zless/zcat to view compressible files and check the sequence quality format 
@@ -152,7 +153,7 @@ zless/zcat查看可压缩文件，检查序列质量格式(质量值大写字母
       > result/qc/fastp.txt
     cat result/qc/fastp.txt
     
-## 1.3 KneadData Host removal去宿主
+## 1.3 KneadData Host removal (去宿主)
 
 The kneaddata relies on bowtie2 to align with the host sequence, and then filters out non-host sequences for downstream analysis.
 kneaddata是流程主要依赖bowtie2比对宿主，然后筛选非宿主序列用于下游分析。
@@ -165,7 +166,7 @@ kneaddata是流程主要依赖bowtie2比对宿主，然后筛选非宿主序列�
 
     # Single-sample host removal (单样本去宿主)
     i=`tail -n+2 result/metadata.txt|cut -f1 | head -n1`
-    kneaddata -i1 temp/qc/${i}_1.fastq -i2 temp/qc/${i}_2.fastq \
+    time kneaddata -i1 temp/qc/${i}_1.fastq -i2 temp/qc/${i}_2.fastq \
         -o temp/hr \
         --bypass-trim --bypass-trf --reorder \
         --bowtie2-options '--very-sensitive --dovetail' \
