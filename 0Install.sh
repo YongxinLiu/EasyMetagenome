@@ -7,7 +7,7 @@
     # Homepage(主页): https://github.com/YongxinLiu/EasyMetagenome
 
 All software and databases downloaded from the website (所有软件和数据库可从官网下载)
-备选 Backup source：
+Backup source add download speed and success rate (备用站点提高下载速度和成功率)
 Backup1. Institute of Microbiology, Chinese Academy of Sciences(中科院微生物所)：ftp://download.nmdc.cn/tools/ (FileZilla访问) 
 Backup2. Baidu Netdisk(百度网盘)：https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
 
@@ -15,7 +15,8 @@ Backup2. Baidu Netdisk(百度网盘)：https://pan.baidu.com/s/1Ikd_47HHODOqC3Rc
 
 ## Initialization: The following code must be run every time when installation starts (初始化：每次开始安装必须运行下面代码)
 
-Software and Database Locations(软件和数据库位置)
+**Software and Database Locations(软件和数据库位置)**
+**The follwoing paragraph must run before(分析前必须运行)**
 
     # Database Locations, default ~/db directory(No administrative privileges required), administrator can select /db
     # 数据库安装位置，默认~/db目录(无需管理权限)，管理员可选/db
@@ -61,7 +62,6 @@ Each site provides 2-4 download or installation methods: try them one by one and
     wget -c ftp://download.nmdc.cn/tools/soft/EasyMetagenome.tar.gz
     tar xvzf EasyMetagenome.tar.gz
 
-
 ### EasyMicrobiome: dependencies soft and scripts for pipeline (软件和数据库合集)
 
 EasyMetagenome depends on EasyMicrobiome, which includes a collection of scripts, 
@@ -91,105 +91,121 @@ EasyMetagenome依赖EasyMicrobiome，其包括众多脚本、软件和数据库�
     source ~/.bashrc
     echo $PATH
 
-### 软件管理器Conda
+### Conda: Software Manager (软件管理器)
 
+    # Downloaded the latest version of miniconda3 v25.9.1, installed on 2025/10/22, 154.6 Mb
     # 下载最新版miniconda3 v25.9.1 , 安装日期2025/10/22, 154.6 Mb   
     wget -c https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+    # Install, -b batch, -f no prompt, -p directory, select yes for license agreement
     # 安装，-b批量，-f无提示，-p目录，许可协议打yes
     bash Miniconda3-latest-Linux-x86_64.sh -b -f 
-    # 激活，然后关闭终端重开，提示符前出现(base)即成功
+    # Initialize and reset the environment; success show (base) at the prompt.
+    # 初始化，并重置环境，提示符前出现(base)即成功
     ~/miniconda3/condabin/conda init
     source ~/.bashrc
-    # 查看版本，conda 25.9.1, python 3.13.9
-    conda -V  # 25.9.1
-    python --version  # 3.13.9
-    # 添加常用频道
-    conda config --add channels bioconda # 生物软件
-    conda config --add channels conda-forge # Highest priority
-    conda config --show-sources
-
-    # conda默认配置文件为 ~/.condarc 查看配置文件位置
+    # Show version(查看版本), conda 25.9.1, python 3.13.9
+    conda -V
+    python --version
+    # Add frequently used channels (添加常用频道)
+    conda config --add channels bioconda
+    conda config --add channels conda-forge
     conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/main
     conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/r
+    # conda configure file (配置文件) ~/.condarc
+    conda config --show-sources
+
+    # Install mamba parallel acceleration installation, pandas computing dependencies, and conda-pack packaging and unpack enrivonment.
+    # 安装mamba并行加速安装、pandas计算依赖库和conda-pack打包移植环境
     conda install mamba -c conda-forge -c bioconda -y
     mamba install pandas -c conda-forge -c bioconda -y
     mamba install conda-pack -c conda-forge -c bioconda -y
 
-    # 查看虚拟环境列表 
+    # View environment list （查看虚拟环境列表)
     conda env list
 
-更多conda中文安装使用教程参考：[Nature Method：Bioconda解决生物软件安装的烦恼](https://mp.weixin.qq.com/s/SzJswztVB9rHVh3Ak7jpfA)
-[一文掌握Conda软件安装：虚拟环境、软件通道、加速solving、跨服务器迁移](https://mp.weixin.qq.com/s/tKAU09_w7Cu7khA9M2EGEQ)
 
+# 1. Data preprocessing (一、数据预处理)
 
-# 一、数据预处理 Data preprocessing
+## kneaddata install (安装): 
 
-## 质控Quality control: kneaddata/fstqc/multiqc/fastp
+**Note: You can choose one of the following installation methods: direct installation, download and unpack, etc. If one method fails, try another.**
+**注：直接安装、下载解压等安装方法多选一。一种方法不成功，再尝试另一种。**
 
-**注：直接安装、下载解压安装，二选一。一种方法不成功，尝试另一种。**
+BioConda search software: https://bioconda.github.io/recipes/kneaddata/README.html
 
-BioConda: https://bioconda.github.io/recipes/kneaddata/README.html
+### Opt 1. Download, extract, and install kneaddata (方法1.kneaddata下载解压安装)
 
-### 方法1.kneaddata直接安装
-
-    # 新建kneaddata环境
-    conda create -y -n kneaddata
-    conda activate kneaddata
-    # fastqc质量评估，multiqc评估报告汇总，kneaddata质量控制流程，fastp质控工具
-    mamba install kneaddata fastqc multiqc fastp r-reshape2 -y 
-
-### 方法2.kneaddata下载解压安装
-
-    # 指定conda文件名
+    # Specify conda filename (指定conda文件名)
     s=kneaddata
-    soft=~/miniconda3
-    # 下载，可选NMDC、百度云等
+    # Download options include NMDC, Baidu NetDisk conda, etc (下载，可选NMDC、百度云等)
     wget -c ftp://download.nmdc.cn/tools/conda/${s}.tar.gz
-    # 指定安装目录
+    # Set installation directory and extract (指定安装目录并解压)
     mkdir -p ${soft}/envs/${s}
     tar -xvzf ${s}.tar.gz -C ${soft}/envs/${s}
-    # 启动环境
+    # Startup Environment (启动环境)
     conda activate ${s}
-    # 初始化环境
+    # Initialize environment (初始化环境)
     conda unpack
 
-### kneaddata安装测试
+### Opt 2. Conda kneaddata (方法2. conda安装kneaddata)
 
-    fastqc -v # v0.12.1
-    kneaddata --version # 0.12.3
-    trimmomatic -version # 0.40
-    bowtie2 --version # 2.5.4
-    multiqc --version  # 1.32
+    # Create and activate the kneaddata environment (新建并激活环境)
+    conda create -y -n kneaddata
+    conda activate kneaddata
+    # install KneadData host removal, FastQC quality assessment, and MultiQC summary
+    # 安装kneaddata去宿主流程，fastqc质量评估，multiqc评估报告汇总
+    mamba install kneaddata fastqc multiqc r-reshape2 -y 
+
+### Record software version (记录软件版本)
+
     fastp --version # 1.0.1
+    kneaddata --version # 0.12.3
+    bowtie2 --version # 2.5.4
+    fastqc -v # v0.12.1
+    trimmomatic -version # 0.40
+    multiqc --version  # 1.321
     
-    # 软件打包--移植给同行使用
-    n=kneaddata
-    conda pack -f --ignore-missing-files -n ${n} -o ${n}.tar.gz
-    cd ..
+    # Optional: Software packaging -- can copy to others (可选：软件打包--复制解压使用)
+    conda pack -f --ignore-missing-files -n ${s} -o ${s}.tar.gz
 
-### kneaddata数据库下载
+### kneaddata database download (数据库下载)
 
-    # 查看可用数据库
+    # View available databases (查看可用数据库)
     kneaddata_database
-    # 包括人基因组bowtie2/bmtagger、人类转录组、核糖体RNA和小鼠基因组
-    db=~/db
+    # Including human genome/transcriptome, ribosomal RNA, mouse/dog/cat genome
+    # 包括人基因组/转录组、核糖体RNA、小鼠/狗/猫基因组
+
+human genome download (人类基因组下载)
+
     mkdir -p ${db}/kneaddata/human
 
+    # Opt 1. Automatically download and extract the human T2T genome bowtie2 index (3.6 GB).
     # 方法1. 自动下载解压人类T2T基因组bowtie2索引 3.6 GB
     kneaddata_database --download human_genome bowtie2 ${db}/kneaddata/human
     
-    # 方法2. 手动下载官网、备用链接或百度云人类基因组并解压
-    # wget -c https://huttenhower.sph.harvard.edu/kneadData_databases/Homo_sapiens_hg39_T2T_Bowtie2_v0.1.tar.gz
-    wget -c ftp://download.nmdc.cn/tools/meta/kneaddata/human/Homo_sapiens_hg39_T2T_Bowtie2_v0.1.tar.gz
-    tar xvzf Homo_sapiens_hg39_T2T_Bowtie2_v0.1.tar.gz
+    # Opt 2. Manually download the Human Genome from the official, NMDC, or Baidu Netdisk, then extract 1 minute
+    # 方法2. 手动下载官网、备用链接或百度云人类基因组并解压1分钟
+    cd ${db}/kneaddata/human
+    wget -c https://huttenhower.sph.harvard.edu/kneadData_databases/Homo_sapiens_hg39_T2T_Bowtie2_v0.1.tar.gz
+    # wget -c ftp://download.nmdc.cn/tools/meta/kneaddata/human/Homo_sapiens_hg39_T2T_Bowtie2_v0.1.tar.gz
+    time tar xvzf Homo_sapiens_hg39_T2T_Bowtie2_v0.1.tar.gz
+    cd $db
+
+mouse genome download (小鼠基因组下载)
     
-    # 下载小鼠基因组bowtie2索引 2.83 GB
     mkdir -p ${db}/kneaddata/mouse
+
+    # Opt 1. Automatically download and extract mouse genome bowtie2 index 2.83 GB
+    # 方法1. 下载小鼠基因组bowtie2索引 2.83 GB
     kneaddata_database --download mouse_C57BL bowtie2 ${db}/kneaddata/mouse
-    # 备用手动下载
+    
+    # Opt 2. Manually download the Human Genome from the official, NMDC, or Baidu Netdisk, then extract 1 minute
+    # 方法2. 手动下载官网、备用链接或百度云人类基因组并解压1分钟
     cd ${db}/kneaddata/mouse
-    wget -c http://huttenhower.sph.harvard.edu/kneadData_databases/mouse_C57BL_6NJ_Bowtie2_v0.1.tar.gz
+    # wget -c http://huttenhower.sph.harvard.edu/kneadData_databases/mouse_C57BL_6NJ_Bowtie2_v0.1.tar.gz
+    wget -c ftp://download.nmdc.cn/tools/meta/kneaddata/mouse/Homo_sapiens_hg39_T2T_Bowtie2_v0.1.tar.gz
     tar xvzf mouse_C57BL_6NJ_Bowtie2_v0.1.tar.gz
+    cd $db
     
 ### kneaddata自定义参考基因组索引
 

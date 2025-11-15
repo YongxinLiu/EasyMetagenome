@@ -11,3 +11,9 @@
 [/data/ysx/home/meta2024/EasyMetagenome]    53  [2025-11-15 08:23:39][meta2024][]git push origin master
 [/data/ysx/home/meta2024/EasyMetagenome]    54  [2025-11-15 21:11:44][meta2024][]pwd
 [/disk2/home/meta2024/EasyMetagenome]    58  [2025-11-15 21:35:55][meta2024][]cd EasyMetagenome/
+[/disk2/home/meta2024/EasyMetagenome]    59  [2025-11-15 21:36:05][meta2024][]git add .
+[/disk2/home/meta2024/EasyMetagenome]    60  [2025-11-15 21:36:05][meta2024][]git commit -m "v1.24 (2025.11)" 
+[/disk2/home/meta2024/EasyMetagenome]    61  [2025-11-15 21:36:05][meta2024][]git push origin master
+[/disk2/home/meta2024/db/EasyMetagenome]    64  [2025-11-15 22:06:09][meta2024][]cd db/EasyMetagenome/
+[/disk2/home/meta2024/db/EasyMetagenome]    65  [2025-11-15 22:06:11][meta2024][]clear
+[/disk2/home/meta2024/db/EasyMetagenome]     1  [2025-11-15 23:48:04][meta2024][:pts/122:S.0]cd db/EasyMetagenome/
