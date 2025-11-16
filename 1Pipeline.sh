@@ -272,8 +272,8 @@ HUMAnN4 analysis tutorial and test (教学和测试)
     #   --metaphlan-options "--input_type fastq --bowtie2db ${db}/metaphlan4 --index mpa_vOct22_CHOCOPhlAnSGB_202403 --offline -t rel_ab_w_read_stats --nproc 8" \
     #   --output temp/humann4s
       
-Multi-sample parallel computing, test data with 6 samples in dual parallel: 50m, recommended 16p, 3h/6G;
-多样本并行计算，测试数据6个样本双并行：50m，推荐16p，3h/6G；
+Multi-sample parallel computing, test data with 6 samples in dual parallel: 2h, recommended 16p, 3h/6G;
+多样本并行计算，测试数据6个样本双并行：2h，推荐16p，3h/6G；
 
     # -n+3 start from second samples, --threads set 8/16/32 to accelerate
     time tail -n+3 result/metadata.txt | cut -f1 | rush -j 2 \
@@ -293,9 +293,9 @@ Multi-sample parallel computing, test data with 6 samples in dual parallel: 50m,
 
 ### Taxonomic composition table (物种组成表)
 
-*   Output(输出)：
-    *   result/metaphlan4/taxonomy.tsv
-    *   result/metaphlan4/taxonomy.spf spf for STAMP（用于STAMP分析）
+    # Output(输出)：
+    #   result/metaphlan4/taxonomy.tsv
+    #   result/metaphlan4/taxonomy.spf spf for STAMP（用于STAMP分析）
     
     # Sample Merge, correct name, preview (样品合并、修正ID、预览)
     mkdir -p result/metaphlan4
@@ -319,15 +319,14 @@ Multi-sample parallel computing, test data with 6 samples in dual parallel: 50m,
 
 ## 2.4 Functional composition analysis (功能组成分析)
 
-*   整合后的输出：
-    *   result/metaphlan4/taxonomy.tsv 物种丰度表
-    *   result/metaphlan4/taxonomy.spf 物种丰度表（用于stamp分析）
-    *   result/humann3/pathabundance_relab_unstratified.tsv 通路丰度表
-    *   result/humann3/pathabundance_relab_stratified.tsv 通路物种组成丰度表
-    *   stratified(每个菌对此功能通路组成的贡献)和unstratified(功能组成)
+    # 整合后的输出：
+    # *   result/metaphlan4/taxonomy.tsv 物种丰度表
+    # *   result/metaphlan4/taxonomy.spf 物种丰度表（用于stamp分析）
+    # *   result/humann3/pathabundance_relab_unstratified.tsv 通路丰度表
+    # *   result/humann3/pathabundance_relab_stratified.tsv 通路物种组成丰度表
+    # *   stratified(每个菌对此功能通路组成的贡献)和unstratified(功能组成)
 
-Samples merging table (样本合并为功能组成表)
-
+    # Samples merging table (样本合并为功能组成表)
     mkdir -p result/humann4
     humann_join_tables --input temp/humann4 \
       --file_name pathabundance \
@@ -337,31 +336,28 @@ Samples merging table (样本合并为功能组成表)
     csvtk -t stat result/humann4/path.tsv
     head -n5 result/humann4/path.tsv
 
-Normolization to relative abundance relab(1) or per million cpm(1,000,000) (标准化为相对丰度relab或百万比cpm)
-
+    # Normolization to relative abundance relab(1) or per million cpm(1,000,000) (标准化为相对丰度relab或百万比cpm)
     humann_renorm_table \
       --input result/humann4/path.tsv \
       --units relab \
       --output result/humann4/path_relab.tsv
     head -n5 result/humann4/path_relab.tsv
 
-Stratify into function related species (stratified) and function only (unstratified) 分层为功能包括物种组成和仅功能组成
-
+    # Stratify into function related species (stratified) and function only (unstratified) 分层为功能包括物种组成和仅功能组成
     humann_split_stratified_table \
       --input result/humann4/path_relab.tsv \
       --output result/humann4/ 
 
 ### Difference comparison and bar chart (差异比较和柱状图)
 
-* Input: Pathway abundance table result/humann4/path.tsv and experimental design result/metadata.txt
-* Intermediate: Pathway abundance table file containing grouping information result/humann4/path.pcl
-* Output: result/humann4/associate.txt
-*   输入数据：通路丰度表格 result/humann4/path.tsv和实验设计 result/metadata.txt
-*   中间数据：包含分组信息的通路丰度表格文件 result/humann4/path.pcl
-*   输出结果：result/humann4/associate.txt
+    # * Input: Pathway abundance table result/humann4/path.tsv and experimental design result/metadata.txt
+    # * Intermediate: Pathway abundance table file containing grouping information result/humann4/path.pcl
+    # * Output: result/humann4/associate.txt
+    # *   输入数据：通路丰度表格 result/humann4/path.tsv和实验设计 result/metadata.txt
+    # *   中间数据：包含分组信息的通路丰度表格文件 result/humann4/path.pcl
+    # *   输出结果：result/humann4/associate.txt
 
-Add grouping to pathway abundance (在通路丰度中添加分组)
-
+    # Add grouping to pathway abundance (在通路丰度中添加分组)
     # List of samples ID (提取样品列表)
     head -n1 result/humann4/path.tsv | sed 's/# Pathway HUMAnN v4.0.0.alpha.1/SampleID/' | tr '\t' '\n' > temp/header
     # The sample corresponds to group; in this example group is the 3rd column ($3) 样本对应分组，本示例分组为第3列($3)
@@ -372,9 +368,8 @@ Add grouping to pathway abundance (在通路丰度中添加分组)
     head -n5 result/humann4/path.pcl
     tail -n5 result/humann4/path.pcl
 
-For intergroup comparisons, small sample sizes may no significant differences
-组间比较，样本量少无差异
-
+    # For intergroup comparisons, small sample sizes may no significant differences
+    # 组间比较，样本量少无差异
     # Backup demo data from HMP (hmp_pathabund.pcl replace to path.pcl)
     # wget -c http://www.imeta.science/github/EasyMetagenome/result/humann2/hmp_pathabund.pcl
     # cp -f hmp_pathabund.pcl result/humann4/path.pcl
@@ -392,9 +387,8 @@ For intergroup comparisons, small sample sizes may no significant differences
     csvtk -t stat result/humann4/associate.txt
     head -n5 result/humann4/associate.txt
 
-barplot show pathway taxonomic composition:  L-lysine fermentation to acetate and butanoate 
-柱状图展示通路的物种组成，如：L-赖氨酸发酵生成乙酸和丁酸
-
+    # barplot show pathway taxonomic composition:  L-lysine fermentation to acetate and butanoate 
+    # 柱状图展示通路的物种组成，如：L-赖氨酸发酵生成乙酸和丁酸
     # Set significant pathway ID from associate.txt，--sort sum metadata 按丰度和分组排序 
     # eg. P163-PWY (P 0.03, Q 0.09)/ 1CMET2-PWY (P 0.12, Q 0.18)
     path=P163-PWY
@@ -403,19 +397,10 @@ barplot show pathway taxonomic composition:  L-lysine fermentation to acetate an
         --input ${pcl} --focal-feature ${path} \
         --focal-metadata Group --last-metadata Group \
         --output result/humann4/barplot_${path}.pdf --sort sum metadata 
-
-
-    # 移动重要文件至humann3目录
-    # $(cmd) 与 `cmd` 通常是等价的；`cmd`写法更简单，但要注意反引号是键盘左上角ESC下面的按键，$(cmd)更通用，适合嵌套使用
-    for i in $(tail -n+2 result/metadata.txt | cut -f1); do  
-       mv temp/humann3/${i}_humann_temp/${i}_metaphlan_bugs_list.tsv temp/humann3/
-    done
-    # Deleting temporary files save space 删除临时文件节省空间
-    /bin/rm -rf temp/concat/* temp/humann3/*_humann_temp
     
 ### KEGG annotation (注释)
 
-Support GO, PFAM, eggNOG, level4ec, KEGG, etc. Detail see `humann_regroup_table -h`。
+    # Support GO, PFAM, eggNOG, level4ec, KEGG, etc. Detail see `humann_regroup_table -h`。
 
     # regroup gene family into KO(uniref90_ko), options eggNOG(uniref90_eggnog) or EC(uniref90_level4ec)
     for i in `tail -n+2 result/metadata.txt|cut -f1`;do
@@ -424,7 +409,7 @@ Support GO, PFAM, eggNOG, level4ec, KEGG, etc. Detail see `humann_regroup_table 
         -g uniref90_ko \
         -o temp/humann4/${i}_ko.tsv
     done
-    # Merge sample and correct name 合并并修正样本名
+    # Merge sample and correct name (合并并修正样本名)
     humann_join_tables \
       --input temp/humann4/ \
       --file_name ko \
@@ -432,19 +417,17 @@ Support GO, PFAM, eggNOG, level4ec, KEGG, etc. Detail see `humann_regroup_table 
     sed -i '1s/_Abundance-RPKs//g' result/humann4/ko.tsv
     tail result/humann4/ko.tsv
 
-Similar to pathabundance, it can perform operations such as normalization, stratified, and barplot.
-与pathabundance类似，可进行标准化renorm、分层stratified、柱状图barplot等操作
+    # Similar to pathabundance, it can perform operations such as normalization, stratified, and barplot.
+    # 与pathabundance类似，可进行标准化renorm、分层stratified、柱状图barplot等操作
 
-Stratify into function related species (stratified) and function only (unstratified)
-分层为功能包括物种组成和仅功能组成
-
+    # Stratify into function related species (stratified) and function only (unstratified)
+    # 分层为功能包括物种组成和仅功能组成
     humann_split_stratified_table \
       --input result/humann4/ko.tsv \
       --output result/humann4/ 
     wc -l result/humann4/ko*
 
-KO to level 1/2/3, 9, 53 and 332 respectively KO合并为更高层级L3/L2/L1
-    
+    # KO to level 1/2/3, 9, 53 and 332 respectively (KO合并为更高层级L3/L2/L1)
     summarizeAbundance.py \
       -i result/humann4/ko_unstratified.tsv \
       -m ${db}/EasyMicrobiome/kegg/KO1-4.txt \
@@ -454,9 +437,8 @@ KO to level 1/2/3, 9, 53 and 332 respectively KO合并为更高层级L3/L2/L1
     
 ## 2.2 GraPhlAn taxonomic and phylogenetic trees 高颜值物种或进化树
 
-Method 1. Use export2graphlan to create plotting files
-方法1. 使用export2graphlan制作绘图文件
-
+    # Method 1. Use export2graphlan to create plotting files
+    # 方法1. 使用export2graphlan制作绘图文件
     conda activate graphlan
     # Detail parameters in PPT or run `export2graphlan.py --help`
     export2graphlan.py --skip_rows 1,2 -i result/metaphlan4/taxonomy.tsv \
@@ -470,32 +452,26 @@ Method 1. Use export2graphlan to create plotting files
     # output PDF figure, annoat and legend
     graphlan.py temp/merged_abundance.xml result/metaphlan4/graphlan.pdf --external_legends 
 
-方法2. 使用export2graphlan制作绘图文件
-
-    # GraPhlAn Plot
+    # Method 2. Use graphlan_plot to create plotting files
+    # 方法2. 使用graphlan_plot制作绘图文件
     bash ${db}/EasyMicrobiome/script/taxonomy_modified.sh \
       -i result/metaphlan4/taxonomy.spf \
       -o result/metaphlan4/taxonomy_modified.spf
-    Rscript ${db}/EasyMicrobiome/script/graphlan_plot55.r --input result/metaphlan4/taxonomy_modified.spf \
-    	--design result/metadata.txt --type heatmap --output metaphlan4/graphlanHeatmap
+    # Rscript ${db}/EasyMicrobiome/script/graphlan_plot55.r --input result/metaphlan4/taxonomy_modified.spf \
+    # 	--design result/metadata.txt --type heatmap --output metaphlan4/graphlanHeatmap
+    # 'lib="/usr/local/lib64/R/library"'不可写; Error in install.packages("optparse", repos = site) : 无法安装程序包
 
-## 2.3 LEfSe 差异分析物种
+## 2.3 LEfSe Differential analysis (差异分析物种)
 
-*   输入文件：物种丰度表result/metaphlan4/taxonomy.tsv
-*   输入文件：样品分组信息 result/metadata.txt
-*   中间文件：整合后用于LefSe分析的文件 result/metaphlan4/lefse.txt，可选 www.ehbio.com/ImageGP 在线LefSE分析
-*   LefSe结果输出：result/metaphlan2/目录下lefse开头和feature开头的文件
-
-前面演示数据仅有6个样本，无差异差异。下面使用result12目录中由12个样本生成的结果表进行演示
-
-    # 设置结果目录，自己的数据使用result，此用演示12个样本结果用result12
-    result=result
-    # 如果没有，请下载演示数据
+    # Set input & output director for different versions (可调目录尝试不同版本)
+    # For example, 12 sample examples, replace result to result12 (例如12个样本示例)
     # wget -c http://www.imeta.science/db/EasyMetagenome/result12.zip
     # unzip result12.zip
+    result=result
 
-准备输入文件，修改样本品为组名(可手动修改)
-
+    # Prepare the input file, and change the sample name to the group name (this can be done manually).
+    # 准备输入文件，修改样本品为组名(可手动修改)
+    # Extract the sample rows and replace them with one row for each sample, then change the ID to SampleID.
     # 提取样本行替换为每个样本一行，修改ID为SampleID
     sed -i 's/\r//g' $result/metaphlan4/taxonomy.tsv
     head -n1 $result/metaphlan4/taxonomy.tsv|tr '\t' '\n'|sed '1 s/ID/SampleID/' > temp/sampleid
@@ -506,7 +482,7 @@ Method 1. Use export2graphlan to create plotting files
     cat temp/groupid
     sed 's/SampleID/subject_id/' temp/sampleid | tr '\n' '\t'|sed 's/\t$/\n/' > temp/sampleid2
     # 合并分组和数据(替换表头)
-    cat groupid temp/sampleid2 <(tail -n+2 $result/metaphlan4/taxonomy.tsv) | grep -v '#' > $result/metaphlan4/lefse.txt
+    cat temp/groupid temp/sampleid2 <(tail -n+2 $result/metaphlan4/taxonomy.tsv) | grep -v '#' > $result/metaphlan4/lefse.txt
     head -n3 $result/metaphlan4/lefse.txt
     # 解决输入lefse文件格式问题，生成第二行 site，生成第三行 subject_id，-1代表值未知
     # awk 'NR==1{print; printf "site"; for(i=2;i<=NF;i++) printf "\t-1"; print ""; 
@@ -515,17 +491,18 @@ Method 1. Use export2graphlan to create plotting files
     #       > result/metaphlan4/lefse.txt
     # head result/metaphlan4/lefse.txt
 
-方法1. 推荐在线 <https://www.bic.ac.cn/ImageGP/> 中LEfSe一键分析
+    # Method 1. ImageGP 2 https://www.bic.ac.cn/BIC/#/analysis?page=b%27MzY%3D%27&tool_type=tool
+    # 方法1. 推荐 https://www.bic.ac.cn/BIC/ 中LEfSe分析
 
-方法2. LEfSe命令行分析
-
-    # 最新版教程：https://github.com/SegataLab/lefse/blob/master/example/bioconda-lefse_run.sh
+    # Method 2. LEfSe command line analysis
+    # 方法2. LEfSe命令行分析
+    # Example：https://github.com/SegataLab/lefse/blob/master/example/bioconda-lefse_run.sh
     conda activate lefse
     result=result
     lefse_run.py -h # LEfSe 1.1.01
     # 转换lefse格式，s 2  correction for dependent comparison
     lefse_format_input.py $result/metaphlan4/lefse.txt \
-      temp/input.in -c 1 -s 2 -u 3 -o 1000000
+      temp/input.in -c 1 -s 2 -o 1000000 #  -u 3
     # 运行lefse(样本必须有重复和分组)
     lefse_run.py temp/input.in temp/input.res
 
@@ -546,7 +523,7 @@ Method 1. Use export2graphlan to create plotting files
       temp/input.in temp/input.res \
       $result/metaphlan4/lefse_Actinobacteria.pdf
 
-    # 批量绘制所有差异features柱状图
+    # (可选)批量绘制所有差异特征柱状图
     lefse_plot_features.py -f diff \
       --archive none --format pdf \
       temp/input.in temp/input.res \
@@ -625,7 +602,7 @@ Merged samples into a table (合并样本为表格)
 
 ### Bracken abundance estimation (丰度估计)
 
-参数简介：
+Parameter description (参数简介):
 
 *   -d为数据库，-i为输入kraken2报告文件
 *   r是读长，此处为100，通常为150，o输出重新估计的值
