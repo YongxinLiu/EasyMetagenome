@@ -174,7 +174,7 @@ kneaddata是流程主要依赖bowtie2比对宿主，然后筛选非宿主序列�
         --remove-intermediate-output -v -t 3
 
     # Multi-sample host removal, this step occupies 5 times the space of the original data, 3m
-    # 多样本去宿主,此步占用原始数据5x空间,3m
+    # 多样本去宿主,此步占用原始数据5x空间,5m
     time tail -n+3 result/metadata.txt | cut -f1 | rush -j 2 \
       "kneaddata \
         -i1 temp/qc/{1}_1.fastq -i2 temp/qc/{1}_2.fastq \

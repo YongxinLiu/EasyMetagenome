@@ -228,77 +228,69 @@ select toplevel, right-click and copy the link, then paste it into the link fiel
     # unzip and index, 3 minutes (解压，建索引，120M 3分钟)
     gunzip tair10.fa.gz
     time bowtie2-build -f tair10.fa tair10 --threads 4
-
+    cd ${db}
 
 # 2. Read-based HUMAnN4/Kraken2 (二、基于读长分析)
 
 HUMAnN v4.0.0.alpha.1 + MetaPhlAn4 v4.1.1, HUMAnN3and HUMAnN2 see appendix
 
-## 宏基因组基于读长的分析 HUMAnN4/MetaPhlAn4
+## Read-based HUMAnN4/MetaPhlAn4 (基于读长的分析)
 
-### 方法1. HUMAnN4直接安装
+### Opt 1. Download install HUMAnN4 (方法1. HUMAnN4下载解压安装)
 
-    #1.更新--------------------humann4测试版只适配metaphlan4.1.1
+    # Specify conda filename (指定conda文件名)
+    s=humann4
+    # Download options include NMDC, Baidu NetDisk conda, etc (下载，可选微生物所nmdc 或 百度云/db/conda/humann4.tar.gz)
+    wget -c ftp://download.nmdc.cn/tools/conda/${s}.tar.gz
+    mkdir -p ${soft}/envs/${s}
+    time tar -xvzf ${s}.tar.gz -C ${soft}/envs/${s} # 1m
+    conda activate ${s}
+    conda unpack
+    
+### Method 2. Conada installation of HUMAnN4 (方法2. HUMAnN4直接安装)
+
+    # install (安装)
     conda create -n humann4
     conda activate humann4
     conda install -c biobakery humann=4.0.0a1
     conda install -c bioconda metaphlan=4.1.1
-    humann --version # v4.0.0.alpha.1
-    metaphlan -v # version 4.1.1 (11 Mar 2024)
 
-    #2.测试--------------------
-    humann_test #无报错最后显示 OK
-
-    #3.打包--------------------
-    #安装软件打包，f覆盖输出文件，ignore跳过修改检测
+    # Opt. Package (打包)
     n=humann4
     conda pack -f --ignore-missing-files -n ${n} -o ${n}.tar.gz
 
-### 方法2. Conda环境解压安装
+### Method 3. Installing HUMAnN4 from source code (方法3. HUMAnN4源码安装)
 
-    # 指定conda文件名
-    s=humann4
-    soft=~/miniconda3
-    # 下载，可选微生物所nmdc 或 百度云/db/conda/humann4.tar.gz
-    wget -c ftp://download.nmdc.cn/tools/conda/${s}.tar.gz
-    mkdir -p ${soft}/envs/${s}
-    tar -xvzf ${s}.tar.gz -C ${soft}/envs/${s}
-    conda activate ${s}
-    conda unpack
-    
-### 方法3. HUMAnN4源码安装
-
-    # 准备环境
+    # Prepare the environment (准备环境)
     conda create -n humann4 python=3.9 -y
     conda activate humann4
     conda install -c bioconda bowtie2 diamond blastp
-
-    # 从源码克隆并安装
+    # clone & install
     git clone https://github.com/biobakery/humann.git
     cd humann
     git checkout humann-4.0.0.alpha.1   # 或最新分支
     python setup.py install
+    cd ..
 
-    ### HUMAnN4安装测试
-    # 记录核心软件版本
+### HUMAnN4 Installation test (安装测试)
+
+    # Record core software version (记录核心软件版本)
     humann --version # v4.0.0.alpha.1
     metaphlan -v # 4.1.1 (11 Mar 2024)
-    diamond help | head -n 1 #  v2.0.15.153
-    # 测试
+    diamond help | head -n 1 # v2.1.14.168
+    # test (测试)
     humann_test
 
-### HUMAnN4物种和功能数据库
+### HUMAnN4 database (数据库)
 
-    # 建立数据库安装目录 database directory
-    db=~/db
+    # database directory (建立数据库安装目录 )
     mkdir -p ${db}/humann4 && cd ${db}/humann4
     mkdir -p chocophlan chocophlan_ec uniref utility_mapping
     # 显示可用分类、泛基因组和功能数据库
-    conda activate humann4
     humann_databases
 
-    # 方法1. wget或百度下载并解压
-    # chocophlan full 42G, 5min
+    # Method 1. Download and extract the file using wget or Baidu (方法1. wget或百度下载并解压)
+    # chocophlan full 42G, 5-7min
     wget -c http://huttenhower.sph.harvard.edu/humann_data/chocophlan/chocophlan.v4_alpha.tar.gz
     time tar xvzf chocophlan.v4_alpha.tar.gz -C ${db}/humann4/chocophlan
     # chocophlan ec_filtered, 6.5G, 1min
@@ -308,52 +300,51 @@ HUMAnN v4.0.0.alpha.1 + MetaPhlAn4 v4.1.1, HUMAnN3and HUMAnN2 see appendix
     wget -c http://huttenhower.sph.harvard.edu/humann_data/uniprot/uniref_ec_filtered/uniref90_annotated_v4_alpha_ec_filtered.tar.gz
     time tar xvzf uniref90_annotated_v4_alpha_ec_filtered.tar.gz -C ${db}/humann4/uniref
     ls -lh ${db}/humann4/uniref/humann4_protein_database_filtered_v2019_06.dmnd
-    # uniref, 2.7G, 19s
+    # uniref, 2.7G, 30s
     wget -c http://huttenhower.sph.harvard.edu/humann_data/full_mapping_v4_alpha.tar.gz
     time tar xvzf full_mapping_v4_alpha.tar.gz -C ${db}/humann4/utility_mapping
 
-    # 方法2. 程序自动安装数据库
-    # 微生物泛基因组 42 GB
+    # Method 2. The program install database (方法2. 程序自动安装数据库)
+    # microbial pangenome(微生物泛基因组) 42 GB
     humann_databases --download chocophlan full ${db}/humann4
-    # 微生物泛基因组 ec过滤版 6.5 GB
+    # icrobial pangenome ec_filtered(微生物泛基因组ec过滤版) 6.5 GB
     humann_databases --download chocophlan ec_filtered ${db}/humann4
-    # 功能基因diamond索引 1.6G? 20 GB
+    # uniref90 diamond index (功能基因索引) 1.6G
     humann_databases --download uniref uniref90_ec_filtered_diamond ${db}/humann4 
-    # 输助比对数据库 2.7 GB
+    # functional description (功能描述) 2.7 GB
     humann_databases --download utility_mapping full ${db}/humann4
 
-    # 设置数据库位置
-    # 显示参数
+    # Set database location (设置数据库位置)
+    # Display parameters (显示参数)
     humann_config --print
-    # 如修改线程数，推荐3-8，根据实际情况调整
+    # Modify the number of threads (修改线程数)
     humann_config --update run_modes threads 8
-    # 设置核酸、蛋白和注释库位置
+    # Set the locations for nucleic acids, proteins, and annotation database (设置核酸、蛋白和注释库位置)
     humann_config --update database_folders nucleotide ${db}/humann4/chocophlan
     humann_config --update database_folders protein ${db}/humann4/uniref
     humann_config --update database_folders utility_mapping ${db}/humann4/utility_mapping
-    # 核对设置结果
+    # Check settings results(核对设置结果)
     humann_config --print
 
-### MetaPhlAn4物种数据库
+### MetaPhlAn4 taonomic database (物种数据库)
 
-    # 为了适配humann4需要安装mpa_vOct22_CHOCOPhlAnSGB_202403 MetaPhlAn4数据库下载2024数据和索引2.98G+19.87G
+    # humann4 need MetaPhlAn4 mpa_vOct22_CHOCOPhlAnSGB_202403 database (2.98G+19.87G)
     mkdir -p ${db}/metaphlan4 && cd ${db}/metaphlan4
 
-    # 官网下载 2.7G, 13s; 19G, 3m;
+    # Opt 1. Download from official website (官网下载) 2.7G, 30s; 19G, 5m;
     wget -c http://cmprod1.cibio.unitn.it/biobakery4/metaphlan_databases/mpa_vOct22_CHOCOPhlAnSGB_202403.tar
     time tar xvf mpa_vOct22_CHOCOPhlAnSGB_202403.tar
     wget -c http://cmprod1.cibio.unitn.it/biobakery4/metaphlan_databases/bowtie2_indexes/mpa_vOct22_CHOCOPhlAnSGB_202403_bt2.tar
     time tar xvf mpa_vOct22_CHOCOPhlAnSGB_202403_bt2.tar
 
-    # 备用：百度网盘 或 微生物所
-    https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315 或 微生物所FTP ftp://download.nmdc.cn/tools/meta 下载压缩包
+    # Opt 2/3. Download from Baidu NetDisk or NMDC (下载可选百度云或微生物所)
+    # Baidu NetDisk: https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315 db/meta/metaphlan4
     wget -c ftp://download.nmdc.cn/tools/meta/metaphlan4/mpa_vOct22_CHOCOPhlAnSGB_202403.tar
     wget -c ftp://download.nmdc.cn/tools/meta/metaphlan4/mpa_vOct22_CHOCOPhlAnSGB_202403_bt2.tar.gz
     tar xvf mpa_vOct22_CHOCOPhlAnSGB_202403.tar
-    tar xvzf mpa_vOct22_CHOCOPhlAnSGB_202403_bt2.tar.gz
+    time tar xvzf mpa_vOct22_CHOCOPhlAnSGB_202403_bt2.tar.gz
 
-
-### GraPhlAn high-quality circular representations of taxonomic and phylogenetic trees 高颜值物种或进化树
+### GraPhlAn taxonomic and phylogenetic trees (高颜值物种或进化树)
 
 Method 1. Unzip and install the conda installation package
 方法1. Conda安装包解压安装
