@@ -457,6 +457,7 @@ Multi-sample parallel computing, test data with 6 samples in dual parallel: 2h, 
     bash ${db}/EasyMicrobiome/script/taxonomy_modified.sh \
       -i result/metaphlan4/taxonomy.spf \
       -o result/metaphlan4/taxonomy_modified.spf
+    # 在本地和服务器运行成功，缺少R权限会运行失败
     # Rscript ${db}/EasyMicrobiome/script/graphlan_plot55.r --input result/metaphlan4/taxonomy_modified.spf \
     # 	--design result/metadata.txt --type heatmap --output metaphlan4/graphlanHeatmap
     # 'lib="/usr/local/lib64/R/library"'不可写; Error in install.packages("optparse", repos = site) : 无法安装程序包
@@ -484,15 +485,10 @@ Multi-sample parallel computing, test data with 6 samples in dual parallel: 2h, 
     # 合并分组和数据(替换表头)
     cat temp/groupid temp/sampleid2 <(tail -n+2 $result/metaphlan4/taxonomy.tsv) | grep -v '#' > $result/metaphlan4/lefse.txt
     head -n3 $result/metaphlan4/lefse.txt
-    # 解决输入lefse文件格式问题，生成第二行 site，生成第三行 subject_id，-1代表值未知
-    # awk 'NR==1{print; printf "site"; for(i=2;i<=NF;i++) printf "\t-1"; print ""; 
-    #       printf "subject_id"; for(i=2;i<=NF;i++) printf "\t-1"; print ""; 
-    #       next} $0!="#metaphlan4"{print}' result/metaphlan4/lefse0.txt \
-    #       > result/metaphlan4/lefse.txt
-    # head result/metaphlan4/lefse.txt
 
     # Method 1. ImageGP 2 https://www.bic.ac.cn/BIC/#/analysis?page=b%27MzY%3D%27&tool_type=tool
     # 方法1. 推荐 https://www.bic.ac.cn/BIC/ 中LEfSe分析
+    # Error delete the subject_id line (在线出错，请删除subject_id行)
 
     # Method 2. LEfSe command line analysis
     # 方法2. LEfSe命令行分析
@@ -500,30 +496,26 @@ Multi-sample parallel computing, test data with 6 samples in dual parallel: 2h, 
     conda activate lefse
     result=result
     lefse_run.py -h # LEfSe 1.1.01
-    # 转换lefse格式，s 2  correction for dependent comparison
+    # LEfSe format (转换lefse格式)，s 2  correction for dependent comparison
     lefse_format_input.py $result/metaphlan4/lefse.txt \
-      temp/input.in -c 1 -s 2 -o 1000000 #  -u 3
-    # 运行lefse(样本必须有重复和分组)
+      temp/input.in -c 1 -s 2 -o 1000000
+    # LEfSe run
     lefse_run.py temp/input.in temp/input.res
-
-    # 绘制物种树注释差异
+    # Plot cladogram (绘制物种树注释差异)
     lefse_plot_cladogram.py temp/input.res \
       $result/metaphlan4/lefse_cladogram.pdf --format pdf
-
-    # 绘制所有差异features柱状图
+    # Plot features barplot (绘制所有差异特征的柱状图)
     lefse_plot_res.py temp/input.res \
       $result/metaphlan4/lefse_res.pdf --format pdf
-        
-    # 绘制单个features柱状图
-    # 查看显著差异features，按丰度排序
+    # Draw a bar chart of a single feature (绘制单个特征柱状图)
+    # View differences features sorting by abundance (按丰度排序查看显著差异特征)
     grep -v '-' temp/input.res | sort -k3,3n
-    # 手动选择指定feature绘图，如Firmicutes
+    # Select a feature to draw, such as Actinobacteria (指定特征绘图，如放线菌)
     lefse_plot_features.py -f one --format pdf \
       --feature_name "k__Bacteria.p__Actinobacteria" \
       temp/input.in temp/input.res \
       $result/metaphlan4/lefse_Actinobacteria.pdf
-
-    # (可选)批量绘制所有差异特征柱状图
+    # (Optional) Batch plot all difference feature bar charts (可选)批量绘制所有差异特征柱状图
     lefse_plot_features.py -f diff \
       --archive none --format pdf \
       temp/input.in temp/input.res \
@@ -602,23 +594,28 @@ Merged samples into a table (合并样本为表格)
 
 ### Bracken abundance estimation (丰度估计)
 
-Parameter description (参数简介):
+    # Parameter description (参数简介):
+    # -d database, -i input Kraken2 report file
+    # -r read length, usually 150, -o outputs the re-estimated abundance
+    # -l is the taxonomic level, domain (D), phylum (P), class (C), order (O), family (F), genus (G), and species (S) levels
+    # -t is the threshold, defaults to 0, larger values result in higher reliability
+    # -d为数据库，-i为输入kraken2报告文件
+    # r是读长，通常为150，o输出重新估计的值
+    # l为分类级，可选域D、门P、纲C、目O、科F、属G、种S级别丰度估计
+    # t是阈值，默认为0，越大越可靠
 
-*   -d为数据库，-i为输入kraken2报告文件
-*   r是读长，此处为100，通常为150，o输出重新估计的值
-*   l为分类级，可选域D、门P、纲C、目O、科F、属G、种S级别丰度估计
-*   t是阈值，默认为0，越大越可靠，但可用数据越少
-
-循环重新估计每个样品的丰度，请修改tax分别重新计算P和S各1次
-
+    # Re-estimate the abundance of each sample in a loop. 
+    # Please modify the tax and recalculate P and S once each.
+    # 循环重新估计每个样品的丰度，请修改tax分别重新计算P和S各1次
     mkdir -p temp/bracken
-    # 测序数据长度，通常为150，早期有100/75/50/25
+    # read length (测序数据长度)、
     readLen=150
-    # 20%样本中存在才保留
+    # Only those present in 20% of the samples are retained (20%样本中存在才保留)
     prop=0.2
+    # Classification is set into D, P, C, O, F, G, S, with commonly used categories being Kingdom (D), Phylum (P), Genus (G), and Species (S).
     # 设置分类级D,P,C,O,F,G,S，常用界D门P和属G种S
-    for tax in D P G S;do
-    # tax=S
+    for tax in P G S;do
+    # tax=P
     for i in `tail -n+2 result/metadata.txt | cut -f1`;do
         # i=C1
         bracken -d ${db}/kraken2/${type}/ \
@@ -649,30 +646,25 @@ Parameter description (参数简介):
       -o result/kraken2/bracken.${tax}.${prop}
     # head result/kraken2/bracken.${tax}.${prop}
     done
-    
-    csvtk -t stat result/kraken2/bracken.?.txt
-    csvtk -t stat result/kraken2/bracken.?.$prop
+    csvtk -t stat result/kraken2/bracken.?.txt result/kraken2/bracken.?.$prop
 
-个性化结果筛选
-
-    # 门水平去除脊索动物(人)
+    # Personalized results filtering, e.g. Chordata  (个性化结果筛选，如脊索动物)
+    # Phylum level removal of chordate (humans) 门水平去除脊索动物(人)
     grep 'Chordata' result/kraken2/bracken.P.${prop}
     grep -v 'Chordata' result/kraken2/bracken.P.${prop} > result/kraken2/bracken.P.${prop}-H
 
-    # 按物种名手动去除宿主污染，以人为例(需按种水平计算相关结果)
-    # 种水平去除人类P:Chordata,S:Homo sapiens
+    # Remove host contamination by species name, humans as an example: Homo sapiens (按物种名手动去除宿主污染，以人为例)
     grep 'Homo sapiens' result/kraken2/bracken.S.${prop}
     grep -v 'Homo sapiens' result/kraken2/bracken.S.${prop} \
       > result/kraken2/bracken.S.${prop}-H
 
-分析后清理每条序列的注释大文件
+    # Clean big annotation files for each sequence (清理每条序列的注释大文件)
 
     /bin/rm -rf temp/kraken2/*.output
 
-#### 多样性和可视化
+### Diversity and Visualization (多样性和可视化)
 
-alpha多样性计算：Berger Parker’s (BP), Simpson’s (Si), inverse Simpson’s (ISi), Shannon’s (Sh) # Fisher’s (F)依赖scipy.optimize包，默认未安装
-
+    # Alpha diversity：Berger Parker’s (BP), Simpson’s (Si), inverse Simpson’s (ISi), Shannon’s (Sh)
     echo -e "SampleID\tBerger Parker\tSimpson\tinverse Simpson\tShannon" > result/kraken2/alpha.txt
     for i in `tail -n+2 result/metadata.txt|cut -f1`;do
         echo -e -n "$i\t" >> result/kraken2/alpha.txt
@@ -683,33 +675,31 @@ alpha多样性计算：Berger Parker’s (BP), Simpson’s (Si), inverse Simpson
     done
     cat result/kraken2/alpha.txt
 
-beta多样性计算
-    
-    beta_diversity.py -i temp/bracken/*.brk --type bracken \
-      > result/kraken2/beta.txt
+    # Beta diversity
+    beta_diversity.py -i temp/bracken/*.brk --type bracken > result/kraken2/beta.txt
     cat result/kraken2/beta.txt
 
-Krona图
-
+    # Krona plot
     for i in `tail -n+2 result/metadata.txt|cut -f1`;do
         kreport2krona.py -r temp/bracken/${i}.report -o temp/bracken/${i}.krona --no-intermediate-ranks
         ktImportText temp/bracken/${i}.krona -o result/kraken2/krona.${i}.html
     done
 
-Pavian桑基图：https://fbreitwieser.shinyapps.io/pavian/ 在线可视化:，左侧菜单，Upload sample set (temp/bracken/*.report)，支持多样本同时上传；Sample查看结果，Configure Sankey配置图样式，Save Network下载图网页
+    # Pavian Sankey diagram (桑基图)：https://fbreitwieser.shinyapps.io/pavian/ 
+    # Online visualization: `Upload sample set` (temp/bracken/*.report), supports multiple samples; `Sample` view results; `Configure Sankey` to configure graph styles; `Save Network` to download the graph webpage.
+    # 在线可视化:，左侧菜单，Upload sample set (temp/bracken/*.report)，支持多样本同时上传；Sample查看结果，Configure Sankey配置图样式，Save Network下载图网页
 
-多样性分析/物种组成，详见3StatPlot.sh，Kraken2结果筛选序列见附录
+    # For diversity/composition visualization, see 3StatPlot.sh (多样性分析/物种组成可视化见3StatPlot.sh)
 
 
-# 三、组装分析流程 Assemble-based
+# 3. Assemble-based (三、组装分析流程)
 
+##  Assemble (组装)
 
-##  组装
-
-    # 启动工作环境
+    # Start working environment (启动工作环境)
     conda activate megahit
     
-### MEGAHIT组装Assembly
+### MEGAHIT Assembly (组装)
 
     # 删除旧文件夹，否则megahit无法运行
     # /bin/rm -rf temp/megahit
