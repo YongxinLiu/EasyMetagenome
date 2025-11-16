@@ -99,7 +99,6 @@ zless/zcat查看可压缩文件，检查序列质量格式(质量值大写字母
 **Summary of Working Directory and File Structure**
 **工作目录和文件结构总结**
 
-
     # ├── pipeline.sh
     # ├── result
     # │   └── metadata.txt
@@ -222,94 +221,91 @@ Large file cleanup: samples with high host content can save >90% of space.
     # 人类数据建议发布去宿主后的文件，减少隐私泄露风险
     
 
-# 二、基于读长分析 Read-based (HUMAnN4+MetaPhlAn4+Kraken2)
+# Read-based HUMAnN4/Kraken2 (二、基于读长分析)
 
-HUMAnN 4.0教程 https://docs.google.com/document/d/1rCx5JkuO7wCKWrL8_-UJx_FkopJAfcDFtZktgPspak0/edit?pli=1&tab=t.0
+## 2.1 HUMAnN4分析
 
-## 2.1 准备HUMAnN输入文件
+HUMAnN 4: https://docs.google.com/document/d/1rCx5JkuO7wCKWrL8_-UJx_FkopJAfcDFtZktgPspak0/edit?pli=1&tab=t.0
 
-HUMAnN要求双端序列合并的文件作为输入，for循环根据实验设计样本名批量双端序列合并。注意星号(\*)和问号(?)，分别代表多个和单个字符。当然大家更不能溜号，行分割的代码行末有一个\\
+### HUMAnN4 taxonomic and functional annotation (物种和功能分析)
+
+Prepare input file (准备输入文件)
+HUMAnN requires a file containing paired-end sequences to be merged as input. 
+A for loop is used to merge paired-end sequences in batches according to the experimental design sample names. 
+Note the asterisk (*) and question mark (?), which represent multiple and a single character, respectively. 
+Of course, you must also pay attention to the fact that each line of code ends with a backslash (\\).
+HUMAnN要求双端序列合并的文件作为输入，for循环根据实验设计样本名批量双端序列合并。
+注意星号(\*)和问号(?)，分别代表多个和单个字符。当然大家更不能溜号，行分割的代码行末有一个\\
 
     mkdir -p temp/concat
-    # 双端合并为单个文件
+    # Merge pair-end files into a single file (双端合并为单个文件)
     for i in `tail -n+2 result/metadata.txt|cut -f1`;do 
       cat temp/hr/${i}_?.fastq \
       > temp/concat/${i}.fq; done
-    # 查看样品数量和大小
+    # Check sample quantity and size (查看样品数量和大小)
     ls -shl temp/concat/*.fq
+    # The data is too large and the computation time is long. You can use head to truncate the single-end analysis to a 20M sequence, i.e., 3G, with 80M lines. See Appendix: HUANN2 Reduce Input File Speedup.
     # 数据太大，计算时间长，可用head对单端分析截取20M序列，即3G，行数为80M行，详见附录：HUMAnN2减少输入文件加速
 
-## 2.2 HUMAnN计算物种和功能组成
-
-*   物种组成调用MetaPhlAn4
-*   输入文件：temp/concat/*.fq 每个样品质控后双端合并后的fastq序列
-*   输出文件：temp/humann4/ 目录下
+HUMAnN4 analysis tutorial and test (教学和测试)
+*   Taxonomic annotation call MetaPhlAn4 (物种组成调用)
+*   Input(输入)：temp/concat/*.fq Merged sequences (合并的序列)
+*   Output(输出)：temp/humann4/
     *   Y1_pathabundance.tsv
     *   Y1_pathcoverage.tsv
     *   Y1_genefamilies.tsv
-*   整合后的输出：
-    *   result/metaphlan4/taxonomy.tsv 物种丰度表
-    *   result/metaphlan4/taxonomy.spf 物种丰度表（用于stamp分析）
-    *   result/humann3/pathabundance_relab_unstratified.tsv 通路丰度表
-    *   result/humann3/pathabundance_relab_stratified.tsv 通路物种组成丰度表
-    *   stratified(每个菌对此功能通路组成的贡献)和unstratified(功能组成)
-
-启动humann4环境，检查数据库配置
-
+    
+    # Start the humann4 environment and check the database configuration (启动环境并检查数据库配置)
     conda activate humann4
     mkdir -p temp/humann4
     humann --version # v4.0.0.alpha.1
     humann_config
 
-单样本测试：Y1大小657M，8p, 15min
-
+    # Single-sample test (单样本测试): Y1 657M, 8p, 32min
     i=`tail -n+2 result/metadata.txt|cut -f1 | head -n1`
-    time humann \
-      --input temp/concat/${i}.fq \
-      --threads 8 \
+    time humann --input temp/concat/${i}.fq --threads 8 \
       --metaphlan-options "--input_type fastq --bowtie2db ${db}/metaphlan4 --index mpa_vOct22_CHOCOPhlAnSGB_202403 --offline -t rel_ab_w_read_stats --nproc 8" \
-      --output temp/humann4 
+      --output temp/humann4
+    # Using chocophlan_ec (42 to 6.6G) small database, 8p 39min
+    # mkdir -p temp/humann4s
+    # time humann --input temp/concat/${i}.fq --threads 8 --nucleotide-database ~/db/humann4/chocophlan_ec \
+    #   --metaphlan-options "--input_type fastq --bowtie2db ${db}/metaphlan4 --index mpa_vOct22_CHOCOPhlAnSGB_202403 --offline -t rel_ab_w_read_stats --nproc 8" \
+    #   --output temp/humann4s
       
+Multi-sample parallel computing, test data with 6 samples in dual parallel: 50m, recommended 16p, 3h/6G;
 多样本并行计算，测试数据6个样本双并行：50m，推荐16p，3h/6G；
 
-    # 如果服务器性能好，请设置--threads值为8/16/32
-    time tail -n+2 result/metadata.txt | cut -f1 | sed 's/_1$//' | rush -j 2 \
-      "humann --input temp/concat/{1}.fq \
-        --threads 8 \
+    # -n+3 start from second samples, --threads set 8/16/32 to accelerate
+    time tail -n+3 result/metadata.txt | cut -f1 | rush -j 2 \
+      "humann --input temp/concat/{1}.fq --threads 8 \
         --metaphlan-options '--input_type fastq --bowtie2db ${db}/metaphlan4 --index mpa_vOct22_CHOCOPhlAnSGB_202403 --offline -t rel_ab_w_read_stats --nproc 8'  \
         --output temp/humann4/ "
 
-    # 移动重要文件至humann3目录
-    # $(cmd) 与 `cmd` 通常是等价的；`cmd`写法更简单，但要注意反引号是键盘左上角ESC下面的按键，$(cmd)更通用，适合嵌套使用
-    for i in $(tail -n+2 result/metadata.txt | cut -f1); do  
-       mv temp/humann3/${i}_humann_temp/${i}_metaphlan_bugs_list.tsv temp/humann3/
-    done
-    # Deleting temporary files save space 删除临时文件节省空间
-    /bin/rm -rf temp/concat/* temp/humann3/*_humann_temp
-
 (Optional) Run MetaPhlAn4 separately (可选)单独运行MetaPhlAn4
 
+    conda activate humann4
+    metaphlan -v # MetaPhlAn version 4.1.1 (11 Mar 2024)
     mkdir -p temp/metaphlan4
     i=`tail -n+2 result/metadata.txt|cut -f1 | head -n1`
-    # taxonomy classification 4p, 6min, 3min for database loading
+    # taxonomy classification 8p, 4min
     time metaphlan --input_type fastq temp/hr/${i}_1.fastq \
-      temp/metaphlan4/${i}.txt --bowtie2db ${db}/metaphlan4 --index mpa_vOct22_CHOCOPhlAnSGB_202403 --offline \
-      --nproc 4
+      temp/metaphlan4/${i}.txt --nproc 8 --bowtie2db ${db}/metaphlan4 --index mpa_vOct22_CHOCOPhlAnSGB_202403 --offline
 
-## 2.3 Taxonomic composition table 物种组成表
+### Taxonomic composition table (物种组成表)
 
-**Sample merging 样品结果合并**
-
+*   Output(输出)：
+    *   result/metaphlan4/taxonomy.tsv
+    *   result/metaphlan4/taxonomy.spf spf for STAMP（用于STAMP分析）
+    
+    # Sample Merge, correct name, preview (样品合并、修正ID、预览)
     mkdir -p result/metaphlan4
-    # Merge, correct sample names, preview 合并、修正样本名、预览
     merge_metaphlan_tables.py temp/humann4/*_metaphlan_profile.tsv | sed 's/_1_metaphlan//g' | tail -n+2 | sed '1 s/clade_name/ID/' | sed '2i #metaphlan4' \
       > result/metaphlan4/taxonomy.tsv
     csvtk -t stat result/metaphlan4/taxonomy.tsv
     head -n5 result/metaphlan4/taxonomy.tsv
 
-**Format to stamp spf(转换为STAMP输入spf格式)**
-
-    # metaphlan4 have duplicate rows，redandency by sort & uniq 
+    # Format to stamp spf(转换为STAMP输入spf格式)
+    # duplicate rows redandency by sort & uniq 
     metaphlan_to_stamp.pl result/metaphlan4/taxonomy.tsv \
       |sort -r | uniq > result/metaphlan4/taxonomy.spf
     # stat and view, 14 columns, 274 rows
@@ -322,6 +318,13 @@ HUMAnN要求双端序列合并的文件作为输入，for循环根据实验设�
     # Download metadata.txt & taxonomy2.spf, and open in STAMP software 结果文件下载可用STAMP分析
 
 ## 2.4 Functional composition analysis (功能组成分析)
+
+*   整合后的输出：
+    *   result/metaphlan4/taxonomy.tsv 物种丰度表
+    *   result/metaphlan4/taxonomy.spf 物种丰度表（用于stamp分析）
+    *   result/humann3/pathabundance_relab_unstratified.tsv 通路丰度表
+    *   result/humann3/pathabundance_relab_stratified.tsv 通路物种组成丰度表
+    *   stratified(每个菌对此功能通路组成的贡献)和unstratified(功能组成)
 
 Samples merging table (样本合并为功能组成表)
 
@@ -401,6 +404,15 @@ barplot show pathway taxonomic composition:  L-lysine fermentation to acetate an
         --focal-metadata Group --last-metadata Group \
         --output result/humann4/barplot_${path}.pdf --sort sum metadata 
 
+
+    # 移动重要文件至humann3目录
+    # $(cmd) 与 `cmd` 通常是等价的；`cmd`写法更简单，但要注意反引号是键盘左上角ESC下面的按键，$(cmd)更通用，适合嵌套使用
+    for i in $(tail -n+2 result/metadata.txt | cut -f1); do  
+       mv temp/humann3/${i}_humann_temp/${i}_metaphlan_bugs_list.tsv temp/humann3/
+    done
+    # Deleting temporary files save space 删除临时文件节省空间
+    /bin/rm -rf temp/concat/* temp/humann3/*_humann_temp
+    
 ### KEGG annotation (注释)
 
 Support GO, PFAM, eggNOG, level4ec, KEGG, etc. Detail see `humann_regroup_table -h`。
@@ -440,7 +452,7 @@ KO to level 1/2/3, 9, 53 and 332 respectively KO合并为更高层级L3/L2/L1
       -o result/humann4/KEGG
     wc -l result/humann4/KEGG*
     
-## 2.5 GraPhlAn taxonomic and phylogenetic trees 高颜值物种或进化树
+## 2.2 GraPhlAn taxonomic and phylogenetic trees 高颜值物种或进化树
 
 Method 1. Use export2graphlan to create plotting files
 方法1. 使用export2graphlan制作绘图文件
@@ -467,7 +479,7 @@ Method 1. Use export2graphlan to create plotting files
     Rscript ${db}/EasyMicrobiome/script/graphlan_plot55.r --input result/metaphlan4/taxonomy_modified.spf \
     	--design result/metadata.txt --type heatmap --output metaphlan4/graphlanHeatmap
 
-## 2.6 LEfSe 差异分析物种
+## 2.3 LEfSe 差异分析物种
 
 *   输入文件：物种丰度表result/metaphlan4/taxonomy.tsv
 *   输入文件：样品分组信息 result/metadata.txt
@@ -540,21 +552,21 @@ Method 1. Use export2graphlan to create plotting files
       temp/input.in temp/input.res \
       $result/metaphlan4/lefse_
 
-## 2.7 Kraken2+Bracken taxonomic classification and abundance estimation 物种注释和丰度估计
+## 2.4 Kraken2+Bracken taxonomic classification and abundance estimation (物种注释和丰度估计)
 
 Kraken2 can quickly perform species annotation and quantification at the read level, 
 and can also perform sequence species annotation at the contig, gene, and metagenomic assembly (MAG/bin) levels.
 Kraken2可以快速完成读长(read)层面的物种注释和定量，还可以进行重叠群(contig)、基因(gene)、宏基因组组装基因组(MAG/bin)层面的序列物种注释。
 
     # Start the Kraken2 working environment(启动kraken2工作环境)
-    conda activate kraken2.1.6
+    conda activate kraken2
     # Record software version(记录软件版本)
     kraken2 --version # 2.1.6
     mkdir -p temp/kraken2
 
-### Kraken2 taxonomic classification 物种注释
+### Kraken2 taxonomic classification (物种注释)
 
-Input(输入): temp/hr/{1}_?.fastq, {1} representative sample name 代表样本名
+Input(输入): temp/hr/{1}_?.fastq, {1} representative sample name (代表样本名)
 Database(数据库): -db ${db}/kraken2/pluspf16g/
 Output(输出结果): temp/kraken2/{1}_report and {1}_output
 Feature table(物种丰度表): result/kraken2/taxonomy_count.txt 
@@ -563,7 +575,7 @@ Feature table(物种丰度表): result/kraken2/taxonomy_count.txt
     # 根据服务器内存大小或具体分析需求选择数据库
     # pluspf16g for small memory / pluspf(100G) for human/animial / pluspfp(214G) for plant/soil
     type=pluspf16g
-    # demon sample, 2min
+    # test first sample, 2min
     i=`tail -n+2 result/metadata.txt|cut -f1 | head -n1`
     time kraken2 --db ${db}/kraken2/${type}/ \
       --paired temp/hr/${i}_?.fastq \
@@ -574,44 +586,44 @@ Feature table(物种丰度表): result/kraken2/taxonomy_count.txt
 Batch processing of multiple samples to generate reports consumes a lot of memory but is fast; therefore, multi-task parallelism is not recommended.
 多样本批处理生成report，内存消耗大但速度快，不建议用多任务并行
 
-    for i in `tail -n+2 result/metadata.txt | cut -f1`;do
+    for i in `tail -n+3 result/metadata.txt | cut -f1`;do
       kraken2 --db ${db}/kraken2/${type} \
       --paired temp/hr/${i}_?.fastq \
       --threads 2 --use-names --report-zero-counts \
       --report temp/kraken2/${i}.report \
       --output temp/kraken2/${i}.output; done
       
+Use Krakentools to convert the report to MPA format.
 使用krakentools转换report为mpa格式
 
     for i in `tail -n+2 result/metadata.txt | cut -f1`;do
       kreport2mpa.py -r temp/kraken2/${i}.report \
         --display-header -o temp/kraken2/${i}.mpa; done
 
-    # 按照百分比展示(可选)
+    # Display by percentage (optional) 按照百分比展示(可选)
     for i in `tail -n+2 result/metadata.txt | cut -f1`;do
       kreport2mpa.py -r temp/kraken2/${i}.report \
         --percentages --display-header -o temp/kraken2/${i}.p.mpa; done
   
-合并样本为表格
+Merged samples into a table (合并样本为表格)
 
     mkdir -p result/kraken2
-    # 输出结果行数相同，但不一定顺序一致，要重新排序
+    # Same row number, sort ensure consistent (结果行数相同sort确保排序一致)
     tail -n+2 result/metadata.txt | cut -f1 | rush -j 1 \
-      'tail -n+2 temp/kraken2/{1}.mpa | LC_ALL=C sort | cut -f 2 | sed "1 s/^/{1}\n/" > temp/kraken2/{1}_count '
-    # 提取第一样本品行名为表行名
-    header=`tail -n 1 result/metadata.txt | cut -f 1`
-    echo $header
-    tail -n+2 temp/kraken2/${header}.mpa | LC_ALL=C sort | cut -f 1 | \
+      'tail -n+2 temp/kraken2/{1}.mpa | LC_ALL=C sort | cut -f 2 | sed "1 s/^/{1}\n/" \
+      > temp/kraken2/{1}_count '
+    # sample1 as header(提取第一样本品行名为表行名)
+    tail -n+2 temp/kraken2/`tail -n 1 result/metadata.txt | cut -f 1`.mpa | LC_ALL=C sort | cut -f 1 | \
       sed "1 s/^/Taxonomy\n/" > temp/kraken2/0header_count
     head -n3 temp/kraken2/0header_count
-    # paste合并样本为表格
+    # paste merge into table (合并样本为表格)
     ls temp/kraken2/*count
     paste temp/kraken2/*count > result/kraken2/tax_count.mpa
-    # 检查表格及统计
-    csvtk -t stat result/kraken2/tax_count.mpa
+    # Check table and statistics (检查表格及统计)
     head -n 5 result/kraken2/tax_count.mpa
+    csvtk -t stat result/kraken2/tax_count.mpa
 
-### Bracken丰度估计
+### Bracken abundance estimation (丰度估计)
 
 参数简介：
 

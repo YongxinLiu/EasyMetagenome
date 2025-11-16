@@ -346,30 +346,28 @@ HUMAnN v4.0.0.alpha.1 + MetaPhlAn4 v4.1.1, HUMAnN3and HUMAnN2 see appendix
 
 ### GraPhlAn taxonomic and phylogenetic trees (高颜值物种或进化树)
 
-Method 1. Unzip and install the conda installation package
-方法1. Conda安装包解压安装
-
+    # Method 1. Unzip installation conda package
+    # 方法1. Conda包解压安装
+    cd $db
     n=graphlan
     # Download from NMDC ftp://download.nmdc.cn/tools/conda or BaiduNetdisk db/conda from https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
     wget -c ftp://download.nmdc.cn/tools/conda/${n}.tar.gz
     mkdir -p ${soft}/envs/${n}
     tar -xvzf ${n}.tar.gz -C ${soft}/envs/${n}
-    # activate and initial conda enviroment 启动和初始化环境
+    # activate and initial conda enviroment (启动和初始化环境)
     conda activate ${n}
     conda unpack
 
-Method 2. Conda installation
-方法2. Conda安装
-
+    # Method 2. Conda installation
+    # 方法2. Conda安装
     conda create -n graphlan graphlan export2graphlan -c bioconda -y
     graphlan.py --version # GraPhlAn version 1.1.3 (5 June 2018)
 
+## LEfSe Biomarker identification and visualization (生物标记鉴定和可视化)
 
-## 生物标记鉴定和可视化LEfSe
+Method 1. ImageGP 2 https://www.bic.ac.cn/BIC/#/analysis?page=b%27MzY%3D%27&tool_type=tool
 
-方法1. 在线ImageGP <http://www.bic.ac.cn/ImageGP/> 选择左侧LEfSe
-
-方法2. 下载conda预安装包解压
+Method 1. Download install LEfSe (方法2. LEfSe下载解压安装)
 
     n=lefse
     wget -c ftp://download.nmdc.cn/tools/conda/${n}.tar.gz
@@ -380,60 +378,60 @@ Method 2. Conda installation
     conda unpack
     lefse_run.py -h # LEfSe 1.1.01
 
-方法3. 直接安装：经常无法安装，安装的代码也有可能存在问题
+Method 3. Conda installation (方法3. Conda安装)
 
     mamba create -n lefse lefse -c bioconda -y
 
 
-## 物种注释Kraken2/bracken/krakentools/krona
+## Kraken2 taxonomic classification (物种注释)
 
-kraken2 基于LCA算法的物种注释 https://ccb.jhu.edu/software/kraken/
+kraken2: https://ccb.jhu.edu/software/kraken/
 
-    # 方法1. Kraken2 Conda包本地解压安装
-    n=kraken2.1.6
-    # 下载 nmdc 或 百度网盘
+    # Method 1. Kraken2 Conda package download install (包本地解压安装)
+    n=kraken2
+    # Download options include NMDC, Baidu NetDisk conda, etc (下载，可选微生物所nmdc 或 百度云/db/conda/kraken2.tar.gz)
     wget -c ftp://download.nmdc.cn/tools/conda/${n}.gz
-    # 指定安装目录
     mkdir -p ${soft}/envs/${n}
     time tar -xvzf ${n}.tar.gz -C ${soft}/envs/${n}
-    # 启动并初始化环境
     conda activate ${n}
     conda unpack
 
-    # 方法2. Kraken2在线安装指定版本，2025年11月为2.1.6
-    n=kraken2.1.6
-    mamba create -n ${n} -y -c bioconda kraken2=2.1.3 python=3.9
+    # Method 2. Conada installation of kraken2 (方法2. Kraken2在线安装指定版本)
+    n=kraken2
+    mamba create -n ${n} -y -c bioconda kraken2=2.1.6 python=3.9
     conda activate ${n}
     mamba install bracken krakentools krona r-optparse -y
-    # 记录软件版本
     kraken2 --version # 2.1.6
     less `type bracken | cut -f2 -d '('|cut -f 1 -d ')'`|grep 'VERSION' # 2.9
-    # 打包
     conda pack -f --ignore-missing-files -n ${n} -o ${n}.tar.gz
 
-### Kraken2数据库安装
+### Kraken2 database (数据库安装)
 
-数据库链接：https://benlangmead.github.io/aws-indexes/k2 (2025年10月)。 
+Database：https://benlangmead.github.io/aws-indexes/k2  
 
-    # 设置版本号，当前为20250714，并建立目录
+    # set version, current 20250714, set each type directory
     db=~/db
     v=20250714
     mkdir -p ${db}/kraken2 && cd ${db}/kraken2
     mkdir -p pluspf16g pluspf pluspfp
 
+Option 1. Download the standard + protozoa + fungi, compressed 11.2GB, uncompressed 14.9GB (PlusPF-16)
 方案1. 下载标准+原生动物+真菌，压缩包11.2G，解压14.9GB (PlusPF-16) 
 
-    # 官网、微生物所备用链接，或百度网盘下载并上传至kraken2目录
+    # Download from offical, NMDC or Baidu NetDisk (下载自官网、微生物所nmdc或百度云)
     wget -c https://genome-idx.s3.amazonaws.com/kraken/k2_pluspf_16_GB_${v}.tar.gz
     # wget -c ftp://download.nmdc.cn/tools/meta/kraken2/k2_pluspf_16_GB_${v}.tar.gz
-    time tar xvzf ${db}/kraken2/k2_pluspf_16_GB_${v}.tar.gz -C ~/db/kraken2/pluspf16g # 1min
+    time tar xvzf k2_pluspf_16_GB_${v}.tar.gz -C pluspf16g # 1min
 
+Option 2. Download the standard + protozoa + fungi, compressed 77.5G, uncompressed 100.6G (PlusPF)
 方案2. 下载标准+原生动物+真菌，压缩包77.5G，解压100.6G (PlusPF) 
 
     wget -c https://genome-idx.s3.amazonaws.com/kraken/k2_pluspf_${v}.tar.gz
     # wget -c ftp://download.nmdc.cn/tools/meta/kraken2/k2_pluspf_${v}.tar.gz
     time tar xvzf ${db}/kraken2/k2_pluspf_${v}.tar.gz -C ~/db/kraken2/pluspf # 1min
     
+Option 3. Download full for standards, protozoa, fungi, and plants; 
+the compressed file is 158.8GB, and the uncompressed file is 214.5GB (PlusPFP).
 方案3. 下载标准+原生动物+真菌+植物完整库，压缩包158.8G，解压214.5G (PlusPFP) 
 
     wget -c https://genome-idx.s3.amazonaws.com/kraken/k2_pluspfp_${v}.tar.gz
@@ -448,6 +446,7 @@ kraken2 基于LCA算法的物种注释 https://ccb.jhu.edu/software/kraken/
 ### megahit解包安装
 
     # 下载
+    cd $db
     wget -c ftp://download.nmdc.cn/tools//conda/megahit.tar.gz
     # 指定安装目录
     mkdir -p ${soft}/envs/megahit
