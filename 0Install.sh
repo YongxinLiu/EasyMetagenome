@@ -475,7 +475,7 @@ the compressed file is 158.8GB, and the uncompressed file is 214.5GB (PlusPFP).
 
     ### Opt 1. Download and install eggNOG (方法1.eggNOG下载解压安装)
     # Download options include NMDC, Baidu NetDisk conda, etc (下载，可选NMDC、百度云等)
-    wget -c ftp://download.nmdc.cn/tools/conda/eggnog.tar.gz
+    wget -c ftp://download.nmdc.cn/tools/conda/${s}.tar.gz
     mkdir -p ${soft}/envs/${s}
     tar -xvzf ${s}.tar.gz -C ${soft}/envs/${s}
     conda activate ${s}
@@ -515,131 +515,86 @@ the compressed file is 158.8GB, and the uncompressed file is 214.5GB (PlusPFP).
     ### test(测试), 2.1.13, expected eggNOG DB version: 5.0.2, diamond version 2.0.15
     emapper.py --version 
 
-### CAZy carbohydrate (碳水化合物)
-
-    mkdir -p ${db}/dbcan3 && cd ${db}/dbcan3
-    # dbCAN3 http://bcb.unl.edu/dbCAN2
-    # Download sequence and description 2G (下载序列和描述)
-    wget -c https://bcb.unl.edu/dbCAN2/download/Databases/V14/CAZyDB.07242025.fa
-    # wget -c https://bcb.unl.edu/dbCAN2/download/Databases/V12/CAZyDB.08062022.fam-activities.txt
-    # 新版文件缺失，手动整理中
-    wget -c https://bcb.unl.edu/dbCAN2/download/Databases/fam-substrate-mapping.tsv
-    # Extract gene family corresponding annotations (提取基因家簇对应注释)
-    grep -v '#' dbCAN-HMMdb-V14.txt | sed 's/  //' | sed '1 i CAZy\tDescription'  \
-      > CAZy_description.txt
-    # 打包压缩
-    tar -cvzf CAZyDB.tar.gz CAZyDB.07262023.fa CAZyDB.08062022.fam-activities.txt CAZy_description.txt
-    
-    # 备用数据库下载并解压(待上传)
-    wget -c ftp://download.nmdc.cn/tools/meta/dbcan3/CAZyDB.tar.gz
-    tar xvzf CAZyDB.tar.gz
-    
-    # diamond建索引，1G，11s
-    diamond --version # 2.1.10
-    time diamond makedb --in CAZyDB.07262023.fa --db CAZyDB
-
 
 ## CARD/rgi antibiotic resistance gene (抗生素抗性基因)
 
     # CARD：https://card.mcmaster.ca
     # RGI Github: https://github.com/arpcard/rgi
+    s=rgi
 
-    ### rgi解包安装
-    # 下载
-    wget -c ftp://download.nmdc.cn/tools/conda/rgi.tar.gz
-    # 指定安装目录
-    mkdir -p ${soft}/envs/rgi
-    tar -xvzf rgi.tar.gz -C ${soft}/envs/rgi
-    # 启动环境
-    conda activate rgi6
-    # 初始化环境
+    ### Opt 1. Download and install RGI (方法1. RGI下载解压安装)
+    # Download options include NMDC, Baidu NetDisk conda, etc (下载，可选NMDC、百度云等)
+    wget -c ftp://download.nmdc.cn/tools/conda/${s}.tar.gz
+    mkdir -p ${soft}/envs/${s}
+    tar -xvzf ${s}.tar.gz -C ${soft}/envs/${s}
+    conda activate ${s}
     conda unpack
+    
+    ### Opt 2. rgi conda install
+    mamba create -y -n rgi rgi=6.0.5
+    conda activate rgi
+    conda pack -f --ignore-missing-files -n ${s} -o ${s}.tar.gz
 
-### rgi直接安装
-
-    mamba create -y -n rgi6 rgi=6.0.3
-    conda activate rgi6
-    # (可选)打包
-    cd ~/project/EasyMetagenome/package
-    n=rgi6
-    conda pack -f --ignore-missing-files -n ${n} -o ${n}.tar.gz
-
-### rgi版本和数据库部署
-
-    # 查看版本 6.0.3
+    # view version (查看版本) 6.0.5
     rgi main -v
     
-    # 数据库部署
+    ### rgi database (数据库部署)
     mkdir -p ${db}/card && cd ${db}/card
-    # 下载最新版数据库，3.8M (2024-08-26,3.3.0)
+    # Download latest database, 4.41M (2025-11-1, 4.0.1)
     wget -c https://card.mcmaster.ca/latest/data
-    # 解压后35M
     tar -xvf data ./card.json
-    # 加载数据库
     rgi load --card_json card.json
-    # 宏基因组分析扩展数据库和加载
+    # Metagenomic analysis expands database and loads (宏基因组分析扩展数据库和加载)
     rgi card_annotation -i card.json
-    mv card_database_v3.3.0_all.fasta card.fasta
+    mv card_database_v4.0.1_all.fasta card.fasta
     rgi load -i card.json --card_annotation card.fasta
     
 
-# 四、分箱挖掘单菌基因组Binning
+# 4. Binning (四、分箱挖掘单菌基因组)
 
-## metawrap分箱binning
+## MetwWRAP binning (分箱)
 
-软件主页：https://github.com/bxlab/metaWRAP
+    # GitHub: https://github.com/bxlab/metaWRAP
+    s=metawrap
+    cd ${db} 
 
-### metawrap下载安装
-
-    # 下载
-    wget -c ftp://download.nmdc.cn/tools/conda/metawrap.tar.gz
-    # 指定安装目录
-    mkdir -p ${soft}/envs/metawrap
-    tar -xvzf metawrap.tar.gz -C ${soft}/envs/metawrap
-    # 启动环境
-    conda activate metawrap
-    # 初始化环境
+    ### Opt 1. Download and install MetwWRAP (方法1.MetwWRAP下载解压安装)
+    # Download options include NMDC, Baidu NetDisk conda, etc (下载，可选NMDC、百度云等)
+    wget -c ftp://download.nmdc.cn/tools/conda/${s}.tar.gz
+    mkdir -p ${soft}/envs/${s}
+    tar -xvzf ${s}.tar.gz -C ${soft}/envs/${s}
+    conda activate ${s}
     conda unpack
 
-### metawrap conda安装
-
+    ### Opt 2. Conda install (方法2. conda安装)
     mamba create -y --name metawrap --channel ursky -c conda-forge -c bioconda metawrap-mg=1.3.2
     conda activate metawrap
+    conda pack -f --ignore-missing-files -n ${s} -o ${s}.tar.gz
+
     metawrap -h # 1.3.2
     
-    # (可选)打包
-    cd ~/project/EasyMetagenome/package
-    n=metawrap
-    conda pack -f --ignore-missing-files -n ${n} -o ${n}.tar.gz
-
-### metawrap相关数据库   
-    
-    cd ${db} 
-    
-CheckM用于Bin完整和污染估计和物种注释
-
-    mkdir -p checkm && cd checkm
-    # 下载文件275 MB，解压后1.4 GB
+    # CheckM for Bin integrity and contamination estimation and species annotation
+    # CheckM用于Bin完整和污染估计和物种注释
+    mkdir -p $db/checkm && cd $db/checkm
+    # download 275 MB, unzip 1.4 GB
     wget -c https://data.ace.uq.edu.au/public/CheckM_databases/checkm_data_2015_01_16.tar.gz
     tar -xvf *.tar.gz
-    # 设置数据库位置，直接2次回车默认为当前位置
+    # Set database location, Enterx2 (设置数据库位置，直接2次回车默认当前)
     checkm data setRoot
 
-NCBI核酸和物种信息(可选)
-
-    # 核酸
-    mkdir -p ${db}/NCBI/nt
-    (cd ${db}/NCBI/nt; wget -c ftp://ftp.ncbi.nlm.nih.gov/blast/db/nt.*.tar.gz)
-    (cd ${db}/NCBI/nt; for i in *.tar.gz; do tar xzf $i; done)
+    # NCBI taxonomy (物种信息) zip 68M, unzip 351M
+    mkdir -p ${db}/NCBI/tax && cd ${db}/NCBI/tax
+    wget -c ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz
+    tar -xvzf taxdump.tar.gz
+    
+    # (Optional) NCBI Nucleic Acid and Species Information (可选)NCBI核酸和物种信息
+    mkdir -p ${db}/NCBI/nt && cd ${db}/NCBI/nt
+    wget -c ftp://ftp.ncbi.nlm.nih.gov/blast/db/nt.*.tar.gz
+    cd ${db}/NCBI/nt; for i in *.tar.gz; do tar xzf $i; done
+    # Some libraries may not download completely. Delete them and download them again; do not resume downloading.
     # 可能会出现个别库下载不完整的情况，删了重下，不要续传
-    # 物种信息，压缩文件45M，解压后351M
     
-    mkdir -p ${db}/NCBI/tax
-    (cd ${db}/NCBI/tax; wget -c ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz)
-    (cd ${db}/NCBI/tax; tar -xvzf taxdump.tar.gz)
-    
-    
-    ## 数据库位置设置
+    ## Database location settings (数据库位置设置)
     which config-metawrap
     # 配置文件通常为~/miniconda3/envs/metawrap/bin/config-metawrap
     # 使用Rstudio/vim等文本编辑器来修改数据库的位置
@@ -1365,4 +1320,123 @@ HUMAnN3+MetaPhlAn4为目前最新版，目前最广泛使用的HUMAnN2安装见�
     # 仓库优先级
     conda config --set channel_priority strict # 设置严格的仓库优先级（最好不要使用）
     conda config --set channel_priority flexible # 禁用仓库优先级
-    
+
+
+# 版本更新记录
+
+**1.08 2020.7.20**
+
+1.  KneadData提供数据预处理双端标签唯一命令，兼容最新版；
+2.  提供HUMAnN3测试版的安装和分析流程(附录1)；
+3.  eggNOG升级为emapper 2.0和eggNOG 5.0流程，结果列表从13列变为22列，新增CAZy注释。emapper 1.0版本见附录2。
+
+**1.09 2020.10.16**
+
+1.  新增二、三代混合组装OPERA-MS软件使用 (31Megahit)
+2.  新增eggNOG-mapper结果COG/KO/CAZy整理脚本summarizeAbundance.py，删除旧版Shell+R代码 (32Annotation)
+3.  新增MetaWRAP单样本分箱流程 (33Binning)
+4.  新增dRep实现基因组去冗余 (34Genomes)
+5.  新增GTDB-Tk基因组物种注释和进化树构建 (34Genomes)
+
+**1.10 2021.1.22**
+
+1.  增加删除中间文件部分，节约空间，防止硬盘写满；
+2.  正文的补充分析方法、常见问题移至附录，按软件名、问题/方法分级索引；
+3.  软件使用前，增加检查软件版本命令，方便文章方法中撰写准确版本；
+4.  删除不稳定的humann3、过时的eggnog版本教程；
+5.  增加kraken2新环境, 增加bracken, krakentools新工具；
+6.  kraken2结果新增beta多样性PCoA，物种组成堆叠柱状图；
+7.  增metaspades二、三代组装代码示例；
+8.  新增KEGG层级注释整理代码；
+9.  更新dbcan3中2018版为2020版；
+10. 新增CARD本地分析流程；
+
+**1.11 2021.5.7**
+
+1.  增加prodigal基因预测并行版方法，使用seqkit split拆分后并行，数10倍加速单线程基因预测步骤；
+2.  增加megahit拼装结果片段大小选择步骤，使用seqkit -m按长度筛选，并统计筛选前后变化；
+3.  不常用或可选代码调整到附录
+4.  两批数据快速合并去冗余cd-hit-est-2d
+5.  二三代混合组装OPERA-MS的混装和3代优化代码
+
+**1.12 2021.8.20**
+
+1.  新增并行管理软件rush，比parallel更易安装，绿色版无依赖关系，整合在db/linux/目录中
+2.  新增seqkit，可以统计序列数据量，支持序列长度过滤，格式转换等；
+3.  新增质控软件fastp，软件fastqc更快，适合单独质控不去宿主；
+4.  kraken2新数据库，同样大小下注释率提高明显；
+5.  eggNOG软件和数据库配套升级
+6.  GTDB-tk软件和数据库需要配套重新才可使用新版25万基因组数据库
+
+**1.13 2021.11.19**
+
+1.  陈同参与EasyMicrobiome的更新，并提交了mac版本代码
+2.  新增humann2运行bowtie2出错的解决方案
+3.  新增软件conda环境下载安装方式，且作为首选
+4.  新增kneaddata自定义物种基因组数据库示例
+
+**1.14 2022.3.25**
+
+1.  EasyMicrobiome升级为1.14
+2.  升级miniconda2为miniconda3
+3.  dbcan3从2020/7/31的808M更新为2021/9/24版1016M，格式变化，配套format_dbcan2list.pl更新
+4.  新增eggnog环境，包含emapper 2.1.6，summarizeAbundance.py含pandas (conda install sklearn-pandas)，配套更新数据库
+5.  rgi更新到最新版及配套代码
+
+**1.15 2022.5.27**
+
+1.  陈同老师全面更新课程，并在新服务器上重新布置所有软件和数据库
+2.  课题尝试改为长期：自学理论课程视频，每周线上答疑，持续2个月完成实操
+
+**1.18 2023.4.7**
+
+1.  课程恢复为3天连续学习模式
+2.  更新所有软件和数据库为可成功安装的最新版
+3.  更新软件和数据备份至微生物所和百度网盘
+
+**1.19 2023.7.13**
+
+1.  HUMAnN2+MetaPhlAn2为3和4
+2.  Kraken2数据库不同版本统一官方名称，仍使用3月版本数据库，最新版6月数据库官方文件有不完整
+3.  GTDB-tk数据库更新为214版
+
+**1.20 2023.11.24**
+
+1. MetaPhlAn4新增物种注释转换为GTDB、多样性计算脚本
+2. 整合陈同老师用Pipeline的修正
+3. CoverM定量MAGs相对丰度、结果合并和求均值，并添加到进入树注释结果中
+4. drep的conda包为3.4.2缺少checkm(267M)，替换为旧版2.6.2(526M)
+5. dbCAN3数据库更新为2023版，diamond新版建索引更快
+6. Kneaddata质控跳过，fastp质控为必选步骤
+7. mutliqc升级1.14为1.15
+8. 增加第五章：单菌基因组分析流程
+9. 更新Kraken2数据库为20231009版本，新增alpha, beta多样性、Krona网页、Pavian桑基图
+10. 新增可选的checkm2评估
+
+**1.21 2024.5.4**
+1. format_dbcan2list.pl更新，解决结果丢失第一列结果的bug，新增了Evalue，及按Evalue筛选的参数
+2. 新增viwarp软件数据库：iPHoP.latest_rw.tar.gz(116G)、METABOLIC_test_files.tgz(2G)
+3. kraken2数据库更新为2024版，kraken2从2.1.2升级为2.1.3，环境名为kraken2.1.3，且bracken2.5升级为2.8，解决结果校正后大量为0的Bug；
+4. 测试数据新增不同疾病程度、不同年龄组；
+5. CARD更新为2024版，v3.2.9
+
+**1.22 2024.11.9**
+1. PPT更新为2024.11版
+2. kraken2/tax_count.spf 格式更新，解决缺失一个样本的问题；
+3. CAZy数据库更新为2024版
+
+
+**1.23 2024.11.18**
+1.增加了4.5功能注释-耐药基因的处理步骤
+2.增加了6(可选)泛基因组分析部分
+
+**1.24 2025.11.6**
+1. update fastp 0.23.4 to 1.0.1
+2. taxonkit v0.14.1 to v0.20.0
+3. dbcan3 2025 data format update format_dbcan2list.pl to format_dbcan3list.pl
+4. rgi 6.0.3 to 6.0.5
+
+**正在开发中功能**
+1.  rgi应用于菌群分析及结果展示
+2.  antisamsh应用于菌群分析及结果展示
+3.  cazy应用于菌群分析及结果展示
