@@ -439,114 +439,94 @@ the compressed file is 158.8GB, and the uncompressed file is 214.5GB (PlusPFP).
     time tar xvzf ${db}/kraken2/k2_pluspfp_${v}.tar.gz -C pluspfp # 6min
 
 
-# 三、组装 Assemble-based
+# 3. Assemble-based (三、组装分析流程)
 
-## 组装、注释和定量 megahit/spades/quast/cd-hit/emboss/salmon/prodigal
+## Assembly and quantification: megahit/spades/prodigal/cd-hit/salmon (组装和定量)
 
-### megahit解包安装
-
-    # 下载
     cd $db
-    wget -c ftp://download.nmdc.cn/tools//conda/megahit.tar.gz
-    # 指定安装目录
+    s=megahit
+    
+    ### Opt 1. Download, extract, and install megahit (方法1.megahit下载解压安装)
+    # Download options include NMDC, Baidu NetDisk conda, etc (下载，可选NMDC、百度云等)
+    wget -c ftp://download.nmdc.cn/tools/conda/${s}.tar.gz
     mkdir -p ${soft}/envs/megahit
-    tar -xvzf megahit.tar.gz -C ${soft}/envs/megahit
-    # 启动环境
-    conda activate megahit
-    # 初始化环境
+    tar -xvzf ${s}.tar.gz -C ${soft}/envs/${s}
+    conda activate ${s}
     conda unpack
 
-### megahit直接安装
-
+    ### Opt 2. Conda install (方法2. conda安装)
     mamba create -y -n megahit megahit spades quast cd-hit emboss salmon prodigal
     conda activate megahit 
 
-### megahit安装后测试
-
+    ### test(测试)
     megahit -v # MEGAHIT v1.2.9
-    metaspades.py -v # metaSPAdes v4.0.0
+    metaspades.py -v # metaSPAdes v4.2.0
     metaquast.py -v # MetaQUAST v5.3.0
-    cd-hit -v | grep version # CD-HIT v4.8.1
+    cd-hit -v | grep version # CD-HIT v4.8.1 (built on Apr 24 2025) 
     embossversion # EMBOSS v6.6
     salmon -v # salmon v1.10.3
-    
-    #打包
-    cd ~/project/EasyMetagenome/package
-    n=megahit
-    conda pack -f --ignore-missing-files -n ${n} -o ${n}.tar.gz
+    # Package(打包)
+    conda pack -f --ignore-missing-files -n ${s} -o ${s}.tar.gz
 
-## 蛋白同源综合注释eggNOG
+## eggNOG protein annotation (蛋白注释)
 
-eggNOG [http://eggnogdb.embl.de](http://eggnogdb.embl.de/)
+    # eggNOG: http://eggnogdb.embl.de
+    s=eggnog
 
-### eggNOG解包安装
-
-    # 下载
+    ### Opt 1. Download and install eggNOG (方法1.eggNOG下载解压安装)
+    # Download options include NMDC, Baidu NetDisk conda, etc (下载，可选NMDC、百度云等)
     wget -c ftp://download.nmdc.cn/tools/conda/eggnog.tar.gz
-    # 指定安装目录
-    mkdir -p ${soft}/envs/eggnog
-    tar -xvzf eggnog.tar.gz -C ${soft}/envs/eggnog
-    # 启动环境
-    conda activate eggnog
-    # 初始化环境
+    mkdir -p ${soft}/envs/${s}
+    tar -xvzf ${s}.tar.gz -C ${soft}/envs/${s}
+    conda activate ${s}
     conda unpack
 
-### eggNOG直接安装
-
-    # 新建环境并进入
+    ### Opt 2. Conda install (方法2. conda安装)
     mamba create -n eggnog -y
     conda activate eggnog
-    # 安装eggnog比对工具emapper
     mamba install eggnog-mapper -y -c bioconda -c conda-forge
 
-### eggNOG安装测试    
-    
-    emapper.py --version # 2.1.12
-    #  Expected eggNOG DB version: 5.0.2 / Installed eggNOG DB version: 5.0.2 / 
-    #  Diamond version found: diamond version 2.0.15 / MMseqs2 version found: 13.45111
+### eggNOG database (数据库)
 
-### eggNOG数据库安装    
-
-    # 下载常用数据库，注意设置下载位置
+    # Set download directory (下载数据库目录建立并进入)
     mkdir -p ${db}/eggnog && cd ${db}/eggnog
-    # -y默认同意，-f强制下载，eggnog.db.gz 6.3G+4.9G，解压后48G
-    download_eggnog_data.py -y -f --data_dir ${db}/eggnog
 
-    # 百度或微生物所备用链接下载eggnog.tar.gz
+    ### Opt 1. Download and install database (方法1.数据库下载解压)
+    # Download options include NMDC, Baidu NetDisk conda, etc (下载，可选NMDC、百度云等)
     wget -c ftp://download.nmdc.cn/tools/meta/eggnog/eggnog.tar.gz
     tar xvzf eggnog.tar.gz
 
-    # 链接至默认目录，注意按实际情况修改
-    mkdir -p ${soft}/envs/eggnog/lib/python3.12/site-packages/data/
-    ln -sf /data/meta/db/eggnog/eggnog.db ${soft}/envs/eggnog/lib/python3.12/site-packages/data/
-
-    # 复制数据至内存中加速比对
-    # cp eggnog.* /dev/shm
+    ### Opt 2. Office install install (方法2. 软件脚本下载)
+    # : -y yes, -f force, eggnog.db.gz 6.3G+4.9G，解压后48G
+    download_eggnog_data.py -y -f --data_dir ${db}/eggnog
     
-### eggNOG安装测试
+    # Option. package database for others (数据库打包)
+    tar czvf 5.0.2.tar.gz eggnog*
+    mv 5.0.2.tar.gz eggnog.tar.gz
 
-    emapper.py --version # 2.1.12
-    # Expected eggNOG DB version: 5.0.2 / Installed eggNOG DB version: 5.0.2 / 
-    # Diamond version found: diamond version 2.1.10 / MMseqs2 version found: 15.6f452 / 
-    # Compatible novel families DB version: 1.0.1
+    # link to default directory （链接至默认目录，注意按实际情况修改)
+    mkdir -p ${soft}/envs/eggnog/lib/python3.11/site-packages/data/
+    ln -sf `pwd`/* ${soft}/envs/eggnog/lib/python3.11/site-packages/data/
+
+    # Copying database to memory speeds up (复制数据至内存中加速比对)
+    cp eggnog.* /dev/shm
+    cd $db
     
-    #打包
-    cd ~/project/EasyMetagenome/package
-    n=eggnog
-    conda pack -f --ignore-missing-files -n ${n} -o ${n}.tar.gz
+    ### test(测试), 2.1.13, expected eggNOG DB version: 5.0.2, diamond version 2.0.15
+    emapper.py --version 
 
-### 碳水化合物CAZy
+### CAZy carbohydrate (碳水化合物)
 
-dbCAN3 http://bcb.unl.edu/dbCAN2
-
-    # 创建数据库存放目录并进入
     mkdir -p ${db}/dbcan3 && cd ${db}/dbcan3
-    # 下载序列和描述
-    wget -c https://bcb.unl.edu/dbCAN2/download/Databases/V12/CAZyDB.07262023.fa   #1 Gb
-    wget -c https://bcb.unl.edu/dbCAN2/download/Databases/V12/CAZyDB.08062022.fam-activities.txt
-    # 提取基因家簇对应注释
-    grep -v '#' CAZyDB.08062022.fam-activities.txt | sed 's/  //'| \
-      sed '1 i CAZy\tDescription' > CAZy_description.txt
+    # dbCAN3 http://bcb.unl.edu/dbCAN2
+    # Download sequence and description 2G (下载序列和描述)
+    wget -c https://bcb.unl.edu/dbCAN2/download/Databases/V14/CAZyDB.07242025.fa
+    # wget -c https://bcb.unl.edu/dbCAN2/download/Databases/V12/CAZyDB.08062022.fam-activities.txt
+    # 新版文件缺失，手动整理中
+    wget -c https://bcb.unl.edu/dbCAN2/download/Databases/fam-substrate-mapping.tsv
+    # Extract gene family corresponding annotations (提取基因家簇对应注释)
+    grep -v '#' dbCAN-HMMdb-V14.txt | sed 's/  //' | sed '1 i CAZy\tDescription'  \
+      > CAZy_description.txt
     # 打包压缩
     tar -cvzf CAZyDB.tar.gz CAZyDB.07262023.fa CAZyDB.08062022.fam-activities.txt CAZy_description.txt
     
@@ -559,13 +539,12 @@ dbCAN3 http://bcb.unl.edu/dbCAN2
     time diamond makedb --in CAZyDB.07262023.fa --db CAZyDB
 
 
-## 抗生素抗性基因CARD/rgi
+## CARD/rgi antibiotic resistance gene (抗生素抗性基因)
 
-CARD官网：https://card.mcmaster.ca
-RGI Github: https://github.com/arpcard/rgi
+    # CARD：https://card.mcmaster.ca
+    # RGI Github: https://github.com/arpcard/rgi
 
-### rgi解包安装
-
+    ### rgi解包安装
     # 下载
     wget -c ftp://download.nmdc.cn/tools/conda/rgi.tar.gz
     # 指定安装目录

@@ -694,99 +694,100 @@ Merged samples into a table (合并样本为表格)
 
 # 3. Assemble-based (三、组装分析流程)
 
-##  Assemble (组装)
+##  3.1 Assemble (组装)
 
     # Start working environment (启动工作环境)
     conda activate megahit
     
 ### MEGAHIT Assembly (组装)
 
-    # 删除旧文件夹，否则megahit无法运行
+    # Delete directory for rerun (删除旧文件夹才能重新运行)
     # /bin/rm -rf temp/megahit
-    # 组装，10~30m，32p18s8h, TB级数据需几天至几周，MEGAHIT v1.2.9
-    time megahit -t 3 \
+    # Assembly，demo 3p 80m, TB may n days (TB数据要几天)
+    megahit -v # MEGAHIT v1.2.9
+    /usr/bin/time -v megahit -t 3 \
         -1 `tail -n+2 result/metadata.txt|cut -f1|sed 's/^/temp\/hr\//;s/$/_1.fastq/'|tr '\n' ','|sed 's/,$//'` \
         -2 `tail -n+2 result/metadata.txt|cut -f1|sed 's/^/temp\/hr\//;s/$/_2.fastq/'|tr '\n' ','|sed 's/,$//'` \
         -o temp/megahit 
-    # 统计大小通常300M~5G，如18s100G10h1.8G
+    # Stat contig size, 160M, eg. 18sample 100G data 10h contigs 1.8G
+    # If too many contigs, filter by length to reduce data and improve gene integrity. See appendix megahit
     # 如果contigs太多，可以按长度筛选，降低数据量，提高基因完整度，详见附录megahit
     seqkit stat temp/megahit/final.contigs.fa
-    # 预览重叠群最前6行，前60列字符
+    # Preview first 6 rows and 60 characters each line (预览重叠群最前6行，前60列字符)
     head -n6 temp/megahit/final.contigs.fa | cut -c1-60
-
-    # 备份重要结果
-    mkdir -p result/megahit/
-    ln -f temp/megahit/final.contigs.fa result/megahit/
-    # 删除临时文件
+    # Delete temporary files (删除临时文件)
     /bin/rm -rf temp/megahit/intermediate_contigs
 
-### (可选)metaSPAdes精细组装
+### metaSPAdes fine assembly (option) 精细组装(可选) 
 
-    # 精细但使用内存和时间更多，15~65m
+    # More time and memory consume (精细但使用内存和时间更多)
     mkdir -p temp/metaspades
     /usr/bin/time -v -o metaspades.py.log metaspades.py -t 3 -m 100 \
-      `tail -n+2 result/metadata.txt|cut -f1|sed 's/^/temp\/qc\//;s/$/_1.fastq/'|sed 's/^/-1 /'| tr '\n' ' '` \
-      `tail -n+2 result/metadata.txt|cut -f1|sed 's/^/temp\/qc\//;s/$/_2.fastq/'|sed 's/^/-2 /'| tr '\n' ' '` \
+      `tail -n+2 result/metadata.txt|cut -f1|sed 's/^/temp\/hr\//;s/$/_1.fastq/'|sed 's/^/-1 /'| tr '\n' ' '` \
+      `tail -n+2 result/metadata.txt|cut -f1|sed 's/^/temp\/hr\//;s/$/_2.fastq/'|sed 's/^/-2 /'| tr '\n' ' '` \
       -o temp/metaspades
-    # 查看软件时间User time和内存Maximum resident set size
+    # View calculate time (Elapsed time, 2.5h) and Memory consume (Maximum resident set size, 22G)
     cat metaspades.py.log
-    # 2.3M，contigs体积更大
+    # 219M，contigs bigger than megahit
     ls -sh temp/metaspades/contigs.fasta
     seqkit stat temp/metaspades/contigs.fasta
+    # Select VIP result, Delete temporary files (删除临时文件)
+    mv temp/metaspades/contigs.fasta temp/metaspades.fa
+    /bin/rm -rf temp/metaspades/
 
-    # 备份重要结果
-    mkdir -p result/metaspades/
-    ln -f temp/metaspades/contigs.fasta result/metaspades/
-    # 删除临时文件
-    /bin/rm -rf temp/metaspades
+    # Note: metaSPAdes supports hybrid assembly of second and third generation systems (see appendix). 
+    # Additionally, there are OPERA-MS assembly solutions for second and third generation systems.
+    # 注：metaSPAdes支持二、三代混合组装，见附录，此外还有OPERA-MS组装二、三代方案
 
-注：metaSPAdes支持二、三代混合组装，见附录，此外还有OPERA-MS组装二、三代方案
+### QUAST assembly evaluation (组装评估)
 
----
+    mkdir -p result/megahit
 
-### QUAST评估
-
+    # QUAST evaluation, generating reports in various formats such as tsv/txt text, html webpage, and PDF.
     # QUAST评估，生成report文本tsv/txt、网页html、PDF等格式报告
-    quast.py result/megahit/final.contigs.fa \
+    quast.py temp/megahit/final.contigs.fa \
       -o result/megahit/quast -t 2
 
-    # (可选) megahit和metaspades比较
+    # (opt) megahit versus metaspades
     quast.py --label "megahit,metapasdes" \
-        result/megahit/final.contigs.fa \
-        result/metaspades/contigs.fasta \
+        temp/megahit/final.contigs.fa \
+        temp/metaspades.fa \
         -o result/quast
 
-    # (可选)metaquast评估，更全面，但需下载相关数据库，受网速影响可能时间很长(经常失败)
+    # (opt)metaquast access (更全面评估，需下载相关数据库受网速影响可能时间很长或失败)
     # metaquast based on silva, and top 50 species genome, 18min
-    time metaquast.py result/megahit/final.contigs.fa \
+    time metaquast.py temp/megahit/final.contigs.fa \
       -o result/megahit/metaquast
 
-## 3.2 基因预测、去冗余和定量Gene prediction, cluster & quantitfy
+## 3.2 Gene prediction, cluster & quantitfy(基因预测、去冗余和定量)
 
-### metaProdigal基因预测Gene prediction
+### metaProdigal Gene prediction (基因预测)
 
+    # Input file: Assembled sequences temp/megahit/final.contigs.fa
+    # Output file: Gene sequence predicted by prodigal temp/prodigal/gene.fa
+    # For large gene sequences, refer to the appendix for prodigal gene file splitting and parallel computation.
     # 输入文件：组装的序列 result/megahit/final.contigs.fa
     # 输出文件：prodigal预测的基因序列 temp/prodigal/gene.fa
     # 基因大，可参考附录prodigal拆分基因文件，并行计算
 
     mkdir -p temp/prodigal
-    # prodigal的meta模式预测基因，>和2>&1记录分析过程至gene.log。1.8G1.5h
-    time prodigal -i result/megahit/final.contigs.fa \
+    # prodigal meta mode, 8m, > and 2>&1 record gene.log, ~1G 1h
+    time prodigal -i temp/megahit/final.contigs.fa \
         -d temp/prodigal/gene.fa \
         -o temp/prodigal/gene.gff \
         -p meta -f gff > temp/prodigal/gene.log 2>&1 
-    # 查看日志是否运行完成，有无错误
+    # Check if the log has completed (查看日志是否运行完成)
     tail temp/prodigal/gene.log
-    # 统计基因数量,6G18s3M
+    # Count of genes (基因数量) 261K, 6G18s3M
     seqkit stat temp/prodigal/gene.fa 
+    # Count complete genes, if the data volume is large, select complete gene, 73K
     # 统计完整基因数量，数据量大可只用完整基因部分
     grep -c 'partial=00' temp/prodigal/gene.fa 
-    # 提取完整基因(完整片段获得的基因全为完整，如成环的细菌基因组)
-    grep 'partial=00' temp/prodigal/gene.fa | cut -f1 -d ' '| sed 's/>//' > temp/prodigal/full_length.id
+    # Select complete gene (提取完整基因)
     seqkit grep -n -r -p "partial=00" temp/prodigal/gene.fa > temp/prodigal/full_length.fa
     seqkit stat temp/prodigal/full_length.fa
     
-    # 如果是单样本组装可批量运行
+    # Opt. Single sample assemble bacth run (可选单样本组装可批量运行)
     for i in `tail -n+2 result/metadata.txt | cut -f1`;do
     	mkdir -p temp/prodigal/${i}/
     	prodigal -i result/megahit/${i}/final.contigs.fa \
@@ -795,104 +796,96 @@ Merged samples into a table (合并样本为表格)
             -p meta -f gff > temp/prodigal/${i}/gene.log 2>&1 
     done
 
-### cd-hit基因聚类/去冗余cluster & redundancy
+### cd-hit cluster & redundancy (基因聚类/去冗余)
 
+    # Input file: gene sequences predicted by prodigal temp/prodigal/gene.fa
+    # Output files: Deredundant gene and protein sequences: result/NR/nucleotide.fa, result/NR/protein.fa
     # 输入文件：prodigal预测的基因序列 temp/prodigal/gene.fa
     # 输出文件：去冗余后的基因和蛋白序列：result/NR/nucleotide.fa, result/NR/protein.fa
 
     mkdir -p result/NR
+    # aS coverage, c similarity, G local alignment, g optimal solution, T multithreading, M memory 0 unlimited
     # aS覆盖度，c相似度，G局部比对，g最优解，T多线程，M内存0不限制
-    # 2万基因2m，3M384p15m，2千万需要2000h，多线程可加速
-    cd-hit-est -i temp/prodigal/gene.fa \
+    # 2M 384p 8m，3M384p15m，2千万需要2000h，多线程可加速
+    time cd-hit-est -i temp/prodigal/gene.fa \
         -o result/NR/nucleotide.fa \
         -aS 0.9 -c 0.95 -G 0 -g 0 -T 0 -M 0
+    # Counting the number of non-redundant genes, the number of genes in a single assembly does not decrease significantly, such as 3M-2M. Multiple batch assemblies show high redundancy.
     # 统计非冗余基因数量，单次拼接结果数量下降不大，如3M-2M，多批拼接冗余度高
     grep -c '>' result/NR/nucleotide.fa
+    # Translate nucleic acids into corresponding protein sequences, and use `--trim` to remove trailing asterisks.
     # 翻译核酸为对应蛋白序列, --trim去除结尾的*
     seqkit translate --trim result/NR/nucleotide.fa \
         > result/NR/protein.fa 
+    # Redundancy removal for both batches of data was accelerated using cd-hit-est-2d, see appendix.
     # 两批数据去冗余使用cd-hit-est-2d加速，见附录
     
-    # 如果是单样本分箱可批量运行
+    # batch samples (样本批量运行)
     for i in `tail -n+2 result/metadata.txt | cut -f1`;do
     	mkdir -p result/NR/${i}
         cd-hit-est -i temp/prodigal/${i}/gene.fa \
             -o result/NR/${i}/nucleotide.fa \
             -aS 0.9 -c 0.95 -G 0 -g 0 -T 0 -M 0
-        # 统计非冗余基因数量，单次拼接结果数量下降不大，多批拼接冗余度高
         grep -c '>' result/NR/${i}/nucleotide.fa
-        # 翻译核酸为对应蛋白序列, --trim去除结尾的*
         seqkit translate --trim result/NR/${i}/nucleotide.fa \
             > result/NR/${i}/protein.fa 
     done
 
-### salmon基因定量quantitfy
+### salmon quantitfy (基因定量)
 
+    # Input file: Redundancy-free gene sequence: result/NR/nucleotide.fa
+    # Output file: Salmon quantification: result/salmon/gene.count, gene.TPM
     # 输入文件：去冗余后的基因序列：result/NR/nucleotide.fa
     # 输出文件：Salmon定量：result/salmon/gene.count, gene.TPM
 
     mkdir -p temp/salmon
-    salmon -v # 1.8.0
+    salmon -v # 1.10.3
 
-    # 建索引, -t序列, -i 索引，10s
-    salmon index -t result/NR/nucleotide.fa \
+    # build index, -t sequence, -i index (建索引, -t序列, -i 索引, 2m)
+    time salmon index -t result/NR/nucleotide.fa \
       -p 3 -i temp/salmon/index 
 
-    # 定量，l文库类型自动选择，p线程，--meta宏基因组
+    # Quantitative: -l automatic library type selection, p threads, --meta metagenomics
+    # 定量，l文库类型自动选择，p线程，--meta宏基因组, 10s
     i=C1
-    salmon quant -i temp/salmon/index -l A -p 8 --meta \
+    time salmon quant -i temp/salmon/index -l A -p 3 --meta \
         -1 temp/hr/${i}_1.fastq -2 temp/hr/${i}_2.fastq \
         -o temp/salmon/${i}.quant
-    # 2个任务并行, 18s30m
+    # parallel, 1m, 18 samples 30m
     time tail -n+2 result/metadata.txt | cut -f1 | rush -j 2 \
       "salmon quant -i temp/salmon/index -l A -p 3 --meta \
         -1 temp/hr/{1}_1.fastq -2 temp/hr/{1}_2.fastq \
         -o temp/salmon/{1}.quant"
 
-    # 合并
+    # Merge (合并)
     mkdir -p result/salmon
     salmon quantmerge --quants temp/salmon/*.quant \
         -o result/salmon/gene.TPM
     salmon quantmerge --quants temp/salmon/*.quant \
         --column NumReads -o result/salmon/gene.count
     sed -i '1 s/.quant//g' result/salmon/gene.*
-
-    # 预览结果表格
+    # Preview (预览结果)
     head -n3 result/salmon/gene.*
 
-## 3.3 功能基因注释Functional gene annotation
+## 3.3 Functional gene annotation (功能基因注释)
 
-    # 输入数据：上一步预测的蛋白序列 result/NR/protein.fa
-    # 中间结果：temp/eggnog/protein.emapper.seed_orthologs
-    #           temp/eggnog/output.emapper.annotations
-    #           temp/eggnog/output
+    # input：result/NR/protein.fa
+    # COG: result/eggnog/cogtab.count
+    #      result/eggnog/cogtab.count.spf (for STAMP)
+    # KO table：result/eggnog/kotab.count
+    # CAZy Carbohydrate：result/dbcan3/cazytab.count
+    # Expanded to other databases (可拓展其它数据库)
 
-    # COG定量表：result/eggnog/cogtab.count
-    #            result/eggnog/cogtab.count.spf (用于STAMP)
+### eggNOG gene annotation(COG/KEGG/CAZy基因注释)
 
-    # KO定量表：result/eggnog/kotab.count
-    #           result/eggnog/kotab.count.spf  (用于STAMP)
-
-    # CAZy碳水化合物注释和定量：result/dbcan3/cazytab.count
-    #                           result/dbcan3/cazytab.count.spf (用于STAMP)
-
-    # 抗生素抗性：result/resfam/resfam.count
-    #             result/resfam/resfam.count.spf (用于STAMP)
-
-    # 这部分可以拓展到其它数据库
-
-### eggNOG基因注释gene annotation(COG/KEGG/CAZy)
-
-软件主页：https://github.com/eggnogdb/eggnog-mapper
-
-    # 运行并记录软件版本
+    # eggNOG: https://github.com/eggnogdb/eggnog-mapper
+    # Run and record the software version (运行并记录软件版本)
     conda activate eggnog
     emapper.py --version
-    # emapper-2.1.7 / Expected eggNOG DB version: 5.0.2 
-    # Diamond version found: diamond version 2.0.15
-
-    # 运行emapper，18m，默认diamond 1e-3; 2M,32p,1.5h
     mkdir -p temp/eggnog
+    # emapper-2.1.7 / Expected eggNOG DB version: 5.0.2 / diamond version 2.0.15
+
+    # run emapper, 18m, default diamond 1e-3; 2M,32p,1.5h
     time emapper.py --data_dir ${db}/eggnog \
       -i result/NR/protein.fa --cpu 3 -m diamond --override \
       -o temp/eggnog/output
