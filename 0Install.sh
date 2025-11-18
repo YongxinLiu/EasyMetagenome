@@ -683,7 +683,7 @@ mouse genome download (小鼠基因组下载)
 
     ### Opt 1. Download install (方法1.下载解压安装)
     mkdir -p ${db}/gtdb && cd ${db}/gtdb
-    wget -c https://data.ace.uq.edu.au/public/gtdb/data/releases/latest/auxillary_files/gtdbtk_package/full_package/gtdbtk_data.tar.gz
+    wget -c https://data.gtdb.ecogenomic.org/releases/latest/auxillary_files/gtdbtk_package/full_package/gtdbtk_data.tar.gz
     # Backup Download options include NMDC, Baidu NetDisk conda, etc (备用下载，可选NMDC、百度云等)
     wget -c ftp://download.nmdc.cn/tools/conda/meta/gtdbtk/gtdbtk_data.tar.gz
     # 手工解压，指定安装完整路径
