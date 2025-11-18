@@ -6,18 +6,17 @@
     # Version(版本): 1.24, 2025/11/12
     # Homepage(主页): https://github.com/YongxinLiu/EasyMetagenome
 
-All software and databases downloaded from the website (所有软件和数据库可从官网下载)
-Backup source add download speed and success rate (备用站点提高下载速度和成功率)
-Backup1. Institute of Microbiology, Chinese Academy of Sciences(中科院微生物所)：ftp://download.nmdc.cn/tools/ (FileZilla访问) 
-Backup2. Baidu Netdisk(百度网盘)：https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
+    # All software and databases downloaded from the website (所有软件和数据库可从官网下载)
+    # Backup source add download speed and success rate (备用站点提高下载速度和成功率)
+    # Backup1. Institute of Microbiology, Chinese Academy of Sciences(中科院微生物所)：ftp://download.nmdc.cn/tools/ (FileZilla访问) 
+    # Backup2. Baidu Netdisk(百度网盘)：https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
 
 # 0. Initialization and pipeline installation (零、初始化和流程安装 )
 
 ## Initialization: The following code must be run every time when installation starts (初始化：每次开始安装必须运行下面代码)
 
-**Software and Database Locations(软件和数据库位置)**
-**The follwoing paragraph must run before(分析前必须运行)**
-
+    # Software and Database Locations(软件和数据库位置)
+    # The follwoing paragraph must run before(分析前必须运行)
     # Database Locations, default ~/db directory(No administrative privileges required), administrator can select /db
     # 数据库安装位置，默认~/db目录(无需管理权限)，管理员可选/db
     db=~/db
@@ -34,13 +33,12 @@ Backup2. Baidu Netdisk(百度网盘)：https://pan.baidu.com/s/1Ikd_47HHODOqC3Rc
 
 ### EasyMetagenome Pipeline (流程)
 
-The EasyMetagenome workflow, including workflow installation, usage, and visualization scripts, 
-as well as workflow test data and result comparisons, can be found at:
-EasyMetagenome流程，包括流程安装、使用和可视化脚本，以及流程测试数据和结果正对照，网址：
-https://github.com/YongxinLiu/EasyMetagenome
-
-Each site provides 2-4 download or installation methods: try them one by one and any one method work is OK.
-每处提供2-4种下载或安装方法：依次尝试，任意一种成功即可。
+    # The EasyMetagenome workflow, including workflow installation, usage, and visualization scripts, 
+    # as well as workflow test data and result comparisons, can be found at:
+    # EasyMetagenome流程，包括流程安装、使用和可视化脚本，以及流程测试数据和结果正对照，
+    # 网址：https://github.com/YongxinLiu/EasyMetagenome
+    # Each site provides 2-4 download or installation methods: try them one by one and any one method work is OK.
+    # 每处提供2-4种下载或安装方法：依次尝试，任意一种成功即可。
     
     cd ${db}
 
@@ -64,9 +62,10 @@ Each site provides 2-4 download or installation methods: try them one by one and
 
 ### EasyMicrobiome: dependencies soft and scripts for pipeline (软件和数据库合集)
 
-EasyMetagenome depends on EasyMicrobiome, which includes a collection of scripts, 
-software, and databases. (https://github.com/YongxinLiu/EasyMicrobiome)
-EasyMetagenome依赖EasyMicrobiome，其包括众多脚本、软件和数据库的集合，网址：https://github.com/YongxinLiu/EasyMicrobiome
+    # EasyMetagenome depends on EasyMicrobiome, which includes a collection of scripts, 
+    # software, and databases. (https://github.com/YongxinLiu/EasyMicrobiome)
+    # EasyMetagenome依赖EasyMicrobiome，其包括众多脚本、软件和数据库的集合，
+    # 网址：https://github.com/YongxinLiu/EasyMicrobiome
     
     # Method 1. Download ZIP archive at https://github.com/YongxinLiu/EasyMicrobiome, `Code` - `Download` and upload it to the server.
     # 方法1. 网页 https://github.com/YongxinLiu/EasyMicrobiome 中Code - Download ZIP下载压缩包，上传至服务器
@@ -128,10 +127,9 @@ EasyMetagenome依赖EasyMicrobiome，其包括众多脚本、软件和数据库�
 
 ## kneaddata install (安装): 
 
-**Note: You can choose one of the following installation methods: direct installation, download and unpack, etc. If one method fails, try another.**
-**注：直接安装、下载解压等安装方法多选一。一种方法不成功，再尝试另一种。**
-
-BioConda search software: https://bioconda.github.io/recipes/kneaddata/README.html
+    # Note: You can choose one of the following installation methods: direct installation, download and unpack, etc. If one method fails, try another.
+    # 注：直接安装、下载解压等安装方法多选一。一种方法不成功，再尝试另一种。
+    # BioConda search software: https://bioconda.github.io/recipes/kneaddata/README.html
 
 ### Opt 1. Download, extract, and install kneaddata (方法1.kneaddata下载解压安装)
 
@@ -209,14 +207,13 @@ mouse genome download (小鼠基因组下载)
     
 ### kneaddata Custom reference genome index (自定义参考基因组索引)
 
-**Reference genome index by Bowtie2, if there are multiple hosts, the reference genome sequences can be merged then index.**
-**参考基因组采用bowtie2索引即可；如果有多个宿主可以基因组序列合并后构建索引**
-
-Part of the genome can be downloaded from the ensembl genome. Using Arabidopsis thaliana as an example, 
-visit http://plants.ensembl.org/index.html, select *Arabidopsis thaliana* — Download DNA sequence (FASTA), 
-select toplevel, right-click and copy the link, then paste it into the link field below.
-部分基因组可在ensembl genome下载。此处以拟南芥为例，访问 http://plants.ensembl.org/index.html ，
-选择Arabidopsis thaliana —— Download DNA sequence (FASTA)，选择toplevel右键复制链接，填入下面链接处
+    # **Reference genome index by Bowtie2, if there are multiple hosts, the reference genome sequences can be merged then index.**
+    # **参考基因组采用bowtie2索引即可；如果有多个宿主可以基因组序列合并后构建索引**
+    # Part of the genome can be downloaded from the ensembl genome. Using Arabidopsis thaliana as an example, 
+    # visit http://plants.ensembl.org/index.html, select *Arabidopsis thaliana* — Download DNA sequence (FASTA), 
+    # select toplevel, right-click and copy the link, then paste it into the link field below.
+    # 部分基因组可在ensembl genome下载。此处以拟南芥为例，访问 http://plants.ensembl.org/index.html ，
+    # 选择Arabidopsis thaliana —— Download DNA sequence (FASTA)，选择toplevel右键复制链接，填入下面链接处
 
     conda activate kneaddata
     # Create directories(创建目录)
@@ -232,7 +229,7 @@ select toplevel, right-click and copy the link, then paste it into the link fiel
 
 # 2. Read-based HUMAnN4/Kraken2 (二、基于读长分析)
 
-HUMAnN v4.0.0.alpha.1 + MetaPhlAn4 v4.1.1, HUMAnN3and HUMAnN2 see appendix
+    # HUMAnN v4.0.0.alpha.1 + MetaPhlAn4 v4.1.1, HUMAnN3and HUMAnN2 see appendix
 
 ## Read-based HUMAnN4/MetaPhlAn4 (基于读长的分析)
 
@@ -365,10 +362,9 @@ HUMAnN v4.0.0.alpha.1 + MetaPhlAn4 v4.1.1, HUMAnN3and HUMAnN2 see appendix
 
 ## LEfSe Biomarker identification and visualization (生物标记鉴定和可视化)
 
-Method 1. ImageGP 2 https://www.bic.ac.cn/BIC/#/analysis?page=b%27MzY%3D%27&tool_type=tool
+    # Method 1. ImageGP 2 https://www.bic.ac.cn/BIC/#/analysis?page=b%27MzY%3D%27&tool_type=tool
 
-Method 1. Download install LEfSe (方法2. LEfSe下载解压安装)
-
+    # Method 2. Download install LEfSe (方法2. LEfSe下载解压安装)
     n=lefse
     wget -c ftp://download.nmdc.cn/tools/conda/${n}.tar.gz
     mkdir -p ${soft}/envs/${n}
@@ -378,14 +374,13 @@ Method 1. Download install LEfSe (方法2. LEfSe下载解压安装)
     conda unpack
     lefse_run.py -h # LEfSe 1.1.01
 
-Method 3. Conda installation (方法3. Conda安装)
-
+    # Method 3. Conda installation (方法3. Conda安装)
     mamba create -n lefse lefse -c bioconda -y
 
 
 ## Kraken2 taxonomic classification (物种注释)
 
-kraken2: https://ccb.jhu.edu/software/kraken/
+    # kraken2: https://ccb.jhu.edu/software/kraken/
 
     # Method 1. Kraken2 Conda package download install (包本地解压安装)
     n=kraken2
@@ -407,33 +402,29 @@ kraken2: https://ccb.jhu.edu/software/kraken/
 
 ### Kraken2 database (数据库安装)
 
-Database：https://benlangmead.github.io/aws-indexes/k2  
-
+    # Database：https://benlangmead.github.io/aws-indexes/k2  
     # set version, current 20250714, set each type directory
     db=~/db
     v=20250714
     mkdir -p ${db}/kraken2 && cd ${db}/kraken2
     mkdir -p pluspf16g pluspf pluspfp
 
-Option 1. Download the standard + protozoa + fungi, compressed 11.2GB, uncompressed 14.9GB (PlusPF-16)
-方案1. 下载标准+原生动物+真菌，压缩包11.2G，解压14.9GB (PlusPF-16) 
-
+    # Option 1. Download the standard + protozoa + fungi, compressed 11.2GB, uncompressed 14.9GB (PlusPF-16)
+    # 方案1. 下载标准+原生动物+真菌，压缩包11.2G，解压14.9GB (PlusPF-16) 
     # Download from offical, NMDC or Baidu NetDisk (下载自官网、微生物所nmdc或百度云)
     wget -c https://genome-idx.s3.amazonaws.com/kraken/k2_pluspf_16_GB_${v}.tar.gz
     # wget -c ftp://download.nmdc.cn/tools/meta/kraken2/k2_pluspf_16_GB_${v}.tar.gz
     time tar xvzf k2_pluspf_16_GB_${v}.tar.gz -C pluspf16g # 1min
 
-Option 2. Download the standard + protozoa + fungi, compressed 77.5G, uncompressed 100.6G (PlusPF)
-方案2. 下载标准+原生动物+真菌，压缩包77.5G，解压100.6G (PlusPF) 
-
+    # Option 2. Download the standard + protozoa + fungi, compressed 77.5G, uncompressed 100.6G (PlusPF)
+    # 方案2. 下载标准+原生动物+真菌，压缩包77.5G，解压100.6G (PlusPF) 
     wget -c https://genome-idx.s3.amazonaws.com/kraken/k2_pluspf_${v}.tar.gz
     # wget -c ftp://download.nmdc.cn/tools/meta/kraken2/k2_pluspf_${v}.tar.gz
     time tar xvzf ${db}/kraken2/k2_pluspf_${v}.tar.gz -C ~/db/kraken2/pluspf # 1min
     
-Option 3. Download full for standards, protozoa, fungi, and plants; 
-the compressed file is 158.8GB, and the uncompressed file is 214.5GB (PlusPFP).
-方案3. 下载标准+原生动物+真菌+植物完整库，压缩包158.8G，解压214.5G (PlusPFP) 
-
+    # Option 3. Download full for standards, protozoa, fungi, and plants; 
+    # the compressed file is 158.8GB, and the uncompressed file is 214.5GB (PlusPFP).
+    # 方案3. 下载标准+原生动物+真菌+植物完整库，压缩包158.8G，解压214.5G (PlusPFP) 
     wget -c https://genome-idx.s3.amazonaws.com/kraken/k2_pluspfp_${v}.tar.gz
     # wget -c ftp://download.nmdc.cn/tools/meta/kraken2/k2_pluspf_${v}.tar.gz
     time tar xvzf ${db}/kraken2/k2_pluspfp_${v}.tar.gz -C pluspfp # 6min
@@ -596,27 +587,8 @@ the compressed file is 158.8GB, and the uncompressed file is 214.5GB (PlusPFP).
     
     ## Database location settings (数据库位置设置)
     which config-metawrap
-    # 配置文件通常为~/miniconda3/envs/metawrap/bin/config-metawrap
-    # 使用Rstudio/vim等文本编辑器来修改数据库的位置
-    # config-metawrap文件中内容如下
-    
-    # Paths to metaWRAP scripts (dont have to modify)
-    mw_path=$(which metawrap)
-    bin_path=${mw_path%/*}
-    SOFT=${bin_path}/metawrap-scripts
-    PIPES=${bin_path}/metawrap-modules
-    
-    # CONFIGURABLE PATHS FOR DATABASES (see 'Databases' section of metaWRAP README for details)
-    # path to kraken standard database
-    KRAKEN_DB=~/KRAKEN_DB
-    KRAKEN2_DB=~/db/kraken2/pluspf/
-    
-    # path to indexed human (or other host) genome (see metaWRAP website for guide). This includes .bitmask and .srprism files
-    BMTAGGER_DB=~/BMTAGGER_DB
-    
-    # paths to BLAST databases
-    BLASTDB=~/db/NCBI/nt
-    TAXDUMP=~/db/NCBI/tax
+    # usually in ~/miniconda3/envs/metawrap/bin/config-metawrap
+    # Using Rstudio/vim to set database location
 
 ## drep基因组去冗余
 

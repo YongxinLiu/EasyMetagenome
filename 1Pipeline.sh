@@ -987,177 +987,101 @@
       -o result/NR/tax
     wc -l result/NR/tax*|sort -n
 
-# 四、分箱挖掘单菌基因组Binning
+# 4. Binning (四、分箱挖掘单菌基因组)
 
-## 4.1 MetaWRAP混合样本分箱 Samples binning
+## MetwWRAP binning (分箱)
 
-主页：https://github.com/bxlab/metaWRAP
+    # GitHub: https://github.com/bxlab/metaWRAP
+    # For mining single-bacterial genomes, a single sample size of 6GB+ is recommended, and for complex samples such as soil, a data size of 30GB+ is recommended. 
+    # The demonstration data consists of 6 samples (approximately 1GB), which is insufficient to obtain single-bacterial genomes. Therefore, official sequencing data is used for demonstration and explanation.
+    # 挖掘单菌基因组，推荐单样本6GB+，复杂样本如土壤推荐数据量30GB+
+    # 演示数据6个样品~1G，无法获得单菌基因组，这里使用官方测序数据演示讲解
 
-教程: https://github.com/bxlab/metaWRAP/blob/master/Usage_tutorial.md
-
-挖掘单菌基因组，需要研究对象复杂度越低、测序深度越大，结果质量越好。要求单样本6GB+，复杂样本如土壤推荐数据量30GB+，至少3个样本
- 
-演示数据12个样仅140MB，无法获得单菌基因组，这里使用官方测序数据演示讲解
-
-软件和数据库布置需1-3天，演示数据分析过程超10h，30G样也需1-30天，由服务器性能决定。
-
-    # 设置并进入工作目录
-    wd=~/meta/binning
-    mkdir -p ${wd} && cd ${wd}
-    # 初始化项目
-    mkdir -p temp/hr seq result
-    # 启动metawrap环境
-    conda activate metawrap
-    mkdir -p temp/megahit
-    cp -rf ../temp/megahit temp/megahit
-    cp -rf ../temp/qc temp/hr
-
-### 数据和环境变量 Data and enviroment
-
-这里基于质控clean数据和拼接好的重叠群contigs，基于上游结果继续分析。由于上游测试数据过小，分箱无结果。 本次采用软件推荐的7G数据，我们进入一个新文件夹开展分析。
-如果上游测试数据过小分箱吴结果，可下载通过百度网盘分享的文件：链接：https://pan.baidu.com/s/1HdHkp2Qk7ZDWfcsJZxuhrA 提取码：5678
-
-输入输出文件介绍：
-
-    # 输入：质控后序列，文件名格式为*_1.fastq和*_2.fastq，temp/qc 目录下，如C1_1.fastq、C1_2.fastq 
-    # 组装的重叠群文件：result/megahit/final.contigs.fa
-
-    # 输出：
-    #     Binning结果：temp/binning
-    #     提纯后的Bin统计结果：temp/bin_refinement/metawrap_50_10_bins.stats
-    #     Bin定量结果文件和图：binning/temp/bin_quant/bin_abundance_table.tab 和 bin_abundance_heatmap.png
-    #     Bin物种注释：binning/temp/bin_classify/bin_taxonomy.tab
-    #     Prokka基因预测：binning/temp/bin_annotate/prokka_out/bin.*.ffn 核酸序列
-    #     Bin可视化图表：binning/temp/bloblogy/final.contigs.binned.blobplot (数据表) 和 blobplot_figures (可视化图)
-
-准备输入文件：原始数据+组装结果
-
-
-    # 质控后数据位于temp/qc中，此处需下载并解压
-    # 方法1. 直接拷贝
-    /bin/cp -rf /db/metawrap/*.fastq ~/meta/binning/temp/hr/
-    # 方法2. 在线下载
-    cd temp/hr
-    for i in `seq 7 9`;do
-        wget -c ftp.sra.ebi.ac.uk/vol1/fastq/ERR011/ERR01134${i}/ERR01134${i}_1.fastq.gz
-        wget -c ftp.sra.ebi.ac.uk/vol1/fastq/ERR011/ERR01134${i}/ERR01134${i}_2.fastq.gz
-    done
-    gunzip -k *.gz
-    # 批量修改扩展名fq为fastq
-    # rename .fq .fastq *.fq
-    
-    # megahit拼接结果
-    cd ${wd}
-    mkdir -p temp/megahit
-    cd temp/megahit
-    # 可从EasyMetagenome目录复制，或链接下载
-    wget -c http://www.imeta.science/db/metawrap/final.contigs.fa.gz
-    gunzip -k *.gz
-    cd ${wd}
-
-### 分箱Binning
-
-    # 加载运行环境
-    cd ${wd}
+    cd $wd
     conda activate metawrap
     metawrap -v # 1.3.2
-    
-    # 输入文件为contig和clean reads
-    # 调用maxbin2, metabat2，8p2h，24p1h；-concoct 3h
-    # 32p18s16-19h
-    metawrap binning -o temp/binning \
+
+    # Input: quaility control & host removal sequences, *_1.fastq和*_2.fastq,  
+    #        assemble contigs, temp/megahit/final.contigs.fa
+    # Output: Binning result: temp/bin
+    #     Stat：temp/bin_refine/metawrap_50_10_bins.stats
+
+### All samples mix Binning (多样本混合分箱)
+
+    # Using maxbin2, metabat2，3p41m；32p 18sample 16-19h
+    mkdir -p $db/temp/bin
+    metawrap binning -o temp/bin \
       -t 3 -a temp/megahit/final.contigs.fa \
       --metabat2 --maxbin2 \
       temp/hr/*.fastq
-    #  --concoct > /dev/null 2>&1 增加3~10倍计算量，添加/dev/null清除海量Warning信息
+    #  --concoct > /dev/null 2>&1 # increase 3~10 fold calculating, /dev/null omit Warning
 
-### 分箱提纯Bin refinement
+### Bin refinement (分箱提纯)
 
-    # 8线程2h， 24p 1.3h；2方法16p 20m
+    # 8p2h,
     metawrap bin_refinement \
-      -o temp/bin_refinement \
-      -A temp/binning/metabat2_bins/ \
-      -B temp/binning/maxbin2_bins/ \
+      -o temp/bin_refine \
+      -A temp/bin/metabat2_bins/ \
+      -B temp/bin/maxbin2_bins/ \
       -c 50 -x 10 -t 8
-    # -C temp/binning/concoct_bins/ \
-    # 统计高质量Bin的数量，2方法6个，3方法9个
-    tail -n+2 temp/bin_refinement/metawrap_50_10_bins.stats|wc -l
-    # 分析比较图见 temp/bin_refinement/figures/
+    # -C temp/bin/concoct_bins/ \
+    # Bin count
+    tail -n+2 temp/bin_refine/metawrap_50_10_bins.stats|wc -l
+    # Plot in temp/bin_refine/figures/
 
-所有分箱至同一目录All bins in one directory
-
+    # Together: all bins in one directory (所有分箱至同一目录)
     mkdir -p temp/drep_in
-    # 混合组装分箱链接和重命名
-    ln -s `pwd`/temp/bin_refinement/metawrap_50_10_bins/bin.* temp/drep_in/
+    # Mix binning link and rename (混合组装分箱链接和重命名)
+    ln -s `pwd`/temp/bin_refine/metawrap_50_10_bins/bin.* temp/drep_in/
     ls -l temp/drep_in/
-    # 改名CentOS
+    # CentOS rename
     rename 'bin.' 'Mx_All_' temp/drep_in/bin.*
-    # 改名Ubuntu
+    # Ubuntu rename
     rename s/bin./Mx_All_/ temp/drep_in/bin.*
     ls temp/drep_in/Mx*
 
-## (可选Opt)单样本分箱Single sample binning
+### Single sample binning (单样本分箱)
 
-多样本受硬件、计算时间限制无法完成时，需要单样本组装、分箱。多样本信息丰度，分箱结果更多，更容易降低污染。详见：- [Nature Methods | 单样本与多样本宏基因组分箱的比较揭示了广泛存在的隐藏性污染](https://mp.weixin.qq.com/s/i5C-rCVhZyjRK_Dsk36vBQ)
+    # When multiple samples cannot be completed due to hardware or computation time limitations, 
+    # single-sample assembly and binning are required. Multiple samples offer greater information abundance, 
+    # resulting in more binned products and making it easier to reduce contamination.
+    # 多样本受硬件、计算时间限制无法完成时，需要单样本组装、分箱。多样本信息丰度，分箱结果更多，更容易降低污染。
 
-
-**设置全局线程、并行任务数和筛选分箱的条件**
-
-    # p:threads线程数,job任务数,complete完整度x:contaminate污染率
-    conda activate metawrap
+    # Configure global threads, number of parallel tasks, and conditions for filtering bins.
+    # 设置全局线程、并行任务数和筛选分箱的条件
+    # p: threads (线程数), j: job (任务数), c: complete (完整度), x: contaminate (污染率)
     p=16
     j=3
     c=50
     x=10
-
-(可选)并行需要样本列表，请提前编写metadata.txt保存于result中
-
-    # 快速读取文件生成样本ID列表再继续编写
-    ls temp/hr/ | grep _1 | cut -f 1 -d '_' | sort -u | sed '1 i SampleID' > result/metadata.txt
-    # 预览
-    cat result/metadata.txt
     
-**组装Assemble**
-
-单样本并行组装；支持中断继续运行，18s6h，
-    
+    # Assemble(组装), 10min; 18s6h
     time tail -n+2 result/metadata.txt|cut -f1|rush -j ${j} \
       "metawrap assembly -m 200 -t ${p} --megahit \
         -1 temp/hr/{}_1.fastq -2 temp/hr/{}_2.fastq \
         -o temp/megahit/{}"
 
-    # 批量运行QUAST评估
-    for i in `tail -n+2 result/metadata.txt | cut -f1`;do
-        quast.py result/megahit/${i}/final.contigs.fa \
-            -o result/megahit/${i}/quast -t 8
-    done
-
-**分箱binning**
-
-单样本并行分箱，192p, 15m (concoct使用超多线程)；16p 2d/sample, >/dev/null 16p 12h/sample
-
+    # Binning (分箱), 3m
     time tail -n+2 result/metadata.txt|cut -f1|rush -j ${j} \
       "metawrap binning \
-        -o temp/binning/{} -t ${p} \
+        -o temp/bin/{} -t ${p} \
         -a temp/megahit/{}/final_assembly.fasta \
-        --metabat2 --maxbin2 --concoct \
-        temp/hr/{}_*.fastq > /dev/null 2>&1" 
+        --metabat2 --maxbin2 \
+        temp/hr/{}_*.fastq" # --concoct > /dev/null 2>&1
 
-**分箱提纯bin refinement**
-
+    # Bin refinement (分箱提纯), 
     time tail -n+2 result/metadata.txt|cut -f1|rush -j ${j} \
       "metawrap bin_refinement \
-      -o temp/bin_refinement/{} -t ${p} \
-      -A temp/binning/{}/metabat2_bins/ \
-      -B temp/binning/{}/maxbin2_bins/ \
-      -C temp/binning/{}/concoct_bins/ \
-      -c ${c} -x ${x} "
+      -o temp/bin_refine/{} -t ${p} \
+      -A temp/bin/{}/metabat2_bins/ \
+      -B temp/bin/{}/maxbin2_bins/ \
+      -c ${c} -x ${x}"
+      # -C temp/bin/{}/concoct_bins/ \
     # 分别为1,2,2个
     tail -n+2 result/metadata.txt|cut -f1|rush -j 1 \
-      "tail -n+2 temp/bin_refinement/{}/metawrap_50_10_bins.stats|wc -l "
+      "tail -n+2 temp/bin_refine/{}/metawrap_50_10_bins.stats|wc -l "
 
-单样品分箱链接和重命名
-
+    # Together, link and rename (单样品分箱链接和重命名)
     for i in `tail -n+2 result/metadata.txt|cut -f1`;do
        ln -s `pwd`/temp/bin_refinement/${i}/metawrap_50_10_bins/bin.* temp/drep_in/
        # CentOS
