@@ -1000,6 +1000,7 @@
     cd $wd
     conda activate metawrap
     metawrap -v # 1.3.2
+    mkdir -p temp/bin temp/bin_refine temp/drep_in result/bin
 
     # Input: quaility control & host removal sequences, *_1.fastq和*_2.fastq,  
     #        assemble contigs, temp/megahit/final.contigs.fa
@@ -1009,28 +1010,24 @@
 ### All samples mix Binning (多样本混合分箱)
 
     # Using maxbin2, metabat2，3p41m；32p 18sample 16-19h
-    mkdir -p $db/temp/bin
     metawrap binning -o temp/bin \
       -t 3 -a temp/megahit/final.contigs.fa \
       --metabat2 --maxbin2 \
       temp/hr/*.fastq
     #  --concoct > /dev/null 2>&1 # increase 3~10 fold calculating, /dev/null omit Warning
 
-### Bin refinement (分箱提纯)
-
-    # 8p2h,
+    ### Bin refinement (分箱提纯), 8p1h
     metawrap bin_refinement \
       -o temp/bin_refine \
       -A temp/bin/metabat2_bins/ \
       -B temp/bin/maxbin2_bins/ \
       -c 50 -x 10 -t 8
     # -C temp/bin/concoct_bins/ \
-    # Bin count
+    # Bin count 22
     tail -n+2 temp/bin_refine/metawrap_50_10_bins.stats|wc -l
     # Plot in temp/bin_refine/figures/
 
     # Together: all bins in one directory (所有分箱至同一目录)
-    mkdir -p temp/drep_in
     # Mix binning link and rename (混合组装分箱链接和重命名)
     ln -s `pwd`/temp/bin_refine/metawrap_50_10_bins/bin.* temp/drep_in/
     ls -l temp/drep_in/
@@ -1069,7 +1066,7 @@
         --metabat2 --maxbin2 \
         temp/hr/{}_*.fastq" # --concoct > /dev/null 2>&1
 
-    # Bin refinement (分箱提纯), 
+    # Bin refinement (分箱提纯), 42m
     time tail -n+2 result/metadata.txt|cut -f1|rush -j ${j} \
       "metawrap bin_refinement \
       -o temp/bin_refine/{} -t ${p} \
@@ -1083,135 +1080,128 @@
 
     # Together, link and rename (单样品分箱链接和重命名)
     for i in `tail -n+2 result/metadata.txt|cut -f1`;do
-       ln -s `pwd`/temp/bin_refinement/${i}/metawrap_50_10_bins/bin.* temp/drep_in/
-       # CentOS
+       ln -s `pwd`/temp/bin_refine/${i}/metawrap_50_10_bins/bin.* temp/drep_in/
        rename 'bin.' "Sg_${i}_" temp/drep_in/bin.*
-       # Ubuntu
        rename "s/bin./Sg_${i}_/" temp/drep_in/bin.*
     done
-    # 删除空白中无效链接
-    /bin/rm -f temp/drep_in/*\*
-    # 统计混合和单样本来源数据，10个混，5个单；不同系统结果略有差异
+    # Delete fail link (删除空白中无效链接)
+    # /bin/rm -f temp/drep_in/*\*
+    # Bin source, 22 mix, 22 single sample
     ls temp/drep_in/|cut -f 1 -d '_'|uniq -c
-    # 统计混合批次/单样本来源
+    # Bin source, each sample
     ls temp/drep_in/|cut -f 2 -d '_'|cut -f 1 -d '.' |uniq -c
 
 
-## (可选Opt)分组分箱 Subgroup binning
+### (Opt) Subgroup binning (可选)分组分箱
 
-样本>30或数据量>300G在1TB内存胖结点上完成混合组装和分箱可能内存不足、且时间>1周甚至1月，需要对研究相近条件、地点进行分小组，且每组编写一个metadata??.txt。
+    # For samples >30 or data volume >300G, completing hybrid assembly and binning on a 1TB memory fat node may result in insufficient memory and take >1 week or even 1 month. It is necessary to divide the research into small groups based on similar conditions and locations, and each group should write a metadata.txt file.
+    # 样本>30或数据量>300G在1TB内存胖结点上完成混合组装和分箱可能内存不足、且时间>1周甚至1月，需要对研究相近条件、地点进行分小组，且每组编写一个metadata??.txt。
 
-    conda activate metawrap
-    # 小组ID: A1/A2/A3
-    g=A1
+    # Group: Young/Centenarians
+    g=Young
+    grep -P "Group|${g}" result/metadata.txt > result/meta${g}.txt
+    cat result/meta${g}.txt
 
-**组装Assemble**：<30个或<300G样本，~12h
-    
+    # Assemble, 9m, <30 samples or <300G data, ~12h
     metawrap assembly -m 600 -t 32 --megahit \
-      -1 `tail -n+2 result/metadata${g}.txt|cut -f1|sed 's/^/temp\/hr\//;s/$/_1.fastq/'|tr '\n' ','|sed 's/,$//'` \
-      -2 `tail -n+2 result/metadata${g}.txt|cut -f1|sed 's/^/temp\/hr\//;s/$/_2.fastq/'|tr '\n' ','|sed 's/,$//'` \
+      -1 `tail -n+2 result/meta${g}.txt|cut -f1|sed 's/^/temp\/hr\//;s/$/_1.fastq/'|tr '\n' ','|sed 's/,$//'` \
+      -2 `tail -n+2 result/meta${g}.txt|cut -f1|sed 's/^/temp\/hr\//;s/$/_2.fastq/'|tr '\n' ','|sed 's/,$//'` \
       -o temp/megahit_${g}
 
-**分箱Binning**，~18h
-
-    # 链接文件到临时位置
+    # Prepare data directory
     mkdir -p temp/${g}/
-    for i in `tail -n+2 result/metadata${g}.txt|cut -f1`;do
-        ln -s `pwd`/temp/hr/${i}*.fastq temp/${g}/
-    done
-    # 按组分箱
-    metawrap binning -o temp/binning_${g} \
+    for i in `tail -n+2 result/meta${g}.txt|cut -f1`;do
+        ln -s `pwd`/temp/hr/${i}*.fastq temp/${g}/; done
+    # Bin (分箱), 4m
+    metawrap binning -o temp/bin/${g} \
       -t 32 -a temp/megahit_${g}/final_assembly.fasta \
       --metabat2 --maxbin2 \
       temp/${g}/*.fastq
 
-**分箱提纯Bin refinement**
-
+    # Bin refinement (分箱提纯), 30m
     metawrap bin_refinement \
-      -o temp/bin_refinement_${g} \
-      -A temp/binning_${g}/metabat2_bins/ \
-      -B temp/binning_${g}/maxbin2_bins/ \
+      -o temp/bin_refine/${g} \
+      -A temp/bin/${g}/metabat2_bins/ \
+      -B temp/bin/${g}/maxbin2_bins/ \
       -c 50 -x 10 -t 32
-    # 统计高质量Bin的数量
-    wc -l temp/bin_refinement_${g}/metawrap_50_10_bins.stats
+    wc -l temp/bin_refine/${g}/metawrap_50_10_bins.stats
 
-**改名汇总 Rename & merge**
-
-    mkdir -p temp/drep_in
-    # 混合组装分箱链接和重命名
-    ln -s `pwd`/temp/bin_refinement_${g}/metawrap_50_10_bins/bin.* temp/drep_in/
-    # 改名
+    # Together, link and rename (单样品分箱链接和重命名)
+    ln -s `pwd`/temp/bin_refine/${g}/metawrap_50_10_bins/bin.* temp/drep_in/
     rename "s/bin./Gp_${g}_/" temp/drep_in/bin.* # Ubuntu
-    # rename 'bin.' "Gp_${g}_" temp/drep_in/bin.* # CentOS
-    # 统计
-    mkdir -p result/bin
-    echo -n $g >> result/bin/groupNo.txt
-    ls temp/drep_in/Gp_${g}_*|wc>> result/bin/groupNo.txt
-    cat result/bin/groupNo.txt
+    rename 'bin.' "Gp_${g}_" temp/drep_in/bin.* # CentOS
 
-## 4.2 dRep去冗余种/株基因组集
+    # Stat each type and sample
+    echo -e "Type\tCount" > result/bin/count.txt
+    ls temp/drep_in/|cut -f 1 -d '_'|uniq -c|awk '{print $2"\t"$1}' >> result/bin/count.txt
+    ls temp/drep_in/|cut -f 1-2 -d '_'|uniq -c|awk '{print $2"\t"$1}' >> result/bin/count.txt
+    cat result/bin/count.txt
 
-    # 进入虚拟环境drep和工作目录
+### Option. CheckM2 Reassessment (可选. 重新评估)
+
+    conda activate checkm2
+    mkdir -p temp/checkm2 result/checkm2
+    # 22 genomes, 2m
+    time checkm2 predict --input temp/drep95/dereplicated_genomes/* \
+      --output-directory temp/checkm2 --threads 8
+    ln temp/checkm2/quality_report.tsv result/checkm2/
+    less result/checkm2/quality_report.tsv 
+
+## 4.2 dRep genome redundance (基因组去冗余)
+
+    cd $wd
     conda activate drep
-    cd ${wd}
-
-按种水平去冗余：6~40min，15个为10个，8个来自混拼，2个来自单拼
-
     mkdir -p temp/drep95
-    # /bin/rm -rf temp/drep95/data/checkM
+
+    # dereplicate by species：10 min; 44 genome, 22 from mix samples, 22 from signle samle
     time dRep dereplicate temp/drep95/ \
       -g temp/drep_in/*.fa  \
-      -sa 0.95 -nc 0.30 -comp 50 -con 10 -p 5
-    # 报错日志在temp/drep95/log/cmd_logs中查看，加-d显示更多
+      -sa 0.95 -nc 0.30 -comp 50 -con 10 -p 8
+    # log in temp/drep95/log/cmd_logs, -d show more detail
     ls temp/drep95/dereplicated_genomes/|cut -f 1 -d '_'|sort|uniq -c
-    ls temp/drep95/dereplicated_genomes/|cut -f 1 -d '_'|sed 's/.fa//' > temp/drep95/data_tables/dereplicated_genomes.id
-    # 代表与聚类的列表
-    format_drep2cluster.pl -i temp/drep95/data_tables/Cdb.csv -d temp/drep95/data_tables/dereplicated_genomes.id -o temp/drep95/data_tables/Cdb.list -h header num
+    # ls temp/drep95/dereplicated_genomes/|sed 's/.fa//' > temp/drep95/data_tables/id
+    # format_drep2cluster.pl -i temp/drep95/data_tables/Cdb.csv -d temp/drep95/data_tables/id \
+    #   -o temp/drep95/data_tables/Cdb.list -h header num
 
-主要结果temp/drep95中：
+    # main result in temp/drep95
+    # 1. Redundancy genome catalogue (非冗余基因组集)：temp/drep95/dereplicated_genomes/*.fa
+    # 2. Table(聚类表): temp/drep95/data_tables/Cdb.csv
+    # 3. Plot(聚类和质量图)：temp/drep95/figures/*clustering*
 
-*   非冗余基因组集：temp/drep95/dereplicated_genomes/*.fa
-*   聚类信息表：temp/drep95/data_tables/Cdb.csv
-*   聚类和质量图：temp/drep95/figures/*clustering*
-
-
-(可选)按株水平99%去冗余，20-30min，本处也为10个
-
+    # (Option) drep in 99% strain level, 7m (可选)按株水平99%去冗余，20-30min
     mkdir -p temp/drep99
     time dRep dereplicate temp/drep99/ \
       -g temp/drep_in/*.fa \
-      -sa 0.99 -nc 0.30 -comp 50 -con 10 -p 5
+      -sa 0.99 -nc 0.30 -comp 50 -con 10 -p 16
+    # species level 26, strain level 29
     ls -l temp/drep99/dereplicated_genomes/ | grep '.fa' | wc -l
 
-## 4.3 CoverM基因组定量
+## 4.3 CoverM quantify in genome (基因组定量)
 
-    # 启动环境
     conda activate coverm
     mkdir -p temp/coverm
     
-    # (可选)单样本测试, ERR011347 3min; A04
-    i=A04
+    # Single test, Y1 30s
+    i=`tail -n+2 result/metadata.txt|cut -f1 | head -n1`
     time coverm genome --coupled temp/hr/${i}_1.fastq temp/hr/${i}_2.fastq \
       --genome-fasta-directory temp/drep95/dereplicated_genomes/ -x fa \
       -o temp/coverm/${i}.txt
     cat temp/coverm/${i}.txt
     
-    # 并行计算, 4min: 尝试拆分2步，节省建索引时间
-    tail -n+2 result/metadata.txt|cut -f1|rush -j 2 \
+    # Parallel, 4min；注：尝试拆分2步，节省建索引时间
+    tail -n+3 result/metadata.txt|cut -f1|rush -j 2 \
       "coverm genome --coupled temp/hr/{}_1.fastq temp/hr/{}_2.fastq -t 3 \
       --genome-fasta-directory temp/drep95/dereplicated_genomes/ -x fa \
       -o temp/coverm/{}.txt > temp/coverm/{}.log "
 
-    # 结果合并
+    # Merge to table (结果合并)
     mkdir -p result/coverm
-    conda activate humann3
+    conda activate humann4
     sed -i 's/_1.fastq Relative Abundance (%)//' temp/coverm/*.txt
-    humann_join_tables --input temp/coverm \
-      --file_name txt \
-      --output result/coverm/abundance.tsv
+    humann_join_tables --input temp/coverm --file_name txt --output result/coverm/abundance.tsv
     csvtk -t stat result/coverm/abundance.tsv
 
-    # 按组求均值，需要metadata中有3列且每个组有多个样本
+    # Group mean (按组求均值，需要metadata中有3列且每个组有多个样本)
     Rscript ${db}/EasyMicrobiome/script/otu_mean.R --input result/coverm/abundance.tsv \
       --metadata result/metadata.txt \
       --group Group --thre 0 \
@@ -1219,81 +1209,52 @@
       --output result/coverm/group_mean.txt
     # https://www.bic.ac.cn/ImageGP/ 直接选择热图可视化
 
-## 4.4 GTDB-tk物种注释和进化树
+## 4.4 GTDB taxonomic classifications of prokaryote (原核基因组注释和进化树)
 
-启动软件所在虚拟环境
-
-    conda activate gtdbtk2.4
+    conda activate gtdbtk
     export GTDBTK_DATA_PATH="${db}/gtdb"
-    gtdbtk -v # 2.4.0
+    gtdbtk -v # 2.5.2
     
-代表性细菌基因组物种注释
-
+    # Classify, ; 6p, 22 genomes, 1h
     mkdir -p temp/gtdb_classify
-    # 10个基因组，24p，100min 152G内存; 6p, 22基因组，1h
-    gtdbtk classify_wf \
+    time gtdbtk classify_wf \
         --genome_dir temp/drep95/dereplicated_genomes \
         --out_dir temp/gtdb_classify \
         --extension fa --skip_ani_screen \
         --prefix tax \
-        --cpus 6
-    # less -S按行查看，按q退出
+        --cpus 8
+    # less -S view, press q quit; bac short for Bacterial, ar short for Archaea
     less -S temp/gtdb_classify/tax.bac120.summary.tsv
     less -S temp/gtdb_classify/tax.ar53.summary.tsv
 
-
-代表种注释：以上面鉴定的10个种为例，注意扩展名要与输入文件一致，可使用压缩格式gz。主要结果文件描述：此9个细菌基因组在tax.bac120.summary.tsv。古菌在tax.ar53开头的文件中。
-
-(可选)所有MAG物种注释
-
+    # (Optional) Annotations for all MAG species (可选)所有MAG物种注释
     mkdir -p temp/gtdb_all
-    # 10000个基因组，32p，100min
-    time gtdbtk classify_wf \
-        --genome_dir temp/drep_in/ \
-        --out_dir temp/gtdb_all \
-        --extension fa --skip_ani_screen \
-        --prefix tax \
-        --cpus 6
-    less -S temp/gtdb_all/tax.bac120.summary.tsv
-    less -S temp/gtdb_all/tax.ar53.summary.tsv
+    # 10000 genome，32p，100min
+    time gtdbtk classify_wf --genome_dir temp/drep_in/ \
+        --out_dir temp/gtdb_all --extension fa --skip_ani_screen \
+        --prefix tax --cpus 32
     
-    
-多序列对齐结果建树
-
-    # 以9个细菌基因组的120个单拷贝基因建树，1s
+    # multi-sequence alignment and phylogenetic tree (多序列对齐结果建树)
     mkdir -p temp/gtdb_infer
     gtdbtk infer --msa_file temp/gtdb_classify/align/tax.bac120.user_msa.fasta.gz \
         --out_dir temp/gtdb_infer --prefix tax --cpus 3
+    # tree `tax.unrooted.tree` using iTOL online visualization
 
-树文件`tax.unrooted.tree`可使用iTOL在线美化，也可使用GraphLan本地美化。
-
-制作树注释文件：以gtdb-tk物种注释(tax.bac120.summary.tsv)和drep基因组评估(Widb.csv)信息为注释信息
-
+    # Tree annotation: gtdb-tk taxonomy (tax.bac120.summary.tsv) and drep genome info(Widb.csv)
     mkdir -p result/itol
-    # 制作分类学表
-    tail -n+2 temp/gtdb_classify/tax.bac120.summary.tsv|cut -f 1-2|sed 's/;/\t/g'|sed '1 s/^/ID\tDomain\tPhylum\tClass\tOrder\tFamily\tGenus\tSpecies\n/' \
-      > result/itol/tax.txt
+    # Taxonomy table (分类学表)
+    tail -n+2 temp/gtdb_classify/tax.bac120.summary.tsv|cut -f 1-2|sed 's/;/\t/g'|sed '1 s/^/ID\tDomain\tPhylum\tClass\tOrder\tFamily\tGenus\tSpecies\n/' > result/itol/tax.txt
     head result/itol/tax.txt
-    # 基因组评估信息
-    sed 's/,/\t/g;s/.fa//' temp/drep95/data_tables/Widb.csv|cut -f 1-7,11|sed '1 s/genome/ID/' \
-      > result/itol/genome.txt
+    # Genome info (基因组评估信息)
+    sed 's/,/\t/g;s/.fa//' temp/drep95/data_tables/Widb.csv|cut -f 1-7,11|sed '1 s/genome/ID/' > result/itol/genome.txt
     head result/itol/genome.txt
-    # 整合注释文件
+    # Merge (整合注释文件)
     awk 'BEGIN{OFS=FS="\t"} NR==FNR{a[$1]=$0} NR>FNR{print $0,a[$1]}' result/itol/genome.txt result/itol/tax.txt|cut -f 1-8,10- > result/itol/annotation.txt
     head result/itol/annotation.txt
-    # 添加各样本相对丰度(各组替换均值)
+    # Add relative abundance of each sample/group (添加各样本/组相对丰度)
     awk 'BEGIN{OFS=FS="\t"} NR==FNR{a[$1]=$0} NR>FNR{print $0,a[$1]}' <(sed '1 s/Genome/ID/' result/coverm/abundance.tsv) result/itol/annotation.txt|cut -f 1-15,17- > result/itol/annotation2.txt
     head result/itol/annotation2.txt    
 
-### CheckM2重新评估
-
-    conda activate checkm2
-    mkdir -p temp/checkm2 result/checkm2
-    # 10 genomes, 2m
-    time checkm2 predict --input temp/drep95/dereplicated_genomes/*   --output-directory temp/checkm2 --threads 8
-    ln temp/checkm2/quality_report.tsv result/checkm2/
-    # 查看结果
-    less result/checkm2//quality_report.tsv 
 
 # 5 (可选)单菌基因组
 

@@ -674,3 +674,13 @@ dos2unix $sd/metaphlan_hclust_heatmap.R
       -i temp/dbcan2/gene_fam.count \
       -o dbcan2/fam_merge.count
 
+
+## CoverM result mean
+
+    # 按组求均值，需要metadata中有3列且每个组有多个样本
+    Rscript ${db}/EasyMicrobiome/script/otu_mean.R --input result/coverm/abundance.tsv \
+      --metadata result/metadata.txt \
+      --group Group --thre 0 \
+      --scale TRUE --zoom 100 --all TRUE --type mean \
+      --output result/coverm/group_mean.txt
+    # https://www.bic.ac.cn/ImageGP/ 直接选择热图可视化
