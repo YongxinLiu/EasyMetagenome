@@ -686,8 +686,8 @@ mouse genome download (小鼠基因组下载)
     wget -c https://data.ace.uq.edu.au/public/gtdb/data/releases/latest/auxillary_files/gtdbtk_package/full_package/gtdbtk_data.tar.gz
     # Backup Download options include NMDC, Baidu NetDisk conda, etc (备用下载，可选NMDC、百度云等)
     wget -c ftp://download.nmdc.cn/tools/conda/meta/gtdbtk/gtdbtk_data.tar.gz
-    # 手工解压，指定安装完整路径
-    tar xvzf gtdbtk_data.tar.gz -C ./  --strip 1
+    # unzip and extract remove directory, 16m
+    time tar xvzf gtdbtk_data.tar.gz -C ./  --strip 1
     conda env config vars set GTDBTK_DATA_PATH="${db}/gtdb"
     
     ### Opt 2. Script install & package (方法2. conda安装)

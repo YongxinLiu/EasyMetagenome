@@ -1215,7 +1215,7 @@
     export GTDBTK_DATA_PATH="${db}/gtdb"
     gtdbtk -v # 2.5.2
     
-    # Classify, ; 6p, 22 genomes, 1h
+    # Classify, 8p, 22 genomes, 40m
     mkdir -p temp/gtdb_classify
     time gtdbtk classify_wf \
         --genome_dir temp/drep95/dereplicated_genomes \
@@ -1223,7 +1223,7 @@
         --extension fa --skip_ani_screen \
         --prefix tax \
         --cpus 8
-    # less -S view, press q quit; bac short for Bacterial, ar short for Archaea
+    # less -S view, press q quit; 26 bac short for Bacterial, 0 ar short for Archaea
     less -S temp/gtdb_classify/tax.bac120.summary.tsv
     less -S temp/gtdb_classify/tax.ar53.summary.tsv
 
