@@ -166,14 +166,14 @@
     # Optional: Software packaging -- can copy to others (可选：软件打包--复制解压使用)
     conda pack -f --ignore-missing-files -n ${s} -o ${s}.tar.gz
 
-### kneaddata database download (数据库下载)
+## kneaddata database download (数据库下载)
 
     # View available databases (查看可用数据库)
     kneaddata_database
     # Including human genome/transcriptome, ribosomal RNA, mouse/dog/cat genome
     # 包括人基因组/转录组、核糖体RNA、小鼠/狗/猫基因组
 
-human genome download (人类基因组下载)
+### Human genome download (人类基因组下载)
 
     mkdir -p ${db}/kneaddata/human
 
@@ -189,7 +189,7 @@ human genome download (人类基因组下载)
     time tar xvzf Homo_sapiens_hg39_T2T_Bowtie2_v0.1.tar.gz
     cd $db
 
-mouse genome download (小鼠基因组下载)
+### Mouse genome download (小鼠基因组下载)
     
     mkdir -p ${db}/kneaddata/mouse
 
@@ -223,7 +223,7 @@ mouse genome download (小鼠基因组下载)
     wget -c http://ftp.ensemblgenomes.org/pub/plants/release-51/fasta/arabidopsis_thaliana/dna/Arabidopsis_thaliana.TAIR10.dna.toplevel.fa.gz
     mv Arabidopsis_thaliana.TAIR10.dna.toplevel.fa.gz tair10.fa.gz
     # unzip and index, 3 minutes (解压，建索引，120M 3分钟)
-    gunzip tair10.fa.gz
+    gunzip tair10.fa.gz`
     time bowtie2-build -f tair10.fa tair10 --threads 4
     cd ${db}
 
@@ -286,7 +286,7 @@ mouse genome download (小鼠基因组下载)
     # 显示可用分类、泛基因组和功能数据库
     humann_databases
 
-    # Method 1. Download and extract the file using wget or Baidu (方法1. wget或百度下载并解压)
+    # Method 1. Download and extract the file using wget or NMDC/Baidu (方法1. wget或微生物所/百度下载并解压)
     # chocophlan full 42G, 5-7min
     wget -c http://huttenhower.sph.harvard.edu/humann_data/chocophlan/chocophlan.v4_alpha.tar.gz
     time tar xvzf chocophlan.v4_alpha.tar.gz -C ${db}/humann4/chocophlan
@@ -297,7 +297,7 @@ mouse genome download (小鼠基因组下载)
     wget -c http://huttenhower.sph.harvard.edu/humann_data/uniprot/uniref_ec_filtered/uniref90_annotated_v4_alpha_ec_filtered.tar.gz
     time tar xvzf uniref90_annotated_v4_alpha_ec_filtered.tar.gz -C ${db}/humann4/uniref
     ls -lh ${db}/humann4/uniref/humann4_protein_database_filtered_v2019_06.dmnd
-    # uniref, 2.7G, 30s
+    # mapping, 2.7G, 30s
     wget -c http://huttenhower.sph.harvard.edu/humann_data/full_mapping_v4_alpha.tar.gz
     time tar xvzf full_mapping_v4_alpha.tar.gz -C ${db}/humann4/utility_mapping
 
@@ -317,7 +317,7 @@ mouse genome download (小鼠基因组下载)
     # Modify the number of threads (修改线程数)
     humann_config --update run_modes threads 8
     # Set the locations for nucleic acids, proteins, and annotation database (设置核酸、蛋白和注释库位置)
-    humann_config --update database_folders nucleotide ${db}/humann4/chocophlan
+    humann_config --update database_folders nucleotide ${db}/humann4/chocophlan_ec
     humann_config --update database_folders protein ${db}/humann4/uniref
     humann_config --update database_folders utility_mapping ${db}/humann4/utility_mapping
     # Check settings results(核对设置结果)
