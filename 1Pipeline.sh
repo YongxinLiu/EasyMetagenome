@@ -257,11 +257,6 @@
     time humann --input temp/concat/${i}.fq --threads 8 \
       --metaphlan-options "--input_type fastq --bowtie2db ${db}/metaphlan4 --index mpa_vOct22_CHOCOPhlAnSGB_202403 --offline -t rel_ab_w_read_stats --nproc 8" \
       --output temp/humann4
-    # Using chocophlan_ec (42 to 6.6G) small database, 8p 39min
-    # mkdir -p temp/humann4s
-    # time humann --input temp/concat/${i}.fq --threads 8 --nucleotide-database ~/db/humann4/chocophlan_ec \
-    #   --metaphlan-options "--input_type fastq --bowtie2db ${db}/metaphlan4 --index mpa_vOct22_CHOCOPhlAnSGB_202403 --offline -t rel_ab_w_read_stats --nproc 8" \
-    #   --output temp/humann4s
       
     # Multi-sample parallel computing, test data with 6 samples in dual parallel: 2h, recommended 16p, 3h/6G;
     # 多样本并行计算，测试数据6个样本双并行：2h，推荐16p，3h/6G；
@@ -272,7 +267,6 @@
         --output temp/humann4/ "
 
     # (Optional) Run MetaPhlAn4 separately (可选)单独运行MetaPhlAn4
-    conda activate humann4
     metaphlan -v # MetaPhlAn version 4.1.1 (11 Mar 2024)
     mkdir -p temp/metaphlan4
     i=`tail -n+2 result/metadata.txt|cut -f1 | head -n1`
