@@ -84,10 +84,10 @@ The process from raw data to species and functional composition tables can be di
 *   Metagenomic read-based analysis（HUMAnN3/MetaPhlAn4/GraPhlAn）宏基因组基于读长的分析 
 
     1.  HUMAnN4 direct installation 直接安装 
-    2.  HUMAnN3解包安装 HUMAnN3 unpacking and installation
-    3.  HUMAnN3安装测试 HUMAnN3 installation test
-    4.  HUMAnN3物种和功能数据库 HUMAnN3 species and function database
-    5.  MetaPhlAn4物种数据库 MetaPhlAn4 species database
+    2.  HUMAnN4 unpacking and installation 解包安装
+    3.  HUMAnN4 installation test 安装测试
+    4.  HUMAnN4 species and function database 物种和功能数据库 
+    5.  MetaPhlAn4 MetaPhlAn4 species database 物种数据库
     
 *   物种注释 Species annotation (Kraken2/bracken/krakentools/krona)
 

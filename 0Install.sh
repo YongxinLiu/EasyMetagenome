@@ -1,6 +1,6 @@
 [TOC]
 
-# EasyMetagenome software & database (易宏基因组软件和数据库)
+# EasyMetagenome software & database install (易宏基因组软件和数据库安装)
 
     # Authors(作者): Yong-Xin Liu(刘永鑫), Defeng Bai(白德凤), Tong Chen(陈同) et al.
     # Version(版本): 1.24, 2025/11/12
@@ -11,7 +11,7 @@
     # Backup1. Institute of Microbiology, Chinese Academy of Sciences(中科院微生物所)：ftp://download.nmdc.cn/tools/ (FileZilla访问) 
     # Backup2. Baidu Netdisk(百度网盘)：https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
 
-# 0. Initialization and pipeline installation (零、初始化和流程安装 )
+# 0. Initialization and pipeline installation (初始化和流程安装)
 
 ## Initialization: The following code must be run every time when installation starts (初始化：每次开始安装必须运行下面代码)
 
@@ -123,15 +123,15 @@
     conda env list
 
 
-# 1. Data preprocessing (一、数据预处理)
+# 1. Data preprocessing (数据预处理)
 
-## kneaddata install (安装): 
+## kneaddata install (安装)
 
     # Note: You can choose one of the following installation methods: direct installation, download and unpack, etc. If one method fails, try another.
     # 注：直接安装、下载解压等安装方法多选一。一种方法不成功，再尝试另一种。
     # BioConda search software: https://bioconda.github.io/recipes/kneaddata/README.html
 
-### Opt 1. Download, extract, and install kneaddata (方法1.kneaddata下载解压安装)
+### Opt 1. Download install (下载安装)
 
     # Specify conda filename (指定conda文件名)
     s=kneaddata
@@ -145,7 +145,7 @@
     # Initialize environment (初始化环境)
     conda unpack
 
-### Opt 2. Conda kneaddata (方法2. conda安装kneaddata)
+### Opt 2. Conda install (Conda安装)
 
     # Create and activate the kneaddata environment (新建并激活环境)
     conda create -y -n kneaddata
@@ -166,14 +166,14 @@
     # Optional: Software packaging -- can copy to others (可选：软件打包--复制解压使用)
     conda pack -f --ignore-missing-files -n ${s} -o ${s}.tar.gz
 
-### kneaddata database download (数据库下载)
+## kneaddata database download (数据库下载)
 
     # View available databases (查看可用数据库)
     kneaddata_database
     # Including human genome/transcriptome, ribosomal RNA, mouse/dog/cat genome
     # 包括人基因组/转录组、核糖体RNA、小鼠/狗/猫基因组
 
-human genome download (人类基因组下载)
+### Human genome download (人类基因组下载)
 
     mkdir -p ${db}/kneaddata/human
 
@@ -189,7 +189,7 @@ human genome download (人类基因组下载)
     time tar xvzf Homo_sapiens_hg39_T2T_Bowtie2_v0.1.tar.gz
     cd $db
 
-mouse genome download (小鼠基因组下载)
+### Mouse genome download (小鼠基因组下载)
     
     mkdir -p ${db}/kneaddata/mouse
 
@@ -223,11 +223,11 @@ mouse genome download (小鼠基因组下载)
     wget -c http://ftp.ensemblgenomes.org/pub/plants/release-51/fasta/arabidopsis_thaliana/dna/Arabidopsis_thaliana.TAIR10.dna.toplevel.fa.gz
     mv Arabidopsis_thaliana.TAIR10.dna.toplevel.fa.gz tair10.fa.gz
     # unzip and index, 3 minutes (解压，建索引，120M 3分钟)
-    gunzip tair10.fa.gz
+    gunzip tair10.fa.gz`
     time bowtie2-build -f tair10.fa tair10 --threads 4
     cd ${db}
 
-# 2. Read-based HUMAnN4/Kraken2 (二、基于读长分析)
+# 2. Read-based HUMAnN4/Kraken2 (基于读长分析)
 
     # HUMAnN v4.0.0.alpha.1 + MetaPhlAn4 v4.1.1, HUMAnN3and HUMAnN2 see appendix
 
@@ -286,7 +286,7 @@ mouse genome download (小鼠基因组下载)
     # 显示可用分类、泛基因组和功能数据库
     humann_databases
 
-    # Method 1. Download and extract the file using wget or Baidu (方法1. wget或百度下载并解压)
+    # Method 1. Download and extract the file using wget or NMDC/Baidu (方法1. wget或微生物所/百度下载并解压)
     # chocophlan full 42G, 5-7min
     wget -c http://huttenhower.sph.harvard.edu/humann_data/chocophlan/chocophlan.v4_alpha.tar.gz
     time tar xvzf chocophlan.v4_alpha.tar.gz -C ${db}/humann4/chocophlan
@@ -297,7 +297,7 @@ mouse genome download (小鼠基因组下载)
     wget -c http://huttenhower.sph.harvard.edu/humann_data/uniprot/uniref_ec_filtered/uniref90_annotated_v4_alpha_ec_filtered.tar.gz
     time tar xvzf uniref90_annotated_v4_alpha_ec_filtered.tar.gz -C ${db}/humann4/uniref
     ls -lh ${db}/humann4/uniref/humann4_protein_database_filtered_v2019_06.dmnd
-    # uniref, 2.7G, 30s
+    # mapping, 2.7G, 30s
     wget -c http://huttenhower.sph.harvard.edu/humann_data/full_mapping_v4_alpha.tar.gz
     time tar xvzf full_mapping_v4_alpha.tar.gz -C ${db}/humann4/utility_mapping
 
@@ -317,7 +317,7 @@ mouse genome download (小鼠基因组下载)
     # Modify the number of threads (修改线程数)
     humann_config --update run_modes threads 8
     # Set the locations for nucleic acids, proteins, and annotation database (设置核酸、蛋白和注释库位置)
-    humann_config --update database_folders nucleotide ${db}/humann4/chocophlan
+    humann_config --update database_folders nucleotide ${db}/humann4/chocophlan_ec
     humann_config --update database_folders protein ${db}/humann4/uniref
     humann_config --update database_folders utility_mapping ${db}/humann4/utility_mapping
     # Check settings results(核对设置结果)
@@ -430,7 +430,7 @@ mouse genome download (小鼠基因组下载)
     time tar xvzf ${db}/kraken2/k2_pluspfp_${v}.tar.gz -C pluspfp # 6min
 
 
-# 3. Assemble-based (三、组装分析流程)
+# 3. Assemble-based (组装分析流程)
 
 ## Assembly and quantification: megahit/spades/prodigal/cd-hit/salmon (组装和定量)
 
@@ -541,7 +541,7 @@ mouse genome download (小鼠基因组下载)
     rgi load -i card.json --card_annotation card.fasta
     
 
-# 4. Binning (四、分箱挖掘单菌基因组)
+# 4. Binning (分箱挖掘单菌基因组)
 
 ## 4.1 MetwWRAP binning (分箱)
 
@@ -686,8 +686,8 @@ mouse genome download (小鼠基因组下载)
     wget -c https://data.gtdb.ecogenomic.org/releases/latest/auxillary_files/gtdbtk_package/full_package/gtdbtk_data.tar.gz
     # Backup Download options include NMDC, Baidu NetDisk conda, etc (备用下载，可选NMDC、百度云等)
     wget -c ftp://download.nmdc.cn/tools/conda/meta/gtdbtk/gtdbtk_data.tar.gz
-    # 手工解压，指定安装完整路径
-    tar xvzf gtdbtk_data.tar.gz -C ./  --strip 1
+    # unzip and extract remove directory, 16m
+    time tar xvzf gtdbtk_data.tar.gz -C ./  --strip 1
     conda env config vars set GTDBTK_DATA_PATH="${db}/gtdb"
     
     ### Opt 2. Script install & package (方法2. conda安装)
@@ -741,16 +741,11 @@ mouse genome download (小鼠基因组下载)
     cd ..
 
 
+# 5. Genome and virome (单菌基因组/病毒组等)
 
-# 5. Genome and virome (5. 单菌基因组、病毒组等其他软件)
+## anvio-8 pangenome (泛基因组)
 
-
-# 泛基因组鉴定软件anvio-8安装
-
-安装 https://anvio.org/install/linux/stable/
-
-    # 软件安装
-    #anvio安装 https://anvio.org/install/linux/stable/
+    # 安装 https://anvio.org/install/linux/stable/
     conda create -y --name anvio-8 python=3.10
     conda activate anvio-8
 
@@ -785,19 +780,18 @@ mouse genome download (小鼠基因组下载)
     conda create --name ${n} --clone ~/miniconda3/envs/${n}
     conda activate ${n}
 
+# Appendix (附录)
 
+## Software and database China backup (软件和数据库中国备份)
 
-# 常见问题
+### NMDC (国家微生物科学数据中心)
 
-## 软件和数据库国内备份
+    # http://nmdc.cn/datadownload, using Filezilla access ftp://download.nmdc.cn/tools
 
-### 国家微生物科学数据中心 —— 数据下载
+    # This resource, initiated by the meta-genome wechat and with servers provided by the Institute of Microbiology, Chinese Academy of Sciences, and maintained by the Liu Yongxin Laboratory (Metagenomics Team), provides domestic download links for commonly used software, amplicon assays, and metagenomic databases, resolving issues such as slow or unavailable downloads of common databases. It also provides customized software and database indexes to save download time and reduce the computational resources required for indexing the databases.
+    # 本资源由宏基因组平台发起，中科院微生物所提供服务器，刘永鑫实验室(宏基因组团队)负责维护的常用软件、扩增子和宏基因组数据库的国内下载链接，解决常用数据库下载慢、或无法下载的问题。同时提供定制的软件、数据库索引，节约大家下载时间，节省数据库编制索引的计算资源消耗。
 
-http://nmdc.cn/datadownload，可以使用Filezilla直接连接 ftp://download.nmdc.cn/tools
-
-本资源由宏基因组平台发起，微生物所提供服务器，宏基因组团队负责维护的常用软件、扩增子和宏基因组数据库的国内下载链接，解决常用数据库下载慢、或无法下载的问题。同时提供定制的软件、数据库索引，节约大家下载时间，节省数据库编制索引的计算资源消耗。
-
-    # humann3为例
+    # humann3 as example
     mkdir -p ~/db/humann3 && cd ~/db/humann3
     site=ftp://download.nmdc.cn/tools
     wget -c ${site}/humann3/full_chocophlan.v296_201901.tar.gz
@@ -808,15 +802,12 @@ http://nmdc.cn/datadownload，可以使用Filezilla直接连接 ftp://download.n
     tar xvzf uniref90_annotated_v201901.tar.gz -C uniref/
     tar xvzf full_mapping_v201901.tar.gz -C utility_mapping/
 
-### 百度云备份链接
+### BaiNetDisk (百度云)
 
-https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
-
-下载的tar.gz压缩包，可放置于指定目录，使用`tar -xvzf *.tar.gz`解压 
+    # https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
+    # 下载的tar.gz压缩包，可放置于指定目录，使用`tar -xvzf *.tar.gz`解压 
 
     # 大文件的分卷压缩和解压 以kraken2为例
-    cd ~/db/kraken2
-    # https://www.cnblogs.com/wang--lei/p/9046643.html
     # 文件夹kraken2/打包压缩，1h
     tar -zcvf kraken2.tar.gz kraken2/
     # b分割为指定大小文件G/M/K，-d数字，a序列长度，输入和输出前缀
@@ -859,7 +850,6 @@ https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
     ${soft}/envs/metagenome_env/share/salmon/bin/salmon -v # 0.14.0
 
 
-# 附录
 
 ## Conda安装小工具
 
@@ -932,14 +922,14 @@ https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
     # 解压
     gunzip *.gz
 
-### Conda usuage
+## Conda usuage (使用)
 
     # Remove env (删除环境)
     conda env remove --name drep
     conda env remove --name qiime2-2023.7
 
 
-# Change log (版本更新记录)
+## Change log (版本更新记录)
 
     # **1.24 2025.11.6**
     # 1. update fastp 0.23.4 to 1.0.1
