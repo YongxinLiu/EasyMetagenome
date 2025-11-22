@@ -825,7 +825,7 @@
     解压缩至当前目录：tar -xvzf my.tar.gz
 
     
-### Lefse在Rstudio中运行命令调用R版本问题的解决
+## Rstudio-Bash R version setting (RStudio中bash调用R版本与Bash不一致)
 
     # 在Rstudio中默认调用Rstudio的R，具体写在/etc/rstudio/rserver.conf
     # 或在R中用Sys.getenv()["R_HOME"]，在rpy2中print(robjects.r)可以查看其调用的r版本
@@ -833,14 +833,13 @@
     sed -i "2 i os.environ['R_HOME'] = '~/miniconda3/envs/meta/lib/R/'" \
       ~/miniconda3/envs/meta/share/lefse-1.0.8.post1-1/lefse.py
       
-### Perl版本不对
+## Perl library setting (Perl库设置版本不对)
 
-常见问题：Perl版本不对，人工指定perl版本如下
-
+    # Manual setting perl lib (perl版本)
     PERL5LIB=~/miniconda3/envs/kraken2/lib/site_perl/5.26.2/x86_64-linux-thread-multi:~/miniconda3/envs/kraken2/lib/site_perl/5.26.2:~/miniconda3/envs/kraken2/lib/5.26.2/x86_64-linux-thread-multi:~/miniconda3/envs/kraken2/lib/5.26.2
 
 
-## salmon手动安装和使用
+## Source code install, salmon as example (手动安装和使用)
 
     # 如不可用，尝试下载二进制和添加环境变量
     wget https://github.com/COMBINE-lab/salmon/releases/download/v0.14.0/salmon-0.14.0_linux_x86_64.tar.gz
@@ -849,14 +848,10 @@
     # 或者直接使用软件全路径
     ${soft}/envs/metagenome_env/share/salmon/bin/salmon -v # 0.14.0
 
+## Conda install tools
 
-
-## Conda安装小工具
-
-以下小工具已经整合至EasyMicrobiome项目中的linux文件夹，以下代码提供学习多种自主安装的参考方法，用于积累conda使用
-
-并行计算管理rush/paprllel
-    
+    # 以下小工具已经整合至EasyMicrobiome项目中的linux文件夹，以下代码提供学习多种自主安装的参考方法，用于积累conda使用
+    # 并行计算管理rush/paprllel
     # conda安装rush，无依赖关系更好用的并行工具
     conda install rush -c bioconda
     # Ubuntu下安装方法 apt install parallel
@@ -864,36 +859,18 @@
     conda install parallel -c bioconda
     parallel --version # GNU parallel 20170422
 
-表格统计工具csvtk和序列处理seqkit(可选中)
-
+    # 表格统计工具csvtk和序列处理seqkit(可选中)
     # 方法1. conda安装，可能有点旧
     conda install csvtk -c bioconda
     conda install seqkit -c bioconda
-    
     # 方法2. 直接下载最新版 https://github.com/shenwei356，如以csvtk为例手动安装
     wget -c https://github.com/shenwei356/csvtk/releases/download/v0.22.0/csvtk_linux_amd64.tar.gz
     tar xvzf csvtk_linux_amd64.tar.gz
     cp csvtk ~/miniconda3/bin/
-    
-## 宿主参考基因组下载
 
-- EnsembleGenomes http://ensemblgenomes.org/ 
-- 包括动物、植物、原生生物、真菌、细菌等，此外植物还 Phytozome https://phytozome-next.jgi.doe.gov/ ，以及单个物种和专用数据库
+## KEGG annotation (层级注释整理)
 
-以Ensemble中拟南芥为例：Arabidopsis thaliana -- Genome assembly -- Download DNA sequence (无反应)，点TAIR链接跳转ENA，下载All Seq FASTA
-    
-    wget https://www.ebi.ac.uk/ena/browser/api/fasta/GCA_000001735.1?download=true&gzip=true
-    mv GCA_000001735.1\?download\=true TAIR10.fa
-
-以Ensemble中水稻为例：Oryza sativa Japonica —— IRGSP-1.0
-    
-    wget https://www.ebi.ac.uk/ena/browser/api/fasta/GCA_001433935.1?download=true&gzip=true
-    mv GCA_001433935.1\?download\=true IRGSP1.0.fa
-
-## KEGG层级注释整理
-
-己整合至EasyMicrobiome中，自己更新请访问 https://www.kegg.jp/kegg-bin/show_brite?ko00001.keg 下载htext
-
+    # 己整合至EasyMicrobiome中，自己更新请访问 https://www.kegg.jp/kegg-bin/show_brite?ko00001.keg 下载htext
     # 转换ABCD为列表
     kegg_ko00001_htext2tsv.pl -i ko00001.keg -o ko00001.tsv
     # 统计行数，2021.1月版55761行，整理后为55103个条目
@@ -908,10 +885,9 @@
     awk 'BEGIN{FS=OFS="\t"} {print $7,$6}' ko00001.tsv | sed '1 i KO\tpathway' \
       > KO_path.list
 
-## 毒力因子数据库VFDB
+## VFDB 毒力因子数据库
 
-官网：http://www.mgc.ac.cn/VFs/ 数据每周更新
- 
+    # 官网：http://www.mgc.ac.cn/VFs/ 数据每周更新
     mkdir -p ${db}/vfdb && cd ${db}/vfdb
     # 毒力因子描述文件
     wget -c http://www.mgc.ac.cn/VFs/Down/VFs.xls.gz
@@ -928,7 +904,6 @@
     conda env remove --name drep
     conda env remove --name qiime2-2023.7
 
-
 ## Change log (版本更新记录)
 
     # **1.24 2025.11.6**
@@ -940,3 +915,4 @@
     # 1.  rgi应用于菌群分析及结果展示
     # 2.  antisamsh应用于菌群分析及结果展示
     # 3.  cazy应用于菌群分析及结果展示
+    
