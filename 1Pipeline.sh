@@ -1250,11 +1250,11 @@
     head result/itol/annotation2.txt    
 
 
-# 5 (可选)单菌基因组
+# 5 (Optional) Bacterial genome (可选)单菌基因组
 
-## 5.1 Fastp质量控制
+## 5.1 Fastp quality control (质量控制)
 
-    # 每个样本~30s，173个j2共
+    # Need genome sequencing data to start, 30s/per sample
     mkdir -p temp/qc/ 
     time tail -n+2 result/metadata.txt | cut -f1 | rush -j 2 \
       "time fastp -i seq/{1}_1.fq.gz -I seq/{1}_2.fq.gz \
@@ -1262,28 +1262,27 @@
         -o temp/qc/{1}_1.fastq -O temp/qc/{1}_2.fastq \
         > temp/qc/{1}.log 2>&1"
 
-## 5.2 metaspades组装
+## 5.2 metaspades assembly (组装)
 
     conda activate megahit
-    spades.py -v # v3.15.4，>3.14.0才支持--isolate模式
+    spades.py -v # v3.15.4
     mkdir -p temp/spades result/spades
     # 127 genoms, 1m17s
     time tail -n+2 result/metadata.txt|cut -f1|rush -j 3 \
-	"spades.py --pe1-1 temp/qc/{1}_1.fastq \
-	  --pe1-2 temp/qc/{1}_2.fastq \
-	  -t 16 --isolate --cov-cutoff auto \
-	  -o temp/spades/{1}" 
+    	"spades.py --pe1-1 temp/qc/{1}_1.fastq \
+    	  --pe1-2 temp/qc/{1}_2.fastq \
+    	  -t 16 --isolate --cov-cutoff auto \
+    	  -o temp/spades/{1}" 
 	
-	# 筛选>1k的序列并汇总、统计
+    # Filter sequences > 1k and summarize/statistically analyze them (筛选>1k的序列并汇总、统计)
     time tail -n+2 result/metadata.txt|cut -f1|rush -j 3 \
 	  "seqkit seq -m 1000 temp/spades/{1}/contigs.fasta \
 	    > temp/spades/{1}.fa"
 	  seqkit stat temp/spades/*.fa | sed 's/temp\/spades\///;s/.fa//' > result/spades/stat1k.txt
 
-## 5.3 checkm质量评估
+## 5.3 checkm quality assessment (质量评估)
 
-checkm评估质量
-
+    # checkm评估质量
     conda activate drep
     checkm # CheckM v1.1.2
   	mkdir -p temp/checkm result/checkm
@@ -1294,14 +1293,12 @@ checkm评估质量
   	  -o temp/checkm/bin_stats.txt
       csvtk -t  pretty temp/checkm/bin_stats.txt | less
 	
-(可选)checkm2评估(测试中...)
-
+    # (可选)checkm2评估(测试中...)
     conda activate checkm2
   	mkdir -p temp/checkm2
   	time checkm2 predict --threads 8 --input temp/spades/ --output-directory temp/checkm2
 	
-筛选污染和高质量基因组 >5% contamination and high quailty
-
+    # 筛选污染和高质量基因组 >5% contamination and high quailty
   	awk '$5<90 || $10>5' temp/checkm/bin_stats.txt | csvtk -t cut -f 1,5,10,4,9,2 > temp/checkm/contamination5.txt
   	tail -n+2 temp/checkm/contamination5.txt|wc -l 
   	# 筛选高质量用于下游分析 <5% high-quality for down-stream analysis
@@ -1314,10 +1311,9 @@ checkm评估质量
   	done
 
 
-## 5.4 混菌metawarp分箱
+## 5.4 metawarp binning for mixture (混菌分箱)
 
-分箱和提纯binning & refinement
-
+    # 分箱和提纯binning & refinement
     conda activate metawrap
     mkdir -p temp/binning temp/bin
     time tail -n+2 temp/checkm/contamination5.txt|cut -f1|rush -j 3 \
@@ -1333,8 +1329,7 @@ checkm评估质量
       -B temp/binning/{}/maxbin2_bins/ \
       -c 50 -x 10"
 
-分箱结果汇总
-
+    # 分箱结果汇总
   	echo -n -e "" > temp/bin/metawrap.stat
   	for m in `tail -n+2 temp/checkm/contamination5.txt|cut -f1`;do
   	  echo ${m} >> temp/bin/metawrap.stat
@@ -1349,8 +1344,7 @@ checkm评估质量
   	done
   	done
 
-分箱前后统计比较
-
+    # 分箱前后统计比较
     # 如107个测序分箱为352个基因组，共418个基因组
   	tail -n+2 temp/checkm/contamination5.txt|wc -l
   	ls temp/drep_in/*b?.fa | wc -l
@@ -1359,8 +1353,7 @@ checkm评估质量
   	ls temp/drep_in/*.fa|cut -f 3 -d '/'|sed 's/.fa//'|sed '1 i ID'|less -S>result/metadataA.txt
   	ls temp/drep_in/*b?.fa|cut -f 3 -d '/'|sed 's/.fa//'|sed '1 i ID'|less -S>result/metadataB.txt
 
-可视化混菌中覆盖度分布，以第一污染菌为例
-    
+    # 可视化混菌中覆盖度分布，以第一污染菌为例
     mkdir -p temp/cov
     for i in `tail -n+2 temp/checkm/contamination5.txt|cut -f1`;do
     grep '>' temp/drep_in/${i}*|cut -f 3 -d '/'|sed 's/.fa:>NODE//'|cut -f 1,2,4,6 -d '_'|sed 's/_/\t/g'|sed '1i Genome\tContig\tLength\tvalue' > temp/cov/${i}
@@ -1368,7 +1361,7 @@ checkm评估质量
     done
 
 
-## 5.5 drep基因组去冗余
+## 5.5 drep redudancy (基因组去冗余)
 
   	mkdir -p temp/drep95/ temp/drep99/
   	conda activate drep
@@ -1416,10 +1409,9 @@ checkm评估质量
       --file_name txt \
       --output result/coverm/abundance.tsv    
 
-## 5.6 gtdb物种注释
+## 5.6 GTDB taxonomy classification (物种注释)
 
-  	conda activate gtdbtk2.3
-  	
+  	conda activate gtdbtk
   	# 所有基因组注释，400g, 1h, 1T
   	mkdir -p temp/gtdb_all result/gtdb_all
   	memusg -t gtdbtk classify_wf \
@@ -1432,14 +1424,14 @@ checkm评估质量
   	# 95%聚类种基因组注释，40g, 1h, 500G
   	mkdir -p temp/gtdb_95 result/gtdb_95
   	# Taxonomy classify 
-  	memusg -t gtdbtk classify_wf \
+  	gtdbtk classify_wf \
   	  --genome_dir temp/drep95/dereplicated_genomes/ \
   	  --out_dir temp/gtdb_95 \
         --extension fa --skip_ani_screen \
         --prefix tax \
         --cpus 8
   	# Phylogenetic tree infer
-  	memusg -t gtdbtk infer \
+  	gtdbtk infer \
   	  --msa_file temp/gtdb_95/align/tax.bac120.user_msa.fasta.gz \
   	  --out_dir temp/gtdb_95 \
   	  --cpus 8 --prefix g >> temp/gtdb_95/infer.log 2>&1
@@ -1474,10 +1466,9 @@ checkm评估质量
   	cat count.phylum
   	cd ../..
 
-## 5.7 功能注释eggnog/dbcan/arg/antismash
+## 5.7 Functional annotation by eggnog/dbcan/arg/antismash
 
-基因注释
-
+    ## 基因注释
   	mkdir -p temp/prodigal
   	conda activate eggnog
       prodigal -v # V2.6.3
@@ -1492,8 +1483,7 @@ checkm评估质量
   	seqkit stat temp/prodigal/*.ffn | sed 's/temp\/prodigal\///;s/\.ffn//;s/[[:blank:]]\{1,\}/\t/g' | cut -f 1,3-  \
   	  > result/prodigal.txt
 
-碳水化合物注释
-
+    # 碳水化合物注释
     mkdir -p temp/dbcan3 result/dbcan3
     time tail -n+2 result/metadataS.txt|cut -f1|rush -j 9 \
   	"diamond blastp \
@@ -1535,8 +1525,7 @@ checkm评估质量
   	csvtk -t stat result/dbcan3/identity.txt
   	sp_boxplot.sh -f result/dbcan3/identity.txt -m T -F CAZy -d Identity
 
-耐药基因
-
+    # 耐药基因
   	mkdir -p temp/card result/card
     conda activate rgi6
     # load database 加载数据库
@@ -1608,11 +1597,11 @@ checkm评估质量
     join -t $'\t' -1 1 -2 1 temp/ARG_updated/sorted_ARG.tsv temp/ARG2/sorted_annotation.txt > temp/ARG2/ARG_final.tsv
 
 
-# 6 (可选)泛基因组
+# 6. (Optional) pangenome (可选)泛基因组
 
 利用宏基因组测序数据进行泛基因组分析，首先需要确定要分析泛基因组的对象，比如Alistipes属或者Alistipes putredinis菌种，这里的流程以Alistipes putredinis为例进行泛基因组数据的挖掘分析
 
-## 6.1 从NCBI下载基因组
+## 6.1 Download genome from NCBI (下载基因组)
 
     # 从NCBI上获取assembly_summary_refseq.txt文件
     mkdir -p temp/metapangenome
@@ -1682,7 +1671,7 @@ checkm评估质量
                   -r $species-isolates-contigIDs.txt $species-isolates.fa
     mv $species-isolates-CLEAN.fa $species-isolates.fa
 
-## 6.2 建立CONTIGS库
+## 6.2 CONTIGS library 建立序列库
 
     # 建立Alistipes-putredinis-isolates-CONTIGS库
     anvi-gen-contigs-database -f $species-isolates.fa -n Alistipes \
@@ -1775,7 +1764,7 @@ checkm评估质量
     done
 
 
-## 6.3 泛基因组分析
+## 6.3 pan-genome analysis (泛基因组分析)
 
     ## 生成合并的 anvi’o 配置文件数据库
     anvi-merge profs_mapped_$species-isolates/*/PROFILE.db \
@@ -1833,37 +1822,30 @@ checkm评估质量
                      -I 192.168.60.214 \
                      -P 8082
 
+# Appendix: Common Analysis Problems and Supplementary Code (附录：常见分析问题和补充代码)
 
-	
+## Calculation Time Statistics Table (计算时间统计表)
 
-# 附录：常见分析问题和补充代码
-
-## 计算时间统计表
-
-在60核(p)及以上服务器，单样本3个并行推荐16p，混合组装分箱推荐32p。
-
-小数据：2个7.5M样本，在72个核、512GB服务器上测试。
-大数据：20个10G样本，在192个核、2TB大内存服务器上测试。
-
-| 步骤 | 数据小(6Gx3) | 数据(10Gx20) | 备注 |
-| --- | --- | --- | --- |
-| fastqc | 33s | 15m |  |
-| seqkit | 2s | 15m |  |
-| fastp | 2s | 40m |  |
-| kneaddata | 25s | 5h |  |
-| humann | 34m | 30h |  |
-| megahit | 39s | 15h |  |
-| binning | 6h | 16h | -concoct |
-| binrefine | 2h | 3h |  |
-| coverm | 4m | 30m |  |
-
-注：m为分，h为小时，d为天
+    # 在60核(p)及以上服务器，单样本3个并行推荐16p，混合组装分箱推荐32p。
+    # 小数据：2个7.5M样本，在72个核、512GB服务器上测试。
+    # 大数据：20个10G样本，在192个核、2TB大内存服务器上测试。
+    # | 步骤 | 数据小(6Gx3) | 数据(10Gx20) | 备注 |
+    # | --- | --- | --- | --- |
+    # | fastqc | 33s | 15m |  |
+    # | seqkit | 2s | 15m |  |
+    # | fastp | 2s | 40m |  |
+    # | kneaddata | 25s | 5h |  |
+    # | humann | 34m | 30h |  |
+    # | megahit | 39s | 15h |  |
+    # | binning | 6h | 16h | -concoct |
+    # | binrefine | 2h | 3h |  |
+    # | coverm | 4m | 30m |  |
+    # 注：m为分，h为小时，d为天
 
 
-## 补充代码Supplementary scripts
+## Supplementary scripts (补充代码)
 
-**for循环批量处理样本列表**
-
+    #**for循环批量处理样本列表**
     # 基于样本元数据提取样本列表命令解析
     # 去掉表头
     tail -n+2 result/metadata.txt
@@ -1874,22 +1856,18 @@ checkm评估质量
     # ` 反引号为键盘左上角Esc键下面的按键，一般在数字1的左边，代表运行命令返回结果
     
 
-## 质控去宿主KneadData
+## KneadData质控去宿主
 
-**双端序列质控后是否配对的检查**
-
-双端序列质控后序列数量不一致是肯定出错了。但即使序列数量一致，也可能序列不对。在运行metawrap分箱时会报错。可以kneaddata运行时添加--reorder来尝试解决。以下提供了检查双端序列ID是否配对的比较代码
-
+    # **双端序列质控后是否配对的检查**
+    # 双端序列质控后序列数量不一致是肯定出错了。但即使序列数量一致，也可能序列不对。在运行metawrap分箱时会报错。可以kneaddata运行时添加--reorder来尝试解决。以下提供了检查双端序列ID是否配对的比较代码
     # 文件
     i=C1
     seqkit seq -n -i temp/qc/${i}_1_kneaddata_paired_1.fastq|cut -f 1 -d '/' | head > temp/header_${i}_1
     seqkit seq -n -i temp/qc/${i}_1_kneaddata_paired_2.fastq|cut -f 1 -d '/' | head > temp/header_${i}_2
     cmp temp/header_${i}_?
 
-如果序列双端名称一致，且单样本质控结果异常时使用，适合旧版本：新版全kneaddata 1.12已经将此功能添加至流程，以下代码运行返倒引起错误
-
-序列改名，解决NCBI SRA数据双端ID重名问题，详见[《MPB：随机宏基因组测序数据质量控制和去宿主的分析流程和常见问题》](https://mp.weixin.qq.com/s/ovL4TwalqZvwx5qWb5fsYA)。
-
+    # 如果序列双端名称一致，且单样本质控结果异常时使用，适合旧版本：新版全kneaddata 1.12已经将此功能添加至流程，以下代码运行返倒引起错误
+    #序列改名，解决NCBI SRA数据双端ID重名问题，详见[《MPB：随机宏基因组测序数据质量控制和去宿主的分析流程和常见问题》](https://mp.weixin.qq.com/s/ovL4TwalqZvwx5qWb5fsYA)。
     # 以0.12.0为例，序列中间不一至存在:1和:2会无结果，
     @A01909:80:HFT7YDSX5:2:1101:1289:1000 1:N:0:ATGAATAT+TTAAGTGG
     @A01909:80:HFT7YDSX5:2:1101:1289:1000 2:N:0:ATGAATAT+TTAAGTGG
@@ -1904,223 +1882,86 @@ checkm评估质量
     sed -i '1~4 s/ 1:/.1:/;1~4 s/$/\/1/' temp/qc/${i}_1.fastq
     sed -i '1~4 s/ 1:/.1:/;1~4 s/$/\/1/' temp/qc/${i}_2.fastq
 
-**Perl环境不匹配**
-
-报错'perl binaries are mismatched'的解决
-
+    # **Perl环境不匹配**
+    # 报错'perl binaries are mismatched'的解决
     e=~/miniconda3/envs/meta
     PERL5LIB=${e}/lib/5.26.2:${e}/lib/5.26.2/x86_64-linux-thread-multi
 
-**Java环境错误**
-
-出现错误 Unrecognized option: -d64，为版本不匹配——重装Java运行环境解决：
-
+    ## **Java环境错误**
+    # 出现错误 Unrecognized option: -d64，为版本不匹配——重装Java运行环境解决：
     conda install -c cyclus java-jdk
-
-若出现错误 Error message returned from Trimmomatic :
-Error: Invalid or corrupt jarfile \~/miniconda3/envs/kneaddata/share/trimmomatic/trimmomatic；找不到程序，修改配置文件指定脚本名称
-
+    # 若出现错误 Error message returned from Trimmomatic :
+    # Error: Invalid or corrupt jarfile \~/miniconda3/envs/kneaddata/share/trimmomatic/trimmomatic；找不到程序，修改配置文件指定脚本名称
     sed -i 's/trimmomatic\*/trimmomatic.jar/' ~/miniconda3/envs/kneaddata/lib/python3.10/site-packages/kneaddata/config.py
 
 
-**Python环境不匹配-找不到包module**
-
-ModuleNotFoundError: No module named 'importlib.metadata'
-
-找不到包，一般是环境变量错误，先确定是否正常启动conda环境，没有重复启动 conda activate kneaddata。已启动检测环境变量
-
+    # **Python环境不匹配-找不到包module**
+    # ModuleNotFoundError: No module named 'importlib.metadata'
+    # 找不到包，一般是环境变量错误，先确定是否正常启动conda环境，没有重复启动 conda activate kneaddata。已启动检测环境变量
     echo $PATH
     # /public/software/env01/bin:/public/home/liuyongxin/miniconda3/envs/kneaddata/bin:/public/home/liuyongxin/miniconda3/condabin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
-
-确认conda环境是否为第一个路径，此处kneaddata路径前还有更高优先级的目录在前，重设PATH变量，即删除当前conda环境前的所有路径
-
+    # 确认conda环境是否为第一个路径，此处kneaddata路径前还有更高优先级的目录在前，重设PATH变量，即删除当前conda环境前的所有路径
     PATH=/public/home/liuyongxin/miniconda3/envs/kneaddata/bin:/public/home/liuyongxin/miniconda3/condabin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
 
 ## HUMANN物种功能定量
 
-**metaphlan_to_stamp.pl**
-
+    # **metaphlan_to_stamp.pl**
     # 如果出现下面的错误：
     # bash: /db/EasyMicrobiome/script/metaphlan_to_stamp.pl: /usr/bin/perl^M: 解释器错误: 没有那个文件或目录
     # sed -i 's/\r//' ${db}/EasyMicrobiome/script/*.pl  
 
-**GraPhlAn图**
 
-    # metaphlan2 to graphlan
-    export2graphlan.py --skip_rows 1,2 -i result/metaphlan2/taxonomy.tsv \
-      --tree temp/merged_abundance.tree.txt \
-      --annotation temp/merged_abundance.annot.txt \
-      --most_abundant 1000 --abundance_threshold 20 --least_biomarkers 10 \
-      --annotations 3,4 --external_annotations 7
-    # 参数说明见PPT，或运行 export2graphlan.py --help
-    # graphlan annotation
-    graphlan_annotate.py --annot temp/merged_abundance.annot.txt \
-      temp/merged_abundance.tree.txt  temp/merged_abundance.xml
-    # output PDF figure, annoat and legend
-    graphlan.py temp/merged_abundance.xml result/metaphlan2/graphlan.pdf \
-      --external_legends 
-
-**LEfSe差异分析物种**
-
-*   输入文件：物种丰度表result/metaphlan2/taxonomy.tsv
-*   输入文件：样品分组信息 result/metadata.txt
-*   中间文件：整合后用于LefSe分析的文件 result/metaphlan2/lefse.txt，这个文件可以提供给www\.ehbio.com/ImageGP 用于在线LefSE分析
-*   LefSe结果输出：result/metaphlan2/目录下lefse开头和feature开头的文件
-
-前面演示数据仅有2个样本，无法进行差异比较。下面使用result12目录中由12个样本生成的结果表进行演示
-
-    # 设置结果目录，自己的数据使用result，演示用result12
-    result=result12
-    # 如果没有，请下载演示数据
-    # wget -c http://www.imeta.science/db/EasyMetagenome/result12.zip
-    # unzip result12.zip
-
-准备输入文件，修改样本品为组名(可手动修改)
-
-    # 预览输出数据
-    head -n3 $result/metaphlan2/taxonomy.tsv
-    # 提取样本行，替换为每个样本一行，修改ID为SampleID
-    head -n1 $result/metaphlan2/taxonomy.tsv|tr '\t' '\n'|sed '1 s/ID/SampleID/' >temp/sampleid
-    head -n3 temp/sampleid
-    # 提取SampleID对应的分组Group(假设为metadata.txt中第二列$2)，替换换行\n为制表符\t，再把行末制表符\t替换回换行
-    awk 'BEGIN{OFS=FS="\t"}NR==FNR{a[$1]=$2}NR>FNR{print a[$1]}' $result/metadata.txt temp/sampleid|tr '\n' '\t'|sed 's/\t$/\n/' >groupid
-    cat groupid
-    # 合并分组和数据(替换表头)
-    cat groupid <(tail -n+2 $result/metaphlan2/taxonomy.tsv) > $result/metaphlan2/lefse.txt
-    head -n3 $result/metaphlan2/lefse.txt
-
-方法1. 推荐在线 <https://www.bic.ac.cn/ImageGP/> 中LEfSe一键分析
-
-方法2. LEfSe命令行分析
-
-    conda activate lefse
-    result=result12
-    # 格式转换为lefse内部格式
-    lefse-format_input.py $result/metaphlan2/lefse.txt \
-      temp/input.in -c 1 -o 1000000
-    # 运行lefse(样本无重复、分组将报错)
-    run_lefse.py temp/input.in temp/input.res
-
-    # 绘制物种树注释差异
-    lefse-plot_cladogram.py temp/input.res \
-      $result/metaphlan2/lefse_cladogram.pdf --format pdf
-
-    # 绘制所有差异features柱状图
-    lefse-plot_res.py temp/input.res \
-      $result/metaphlan2/lefse_res.pdf --format pdf
-        
-    # 绘制单个features柱状图
-    # 查看显著差异features，按丰度排序
-    grep -v '-' temp/input.res | sort -k3,3n 
-    # 手动选择指定feature绘图，如Firmicutes
-    lefse-plot_features.py -f one --format pdf \
-      --feature_name "k__Bacteria.p__Firmicutes" \
-      temp/input.in temp/input.res \
-      $result/metaphlan2/lefse_Firmicutes.pdf
-
-    # 批量绘制所有差异features柱状图
-    lefse-plot_features.py -f diff \
-      --archive none --format pdf \
-      temp/input.in temp/input.res \
-      $result/metaphlan2/lefse_
-
-**HUMAnN2减少输入文件加速**
-
-HUMAnN2是计算非常耗时的步骤，如果上百个10G+的样本，有时需要几周至几月的分析。以下介绍两种快速完成分析，而且结果变化不大的方法。替换下面for循环为原文中的“双端合并为单个文件”部分代码
-
-方法1. 软件分析不考虑双端信息，只用一端可获得相近结果，且速度提高1倍。链接质控结果左端高质量至合并目录
-
+    # **HUMAnN2减少输入文件加速**
+    # HUMAnN2是计算非常耗时的步骤，如果上百个10G+的样本，有时需要几周至几月的分析。以下介绍两种快速完成分析，而且结果变化不大的方法。替换下面for循环为原文中的“双端合并为单个文件”部分代码
+    # 方法1. 软件分析不考虑双端信息，只用一端可获得相近结果，且速度提高1倍。链接质控结果左端高质量至合并目录
     for i in `tail -n+2 result/metadata.txt|cut -f1`;do 
       ln -sf `pwd`/temp/hr/${i}_1.fastq temp/concat/${i}.fq
     done
 
-方法2. 控制标准样比对时间。测序数据量通常为6~50G，同一样本分析时间可达10h~100h，严重浪费时间而浪费硬盘空间。
-可用head对单端分析截取20M序列，即3G，则为80M行
-
+    # 方法2. 控制标准样比对时间。测序数据量通常为6~50G，同一样本分析时间可达10h~100h，严重浪费时间而浪费硬盘空间。
+    # 可用head对单端分析截取20M序列，即3G，则为80M行
     for i in `tail -n+2 result/metadata.txt|cut -f1`;do 
        head -n80000000 temp/qc/${i}_1_kneaddata_paired_1.fastq  > temp/concat/${i}.fq
     done
 
-**metaphlan2无法找到数据库**
-
-正常在首次运行时，会自动下载数据库。有时会失败，解决方法：
-
-方法1. 使用软件安装的用户运行一下程序即可下载成功
-
-方法2. 将我们预下载好的数据索引文件，链接到软件安装目录
-
-    db=~/db
-    soft=~/miniconda3
-    mkdir -p ${soft}/bin/db_v20
-    ln -s ${db}/metaphlan2/* ${soft}/bin/db_v20/
-    mkdir -p ${soft}/bin/databases
-    ln -s ${db}/metaphlan2/* ${soft}/bin/databases/
-
-**CRITICAL ERROR: Can not call software version for bowtie2**
-
-解决问题思路：
-
-查看文件位置是否处在conda环境中：`type bowtie2`。如果不在需要手动设置环境变量的顺序，如果位置正确如在(\~/miniconda2/envs/humann2/bin/bowtie2)，请往下看；
-
-检测bowtie2运行情况：`bowtie2 -h`，报错`wd.c: loadable library and perl binaries are mismatched (got handshake key 0xde00080, needed 0xed00080)`。 错误原因为Perl库版本错误，检查Perl库位置：`echo $PERL5LIB`，错误原因没有指向环境，并手动修改perl库位置
-
-    # 设置你环境变量位置，最好用绝对路径
-    e=~/miniconda2/envs/humann2
-    PERL5LIB=${e}/lib/5.26.2:${e}/lib/5.26.2/x86_64-linux-thread-multi
-
-**metaphlan_hclust_heatmap.py报错AttributeError: Unknown property axisbg**
-
-在网上搜索，axisbg和axis_bgcolor为过时的函数，新版为facecolor，修改为新名称即可 (参考：<https://blog.csdn.net/qq_41185868/article/details/81842971>)
-
+    # **metaphlan_hclust_heatmap.py报错AttributeError: Unknown property axisbg**
+    # 在网上搜索，axisbg和axis_bgcolor为过时的函数，新版为facecolor，修改为新名称即可 (参考：<https://blog.csdn.net/qq_41185868/article/details/81842971>)
     # 定位文件绝对路径
     file=`type metaphlan_hclust_heatmap.py|cut -f 2 -d '('|sed 's/)//'`
     # 替换函数名称为新版
     sed -i 's/axisbg/facecolor/g' $file
 
-**metaphlan2-共有或特有物种网络图**
-
+    # **metaphlan2-共有或特有物种网络图**
     awk 'BEGIN{OFS=FS="\t"}{if(FNR==1) {for(i=9;i<=NF;i++) a[i]=$i; print "Tax\tGroup"} \
        else {for(i=9;i<=NF;i++) if($i>0.05) print "Tax_"FNR, a[i];}}' \
        result/metaphlan2/taxonomy.spf > result/metaphlan2/taxonomy_highabundance.tsv
-       
     awk 'BEGIN{OFS=FS="\t"}{if(FNR==1) {print "Tax\tGrpcombine";} else a[$1]=a[$1]==""?$2:a[$1]$2;}END{for(i in a) print i,a[i]}' \
        result/metaphlan2/taxonomy_highabundance.tsv > result/metaphlan2/taxonomy_group.tsv
-
     cut -f 2 result/metaphlan2/taxonomy_group.tsv | tail -n +2 | sort -u >group
-
     for i in `cat group`; do printf "#%02x%02x%02x\n" $((RANDOM%256)) $((RANDOM%256)) $((RANDOM%256)); done >colorcode
-
     paste group colorcode >group_colorcode
-
     awk 'BEGIN{OFS=FS="\t"}ARGIND==1{a[$1]=$2;}ARGIND==2{if(FNR==1) {print $0, "Grpcombinecolor"} else print $0,a[$2]}' \
        group_colorcode result/metaphlan2/taxonomy_group.tsv > result/metaphlan2/taxonomy_group2.tsv
-
     awk 'BEGIN{OFS=FS="\t"}{if(FNR==1) {print "Tax",$1,$2,$3,$4, $5, $6, $7, $8 } else print "Tax_"FNR, $1,$2,$3,$4, $5,$6, $7, $8}' \
        result/metaphlan2/taxonomy.spf > result/metaphlan2/taxonomy_anno.tsv
 
-## 生物标志鉴定LEfSe
+## LEfSe生物标志鉴定
 
-**lefse-plot_cladogram.py：Unknown property axis_bgcolor**
-
-若出现错误 Unknown property axis\_bgcolor，则修改`lefse-plot_cladogram.py`里的`ax_bgcolor`替换成`facecolor`即可。
-
+    # **lefse-plot_cladogram.py：Unknown property axis_bgcolor**
+    # 若出现错误 Unknown property axis\_bgcolor，则修改`lefse-plot_cladogram.py`里的`ax_bgcolor`替换成`facecolor`即可。
     # 查看脚本位置，然后使用RStudio或Vim修改
     type lefse-plot_cladogram.py
 
-## 物种分类Kraken2
+## Kraken2物种分类
 
-**合并样本为表格combine_mpa.py**
-
-krakentools中combine_mpa.py，需手动安装脚本，且结果还需调整样本名
-
+    # **合并样本为表格combine_mpa.py**
+    # krakentools中combine_mpa.py，需手动安装脚本，且结果还需调整样本名
     combine_mpa.py \
       -i `tail -n+2 result/metadata.txt|cut -f1|sed 's/^/temp\/kraken2\//;s/$/.mpa/'|tr '\n' ' '` \
       -o temp/kraken2/combined_mpa
 
-**序列筛选/去宿主extract_kraken_reads.py**
-
-提取非植物33090和动物(人)33208序列、选择细菌2和古菌2157
-
+    # **序列筛选/去宿主extract_kraken_reads.py**
+    # 提取非植物33090和动物(人)33208序列、选择细菌2和古菌2157
     mkdir -p temp/kraken2_qc
     parallel -j 3 \
       "/db/script/extract_kraken_reads.py \
@@ -2134,29 +1975,9 @@ krakentools中combine_mpa.py，需手动安装脚本，且结果还需调整样�
       -o2 temp/kraken2_qc/{1}_2.fq" \
       ::: `tail -n+2 result/metadata.txt|cut -f1`
 
-## 组装Megahit
+## 2nd+3rd assemble (二三代混合组装)
 
-**序列长度筛选**
-
-megahit默认>200，可选 > 500 / 1000 bp，并统计前后变化；如此处筛选 > 500 bp，序列从15万变为3.5万条，总长度从7M下降到3M
-
-    mv temp/megahit/final.contigs.fa temp/megahit/raw.contigs.fa
-    seqkit seq -m 500 temp/megahit/raw.contigs.fa > temp/megahit/final.contigs.fa
-    seqkit stat temp/megahit/raw.contigs.fa
-    seqkit stat temp/megahit/final.contigs.fa
-
-**数据太大导致程序中断**
-
-报错信息：126 - Too many vertices in the unitig graph (8403694648 >= 4294967294), you may increase the kmer size to remove tons
-
-解决方法：需要增加k-mer，如最小k-mer改为29，不行继续增加或将数据分批次组装
-
-添加参数： --k-min 29 --k-max 141 --k-step 20
-
-## 二三代混合组装
-
-**metaspades**
-
+    # **metaspades**
     # 3G数据，耗时3h
     i=SampleA
     time metaspades.py -t 48 -m 500 \
@@ -2164,10 +1985,8 @@ megahit默认>200，可选 > 500 / 1000 bp，并统计前后变化；如此处�
       --nanopore seq/${i}.fastq \
       -o temp/metaspades_${i}
 
-**二三代混合组装OPERA-MS**
-
-结果卡在第9步polishing，可添加--no-polishing参数跳过此步；短序列只支持成对文件，多个文件需要cat合并
-
+    # **二三代混合组装OPERA-MS**
+    # 结果卡在第9步polishing，可添加--no-polishing参数跳过此步；短序列只支持成对文件，多个文件需要cat合并
     perl ../OPERA-MS.pl \
         --short-read1 R1.fastq.gz \
         --short-read2 R2.fastq.gz \
@@ -2176,8 +1995,7 @@ megahit默认>200，可选 > 500 / 1000 bp，并统计前后变化；如此处�
         --num-processors 32 \
         --out-dir RESULTS
 
-**二代组装+三代优化**
-
+    # **二代组装+三代优化**
     perl ~/soft/OPERA-MS/OPERA-MS.pl \
         --contig-file temp/megahit/final.contigs.fa \
         --short-read1 R1.fastq.gz \
@@ -2189,14 +2007,10 @@ megahit默认>200，可选 > 500 / 1000 bp，并统计前后变化；如此处�
         --no-polishing \
         --out-dir temp/opera
 
-结果可用quast或seqkit stat统计对二代组装的改进效果
+## prodigal gene prediction (基因预测)
 
-## 基因序列prodigal
-
-**序列拆分并行预测基因**
-
-(可选)以上注释大约1小时完成1M个基因的预测。加速可将contigs拆分，并行基因预测后再合并。
-
+    # **序列拆分并行预测基因**
+    # (可选)以上注释大约1小时完成1M个基因的预测。加速可将contigs拆分，并行基因预测后再合并。
     # 拆分contigs，按1M条每个文件
     n=10000
     seqkit split result/megahit/final.contigs.fa -s $n
@@ -2214,15 +2028,12 @@ megahit默认>200，可选 > 500 / 1000 bp，并统计前后变化；如此处�
     cat temp/gene*.fa > temp/prodigal/gene.fa
     cat temp/gene*.gff > temp/prodigal/gene.gff
 
-## 基因去冗余cd-hit
+## cd-hit gene redundancy (基因去冗余)
 
-**两批基因合并cd-hit-est-2d**
-
-cd-hit-est-2d 两批次构建非冗余基因集
-
-A和B基因集，分别有M和N个非冗余基因，两批数据合并后用cd-hit-est去冗余，计算量是(M + N) X (M + N -1)
-
-cd-hit-est-2d比较，只有M X N的计算量
+    # **两批基因合并cd-hit-est-2d**
+    # cd-hit-est-2d 两批次构建非冗余基因集
+    # A和B基因集，分别有M和N个非冗余基因，两批数据合并后用cd-hit-est去冗余，计算量是(M + N) X (M + N -1)
+    # cd-hit-est-2d比较，只有M X N的计算量
 
     # 计算B中特有的基因
     cd-hit-est-2d -i A.fa -i2 B.fa -o B.uni.fa \
@@ -2231,28 +2042,25 @@ cd-hit-est-2d比较，只有M X N的计算量
     # 合并为非冗余基因集
     cat A.fa B.uni.fa > NR.fa
 
-**cd-hit合并多批基因salmon索引时提示ID重复**
-
+    # **cd-hit合并多批基因salmon索引时提示ID重复**
     # [error] In FixFasta, two references with the same name but different sequences: k141_2390219_1. We require that all input records have a unique name up to the first whitespace (or user-provided separator) character.
     # 错误解决
     mv temp/NRgene/gene.fa temp/NRgene/gene.fa.bak
     # 15G,2m,4G
     seqkit rename temp/NRgene/gene.fa.bak -o temp/NRgene/gene.fa
 
-## 基因定量salmon
+## salmon gene quantify (基因定量)
 
-**找不到库文件liblzma.so.0**
+    # **找不到库文件liblzma.so.0**
+    # 
+    # *   报错信息：error while loading shared libraries: liblzma.so.0
+    # *   问题描述：直接运行salmon报告，显示找不到lib库，
+    # *   解决方法：可使用程序完整路径解决问题，`alias salmon="${soft}/envs/metagenome_env/share/salmon/bin/salmon"`
 
-*   报错信息：error while loading shared libraries: liblzma.so.0
-*   问题描述：直接运行salmon报告，显示找不到lib库，
-*   解决方法：可使用程序完整路径解决问题，`alias salmon="${soft}/envs/metagenome_env/share/salmon/bin/salmon"`
+## Gene annotation database (基因功能数据库)
 
-## 基因功能数据库
-
-**综合功能注释KEGG描述整理**
-
-脚本位于 /db/script 目录，<https://www.kegg.jp/kegg-bin/show_brite?ko00001.keg> 下载htext，即为最新输入文件 ko00001.keg
-
+    # **综合功能注释KEGG描述整理**
+    # 脚本位于 /db/script 目录，<https://www.kegg.jp/kegg-bin/show_brite?ko00001.keg> 下载htext，即为最新输入文件 ko00001.keg
     kegg_ko00001_htext2tsv.pl -i ko00001.keg -o ko00001.tsv
     # 原核蛋白数据库(需付费购买)建索引
     conda activate eggnog
@@ -2265,19 +2073,9 @@ cd-hit-est-2d比较，只有M X N的计算量
     # ID转换为KO
     zless prokaryotes.dat.gz|cut -f1,2|sed "1i Kgene\tKO">prokaryotes.gene2KO
 
-**抗生素抗性CARD**
-
-    # 使用3.1.0和3.1.2均有警告，修改序列名至纯字母数数字也无效
-    # WARNING 2021-07-08 08:58:00,478 : Exception : <class 'KeyError'> -> '5141' -> Model(1692) missing in database. Please generate new database.
-    # WARNING 2021-07-08 08:58:00,478 : Exception : <class 'KeyError'> -> '5141' -> Model(1692)
-    # WARNING 2021-07-08 08:58:00,479 : tetM ---> hsp.bits: 60.8 <class 'float'> ? <class 'str'>
-
-**抗生素抗性ResFam**
-
-数据库：<http://www.dantaslab.org/resfams>
-
-参考文献：<http://doi.org/10.1038/ismej.2014.106>
-
+    # **抗生素抗性ResFam**
+    # 数据库：<http://www.dantaslab.org/resfams>
+    # 参考文献：<http://doi.org/10.1038/ismej.2014.106>
     mkdir -p temp/resfam result/resfam
     # 比对至抗生素数据库 1m
     time diamond blastp \
@@ -2302,17 +2100,9 @@ cd-hit-est-2d比较，只有M X N的计算量
       ${db}/resfam/Resfams-proteins_class.tsv  result/resfam/TPM.ResGeneID.raw.txt \
       > result/resfam/TPM.ResGeneID.raw.spf
 
-## 分箱MetaWRAP
+## MetaWRAP binning (分箱)
 
-**Bin refined报错CheckM**
-
-    Something went wrong with running CheckM. Exiting...
-
-重新运行1次，错误仍在；
-删除concoct输入，尝试提纯
-
-**MetaWRAP分箱注释Bin classify & annotate**
-
+    # **MetaWRAP分箱注释Bin classify & annotate**
     # Taxator-tk对每条contig物种注释，再估计bin整体的物种，11m (用时66 min)
     metawrap classify_bins -b temp/bin_refinement/metawrap_50_10_bins \
       -o temp/bin_classify -t 3 &
@@ -2331,8 +2121,7 @@ cd-hit-est-2d比较，只有M X N的计算量
     # 蛋白faa文件bin_translated_genes
     ls -sh temp/bin_annotate/prokka_out/bin.1/
 
-**分箱定量Bin quantify**
-
+    # **分箱定量Bin quantify**
     # 耗时3m，系统用时10m，此处可设置线程，但salmon仍调用全部资源
     metawrap quant_bins -b temp/bin_refinement/metawrap_50_10_bins -t 4 \
       -o temp/bin_quant -a temp/megahit/final.contigs.fa temp/qc/ERR*.fastq
@@ -2341,11 +2130,9 @@ cd-hit-est-2d比较，只有M X N的计算量
     # 原始数据位于`temp/bin_quant/bin_abundance_table.tab`
     ls -l temp/bin_quant/bin_abundance_heatmap.png
 
-**GTDB的文件名不存在错**
-
+    # **GTDB的文件名不存在错**
     # ERROR: ['BMN5'] are not present in the input list of genome to process，但并无此菌，可能是名称 中存在"-"或"."，替换为i
     # 修改metadata
     sed 's/-/i/;s/\./i/' result/metadatab.txt > result/metadata.txt
     # 修改文件名
     awk 'BEGIN{OFS=FS="\t"}{system("mv temp/antismash/"$1".fna temp/antismash/"$2".fna")ll }' <(paste result/metadatab.txt result/metadata.txt|tail -n+2)
-
