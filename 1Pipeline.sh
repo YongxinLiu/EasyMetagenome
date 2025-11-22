@@ -1,9 +1,9 @@
 [TOC]
 
-# EasyMetagenome Pipeline (易宏基因组流程 )
+# 1EasyMetagenome Pipeline (1易宏基因组流程)
 
     # Authors(作者): Yong-Xin Liu(刘永鑫), Defeng Bai(白德凤), Tong Chen(陈同) et al.
-    # Version(版本): 1.24, 2025/11/12
+    # Version(版本): 1.24, 2025/11/22
     # Operation System(操作系统): Linux Ubuntu 22.04+ / CentOS 7.7+ 
     # Homepage(主页): https://github.com/YongxinLiu/EasyMetagenome
 
@@ -280,9 +280,9 @@
     #   result/metaphlan4/taxonomy.tsv
     #   result/metaphlan4/taxonomy.spf spf for STAMP（用于STAMP分析）
     
-    # Sample Merge, correct name, preview (样品合并、修正ID、预览)
+    # Sample Merge, correct name, preview (样品合并、修正ID、预览) | sed '2i #metaphlan4'
     mkdir -p result/metaphlan4
-    merge_metaphlan_tables.py temp/humann4/*_metaphlan_profile.tsv | sed 's/_1_metaphlan//g' | tail -n+2 | sed '1 s/clade_name/ID/' | sed '2i #metaphlan4' \
+    merge_metaphlan_tables.py temp/humann4/*_metaphlan_profile.tsv | sed 's/_1_metaphlan//g' | tail -n+2 | sed '1 s/clade_name/ID/' \
       > result/metaphlan4/taxonomy.tsv
     csvtk -t stat result/metaphlan4/taxonomy.tsv
     head -n5 result/metaphlan4/taxonomy.tsv

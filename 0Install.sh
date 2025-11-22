@@ -1,9 +1,9 @@
 [TOC]
 
-# EasyMetagenome software & database install (易宏基因组软件和数据库安装)
+# 0EasyMetagenome software & database install (0易宏基因组软件和数据库安装)
 
     # Authors(作者): Yong-Xin Liu(刘永鑫), Defeng Bai(白德凤), Tong Chen(陈同) et al.
-    # Version(版本): 1.24, 2025/11/12
+    # Version(版本): 1.24, 2025/11/22
     # Homepage(主页): https://github.com/YongxinLiu/EasyMetagenome
 
     # All software and databases downloaded from the website (所有软件和数据库可从官网下载)

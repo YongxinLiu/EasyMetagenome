@@ -1,47 +1,40 @@
 [TOC]
 
-# 易宏基因组流程EasyMetagenomePipeline
+# 2EasyMetagenome Visualization (2易宏基因组统计与可视化)
 
-```
-# 版本: 1.22, 2024/11/26
-# 测试环境为Windows 10+ / MacOS 10+
+    # Authors(作者): Yong-Xin Liu(刘永鑫), Defeng Bai(白德凤), Tong Chen(陈同) et al.
+    # Version(版本): 1.24, 2025/11/25
+    # Operation System(操作系统): Linux Ubuntu 22.04+ / CentOS 7.7+ 
+    # Homepage(主页): https://github.com/YongxinLiu/EasyMetagenome
 
-# 设置结果目录(通常为项目中的result，此处为12个样本结果result12)
-# 可选癌症cancer或年龄age各18个样本数据示例
-# mac/linux 需要修改路径格式如下， ~ 代表家目录
-# wd=~/meta/result12
-# sd=~/EasyMicrobiome/script
-wd=/d/EasyMetagenome/result12
-# 设置脚本所在目录(Script Directory)，系统为win/mac/linux
-sd=/d/EasyMicrobiome/script
-PATH=$PATH:$sd/../win:$sd
-# 进入结果目录
-cd $wd
+    # Set work directory(设置工作目录)
+    wd=/d/meta/result
+    sd=/d/BaiduNetdiskDownload/EasyMicrobiome/script
+    PATH=$PATH:$sd/../win:$sd
+    cd $wd
 
-```
+## MetaPhlAn4 taxonomic composition (物种组成)
 
-## 物种Metaphlan4
+### Alpha diversity (多样性)
 
-```
-### Alpha多样性指数计算(Metaphlan4)
-Rscript ${sd}/metaphlan4_alpha.R -h
-Rscript $sd/metaphlan4_alpha.R \
-  -i metaphlan4/taxonomy.tsv \
-  -g metadata.txt \
-  -t 7 \
-  -o metaphlan4/alpha
-  
-### 绘制alpha多样性指数箱线图
-# 绘制Alpha多样性指数，结果为输入文件+类型richness/shannon/shannon/invsimpson/Pielou_evenness
-# Rscript $sd/alpha_boxplot.R -h # 查看参数
-# 样式1：用字母a,b标明显著性
-Rscript $sd/alpha_boxplot.R \
-  -i metaphlan4/alpha.txt \
-  -a shannon \
-  -d metadata.txt \
-  -n Group \
-  -o metaphlan4/ \
-  -w 89 -e 59
+    # index calculation (多样性指数计算)
+    Rscript ${sd}/metaphlan4_alpha.R -h
+    Rscript $sd/metaphlan4_alpha.R \
+      -i metaphlan4/taxonomy.tsv \
+      -g metadata.txt \
+      -t 7 \
+      -o metaphlan4/alpha
+
+    # Plot alpha diversity boxplot (绘制多样性指数箱线图)
+    # result: input+richness/shannon/shannon/invsimpson/Pielou_evenness, sig using different letter a/b/c
+    Rscript $sd/alpha_boxplot.R -h
+    Rscript $sd/alpha_boxplot.R \
+      -i metaphlan4/alpha.txt \
+      -a shannon \
+      -d metadata.txt \
+      -n Group \
+      -o metaphlan4/ \
+      -w 89 -e 59
   
 ### 批量计算6种指数的箱线图+统计
 for i in observed_species shannon simpson invsimpson Pielou_evenness;do
