@@ -8,14 +8,14 @@
     # Homepage(主页): https://github.com/YongxinLiu/EasyMetagenome
 
     # Set work directory(设置工作目录)
-    wd=/d/meta/result
-    sd=/d/BaiduNetdiskDownload/EasyMicrobiome/script
+    wd=/d/Download/meta/result
+    sd=/d/Download/github/EasyMicrobiome/script
     PATH=$PATH:$sd/../win:$sd
     cd $wd
 
 ## MetaPhlAn4 taxonomic composition (物种组成)
 
-### Alpha diversity (多样性)
+### Alpha diversity (α多样性)
 
     # index calculation (多样性指数计算)
     Rscript ${sd}/metaphlan4_alpha.R -h
@@ -28,6 +28,7 @@
     # Plot alpha diversity boxplot (绘制多样性指数箱线图)
     # result: input+richness/shannon/shannon/invsimpson/Pielou_evenness, sig using different letter a/b/c
     Rscript $sd/alpha_boxplot.R -h
+    head -n1 metaphlan4/alpha.txt
     Rscript $sd/alpha_boxplot.R \
       -i metaphlan4/alpha.txt \
       -a shannon \
@@ -36,213 +37,168 @@
       -o metaphlan4/ \
       -w 89 -e 59
   
-### 批量计算6种指数的箱线图+统计
-for i in observed_species shannon simpson invsimpson Pielou_evenness;do
-Rscript $sd/alpha_boxplot.R -i metaphlan4/alpha.txt -a ${i} \
-  -d metadata.txt -n Group -w 89 -e 59 \
-  -o metaphlan4/
-done
+    # 6 Alpha diversity boxplot
+    for i in `head -n1 metaphlan4/alpha.txt|cut -f 2-`;do
+    Rscript $sd/alpha_boxplot.R -i metaphlan4/alpha.txt -a ${i} \
+      -d metadata.txt -n Group -w 89 -e 59 \
+      -o metaphlan4/
+    done
 
-# 样式2：用p值标明显著性  
-Rscript $sd/alpha_boxplot_new.R \
-  -i metaphlan4/alpha.txt \
-  -a shannon \
-  -d metadata.txt \
-  -n Group \
-  -o metaphlan4/ \
-  -w 49 -e 79
+    # Alpha diversity boxplot with pvalue
+    # Rscript $sd/alpha_boxplot_new.R \
+    #   -i metaphlan4/alpha.txt \
+    #   -a shannon \
+    #   -d metadata.txt \
+    #   -n Group \
+    #   -o metaphlan4/ \
+    #   -w 49 -e 79
   
-# 批量计算6种指数的箱线图+统计
-for i in observed_species shannon simpson invsimpson Pielou_evenness;do
-Rscript $sd/alpha_boxplot_new.R -i metaphlan4/alpha.txt -a ${i} \
-  -d metadata.txt -n Group -w 49 -e 79 \
-  -o metaphlan4/
-done
+    # 6 Alpha diversity boxplot
+    # for i in `head -n1 metaphlan4/alpha.txt|cut -f 2-`;do
+    # Rscript $sd/alpha_boxplot_new.R -i metaphlan4/alpha.txt -a ${i} \
+    #   -d metadata.txt -n Group -w 49 -e 79 \
+    #   -o metaphlan4/
+    # done
+
+    # Venn diagram (维恩图)
+    # Filter abundance > 0.5 in each sample 筛选每个样本>0.5%的分类单元，包括界门纲目科属种
+    awk 'BEGIN{OFS=FS="\t"}{if(FNR==1) {for(i=2;i<=NF;i++) a[i]=$i;} \
+       else {for(i=2;i<=NF;i++) if($i>0.5) print $1, a[i];}}' \
+       metaphlan4/taxonomy.tsv > metaphlan4/taxonomy_high.tsv
+    wc -l metaphlan4/taxonomy_high.tsv
+    # http://www.ehbio.com/test/venn/#/ Online drawing, supports real-time viewing of element intersections 在线绘制，支持实时查看元素交集
+    # 引文：Mei Yang, Tong Chen, Yong-Xin Liu, Luqi Huang. 2024. Visualizing set relationships: 
+    # EVenn's comprehensive approach to Venn diagrams. iMeta 3: e184. https://doi.org/10.1002/imt2.184
+    # 本地5组比较:-f输入文件,-a/b/c/d/g分组名,-w/u为宽高英寸,-p输出文件名后缀
+    bash ${sd}/sp_vennDiagram.sh -f metaphlan4/taxonomy_high.tsv \
+      -a C1 -b C2 -c Y1 -d Y2 -g Y3 \
+      -w 4 -u 4 \
+      -p C1_C2_Y1_Y2_Y3
+
+    # Group mean (求均值再两组比较)
+    sed -i '/^#/d' metaphlan4/taxonomy.tsv
+    Rscript ${sd}/otu_mean.R --input metaphlan4/taxonomy.tsv \
+      --metadata metadata.txt \
+      --group Group --thre 0 \
+      --scale F --all TRUE --type mean \
+      --output metaphlan4/group_mean.txt    
+    # Filter abundance > 0.5 in each group 筛选每个组>0.5%的分类单元，包括界门纲目科属种
+    awk 'BEGIN{OFS=FS="\t"}{if(FNR==1) {for(i=2;i<=NF;i++) a[i]=$i;} \
+       else {for(i=2;i<=NF;i++) if($i>0.5) print $1, a[i];}}' \
+       metaphlan4/group_mean.txt > metaphlan4/group_high.tsv
+    bash ${sd}/sp_vennDiagram.sh -f metaphlan4/group_high.tsv \
+      -a Centenarians -b Young -c All \
+      -w 8 -u 4.5 \
+      -p Centenarians_Young_All      
+
+## Beta diversity (β多样性)
   
+    # Distance calculation(距离计算)
+    # 可选计算分类级别-t：1-界；2-门；3-纲；4-目；5-科；6-属；7-种
+    # 可选距离-m："bray", "euclidean", "jaccard", "manhattan"等
+    # 这里以物种水平和bray-curtis距离举例
+    # Rscript ${sd}/metaphlan4_beta.R -h
+    # Rscript $sd/metaphlan4_beta.R \
+    #   -i metaphlan4/taxonomy.tsv \
+    #   -g metadata.txt \
+    #   -t 7 \
+    #   -m bray \
+    #   -o metaphlan4/beta
+
+    ### Beta多样性PCoA分析  
+    # PCoA分析输入文件，选择分组，输出文件，图片尺寸mm，统计见beta_pcoa_stat.txt
+    # 可选距离有 bray_curtis, euclidean, jaccard, manhattan
+    # 此处可能报错“duplicated row.names”,需要给beta.txt增加行名后运行
+    # Rscript $sd/beta_pcoa.R \
+    #   --input metaphlan4/beta_bray.txt \
+    #   --design metadata.txt \
+    #   --group Group \
+    #   --width 89 --height 59 \
+    #   --output metaphlan4/pcoa.bray_curtis.pdf 
 
 
-### Beta多样性距离矩阵计算(Metaphlan4)
-# 可选计算分类级别-t：1-界；2-门；3-纲；4-目；5-科；6-属；7-种
-# 可选距离-m："bray", "euclidean", "jaccard", "manhattan"等
-# 这里以物种水平和bray-curtis距离举例
-Rscript ${sd}/metaphlan4_beta.R -h
-Rscript $sd/metaphlan4_beta.R \
-  -i metaphlan4/taxonomy.tsv \
-  -g metadata.txt \
-  -t 7 \
-  -m bray \
-  -o metaphlan4/beta
+### Taxonomic composition (物种组成)
 
-### Beta多样性PCoA分析  
-# PCoA分析输入文件，选择分组，输出文件，图片尺寸mm，统计见beta_pcoa_stat.txt
-# 可选距离有 bray_curtis, euclidean, jaccard, manhattan
-# 此处可能报错“duplicated row.names”,需要给beta.txt增加行名后运行
-Rscript $sd/beta_pcoa.R \
-  --input metaphlan4/beta_bray.txt \
-  --design metadata.txt \
-  --group Group \
-  --width 89 --height 59 \
-  --output metaphlan4/pcoa.bray_curtis.pdf 
-```
-
-
-### 热图
-
-```
-# 显示脚本帮助 help
-Rscript ${sd}/metaphlan_hclust_heatmap.R -h
-# 按指定分类汇总、排序并取Top25种绘制热图
-# -i输入metaphlan4结果转换的spf文件；
-# -t指定分类级别，可选Kingdom/Phylum/Class/Order/Family/Genus/Species/Strain(界门纲目科属种株)，推荐门，目，属
-# -n 输出物种数量，默认为25，最大值为该类型的数量
-# -w、-e指定图片的宽和高，单位为毫米(mm)
-# -o输出图pdf、表txt前缀，默认Heatmap+(-t)+(-n)
-
-# 科水平Top25热图
-csvtk -t stat metaphlan4/taxonomy.spf
-Rscript $sd/metaphlan_hclust_heatmap.R \
-  -i metaphlan4/taxonomy.spf \
-  -t Family -n 25 \
-  -w 183 -e 118 \
-  -o metaphlan4/HeatmapFamily
-
-# 属水平的Top30
-Rscript $sd/metaphlan_hclust_heatmap.R \
-  -i metaphlan4/taxonomy.spf \
-  -t Genus -n 30 \
-  -w 183 -e 118 \
-  -o metaphlan4/HeatmapGenus
-
-```
-
-### 不同分类级别树状图
-
-```
-# 此步骤需要在linux环境中运行，请在linux环境中安装humann2，在humann2环境下运行
-# 处理 taxonomy.spf 文件，生成 taxonomy_modified.spf
-${sd}/taxonomy_modified.sh
-#整体结构图
-#安装humann2
-pip install humann2
-conda activate humann2
-Rscript ${sd}/graphlan_plot_new.r --input metaphlan4/taxonomy_modified.spf\
-		--design metadata.txt --type heatmap --output metaphlan4/Heat_Structures
-```
-
-
-### 维恩图
-
-```
-# 筛选每个样本>0.5%的分类单元，包括界门纲目科属种
-awk 'BEGIN{OFS=FS="\t"}{if(FNR==1) {for(i=2;i<=NF;i++) a[i]=$i;} \
-   else {for(i=2;i<=NF;i++) if($i>0.5) print $1, a[i];}}' \
-   metaphlan4/taxonomy.tsv > metaphlan4/taxonomy_high.tsv
-wc -l metaphlan4/taxonomy_high.tsv
-# 在线绘制，支持实时查看元素交集 http://www.ehbio.com/test/venn/#/
-# 引文：Mei Yang, Tong Chen, Yong-Xin Liu, Luqi Huang. 2024. Visualizing set relationships: 
-# EVenn's comprehensive approach to Venn diagrams. iMeta 3: e184. https://doi.org/10.1002/imt2.184
-# 本地5组比较:-f输入文件,-a/b/c/d/g分组名,-w/u为宽高英寸,-p输出文件名后缀
-bash ${sd}/sp_vennDiagram.sh -f metaphlan4/taxonomy_high.tsv \
-  -a C1 -b C2 -c N1 -d N2 -g N3 \
-  -w 4 -u 4 \
-  -p C1_C2_N1_N2_N3
-
-# 求均值再两组比较
-sed -i '/^#/d' metaphlan4/taxonomy.tsv
-Rscript ${sd}/otu_mean.R --input metaphlan4/taxonomy.tsv \
-  --metadata metadata.txt \
-  --group Group --thre 0 \
-  --scale F --all TRUE --type mean \
-  --output metaphlan4/group_mean.txt    
-# 筛选每个组>0.5%的分类单元，包括界门纲目科属种
-awk 'BEGIN{OFS=FS="\t"}{if(FNR==1) {for(i=2;i<=NF;i++) a[i]=$i;} \
-   else {for(i=2;i<=NF;i++) if($i>0.5) print $1, a[i];}}' \
-   metaphlan4/group_mean.txt > metaphlan4/group_high.tsv
-bash ${sd}/sp_vennDiagram.sh -f metaphlan4/group_high.tsv \
-  -a Cancer -b Normal -c All \
-  -w 4 -u 4 \
-  -p Cancer_Normal_All      
-
-```
-
-### 丰度箱线图(metaphlan4)
-
-```
-# 整体丰度箱线图
-for tax in Phylum Family Genus Species; do
-Rscript $sd/metaphlan_boxplot.R \
+    # Heatmap (热图)
+    # Show help (显示脚本帮助)
+    Rscript ${sd}/metaphlan_hclust_heatmap.R -h
+    # 按指定分类汇总、排序并取Top25种绘制热图
+    # -i输入metaphlan4结果转换的spf文件；
+    # -t指定分类级别，可选Kingdom/Phylum/Class/Order/Family/Genus/Species/Strain(界门纲目科属种株)，推荐门，目，属
+    # -n 输出物种数量，默认为25，最大值为该类型的数量
+    # -w、-e指定图片的宽和高，单位为毫米(mm)
+    # -o输出图pdf、表txt前缀，默认Heatmap+(-t)+(-n)
+    # Order Top 20, Family Top 25, Genus Top 30
+    csvtk -t stat metaphlan4/taxonomy.spf
+    tax=Order
+    n=20
+    Rscript $sd/metaphlan_hclust_heatmap.R \
       -i metaphlan4/taxonomy.spf \
-      -t ${tax} \
-      -n 30 \
-      -o metaphlan4/boxplot_${tax};done
+      -t ${tax} -n ${n} \
+      -w 183 -e 118 \
+      -o metaphlan4/heatmap${tax}
+
+    # Boxplot (箱线图)
+    for tax in Phylum Family Genus Species; do
+    Rscript $sd/metaphlan_boxplot.R \
+          -i metaphlan4/taxonomy.spf \
+          -t ${tax} \
+          -n 30 \
+          -o metaphlan4/boxplot_${tax};done
       
-# 组间比较箱线图
-for tax in Phylum Family Genus Species; do
-Rscript $sd/metaphlan4_boxplot_compare.R \
-      -i metaphlan4/taxonomy.spf \
-      -t ${tax} \
-      -n 30 \
-      -o metaphlan4/boxplot_${tax};done
-```
+    # 组间比较箱线图 *_compare.pdf
+    for tax in Phylum Family Genus Species; do
+    Rscript $sd/metaphlan4_boxplot_compare.R \
+          -i metaphlan4/taxonomy.spf \
+          -t ${tax} \
+          -n 30 \
+          -o metaphlan4/boxplot_${tax};done
 
-### 堆叠柱状图
+    # Plot stackplot (绘制不同分类层级堆叠柱状图)
+    # Prepare file (准备每个分类层级的文件)
+    bash ${sd}/stack_data_prepare.sh
+    for tax in Phylum Genus Species; do
+    Rscript ${sd}/tax_stackplot.R \
+          --input metaphlan4/${tax}.txt --design metadata.txt \
+          --group Group --output metaphlan4/${tax}.stackplot \
+          --legend 10 --width 120 --height 70; done
 
-```
-# 准备每个分类层级的文件
-chmod +x ${sd}/stack_data_prepare.sh
-${sd}/stack_data_prepare.sh
+    # 排序分面堆叠柱状图(只有C组？)
+    # for tax in Phylum Genus Species; do
+    # Rscript ${sd}/tax_stackplot_order.R \
+    #       --input metaphlan4/${tax}.txt --design metadata.txt \
+    #       --group Group --output metaphlan4/${tax}.stackplot \
+    #       --legend 10 --width 120 --height 70; done
 
-# 绘制不同分类层级堆叠柱状图
-for tax in Kingdom Phylum Genus Species; do
-Rscript ${sd}/tax_stackplot.R \
-      --input metaphlan4/${tax}.txt --design metadata.txt \
-      --group Group --output metaphlan4/${tax}.stackplot \
-      --legend 10 --width 120 --height 70; done
+### Different compare (差异比较)
+
+    ### STAMP组间比较图
+    # 如果遇见报错，可尝试调整threshold和pvalue值
+    #Error in UseMethod("gather") :
+    #  no applicable method for 'gather' applied to an object of class "factor"
+    #Calls: %>% -> summarise -> group_by -> <Anonymous>
+    # compare="Centenarians_Young"
+    # Rscript ${sd}/compare_stamp.R \
+    #       --input metaphlan4/Genus.txt --metadata metadata.txt \
+    #       --group Group --compare ${compare} --threshold 0.01 \
+    #       --method "t.test" --pvalue 0.9 --fdr "none" \
+    #       --width 100 --height 300 \
+    #       --output metaphlan4/stamp_${compare}
+
+
+    ### MaAsLin2差异物种分析火山图
+    # 同样适用于功能通路差异分析，不存在叫'ANCOMBC'这个名称的程序包
+    Rscript ${sd}/compare_MaAsLin2.R \
+          --i metaphlan4/Species.txt \
+          --m metadata.txt \
+          --o metaphlan4/
       
-# 排序分面堆叠柱状图
-for tax in Kingdom Phylum Genus Species; do
-Rscript ${sd}/tax_stackplot_order.R \
-      --input metaphlan4/${tax}.txt --design metadata.txt \
-      --group Group --output metaphlan4/${tax}.stackplot \
-      --legend 10 --width 120 --height 70; done
+    # 根据差异分析结果绘制火山图
+    # Rscript ${sd}/compare_valcano.R \
+    #       --i metaphlan4/MaAsLin2_overall_difference.csv \
+    #       --d metaphlan4/MaAsLin2_enriched_depleted.csv \
+    #       --o metaphlan4/
 
-```
-
-
-### STAMP组间比较图
-# 如果遇见报错，可尝试调整threshold和pvalue值
-#Error in UseMethod("gather") :
-#  no applicable method for 'gather' applied to an object of class "factor"
-#Calls: %>% -> summarise -> group_by -> <Anonymous>
-```
-compare="Normal-Cancer"
-Rscript ${sd}/compare_stamp.R \
-      --input metaphlan4/Genus.txt --metadata metadata.txt \
-      --group Group --compare ${compare} --threshold 0.1 \
-      --method "t.test" --pvalue 0.2 --fdr "none" \
-      --width 100 --height 300 \
-      --output metaphlan4/stamp_${compare}
-```
-
-
-### MaAsLin2差异物种分析火山图
-
-# 同样适用于功能通路差异分析
-
-```
-# 差异分析
-Rscript ${sd}/compare_MaAsLin2.R \
-      --i metaphlan4/Species.txt \
-      --m metadata.txt \
-      --o metaphlan4/
-      
-# 根据差异分析结果绘制火山图
-Rscript ${sd}/compare_valcano.R \
-      --i metaphlan4/MaAsLin2_overall_difference.csv \
-      --d metaphlan4/MaAsLin2_enriched_depleted.csv \
-      --o metaphlan4/
-
-```
 
 
 ### 物种稀疏相关网络(SparCC)分析
