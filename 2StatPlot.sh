@@ -8,7 +8,7 @@
     # Homepage(主页): https://github.com/YongxinLiu/EasyMetagenome
 
     # Set work directory(设置工作目录)
-    wd=/d/Download/meta/result
+    wd=/d/meta/result
     sd=/d/Download/github/EasyMicrobiome/script
     PATH=$PATH:$sd/../win:$sd
     cd $wd
@@ -187,11 +187,11 @@
 
 
     ### MaAsLin2差异物种分析火山图
-    # 同样适用于功能通路差异分析，不存在叫'ANCOMBC'这个名称的程序包
-    Rscript ${sd}/compare_MaAsLin2.R \
-          --i metaphlan4/Species.txt \
-          --m metadata.txt \
-          --o metaphlan4/
+    # 同样适用于功能通路差异分析
+    # Rscript ${sd}/compare_MaAsLin2.R \
+    #       --i metaphlan4/Species.txt \
+    #       --m metadata.txt \
+    #       --o metaphlan4/
       
     # 根据差异分析结果绘制火山图
     # Rscript ${sd}/compare_valcano.R \
@@ -201,56 +201,52 @@
 
 
 
-### 物种稀疏相关网络(SparCC)分析
+### SparCC NetWork (物种稀疏相关网络分析)
 
-```
-## 处理物种数据用于后续SparCC网络分析
-# 此处以其中一组进行举例，其它分组重复运行即可
-Rscript ${sd}/SparCC_data_processing.R \
-      --input result12/metaphlan4/Species.txt \
-      --group result12/metadata.txt \
-      --output result12/metaphlan4/
+    Rscript ${sd}/SparCC_data_processing.R \
+          --input metaphlan4/Species.txt \
+          --group metadata.txt \
+          --output metaphlan4/
 
-## SparCC相关性(Correlation)和显著性(p value)计算
-# 以下命令行需在linux环境中运行
-git clone https://github.com/JCSzamosi/SparCC3.git
-cd SparCC3
-mkdir -p data
-cp result12/metaphlan4/Cancer_sparcc.txt SparCC3/data/
-cp result12/metaphlan4/Normal_sparcc.txt SparCC3/data/
-# Step 1 - Compute correlations
-python SparCC.py data/Cancer_sparcc.txt -i 20 \
-      --cor_file=example/basis_corr/sxtr_sparcc_Cancer.tsv \
-      > example/basis_corr/sxtr_sparcc_Cancer.log
-      
-# Step 2 - Compute bootstraps
-# 此处测试节省时间设置为100，建议设置为1000
-mkdir -p example/pvals_cancer
-python MakeBootstraps.py data/Cancer_sparcc.txt \
-      -n 100 -t bootstrap_#.txt \
-      -p example/pvals_cancer/ >> sxtr_sparcc_Cancer.log
+    ## SparCC相关性(Correlation)和显著性(p value)计算
+    # 以下命令行需在linux环境中运行
+    git clone https://github.com/JCSzamosi/SparCC3.git
+    cd SparCC3
+    mkdir -p data
+    cp result12/metaphlan4/Cancer_sparcc.txt SparCC3/data/
+    cp result12/metaphlan4/Normal_sparcc.txt SparCC3/data/
+    # Step 1 - Compute correlations
+    python SparCC.py data/Cancer_sparcc.txt -i 20 \
+          --cor_file=example/basis_corr/sxtr_sparcc_Cancer.tsv \
+          > example/basis_corr/sxtr_sparcc_Cancer.log
+          
+    # Step 2 - Compute bootstraps
+    # 此处测试节省时间设置为100，建议设置为1000
+    mkdir -p example/pvals_cancer
+    python MakeBootstraps.py data/Cancer_sparcc.txt \
+          -n 100 -t bootstrap_#.txt \
+          -p example/pvals_cancer/ >> sxtr_sparcc_Cancer.log
+    
+    # Step 3 - Compute p-values
+    # 如果上面设置1000，这里99更改为999
+    for n in {0..99}; do python SparCC.py example/pvals_cancer/bootstrap_${n}.txt -i 20 \
+          --cor_file=example/pvals_cancer/bootstrap_cor_${n}.txt >> sxtr_sparcc_Cancer.log; done
+    
+    # 如果最开始设置1000，这里100更改为1000      
+    python PseudoPvals.py example/basis_corr/sxtr_sparcc_Cancer.tsv example/pvals_cancer/bootstrap_cor_#.txt 100 \
+          -o example/pvals_cancer/pvals.two_sided_cancer.txt \
+          -t two_sided >> sxtr_sparcc_cancer.log
+          
+    # step 4 - Rename file
+    mv example/pvals_cancer/pvals.two_sided_cancer.txt sxtr_pvals_cancer.two_sided.tsv
+    mv example/basis_corr/sxtr_sparcc_Cancer.tsv sxtr_cov_mat_Cancer.tsv
 
-# Step 3 - Compute p-values
-# 如果上面设置1000，这里99更改为999
-for n in {0..99}; do python SparCC.py example/pvals_cancer/bootstrap_${n}.txt -i 20 \
-      --cor_file=example/pvals_cancer/bootstrap_cor_${n}.txt >> sxtr_sparcc_Cancer.log; done
+    ## 可视化
+    Rscript ${sd}/SparCC_visualization.R \
+          --Correlation result12/metaphlan4/sxtr_cov_mat_Cancer.tsv \
+          --Pvalue result12/metaphlan4/sxtr_pvals_cancer.two_sided.tsv \
+          --output result12/metaphlan4/
 
-# 如果最开始设置1000，这里100更改为1000      
-python PseudoPvals.py example/basis_corr/sxtr_sparcc_Cancer.tsv example/pvals_cancer/bootstrap_cor_#.txt 100 \
-      -o example/pvals_cancer/pvals.two_sided_cancer.txt \
-      -t two_sided >> sxtr_sparcc_cancer.log
-      
-# step 4 - Rename file
-mv example/pvals_cancer/pvals.two_sided_cancer.txt sxtr_pvals_cancer.two_sided.tsv
-mv example/basis_corr/sxtr_sparcc_Cancer.tsv sxtr_cov_mat_Cancer.tsv
-
-## 可视化
-Rscript ${sd}/SparCC_visualization.R \
-      --Correlation result12/metaphlan4/sxtr_cov_mat_Cancer.tsv \
-      --Pvalue result12/metaphlan4/sxtr_pvals_cancer.two_sided.tsv \
-      --output result12/metaphlan4/
-
-```
 
 
 ## 功能HUMAnN3
