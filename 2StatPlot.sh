@@ -173,33 +173,29 @@
 
 ### Different compare (差异比较)
 
-    ### STAMP组间比较图
-    # 如果遇见报错，可尝试调整threshold和pvalue值
-    #Error in UseMethod("gather") :
-    #  no applicable method for 'gather' applied to an object of class "factor"
-    #Calls: %>% -> summarise -> group_by -> <Anonymous>
-    # compare="Centenarians_Young"
-    # Rscript ${sd}/compare_stamp.R \
-    #       --input metaphlan4/Genus.txt --metadata metadata.txt \
-    #       --group Group --compare ${compare} --threshold 0.01 \
-    #       --method "t.test" --pvalue 0.9 --fdr "none" \
-    #       --width 100 --height 300 \
-    #       --output metaphlan4/stamp_${compare}
+    ## STAMP组间比较图
+    # 如果遇见报错无结果调低threshold和pvalue值，此处样本少无显著改为P<0.1
+    compare="Centenarians-Young"
+    Rscript ${sd}/compare_stamp.R \
+          --input metaphlan4/Genus.txt --metadata metadata.txt \
+          --group Group --compare ${compare} --threshold 0.01 \
+          --method "t.test" --pvalue 0.1 --fdr "none" \
+          --width 300 --height 150 \
+          --output metaphlan4/stamp_${compare}
 
 
     ### MaAsLin2差异物种分析火山图
     # 同样适用于功能通路差异分析
-    # Rscript ${sd}/compare_MaAsLin2.R \
-    #       --i metaphlan4/Species.txt \
-    #       --m metadata.txt \
-    #       --o metaphlan4/
+    Rscript ${sd}/compare_MaAsLin2.R \
+          --i metaphlan4/Species.txt \
+          --m metadata.txt \
+          --o metaphlan4/
       
     # 根据差异分析结果绘制火山图
-    # Rscript ${sd}/compare_valcano.R \
-    #       --i metaphlan4/MaAsLin2_overall_difference.csv \
-    #       --d metaphlan4/MaAsLin2_enriched_depleted.csv \
-    #       --o metaphlan4/
-
+    Rscript ${sd}/compare_valcano.R \
+          --i metaphlan4/MaAsLin2_overall_difference.csv \
+          --d metaphlan4/MaAsLin2_enriched_depleted.csv \
+          --o metaphlan4/
 
 
 ### SparCC NetWork (物种稀疏相关网络分析)
@@ -266,7 +262,7 @@
     # 结果为 输入文件名+pheamap.r/pdf，代码和图片
 
 
-## kraken2 Taxonomic composition (物种组成)
+## Kraken2 Taxonomic composition (物种组成)
 
 ### Alpha diversity (多样性)
 
@@ -342,8 +338,8 @@
       -t Phylum \
       -n 10 -w 6 -e 4 \
       -o kraken2/boxplot_Phylum
-    # 批量绘制不同层级箱线图
-    for tax in Phylum Family Genus Species; do
+    # Batch other taxonomic level (批量绘制不同层级箱线图)
+    for tax in Class Order Family Species; do
     Rscript $sd/metaphlan_boxplot.R \
           -i kraken2/tax_count.spf \
           -t ${tax} \
@@ -351,90 +347,85 @@
           -o kraken2/boxplot_${tax};done
 
 
-## 物种kraken2-braken2
+## Braken2: Kraken2 taxonomic abundance reestimate (物种丰度重估)
 
-### Alpha多样性
+### Alpha diversity (多样性)
 
-```
-# 提取种级别注释并抽平至最小测序量，计算6种alpha多样性指数
-# 查看帮助
-Rscript $sd/otutab_rare.R -h    
-# -d指定最小样本量，默认0为最小值，抽平文件tax_norm.txt，alpha多样性tax_alpha.
-tax=S
-Rscript $sd/otutab_rare.R \
-  --input kraken2/bracken.${tax}.txt \
-  --depth 0 --seed 1 \
-  --normalize kraken2/bracken.${tax}.norm \
-  --output kraken2/bracken.${tax}.alpha
-  
-# 批量
-for tax in P F G S; do
-Rscript $sd/otutab_rare.R \
-      --input kraken2/bracken.${tax}.0.01-H \
+    # 提取种级别注释并抽平至最小测序量，计算6种alpha多样性指数
+    # 查看帮助
+    Rscript $sd/otutab_rare.R -h    
+    # -d指定最小样本量，默认0为最小值，抽平文件tax_norm.txt，alpha多样性tax_alpha.
+    tax=S
+    Rscript $sd/otutab_rare.R \
+      --input kraken2/bracken.${tax}.txt \
       --depth 0 --seed 1 \
       --normalize kraken2/bracken.${tax}.norm \
-      --output kraken2/bracken.${tax}.alpha;done
-
-# 绘制Alpha多样性指数，结果为输入文件+类型richness/chao1/ACE/shannon/simpson/invsimpson
-# Rscript $sd/alpha_boxplot.R -h # 查看参数
-mkdir -p kraken2/${tax}
-Rscript $sd/alpha_boxplot.R \
-  -i kraken2/bracken.${tax}.alpha \
-  -a shannon \
-  -d metadata.txt \
-  -n Group \
-  -o kraken2/${tax} \
-  -w 89 -e 59
-
-# 批量运行
-for tax in S; do
-for i in richness chao1 ACE shannon simpson invsimpson; do
-mkdir -p kraken2/${tax}/alpha/
-Rscript $sd/alpha_boxplot.R \
+      --output kraken2/bracken.${tax}.alpha
+      
+    # 批量
+    for tax in D P G S; do
+    Rscript $sd/otutab_rare.R \
+          --input kraken2/bracken.${tax}.0.2 \
+          --depth 0 --seed 1 \
+          --normalize kraken2/bracken.${tax}.norm \
+          --output kraken2/bracken.${tax}.alpha;done
+    
+    # 绘制Alpha多样性指数，结果为输入文件+类型richness/chao1/ACE/shannon/simpson/invsimpson
+    # Rscript $sd/alpha_boxplot.R -h # 查看参数
+    Rscript $sd/alpha_boxplot.R \
       -i kraken2/bracken.${tax}.alpha \
-      -a ${i} \
+      -a richness \
       -d metadata.txt \
       -n Group \
-      -o kraken2/${tax}/alpha/ \
-      -w 89 -e 59; done
-mv alpha_boxplot_TukeyHSD.txt  kraken2/${tax}/alpha;done
+      -o kraken2/${tax} \
+      -w 89 -e 59
+    
+    # 批量运行
+    for tax in S; do
+    for i in richness chao1 ACE shannon simpson invsimpson; do
+    mkdir -p kraken2/${tax}/alpha/
+    Rscript $sd/alpha_boxplot.R \
+          -i kraken2/bracken.${tax}.alpha \
+          -a ${i} \
+          -d metadata.txt \
+          -n Group \
+          -o kraken2/${tax}/alpha/ \
+          -w 89 -e 59; done
+    done
+    mv alpha_boxplot_TukeyHSD.txt  kraken2/${tax}_bracken_alpha
 
-```
+## Beta diversity (β多样性)
 
-### Beta多样性
-
-```
-# Beta多样性距离矩阵计算
-# Mac 用不了面对的 usearch，使用在线平台 https://www.bic.ac.cn/BIC
-mkdir -p kraken2/beta/
-$sd/../win/usearch -beta_div kraken2/bracken.${tax}.norm \
-    -filename_prefix kraken2/beta/
-
-# PCoA分析输入文件，选择分组，输出文件，图片尺寸mm，统计见beta_pcoa_stat.txt
-# 可选距离有 bray_curtis, euclidean, jaccard, manhattan
-dis=bray_curtis                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
-Rscript $sd/beta_pcoa.R \
-  --input kraken2/beta/${dis}.txt \
-  --design metadata.txt \
-  --group Group \
-  --width 89 --height 59 \
-  --output kraken2/pcoa.${dis}.pdf 
-
-# 批量运行  
-for tax in S; do
-mkdir -p kraken2/${tax}/beta/
-$sd/../win/usearch -beta_div kraken2/bracken.${tax}.norm     \
-    -filename_prefix kraken2/${tax}/beta/
-for dis in bray_curtis euclidean jaccard manhatten; do
+    # Beta多样性距离矩阵计算
+    # Mac 用不了面对的 usearch，使用在线平台 https://www.bic.ac.cn/BIC
+    mkdir -p kraken2/beta/
+    $sd/../win/usearch -beta_div kraken2/bracken.${tax}.norm \
+        -filename_prefix kraken2/beta/
+    
+    # PCoA分析输入文件，选择分组，输出文件，图片尺寸mm，统计见beta_pcoa_stat.txt
+    # 可选距离有 bray_curtis, euclidean, jaccard, manhattan
+    dis=bray_curtis                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
     Rscript $sd/beta_pcoa.R \
-      --input kraken2/${tax}/beta/${dis}.txt \
+      --input kraken2/beta/${dis}.txt \
       --design metadata.txt \
       --group Group \
       --width 89 --height 59 \
-      --output kraken2/${tax}/beta/pcoa.${dis}.pdf; done
-mv beta_pcoa_stat.txt kraken2/${tax}/beta/;done
-
-```
+      --output kraken2/pcoa.${dis}.pdf 
+    
+    # 批量运行  
+    for tax in S; do
+    mkdir -p kraken2/${tax}/beta/
+    $sd/../win/usearch -beta_div kraken2/bracken.${tax}.norm     \
+        -filename_prefix kraken2/${tax}/beta/
+    for dis in bray_curtis euclidean jaccard manhatten; do
+        Rscript $sd/beta_pcoa.R \
+          --input kraken2/${tax}/beta/${dis}.txt \
+          --design metadata.txt \
+          --group Group \
+          --width 89 --height 59 \
+          --output kraken2/${tax}/beta/pcoa.${dis}.pdf; done
+    mv beta_pcoa_stat.txt kraken2/${tax}/beta/;done
+    
 
 ### 堆叠柱状图
 
