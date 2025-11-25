@@ -5,6 +5,7 @@
     # Authors(作者): Yong-Xin Liu(刘永鑫), Defeng Bai(白德凤), Tong Chen(陈同) et al.
     # Version(版本): 1.24, 2025/11/22
     # Homepage(主页): https://github.com/YongxinLiu/EasyMetagenome
+    # Cititon(引文): Bai, et al. 2025. EasyMetagenome: A User‐Friendly and Flexible Pipeline for Shotgun Metagenomic Analysis in Microbiome Research. iMeta 4: e70001. https://doi.org/10.1002/imt2.70001
 
     # All software and databases downloaded from the website (所有软件和数据库可从官网下载)
     # Backup source add download speed and success rate (备用站点提高下载速度和成功率)

@@ -5,6 +5,10 @@ Version(版本)：v1.24
 
 Update(更新)：2025/11/6
 
+If used this project, please cited (使用此项目，请引用下文):
+
+Bai, Defeng, **Tong Chen**, ..., Yong‐Xin Liu**. 2025. “EasyMetagenome: A User‐Friendly and Flexible Pipeline for Shotgun Metagenomic Analysis in Microbiome Research.” **iMeta** 4: e70001. <https://doi.org/10.1002/imt2.70001>(Highly Cited)
+
 ![image](https://github.com/baidefeng/EasyMetagenome/blob/master/result/EasyMetagenomePipeline2.jpg)
 
 **Figure 1. EasyMetagenome Pipeline from raw data to taxonomic & functional table for analyzing metagenomic sequencing.**
@@ -342,12 +346,7 @@ Used in the terminal command line or RStudio's terminal environment. You can dis
 
 ## Citation (引文)
 
-If used this script, please cited
-
-使用此脚本，请引用下文：
+If used this project, please cited (使用此项目，请引用下文):
 Bai, Defeng, **Tong Chen**, ..., Yong‐Xin Liu**. 2025. “EasyMetagenome: A User‐Friendly and Flexible Pipeline for Shotgun Metagenomic Analysis in Microbiome Research.” **iMeta** 4: e70001. <https://doi.org/10.1002/imt2.70001>(Highly Cited)
 
-**Yong-Xin Liu**, Yuan Qin, **Tong Chen**, Meiping Lu, Xubo Qian, Xiaoxuan Guo, Yang Bai. 2021. A practical guide to amplicon and metagenomic analysis of microbiome data. Protein & Cell 12: 315-330. <https://doi.org/10.1007/s13238-020-00724-8> (Highly Cited)
-
 Copyright 2016-2026 Yong-Xin Liu <liuyongxin@caas.cn>, Tong Chen <chent@nrc.ac.cn>
-

@@ -6,6 +6,7 @@
     # Version(版本): 1.24, 2025/11/22
     # Operation System(操作系统): Linux Ubuntu 22.04+ / CentOS 7.7+ 
     # Homepage(主页): https://github.com/YongxinLiu/EasyMetagenome
+    # Cititon(引文): Bai, et al. 2025. EasyMetagenome: A User‐Friendly and Flexible Pipeline for Shotgun Metagenomic Analysis in Microbiome Research. iMeta 4: e70001. https://doi.org/10.1002/imt2.70001
 
 # 1. Data preprocessing(数据预处理)
 
@@ -1923,13 +1924,6 @@
     for i in `tail -n+2 result/metadata.txt|cut -f1`;do 
        head -n80000000 temp/qc/${i}_1_kneaddata_paired_1.fastq  > temp/concat/${i}.fq
     done
-
-    # **metaphlan_hclust_heatmap.py报错AttributeError: Unknown property axisbg**
-    # 在网上搜索，axisbg和axis_bgcolor为过时的函数，新版为facecolor，修改为新名称即可 (参考：<https://blog.csdn.net/qq_41185868/article/details/81842971>)
-    # 定位文件绝对路径
-    file=`type metaphlan_hclust_heatmap.py|cut -f 2 -d '('|sed 's/)//'`
-    # 替换函数名称为新版
-    sed -i 's/axisbg/facecolor/g' $file
 
     # **metaphlan2-共有或特有物种网络图**
     awk 'BEGIN{OFS=FS="\t"}{if(FNR==1) {for(i=9;i<=NF;i++) a[i]=$i; print "Tax\tGroup"} \

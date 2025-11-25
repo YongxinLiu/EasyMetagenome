@@ -6,6 +6,7 @@
     # Version(版本): 1.24, 2025/11/25
     # Operation System(操作系统): Linux Ubuntu 22.04+ / CentOS 7.7+ 
     # Homepage(主页): https://github.com/YongxinLiu/EasyMetagenome
+    # Cititon(引文): Bai, et al. 2025. EasyMetagenome: A User‐Friendly and Flexible Pipeline for Shotgun Metagenomic Analysis in Microbiome Research. iMeta 4: e70001. https://doi.org/10.1002/imt2.70001
 
     # Set work directory(设置工作目录)
     wd=/d/meta/result
@@ -45,20 +46,20 @@
     done
 
     # Alpha diversity boxplot with pvalue
-    # Rscript $sd/alpha_boxplot_new.R \
-    #   -i metaphlan4/alpha.txt \
-    #   -a shannon \
-    #   -d metadata.txt \
-    #   -n Group \
-    #   -o metaphlan4/ \
-    #   -w 49 -e 79
+    Rscript $sd/alpha_boxplot_new.R \
+      -i metaphlan4/alpha.txt \
+      -a shannon \
+      -d metadata.txt \
+      -n Group \
+      -o metaphlan4/ \
+      -w 49 -e 79
   
     # 6 Alpha diversity boxplot
-    # for i in `head -n1 metaphlan4/alpha.txt|cut -f 2-`;do
-    # Rscript $sd/alpha_boxplot_new.R -i metaphlan4/alpha.txt -a ${i} \
-    #   -d metadata.txt -n Group -w 49 -e 79 \
-    #   -o metaphlan4/
-    # done
+    for i in `head -n1 metaphlan4/alpha.txt|cut -f 2-`;do
+    Rscript $sd/alpha_boxplot_new.R -i metaphlan4/alpha.txt -a ${i} \
+      -d metadata.txt -n Group -w 49 -e 79 \
+      -o metaphlan4/
+    done
 
     # Venn diagram (维恩图)
     # Filter abundance > 0.5 in each sample 筛选每个样本>0.5%的分类单元，包括界门纲目科属种
@@ -97,24 +98,24 @@
     # 可选计算分类级别-t：1-界；2-门；3-纲；4-目；5-科；6-属；7-种
     # 可选距离-m："bray", "euclidean", "jaccard", "manhattan"等
     # 这里以物种水平和bray-curtis距离举例
-    # Rscript ${sd}/metaphlan4_beta.R -h
-    # Rscript $sd/metaphlan4_beta.R \
-    #   -i metaphlan4/taxonomy.tsv \
-    #   -g metadata.txt \
-    #   -t 7 \
-    #   -m bray \
-    #   -o metaphlan4/beta
+    Rscript ${sd}/metaphlan4_beta.R -h
+    Rscript $sd/metaphlan4_beta.R \
+      -i metaphlan4/taxonomy.tsv \
+      -g metadata.txt \
+      -t 7 \
+      -m bray \
+      -o metaphlan4/beta
 
     ### Beta多样性PCoA分析  
     # PCoA分析输入文件，选择分组，输出文件，图片尺寸mm，统计见beta_pcoa_stat.txt
     # 可选距离有 bray_curtis, euclidean, jaccard, manhattan
     # 此处可能报错“duplicated row.names”,需要给beta.txt增加行名后运行
-    # Rscript $sd/beta_pcoa.R \
-    #   --input metaphlan4/beta_bray.txt \
-    #   --design metadata.txt \
-    #   --group Group \
-    #   --width 89 --height 59 \
-    #   --output metaphlan4/pcoa.bray_curtis.pdf 
+    Rscript $sd/beta_pcoa.R \
+      --input metaphlan4/beta_bray.txt \
+      --design metadata.txt \
+      --group Group \
+      --width 89 --height 59 \
+      --output metaphlan4/pcoa.bray_curtis.pdf
 
 
 ### Taxonomic composition (物种组成)
@@ -163,12 +164,12 @@
           --group Group --output metaphlan4/${tax}.stackplot \
           --legend 10 --width 120 --height 70; done
 
-    # 排序分面堆叠柱状图(只有C组？)
-    # for tax in Phylum Genus Species; do
-    # Rscript ${sd}/tax_stackplot_order.R \
-    #       --input metaphlan4/${tax}.txt --design metadata.txt \
-    #       --group Group --output metaphlan4/${tax}.stackplot \
-    #       --legend 10 --width 120 --height 70; done
+    # 排序分面堆叠柱状图
+    for tax in Phylum Genus Species; do
+    Rscript ${sd}/tax_stackplot_order.R \
+          --input metaphlan4/${tax}.txt --design metadata.txt \
+          --group Group --output metaphlan4/${tax}.stackplot \
+          --legend 10 --width 120 --height 70; done
 
 ### Different compare (差异比较)
 
@@ -208,6 +209,7 @@
           --group metadata.txt \
           --output metaphlan4/
 
+    # Python需要在Linux下用conda环境运行，整合到1Pipeline中
     ## SparCC相关性(Correlation)和显著性(p value)计算
     # 以下命令行需在linux环境中运行
     git clone https://github.com/JCSzamosi/SparCC3.git
@@ -249,117 +251,105 @@
 
 
 
-## 功能HUMAnN3
+## HUMAnN4 functional composition (功能组成)
 
-### 分组聚类热图
+### Clustering heatmap (分组聚类热图）
 
-```
-bash $sd/sp_pheatmap.sh
-cut -f 1-2 metadata.txt > group.txt
-# -f输入文件，-H水平聚类，u/v图片宽/高，-P添加行注释文件，-Q添加列注释
-bash $sd/sp_pheatmap.sh \
-  -f humann3/pathabundance_relab_unstratified.tsv \
-  -H 'TRUE' -u 20 -v 50 \
-  -Q group.txt
-# 结果为 输入文件名+pheamap.r/pdf，代码和图片
+    bash $sd/sp_pheatmap.sh
+    cut -f 1,3 metadata.txt > group.txt
+    # -f输入文件，-H水平聚类，u/v图片宽/高，-P添加行注释文件，-Q添加列注释
+    # 水平标准化，-d row，可选column
+    bash $sd/sp_pheatmap.sh \
+      -f humann4/path_relab_unstratified.tsv \
+      -H 'TRUE' -u 20 -v 50 \
+      -Q group.txt -d row
+    # 结果为 输入文件名+pheamap.r/pdf，代码和图片
 
-# 水平标准化，-d row，可选column
-bash $sd/sp_pheatmap.sh \
-  -f humann3/pathabundance_relab_unstratified.tsv \
-  -H 'TRUE' -u 20 -v 50 \
-  -Q group.txt -d row
 
-```
+## kraken2 Taxonomic composition (物种组成)
 
-## 物种kraken2
+### Alpha diversity (多样性)
 
-### Alpha多样性
+    # 提取种级别注释并抽平至最小测序量，计算6种alpha多样性指数
+    # 查看帮助
+    Rscript $sd/kraken2alpha.R -h    
+    # -d指定最小样本量，默认0为最小值，抽平文件tax_norm.txt，alpha多样性tax_alpha.txt
+    Rscript $sd/kraken2alpha.R \
+      --input kraken2/tax_count.mpa \
+      --depth 0 \
+      --species kraken2/tax_count.txt \
+      --normalize kraken2/tax_count.norm \
+      --output kraken2/tax_count.alpha
+    kraken2/tax_count.txt
+    sed -i 's/\r//' kraken2/tax_count.*
+    
+    # 绘制Alpha多样性指数，结果为输入文件+类型richness/chao1/ACE/shannon/simpson/invsimpson
+    # Rscript $sd/alpha_boxplot.R -h # 查看参数
+    Rscript $sd/alpha_boxplot.R \
+      -i kraken2/tax_count.alpha \
+      -a shannon \
+      -d metadata.txt \
+      -n Group \
+      -o kraken2/ \
+      -w 89 -e 59
+    # 批量计算6种指数的箱线图+统计
+    for i in richness chao1 ACE shannon simpson invsimpson;do
+    Rscript $sd/alpha_boxplot.R -i kraken2/tax_count.alpha -a ${i} \
+      -d metadata.txt -n Group -w 89 -e 59 \
+      -o kraken2/
+    done
 
-```
-# 提取种级别注释并抽平至最小测序量，计算6种alpha多样性指数
-# 查看帮助
-Rscript $sd/kraken2alpha.R -h    
-# -d指定最小样本量，默认0为最小值，抽平文件tax_norm.txt，alpha多样性tax_alpha.txt
-Rscript $sd/kraken2alpha.R \
-  --input kraken2/tax_count.mpa \
-  --depth 0 \
-  --species kraken2/tax_count.txt \
-  --normalize kraken2/tax_count.norm \
-  --output kraken2/tax_count.alpha
+### Taxonomic composition (物种组成)
 
-# 绘制Alpha多样性指数，结果为输入文件+类型richness/chao1/ACE/shannon/simpson/invsimpson
-# Rscript $sd/alpha_boxplot.R -h # 查看参数
-Rscript $sd/alpha_boxplot.R \
-  -i kraken2/tax_count.alpha \
-  -a shannon \
-  -d metadata.txt \
-  -n Group \
-  -o kraken2/ \
-  -w 89 -e 59
-# 批量计算6种指数的箱线图+统计
-for i in richness chao1 ACE shannon simpson invsimpson;do
-Rscript $sd/alpha_boxplot.R -i kraken2/tax_count.alpha -a ${i} \
-  -d metadata.txt -n Group -w 89 -e 59 \
-  -o kraken2/
-done
-
-```
-
-### 热图
-
-```
-# 转换为metaphalan2 spf格式，分隔符为下划线“_”
-awk 'BEGIN{OFS=FS="\t"}{delete a; a["d"]="unclassified";a["p"]="unclassified";a["c"]="unclassified";a["o"]="unclassified";a["f"]="unclassified";a["g"]="unclassified";a["s"]="unclassified"; \
-  split($1,x,"|");for(i in x){split(x[i],b,"_");a[b[1]]=b[2];} \
-  print a["d"],a["p"],a["c"],a["o"],a["f"],a["g"],a["s"],$0;}' \
-  kraken2/tax_count.txt > temp.txt
-cut -f 1-7,9- temp.txt > kraken2/tax_count.spf
-sed -i '1 s/unclassified\tunclassified\tunclassified\tunclassified\tunclassified\tunclassified\tunclassified/Domain\tPhylum\tClass\tOrder\tFamily\tGenus\tSpecies/' \
-  kraken2/tax_count.spf
-# 绘制热图，可选域、门、纲、目、科、属、种(Domain	Phylum	Class	Order	Family	Genus	Species)
-# 单个运行
-tax=Genus
-Rscript $sd/metaphlan_hclust_heatmap.R \
-  -i kraken2/tax_count.spf \
-  -t ${tax} \
-  -n 25 \
-  -w 118 -e 118 \
-  -o kraken2/heatmap_${tax}
-
-# 批量运行  
-for tax in Phylum Family Genus Species; do
-Rscript $sd/metaphlan_hclust_heatmap.R \
+    # 转换为metaphalan spf格式，分隔符为下划线“__”
+    awk 'BEGIN{OFS=FS="\t"}{delete a; a["k"]="unclassified";a["p"]="unclassified";a["c"]="unclassified";a["o"]="unclassified";a["f"]="unclassified";a["g"]="unclassified";a["s"]="unclassified"; \
+      split($1,x,"|");for(i in x){split(x[i],b,"__");a[b[1]]=b[2];} \
+      print a["k"],a["p"],a["c"],a["o"],a["f"],a["g"],a["s"],$0;}' \
+      kraken2/tax_count.txt > temp.txt
+    cut -f 1-7,9- temp.txt > kraken2/tax_count.spf
+    sed -i '1 s/unclassified\tunclassified\tunclassified\tunclassified\tunclassified\tunclassified\tunclassified/Kingdom\tPhylum\tClass\tOrder\tFamily\tGenus\tSpecies/' \
+      kraken2/tax_count.spf
+    # 绘制热图，可选域、门、纲、目、科、属、种(Domain	Phylum	Class	Order	Family	Genus	Species)
+    # 单个运行
+    tax=Genus
+    Rscript $sd/metaphlan_hclust_heatmap.R \
       -i kraken2/tax_count.spf \
       -t ${tax} \
-      -n 10 \
+      -n 25 \
       -w 118 -e 118 \
-      -o kraken2/heatmap_${tax};done
-```
+      -o kraken2/heatmap_${tax}
 
-### 箱线图(kraken2)
+    # 批量运行  
+    for tax in Phylum Family Genus Species; do
+    Rscript $sd/metaphlan_hclust_heatmap.R \
+          -i kraken2/tax_count.spf \
+          -t ${tax} \
+          -n 10 \
+          -w 118 -e 118 \
+          -o kraken2/heatmap_${tax};done
 
-```
-# 绘制属水平Top30箱线图
-Rscript $sd/metaphlan_boxplot.R \
-  -i kraken2/tax_count.spf \
-  -t Genus \
-  -n 30 \
-  -o kraken2/boxplot_Genus
-# 绘制门水平Top10箱线图
-Rscript $sd/metaphlan_boxplot.R \
-  -i kraken2/tax_count.spf \
-  -t Phylum \
-  -n 10 -w 6 -e 4 \
-  -o kraken2/boxplot_Phylum
-# 批量绘制不同层级箱线图
-for tax in Phylum Family Genus Species; do
-Rscript $sd/metaphlan_boxplot.R \
+### Taxonomic distribution boxplot (物种分布箱线图)
+
+    # 绘制属水平Top30箱线图
+    Rscript $sd/metaphlan_boxplot.R \
       -i kraken2/tax_count.spf \
-      -t ${tax} \
+      -t Genus \
       -n 30 \
-      -o kraken2/boxplot_${tax};done
+      -o kraken2/boxplot_Genus
+    # 绘制门水平Top10箱线图
+    Rscript $sd/metaphlan_boxplot.R \
+      -i kraken2/tax_count.spf \
+      -t Phylum \
+      -n 10 -w 6 -e 4 \
+      -o kraken2/boxplot_Phylum
+    # 批量绘制不同层级箱线图
+    for tax in Phylum Family Genus Species; do
+    Rscript $sd/metaphlan_boxplot.R \
+          -i kraken2/tax_count.spf \
+          -t ${tax} \
+          -n 30 \
+          -o kraken2/boxplot_${tax};done
 
-```
 
 ## 物种kraken2-braken2
 
