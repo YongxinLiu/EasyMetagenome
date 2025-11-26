@@ -3,7 +3,7 @@
 
 Version(版本)：v1.24
 
-Update(更新)：2025/11/6
+Update(更新)：2025/11/26
 
 If used this project, please cited (使用此项目，请引用下文):
 
