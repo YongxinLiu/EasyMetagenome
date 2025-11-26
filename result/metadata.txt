@@ -1,3 +1,7 @@
-SampleID	Group	Replicate	Sex	Individual	GSA	CRR	project_accession
-C1	Cancer	1	Male  	p136	CRA002355	CRR117732	PRJCA002236
-C2	Cancer	2	Male  	p143	CRA002355	CRR117733	PRJCA002236
+SampleID	SampleIDOld	Group	Site	Cooperation	latitude_longitude	Date	CRA	CRR	Description
+Y1	YA04	Young	ZhanJiang	Majorbio	21.19 N 110.24 E	2022/10/8	CRA032890	CRR2274860	Y1
+Y2	YA07	Young	ZhanJiang	Majorbio	21.19 N 110.24 E	2022/10/8	CRA032890	CRR2274861	Y2
+Y3	YB59	Young	ZhanJiang	Majorbio	21.19 N 110.24 E	2022/10/8	CRA032890	CRR2274862	Y3
+C1	G18	Centenarians	ZhanJiang	Nanxin	21.19 N 110.24 E	2022/10/8	CRA032890	CRR2274863	C1
+C2	A15	Centenarians	ZhanJiang	Nanxin	21.19 N 110.24 E	2022/10/8	CRA032890	CRR2274864	C2
+C3	Z17	Centenarians	ZhanJiang	Nanxin	21.19 N 110.24 E	2022/10/8	CRA032890	CRR2274865	C3

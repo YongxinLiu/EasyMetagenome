@@ -1,24 +1,25 @@
 All statistics are based on contigs of size >= 500 bp, unless otherwise noted (e.g., "# contigs (>= 0 bp)" and "Total length (>= 0 bp)" include all contigs).
 
-Assembly                    megahit  metapasdes
-# contigs (>= 0 bp)         1016     8235      
-# contigs (>= 1000 bp)      17       21        
-# contigs (>= 5000 bp)      0        0         
-# contigs (>= 10000 bp)     0        0         
-# contigs (>= 25000 bp)     0        0         
-# contigs (>= 50000 bp)     0        0         
-Total length (>= 0 bp)      433449   2350648   
-Total length (>= 1000 bp)   23564    28176     
-Total length (>= 5000 bp)   0        0         
-Total length (>= 10000 bp)  0        0         
-Total length (>= 25000 bp)  0        0         
-Total length (>= 50000 bp)  0        0         
-# contigs                   185      347       
-Largest contig              2468     2280      
-Total length                128230   229085    
-GC (%)                      39.17    37.70     
-N50                         646      625       
-N75                         556      549       
-L50                         71       139       
-L75                         125      237       
-# N's per 100 kbp           0.00     0.00      
+Assembly                    megahit    metapasdes
+# contigs (>= 0 bp)         152762     361671    
+# contigs (>= 1000 bp)      31561      33256     
+# contigs (>= 5000 bp)      3734       3759      
+# contigs (>= 10000 bp)     1403       1283      
+# contigs (>= 25000 bp)     277        212       
+# contigs (>= 50000 bp)     60         53        
+Total length (>= 0 bp)      159264049  211721186 
+Total length (>= 1000 bp)   98429348   97820424  
+Total length (>= 5000 bp)   46001025   42068095  
+Total length (>= 10000 bp)  30035642   25052847  
+Total length (>= 25000 bp)  13070919   9556454   
+Total length (>= 50000 bp)  5647870    4439945   
+# contigs                   81626      85694     
+Largest contig              521987     316741    
+Total length                132645073  133490985 
+GC (%)                      50.22      50.29     
+N50                         2430       2229      
+N90                         641        631       
+auN                         12529.0    8822.0    
+L50                         9769       11489     
+L90                         58131      61821     
+# N's per 100 kbp           0.00       0.00      

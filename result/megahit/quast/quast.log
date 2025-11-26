@@ -1,62 +1,61 @@
-/home/yongxin/miniconda2/envs/meta/bin/quast.py result/megahit/final.contigs.fa -o result/megahit/quast -t 2
+/data1/liuyongxin/miniconda3/envs/megahit/bin/quast.py temp/megahit/final.contigs.fa -o result/megahit/quast -t 2
 
-Version: 5.0.2
+Version: 5.3.0
 
 System information:
-  OS: Linux-4.4.0-19041-Microsoft-x86_64-with-debian-bullseye-sid (linux_64)
-  Python version: 3.6.10
-  CPUs number: 12
+  OS: Linux-6.8.0-87-generic-x86_64-with-glibc2.35 (linux_64)
+  Python version: 3.13.9
+  CPUs number: 384
 
-Started: 2021-08-08 23:54:34
+Started: 2025-11-17 13:31:56
 
-Logging to /mnt/c/meta/result/megahit/quast/quast.log
-NOTICE: Output directory already exists and looks like a QUAST output dir. Existing results can be reused (e.g. previously generated alignments)!
+Logging to /data1/liuyongxin/meta/result/megahit/quast/quast.log
 
-CWD: /mnt/c/meta
+CWD: /data1/liuyongxin/meta
 Main parameters: 
-  MODE: default, threads: 2, minimum contig length: 500, minimum alignment length: 65, \
-  ambiguity: one, threshold for extensive misassembly size: 1000
+  MODE: default, threads: 2, min contig length: 500, min alignment length: 65, min alignment IDY: 95.0, \
+  ambiguity: one, min local misassembly length: 200, min extensive misassembly length: 1000
 
 Contigs:
   Pre-processing...
-  result/megahit/final.contigs.fa ==> final.contigs
+  temp/megahit/final.contigs.fa ==> final.contigs
 
-2021-08-08 23:54:34
+2025-11-17 13:31:59
 Running Basic statistics processor...
   Contig files: 
     final.contigs
   Calculating N50 and L50...
-    final.contigs, N50 = 646, L50 = 71, Total length = 128230, GC % = 39.17, # N's per 100 kbp =  0.00
+    final.contigs, N50 = 2430, L50 = 9769, auN = 12529.0, Total length = 132645073, GC % = 50.22, # N's per 100 kbp =  0.00
   Drawing Nx plot...
-    saved to /mnt/c/meta/result/megahit/quast/basic_stats/Nx_plot.pdf
+    saved to /data1/liuyongxin/meta/result/megahit/quast/basic_stats/Nx_plot.pdf
   Drawing cumulative plot...
-    saved to /mnt/c/meta/result/megahit/quast/basic_stats/cumulative_plot.pdf
+    saved to /data1/liuyongxin/meta/result/megahit/quast/basic_stats/cumulative_plot.pdf
   Drawing GC content plot...
-    saved to /mnt/c/meta/result/megahit/quast/basic_stats/GC_content_plot.pdf
+    saved to /data1/liuyongxin/meta/result/megahit/quast/basic_stats/GC_content_plot.pdf
   Drawing final.contigs GC content plot...
-    saved to /mnt/c/meta/result/megahit/quast/basic_stats/final.contigs_GC_content_plot.pdf
+    saved to /data1/liuyongxin/meta/result/megahit/quast/basic_stats/final.contigs_GC_content_plot.pdf
 Done.
 
 NOTICE: Genes are not predicted by default. Use --gene-finding or --glimmer option to enable it.
 
-2021-08-08 23:54:35
+2025-11-17 13:32:02
 Creating large visual summaries...
 This may take a while: press Ctrl-C to skip this step..
-  1 of 2: Creating Icarus viewers...
-  2 of 2: Creating PDF with all tables and plots...
+  1 of 2: Creating PDF with all tables and plots...
+  2 of 2: Creating Icarus viewers...
 Done
 
-2021-08-08 23:54:35
+2025-11-17 13:32:03
 RESULTS:
-  Text versions of total report are saved to /mnt/c/meta/result/megahit/quast/report.txt, report.tsv, and report.tex
-  Text versions of transposed total report are saved to /mnt/c/meta/result/megahit/quast/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
-  HTML version (interactive tables and plots) is saved to /mnt/c/meta/result/megahit/quast/report.html
-  PDF version (tables and plots) is saved to /mnt/c/meta/result/megahit/quast/report.pdf
-  Icarus (contig browser) is saved to /mnt/c/meta/result/megahit/quast/icarus.html
-  Log is saved to /mnt/c/meta/result/megahit/quast/quast.log
+  Text versions of total report are saved to /data1/liuyongxin/meta/result/megahit/quast/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /data1/liuyongxin/meta/result/megahit/quast/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /data1/liuyongxin/meta/result/megahit/quast/report.html
+  PDF version (tables and plots) is saved to /data1/liuyongxin/meta/result/megahit/quast/report.pdf
+  Icarus (contig browser) is saved to /data1/liuyongxin/meta/result/megahit/quast/icarus.html
+  Log is saved to /data1/liuyongxin/meta/result/megahit/quast/quast.log
 
-Finished: 2021-08-08 23:54:35
-Elapsed time: 0:00:01.504162
-NOTICEs: 2; WARNINGs: 0; non-fatal ERRORs: 0
+Finished: 2025-11-17 13:32:03
+Elapsed time: 0:00:06.729134
+NOTICEs: 1; WARNINGs: 0; non-fatal ERRORs: 0
 
 Thank you for using QUAST!
