@@ -22,9 +22,9 @@
     # **Software, database and work directory settings(数据库、软件和工作目录设置)**
     # **The follwoing paragraph must run before(分析前必须运行)**
     # Conda directory(软件安装目录), e.g. /anaconda3 , `conda env list` view software list,
-    soft=~/miniconda3
+    soft=/anaconda3
     # database(db, 数据库位置), e.g. /db or ~/db
-    db=~/db
+    db=/db
     # work directory(wd, 工作目录)，e.g. meta
     wd=~/meta
     # Create and enter the working directory 创建并进入工作目录
@@ -51,7 +51,7 @@
 
     # Sequencing data (序列文件)
     # Using filezilla upload to seq directory (用户使用filezilla上传测序文件至seq目录)
-    # This test uses theChina National Center for Bioinformation's GSA network for downloading data. Backup links are also provided via iMeta and BaiduNetDisk.
+    # This test uses the China National Center for Bioinformation's GSA network for downloading data. Backup links are also provided via iMeta and BaiduNetDisk.
     # 本次测试国家生信息中心GSA网络下载，同时提供iMeta、百度网盘备用站点数据下载链接
     
     # Site 1. GSA download links and batch rename by metadata (站点1. 国家生信息中心下载链接，按实验设计编号批量下载并改名)
@@ -63,11 +63,15 @@
     awk 'BEGIN{OFS=FS="\t"}{system("wget -c ftp://download.big.ac.cn/gsa5/"$8"/"$9"/"$9"_r2.fq.gz -O seq/"$1"_2.fq.gz")}' \
         <(tail -n+2 result/metadata.txt)
 
+    # https://ngdc.cncb.ac.cn/gsa/browse/CRA032890 这个样品下载路径不规范，可从网站查看
+    # wget https://download.cncb.ac.cn/gsa5/CRA032890/1/CRR2274865/CRR2274865_r1.fq.gz -O seq/C3_1.fq.gz
+    # wget https://download.cncb.ac.cn/gsa5/CRA032890/1/CRR2274865/CRR2274865_r2.fq.gz -O seq/C3_2.fq.gz
+
     # Site 2. iMeta Science download link （站点2. iMeta下载链接）
-    cd seq
-    awk '{system("wget -c http://www.imeta.science/github/EasyMetagenome/seq/"$1"_1.fq.gz")}' <(tail -n+2 ../result/metadata.txt)
-    awk '{system("wget -c http://www.imeta.science/github/EasyMetagenome/seq/"$1"_2.fq.gz")}' <(tail -n+2 ../result/metadata.txt)
-    cd ..
+    
+    awk '{system("wget -c http://www.imeta.science/github/EasyMetagenome/seq/"$1"_1.fq.gz -O seq/"$1"_1.fq.gz")}' <(tail -n+2 result/metadata.txt)
+    awk '{system("wget -c http://www.imeta.science/github/EasyMetagenome/seq/"$1"_2.fq.gz -O seq/"$1"_2.fq.gz")}' <(tail -n+2 result/metadata.txt)
+    
 
     # Site 3. BaiduNetDisk (站点3. 百度网盘) in /db/meta/seq directory from https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
 
@@ -76,6 +80,8 @@
     ls -lsh seq/*.fq.gz
     # Statistic basic info of sequences 统计序列信息
     time seqkit stat seq/*.fq.gz > result/seqkit.txt
+    
+    # 如果出现报错：[ERRO] seq/C1_1.fq.gz: gzip: invalid header，说明下载文件不完整；再次下载即可。
     cat result/seqkit.txt
 
     # **Sequence file format check (序列文件格式检查)**
@@ -88,7 +94,7 @@
 
     # Set a sample name be variable i, which can be reused multiple times, reducing the number of modifications required.
     # 设置某个样本名为变量i，后面可多次重用，减少修改次数
-    i=C1
+    i=`tail -n+2 result/metadata.txt|cut -f1|head -n1`
     # zless is used to view compressed files; spacebar to turn pages, q to exit; head specifies the number of lines to display.
     # zless查看压缩文件，空格翻页，q退出; head指定显示行数
     zless seq/${i}_1.fq.gz | head -n4
@@ -255,7 +261,7 @@
 
     # Single-sample test (单样本测试): Y1 657M, 8p, 32min
     i=`tail -n+2 result/metadata.txt|cut -f1 | head -n1`
-    time humann --input temp/concat/${i}.fq --threads 8 \
+    time humann --input temp/concat/${i}.fq --threads 2 \
       --metaphlan-options "--input_type fastq --bowtie2db ${db}/metaphlan4 --index mpa_vOct22_CHOCOPhlAnSGB_202403 --offline -t rel_ab_w_read_stats --nproc 8" \
       --output temp/humann4
       
@@ -290,8 +296,9 @@
 
     # Format to stamp spf(转换为STAMP输入spf格式)
     # duplicate rows redandency by sort & uniq 
+    # 忽略 t__层级的注释
     metaphlan_to_stamp.pl result/metaphlan4/taxonomy.tsv \
-      |sort -r | uniq > result/metaphlan4/taxonomy.spf
+      |sort -r | uniq | grep -vP '\tt__'> result/metaphlan4/taxonomy.spf
     # stat and view, 14 columns, 274 rows
     csvtk -t stat result/metaphlan4/taxonomy.spf
     head result/metaphlan4/taxonomy.spf
@@ -828,12 +835,12 @@
 
     # Quantitative: -l automatic library type selection, p threads, --meta metagenomics
     # 定量，l文库类型自动选择，p线程，--meta宏基因组, 10s
-    i=C1
+    i=`tail -n+2 result/metadata.txt | head -n 1| cut -f1`
     time salmon quant -i temp/salmon/index -l A -p 3 --meta \
         -1 temp/hr/${i}_1.fastq -2 temp/hr/${i}_2.fastq \
         -o temp/salmon/${i}.quant
     # parallel, 1m, 18 samples 30m
-    time tail -n+2 result/metadata.txt | cut -f1 | rush -j 2 \
+    time tail -n+3 result/metadata.txt | cut -f1 | rush -j 2 \
       "salmon quant -i temp/salmon/index -l A -p 3 --meta \
         -1 temp/hr/{1}_1.fastq -2 temp/hr/{1}_2.fastq \
         -o temp/salmon/{1}.quant"
@@ -864,7 +871,7 @@
     conda activate eggnog
     emapper.py --version
     mkdir -p temp/eggnog
-    # emapper-2.1.7 / Expected eggNOG DB version: 5.0.2 / diamond version 2.0.15
+    # emapper-2.1.10 / Expected eggNOG DB version: 5.0.2 / diamond version 2.0.15
 
     # run emapper, 3p 100m, default diamond 1e-3; 2M,32p,1.5h
     time emapper.py --data_dir ${db}/eggnog \
