@@ -540,6 +540,8 @@
     time kraken2 --db ${db}/kraken2/${type}/ \
       --paired temp/hr/${i}_?.fastq \
       --threads 2 --use-names --report-zero-counts \
+	  --unclassified-out "temp/kraken2/${i}.unclassified_reads#.fasta" \
+      --classified-out "temp/kraken2/${i}.classified_reads#.fasta" \
       --report temp/kraken2/${i}.report \
       --output temp/kraken2/${i}.output
 
