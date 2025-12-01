@@ -1,27 +1,3 @@
-<!--
-The MIT License (MIT)
-
-Copyright (c) 2013 bill@bunkat.com
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
--->
-
 <html>
 <head>
 <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
@@ -2429,7 +2405,7 @@ THE SOFTWARE.
                     Icarus
                 </h1>
                 <p class="page_subtitle">
-                    <b>QUAST Contig Browser</b>
+                    <b><a href="http://quast.sf.net" class='dark_bg_link'>QUAST</a> Contig Browser</b>
                 </p>
             </div>
         </td>
@@ -2483,7 +2459,8 @@ THE SOFTWARE.
     </table>
 </div>
 <div class="content" style="padding-bottom: 0;">
-    <div class="reftitle"><b>Contig size viewer</b>
+    <div class="reftitle"><b>Contig size viewer</b>. For better performance, only largest 1000 contigs of each assembly were loaded
+    
     </div>
 </div>
 
@@ -2516,438 +2493,1019 @@ var assemblies_len = {};
 var assemblies_contigs = {};
 var assemblies_misassemblies = {};
 var assemblies_n50 = {};
-assemblies_links["final.contigs"] = "../contigs_reports/contigs_report_final-contigs.stdout";
-assemblies_len["final.contigs"] = 128230;
-assemblies_contigs["final.contigs"] = 185;
-assemblies_n50["final.contigs"] = "646";
+assemblies_len["final.contigs"] = 132645073;
+assemblies_contigs["final.contigs"] = 81626;
+assemblies_n50["final.contigs"] = "2430";
 var contig_data = {};
 var chromosome;
 contig_data["final.contigs"] = [ 
-{name:"k119_685",size:2468,contig_type: "correct_unaligned",structure:[{contig:"k119_685",corr_start: 531124,corr_end: 531572,start:519191,end:519639,start_in_contig:84,end_in_contig:532,size:2468,IDY:97.1,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_175",size:2151,contig_type: "unaligned",structure:[]},
-{name:"k119_143",size:1611,contig_type: "unaligned",structure:[]},
-{name:"k119_686",size:1607,contig_type: "unaligned",structure:[]},
-{name:"k119_368",size:1602,contig_type: "unaligned",structure:[]},
-{name:"k119_906",size:1478,contig_type: "correct",structure:[{contig:"k119_906",corr_start: 664169,corr_end: 664300,start:652236,end:652367,start_in_contig:1,end_in_contig:132,size:1478,IDY:97.73,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},{contig_type: "M", mstype: "skip", msg: " indel (> 5bp)"},{contig:"k119_906",corr_start: 664322,corr_end: 665116,start:652389,end:653183,start_in_contig:133,end_in_contig:927,size:1478,IDY:95.85,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},{contig_type: "M", mstype: "skip", msg: " indel (> 5bp)"},{contig:"k119_906",corr_start: 665119,corr_end: 665560,start:653186,end:653627,start_in_contig:936,end_in_contig:1377,size:1478,IDY:95.25,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_595",size:1219,contig_type: "correct",structure:[{contig:"k119_595",corr_start: 2978472,corr_end: 2979325,start:1967,end:2820,start_in_contig:895,end_in_contig:42,size:1219,IDY:97.66,chr:"Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000051.1"},]},
-{name:"k119_791",size:1219,contig_type: "unaligned",structure:[]},
-{name:"k119_678",size:1205,contig_type: "unaligned",structure:[]},
-{name:"k119_15",size:1201,contig_type: "unaligned",structure:[]},
-{name:"k119_290",size:1167,contig_type: "unaligned",structure:[]},
-{name:"k119_164",size:1146,contig_type: "unaligned",structure:[]},
-{name:"k119_900",size:1143,contig_type: "unaligned",structure:[]},
-{name:"k119_367",size:1112,contig_type: "correct",structure:[{contig:"k119_367",corr_start: 530280,corr_end: 531398,start:518347,end:519465,start_in_contig:1111,end_in_contig:1,size:1112,IDY:95.91,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_67",size:1102,contig_type: "unaligned",structure:[]},
-{name:"k119_355",size:1080,contig_type: "unaligned",structure:[]},
-{name:"k119_789",size:1053,contig_type: "unaligned",structure:[]},
-{name:"k119_149",size:999,contig_type: "unaligned",structure:[]},
-{name:"k119_353",size:989,contig_type: "correct",structure:[{contig:"k119_353",corr_start: 2410049,corr_end: 2410898,start:2398116,end:2398965,start_in_contig:977,end_in_contig:134,size:989,IDY:98.24,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_884",size:985,contig_type: "unaligned",structure:[]},
-{name:"k119_788",size:955,contig_type: "unaligned",structure:[]},
-{name:"k119_586",size:952,contig_type: "unaligned",structure:[]},
-{name:"k119_190",size:950,contig_type: "unaligned",structure:[]},
-{name:"k119_237",size:937,contig_type: "unaligned",structure:[]},
-{name:"k119_434",size:867,contig_type: "unaligned",structure:[]},
-{name:"k119_25",size:866,contig_type: "misassembled",structure:[{contig:"k119_25",corr_start: 378882,corr_end: 378960,start:366949,end:367027,start_in_contig:39,end_in_contig:117,size:866,IDY:100.0,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},{contig_type: "M", mstype: "real", msg: "relocation, inconsistency = 1160167"},{contig:"k119_25",corr_start: 1539187,corr_end: 1539877,start:1527254,end:1527944,start_in_contig:866,end_in_contig:177,size:866,IDY:97.68,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_363",size:863,contig_type: "correct",structure:[{contig:"k119_363",corr_start: 463482,corr_end: 464320,start:451549,end:452387,start_in_contig:1,end_in_contig:839,size:863,IDY:96.07,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_778",size:845,contig_type: "unaligned",structure:[]},
-{name:"k119_869",size:835,contig_type: "unaligned",structure:[]},
-{name:"k119_673",size:835,contig_type: "unaligned",structure:[]},
-{name:"k119_769",size:826,contig_type: "unaligned",structure:[]},
-{name:"k119_184",size:824,contig_type: "correct",structure:[{contig:"k119_184",corr_start: 2977189,corr_end: 2977415,start:684,end:910,start_in_contig:1,end_in_contig:227,size:824,IDY:98.24,chr:"Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000051.1"},{contig_type: "M", mstype: "skip", msg: " indel (> 5bp)"},{contig:"k119_184",corr_start: 2977420,corr_end: 2977970,start:915,end:1465,start_in_contig:264,end_in_contig:814,size:824,IDY:99.27,chr:"Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000051.1"},]},
-{name:"k119_805",size:820,contig_type: "correct",structure:[{contig:"k119_805",corr_start: 361494,corr_end: 361696,start:349561,end:349763,start_in_contig:208,end_in_contig:6,size:820,IDY:95.07,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},{contig_type: "M", mstype: "real", msg: "local misassembly"},{contig:"k119_805",corr_start: 360698,corr_end: 361303,start:348765,end:349370,start_in_contig:820,end_in_contig:215,size:820,IDY:97.19,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_71",size:819,contig_type: "correct",structure:[{contig:"k119_71",corr_start: 916783,corr_end: 917603,start:7345,end:8165,start_in_contig:1,end_in_contig:819,size:819,IDY:98.17,chr:"Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000011.1"},]},
-{name:"k119_905",size:811,contig_type: "correct",structure:[{contig:"k119_905",corr_start: 1238854,corr_end: 1239662,start:1226921,end:1227729,start_in_contig:1,end_in_contig:809,size:811,IDY:96.91,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_976",size:799,contig_type: "correct",structure:[{contig:"k119_976",corr_start: 680573,corr_end: 681281,start:200,end:908,start_in_contig:764,end_in_contig:56,size:799,IDY:95.06,chr:"Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000029.1"},]},
-{name:"k119_50",size:787,contig_type: "unaligned",structure:[]},
-{name:"k119_520",size:765,contig_type: "correct",structure:[{contig:"k119_520",corr_start: 1634333,corr_end: 1634616,start:1622400,end:1622683,start_in_contig:1,end_in_contig:284,size:765,IDY:95.42,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},{contig_type: "M", mstype: "skip", msg: " indel (> 5bp)"},{contig:"k119_520",corr_start: 1634639,corr_end: 1635104,start:1622706,end:1623171,start_in_contig:285,end_in_contig:750,size:765,IDY:95.49,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_395",size:763,contig_type: "unaligned",structure:[]},
-{name:"k119_147",size:747,contig_type: "correct",structure:[{contig:"k119_147",corr_start: 1270039,corr_end: 1270767,start:1258106,end:1258834,start_in_contig:729,end_in_contig:1,size:747,IDY:96.84,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_812",size:740,contig_type: "unaligned",structure:[]},
-{name:"k119_339",size:739,contig_type: "unaligned",structure:[]},
-{name:"k119_37",size:735,contig_type: "unaligned",structure:[]},
-{name:"k119_962",size:733,contig_type: "unaligned",structure:[]},
-{name:"k119_254",size:732,contig_type: "correct",structure:[{contig:"k119_254",corr_start: 2986123,corr_end: 2986845,start:304,end:1026,start_in_contig:732,end_in_contig:10,size:732,IDY:99.31,chr:"Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000054.1"},]},
-{name:"k119_247",size:707,contig_type: "unaligned",structure:[]},
-{name:"k119_553",size:704,contig_type: "unaligned",structure:[]},
-{name:"k119_291",size:702,contig_type: "correct",structure:[{contig:"k119_291",corr_start: 1319226,corr_end: 1319804,start:1307293,end:1307871,start_in_contig:702,end_in_contig:124,size:702,IDY:98.1,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_776",size:696,contig_type: "correct_unaligned",structure:[{contig:"k119_776",corr_start: 1632817,corr_end: 1632928,start:1620884,end:1620995,start_in_contig:112,end_in_contig:1,size:696,IDY:100.0,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_798",size:695,contig_type: "unaligned",structure:[]},
-{name:"k119_126",size:694,contig_type: "correct",structure:[{contig:"k119_126",corr_start: 113528,corr_end: 113858,start:2829,end:3159,start_in_contig:364,end_in_contig:694,size:694,IDY:97.28,chr:"Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000002.1"},]},
-{name:"k119_483",size:687,contig_type: "correct",structure:[{contig:"k119_483",corr_start: 1204337,corr_end: 1205022,start:1192404,end:1193089,start_in_contig:1,end_in_contig:687,size:687,IDY:97.67,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_5",size:676,contig_type: "unaligned",structure:[]},
-{name:"k119_313",size:675,contig_type: "unaligned",structure:[]},
-{name:"k119_622",size:671,contig_type: "correct",structure:[{contig:"k119_622",corr_start: 1351609,corr_end: 1352148,start:1339676,end:1340215,start_in_contig:562,end_in_contig:23,size:671,IDY:95.19,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_971",size:671,contig_type: "correct_unaligned",structure:[{contig:"k119_971",corr_start: 81169,corr_end: 81301,start:69236,end:69368,start_in_contig:650,end_in_contig:518,size:671,IDY:97.74,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_88",size:669,contig_type: "correct",structure:[{contig:"k119_88",corr_start: 2124299,corr_end: 2124676,start:2112366,end:2112743,start_in_contig:378,end_in_contig:1,size:669,IDY:96.03,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_833",size:667,contig_type: "correct",structure:[{contig:"k119_833",corr_start: 1509811,corr_end: 1510162,start:134984,end:135335,start_in_contig:312,end_in_contig:663,size:667,IDY:96.88,chr:"Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000008.1"},]},
-{name:"k119_133",size:665,contig_type: "correct",structure:[{contig:"k119_133",corr_start: 2020167,corr_end: 2020840,start:67325,end:67998,start_in_contig:1,end_in_contig:665,size:665,IDY:97.48,chr:"Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000013.1"},]},
-{name:"k119_604",size:663,contig_type: "unaligned",structure:[]},
-{name:"k119_308",size:660,contig_type: "unaligned",structure:[]},
-{name:"k119_372",size:659,contig_type: "correct",structure:[{contig:"k119_372",corr_start: 661201,corr_end: 661450,start:649268,end:649517,start_in_contig:410,end_in_contig:659,size:659,IDY:95.6,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_842",size:657,contig_type: "unaligned",structure:[]},
-{name:"k119_500",size:656,contig_type: "unaligned",structure:[]},
-{name:"k119_882",size:655,contig_type: "correct",structure:[{contig:"k119_882",corr_start: 1659020,corr_end: 1659674,start:1647087,end:1647741,start_in_contig:655,end_in_contig:1,size:655,IDY:97.56,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_640",size:653,contig_type: "unaligned",structure:[]},
-{name:"k119_728",size:651,contig_type: "correct",structure:[{contig:"k119_728",corr_start: 873742,corr_end: 874392,start:861809,end:862459,start_in_contig:651,end_in_contig:1,size:651,IDY:97.08,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_711",size:650,contig_type: "unaligned",structure:[]},
-{name:"k119_933",size:649,contig_type: "correct",structure:[{contig:"k119_933",corr_start: 514641,corr_end: 515289,start:502708,end:503356,start_in_contig:649,end_in_contig:1,size:649,IDY:97.69,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_275",size:647,contig_type: "correct",structure:[{contig:"k119_275",corr_start: 613542,corr_end: 614188,start:601609,end:602255,start_in_contig:1,end_in_contig:647,size:647,IDY:97.22,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_693",size:646, marks: "N50",contig_type: "unaligned",structure:[]},
-{name:"k119_494",size:636,contig_type: "unaligned",structure:[]},
-{name:"k119_613",size:633,contig_type: "correct",structure:[{contig:"k119_613",corr_start: 690493,corr_end: 691122,start:678560,end:679189,start_in_contig:4,end_in_contig:633,size:633,IDY:96.98,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_134",size:633,contig_type: "unaligned",structure:[]},
-{name:"k119_215",size:630,contig_type: "correct",structure:[{contig:"k119_215",corr_start: 1417624,corr_end: 1418253,start:1405691,end:1406320,start_in_contig:1,end_in_contig:630,size:630,IDY:99.52,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_257",size:630,contig_type: "unaligned",structure:[]},
-{name:"k119_299",size:630,contig_type: "unaligned",structure:[]},
-{name:"k119_828",size:625,contig_type: "correct",structure:[{contig:"k119_828",corr_start: 894865,corr_end: 895160,start:882932,end:883227,start_in_contig:1,end_in_contig:296,size:625,IDY:97.64,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_751",size:624,contig_type: "unaligned",structure:[]},
-{name:"k119_661",size:621,contig_type: "unaligned",structure:[]},
-{name:"k119_793",size:620,contig_type: "correct",structure:[{contig:"k119_793",corr_start: 353639,corr_end: 354035,start:341706,end:342102,start_in_contig:620,end_in_contig:224,size:620,IDY:95.47,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_563",size:619,contig_type: "unaligned",structure:[]},
-{name:"k119_251",size:618,contig_type: "unaligned",structure:[]},
-{name:"k119_920",size:616,contig_type: "unaligned",structure:[]},
-{name:"k119_533",size:615,contig_type: "correct",structure:[{contig:"k119_533",corr_start: 538829,corr_end: 538939,start:526896,end:527006,start_in_contig:295,end_in_contig:405,size:615,IDY:95.5,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_236",size:613,contig_type: "correct",structure:[{contig:"k119_236",corr_start: 1549302,corr_end: 1549911,start:1537369,end:1537978,start_in_contig:1,end_in_contig:610,size:613,IDY:96.23,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_934",size:610,contig_type: "correct",structure:[{contig:"k119_934",corr_start: 273603,corr_end: 274206,start:261670,end:262273,start_in_contig:604,end_in_contig:1,size:610,IDY:95.7,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_283",size:609,contig_type: "correct",structure:[{contig:"k119_283",corr_start: 263165,corr_end: 263741,start:251232,end:251808,start_in_contig:1,end_in_contig:577,size:609,IDY:95.32,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_653",size:604,contig_type: "correct",structure:[{contig:"k119_653",corr_start: 744404,corr_end: 745007,start:732471,end:733074,start_in_contig:604,end_in_contig:1,size:604,IDY:98.68,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_74",size:602,contig_type: "unaligned",structure:[]},
-{name:"k119_717",size:599,contig_type: "unaligned",structure:[]},
-{name:"k119_576",size:598,contig_type: "correct",structure:[{contig:"k119_576",corr_start: 2320189,corr_end: 2320786,start:2308256,end:2308853,start_in_contig:1,end_in_contig:598,size:598,IDY:96.99,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_72",size:597,contig_type: "correct",structure:[{contig:"k119_72",corr_start: 3894,corr_end: 4186,start:3894,end:4186,start_in_contig:1,end_in_contig:293,size:597,IDY:99.66,chr:"Sphingomonas_taxi_NZ_CP009571.1"},]},
-{name:"k119_161",size:597,contig_type: "unaligned",structure:[]},
-{name:"k119_382",size:595,contig_type: "correct",structure:[{contig:"k119_382",corr_start: 283891,corr_end: 284381,start:283891,end:284381,start_in_contig:5,end_in_contig:495,size:595,IDY:95.34,chr:"Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000001.1"},]},
-{name:"k119_397",size:595,contig_type: "unaligned",structure:[]},
-{name:"k119_849",size:594,contig_type: "unaligned",structure:[]},
-{name:"k119_235",size:594,contig_type: "unaligned",structure:[]},
-{name:"k119_603",size:593,contig_type: "unaligned",structure:[]},
-{name:"k119_40",size:592,contig_type: "unaligned",structure:[]},
-{name:"k119_130",size:588,contig_type: "unaligned",structure:[]},
-{name:"k119_959",size:587,contig_type: "unaligned",structure:[]},
-{name:"k119_460",size:587,contig_type: "unaligned",structure:[]},
-{name:"k119_859",size:586,contig_type: "correct",structure:[{contig:"k119_859",corr_start: 2439485,corr_end: 2439903,start:2427552,end:2427970,start_in_contig:58,end_in_contig:476,size:586,IDY:96.9,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_695",size:586,contig_type: "unaligned",structure:[]},
-{name:"k119_146",size:586,contig_type: "correct",structure:[{contig:"k119_146",corr_start: 454563,corr_end: 455145,start:442630,end:443212,start_in_contig:1,end_in_contig:583,size:586,IDY:97.77,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_970",size:585,contig_type: "unaligned",structure:[]},
-{name:"k119_502",size:585,contig_type: "unaligned",structure:[]},
-{name:"k119_193",size:581,contig_type: "correct",structure:[{contig:"k119_193",corr_start: 2129664,corr_end: 2130244,start:2117731,end:2118311,start_in_contig:1,end_in_contig:581,size:581,IDY:98.28,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_652",size:580,contig_type: "unaligned",structure:[]},
-{name:"k119_349",size:579,contig_type: "unaligned",structure:[]},
-{name:"k119_589",size:576,contig_type: "correct",structure:[{contig:"k119_589",corr_start: 1591692,corr_end: 1591882,start:1579759,end:1579949,start_in_contig:1,end_in_contig:191,size:576,IDY:96.34,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},{contig_type: "M", mstype: "real", msg: "local misassembly"},{contig:"k119_589",corr_start: 1592083,corr_end: 1592450,start:1580150,end:1580517,start_in_contig:209,end_in_contig:576,size:576,IDY:98.1,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_945",size:576,contig_type: "correct",structure:[{contig:"k119_945",corr_start: 222246,corr_end: 222818,start:210313,end:210885,start_in_contig:5,end_in_contig:576,size:576,IDY:96.51,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_338",size:575,contig_type: "unaligned",structure:[]},
-{name:"k119_459",size:574,contig_type: "unaligned",structure:[]},
-{name:"k119_292",size:573,contig_type: "correct",structure:[{contig:"k119_292",corr_start: 2885402,corr_end: 2885938,start:2451,end:2987,start_in_contig:573,end_in_contig:37,size:573,IDY:95.56,chr:"Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000038.1"},]},
-{name:"k119_964",size:568,contig_type: "unaligned",structure:[]},
-{name:"k119_153",size:568,contig_type: "unaligned",structure:[]},
-{name:"k119_777",size:565,contig_type: "correct",structure:[{contig:"k119_777",corr_start: 292062,corr_end: 292626,start:280129,end:280693,start_in_contig:565,end_in_contig:1,size:565,IDY:96.3,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_734",size:562,contig_type: "correct",structure:[{contig:"k119_734",corr_start: 129932,corr_end: 130493,start:117999,end:118560,start_in_contig:562,end_in_contig:1,size:562,IDY:98.04,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_561",size:560,contig_type: "misassembled",structure:[{contig:"k119_561",corr_start: 1520980,corr_end: 1521108,start:1509047,end:1509175,start_in_contig:1,end_in_contig:129,size:560,IDY:95.27,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},{contig_type: "M", mstype: "real", msg: "relocation, inconsistency = 1118570"},{contig:"k119_561",corr_start: 401979,corr_end: 402409,start:390046,end:390476,start_in_contig:560,end_in_contig:130,size:560,IDY:96.52,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_447",size:557,contig_type: "unaligned",structure:[]},
-{name:"k119_481",size:557,contig_type: "unaligned",structure:[]},
-{name:"k119_116",size:556,contig_type: "correct",structure:[{contig:"k119_116",corr_start: 411550,corr_end: 411957,start:399617,end:400024,start_in_contig:556,end_in_contig:149,size:556,IDY:97.79,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_157",size:556, marks: "N75",contig_type: "unaligned",structure:[]},
-{name:"k119_514",size:555,contig_type: "unaligned",structure:[]},
-{name:"k119_106",size:555,contig_type: "unaligned",structure:[]},
-{name:"k119_651",size:554,contig_type: "unaligned",structure:[]},
-{name:"k119_642",size:553,contig_type: "correct",structure:[{contig:"k119_642",corr_start: 1112007,corr_end: 1112551,start:1100074,end:1100618,start_in_contig:545,end_in_contig:1,size:553,IDY:97.8,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_69",size:552,contig_type: "unaligned",structure:[]},
-{name:"k119_921",size:551,contig_type: "correct",structure:[{contig:"k119_921",corr_start: 1929432,corr_end: 1929948,start:1917499,end:1918015,start_in_contig:518,end_in_contig:1,size:551,IDY:95.17,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_839",size:551,contig_type: "unaligned",structure:[]},
-{name:"k119_894",size:549,contig_type: "unaligned",structure:[]},
-{name:"k119_454",size:549,contig_type: "unaligned",structure:[]},
-{name:"k119_918",size:548,contig_type: "correct",structure:[{contig:"k119_918",corr_start: 288059,corr_end: 288580,start:276126,end:276647,start_in_contig:548,end_in_contig:27,size:548,IDY:97.51,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_539",size:547,contig_type: "unaligned",structure:[]},
-{name:"k119_1002",size:546,contig_type: "correct",structure:[{contig:"k119_1002",corr_start: 239355,corr_end: 239900,start:526,end:1071,start_in_contig:1,end_in_contig:546,size:546,IDY:100.0,chr:"Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000005.1"},]},
-{name:"k119_787",size:545,contig_type: "correct",structure:[{contig:"k119_787",corr_start: 2004871,corr_end: 2004957,start:52029,end:52115,start_in_contig:1,end_in_contig:87,size:545,IDY:98.85,chr:"Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000013.1"},]},
-{name:"k119_860",size:544,contig_type: "unaligned",structure:[]},
-{name:"k119_310",size:544,contig_type: "unaligned",structure:[]},
-{name:"k119_352",size:543,contig_type: "correct",structure:[{contig:"k119_352",corr_start: 1930683,corr_end: 1931225,start:115194,end:115736,start_in_contig:1,end_in_contig:543,size:543,IDY:99.45,chr:"Prevotella_nigrescens_CC14M_NZ_KI669448.1"},]},
-{name:"k119_816",size:543,contig_type: "unaligned",structure:[]},
-{name:"k119_445",size:542,contig_type: "unaligned",structure:[]},
-{name:"k119_552",size:541,contig_type: "unaligned",structure:[]},
-{name:"k119_91",size:539,contig_type: "correct",structure:[{contig:"k119_91",corr_start: 281140,corr_end: 281678,start:269207,end:269745,start_in_contig:1,end_in_contig:539,size:539,IDY:96.86,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_1010",size:536,contig_type: "correct",structure:[{contig:"k119_1010",corr_start: 2385759,corr_end: 2386033,start:2373826,end:2374100,start_in_contig:262,end_in_contig:536,size:536,IDY:95.27,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_761",size:534,contig_type: "unaligned",structure:[]},
-{name:"k119_41",size:533,contig_type: "unaligned",structure:[]},
-{name:"k119_523",size:532,contig_type: "unaligned",structure:[]},
-{name:"k119_220",size:531,contig_type: "unaligned",structure:[]},
-{name:"k119_982",size:531,contig_type: "correct",structure:[{contig:"k119_982",corr_start: 1562439,corr_end: 1562969,start:1550506,end:1551036,start_in_contig:531,end_in_contig:1,size:531,IDY:97.93,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_817",size:531,contig_type: "unaligned",structure:[]},
-{name:"k119_118",size:529,contig_type: "correct",structure:[{contig:"k119_118",corr_start: 1991800,corr_end: 1992325,start:1979867,end:1980392,start_in_contig:1,end_in_contig:526,size:529,IDY:98.67,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_516",size:526,contig_type: "unaligned",structure:[]},
-{name:"k119_781",size:525,contig_type: "unaligned",structure:[]},
-{name:"k119_645",size:524,contig_type: "unaligned",structure:[]},
-{name:"k119_343",size:523,contig_type: "unaligned",structure:[]},
-{name:"k119_217",size:523,contig_type: "unaligned",structure:[]},
-{name:"k119_744",size:522,contig_type: "correct",structure:[{contig:"k119_744",corr_start: 1076259,corr_end: 1076780,start:151729,end:152250,start_in_contig:522,end_in_contig:1,size:522,IDY:98.28,chr:"Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000012.1"},]},
-{name:"k119_707",size:520,contig_type: "unaligned",structure:[]},
-{name:"k119_169",size:520,contig_type: "correct",structure:[{contig:"k119_169",corr_start: 757881,corr_end: 758401,start:745948,end:746468,start_in_contig:1,end_in_contig:520,size:520,IDY:99.04,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_509",size:519,contig_type: "unaligned",structure:[]},
-{name:"k119_222",size:519,contig_type: "unaligned",structure:[]},
-{name:"k119_42",size:517,contig_type: "unaligned",structure:[]},
-{name:"k119_484",size:517,contig_type: "unaligned",structure:[]},
-{name:"k119_491",size:516,contig_type: "correct",structure:[{contig:"k119_491",corr_start: 513658,corr_end: 514173,start:7446,end:7961,start_in_contig:1,end_in_contig:516,size:516,IDY:97.48,chr:"Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000006.1"},]},
-{name:"k119_627",size:515,contig_type: "unaligned",structure:[]},
-{name:"k119_241",size:514,contig_type: "unaligned",structure:[]},
-{name:"k119_966",size:514,contig_type: "correct",structure:[{contig:"k119_966",corr_start: 708076,corr_end: 708589,start:696143,end:696656,start_in_contig:1,end_in_contig:514,size:514,IDY:96.69,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_473",size:513,contig_type: "unaligned",structure:[]},
-{name:"k119_46",size:512,contig_type: "correct",structure:[{contig:"k119_46",corr_start: 1268304,corr_end: 1268815,start:1256371,end:1256882,start_in_contig:1,end_in_contig:512,size:512,IDY:98.44,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_356",size:510,contig_type: "correct",structure:[{contig:"k119_356",corr_start: 2852854,corr_end: 2853362,start:12121,end:12629,start_in_contig:2,end_in_contig:510,size:510,IDY:96.27,chr:"Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000035.1"},]},
-{name:"k119_359",size:509,contig_type: "correct",structure:[{contig:"k119_359",corr_start: 1392770,corr_end: 1393278,start:1380837,end:1381345,start_in_contig:509,end_in_contig:1,size:509,IDY:95.09,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_559",size:509,contig_type: "unaligned",structure:[]},
-{name:"k119_814",size:509,contig_type: "correct",structure:[{contig:"k119_814",corr_start: 548642,corr_end: 549158,start:536709,end:537225,start_in_contig:509,end_in_contig:1,size:509,IDY:95.36,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_243",size:508,contig_type: "correct",structure:[{contig:"k119_243",corr_start: 1195800,corr_end: 1196307,start:1183867,end:1184374,start_in_contig:508,end_in_contig:1,size:508,IDY:97.24,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_211",size:507,contig_type: "unaligned",structure:[]},
-{name:"k119_125",size:507,contig_type: "unaligned",structure:[]},
-{name:"k119_102",size:506,contig_type: "unaligned",structure:[]},
-{name:"k119_462",size:505,contig_type: "unaligned",structure:[]},
-{name:"k119_57",size:504,contig_type: "correct",structure:[{contig:"k119_57",corr_start: 557317,corr_end: 557820,start:545384,end:545887,start_in_contig:504,end_in_contig:1,size:504,IDY:99.4,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]},
-{name:"k119_10",size:502,contig_type: "correct",structure:[{contig:"k119_10",corr_start: 511040,corr_end: 511165,start:4828,end:4953,start_in_contig:125,end_in_contig:1,size:502,IDY:97.08,chr:"Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000006.1"},{contig_type: "M", mstype: "real", msg: "local misassembly"},{contig:"k119_10",corr_start: 510501,corr_end: 510880,start:4289,end:4668,start_in_contig:502,end_in_contig:126,size:502,IDY:95.0,chr:"Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000006.1"},]},
-{name:"k119_408",size:502,contig_type: "unaligned",structure:[]},
-{name:"k119_96",size:502,contig_type: "unaligned",structure:[]},
-{name:"k119_234",size:501,contig_type: "ambiguous",structure:[{contig:"k119_234",corr_start: 2308120,corr_end: 2308622,start:2296187,end:2296689,start_in_contig:1,end_in_contig:501,size:501,IDY:96.62,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},{contig:"k119_234",corr_start: 788070,corr_end: 788571,start:776137,end:776638,start_in_contig:501,end_in_contig:1,size:501,IDY:96.61,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},{contig:"k119_234",corr_start: 944892,corr_end: 945393,start:932959,end:933460,start_in_contig:1,end_in_contig:501,size:501,IDY:96.02,chr:"Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"},]}];
+{name:"k141_139549",size:521987,contig_type: "",structure:[]},
+{name:"k141_6120",size:368863,contig_type: "",structure:[]},
+{name:"k141_68483",size:222528,contig_type: "",structure:[]},
+{name:"k141_143658",size:202689,contig_type: "",structure:[]},
+{name:"k141_27776",size:160054,contig_type: "",structure:[]},
+{name:"k141_152939",size:156919,contig_type: "",structure:[]},
+{name:"k141_55391",size:130381,contig_type: "",structure:[]},
+{name:"k141_13013",size:112899,contig_type: "",structure:[]},
+{name:"k141_125328",size:103633,contig_type: "",structure:[]},
+{name:"k141_840",size:100327,contig_type: "",structure:[]},
+{name:"k141_6391",size:100136,contig_type: "",structure:[]},
+{name:"k141_14350",size:99964,contig_type: "",structure:[]},
+{name:"k141_105594",size:97790,contig_type: "",structure:[]},
+{name:"k141_54283",size:92730,contig_type: "",structure:[]},
+{name:"k141_28495",size:91558,contig_type: "",structure:[]},
+{name:"k141_69512",size:90493,contig_type: "",structure:[]},
+{name:"k141_71590",size:89796,contig_type: "",structure:[]},
+{name:"k141_3389",size:86097,contig_type: "",structure:[]},
+{name:"k141_71691",size:84016,contig_type: "",structure:[]},
+{name:"k141_112263",size:82890,contig_type: "",structure:[]},
+{name:"k141_37139",size:82746,contig_type: "",structure:[]},
+{name:"k141_118061",size:82637,contig_type: "",structure:[]},
+{name:"k141_23319",size:79738,contig_type: "",structure:[]},
+{name:"k141_56720",size:78961,contig_type: "",structure:[]},
+{name:"k141_152278",size:76335,contig_type: "",structure:[]},
+{name:"k141_148290",size:75550,contig_type: "",structure:[]},
+{name:"k141_151248",size:74278,contig_type: "",structure:[]},
+{name:"k141_31994",size:72291,contig_type: "",structure:[]},
+{name:"k141_30754",size:71976,contig_type: "",structure:[]},
+{name:"k141_9241",size:71830,contig_type: "",structure:[]},
+{name:"k141_56365",size:71627,contig_type: "",structure:[]},
+{name:"k141_35564",size:71514,contig_type: "",structure:[]},
+{name:"k141_111793",size:71312,contig_type: "",structure:[]},
+{name:"k141_107423",size:71121,contig_type: "",structure:[]},
+{name:"k141_123603",size:70128,contig_type: "",structure:[]},
+{name:"k141_16145",size:69771,contig_type: "",structure:[]},
+{name:"k141_78167",size:69686,contig_type: "",structure:[]},
+{name:"k141_1442",size:68804,contig_type: "",structure:[]},
+{name:"k141_120843",size:68312,contig_type: "",structure:[]},
+{name:"k141_62185",size:68131,contig_type: "",structure:[]},
+{name:"k141_42734",size:68105,contig_type: "",structure:[]},
+{name:"k141_97345",size:67765,contig_type: "",structure:[]},
+{name:"k141_120412",size:67399,contig_type: "",structure:[]},
+{name:"k141_14103",size:67244,contig_type: "",structure:[]},
+{name:"k141_36945",size:66294,contig_type: "",structure:[]},
+{name:"k141_93854",size:66023,contig_type: "",structure:[]},
+{name:"k141_92181",size:64940,contig_type: "",structure:[]},
+{name:"k141_70061",size:62853,contig_type: "",structure:[]},
+{name:"k141_9811",size:61439,contig_type: "",structure:[]},
+{name:"k141_36780",size:61008,contig_type: "",structure:[]},
+{name:"k141_65971",size:58670,contig_type: "",structure:[]},
+{name:"k141_105201",size:55349,contig_type: "",structure:[]},
+{name:"k141_26991",size:55324,contig_type: "",structure:[]},
+{name:"k141_145299",size:54828,contig_type: "",structure:[]},
+{name:"k141_39376",size:53508,contig_type: "",structure:[]},
+{name:"k141_60024",size:52034,contig_type: "",structure:[]},
+{name:"k141_52541",size:51300,contig_type: "",structure:[]},
+{name:"k141_72511",size:50613,contig_type: "",structure:[]},
+{name:"k141_98320",size:50481,contig_type: "",structure:[]},
+{name:"k141_128368",size:50195,contig_type: "",structure:[]},
+{name:"k141_64401",size:49939,contig_type: "",structure:[]},
+{name:"k141_9159",size:49544,contig_type: "",structure:[]},
+{name:"k141_69030",size:49512,contig_type: "",structure:[]},
+{name:"k141_13148",size:49442,contig_type: "",structure:[]},
+{name:"k141_10860",size:49429,contig_type: "",structure:[]},
+{name:"k141_154335",size:49380,contig_type: "",structure:[]},
+{name:"k141_16642",size:48958,contig_type: "",structure:[]},
+{name:"k141_956",size:48930,contig_type: "",structure:[]},
+{name:"k141_12528",size:48669,contig_type: "",structure:[]},
+{name:"k141_110716",size:48469,contig_type: "",structure:[]},
+{name:"k141_75359",size:48385,contig_type: "",structure:[]},
+{name:"k141_9578",size:48312,contig_type: "",structure:[]},
+{name:"k141_142374",size:48164,contig_type: "",structure:[]},
+{name:"k141_122541",size:47215,contig_type: "",structure:[]},
+{name:"k141_29832",size:46940,contig_type: "",structure:[]},
+{name:"k141_66654",size:46567,contig_type: "",structure:[]},
+{name:"k141_8950",size:46267,contig_type: "",structure:[]},
+{name:"k141_79088",size:46120,contig_type: "",structure:[]},
+{name:"k141_6595",size:45877,contig_type: "",structure:[]},
+{name:"k141_25392",size:45735,contig_type: "",structure:[]},
+{name:"k141_136998",size:45641,contig_type: "",structure:[]},
+{name:"k141_140792",size:45477,contig_type: "",structure:[]},
+{name:"k141_22470",size:45387,contig_type: "",structure:[]},
+{name:"k141_21313",size:45267,contig_type: "",structure:[]},
+{name:"k141_106954",size:44755,contig_type: "",structure:[]},
+{name:"k141_3503",size:44575,contig_type: "",structure:[]},
+{name:"k141_64209",size:44345,contig_type: "",structure:[]},
+{name:"k141_36308",size:43828,contig_type: "",structure:[]},
+{name:"k141_116548",size:43362,contig_type: "",structure:[]},
+{name:"k141_333",size:43341,contig_type: "",structure:[]},
+{name:"k141_35652",size:43210,contig_type: "",structure:[]},
+{name:"k141_123044",size:43120,contig_type: "",structure:[]},
+{name:"k141_149734",size:42956,contig_type: "",structure:[]},
+{name:"k141_3619",size:42878,contig_type: "",structure:[]},
+{name:"k141_12123",size:42846,contig_type: "",structure:[]},
+{name:"k141_36090",size:42705,contig_type: "",structure:[]},
+{name:"k141_146104",size:41760,contig_type: "",structure:[]},
+{name:"k141_126878",size:41741,contig_type: "",structure:[]},
+{name:"k141_79571",size:41702,contig_type: "",structure:[]},
+{name:"k141_25542",size:41646,contig_type: "",structure:[]},
+{name:"k141_127112",size:41341,contig_type: "",structure:[]},
+{name:"k141_452",size:40891,contig_type: "",structure:[]},
+{name:"k141_79032",size:40733,contig_type: "",structure:[]},
+{name:"k141_80556",size:40548,contig_type: "",structure:[]},
+{name:"k141_78423",size:40397,contig_type: "",structure:[]},
+{name:"k141_116635",size:40363,contig_type: "",structure:[]},
+{name:"k141_98115",size:40333,contig_type: "",structure:[]},
+{name:"k141_134627",size:40321,contig_type: "",structure:[]},
+{name:"k141_61651",size:40214,contig_type: "",structure:[]},
+{name:"k141_24072",size:40116,contig_type: "",structure:[]},
+{name:"k141_146381",size:40025,contig_type: "",structure:[]},
+{name:"k141_148378",size:39666,contig_type: "",structure:[]},
+{name:"k141_63622",size:39471,contig_type: "",structure:[]},
+{name:"k141_22372",size:39292,contig_type: "",structure:[]},
+{name:"k141_115774",size:39272,contig_type: "",structure:[]},
+{name:"k141_150514",size:39230,contig_type: "",structure:[]},
+{name:"k141_79326",size:39132,contig_type: "",structure:[]},
+{name:"k141_3411",size:38721,contig_type: "",structure:[]},
+{name:"k141_83",size:38365,contig_type: "",structure:[]},
+{name:"k141_149658",size:38293,contig_type: "",structure:[]},
+{name:"k141_6645",size:38184,contig_type: "",structure:[]},
+{name:"k141_71045",size:37865,contig_type: "",structure:[]},
+{name:"k141_119445",size:37702,contig_type: "",structure:[]},
+{name:"k141_44576",size:37669,contig_type: "",structure:[]},
+{name:"k141_25070",size:37648,contig_type: "",structure:[]},
+{name:"k141_61261",size:37093,contig_type: "",structure:[]},
+{name:"k141_24563",size:37050,contig_type: "",structure:[]},
+{name:"k141_139498",size:36916,contig_type: "",structure:[]},
+{name:"k141_71939",size:36896,contig_type: "",structure:[]},
+{name:"k141_69468",size:36851,contig_type: "",structure:[]},
+{name:"k141_35638",size:36700,contig_type: "",structure:[]},
+{name:"k141_97419",size:36608,contig_type: "",structure:[]},
+{name:"k141_65393",size:36568,contig_type: "",structure:[]},
+{name:"k141_118467",size:36513,contig_type: "",structure:[]},
+{name:"k141_77944",size:36495,contig_type: "",structure:[]},
+{name:"k141_115503",size:36299,contig_type: "",structure:[]},
+{name:"k141_28391",size:36288,contig_type: "",structure:[]},
+{name:"k141_157543",size:36204,contig_type: "",structure:[]},
+{name:"k141_86724",size:36200,contig_type: "",structure:[]},
+{name:"k141_72039",size:35874,contig_type: "",structure:[]},
+{name:"k141_54292",size:35797,contig_type: "",structure:[]},
+{name:"k141_12173",size:35764,contig_type: "",structure:[]},
+{name:"k141_37403",size:35703,contig_type: "",structure:[]},
+{name:"k141_73035",size:35359,contig_type: "",structure:[]},
+{name:"k141_151341",size:35322,contig_type: "",structure:[]},
+{name:"k141_83569",size:35277,contig_type: "",structure:[]},
+{name:"k141_97807",size:34658,contig_type: "",structure:[]},
+{name:"k141_152573",size:34620,contig_type: "",structure:[]},
+{name:"k141_104398",size:34380,contig_type: "",structure:[]},
+{name:"k141_51513",size:34096,contig_type: "",structure:[]},
+{name:"k141_148848",size:34085,contig_type: "",structure:[]},
+{name:"k141_3842",size:34037,contig_type: "",structure:[]},
+{name:"k141_99272",size:34027,contig_type: "",structure:[]},
+{name:"k141_9743",size:33985,contig_type: "",structure:[]},
+{name:"k141_126883",size:33918,contig_type: "",structure:[]},
+{name:"k141_123872",size:33900,contig_type: "",structure:[]},
+{name:"k141_702",size:33843,contig_type: "",structure:[]},
+{name:"k141_152381",size:33791,contig_type: "",structure:[]},
+{name:"k141_18009",size:33758,contig_type: "",structure:[]},
+{name:"k141_120969",size:33748,contig_type: "",structure:[]},
+{name:"k141_82013",size:33561,contig_type: "",structure:[]},
+{name:"k141_9260",size:33536,contig_type: "",structure:[]},
+{name:"k141_60647",size:33501,contig_type: "",structure:[]},
+{name:"k141_62524",size:33376,contig_type: "",structure:[]},
+{name:"k141_10365",size:33357,contig_type: "",structure:[]},
+{name:"k141_116068",size:33250,contig_type: "",structure:[]},
+{name:"k141_62485",size:33111,contig_type: "",structure:[]},
+{name:"k141_157155",size:32742,contig_type: "",structure:[]},
+{name:"k141_23217",size:32712,contig_type: "",structure:[]},
+{name:"k141_105548",size:32645,contig_type: "",structure:[]},
+{name:"k141_111729",size:32620,contig_type: "",structure:[]},
+{name:"k141_110904",size:32574,contig_type: "",structure:[]},
+{name:"k141_52994",size:32540,contig_type: "",structure:[]},
+{name:"k141_114432",size:32462,contig_type: "",structure:[]},
+{name:"k141_109793",size:32425,contig_type: "",structure:[]},
+{name:"k141_135949",size:32393,contig_type: "",structure:[]},
+{name:"k141_110029",size:32349,contig_type: "",structure:[]},
+{name:"k141_35835",size:31937,contig_type: "",structure:[]},
+{name:"k141_123100",size:31866,contig_type: "",structure:[]},
+{name:"k141_62609",size:31848,contig_type: "",structure:[]},
+{name:"k141_138442",size:31710,contig_type: "",structure:[]},
+{name:"k141_56639",size:31664,contig_type: "",structure:[]},
+{name:"k141_18688",size:31617,contig_type: "",structure:[]},
+{name:"k141_70214",size:31322,contig_type: "",structure:[]},
+{name:"k141_20553",size:31254,contig_type: "",structure:[]},
+{name:"k141_17958",size:31209,contig_type: "",structure:[]},
+{name:"k141_152411",size:31010,contig_type: "",structure:[]},
+{name:"k141_121817",size:30928,contig_type: "",structure:[]},
+{name:"k141_25094",size:30872,contig_type: "",structure:[]},
+{name:"k141_143612",size:30825,contig_type: "",structure:[]},
+{name:"k141_47204",size:30785,contig_type: "",structure:[]},
+{name:"k141_156649",size:30514,contig_type: "",structure:[]},
+{name:"k141_125129",size:30499,contig_type: "",structure:[]},
+{name:"k141_144090",size:30428,contig_type: "",structure:[]},
+{name:"k141_126782",size:30419,contig_type: "",structure:[]},
+{name:"k141_4367",size:30351,contig_type: "",structure:[]},
+{name:"k141_88074",size:30243,contig_type: "",structure:[]},
+{name:"k141_22747",size:30212,contig_type: "",structure:[]},
+{name:"k141_3666",size:30126,contig_type: "",structure:[]},
+{name:"k141_142183",size:30015,contig_type: "",structure:[]},
+{name:"k141_121094",size:29986,contig_type: "",structure:[]},
+{name:"k141_51504",size:29862,contig_type: "",structure:[]},
+{name:"k141_13357",size:29855,contig_type: "",structure:[]},
+{name:"k141_63706",size:29809,contig_type: "",structure:[]},
+{name:"k141_1640",size:29743,contig_type: "",structure:[]},
+{name:"k141_103699",size:29703,contig_type: "",structure:[]},
+{name:"k141_115010",size:29540,contig_type: "",structure:[]},
+{name:"k141_75574",size:29522,contig_type: "",structure:[]},
+{name:"k141_101896",size:29355,contig_type: "",structure:[]},
+{name:"k141_25927",size:29345,contig_type: "",structure:[]},
+{name:"k141_47325",size:29282,contig_type: "",structure:[]},
+{name:"k141_130452",size:28979,contig_type: "",structure:[]},
+{name:"k141_12866",size:28867,contig_type: "",structure:[]},
+{name:"k141_100853",size:28763,contig_type: "",structure:[]},
+{name:"k141_130499",size:28748,contig_type: "",structure:[]},
+{name:"k141_30189",size:28566,contig_type: "",structure:[]},
+{name:"k141_104240",size:28552,contig_type: "",structure:[]},
+{name:"k141_128000",size:28431,contig_type: "",structure:[]},
+{name:"k141_70787",size:28237,contig_type: "",structure:[]},
+{name:"k141_30469",size:28236,contig_type: "",structure:[]},
+{name:"k141_141143",size:28206,contig_type: "",structure:[]},
+{name:"k141_67961",size:28175,contig_type: "",structure:[]},
+{name:"k141_106236",size:28139,contig_type: "",structure:[]},
+{name:"k141_143860",size:28021,contig_type: "",structure:[]},
+{name:"k141_140633",size:27848,contig_type: "",structure:[]},
+{name:"k141_107515",size:27814,contig_type: "",structure:[]},
+{name:"k141_42202",size:27781,contig_type: "",structure:[]},
+{name:"k141_129585",size:27772,contig_type: "",structure:[]},
+{name:"k141_62863",size:27666,contig_type: "",structure:[]},
+{name:"k141_58229",size:27648,contig_type: "",structure:[]},
+{name:"k141_5439",size:27522,contig_type: "",structure:[]},
+{name:"k141_99236",size:27516,contig_type: "",structure:[]},
+{name:"k141_2816",size:27502,contig_type: "",structure:[]},
+{name:"k141_10723",size:27493,contig_type: "",structure:[]},
+{name:"k141_71014",size:27402,contig_type: "",structure:[]},
+{name:"k141_110042",size:27349,contig_type: "",structure:[]},
+{name:"k141_104918",size:27299,contig_type: "",structure:[]},
+{name:"k141_107456",size:27226,contig_type: "",structure:[]},
+{name:"k141_77329",size:27104,contig_type: "",structure:[]},
+{name:"k141_81585",size:27048,contig_type: "",structure:[]},
+{name:"k141_752",size:27040,contig_type: "",structure:[]},
+{name:"k141_154812",size:27039,contig_type: "",structure:[]},
+{name:"k141_29217",size:27003,contig_type: "",structure:[]},
+{name:"k141_14095",size:26933,contig_type: "",structure:[]},
+{name:"k141_8594",size:26870,contig_type: "",structure:[]},
+{name:"k141_96764",size:26629,contig_type: "",structure:[]},
+{name:"k141_42930",size:26550,contig_type: "",structure:[]},
+{name:"k141_103801",size:26544,contig_type: "",structure:[]},
+{name:"k141_64441",size:26466,contig_type: "",structure:[]},
+{name:"k141_76528",size:26436,contig_type: "",structure:[]},
+{name:"k141_4857",size:26360,contig_type: "",structure:[]},
+{name:"k141_144464",size:26236,contig_type: "",structure:[]},
+{name:"k141_112283",size:26144,contig_type: "",structure:[]},
+{name:"k141_107390",size:26128,contig_type: "",structure:[]},
+{name:"k141_55630",size:26123,contig_type: "",structure:[]},
+{name:"k141_105508",size:26070,contig_type: "",structure:[]},
+{name:"k141_100927",size:26039,contig_type: "",structure:[]},
+{name:"k141_6930",size:25851,contig_type: "",structure:[]},
+{name:"k141_127326",size:25849,contig_type: "",structure:[]},
+{name:"k141_107081",size:25802,contig_type: "",structure:[]},
+{name:"k141_61002",size:25801,contig_type: "",structure:[]},
+{name:"k141_55299",size:25662,contig_type: "",structure:[]},
+{name:"k141_56015",size:25646,contig_type: "",structure:[]},
+{name:"k141_4548",size:25540,contig_type: "",structure:[]},
+{name:"k141_110168",size:25455,contig_type: "",structure:[]},
+{name:"k141_4625",size:25452,contig_type: "",structure:[]},
+{name:"k141_17574",size:25429,contig_type: "",structure:[]},
+{name:"k141_80508",size:25386,contig_type: "",structure:[]},
+{name:"k141_62549",size:25363,contig_type: "",structure:[]},
+{name:"k141_106780",size:25326,contig_type: "",structure:[]},
+{name:"k141_24984",size:25316,contig_type: "",structure:[]},
+{name:"k141_117235",size:25252,contig_type: "",structure:[]},
+{name:"k141_128955",size:25228,contig_type: "",structure:[]},
+{name:"k141_118527",size:25213,contig_type: "",structure:[]},
+{name:"k141_52863",size:25185,contig_type: "",structure:[]},
+{name:"k141_107795",size:25081,contig_type: "",structure:[]},
+{name:"k141_120129",size:25071,contig_type: "",structure:[]},
+{name:"k141_101787",size:24997,contig_type: "",structure:[]},
+{name:"k141_127385",size:24898,contig_type: "",structure:[]},
+{name:"k141_151266",size:24890,contig_type: "",structure:[]},
+{name:"k141_138456",size:24872,contig_type: "",structure:[]},
+{name:"k141_123705",size:24855,contig_type: "",structure:[]},
+{name:"k141_63569",size:24839,contig_type: "",structure:[]},
+{name:"k141_154855",size:24827,contig_type: "",structure:[]},
+{name:"k141_47190",size:24785,contig_type: "",structure:[]},
+{name:"k141_22116",size:24764,contig_type: "",structure:[]},
+{name:"k141_60705",size:24744,contig_type: "",structure:[]},
+{name:"k141_40363",size:24701,contig_type: "",structure:[]},
+{name:"k141_2702",size:24584,contig_type: "",structure:[]},
+{name:"k141_6261",size:24528,contig_type: "",structure:[]},
+{name:"k141_54103",size:24496,contig_type: "",structure:[]},
+{name:"k141_65271",size:24458,contig_type: "",structure:[]},
+{name:"k141_31524",size:24426,contig_type: "",structure:[]},
+{name:"k141_36899",size:24392,contig_type: "",structure:[]},
+{name:"k141_20846",size:24377,contig_type: "",structure:[]},
+{name:"k141_73213",size:24365,contig_type: "",structure:[]},
+{name:"k141_21614",size:24348,contig_type: "",structure:[]},
+{name:"k141_129806",size:24270,contig_type: "",structure:[]},
+{name:"k141_25239",size:24241,contig_type: "",structure:[]},
+{name:"k141_116265",size:24183,contig_type: "",structure:[]},
+{name:"k141_140089",size:24173,contig_type: "",structure:[]},
+{name:"k141_150791",size:24154,contig_type: "",structure:[]},
+{name:"k141_107216",size:24115,contig_type: "",structure:[]},
+{name:"k141_14232",size:24106,contig_type: "",structure:[]},
+{name:"k141_5420",size:24024,contig_type: "",structure:[]},
+{name:"k141_49559",size:24024,contig_type: "",structure:[]},
+{name:"k141_120823",size:24023,contig_type: "",structure:[]},
+{name:"k141_64186",size:24005,contig_type: "",structure:[]},
+{name:"k141_72076",size:23991,contig_type: "",structure:[]},
+{name:"k141_90280",size:23929,contig_type: "",structure:[]},
+{name:"k141_95887",size:23911,contig_type: "",structure:[]},
+{name:"k141_68113",size:23766,contig_type: "",structure:[]},
+{name:"k141_9442",size:23753,contig_type: "",structure:[]},
+{name:"k141_25147",size:23683,contig_type: "",structure:[]},
+{name:"k141_117424",size:23673,contig_type: "",structure:[]},
+{name:"k141_135596",size:23668,contig_type: "",structure:[]},
+{name:"k141_77063",size:23652,contig_type: "",structure:[]},
+{name:"k141_65060",size:23638,contig_type: "",structure:[]},
+{name:"k141_59201",size:23594,contig_type: "",structure:[]},
+{name:"k141_64247",size:23544,contig_type: "",structure:[]},
+{name:"k141_60388",size:23522,contig_type: "",structure:[]},
+{name:"k141_126482",size:23379,contig_type: "",structure:[]},
+{name:"k141_120238",size:23331,contig_type: "",structure:[]},
+{name:"k141_60612",size:23326,contig_type: "",structure:[]},
+{name:"k141_38907",size:23260,contig_type: "",structure:[]},
+{name:"k141_74237",size:23248,contig_type: "",structure:[]},
+{name:"k141_119085",size:23241,contig_type: "",structure:[]},
+{name:"k141_114194",size:23232,contig_type: "",structure:[]},
+{name:"k141_71220",size:23224,contig_type: "",structure:[]},
+{name:"k141_100367",size:23222,contig_type: "",structure:[]},
+{name:"k141_54662",size:23209,contig_type: "",structure:[]},
+{name:"k141_104006",size:23201,contig_type: "",structure:[]},
+{name:"k141_77100",size:23136,contig_type: "",structure:[]},
+{name:"k141_3546",size:23044,contig_type: "",structure:[]},
+{name:"k141_10802",size:23021,contig_type: "",structure:[]},
+{name:"k141_62414",size:22992,contig_type: "",structure:[]},
+{name:"k141_132051",size:22945,contig_type: "",structure:[]},
+{name:"k141_58183",size:22910,contig_type: "",structure:[]},
+{name:"k141_66164",size:22901,contig_type: "",structure:[]},
+{name:"k141_13506",size:22855,contig_type: "",structure:[]},
+{name:"k141_26528",size:22848,contig_type: "",structure:[]},
+{name:"k141_143026",size:22833,contig_type: "",structure:[]},
+{name:"k141_768",size:22831,contig_type: "",structure:[]},
+{name:"k141_41203",size:22824,contig_type: "",structure:[]},
+{name:"k141_48063",size:22820,contig_type: "",structure:[]},
+{name:"k141_147880",size:22763,contig_type: "",structure:[]},
+{name:"k141_6328",size:22712,contig_type: "",structure:[]},
+{name:"k141_108585",size:22671,contig_type: "",structure:[]},
+{name:"k141_44372",size:22648,contig_type: "",structure:[]},
+{name:"k141_102222",size:22610,contig_type: "",structure:[]},
+{name:"k141_23802",size:22541,contig_type: "",structure:[]},
+{name:"k141_127302",size:22527,contig_type: "",structure:[]},
+{name:"k141_54606",size:22450,contig_type: "",structure:[]},
+{name:"k141_105305",size:22438,contig_type: "",structure:[]},
+{name:"k141_117625",size:22415,contig_type: "",structure:[]},
+{name:"k141_14105",size:22401,contig_type: "",structure:[]},
+{name:"k141_129238",size:22400,contig_type: "",structure:[]},
+{name:"k141_89650",size:22354,contig_type: "",structure:[]},
+{name:"k141_113205",size:22319,contig_type: "",structure:[]},
+{name:"k141_115538",size:22304,contig_type: "",structure:[]},
+{name:"k141_17016",size:22192,contig_type: "",structure:[]},
+{name:"k141_27009",size:22156,contig_type: "",structure:[]},
+{name:"k141_17615",size:22132,contig_type: "",structure:[]},
+{name:"k141_155923",size:22122,contig_type: "",structure:[]},
+{name:"k141_17314",size:22002,contig_type: "",structure:[]},
+{name:"k141_30734",size:22000,contig_type: "",structure:[]},
+{name:"k141_56745",size:21989,contig_type: "",structure:[]},
+{name:"k141_128893",size:21987,contig_type: "",structure:[]},
+{name:"k141_27181",size:21972,contig_type: "",structure:[]},
+{name:"k141_2373",size:21952,contig_type: "",structure:[]},
+{name:"k141_68621",size:21939,contig_type: "",structure:[]},
+{name:"k141_29220",size:21933,contig_type: "",structure:[]},
+{name:"k141_42048",size:21893,contig_type: "",structure:[]},
+{name:"k141_52170",size:21822,contig_type: "",structure:[]},
+{name:"k141_56574",size:21789,contig_type: "",structure:[]},
+{name:"k141_1387",size:21771,contig_type: "",structure:[]},
+{name:"k141_41464",size:21724,contig_type: "",structure:[]},
+{name:"k141_22323",size:21722,contig_type: "",structure:[]},
+{name:"k141_55902",size:21717,contig_type: "",structure:[]},
+{name:"k141_9592",size:21645,contig_type: "",structure:[]},
+{name:"k141_74776",size:21639,contig_type: "",structure:[]},
+{name:"k141_140375",size:21617,contig_type: "",structure:[]},
+{name:"k141_61343",size:21614,contig_type: "",structure:[]},
+{name:"k141_43677",size:21614,contig_type: "",structure:[]},
+{name:"k141_90375",size:21612,contig_type: "",structure:[]},
+{name:"k141_6854",size:21574,contig_type: "",structure:[]},
+{name:"k141_33917",size:21574,contig_type: "",structure:[]},
+{name:"k141_15442",size:21534,contig_type: "",structure:[]},
+{name:"k141_26836",size:21529,contig_type: "",structure:[]},
+{name:"k141_141146",size:21513,contig_type: "",structure:[]},
+{name:"k141_67485",size:21493,contig_type: "",structure:[]},
+{name:"k141_1888",size:21451,contig_type: "",structure:[]},
+{name:"k141_117103",size:21451,contig_type: "",structure:[]},
+{name:"k141_65147",size:21436,contig_type: "",structure:[]},
+{name:"k141_55423",size:21422,contig_type: "",structure:[]},
+{name:"k141_125092",size:21417,contig_type: "",structure:[]},
+{name:"k141_52776",size:21411,contig_type: "",structure:[]},
+{name:"k141_18719",size:21394,contig_type: "",structure:[]},
+{name:"k141_4385",size:21343,contig_type: "",structure:[]},
+{name:"k141_50273",size:21326,contig_type: "",structure:[]},
+{name:"k141_59438",size:21255,contig_type: "",structure:[]},
+{name:"k141_118510",size:21222,contig_type: "",structure:[]},
+{name:"k141_65563",size:21182,contig_type: "",structure:[]},
+{name:"k141_29543",size:21167,contig_type: "",structure:[]},
+{name:"k141_56840",size:21164,contig_type: "",structure:[]},
+{name:"k141_19100",size:21156,contig_type: "",structure:[]},
+{name:"k141_100508",size:21134,contig_type: "",structure:[]},
+{name:"k141_753",size:21108,contig_type: "",structure:[]},
+{name:"k141_117672",size:21059,contig_type: "",structure:[]},
+{name:"k141_9173",size:21054,contig_type: "",structure:[]},
+{name:"k141_22626",size:21023,contig_type: "",structure:[]},
+{name:"k141_69804",size:21012,contig_type: "",structure:[]},
+{name:"k141_135919",size:21002,contig_type: "",structure:[]},
+{name:"k141_63972",size:20958,contig_type: "",structure:[]},
+{name:"k141_131256",size:20929,contig_type: "",structure:[]},
+{name:"k141_61922",size:20882,contig_type: "",structure:[]},
+{name:"k141_53092",size:20860,contig_type: "",structure:[]},
+{name:"k141_54294",size:20843,contig_type: "",structure:[]},
+{name:"k141_112761",size:20834,contig_type: "",structure:[]},
+{name:"k141_73245",size:20832,contig_type: "",structure:[]},
+{name:"k141_25282",size:20831,contig_type: "",structure:[]},
+{name:"k141_89617",size:20801,contig_type: "",structure:[]},
+{name:"k141_143816",size:20799,contig_type: "",structure:[]},
+{name:"k141_92976",size:20795,contig_type: "",structure:[]},
+{name:"k141_108061",size:20784,contig_type: "",structure:[]},
+{name:"k141_133194",size:20779,contig_type: "",structure:[]},
+{name:"k141_90177",size:20769,contig_type: "",structure:[]},
+{name:"k141_15873",size:20673,contig_type: "",structure:[]},
+{name:"k141_127899",size:20648,contig_type: "",structure:[]},
+{name:"k141_593",size:20635,contig_type: "",structure:[]},
+{name:"k141_148468",size:20601,contig_type: "",structure:[]},
+{name:"k141_43648",size:20595,contig_type: "",structure:[]},
+{name:"k141_133141",size:20559,contig_type: "",structure:[]},
+{name:"k141_111252",size:20554,contig_type: "",structure:[]},
+{name:"k141_21122",size:20475,contig_type: "",structure:[]},
+{name:"k141_124073",size:20474,contig_type: "",structure:[]},
+{name:"k141_2984",size:20455,contig_type: "",structure:[]},
+{name:"k141_53021",size:20452,contig_type: "",structure:[]},
+{name:"k141_66370",size:20447,contig_type: "",structure:[]},
+{name:"k141_5378",size:20407,contig_type: "",structure:[]},
+{name:"k141_10046",size:20398,contig_type: "",structure:[]},
+{name:"k141_69056",size:20385,contig_type: "",structure:[]},
+{name:"k141_150372",size:20374,contig_type: "",structure:[]},
+{name:"k141_74521",size:20328,contig_type: "",structure:[]},
+{name:"k141_139166",size:20253,contig_type: "",structure:[]},
+{name:"k141_17735",size:20220,contig_type: "",structure:[]},
+{name:"k141_112435",size:20198,contig_type: "",structure:[]},
+{name:"k141_129807",size:20187,contig_type: "",structure:[]},
+{name:"k141_138301",size:20182,contig_type: "",structure:[]},
+{name:"k141_7675",size:20173,contig_type: "",structure:[]},
+{name:"k141_8688",size:20170,contig_type: "",structure:[]},
+{name:"k141_110789",size:20140,contig_type: "",structure:[]},
+{name:"k141_121776",size:20129,contig_type: "",structure:[]},
+{name:"k141_19878",size:20123,contig_type: "",structure:[]},
+{name:"k141_71955",size:20095,contig_type: "",structure:[]},
+{name:"k141_8128",size:20019,contig_type: "",structure:[]},
+{name:"k141_123251",size:20003,contig_type: "",structure:[]},
+{name:"k141_56868",size:19966,contig_type: "",structure:[]},
+{name:"k141_25795",size:19932,contig_type: "",structure:[]},
+{name:"k141_74808",size:19924,contig_type: "",structure:[]},
+{name:"k141_37063",size:19923,contig_type: "",structure:[]},
+{name:"k141_73963",size:19914,contig_type: "",structure:[]},
+{name:"k141_57250",size:19905,contig_type: "",structure:[]},
+{name:"k141_115347",size:19895,contig_type: "",structure:[]},
+{name:"k141_85340",size:19828,contig_type: "",structure:[]},
+{name:"k141_117015",size:19827,contig_type: "",structure:[]},
+{name:"k141_3497",size:19777,contig_type: "",structure:[]},
+{name:"k141_118279",size:19738,contig_type: "",structure:[]},
+{name:"k141_107944",size:19718,contig_type: "",structure:[]},
+{name:"k141_113928",size:19683,contig_type: "",structure:[]},
+{name:"k141_42914",size:19677,contig_type: "",structure:[]},
+{name:"k141_140326",size:19662,contig_type: "",structure:[]},
+{name:"k141_152594",size:19651,contig_type: "",structure:[]},
+{name:"k141_58882",size:19621,contig_type: "",structure:[]},
+{name:"k141_61561",size:19619,contig_type: "",structure:[]},
+{name:"k141_131667",size:19614,contig_type: "",structure:[]},
+{name:"k141_69483",size:19594,contig_type: "",structure:[]},
+{name:"k141_20688",size:19565,contig_type: "",structure:[]},
+{name:"k141_19788",size:19562,contig_type: "",structure:[]},
+{name:"k141_80583",size:19555,contig_type: "",structure:[]},
+{name:"k141_18829",size:19530,contig_type: "",structure:[]},
+{name:"k141_1766",size:19523,contig_type: "",structure:[]},
+{name:"k141_5768",size:19513,contig_type: "",structure:[]},
+{name:"k141_24562",size:19413,contig_type: "",structure:[]},
+{name:"k141_19502",size:19294,contig_type: "",structure:[]},
+{name:"k141_143807",size:19277,contig_type: "",structure:[]},
+{name:"k141_146817",size:19266,contig_type: "",structure:[]},
+{name:"k141_107075",size:19257,contig_type: "",structure:[]},
+{name:"k141_61470",size:19130,contig_type: "",structure:[]},
+{name:"k141_27411",size:19127,contig_type: "",structure:[]},
+{name:"k141_94184",size:19101,contig_type: "",structure:[]},
+{name:"k141_68640",size:19087,contig_type: "",structure:[]},
+{name:"k141_56418",size:19047,contig_type: "",structure:[]},
+{name:"k141_91000",size:19037,contig_type: "",structure:[]},
+{name:"k141_115124",size:19015,contig_type: "",structure:[]},
+{name:"k141_11610",size:18993,contig_type: "",structure:[]},
+{name:"k141_2904",size:18947,contig_type: "",structure:[]},
+{name:"k141_140211",size:18916,contig_type: "",structure:[]},
+{name:"k141_107578",size:18904,contig_type: "",structure:[]},
+{name:"k141_45059",size:18904,contig_type: "",structure:[]},
+{name:"k141_139612",size:18864,contig_type: "",structure:[]},
+{name:"k141_104681",size:18826,contig_type: "",structure:[]},
+{name:"k141_110034",size:18813,contig_type: "",structure:[]},
+{name:"k141_22741",size:18801,contig_type: "",structure:[]},
+{name:"k141_66210",size:18782,contig_type: "",structure:[]},
+{name:"k141_14455",size:18769,contig_type: "",structure:[]},
+{name:"k141_127138",size:18767,contig_type: "",structure:[]},
+{name:"k141_10711",size:18749,contig_type: "",structure:[]},
+{name:"k141_105724",size:18737,contig_type: "",structure:[]},
+{name:"k141_64153",size:18724,contig_type: "",structure:[]},
+{name:"k141_116122",size:18722,contig_type: "",structure:[]},
+{name:"k141_7580",size:18693,contig_type: "",structure:[]},
+{name:"k141_152438",size:18664,contig_type: "",structure:[]},
+{name:"k141_1656",size:18663,contig_type: "",structure:[]},
+{name:"k141_5843",size:18640,contig_type: "",structure:[]},
+{name:"k141_4936",size:18602,contig_type: "",structure:[]},
+{name:"k141_81031",size:18600,contig_type: "",structure:[]},
+{name:"k141_38019",size:18579,contig_type: "",structure:[]},
+{name:"k141_3514",size:18557,contig_type: "",structure:[]},
+{name:"k141_107542",size:18554,contig_type: "",structure:[]},
+{name:"k141_139261",size:18539,contig_type: "",structure:[]},
+{name:"k141_54595",size:18536,contig_type: "",structure:[]},
+{name:"k141_142624",size:18528,contig_type: "",structure:[]},
+{name:"k141_101135",size:18528,contig_type: "",structure:[]},
+{name:"k141_37337",size:18525,contig_type: "",structure:[]},
+{name:"k141_36906",size:18498,contig_type: "",structure:[]},
+{name:"k141_61996",size:18446,contig_type: "",structure:[]},
+{name:"k141_10171",size:18440,contig_type: "",structure:[]},
+{name:"k141_54922",size:18430,contig_type: "",structure:[]},
+{name:"k141_92776",size:18422,contig_type: "",structure:[]},
+{name:"k141_113283",size:18404,contig_type: "",structure:[]},
+{name:"k141_132883",size:18393,contig_type: "",structure:[]},
+{name:"k141_15",size:18375,contig_type: "",structure:[]},
+{name:"k141_65305",size:18271,contig_type: "",structure:[]},
+{name:"k141_58956",size:18265,contig_type: "",structure:[]},
+{name:"k141_142366",size:18258,contig_type: "",structure:[]},
+{name:"k141_128491",size:18243,contig_type: "",structure:[]},
+{name:"k141_92439",size:18217,contig_type: "",structure:[]},
+{name:"k141_93645",size:18201,contig_type: "",structure:[]},
+{name:"k141_152816",size:18189,contig_type: "",structure:[]},
+{name:"k141_22707",size:18186,contig_type: "",structure:[]},
+{name:"k141_144186",size:18156,contig_type: "",structure:[]},
+{name:"k141_74005",size:18137,contig_type: "",structure:[]},
+{name:"k141_117370",size:18135,contig_type: "",structure:[]},
+{name:"k141_122967",size:18131,contig_type: "",structure:[]},
+{name:"k141_2399",size:18121,contig_type: "",structure:[]},
+{name:"k141_681",size:18101,contig_type: "",structure:[]},
+{name:"k141_54895",size:18100,contig_type: "",structure:[]},
+{name:"k141_19036",size:18098,contig_type: "",structure:[]},
+{name:"k141_52631",size:18084,contig_type: "",structure:[]},
+{name:"k141_73377",size:18057,contig_type: "",structure:[]},
+{name:"k141_107770",size:18055,contig_type: "",structure:[]},
+{name:"k141_23530",size:18055,contig_type: "",structure:[]},
+{name:"k141_85822",size:18048,contig_type: "",structure:[]},
+{name:"k141_30236",size:18043,contig_type: "",structure:[]},
+{name:"k141_74695",size:18022,contig_type: "",structure:[]},
+{name:"k141_137292",size:17913,contig_type: "",structure:[]},
+{name:"k141_73254",size:17896,contig_type: "",structure:[]},
+{name:"k141_155491",size:17887,contig_type: "",structure:[]},
+{name:"k141_14340",size:17863,contig_type: "",structure:[]},
+{name:"k141_54273",size:17859,contig_type: "",structure:[]},
+{name:"k141_56837",size:17859,contig_type: "",structure:[]},
+{name:"k141_31466",size:17833,contig_type: "",structure:[]},
+{name:"k141_106739",size:17804,contig_type: "",structure:[]},
+{name:"k141_149528",size:17802,contig_type: "",structure:[]},
+{name:"k141_135745",size:17773,contig_type: "",structure:[]},
+{name:"k141_111712",size:17759,contig_type: "",structure:[]},
+{name:"k141_107018",size:17736,contig_type: "",structure:[]},
+{name:"k141_97286",size:17668,contig_type: "",structure:[]},
+{name:"k141_113785",size:17658,contig_type: "",structure:[]},
+{name:"k141_114234",size:17643,contig_type: "",structure:[]},
+{name:"k141_59313",size:17635,contig_type: "",structure:[]},
+{name:"k141_17602",size:17626,contig_type: "",structure:[]},
+{name:"k141_9194",size:17614,contig_type: "",structure:[]},
+{name:"k141_15788",size:17589,contig_type: "",structure:[]},
+{name:"k141_127894",size:17579,contig_type: "",structure:[]},
+{name:"k141_15726",size:17570,contig_type: "",structure:[]},
+{name:"k141_81187",size:17554,contig_type: "",structure:[]},
+{name:"k141_69784",size:17468,contig_type: "",structure:[]},
+{name:"k141_14342",size:17460,contig_type: "",structure:[]},
+{name:"k141_121273",size:17441,contig_type: "",structure:[]},
+{name:"k141_108101",size:17438,contig_type: "",structure:[]},
+{name:"k141_131802",size:17403,contig_type: "",structure:[]},
+{name:"k141_28608",size:17371,contig_type: "",structure:[]},
+{name:"k141_129829",size:17367,contig_type: "",structure:[]},
+{name:"k141_113013",size:17365,contig_type: "",structure:[]},
+{name:"k141_155479",size:17333,contig_type: "",structure:[]},
+{name:"k141_11460",size:17306,contig_type: "",structure:[]},
+{name:"k141_109617",size:17288,contig_type: "",structure:[]},
+{name:"k141_100293",size:17246,contig_type: "",structure:[]},
+{name:"k141_150557",size:17242,contig_type: "",structure:[]},
+{name:"k141_18625",size:17231,contig_type: "",structure:[]},
+{name:"k141_13448",size:17225,contig_type: "",structure:[]},
+{name:"k141_69414",size:17180,contig_type: "",structure:[]},
+{name:"k141_45468",size:17172,contig_type: "",structure:[]},
+{name:"k141_136258",size:17158,contig_type: "",structure:[]},
+{name:"k141_130166",size:17150,contig_type: "",structure:[]},
+{name:"k141_6641",size:17148,contig_type: "",structure:[]},
+{name:"k141_53387",size:17135,contig_type: "",structure:[]},
+{name:"k141_26631",size:17122,contig_type: "",structure:[]},
+{name:"k141_135560",size:17119,contig_type: "",structure:[]},
+{name:"k141_115011",size:17089,contig_type: "",structure:[]},
+{name:"k141_7146",size:17078,contig_type: "",structure:[]},
+{name:"k141_154372",size:17072,contig_type: "",structure:[]},
+{name:"k141_53729",size:17071,contig_type: "",structure:[]},
+{name:"k141_93833",size:17038,contig_type: "",structure:[]},
+{name:"k141_70685",size:17016,contig_type: "",structure:[]},
+{name:"k141_105467",size:17008,contig_type: "",structure:[]},
+{name:"k141_17371",size:16996,contig_type: "",structure:[]},
+{name:"k141_140006",size:16986,contig_type: "",structure:[]},
+{name:"k141_139850",size:16968,contig_type: "",structure:[]},
+{name:"k141_91632",size:16948,contig_type: "",structure:[]},
+{name:"k141_25145",size:16947,contig_type: "",structure:[]},
+{name:"k141_38484",size:16939,contig_type: "",structure:[]},
+{name:"k141_54830",size:16918,contig_type: "",structure:[]},
+{name:"k141_152897",size:16849,contig_type: "",structure:[]},
+{name:"k141_4240",size:16812,contig_type: "",structure:[]},
+{name:"k141_151951",size:16807,contig_type: "",structure:[]},
+{name:"k141_112174",size:16796,contig_type: "",structure:[]},
+{name:"k141_126334",size:16790,contig_type: "",structure:[]},
+{name:"k141_118481",size:16785,contig_type: "",structure:[]},
+{name:"k141_78296",size:16768,contig_type: "",structure:[]},
+{name:"k141_18920",size:16763,contig_type: "",structure:[]},
+{name:"k141_40298",size:16759,contig_type: "",structure:[]},
+{name:"k141_71954",size:16755,contig_type: "",structure:[]},
+{name:"k141_53600",size:16748,contig_type: "",structure:[]},
+{name:"k141_156872",size:16713,contig_type: "",structure:[]},
+{name:"k141_86333",size:16691,contig_type: "",structure:[]},
+{name:"k141_95372",size:16688,contig_type: "",structure:[]},
+{name:"k141_60852",size:16677,contig_type: "",structure:[]},
+{name:"k141_47507",size:16664,contig_type: "",structure:[]},
+{name:"k141_130921",size:16663,contig_type: "",structure:[]},
+{name:"k141_14886",size:16658,contig_type: "",structure:[]},
+{name:"k141_68703",size:16653,contig_type: "",structure:[]},
+{name:"k141_107768",size:16632,contig_type: "",structure:[]},
+{name:"k141_145695",size:16630,contig_type: "",structure:[]},
+{name:"k141_83373",size:16628,contig_type: "",structure:[]},
+{name:"k141_24976",size:16618,contig_type: "",structure:[]},
+{name:"k141_45318",size:16578,contig_type: "",structure:[]},
+{name:"k141_76916",size:16572,contig_type: "",structure:[]},
+{name:"k141_93519",size:16548,contig_type: "",structure:[]},
+{name:"k141_22460",size:16529,contig_type: "",structure:[]},
+{name:"k141_100777",size:16526,contig_type: "",structure:[]},
+{name:"k141_51196",size:16489,contig_type: "",structure:[]},
+{name:"k141_68755",size:16474,contig_type: "",structure:[]},
+{name:"k141_106527",size:16402,contig_type: "",structure:[]},
+{name:"k141_73544",size:16398,contig_type: "",structure:[]},
+{name:"k141_50157",size:16385,contig_type: "",structure:[]},
+{name:"k141_112192",size:16379,contig_type: "",structure:[]},
+{name:"k141_81897",size:16372,contig_type: "",structure:[]},
+{name:"k141_150985",size:16348,contig_type: "",structure:[]},
+{name:"k141_138803",size:16331,contig_type: "",structure:[]},
+{name:"k141_139965",size:16326,contig_type: "",structure:[]},
+{name:"k141_51633",size:16325,contig_type: "",structure:[]},
+{name:"k141_57329",size:16314,contig_type: "",structure:[]},
+{name:"k141_138890",size:16249,contig_type: "",structure:[]},
+{name:"k141_1939",size:16230,contig_type: "",structure:[]},
+{name:"k141_20151",size:16211,contig_type: "",structure:[]},
+{name:"k141_106492",size:16195,contig_type: "",structure:[]},
+{name:"k141_42499",size:16193,contig_type: "",structure:[]},
+{name:"k141_85839",size:16191,contig_type: "",structure:[]},
+{name:"k141_9531",size:16170,contig_type: "",structure:[]},
+{name:"k141_10134",size:16154,contig_type: "",structure:[]},
+{name:"k141_130307",size:16142,contig_type: "",structure:[]},
+{name:"k141_121860",size:16131,contig_type: "",structure:[]},
+{name:"k141_91353",size:16112,contig_type: "",structure:[]},
+{name:"k141_497",size:16111,contig_type: "",structure:[]},
+{name:"k141_119606",size:16109,contig_type: "",structure:[]},
+{name:"k141_67942",size:16108,contig_type: "",structure:[]},
+{name:"k141_76856",size:16085,contig_type: "",structure:[]},
+{name:"k141_17995",size:16078,contig_type: "",structure:[]},
+{name:"k141_119412",size:16074,contig_type: "",structure:[]},
+{name:"k141_82492",size:16062,contig_type: "",structure:[]},
+{name:"k141_43719",size:16049,contig_type: "",structure:[]},
+{name:"k141_119953",size:16037,contig_type: "",structure:[]},
+{name:"k141_103442",size:16015,contig_type: "",structure:[]},
+{name:"k141_66453",size:15996,contig_type: "",structure:[]},
+{name:"k141_80491",size:15980,contig_type: "",structure:[]},
+{name:"k141_65417",size:15978,contig_type: "",structure:[]},
+{name:"k141_113425",size:15962,contig_type: "",structure:[]},
+{name:"k141_128163",size:15962,contig_type: "",structure:[]},
+{name:"k141_109078",size:15949,contig_type: "",structure:[]},
+{name:"k141_128982",size:15946,contig_type: "",structure:[]},
+{name:"k141_141598",size:15938,contig_type: "",structure:[]},
+{name:"k141_8807",size:15934,contig_type: "",structure:[]},
+{name:"k141_23273",size:15906,contig_type: "",structure:[]},
+{name:"k141_79386",size:15882,contig_type: "",structure:[]},
+{name:"k141_53009",size:15873,contig_type: "",structure:[]},
+{name:"k141_90112",size:15861,contig_type: "",structure:[]},
+{name:"k141_39781",size:15856,contig_type: "",structure:[]},
+{name:"k141_135064",size:15846,contig_type: "",structure:[]},
+{name:"k141_109632",size:15835,contig_type: "",structure:[]},
+{name:"k141_56998",size:15833,contig_type: "",structure:[]},
+{name:"k141_64727",size:15832,contig_type: "",structure:[]},
+{name:"k141_38718",size:15821,contig_type: "",structure:[]},
+{name:"k141_71628",size:15816,contig_type: "",structure:[]},
+{name:"k141_56597",size:15809,contig_type: "",structure:[]},
+{name:"k141_44430",size:15808,contig_type: "",structure:[]},
+{name:"k141_131362",size:15798,contig_type: "",structure:[]},
+{name:"k141_36274",size:15791,contig_type: "",structure:[]},
+{name:"k141_20112",size:15781,contig_type: "",structure:[]},
+{name:"k141_113733",size:15762,contig_type: "",structure:[]},
+{name:"k141_26532",size:15713,contig_type: "",structure:[]},
+{name:"k141_75003",size:15691,contig_type: "",structure:[]},
+{name:"k141_35999",size:15676,contig_type: "",structure:[]},
+{name:"k141_56721",size:15655,contig_type: "",structure:[]},
+{name:"k141_138553",size:15645,contig_type: "",structure:[]},
+{name:"k141_22068",size:15631,contig_type: "",structure:[]},
+{name:"k141_10332",size:15630,contig_type: "",structure:[]},
+{name:"k141_59212",size:15620,contig_type: "",structure:[]},
+{name:"k141_120297",size:15613,contig_type: "",structure:[]},
+{name:"k141_65941",size:15585,contig_type: "",structure:[]},
+{name:"k141_59932",size:15581,contig_type: "",structure:[]},
+{name:"k141_15845",size:15579,contig_type: "",structure:[]},
+{name:"k141_69389",size:15547,contig_type: "",structure:[]},
+{name:"k141_121232",size:15494,contig_type: "",structure:[]},
+{name:"k141_149421",size:15492,contig_type: "",structure:[]},
+{name:"k141_116037",size:15477,contig_type: "",structure:[]},
+{name:"k141_9722",size:15475,contig_type: "",structure:[]},
+{name:"k141_62614",size:15463,contig_type: "",structure:[]},
+{name:"k141_64269",size:15453,contig_type: "",structure:[]},
+{name:"k141_140328",size:15424,contig_type: "",structure:[]},
+{name:"k141_58418",size:15414,contig_type: "",structure:[]},
+{name:"k141_20004",size:15403,contig_type: "",structure:[]},
+{name:"k141_89485",size:15398,contig_type: "",structure:[]},
+{name:"k141_31575",size:15382,contig_type: "",structure:[]},
+{name:"k141_116232",size:15368,contig_type: "",structure:[]},
+{name:"k141_18715",size:15367,contig_type: "",structure:[]},
+{name:"k141_25022",size:15366,contig_type: "",structure:[]},
+{name:"k141_132137",size:15355,contig_type: "",structure:[]},
+{name:"k141_38164",size:15335,contig_type: "",structure:[]},
+{name:"k141_81871",size:15274,contig_type: "",structure:[]},
+{name:"k141_17588",size:15270,contig_type: "",structure:[]},
+{name:"k141_120144",size:15265,contig_type: "",structure:[]},
+{name:"k141_56376",size:15256,contig_type: "",structure:[]},
+{name:"k141_79264",size:15250,contig_type: "",structure:[]},
+{name:"k141_115343",size:15226,contig_type: "",structure:[]},
+{name:"k141_60120",size:15203,contig_type: "",structure:[]},
+{name:"k141_73698",size:15190,contig_type: "",structure:[]},
+{name:"k141_16443",size:15186,contig_type: "",structure:[]},
+{name:"k141_65818",size:15182,contig_type: "",structure:[]},
+{name:"k141_55239",size:15173,contig_type: "",structure:[]},
+{name:"k141_19635",size:15150,contig_type: "",structure:[]},
+{name:"k141_132538",size:15139,contig_type: "",structure:[]},
+{name:"k141_110792",size:15124,contig_type: "",structure:[]},
+{name:"k141_58487",size:15122,contig_type: "",structure:[]},
+{name:"k141_88622",size:15096,contig_type: "",structure:[]},
+{name:"k141_130462",size:15085,contig_type: "",structure:[]},
+{name:"k141_103545",size:15085,contig_type: "",structure:[]},
+{name:"k141_5204",size:15079,contig_type: "",structure:[]},
+{name:"k141_133533",size:15072,contig_type: "",structure:[]},
+{name:"k141_10646",size:15055,contig_type: "",structure:[]},
+{name:"k141_112531",size:15052,contig_type: "",structure:[]},
+{name:"k141_99143",size:15051,contig_type: "",structure:[]},
+{name:"k141_9130",size:15044,contig_type: "",structure:[]},
+{name:"k141_89627",size:15024,contig_type: "",structure:[]},
+{name:"k141_4264",size:15022,contig_type: "",structure:[]},
+{name:"k141_104651",size:15021,contig_type: "",structure:[]},
+{name:"k141_125811",size:15001,contig_type: "",structure:[]},
+{name:"k141_133847",size:14974,contig_type: "",structure:[]},
+{name:"k141_83591",size:14961,contig_type: "",structure:[]},
+{name:"k141_50889",size:14949,contig_type: "",structure:[]},
+{name:"k141_67463",size:14938,contig_type: "",structure:[]},
+{name:"k141_30497",size:14935,contig_type: "",structure:[]},
+{name:"k141_123151",size:14920,contig_type: "",structure:[]},
+{name:"k141_18069",size:14872,contig_type: "",structure:[]},
+{name:"k141_56453",size:14869,contig_type: "",structure:[]},
+{name:"k141_129232",size:14869,contig_type: "",structure:[]},
+{name:"k141_147227",size:14848,contig_type: "",structure:[]},
+{name:"k141_90508",size:14836,contig_type: "",structure:[]},
+{name:"k141_81467",size:14833,contig_type: "",structure:[]},
+{name:"k141_137193",size:14831,contig_type: "",structure:[]},
+{name:"k141_7122",size:14818,contig_type: "",structure:[]},
+{name:"k141_39974",size:14817,contig_type: "",structure:[]},
+{name:"k141_145407",size:14808,contig_type: "",structure:[]},
+{name:"k141_147189",size:14803,contig_type: "",structure:[]},
+{name:"k141_9425",size:14770,contig_type: "",structure:[]},
+{name:"k141_20129",size:14757,contig_type: "",structure:[]},
+{name:"k141_10563",size:14756,contig_type: "",structure:[]},
+{name:"k141_51808",size:14728,contig_type: "",structure:[]},
+{name:"k141_18243",size:14727,contig_type: "",structure:[]},
+{name:"k141_26397",size:14722,contig_type: "",structure:[]},
+{name:"k141_99600",size:14707,contig_type: "",structure:[]},
+{name:"k141_129831",size:14681,contig_type: "",structure:[]},
+{name:"k141_2182",size:14677,contig_type: "",structure:[]},
+{name:"k141_110220",size:14673,contig_type: "",structure:[]},
+{name:"k141_49393",size:14660,contig_type: "",structure:[]},
+{name:"k141_43940",size:14659,contig_type: "",structure:[]},
+{name:"k141_9126",size:14654,contig_type: "",structure:[]},
+{name:"k141_83658",size:14637,contig_type: "",structure:[]},
+{name:"k141_32779",size:14637,contig_type: "",structure:[]},
+{name:"k141_107",size:14614,contig_type: "",structure:[]},
+{name:"k141_147914",size:14584,contig_type: "",structure:[]},
+{name:"k141_12787",size:14575,contig_type: "",structure:[]},
+{name:"k141_143198",size:14575,contig_type: "",structure:[]},
+{name:"k141_85199",size:14568,contig_type: "",structure:[]},
+{name:"k141_24908",size:14562,contig_type: "",structure:[]},
+{name:"k141_156528",size:14547,contig_type: "",structure:[]},
+{name:"k141_111625",size:14544,contig_type: "",structure:[]},
+{name:"k141_140557",size:14543,contig_type: "",structure:[]},
+{name:"k141_301",size:14530,contig_type: "",structure:[]},
+{name:"k141_151727",size:14525,contig_type: "",structure:[]},
+{name:"k141_72730",size:14514,contig_type: "",structure:[]},
+{name:"k141_39850",size:14514,contig_type: "",structure:[]},
+{name:"k141_14197",size:14500,contig_type: "",structure:[]},
+{name:"k141_121861",size:14494,contig_type: "",structure:[]},
+{name:"k141_135800",size:14463,contig_type: "",structure:[]},
+{name:"k141_65088",size:14459,contig_type: "",structure:[]},
+{name:"k141_138948",size:14443,contig_type: "",structure:[]},
+{name:"k141_10807",size:14439,contig_type: "",structure:[]},
+{name:"k141_4353",size:14437,contig_type: "",structure:[]},
+{name:"k141_105204",size:14385,contig_type: "",structure:[]},
+{name:"k141_10578",size:14385,contig_type: "",structure:[]},
+{name:"k141_60684",size:14366,contig_type: "",structure:[]},
+{name:"k141_55256",size:14349,contig_type: "",structure:[]},
+{name:"k141_14241",size:14339,contig_type: "",structure:[]},
+{name:"k141_92512",size:14336,contig_type: "",structure:[]},
+{name:"k141_112571",size:14302,contig_type: "",structure:[]},
+{name:"k141_13107",size:14302,contig_type: "",structure:[]},
+{name:"k141_17126",size:14281,contig_type: "",structure:[]},
+{name:"k141_108663",size:14272,contig_type: "",structure:[]},
+{name:"k141_13861",size:14260,contig_type: "",structure:[]},
+{name:"k141_137543",size:14260,contig_type: "",structure:[]},
+{name:"k141_32702",size:14252,contig_type: "",structure:[]},
+{name:"k141_5981",size:14236,contig_type: "",structure:[]},
+{name:"k141_76699",size:14219,contig_type: "",structure:[]},
+{name:"k141_135900",size:14219,contig_type: "",structure:[]},
+{name:"k141_18470",size:14216,contig_type: "",structure:[]},
+{name:"k141_108273",size:14189,contig_type: "",structure:[]},
+{name:"k141_11042",size:14165,contig_type: "",structure:[]},
+{name:"k141_32513",size:14164,contig_type: "",structure:[]},
+{name:"k141_143352",size:14163,contig_type: "",structure:[]},
+{name:"k141_80782",size:14158,contig_type: "",structure:[]},
+{name:"k141_24959",size:14123,contig_type: "",structure:[]},
+{name:"k141_56630",size:14114,contig_type: "",structure:[]},
+{name:"k141_37246",size:14110,contig_type: "",structure:[]},
+{name:"k141_140890",size:14103,contig_type: "",structure:[]},
+{name:"k141_87801",size:14083,contig_type: "",structure:[]},
+{name:"k141_3911",size:14080,contig_type: "",structure:[]},
+{name:"k141_125310",size:14079,contig_type: "",structure:[]},
+{name:"k141_69555",size:14071,contig_type: "",structure:[]},
+{name:"k141_150063",size:14040,contig_type: "",structure:[]},
+{name:"k141_61854",size:14032,contig_type: "",structure:[]},
+{name:"k141_117463",size:14029,contig_type: "",structure:[]},
+{name:"k141_83743",size:14019,contig_type: "",structure:[]},
+{name:"k141_13901",size:14015,contig_type: "",structure:[]},
+{name:"k141_13589",size:14007,contig_type: "",structure:[]},
+{name:"k141_123549",size:14005,contig_type: "",structure:[]},
+{name:"k141_122068",size:13986,contig_type: "",structure:[]},
+{name:"k141_57594",size:13982,contig_type: "",structure:[]},
+{name:"k141_153962",size:13976,contig_type: "",structure:[]},
+{name:"k141_50394",size:13944,contig_type: "",structure:[]},
+{name:"k141_154283",size:13938,contig_type: "",structure:[]},
+{name:"k141_83000",size:13935,contig_type: "",structure:[]},
+{name:"k141_48201",size:13933,contig_type: "",structure:[]},
+{name:"k141_66437",size:13886,contig_type: "",structure:[]},
+{name:"k141_22123",size:13884,contig_type: "",structure:[]},
+{name:"k141_9317",size:13879,contig_type: "",structure:[]},
+{name:"k141_155410",size:13873,contig_type: "",structure:[]},
+{name:"k141_132668",size:13868,contig_type: "",structure:[]},
+{name:"k141_105196",size:13852,contig_type: "",structure:[]},
+{name:"k141_37692",size:13829,contig_type: "",structure:[]},
+{name:"k141_146288",size:13825,contig_type: "",structure:[]},
+{name:"k141_71197",size:13822,contig_type: "",structure:[]},
+{name:"k141_16540",size:13818,contig_type: "",structure:[]},
+{name:"k141_60413",size:13816,contig_type: "",structure:[]},
+{name:"k141_126329",size:13771,contig_type: "",structure:[]},
+{name:"k141_141038",size:13770,contig_type: "",structure:[]},
+{name:"k141_80899",size:13751,contig_type: "",structure:[]},
+{name:"k141_135377",size:13742,contig_type: "",structure:[]},
+{name:"k141_11519",size:13734,contig_type: "",structure:[]},
+{name:"k141_51496",size:13701,contig_type: "",structure:[]},
+{name:"k141_14439",size:13695,contig_type: "",structure:[]},
+{name:"k141_19637",size:13666,contig_type: "",structure:[]},
+{name:"k141_40",size:13651,contig_type: "",structure:[]},
+{name:"k141_92660",size:13651,contig_type: "",structure:[]},
+{name:"k141_17834",size:13650,contig_type: "",structure:[]},
+{name:"k141_150256",size:13636,contig_type: "",structure:[]},
+{name:"k141_57914",size:13628,contig_type: "",structure:[]},
+{name:"k141_100018",size:13609,contig_type: "",structure:[]},
+{name:"k141_66784",size:13604,contig_type: "",structure:[]},
+{name:"k141_734",size:13599,contig_type: "",structure:[]},
+{name:"k141_49414",size:13599,contig_type: "",structure:[]},
+{name:"k141_128891",size:13582,contig_type: "",structure:[]},
+{name:"k141_123430",size:13566,contig_type: "",structure:[]},
+{name:"k141_129954",size:13551,contig_type: "",structure:[]},
+{name:"k141_58375",size:13547,contig_type: "",structure:[]},
+{name:"k141_62226",size:13534,contig_type: "",structure:[]},
+{name:"k141_152236",size:13534,contig_type: "",structure:[]},
+{name:"k141_120650",size:13526,contig_type: "",structure:[]},
+{name:"k141_7037",size:13515,contig_type: "",structure:[]},
+{name:"k141_53088",size:13509,contig_type: "",structure:[]},
+{name:"k141_54308",size:13506,contig_type: "",structure:[]},
+{name:"k141_31508",size:13484,contig_type: "",structure:[]},
+{name:"k141_66702",size:13482,contig_type: "",structure:[]},
+{name:"k141_75544",size:13470,contig_type: "",structure:[]},
+{name:"k141_55505",size:13458,contig_type: "",structure:[]},
+{name:"k141_130651",size:13407,contig_type: "",structure:[]},
+{name:"k141_9881",size:13399,contig_type: "",structure:[]},
+{name:"k141_94328",size:13390,contig_type: "",structure:[]},
+{name:"k141_77247",size:13368,contig_type: "",structure:[]},
+{name:"k141_36688",size:13343,contig_type: "",structure:[]},
+{name:"k141_5287",size:13339,contig_type: "",structure:[]},
+{name:"k141_149363",size:13333,contig_type: "",structure:[]},
+{name:"k141_40835",size:13323,contig_type: "",structure:[]},
+{name:"k141_60271",size:13318,contig_type: "",structure:[]},
+{name:"k141_108067",size:13287,contig_type: "",structure:[]},
+{name:"k141_4478",size:13281,contig_type: "",structure:[]},
+{name:"k141_137486",size:13261,contig_type: "",structure:[]},
+{name:"k141_61691",size:13259,contig_type: "",structure:[]},
+{name:"k141_138815",size:13255,contig_type: "",structure:[]},
+{name:"k141_126114",size:13251,contig_type: "",structure:[]},
+{name:"k141_55961",size:13232,contig_type: "",structure:[]},
+{name:"k141_71459",size:13216,contig_type: "",structure:[]},
+{name:"k141_70518",size:13198,contig_type: "",structure:[]},
+{name:"k141_82709",size:13198,contig_type: "",structure:[]},
+{name:"k141_138949",size:13193,contig_type: "",structure:[]},
+{name:"k141_9431",size:13169,contig_type: "",structure:[]},
+{name:"k141_120537",size:13137,contig_type: "",structure:[]},
+{name:"k141_54961",size:13135,contig_type: "",structure:[]},
+{name:"k141_17986",size:13124,contig_type: "",structure:[]},
+{name:"k141_10190",size:13115,contig_type: "",structure:[]},
+{name:"k141_46574",size:13090,contig_type: "",structure:[]},
+{name:"k141_105357",size:13076,contig_type: "",structure:[]},
+{name:"k141_10098",size:13075,contig_type: "",structure:[]},
+{name:"k141_91449",size:13066,contig_type: "",structure:[]},
+{name:"k141_6158",size:13064,contig_type: "",structure:[]},
+{name:"k141_6959",size:13064,contig_type: "",structure:[]},
+{name:"k141_35695",size:13061,contig_type: "",structure:[]},
+{name:"k141_124794",size:13005,contig_type: "",structure:[]},
+{name:"k141_29631",size:12999,contig_type: "",structure:[]},
+{name:"k141_36395",size:12998,contig_type: "",structure:[]},
+{name:"k141_64614",size:12981,contig_type: "",structure:[]},
+{name:"k141_106359",size:12980,contig_type: "",structure:[]},
+{name:"k141_36620",size:12971,contig_type: "",structure:[]},
+{name:"k141_75070",size:12968,contig_type: "",structure:[]},
+{name:"k141_98369",size:12950,contig_type: "",structure:[]},
+{name:"k141_11019",size:12944,contig_type: "",structure:[]},
+{name:"k141_58384",size:12943,contig_type: "",structure:[]},
+{name:"k141_78818",size:12940,contig_type: "",structure:[]},
+{name:"k141_80268",size:12940,contig_type: "",structure:[]},
+{name:"k141_78598",size:12922,contig_type: "",structure:[]},
+{name:"k141_44009",size:12918,contig_type: "",structure:[]},
+{name:"k141_66974",size:12916,contig_type: "",structure:[]},
+{name:"k141_104457",size:12910,contig_type: "",structure:[]},
+{name:"k141_65906",size:12891,contig_type: "",structure:[]},
+{name:"k141_71881",size:12889,contig_type: "",structure:[]},
+{name:"k141_103757",size:12883,contig_type: "",structure:[]},
+{name:"k141_115168",size:12879,contig_type: "",structure:[]},
+{name:"k141_82135",size:12873,contig_type: "",structure:[]},
+{name:"k141_55304",size:12872,contig_type: "",structure:[]},
+{name:"k141_106467",size:12859,contig_type: "",structure:[]},
+{name:"k141_78085",size:12853,contig_type: "",structure:[]},
+{name:"k141_75664",size:12846,contig_type: "",structure:[]},
+{name:"k141_122512",size:12845,contig_type: "",structure:[]},
+{name:"k141_124817",size:12844,contig_type: "",structure:[]},
+{name:"k141_25440",size:12840,contig_type: "",structure:[]},
+{name:"k141_106869",size:12838,contig_type: "",structure:[]},
+{name:"k141_124700",size:12836,contig_type: "",structure:[]},
+{name:"k141_144742",size:12828,contig_type: "",structure:[]},
+{name:"k141_134174",size:12815,contig_type: "",structure:[]},
+{name:"k141_117088",size:12809,contig_type: "",structure:[]},
+{name:"k141_13586",size:12804,contig_type: "",structure:[]},
+{name:"k141_17868",size:12803,contig_type: "",structure:[]},
+{name:"k141_117291",size:12787,contig_type: "",structure:[]},
+{name:"k141_91273",size:12775,contig_type: "",structure:[]},
+{name:"k141_11929",size:12757,contig_type: "",structure:[]},
+{name:"k141_8112",size:12743,contig_type: "",structure:[]},
+{name:"k141_63054",size:12738,contig_type: "",structure:[]},
+{name:"k141_41564",size:12732,contig_type: "",structure:[]},
+{name:"k141_71282",size:12723,contig_type: "",structure:[]},
+{name:"k141_71058",size:12720,contig_type: "",structure:[]},
+{name:"k141_126723",size:12715,contig_type: "",structure:[]},
+{name:"k141_129248",size:12704,contig_type: "",structure:[]},
+{name:"k141_26895",size:12702,contig_type: "",structure:[]},
+{name:"k141_67313",size:12700,contig_type: "",structure:[]},
+{name:"k141_21580",size:12694,contig_type: "",structure:[]},
+{name:"k141_137248",size:12677,contig_type: "",structure:[]},
+{name:"k141_70666",size:12670,contig_type: "",structure:[]},
+{name:"k141_38276",size:12670,contig_type: "",structure:[]},
+{name:"k141_112774",size:12648,contig_type: "",structure:[]},
+{name:"k141_61727",size:12643,contig_type: "",structure:[]},
+{name:"k141_77205",size:12633,contig_type: "",structure:[]},
+{name:"k141_71802",size:12631,contig_type: "",structure:[]},
+{name:"k141_105588",size:12625,contig_type: "",structure:[]},
+{name:"k141_4345",size:12598,contig_type: "",structure:[]},
+{name:"k141_132487",size:12596,contig_type: "",structure:[]},
+{name:"k141_3746",size:12594,contig_type: "",structure:[]},
+{name:"k141_126283",size:12586,contig_type: "",structure:[]},
+{name:"k141_51882",size:12583,contig_type: "",structure:[]},
+{name:"k141_132573",size:12563,contig_type: "",structure:[]},
+{name:"k141_68196",size:12551,contig_type: "",structure:[]},
+{name:"k141_135872",size:12518,contig_type: "",structure:[]},
+{name:"k141_92180",size:12485,contig_type: "",structure:[]},
+{name:"k141_58641",size:12473,contig_type: "",structure:[]},
+{name:"k141_109445",size:12469,contig_type: "",structure:[]},
+{name:"k141_8896",size:12469,contig_type: "",structure:[]},
+{name:"k141_85112",size:12468,contig_type: "",structure:[]},
+{name:"k141_2933",size:12457,contig_type: "",structure:[]},
+{name:"k141_1326",size:12454,contig_type: "",structure:[]},
+{name:"80626 hidden contigs shorter than 12454 bp (total length: 107 098 581 bp)", size:107098581, contig_type:"short_contigs"}];
 
 var contigLines = [];
 
-var contigs_total_len = 128230;
+var contigs_total_len = 132645073;
 var minContigSize = 500;var links_to_chromosomes;
-links_to_chromosomes = {};
-links_to_chromosomes["Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000001.1"] = "Capnocytophaga_ochracea_str._Holt_25";
-links_to_chromosomes["Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000002.1"] = "Capnocytophaga_ochracea_str._Holt_25";
-links_to_chromosomes["Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000003.1"] = "Capnocytophaga_ochracea_str._Holt_25";
-links_to_chromosomes["Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000004.1"] = "Capnocytophaga_ochracea_str._Holt_25";
-links_to_chromosomes["Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000005.1"] = "Capnocytophaga_ochracea_str._Holt_25";
-links_to_chromosomes["Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000006.1"] = "Capnocytophaga_ochracea_str._Holt_25";
-links_to_chromosomes["Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000007.1"] = "Capnocytophaga_ochracea_str._Holt_25";
-links_to_chromosomes["Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000008.1"] = "Capnocytophaga_ochracea_str._Holt_25";
-links_to_chromosomes["Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000009.1"] = "Capnocytophaga_ochracea_str._Holt_25";
-links_to_chromosomes["Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000010.1"] = "Capnocytophaga_ochracea_str._Holt_25";
-links_to_chromosomes["Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000011.1"] = "Capnocytophaga_ochracea_str._Holt_25";
-links_to_chromosomes["Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000012.1"] = "Capnocytophaga_ochracea_str._Holt_25";
-links_to_chromosomes["Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000013.1"] = "Capnocytophaga_ochracea_str._Holt_25";
-links_to_chromosomes["Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000014.1"] = "Capnocytophaga_ochracea_str._Holt_25";
-links_to_chromosomes["Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000015.1"] = "Capnocytophaga_ochracea_str._Holt_25";
-links_to_chromosomes["Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000016.1"] = "Capnocytophaga_ochracea_str._Holt_25";
-links_to_chromosomes["Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000017.1"] = "Capnocytophaga_ochracea_str._Holt_25";
-links_to_chromosomes["Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000018.1"] = "Capnocytophaga_ochracea_str._Holt_25";
-links_to_chromosomes["Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000019.1"] = "Capnocytophaga_ochracea_str._Holt_25";
-links_to_chromosomes["Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000020.1"] = "Capnocytophaga_ochracea_str._Holt_25";
-links_to_chromosomes["Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000021.1"] = "Capnocytophaga_ochracea_str._Holt_25";
-links_to_chromosomes["Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000022.1"] = "Capnocytophaga_ochracea_str._Holt_25";
-links_to_chromosomes["Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000023.1"] = "Capnocytophaga_ochracea_str._Holt_25";
-links_to_chromosomes["Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000024.1"] = "Capnocytophaga_ochracea_str._Holt_25";
-links_to_chromosomes["Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000025.1"] = "Capnocytophaga_ochracea_str._Holt_25";
-links_to_chromosomes["Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000026.1"] = "Capnocytophaga_ochracea_str._Holt_25";
-links_to_chromosomes["Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000027.1"] = "Capnocytophaga_ochracea_str._Holt_25";
-links_to_chromosomes["Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000028.1"] = "Capnocytophaga_ochracea_str._Holt_25";
-links_to_chromosomes["Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000029.1"] = "Capnocytophaga_ochracea_str._Holt_25";
-links_to_chromosomes["Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000030.1"] = "Capnocytophaga_ochracea_str._Holt_25";
-links_to_chromosomes["Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000031.1"] = "Capnocytophaga_ochracea_str._Holt_25";
-links_to_chromosomes["Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000032.1"] = "Capnocytophaga_ochracea_str._Holt_25";
-links_to_chromosomes["Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000033.1"] = "Capnocytophaga_ochracea_str._Holt_25";
-links_to_chromosomes["Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000034.1"] = "Capnocytophaga_ochracea_str._Holt_25";
-links_to_chromosomes["Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000035.1"] = "Capnocytophaga_ochracea_str._Holt_25";
-links_to_chromosomes["Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000036.1"] = "Capnocytophaga_ochracea_str._Holt_25";
-links_to_chromosomes["Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000037.1"] = "Capnocytophaga_ochracea_str._Holt_25";
-links_to_chromosomes["Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000038.1"] = "Capnocytophaga_ochracea_str._Holt_25";
-links_to_chromosomes["Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000039.1"] = "Capnocytophaga_ochracea_str._Holt_25";
-links_to_chromosomes["Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000040.1"] = "Capnocytophaga_ochracea_str._Holt_25";
-links_to_chromosomes["Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000041.1"] = "Capnocytophaga_ochracea_str._Holt_25";
-links_to_chromosomes["Capnocytophaga_ochracea_str._Holt_25_NZ_AKFV01000042.1"] = "Capnocytophaga_ochracea_str._Holt_25";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000001.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000002.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000003.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000004.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000005.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000006.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000007.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000008.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000009.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000010.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000011.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000012.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000013.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000014.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000015.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000016.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000017.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000018.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000019.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000020.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000021.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000022.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000023.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000024.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000025.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000026.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000027.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000028.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000029.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000030.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000031.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000032.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000033.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000034.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000035.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000036.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000037.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000038.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000039.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000040.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000041.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000042.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000043.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000044.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000045.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000046.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000047.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000048.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000049.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000050.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000051.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000052.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000053.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000054.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000055.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000056.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000057.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000058.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000059.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000060.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000061.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000062.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000063.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000064.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Capnocytophaga_sputigena_ATCC_33612_NZ_ABZV01000065.1"] = "Capnocytophaga_sputigena_ATCC_33612";
-links_to_chromosomes["Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NC_009506.1"] = "Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10_496573588";
-links_to_chromosomes["Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10953_NZ_CM000440.1"] = "Fusobacterium_nucleatum_subsp._polymorphum_ATCC_10_496573588";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000001.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000002.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000003.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000004.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000005.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000006.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000007.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000008.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000009.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000010.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000011.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000012.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000013.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000014.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000015.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000016.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000017.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000018.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000019.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000020.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000021.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000022.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000023.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000024.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000025.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000026.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000027.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000028.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000029.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000030.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000031.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000032.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000033.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000034.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000035.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000036.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000037.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000038.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000039.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000040.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000041.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000042.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000043.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000044.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000045.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000046.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000047.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000048.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000049.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000050.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000051.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000052.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000053.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000054.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000055.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000056.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000057.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000058.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000059.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000060.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000061.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000062.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000063.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000064.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000065.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000066.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000067.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000068.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000069.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000070.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000071.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000072.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000073.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000074.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000075.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000076.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000077.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000078.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000079.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000080.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000081.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000082.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000083.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000084.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000085.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000086.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Haemophilus_sputorum_CCUG_13788_NZ_AFNK01000087.1"] = "Haemophilus_sputorum_CCUG_13788";
-links_to_chromosomes["Prevotella_nigrescens_CC14M_NZ_KI669419.1"] = "Prevotella_nigrescens_CC14M";
-links_to_chromosomes["Prevotella_nigrescens_CC14M_NZ_KI669420.1"] = "Prevotella_nigrescens_CC14M";
-links_to_chromosomes["Prevotella_nigrescens_CC14M_NZ_KI669421.1"] = "Prevotella_nigrescens_CC14M";
-links_to_chromosomes["Prevotella_nigrescens_CC14M_NZ_KI669422.1"] = "Prevotella_nigrescens_CC14M";
-links_to_chromosomes["Prevotella_nigrescens_CC14M_NZ_KI669423.1"] = "Prevotella_nigrescens_CC14M";
-links_to_chromosomes["Prevotella_nigrescens_CC14M_NZ_KI669424.1"] = "Prevotella_nigrescens_CC14M";
-links_to_chromosomes["Prevotella_nigrescens_CC14M_NZ_KI669425.1"] = "Prevotella_nigrescens_CC14M";
-links_to_chromosomes["Prevotella_nigrescens_CC14M_NZ_KI669426.1"] = "Prevotella_nigrescens_CC14M";
-links_to_chromosomes["Prevotella_nigrescens_CC14M_NZ_KI669427.1"] = "Prevotella_nigrescens_CC14M";
-links_to_chromosomes["Prevotella_nigrescens_CC14M_NZ_KI669428.1"] = "Prevotella_nigrescens_CC14M";
-links_to_chromosomes["Prevotella_nigrescens_CC14M_NZ_KI669429.1"] = "Prevotella_nigrescens_CC14M";
-links_to_chromosomes["Prevotella_nigrescens_CC14M_NZ_KI669430.1"] = "Prevotella_nigrescens_CC14M";
-links_to_chromosomes["Prevotella_nigrescens_CC14M_NZ_KI669431.1"] = "Prevotella_nigrescens_CC14M";
-links_to_chromosomes["Prevotella_nigrescens_CC14M_NZ_KI669432.1"] = "Prevotella_nigrescens_CC14M";
-links_to_chromosomes["Prevotella_nigrescens_CC14M_NZ_KI669433.1"] = "Prevotella_nigrescens_CC14M";
-links_to_chromosomes["Prevotella_nigrescens_CC14M_NZ_KI669434.1"] = "Prevotella_nigrescens_CC14M";
-links_to_chromosomes["Prevotella_nigrescens_CC14M_NZ_KI669435.1"] = "Prevotella_nigrescens_CC14M";
-links_to_chromosomes["Prevotella_nigrescens_CC14M_NZ_KI669436.1"] = "Prevotella_nigrescens_CC14M";
-links_to_chromosomes["Prevotella_nigrescens_CC14M_NZ_KI669437.1"] = "Prevotella_nigrescens_CC14M";
-links_to_chromosomes["Prevotella_nigrescens_CC14M_NZ_KI669438.1"] = "Prevotella_nigrescens_CC14M";
-links_to_chromosomes["Prevotella_nigrescens_CC14M_NZ_KI669439.1"] = "Prevotella_nigrescens_CC14M";
-links_to_chromosomes["Prevotella_nigrescens_CC14M_NZ_KI669440.1"] = "Prevotella_nigrescens_CC14M";
-links_to_chromosomes["Prevotella_nigrescens_CC14M_NZ_KI669441.1"] = "Prevotella_nigrescens_CC14M";
-links_to_chromosomes["Prevotella_nigrescens_CC14M_NZ_KI669442.1"] = "Prevotella_nigrescens_CC14M";
-links_to_chromosomes["Prevotella_nigrescens_CC14M_NZ_KI669443.1"] = "Prevotella_nigrescens_CC14M";
-links_to_chromosomes["Prevotella_nigrescens_CC14M_NZ_KI669444.1"] = "Prevotella_nigrescens_CC14M";
-links_to_chromosomes["Prevotella_nigrescens_CC14M_NZ_KI669445.1"] = "Prevotella_nigrescens_CC14M";
-links_to_chromosomes["Prevotella_nigrescens_CC14M_NZ_KI669446.1"] = "Prevotella_nigrescens_CC14M";
-links_to_chromosomes["Prevotella_nigrescens_CC14M_NZ_KI669447.1"] = "Prevotella_nigrescens_CC14M";
-links_to_chromosomes["Prevotella_nigrescens_CC14M_NZ_KI669448.1"] = "Prevotella_nigrescens_CC14M";
-links_to_chromosomes["Prevotella_nigrescens_CC14M_NZ_KI669449.1"] = "Prevotella_nigrescens_CC14M";
-links_to_chromosomes["Prevotella_nigrescens_CC14M_NZ_KI669450.1"] = "Prevotella_nigrescens_CC14M";
-links_to_chromosomes["Prevotella_nigrescens_CC14M_NZ_KI669451.1"] = "Prevotella_nigrescens_CC14M";
-links_to_chromosomes["Prevotella_nigrescens_CC14M_NZ_KI669452.1"] = "Prevotella_nigrescens_CC14M";
-links_to_chromosomes["Prevotella_nigrescens_CC14M_NZ_KI669453.1"] = "Prevotella_nigrescens_CC14M";
-links_to_chromosomes["Sphingomonas_taxi_NZ_CP009571.1"] = "Sphingomonas_taxi";
-links_to_chromosomes["Sphingomonas_taxi_NZ_CP009572.1"] = "Sphingomonas_taxi";
-links_to_chromosomes["Sphingomonas_taxi_NZ_CP009573.1"] = "Sphingomonas_taxi";</script>
+links_to_chromosomes = {};</script>
     <script type="text/javascript" name="d3.js">
         (function() {
         
@@ -13488,14 +14046,14 @@ links_to_chromosomes["Sphingomonas_taxi_NZ_CP009573.1"] = "Sphingomonas_taxi";</
             else {
                 var classes = ['unknown', '', 'predicted_gene'];
                 var classMarks = ['', 'N50'];
-                var classDescriptions = ['contigs', 'contig of length = Nx statistic (x is 50 or 75)', 'predicted genes'];
+                var classDescriptions = ['contigs', 'contig of length = Nx statistic (e.g. N50)', 'predicted genes'];
                 blockTypes = 'unknown, N50';
                 for (var i = 0; i < items.length; i++) {
                     if (items[i].marks && items[i].marks.search('NG') != -1) {
                         classes = ['unknown', '', '', '', 'predicted_gene'];
                         classMarks = ['', 'N50', 'NG50', 'N50, NG50'];
-                        classDescriptions = ['contigs', 'contig of length = Nx statistic (x is 50 or 75)',
-                            'contig of length = NGx statistic (x is 50 or 75)', 'contig of length = Nx and NGx simultaneously',
+                        classDescriptions = ['contigs', 'contig of length = Nx statistic (e.g. N50)',
+                            'contig of length = NGx statistic (e.g. NG50)', 'contig of length = Nx and NGx simultaneously',
                             'predicted genes'];
                         blockTypes = 'unknown, N50, NG50';
                         break;
@@ -14517,11 +15075,26 @@ links_to_chromosomes["Sphingomonas_taxi_NZ_CP009573.1"] = "Sphingomonas_taxi";</
             d3.event.stopPropagation();
         }
         
+        function getContigColorByMark(mark) {
+            if (mark in contigsColors) {
+                return contigsColors[mark];
+            }
+            else if (mark.startsWith('NG') && 'NGx' in contigsColors) {
+                return contigsColors['NGx'];
+            }
+            else if (mark.startsWith('N') && 'Nx' in contigsColors) {
+                return contigsColors['Nx'];
+            }
+            else {
+                return '#000000';
+            }
+        }
+        
         function addGradient(d, marks, gradientExists, smoothGradient) {
             if (!marks) return;
             var gradientId = 'gradient' + d.id;
             marks = marks.split(', ');
-            if (marks.length == 1) return contigsColors[marks[0]];
+            if (marks.length == 1) return getContigColorByMark(marks[0]);
             if (gradientExists) return 'url(#' + gradientId + ')';
             var gradient = chart.append("svg:defs")
                 .append("svg:linearGradient")
@@ -14535,7 +15108,7 @@ links_to_chromosomes["Sphingomonas_taxi_NZ_CP009573.1"] = "Sphingomonas_taxi";</
                 for (var m = 0; m < marks.length; m++)
                     gradient.append("svg:stop")
                         .attr("offset", gradientSteps[m])
-                        .attr("stop-color", contigsColors[marks[m]])
+                        .attr("stop-color", getContigColorByMark(marks[m]))
                         .attr("stop-opacity", 1);
             }
             else {
@@ -14545,7 +15118,7 @@ links_to_chromosomes["Sphingomonas_taxi_NZ_CP009573.1"] = "Sphingomonas_taxi";</
                         .attr("y2", "100%");
                 var colors = [];
                 for (var m = 0; m < marks.length; m++)
-                    colors.push(contigsColors[marks[m]])
+                    colors.push(getContigColorByMark(marks[m]))
                 var colorScale = d3.scale.linear().range(colors);
                 gradient.selectAll("stop")
                         .data(colorScale.range())
@@ -15531,7 +16104,7 @@ links_to_chromosomes["Sphingomonas_taxi_NZ_CP009573.1"] = "Sphingomonas_taxi";</
                     coverageHeight = typeof coverage_data != 'undefined' ? 125 : 0;
                     coverageSpace = typeof coverage_data != 'undefined' ? 50 : 0;
         
-            var contigsColors = {'N50': '#7437BA', 'N75': '#7437BA', 'NG50': '#B53778', 'NG75': '#B53778',
+            var contigsColors = {'Nx': '#7437BA', 'NGx': '#B53778',
                 'correct': '#059B00', 'misassembled': '#DD4343', 'unaligned': '#8e8e8e', 'unknown': '#7DA6B9'};
         
             // legend items
