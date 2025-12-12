@@ -604,20 +604,24 @@
           -r ${readLen} -l ${tax} -t 0 \
           -o temp/bracken/${i}.brk \
           -w temp/bracken/${i}.report; done
-    # 需要确认行数一致才能按以下方法合并      
-    wc -l temp/bracken/*.report
     # bracken结果合并成表: 需按表头排序，提取第6列reads count，并添加样本名
-    tail -n+2 result/metadata.txt | cut -f1 | rush -j 1 \
-      'tail -n+2 temp/bracken/{1}.brk | LC_ALL=C sort | cut -f6 | sed "1 s/^/{1}\n/" \
-      > temp/bracken/{1}.count'
+    bash ${db}/EasyMicrobiome/script/bracken_integration.sh -t ${tax} \
+      -i temp/bracken/*.brk \
+      -o result/kraken2/bracken.${tax}.txt
+    # 需要确认行数一致才能按以下方法合并      
+    # wc -l temp/bracken/*.report
+    # bracken结果合并成表: 需按表头排序，提取第6列reads count，并添加样本名
+    # tail -n+2 result/metadata.txt | cut -f1 | rush -j 1 \
+    #   'tail -n+2 temp/bracken/{1}.brk | LC_ALL=C sort | cut -f6 | sed "1 s/^/{1}\n/" \
+    #   > temp/bracken/{1}.count'
     # 提取第一样本品行名为表行名
-    h=`tail -n1 result/metadata.txt|cut -f1`
-    tail -n+2 temp/bracken/${h}.brk | LC_ALL=C sort | cut -f1 | \
-      sed "1 s/^/Taxonomy\n/" > temp/bracken/0header.count
+    # h=`tail -n1 result/metadata.txt|cut -f1`
+    # tail -n+2 temp/bracken/${h}.brk | LC_ALL=C sort | cut -f1 | \
+    #   sed "1 s/^/Taxonomy\n/" > temp/bracken/0header.count
     # 检查文件数，为n+1
-    ls temp/bracken/*count | wc
+    # ls temp/bracken/*count | wc
     # paste合并样本为表格，并删除非零行
-    paste temp/bracken/*count > result/kraken2/bracken.${tax}.txt
+    # paste temp/bracken/*count > result/kraken2/bracken.${tax}.txt
     # 统计行列，默认去除表头
     csvtk -t stat result/kraken2/bracken.${tax}.txt
     # 按频率过滤，-r可标准化，-e过滤(microbiome_helper)
