@@ -72,6 +72,7 @@
     # 方法1. 网页 https://github.com/YongxinLiu/EasyMicrobiome 中Code - Download ZIP下载压缩包，上传至服务器
     unzip EasyMicrobiome-master.zip
     mv EasyMicrobiome-master EasyMicrobiome
+    # sed -i 's/\r//' EasyMicrobiome/kegg/KO1-4.txt
     
     # Method 2. Baidu Netdisk (方法2. 百度网盘) https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315 /db/soft/EasyMicrobiome.tar.gz
    
@@ -376,8 +377,11 @@
     lefse_run.py -h # LEfSe 1.1.01
 
     # Method 3. Conda installation (方法3. Conda安装)
-    mamba create -n lefse lefse -c bioconda -y
-
+    conda create -n lefse lefse=1.1.2-0 -c bioconda -y
+    conda activate lefse
+    lefse_run.py -h # LEfSe 1.1.01
+    # RStudio terminal error，using other terminal like XShell can run OK
+    conda pack -n lefse -o lefse.tar.gz
 
 ## Kraken2 taxonomic classification (物种注释)
 

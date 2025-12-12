@@ -233,7 +233,7 @@
     # Merge pair-end files into a single file (双端合并为单个文件)
     for i in `tail -n+2 result/metadata.txt|cut -f1`;do 
       cat temp/hr/${i}_?.fastq \
-      > temp/concat/${i}.fq; done
+      > temp/concat/${i}.fq; done &
     # Check sample quantity and size (查看样品数量和大小)
     ls -shl temp/concat/*.fq
     # The data is too large and the computation time is long. You can use head to truncate the single-end analysis to a 20M sequence, i.e., 3G, with 80M lines. See Appendix: HUANN2 Reduce Input File Speedup.
@@ -283,7 +283,7 @@
     
     # Sample Merge, correct name, preview (样品合并、修正ID、预览) | sed '2i #metaphlan4'
     mkdir -p result/metaphlan4
-    merge_metaphlan_tables.py temp/humann4/*_metaphlan_profile.tsv | sed 's/_1_metaphlan//g' | tail -n+2 | sed '1 s/clade_name/ID/' \
+    merge_metaphlan_tables.py temp/humann4/*_metaphlan_profile.tsv | sed 's/_1_metaphlan//g' | tail -n+2 | sed '1 s/clade_name/ID/' | sed '2i #metaphlan4' \
       > result/metaphlan4/taxonomy.tsv
     csvtk -t stat result/metaphlan4/taxonomy.tsv
     head -n5 result/metaphlan4/taxonomy.tsv
@@ -415,7 +415,7 @@
     summarizeAbundance.py \
       -i result/humann4/ko_unstratified.tsv \
       -m ${db}/EasyMicrobiome/kegg/KO1-4.txt \
-      -c 2,3,4 -s ',+,+,' -n raw \
+      -c 2,3,4 -s ',+,+,' -n raw --dropkeycolumn \
       -o result/humann4/KEGG
     wc -l result/humann4/KEGG*
     
