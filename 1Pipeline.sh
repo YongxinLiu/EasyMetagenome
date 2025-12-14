@@ -535,7 +535,9 @@
       --threads 2 --use-names --report-zero-counts \
       --report temp/kraken2/${i}.report \
       --output temp/kraken2/${i}.output
-
+      # output classified and unclassified reads
+      # --unclassified-out "temp/kraken2/${i}.unclassified_reads#.fasta" \
+      # --classified-out "temp/kraken2/${i}.classified_reads#.fasta" \
     # Batch processing of multiple samples to generate reports consumes a lot of memory but is fast; therefore, multi-task parallelism is not recommended.
     # 多样本批处理生成report，内存消耗大但速度快，不建议用多任务并行
     for i in `tail -n+3 result/metadata.txt | cut -f1`;do
