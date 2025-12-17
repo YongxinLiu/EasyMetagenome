@@ -198,55 +198,6 @@
           --o metaphlan4/
 
 
-### SparCC NetWork (物种稀疏相关网络分析)
-
-    Rscript ${sd}/SparCC_data_processing.R \
-          --input metaphlan4/Species.txt \
-          --group metadata.txt \
-          --output metaphlan4/
-
-    # Python需要在Linux下用conda环境运行，整合到1Pipeline中
-    ## SparCC相关性(Correlation)和显著性(p value)计算
-    # 以下命令行需在linux环境中运行
-    git clone https://github.com/JCSzamosi/SparCC3.git
-    cd SparCC3
-    mkdir -p data
-    cp result12/metaphlan4/Cancer_sparcc.txt SparCC3/data/
-    cp result12/metaphlan4/Normal_sparcc.txt SparCC3/data/
-    # Step 1 - Compute correlations
-    python SparCC.py data/Cancer_sparcc.txt -i 20 \
-          --cor_file=example/basis_corr/sxtr_sparcc_Cancer.tsv \
-          > example/basis_corr/sxtr_sparcc_Cancer.log
-          
-    # Step 2 - Compute bootstraps
-    # 此处测试节省时间设置为100，建议设置为1000
-    mkdir -p example/pvals_cancer
-    python MakeBootstraps.py data/Cancer_sparcc.txt \
-          -n 100 -t bootstrap_#.txt \
-          -p example/pvals_cancer/ >> sxtr_sparcc_Cancer.log
-    
-    # Step 3 - Compute p-values
-    # 如果上面设置1000，这里99更改为999
-    for n in {0..99}; do python SparCC.py example/pvals_cancer/bootstrap_${n}.txt -i 20 \
-          --cor_file=example/pvals_cancer/bootstrap_cor_${n}.txt >> sxtr_sparcc_Cancer.log; done
-    
-    # 如果最开始设置1000，这里100更改为1000      
-    python PseudoPvals.py example/basis_corr/sxtr_sparcc_Cancer.tsv example/pvals_cancer/bootstrap_cor_#.txt 100 \
-          -o example/pvals_cancer/pvals.two_sided_cancer.txt \
-          -t two_sided >> sxtr_sparcc_cancer.log
-          
-    # step 4 - Rename file
-    mv example/pvals_cancer/pvals.two_sided_cancer.txt sxtr_pvals_cancer.two_sided.tsv
-    mv example/basis_corr/sxtr_sparcc_Cancer.tsv sxtr_cov_mat_Cancer.tsv
-
-    ## 可视化
-    Rscript ${sd}/SparCC_visualization.R \
-          --Correlation result12/metaphlan4/sxtr_cov_mat_Cancer.tsv \
-          --Pvalue result12/metaphlan4/sxtr_pvals_cancer.two_sided.tsv \
-          --output result12/metaphlan4/
-
-
-
 ## HUMAnN4 functional composition (功能组成)
 
 ### Clustering heatmap (分组聚类热图）
@@ -610,3 +561,66 @@ dos2unix $sd/metaphlan_hclust_heatmap.R
       --scale TRUE --zoom 100 --all TRUE --type mean \
       --output result/coverm/group_mean.txt
     # https://www.bic.ac.cn/ImageGP/ 直接选择热图可视化
+
+
+## 附录
+
+### SparCC NetWork (物种稀疏相关网络分析)
+
+    Rscript ${sd}/SparCC_data_processing.R \
+          --input metaphlan4/Species.txt \
+          --group metadata.txt \
+          --output metaphlan4/
+
+    # Python需要在Linux下用conda环境运行，整合到1Pipeline中
+    ## SparCC相关性(Correlation)和显著性(p value)计算
+    # 以下命令行需在linux环境中运行
+    git clone https://github.com/JCSzamosi/SparCC3.git
+    cd SparCC3
+    mkdir -p data
+    cp result12/metaphlan4/Cancer_sparcc.txt SparCC3/data/
+    cp result12/metaphlan4/Normal_sparcc.txt SparCC3/data/
+    # Step 1 - Compute correlations
+    python SparCC.py data/Cancer_sparcc.txt -i 20 \
+          --cor_file=example/basis_corr/sxtr_sparcc_Cancer.tsv \
+          > example/basis_corr/sxtr_sparcc_Cancer.log
+          
+    # Step 2 - Compute bootstraps
+    # 此处测试节省时间设置为100，建议设置为1000
+    mkdir -p example/pvals_cancer
+    python MakeBootstraps.py data/Cancer_sparcc.txt \
+          -n 100 -t bootstrap_#.txt \
+          -p example/pvals_cancer/ >> sxtr_sparcc_Cancer.log
+    
+    # Step 3 - Compute p-values
+    # 如果上面设置1000，这里99更改为999
+    for n in {0..99}; do python SparCC.py example/pvals_cancer/bootstrap_${n}.txt -i 20 \
+          --cor_file=example/pvals_cancer/bootstrap_cor_${n}.txt >> sxtr_sparcc_Cancer.log; done
+    
+    # 如果最开始设置1000，这里100更改为1000      
+    python PseudoPvals.py example/basis_corr/sxtr_sparcc_Cancer.tsv example/pvals_cancer/bootstrap_cor_#.txt 100 \
+          -o example/pvals_cancer/pvals.two_sided_cancer.txt \
+          -t two_sided >> sxtr_sparcc_cancer.log
+          
+    # step 4 - Rename file
+    mv example/pvals_cancer/pvals.two_sided_cancer.txt sxtr_pvals_cancer.two_sided.tsv
+    mv example/basis_corr/sxtr_sparcc_Cancer.tsv sxtr_cov_mat_Cancer.tsv
+
+    ## 可视化
+    Rscript ${sd}/SparCC_visualization.R \
+          --Correlation result12/metaphlan4/sxtr_cov_mat_Cancer.tsv \
+          --Pvalue result12/metaphlan4/sxtr_pvals_cancer.two_sided.tsv \
+          --output result12/metaphlan4/
+
+
+### graphlan_plot (物种组成)
+
+    # Method 2. Use graphlan_plot to create plotting files
+    # 方法2. 使用graphlan_plot制作绘图文件
+    bash ${db}/EasyMicrobiome/script/taxonomy_modified.sh \
+      -i result/metaphlan4/taxonomy.spf \
+      -o result/metaphlan4/taxonomy_modified.spf
+    # 在本地和服务器运行成功，缺少R权限会运行失败
+    Rscript ${db}/EasyMicrobiome/script/graphlan_plot55.r --input result/metaphlan4/taxonomy_modified.spf \
+    	--design result/metadata.txt --type heatmap --output metaphlan4/graphlanHeatmap
+    'lib="/usr/local/lib64/R/library"'不可写; Error in install.packages("optparse", repos = site) : 无法安装程序包

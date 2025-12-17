@@ -421,8 +421,8 @@
     
 ## 2.2 GraPhlAn taxonomic and phylogenetic trees 高颜值物种或进化树
 
-    # Method 1. Use export2graphlan to create plotting files
-    # 方法1. 使用export2graphlan制作绘图文件
+    # Use export2graphlan to create plotting files
+    # 使用export2graphlan制作绘图文件
     conda activate graphlan
     # Detail parameters in PPT or run `export2graphlan.py --help`
     export2graphlan.py --skip_rows 1,2 -i result/metaphlan4/taxonomy.tsv \
@@ -436,15 +436,6 @@
     # output PDF figure, annoat and legend
     graphlan.py temp/merged_abundance.xml result/metaphlan4/graphlan.pdf --external_legends 
 
-    # Method 2. Use graphlan_plot to create plotting files
-    # 方法2. 使用graphlan_plot制作绘图文件
-    bash ${db}/EasyMicrobiome/script/taxonomy_modified.sh \
-      -i result/metaphlan4/taxonomy.spf \
-      -o result/metaphlan4/taxonomy_modified.spf
-    # 在本地和服务器运行成功，缺少R权限会运行失败
-    # Rscript ${db}/EasyMicrobiome/script/graphlan_plot55.r --input result/metaphlan4/taxonomy_modified.spf \
-    # 	--design result/metadata.txt --type heatmap --output metaphlan4/graphlanHeatmap
-    # 'lib="/usr/local/lib64/R/library"'不可写; Error in install.packages("optparse", repos = site) : 无法安装程序包
 
 ## 2.3 LEfSe Differential analysis (差异分析物种)
 
