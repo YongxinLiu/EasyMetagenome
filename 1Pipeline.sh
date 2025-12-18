@@ -434,8 +434,17 @@
     graphlan_annotate.py --annot temp/merged_abundance.annot.txt \
       temp/merged_abundance.tree.txt  temp/merged_abundance.xml
     # output PDF figure, annoat and legend
-    graphlan.py temp/merged_abundance.xml result/metaphlan4/graphlan.pdf --external_legends 
-
+    graphlan.py temp/merged_abundance.xml result/metaphlan4/graphlan.pdf --external_legends
+    
+    # Add heatmap or bar plot outside the graPhlAn taxonomic and phylogenetic trees, here use heatmap as an example
+    # graphlan annotation
+    graphlan_annotate.py --annot result/metaphlan4/graphlan/graphlan_annotate_heatmap.txt \
+        result/metaphlan4/graphlan/tree1_backbone.txt \
+        result/metaphlan4/graphlan/graphlan_heatmap.xml
+    # output PDF figure, annoat and legend
+    graphlan.py result/metaphlan4/graphlan/graphlan_heatmap.xml \
+        result/metaphlan4/graphlan/graphlan_tree_heatmap.pdf \
+        --size 6
 
 ## 2.3 LEfSe Differential analysis (差异分析物种)
 
