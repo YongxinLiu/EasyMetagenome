@@ -170,6 +170,15 @@
           --input metaphlan4/${tax}.txt --design metadata.txt \
           --group Group --output metaphlan4/${tax}.stackplot \
           --legend 10 --width 120 --height 70; done
+          
+    # Graphlan输入文件获取
+    # Add heatmap as an example, if need to plot bar use "--type bar" instead
+    Rscript ${sd}/graphlan_plot.R -h
+    Rscript ${sd}/graphlan_plot.R \
+      --input metaphlan4/taxonomy.spf \
+      --design metadata.txt \
+      --type heatmap \
+      --output metaphlan4/graphlan
 
 ### Different compare (差异比较)
 
