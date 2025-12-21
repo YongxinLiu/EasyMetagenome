@@ -615,12 +615,11 @@ dos2unix $sd/metaphlan_hclust_heatmap.R
 
 ### graphlan_plot (物种组成)
 
-    # Method 2. Use graphlan_plot to create plotting files
-    # 方法2. 使用graphlan_plot制作绘图文件
-    bash ${db}/EasyMicrobiome/script/taxonomy_modified.sh \
-      -i result/metaphlan4/taxonomy.spf \
-      -o result/metaphlan4/taxonomy_modified.spf
-    # 在本地和服务器运行成功，缺少R权限会运行失败
-    Rscript ${db}/EasyMicrobiome/script/graphlan_plot55.r --input result/metaphlan4/taxonomy_modified.spf \
-    	--design result/metadata.txt --type heatmap --output metaphlan4/graphlanHeatmap
-    'lib="/usr/local/lib64/R/library"'不可写; Error in install.packages("optparse", repos = site) : 无法安装程序包
+    # Graphlan输入文件获取
+    # Add heatmap as an example, if need to plot bar use "--type bar" instead
+    Rscript ${sd}/graphlan_plot.R -h
+    Rscript ${sd}/graphlan_plot.R \
+      --input metaphlan4/taxonomy.spf \
+      --design metadata.txt \
+      --type heatmap \
+      --output metaphlan4/graphlan

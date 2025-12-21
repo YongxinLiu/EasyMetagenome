@@ -410,7 +410,7 @@
     # Database：https://benlangmead.github.io/aws-indexes/k2  
     # set version, current 20250714, set each type directory
     db=~/db
-    v=20250714
+    v=20251015
     mkdir -p ${db}/kraken2 && cd ${db}/kraken2
     mkdir -p pluspf16g pluspf pluspfp
 
@@ -431,7 +431,7 @@
     # the compressed file is 158.8GB, and the uncompressed file is 214.5GB (PlusPFP).
     # 方案3. 下载标准+原生动物+真菌+植物完整库，压缩包158.8G，解压214.5G (PlusPFP) 
     wget -c https://genome-idx.s3.amazonaws.com/kraken/k2_pluspfp_${v}.tar.gz
-    # wget -c ftp://download.nmdc.cn/tools/meta/kraken2/k2_pluspf_${v}.tar.gz
+    # wget -c ftp://download.nmdc.cn/tools/meta/kraken2/k2_pluspfp_${v}.tar.gz
     time tar xvzf ${db}/kraken2/k2_pluspfp_${v}.tar.gz -C pluspfp # 6min
 
 
