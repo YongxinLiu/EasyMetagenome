@@ -9,7 +9,7 @@
     # Cititon(引文): Bai, et al. 2025. EasyMetagenome: A User‐Friendly and Flexible Pipeline for Shotgun Metagenomic Analysis in Microbiome Research. iMeta 4: e70001. https://doi.org/10.1002/imt2.70001
 
     # Set work directory(设置工作目录)
-    wd=/d/meta/result
+    wd=/d/Download/github/EasyMetagenome/result
     sd=/d/Download/github/EasyMicrobiome/script
     PATH=$PATH:$sd/../win:$sd
     cd $wd

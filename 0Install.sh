@@ -225,7 +225,7 @@
     wget -c http://ftp.ensemblgenomes.org/pub/plants/release-51/fasta/arabidopsis_thaliana/dna/Arabidopsis_thaliana.TAIR10.dna.toplevel.fa.gz
     mv Arabidopsis_thaliana.TAIR10.dna.toplevel.fa.gz tair10.fa.gz
     # unzip and index, 3 minutes (解压，建索引，120M 3分钟)
-    gunzip tair10.fa.gz`
+    gunzip tair10.fa.gz
     time bowtie2-build -f tair10.fa tair10 --threads 4
     cd ${db}
 
@@ -731,7 +731,7 @@
     tar xvzf uniref100.KO.1.dmnd.tar.gz
     
     #指定数据库
-    export CHECKM2DB="/data/meta/db/checkm2/CheckM2_database/uniref100.KO.1.dmnd"  
+    export CHECKM2DB="${db}/checkm2/CheckM2_database/uniref100.KO.1.dmnd"  
     # 测试
     checkm2 testrun
     
