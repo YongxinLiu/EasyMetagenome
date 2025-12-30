@@ -3,7 +3,7 @@
 # 2EasyMetagenome Visualization (2易宏基因组统计与可视化)
 
     # Authors(作者): Yong-Xin Liu(刘永鑫), Defeng Bai(白德凤), Tong Chen(陈同) et al.
-    # Version(版本): 1.24, 2025/11/25
+    # Version(版本): 1.25, 2026/1/1
     # Operation System(操作系统): Linux Ubuntu 22.04+ / CentOS 7.7+ 
     # Homepage(主页): https://github.com/YongxinLiu/EasyMetagenome
     # Cititon(引文): Bai, et al. 2025. EasyMetagenome: A User‐Friendly and Flexible Pipeline for Shotgun Metagenomic Analysis in Microbiome Research. iMeta 4: e70001. https://doi.org/10.1002/imt2.70001
@@ -19,6 +19,7 @@
 ### Alpha diversity (α多样性)
 
     # index calculation (多样性指数计算)
+    sed -i /^#/d metaphlan4/taxonomy.tsv
     Rscript ${sd}/metaphlan4_alpha.R -h
     Rscript $sd/metaphlan4_alpha.R \
       -i metaphlan4/taxonomy.tsv \
@@ -38,7 +39,7 @@
       -o metaphlan4/ \
       -w 89 -e 59
   
-    # 6 Alpha diversity boxplot
+    # 5 Alpha diversity boxplot
     for i in `head -n1 metaphlan4/alpha.txt|cut -f 2-`;do
     Rscript $sd/alpha_boxplot.R -i metaphlan4/alpha.txt -a ${i} \
       -d metadata.txt -n Group -w 89 -e 59 \
@@ -54,7 +55,7 @@
       -o metaphlan4/ \
       -w 49 -e 79
   
-    # 6 Alpha diversity boxplot
+    # 5 Alpha diversity boxplot
     for i in `head -n1 metaphlan4/alpha.txt|cut -f 2-`;do
     Rscript $sd/alpha_boxplot_new.R -i metaphlan4/alpha.txt -a ${i} \
       -d metadata.txt -n Group -w 49 -e 79 \
