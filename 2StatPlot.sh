@@ -3,13 +3,13 @@
 # 2EasyMetagenome Visualization (2易宏基因组统计与可视化)
 
     # Authors(作者): Yong-Xin Liu(刘永鑫), Defeng Bai(白德凤), Tong Chen(陈同) et al.
-    # Version(版本): 1.24, 2025/11/25
+    # Version(版本): 1.25, 2026/1/22
     # Operation System(操作系统): Linux Ubuntu 22.04+ / CentOS 7.7+ 
     # Homepage(主页): https://github.com/YongxinLiu/EasyMetagenome
     # Cititon(引文): Bai, et al. 2025. EasyMetagenome: A User‐Friendly and Flexible Pipeline for Shotgun Metagenomic Analysis in Microbiome Research. iMeta 4: e70001. https://doi.org/10.1002/imt2.70001
 
     # Set work directory(设置工作目录)
-    wd=/d/meta/result
+    wd=/d/Download/github/EasyMetagenome/result
     sd=/d/Download/github/EasyMicrobiome/script
     PATH=$PATH:$sd/../win:$sd
     cd $wd
@@ -19,6 +19,7 @@
 ### Alpha diversity (α多样性)
 
     # index calculation (多样性指数计算)
+    sed -i '/^#/d' metaphlan4/taxonomy.tsv
     Rscript ${sd}/metaphlan4_alpha.R -h
     Rscript $sd/metaphlan4_alpha.R \
       -i metaphlan4/taxonomy.tsv \
@@ -27,7 +28,7 @@
       -o metaphlan4/alpha
 
     # Plot alpha diversity boxplot (绘制多样性指数箱线图)
-    # result: input+richness/shannon/shannon/invsimpson/Pielou_evenness, sig using different letter a/b/c
+    # result: metaphlan4/boxplot_{richness/shannon/shannon/invsimpson/Pielou_evenness}.pdf, sig using different letter a/b/c
     Rscript $sd/alpha_boxplot.R -h
     head -n1 metaphlan4/alpha.txt
     Rscript $sd/alpha_boxplot.R \
@@ -38,7 +39,7 @@
       -o metaphlan4/ \
       -w 89 -e 59
   
-    # 6 Alpha diversity boxplot
+    # 5 Alpha diversity boxplot
     for i in `head -n1 metaphlan4/alpha.txt|cut -f 2-`;do
     Rscript $sd/alpha_boxplot.R -i metaphlan4/alpha.txt -a ${i} \
       -d metadata.txt -n Group -w 89 -e 59 \
@@ -46,6 +47,7 @@
     done
 
     # Alpha diversity boxplot with pvalue
+    # result: p_boxplot_${alpha_diversity}.pdf
     Rscript $sd/alpha_boxplot_new.R \
       -i metaphlan4/alpha.txt \
       -a shannon \
@@ -54,7 +56,7 @@
       -o metaphlan4/ \
       -w 49 -e 79
   
-    # 6 Alpha diversity boxplot
+    # 5 Alpha diversity boxplot
     for i in `head -n1 metaphlan4/alpha.txt|cut -f 2-`;do
     Rscript $sd/alpha_boxplot_new.R -i metaphlan4/alpha.txt -a ${i} \
       -d metadata.txt -n Group -w 49 -e 79 \
@@ -67,37 +69,36 @@
        else {for(i=2;i<=NF;i++) if($i>0.5) print $1, a[i];}}' \
        metaphlan4/taxonomy.tsv > metaphlan4/taxonomy_high.tsv
     wc -l metaphlan4/taxonomy_high.tsv
-    # http://www.ehbio.com/test/venn/#/ Online drawing, supports real-time viewing of element intersections 在线绘制，支持实时查看元素交集
-    # 引文：Mei Yang, Tong Chen, Yong-Xin Liu, Luqi Huang. 2024. Visualizing set relationships: 
-    # EVenn's comprehensive approach to Venn diagrams. iMeta 3: e184. https://doi.org/10.1002/imt2.184
-    # 本地5组比较:-f输入文件,-a/b/c/d/g分组名,-w/u为宽高英寸,-p输出文件名后缀
+    # EVenn (https://www.bic.ac.cn/test/venn/#/) supports 6 groups and real-time viewing of element intersections (支持实时查看元素交集)
+    # Ref：Yang, Tong Chen, Yong-Xin Liu, Luqi Huang. 2024. Visualizing set relationships: EVenn's comprehensive approach to Venn diagrams. iMeta 3: e184. https://doi.org/10.1002/imt2.184
+    # script support 2-5 group: -f input, -a/b/c/d/g group, -w/u width and length, -p output filename
+    # 本地2-5组比较:-f输入文件,-a/b/c/d/g分组名,-w/u为宽高英寸,-p输出文件名后缀
     bash ${sd}/sp_vennDiagram.sh -f metaphlan4/taxonomy_high.tsv \
       -a C1 -b C2 -c Y1 -d Y2 -g Y3 \
       -w 4 -u 4 \
       -p C1_C2_Y1_Y2_Y3
 
     # Group mean (求均值再两组比较)
-    sed -i '/^#/d' metaphlan4/taxonomy.tsv
     Rscript ${sd}/otu_mean.R --input metaphlan4/taxonomy.tsv \
       --metadata metadata.txt \
       --group Group --thre 0 \
       --scale F --all TRUE --type mean \
       --output metaphlan4/group_mean.txt    
-    # Filter abundance > 0.5 in each group 筛选每个组>0.5%的分类单元，包括界门纲目科属种
+    # Filter abundance > 0.5 in each group (筛选每个组>0.5%的分类单元，包括界门纲目科属种)
     awk 'BEGIN{OFS=FS="\t"}{if(FNR==1) {for(i=2;i<=NF;i++) a[i]=$i;} \
        else {for(i=2;i<=NF;i++) if($i>0.5) print $1, a[i];}}' \
        metaphlan4/group_mean.txt > metaphlan4/group_high.tsv
     bash ${sd}/sp_vennDiagram.sh -f metaphlan4/group_high.tsv \
       -a Centenarians -b Young -c All \
-      -w 8 -u 4.5 \
+      -w 8 -u 6 \
       -p Centenarians_Young_All      
 
-## Beta diversity (β多样性)
+### Beta diversity (β多样性)
   
-    # Distance calculation(距离计算)
-    # 可选计算分类级别-t：1-界；2-门；3-纲；4-目；5-科；6-属；7-种
-    # 可选距离-m："bray", "euclidean", "jaccard", "manhattan"等
-    # 这里以物种水平和bray-curtis距离举例
+    # Distance calculation (距离计算)
+    # -t taxonomy level: 1 kingdom; 2 phylum; 3 order; 4 class; 5 family; 6 genus; 7 species
+    # -m distance type："bray", "euclidean", "jaccard", "manhattan" etc.
+    # e.g. Claculate level 7 (species) in bray-curtis distance
     Rscript ${sd}/metaphlan4_beta.R -h
     Rscript $sd/metaphlan4_beta.R \
       -i metaphlan4/taxonomy.tsv \
@@ -106,10 +107,8 @@
       -m bray \
       -o metaphlan4/beta
 
-    ### Beta多样性PCoA分析  
-    # PCoA分析输入文件，选择分组，输出文件，图片尺寸mm，统计见beta_pcoa_stat.txt
-    # 可选距离有 bray_curtis, euclidean, jaccard, manhattan
-    # 此处可能报错“duplicated row.names”,需要给beta.txt增加行名后运行
+    # Beta diversity in Principal Coordinates Analysis (PCoA) 
+    # input distance matrix, group name, width/height in mm, stat in beta_pcoa_stat.txt
     Rscript $sd/beta_pcoa.R \
       --input metaphlan4/beta_bray.txt \
       --design metadata.txt \
@@ -121,18 +120,17 @@
 ### Taxonomic composition (物种组成)
 
     # Heatmap (热图)
-    # Show help (显示脚本帮助)
+    # -h: Show help (显示脚本帮助)
     Rscript ${sd}/metaphlan_hclust_heatmap.R -h
-    # 按指定分类汇总、排序并取Top25种绘制热图
-    # -i输入metaphlan4结果转换的spf文件；
-    # -t指定分类级别，可选Kingdom/Phylum/Class/Order/Family/Genus/Species/Strain(界门纲目科属种株)，推荐门，目，属
-    # -n 输出物种数量，默认为25，最大值为该类型的数量
-    # -w、-e指定图片的宽和高，单位为毫米(mm)
-    # -o输出图pdf、表txt前缀，默认Heatmap+(-t)+(-n)
-    # Order Top 20, Family Top 25, Genus Top 30
+    # stat  (显示脚本帮助)
     csvtk -t stat metaphlan4/taxonomy.spf
+    # Taxonomy level: Order, Top n taxa to plot heatmap (指定分类级、取前n种绘制热图）
+    # Order Top 20, Family Top 25, Genus Top 30
     tax=Order
-    n=20
+    n=25
+    # -i: input metaphlan4 result in spf format
+    # -t: taxa in Kingdom/Phylum/Class/Order/Family/Genus/Species/Strain (界门纲目科属种株)，推荐门，目，属
+    # -o: output figure in pdf, data in txt, default name Heatmap+($tax).pdf/txt
     Rscript $sd/metaphlan_hclust_heatmap.R \
       -i metaphlan4/taxonomy.spf \
       -t ${tax} -n ${n} \
@@ -144,10 +142,10 @@
     Rscript $sd/metaphlan_boxplot.R \
           -i metaphlan4/taxonomy.spf \
           -t ${tax} \
-          -n 30 \
+          -n ${n} \
           -o metaphlan4/boxplot_${tax};done
       
-    # 组间比较箱线图 *_compare.pdf
+    # Compare group boxplot *_compare.pdf (组间比较箱线图)
     for tax in Phylum Family Genus Species; do
     Rscript $sd/metaphlan4_boxplot_compare.R \
           -i metaphlan4/taxonomy.spf \
@@ -164,7 +162,7 @@
           --group Group --output metaphlan4/${tax}.stackplot \
           --legend 10 --width 120 --height 70; done
 
-    # 排序分面堆叠柱状图
+    # Sorted stackplot (排序分面堆叠柱状图)
     for tax in Phylum Genus Species; do
     Rscript ${sd}/tax_stackplot_order.R \
           --input metaphlan4/${tax}.txt --design metadata.txt \
@@ -182,8 +180,11 @@
 
 ### Different compare (差异比较)
 
-    ## STAMP组间比较图
+    ## STAMP
+    # If you encounter errors or no results, lower the threshold and p-value. 
+    # The example sample size is small cause no significant, change it to P<0.1.
     # 如果遇见报错无结果调低threshold和pvalue值，此处样本少无显著改为P<0.1
+    # Set compared groups, using '-' as seperate
     compare="Centenarians-Young"
     Rscript ${sd}/compare_stamp.R \
           --input metaphlan4/Genus.txt --metadata metadata.txt \
@@ -624,12 +625,11 @@ dos2unix $sd/metaphlan_hclust_heatmap.R
 
 ### graphlan_plot (物种组成)
 
-    # Method 2. Use graphlan_plot to create plotting files
-    # 方法2. 使用graphlan_plot制作绘图文件
-    bash ${db}/EasyMicrobiome/script/taxonomy_modified.sh \
-      -i result/metaphlan4/taxonomy.spf \
-      -o result/metaphlan4/taxonomy_modified.spf
-    # 在本地和服务器运行成功，缺少R权限会运行失败
-    Rscript ${db}/EasyMicrobiome/script/graphlan_plot55.r --input result/metaphlan4/taxonomy_modified.spf \
-    	--design result/metadata.txt --type heatmap --output metaphlan4/graphlanHeatmap
-    'lib="/usr/local/lib64/R/library"'不可写; Error in install.packages("optparse", repos = site) : 无法安装程序包
+    # Graphlan输入文件获取
+    # Add heatmap as an example, if need to plot bar use "--type bar" instead
+    Rscript ${sd}/graphlan_plot.R -h
+    Rscript ${sd}/graphlan_plot.R \
+      --input metaphlan4/taxonomy.spf \
+      --design metadata.txt \
+      --type heatmap \
+      --output metaphlan4/graphlan

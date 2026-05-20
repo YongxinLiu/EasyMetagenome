@@ -6,15 +6,15 @@ library(VennDiagram)
 
 
 if ("pdf" == "png") {
-    png(filename="metaphlan4/group_high.tsv.Centenarians_Young_All.vennDiagram.png", width=8, height=4.5,
+    png(filename="metaphlan4/group_high.tsv.Centenarians_Young_All.vennDiagram.png", width=8, height=6,
         res=300, units="cm")
 } else if ("pdf" == "eps") {
     postscript(file="metaphlan4/group_high.tsv.Centenarians_Young_All.vennDiagram.eps", onefile=FALSE, horizontal=FALSE,
                paper="special", width=10, height = 12, pointsize=10)
 } else if ("pdf" == "pdf") {
-    pdf(file="metaphlan4/group_high.tsv.Centenarians_Young_All.vennDiagram.pdf", width=8, height=4.5)
+    pdf(file="metaphlan4/group_high.tsv.Centenarians_Young_All.vennDiagram.pdf", width=8, height=6)
 }else if ("pdf" == "svg") {
-    svg(filename="metaphlan4/group_high.tsv.Centenarians_Young_All.vennDiagram.svg", width=8, height=4.5,
+    svg(filename="metaphlan4/group_high.tsv.Centenarians_Young_All.vennDiagram.svg", width=8, height=6,
         pointsize=10)
 } else {
     print("This format is currently unsupported. Please check the file <Rplots.pdf> in current directory.")

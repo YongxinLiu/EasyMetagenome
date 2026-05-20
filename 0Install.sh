@@ -225,7 +225,7 @@
     wget -c http://ftp.ensemblgenomes.org/pub/plants/release-51/fasta/arabidopsis_thaliana/dna/Arabidopsis_thaliana.TAIR10.dna.toplevel.fa.gz
     mv Arabidopsis_thaliana.TAIR10.dna.toplevel.fa.gz tair10.fa.gz
     # unzip and index, 3 minutes (解压，建索引，120M 3分钟)
-    gunzip tair10.fa.gz`
+    gunzip tair10.fa.gz
     time bowtie2-build -f tair10.fa tair10 --threads 4
     cd ${db}
 
@@ -410,7 +410,7 @@
     # Database：https://benlangmead.github.io/aws-indexes/k2  
     # set version, current 20250714, set each type directory
     db=~/db
-    v=20250714
+    v=20251015
     mkdir -p ${db}/kraken2 && cd ${db}/kraken2
     mkdir -p pluspf16g pluspf pluspfp
 
@@ -431,7 +431,7 @@
     # the compressed file is 158.8GB, and the uncompressed file is 214.5GB (PlusPFP).
     # 方案3. 下载标准+原生动物+真菌+植物完整库，压缩包158.8G，解压214.5G (PlusPFP) 
     wget -c https://genome-idx.s3.amazonaws.com/kraken/k2_pluspfp_${v}.tar.gz
-    # wget -c ftp://download.nmdc.cn/tools/meta/kraken2/k2_pluspf_${v}.tar.gz
+    # wget -c ftp://download.nmdc.cn/tools/meta/kraken2/k2_pluspfp_${v}.tar.gz
     time tar xvzf ${db}/kraken2/k2_pluspfp_${v}.tar.gz -C pluspfp # 6min
 
 
@@ -731,7 +731,7 @@
     tar xvzf uniref100.KO.1.dmnd.tar.gz
     
     #指定数据库
-    export CHECKM2DB="/data/meta/db/checkm2/CheckM2_database/uniref100.KO.1.dmnd"  
+    export CHECKM2DB="${db}/checkm2/CheckM2_database/uniref100.KO.1.dmnd"  
     # 测试
     checkm2 testrun
     
