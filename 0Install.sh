@@ -825,11 +825,11 @@
 
 # 5. Genome and virome (单菌基因组/病毒组等)
 
-## anvio-8 pangenome (泛基因组)
+## anvio-9 pangenome (泛基因组)
 
     # 安装 https://anvio.org/install/linux/stable/
-    conda create -y --name anvio9 python=3.10
-    conda activate anvio9
+    conda create -y --name anvio-9 python=3.10
+    conda activate anvio-9
 
     # 安装依赖
     conda install -y -c conda-forge -c bioconda python=3.10 \
@@ -841,26 +841,26 @@
 
     conda install -y -c bioconda fastani
     conda install -c conda-forge compilers
+    conda install pip -y
 
     # install anvi'o
     # curl -L https://github.com/merenlab/anvio/releases/download/v8/anvio-8.tar.gz \
     #        --output temp/anvio-8.tar.gz
     curl -L https://github.com/merenlab/anvio/releases/download/v9/anvio-9.tar.gz \
         --output anvio-9.tar.gz
-    mv anvio-9.tar.gz anvio9.tar.gz
     # 安装 
     # pip install temp/anvio8.tar.gz -i https://pypi.tuna.tsinghua.edu.cn/simple  #使用清华源加速安装
     export CFLAGS="-I$CONDA_PREFIX/include/python3.10"
     export CPPFLAGS="-I$CONDA_PREFIX/include/python3.10"
     export LDFLAGS="-L$CONDA_PREFIX/lib"
-    pip install datrie
-    pip install anvio9.tar.gz
+    python -m pip install datrie
+    python -m pip install anvio-9.tar.gz
     #查看是否安装成功，弹出帮助页面即成功
     anvi-merge -h  
 
     #打包，方便安装
     cd ~/project/EasyMetagenome/package
-    n=anvio9
+    n=anvio-9
     conda pack -f --ignore-missing-files -n ${n} -o ${n}.tar.gz
     cd ..
 
