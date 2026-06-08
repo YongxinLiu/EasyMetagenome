@@ -3,7 +3,7 @@
 # 1EasyMetagenome Pipeline (1易宏基因组流程)
 
     # Authors(作者): Yong-Xin Liu(刘永鑫), Defeng Bai(白德凤), Tong Chen(陈同) et al.
-    # Version(版本): 1.25, 2026/5/20
+    # Version(版本): 1.25, 2026/6/8
     # Operation System(操作系统): Linux Ubuntu 22.04+ / CentOS 7.7+ 
     # Homepage(主页): https://github.com/YongxinLiu/EasyMetagenome
     # Cititon(引文): Bai, et al. 2025. EasyMetagenome: A User‐Friendly and Flexible Pipeline for Shotgun Metagenomic Analysis in Microbiome Research. iMeta 4: e70001. https://doi.org/10.1002/imt2.70001
@@ -989,6 +989,7 @@
       -o result/NR/tax
     wc -l result/NR/tax*|sort -n
 
+
 # 4. Binning (四、分箱挖掘单菌基因组)
 
 ## MetwWRAP binning (分箱)
@@ -1146,6 +1147,8 @@
     mkdir -p temp/drep95
 
     # dereplicate by species：10 min; 44 genome, 22 from mix samples, 22 from signle samle
+    # When the drep_in directory contains a large number of genome files (e.g., >20,000 .fa files), the --ignoreGenomeQuality option can be enabled to bypass the CheckM-based genome quality assessment performed by dRep. Genome quality metrics can subsequently be obtained by running CheckM2 separately.
+    # 如果drep_in文件夹中有大量的基因组文件(例如，超过20000个fa文件)，可选择增加“--ignoreGenomeQuality”跳过dRep中包含的CheckM步骤，后续通过运行CheckM2获取质控文件
     time dRep dereplicate temp/drep95/ \
       -g temp/drep_in/*.fa  \
       -sa 0.95 -nc 0.30 -comp 50 -con 10 -p 8
@@ -1199,8 +1202,8 @@
     # Merge to table (结果合并)
     mkdir -p result/coverm
     conda activate humann4
-    sed -i 's/_1.fastq Relative Abundance (%)//' temp/coverm/*.txt
-    humann_join_tables --input temp/coverm --file_name txt --output result/coverm/abundance.tsv
+    sed -i 's/_1.fastq Relative Abundance (%)//' temp/coverm_all/*.txt
+    humann_join_tables --input temp/coverm_all --file_name txt --output result/coverm/abundance.tsv
     csvtk -t stat result/coverm/abundance.tsv
 
     # Group mean (按组求均值，需要metadata中有3列且每个组有多个样本)
@@ -1411,7 +1414,7 @@
       --genome-fasta-directory temp/drep95/dereplicated_genomes/ -x fa \
       -o temp/coverm/{}.txt -t 32"
     # 结果合并
-    conda activate humann3
+    conda activate humann4
     sed -i 's/_1.fastq Relative Abundance (%)//' temp/coverm/*.txt
     humann_join_tables --input temp/coverm \
       --file_name txt \
@@ -1425,7 +1428,7 @@
   	memusg -t gtdbtk classify_wf \
   	  --genome_dir temp/drep_in/ \
   	  --out_dir temp/gtdb_all/ \
-        --extension fa --skip_ani_screen \
+        --extension fa --place_species \
         --prefix tax \
         --cpus 16
       
@@ -1435,7 +1438,7 @@
   	gtdbtk classify_wf \
   	  --genome_dir temp/drep95/dereplicated_genomes/ \
   	  --out_dir temp/gtdb_95 \
-        --extension fa --skip_ani_screen \
+        --extension fa --place_species \
         --prefix tax \
         --cpus 8
   	# Phylogenetic tree infer
@@ -1715,38 +1718,40 @@
     ## 安装ncbi-cogs用于功能注释, 如果出现数据库下载失败问题，参考https://github.com/merenlab/anvio/blob/master/anvio/docs/programs/anvi-setup-ncbi-cogs.md解决
     anvi-setup-ncbi-cogs -T 24 --just-do-it --reset
     
-    ## COGs功能注释
+    ## COGs功能注释，运行时间较长，24线程13约天运行完成
     anvi-run-ncbi-cogs -c $species-isolates-CONTIGS.db --search-with blastp -T 24
     
     ## 导出注释得到的功能数据表
     # 如果没有进行COGs功能注释，可跳过该步骤
-    touch ncbi-cogs-results-fmt-$species-isolates01.tsv
-    anvi-import-functions -c $species-isolates-CONTIGS.db \
-                  -i ncbi-cogs-results-fmt-$species-isolates01.tsv
+    touch ncbi-cogs-results-fmt-$species-isolates01.txt
+    anvi-export-functions -c $species-isolates-CONTIGS.db \
+                  -o ncbi-cogs-results-fmt-$species-isolates01.txt
     
-    ## 建议映射             
+    ## 建立映射             
     bowtie2-build $species-isolates.fa $species-isolates
     
     ## 使用 bowtie2和默认参数（“--sensitive”），将宏基因组匹配到 contigs 数据库中的contigs上
     prefix="$species-isolates"
     ## 单样本处理示例，其它样本相同
-    bowtie2 -x $prefix -1 /temp/hr2/FC1_1.fastq -2 \
-                  /temp/hr2/FC1_2.fastq --no-unal \
-                  --threads 24 | samtools view -b - | samtools sort -@ 12 - > bt_mapped_Alistipes-putredinis-isolates/FC1.bam
+    # BAM 文件的输出目录
+    output_dir="bt_mapped_$species-isolates"
+    # 确保输出目录存在
+    mkdir -p $output_dir
+    bowtie2 -x $prefix -1 ${wd}/temp/hr/C1_1.fastq -2 \
+                  ${wd}/temp/hr/C1_2.fastq --no-unal \
+                  --threads 24 | samtools view -b - | samtools sort -@ 12 - > ${output_dir}/C1.bam
     ## 排序和建立索引
     cd bt_mapped_Alistipes-putredinis-isolates
-    samtools index FC1.bam
+    samtools index C1.bam
     cd ..
 
     ## 批量运行
     # 设置 Bowtie2 索引的前缀
     prefix="$species-isolates"
     # 包含 .fastq 文件的目录
-    input_dir="../hr2"
-    # BAM 文件的输出目录
-    output_dir="bt_mapped_$species-isolates"
-    # 确保输出目录存在
-    mkdir -p $output_dir
+    #input_dir="../hr2"
+    input_dir="${wd}/temp/hr"
+    
     
     # 循环遍历输入目录中的所有 *_1.fastq 文件
     for fastq1 in "$input_dir"/*_1.fastq; do
@@ -1771,16 +1776,16 @@
     done
 
     ## 使用 anvi’o 分析映射结果
-    # 单样本运行
-    anvi-profile -i bt_mapped_$species-isolates/FC1.bam -c $prefix-CONTIGS.db \
-                  -W -M 2500 -T 12 --write-buffer-size 500 -o profs_mapped_$species-isolates/FC1/
-    
-    # 批量运行
     # 定义输入 BAM 目录
     bam_dir="bt_mapped_$species-isolates/"
     # 定义分析结果的输出目录
     output_dir="profs_mapped_$species-isolates"
     mkdir -p $output_dir
+    # 单样本运行
+    anvi-profile -i bt_mapped_$species-isolates/C1.bam -c $prefix-CONTIGS.db \
+                  -W -M 2500 -T 12 --write-buffer-size 500 -o profs_mapped_$species-isolates/C1/
+    
+    # 批量运行
     # 循环遍历输入目录中的所有 BAM 文件
     for bam_file in $bam_dir/*.bam; do
       # 从 BAM 文件中提取样本名称（例如 FC1、FE1 等）
@@ -1801,11 +1806,12 @@
                -o $species-isolates-MERGED \
                -c $species-isolates-CONTIGS.db
     ## 得到集合文件
-    for split_name in `sqlite3 $species-isolates-CONTIGS.db 'select split from splits_basic_info;'`
+    for split_name in $(sqlite3 ${species}-isolates-CONTIGS.db \
+        "select split from splits_basic_info;")
     do
-        GENOME=`echo $split_name | awk 'BEGIN{FS="-"}{print $1}'`
-        echo -e "$split_name\t$GENOME"
-    done > $species-GENOME-COLLECTION.txt
+        GENOME=$(awk -F'-' '{print $1}' <<< "$split_name")
+        printf "%s\t%s\n" "$split_name" "$GENOME"
+    done > ${species}-GENOME-COLLECTION.txt
     
     anvi-import-collection $species-GENOME-COLLECTION.txt \
                            -c $species-isolates-CONTIGS.db \
@@ -1827,7 +1833,14 @@
     done
 
     ## 泛基因组计算
-    anvi-gen-genomes-storage -i $species-isolates-internal-genomes-table.txt \
+    # 随机选取100个基因组
+    head -n 1 ${species}-isolates-internal-genomes-table.txt \
+        > ${species}-100genomes.txt
+    tail -n +2 ${species}-isolates-internal-genomes-table.txt \
+    | shuf -n 100 \
+    >> ${species}-100genomes.txt
+    # 构建泛基因组数据集
+    anvi-gen-genomes-storage -i ${species}-100genomes.txt\
                              -o $species-PAN-GENOMES.db
     anvi-pan-genome -g $species-PAN-GENOMES.db \
                     --use-ncbi-blast \
