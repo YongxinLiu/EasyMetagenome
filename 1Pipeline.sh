@@ -3,7 +3,7 @@
 # 1EasyMetagenome Pipeline (1易宏基因组流程)
 
     # Authors(作者): Yong-Xin Liu(刘永鑫), Defeng Bai(白德凤), Tong Chen(陈同) et al.
-    # Version(版本): 1.24, 2025/11/22
+    # Version(版本): 1.25, 2026/6/8
     # Operation System(操作系统): Linux Ubuntu 22.04+ / CentOS 7.7+ 
     # Homepage(主页): https://github.com/YongxinLiu/EasyMetagenome
     # Cititon(引文): Bai, et al. 2025. EasyMetagenome: A User‐Friendly and Flexible Pipeline for Shotgun Metagenomic Analysis in Microbiome Research. iMeta 4: e70001. https://doi.org/10.1002/imt2.70001
@@ -157,7 +157,7 @@
     # 创建目录、启动环境、记录版本
     mkdir -p temp/hr
     conda activate kneaddata
-    kneaddata --version # v0.12.3
+    kneaddata --version # v0.12.4
 
     # Single-sample host removal (单样本去宿主)
     i=`tail -n+2 result/metadata.txt|cut -f1 | head -n1`
@@ -170,7 +170,7 @@
 
     # Multi-sample host removal, this step occupies 5 times the space of the original data, 3m
     # 多样本去宿主,此步占用原始数据5x空间,5m
-    time tail -n+3 result/metadata.txt | cut -f1 | rush -j 2 \
+    time tail -n+2 result/metadata.txt | cut -f1 | rush -j 2 \
       "kneaddata \
         -i1 temp/qc/{1}_1.fastq -i2 temp/qc/{1}_2.fastq \
         -o temp/hr/ \
@@ -233,7 +233,7 @@
     # Merge pair-end files into a single file (双端合并为单个文件)
     for i in `tail -n+2 result/metadata.txt|cut -f1`;do 
       cat temp/hr/${i}_?.fastq \
-      > temp/concat/${i}.fq; done &
+      > temp/concat/${i}.fq; done
     # Check sample quantity and size (查看样品数量和大小)
     ls -shl temp/concat/*.fq
     # The data is too large and the computation time is long. You can use head to truncate the single-end analysis to a 20M sequence, i.e., 3G, with 80M lines. See Appendix: HUANN2 Reduce Input File Speedup.
@@ -252,20 +252,30 @@
     mkdir -p temp/humann4
     humann --version # v4.0.0.alpha.1
     humann_config
-
-    # Single-sample test (单样本测试): Y1 657M, 8p, 32min
+    
+    # Single-sample test (单样本测试): Y1 657M, 8p, 32min  
     i=`tail -n+2 result/metadata.txt|cut -f1 | head -n1`
-    time humann --input temp/concat/${i}.fq --threads 8 \
-      --metaphlan-options "--input_type fastq --bowtie2db ${db}/metaphlan4 --index mpa_vOct22_CHOCOPhlAnSGB_202403 --offline -t rel_ab_w_read_stats --nproc 8" \
-      --output temp/humann4
-      
+	  time humann \
+  	  --input temp/concat/${i}.fq \
+  	  --output temp/humann4 \
+      --threads 3 \
+      --metaphlan-options "--input_type fastq --bowtie2db ${db}/metaphlan4 --index mpa_vOct22_CHOCOPhlAnSGB_202403 --offline -t rel_ab_w_read_stats --nproc 3" \
+      --nucleotide-database ${db}/humann4/chocophlan \
+      --protein-database ${db}/humann4/uniref \
+      --utility-database ${db}/humann4/utility_mapping
+    
     # Multi-sample parallel computing, test data with 6 samples in dual parallel: 2h, recommended 16p, 3h/6G;
     # 多样本并行计算，测试数据6个样本双并行：2h，推荐16p，3h/6G；
-    # -n+3 start from second samples, --threads set 8/16/32 to accelerate
-    time tail -n+3 result/metadata.txt | cut -f1 | rush -j 2 \
-      "humann --input temp/concat/{1}.fq --threads 8 \
-        --metaphlan-options '--input_type fastq --bowtie2db ${db}/metaphlan4 --index mpa_vOct22_CHOCOPhlAnSGB_202403 --offline -t rel_ab_w_read_stats --nproc 8'  \
-        --output temp/humann4/ "
+    # -n+3 start from second samples, --threads set 8/16/32 to accelerate    
+    time tail -n+2 result/metadata.txt | cut -f1 | rush -j 2 \
+      "humann \
+  	  --input temp/concat/{1}.fq \
+  	  --output temp/humann4 \
+      --threads 8 \
+      --metaphlan-options '--input_type fastq --bowtie2db ${db}/metaphlan4 --index mpa_vOct22_CHOCOPhlAnSGB_202403 --offline -t rel_ab_w_read_stats --nproc 8' \
+      --nucleotide-database ${db}/humann4/chocophlan \
+      --protein-database ${db}/humann4/uniref \
+      --utility-database ${db}/humann4/utility_mapping "
 
     # (Optional) Run MetaPhlAn4 separately (可选)单独运行MetaPhlAn4
     metaphlan -v # MetaPhlAn version 4.1.1 (11 Mar 2024)
@@ -306,8 +316,8 @@
     # 整合后的输出：
     # *   result/metaphlan4/taxonomy.tsv 物种丰度表
     # *   result/metaphlan4/taxonomy.spf 物种丰度表（用于stamp分析）
-    # *   result/humann3/pathabundance_relab_unstratified.tsv 通路丰度表
-    # *   result/humann3/pathabundance_relab_stratified.tsv 通路物种组成丰度表
+    # *   result/humann4/path_relab_unstratified.tsv 通路丰度表
+    # *   result/humann4/path_relab_stratified.tsv 通路物种组成丰度表
     # *   stratified(每个菌对此功能通路组成的贡献)和unstratified(功能组成)
 
     # Samples merging table (样本合并为功能组成表)
@@ -363,7 +373,7 @@
     csvtk -t stat ${pcl}
     head -n3 ${pcl} | cut -f 1-5
     # For the KW test with grouping, note the grouping column names in the second column 按分组KW检验，注意第二列的分组列名
-    humann_associate --input ${pcl} \
+    humann_associate.py --input ${pcl} \
         --focal-metadatum Group --focal-type categorical \
         --last-metadatum Group --fdr 0.2 \
         --output result/humann4/associate.txt
@@ -374,8 +384,8 @@
     # barplot show pathway taxonomic composition:  L-lysine fermentation to acetate and butanoate 
     # 柱状图展示通路的物种组成，如：L-赖氨酸发酵生成乙酸和丁酸
     # Set significant pathway ID from associate.txt，--sort sum metadata 按丰度和分组排序 
-    # eg. P163-PWY (P 0.03, Q 0.09)/ 1CMET2-PWY (P 0.12, Q 0.18)
-    path=P163-PWY
+    # eg. PWY-5941 (P 0.04, Q 0.18)/ PWY-7237 (P 0.05, Q 0.18)
+    path=PWY-5941
     grep $path result/humann4/associate.txt
     humann_barplot \
         --input ${pcl} --focal-feature ${path} \
@@ -505,7 +515,7 @@
     # Start the Kraken2 working environment(启动kraken2工作环境)
     conda activate kraken2
     # Record software version(记录软件版本)
-    kraken2 --version # 2.1.6
+    kraken2 --version # 2.17.1
     mkdir -p temp/kraken2
 
 ### Kraken2 taxonomic classification (物种注释)
@@ -531,7 +541,7 @@
       # --classified-out "temp/kraken2/${i}.classified_reads#.fasta" \
     # Batch processing of multiple samples to generate reports consumes a lot of memory but is fast; therefore, multi-task parallelism is not recommended.
     # 多样本批处理生成report，内存消耗大但速度快，不建议用多任务并行
-    for i in `tail -n+3 result/metadata.txt | cut -f1`;do
+    for i in `tail -n+2 result/metadata.txt | cut -f1`;do
       kraken2 --db ${db}/kraken2/${type} \
       --paired temp/hr/${i}_?.fastq \
       --threads 2 --use-names --report-zero-counts \
@@ -817,7 +827,7 @@
     # 输出文件：Salmon定量：result/salmon/gene.count, gene.TPM
 
     mkdir -p temp/salmon
-    salmon -v # 1.10.3
+    salmon -v # 1.11.4
 
     # build index, -t sequence, -i index (建索引, -t序列, -i 索引, 2m)
     time salmon index -t result/NR/nucleotide.fa \
@@ -861,7 +871,7 @@
     conda activate eggnog
     emapper.py --version
     mkdir -p temp/eggnog
-    # emapper-2.1.7 / Expected eggNOG DB version: 5.0.2 / diamond version 2.0.15
+    # emapper-2.1.13 / Expected eggNOG DB version: 5.0.2 / diamond version 2.0.15
 
     # run emapper, 3p 100m, default diamond 1e-3; 2M,32p,1.5h
     time emapper.py --data_dir ${db}/eggnog \
@@ -923,7 +933,7 @@
     # Result：protein.json, upload to CARD; protein.txt, annotation list
     mkdir -p result/card
     conda activate rgi
-    rgi main -v # 6.0.5
+    rgi main -v # 6.0.7
     # Simplified Protein ID (简化蛋白ID)
     cut -f 1 -d ' ' result/NR/protein.fa > temp/protein.fa
     grep '>' result/NR/protein.fa | head -n 3
@@ -978,6 +988,7 @@
       -c '2,3,4,5,6,7,8,9' -s ',+,+,+,+,+,+,+,' -n raw \
       -o result/NR/tax
     wc -l result/NR/tax*|sort -n
+
 
 # 4. Binning (四、分箱挖掘单菌基因组)
 
@@ -1129,16 +1140,6 @@
     ls temp/drep_in/|cut -f 1-2 -d '_'|uniq -c|awk '{print $2"\t"$1}' >> result/bin/count.txt
     cat result/bin/count.txt
 
-### Option. CheckM2 Reassessment (可选. 重新评估)
-
-    conda activate checkm2
-    mkdir -p temp/checkm2 result/checkm2
-    # 22 genomes, 2m
-    time checkm2 predict --input temp/drep95/dereplicated_genomes/* \
-      --output-directory temp/checkm2 --threads 8
-    ln temp/checkm2/quality_report.tsv result/checkm2/
-    less result/checkm2/quality_report.tsv 
-
 ## 4.2 dRep genome redundance (基因组去冗余)
 
     cd $wd
@@ -1146,6 +1147,8 @@
     mkdir -p temp/drep95
 
     # dereplicate by species：10 min; 44 genome, 22 from mix samples, 22 from signle samle
+    # When the drep_in directory contains a large number of genome files (e.g., >20,000 .fa files), the --ignoreGenomeQuality option can be enabled to bypass the CheckM-based genome quality assessment performed by dRep. Genome quality metrics can subsequently be obtained by running CheckM2 separately.
+    # 如果drep_in文件夹中有大量的基因组文件(例如，超过20000个fa文件)，可选择增加“--ignoreGenomeQuality”跳过dRep中包含的CheckM步骤，后续通过运行CheckM2获取质控文件
     time dRep dereplicate temp/drep95/ \
       -g temp/drep_in/*.fa  \
       -sa 0.95 -nc 0.30 -comp 50 -con 10 -p 8
@@ -1167,6 +1170,16 @@
       -sa 0.99 -nc 0.30 -comp 50 -con 10 -p 16
     # species level 26, strain level 29
     ls -l temp/drep99/dereplicated_genomes/ | grep '.fa' | wc -l
+    
+    ### Option. CheckM2 Reassessment (可选. 重新评估)
+
+    conda activate checkm2
+    mkdir -p temp/checkm2 result/checkm2
+    # 22 genomes, 2m
+    time checkm2 predict --input temp/drep95/dereplicated_genomes/* \
+      --output-directory temp/checkm2 --threads 8
+    ln temp/checkm2/quality_report.tsv result/checkm2/
+    less result/checkm2/quality_report.tsv
 
 ## 4.3 CoverM quantify in genome (基因组定量)
 
@@ -1189,8 +1202,8 @@
     # Merge to table (结果合并)
     mkdir -p result/coverm
     conda activate humann4
-    sed -i 's/_1.fastq Relative Abundance (%)//' temp/coverm/*.txt
-    humann_join_tables --input temp/coverm --file_name txt --output result/coverm/abundance.tsv
+    sed -i 's/_1.fastq Relative Abundance (%)//' temp/coverm_all/*.txt
+    humann_join_tables --input temp/coverm_all --file_name txt --output result/coverm/abundance.tsv
     csvtk -t stat result/coverm/abundance.tsv
 
     # Group mean (按组求均值，需要metadata中有3列且每个组有多个样本)
@@ -1205,14 +1218,14 @@
 
     conda activate gtdbtk
     export GTDBTK_DATA_PATH="${db}/gtdb"
-    gtdbtk -v # 2.5.2
+    gtdbtk -v # 2.7.2
     
     # Classify, 8p, 22 genomes, 40m
     mkdir -p temp/gtdb_classify
     time gtdbtk classify_wf \
         --genome_dir temp/drep95/dereplicated_genomes \
         --out_dir temp/gtdb_classify \
-        --extension fa --skip_ani_screen \
+        --extension fa --place_species \
         --prefix tax \
         --cpus 8
     # less -S view, press q quit; 26 bac short for Bacterial, 0 ar short for Archaea
@@ -1223,7 +1236,7 @@
     mkdir -p temp/gtdb_all
     # 10000 genome，32p，100min
     time gtdbtk classify_wf --genome_dir temp/drep_in/ \
-        --out_dir temp/gtdb_all --extension fa --skip_ani_screen \
+        --out_dir temp/gtdb_all --extension fa --place_species \
         --prefix tax --cpus 32
     
     # multi-sequence alignment and phylogenetic tree (多序列对齐结果建树)
@@ -1263,9 +1276,9 @@
 ## 5.2 metaspades assembly (组装)
 
     conda activate megahit
-    spades.py -v # v3.15.4
+    spades.py -v # v4.2.0
     mkdir -p temp/spades result/spades
-    # 127 genoms, 1m17s
+    # 127 genomes, 1m17s
     time tail -n+2 result/metadata.txt|cut -f1|rush -j 3 \
     	"spades.py --pe1-1 temp/qc/{1}_1.fastq \
     	  --pe1-2 temp/qc/{1}_2.fastq \
@@ -1282,14 +1295,14 @@
 
     # checkm评估质量
     conda activate drep
-    checkm # CheckM v1.1.2
+    checkm # CheckM v1.2.5
   	mkdir -p temp/checkm result/checkm
-  	# 127 genoms, 1m17s
+  	# 127 genomes, 1m17s
   	time checkm lineage_wf -t 8 -x fa temp/spades/ temp/checkm
   	# format checkm jason to tab
   	checkmJason2tsv.R -i temp/checkm/storage/bin_stats_ext.tsv \
   	  -o temp/checkm/bin_stats.txt
-      csvtk -t  pretty temp/checkm/bin_stats.txt | less
+    csvtk -t  pretty temp/checkm/bin_stats.txt | less
 	
     # (可选)checkm2评估(测试中...)
     conda activate checkm2
@@ -1401,7 +1414,7 @@
       --genome-fasta-directory temp/drep95/dereplicated_genomes/ -x fa \
       -o temp/coverm/{}.txt -t 32"
     # 结果合并
-    conda activate humann3
+    conda activate humann4
     sed -i 's/_1.fastq Relative Abundance (%)//' temp/coverm/*.txt
     humann_join_tables --input temp/coverm \
       --file_name txt \
@@ -1415,7 +1428,7 @@
   	memusg -t gtdbtk classify_wf \
   	  --genome_dir temp/drep_in/ \
   	  --out_dir temp/gtdb_all/ \
-        --extension fa --skip_ani_screen \
+        --extension fa --place_species \
         --prefix tax \
         --cpus 16
       
@@ -1425,7 +1438,7 @@
   	gtdbtk classify_wf \
   	  --genome_dir temp/drep95/dereplicated_genomes/ \
   	  --out_dir temp/gtdb_95 \
-        --extension fa --skip_ani_screen \
+        --extension fa --place_species \
         --prefix tax \
         --cpus 8
   	# Phylogenetic tree infer
@@ -1612,58 +1625,80 @@
 
     mkdir ncbi_genomes
     mkdir ncbi_genomes/$taxDir
-
+    
+    # 遍历每个taxon
     for taxon in $taxa; do
-    taxonSafe=$(echo $taxon | tr ' ' '_')
-    taxonGrep=$(echo $taxon | tr '_' ' ')
-    # 基因组ftp地址
-    ftpDir=$(grep "$taxonGrep" $assemblyFile | awk -F"\t" '{print $20}')
-    cd ncbi_genomes/$taxDir
+      taxonSafe=$(echo "$taxon" | tr ' ' '_')
+      taxonGrep=$(echo "$taxon" | tr '_' ' ')
+      cd "ncbi_genomes/$taxonSafe" || exit
+      # 在assembly_summary_refseq.txt中搜索选择的taxa
+      grep "$taxonGrep" "../../$assemblyFile" | \
+      awk -F"\t" '{print $20}' | \
+      # 逐行读取ftp路径
+      while read -r dirPath; do
+        # 提取genome ID
+        genomeID=$(basename "$dirPath")
+        # 拼接genome fasta下载链接
+        ftpPath="${dirPath}/${genomeID}_genomic.fna.gz"
+        # 提取物种名缩写
+        friendlyName=$(grep "$genomeID" "../../$assemblyFile" | \
+            awk -F"\t" '{print $8}' | \
+            awk '{print $1 FS $2}' | \
+            tr -d '_,.-' | \
+            sed -E 's/^(.)[A-Za-z0-9]* ([A-Za-z0-9]{2}).*$/\1\2/')
+        # 提取fasta header使用的名字并清理特殊字符
+        deflineName=$(grep "$genomeID" "../../$assemblyFile" | \
+            awk -F"\t" '{print $8 " " $9}' | \
+            sed 's/strain=//' | \
+            tr ' -' '_' | \
+            tr -d '/=(),.')
+        # 最终文件名前缀
+        newGenomeID="${friendlyName}_${genomeID}"
+        # 下载genome fasta
+        wget "$ftpPath" -O "${newGenomeID}.fa.gz"
+        # 解压fasta
+        gunzip "${newGenomeID}.fa.gz"
+        # 重命名
+        awk -v defline="$deflineName" '
+            /^>/ {
+                print ">" defline "_ctg" (++i)
+                next
+            }
+            {print}
+        ' "${newGenomeID}.fa" > temp.fa
 
-    for dirPath in $ftpDir; do
-    # 获取ID
-    genomeID=$(echo "$dirPath" | sed 's/^.*\///g')
-    # 获取基因组链接
-    ftpPath="$dirPath/${genomeID}_genomic.fna.gz"
-    # 重命名
-    friendlyName=$(grep "$genomeID" ../../$assemblyFile | awk -F"\t" '{print $8}' | awk '{print $1 FS $2}' | tr -d '_,.-' | sed -E 's/^(.)[A-z0-9]* ([A-z0-9]{2}).*$/\1\2/')
-    deflineName=$(grep "$genomeID" ../../$assemblyFile | awk -F"\t" '{print $8 " " $9}' | sed 's/strain=//' | tr ' -' '_' | tr -d '/=(),.')
-    genomeID="${friendlyName}_$genomeID"
-    # 下载并解压
-    wget $ftpPath -O $genomeID.fa.gz
-    gunzip $genomeID.fa.gz
-    # 序列信息重命名
-    awk -v defline="$deflineName" '/^>/{print ">" defline "_ctg" (++i)}!/^>/' $genomeID.fa >> temp.txt
-    mv temp.txt $genomeID.fa
-    done
+        mv temp.fa "${newGenomeID}.fa"
+      done
+      # 返回原目录
+      cd - >/dev/null
     done
 
     # 加入自有数据得到的对应细菌基因组
     # 非冗余基因组集位置：temp/drep95/dereplicated_genomes/*.fa
     # 非冗余基因组分类信息位置：temp/gtdb_classify
     # 需要根据分类信息找到分析物种或类群的基因组，然后与NCBI下载的基因组文件合并为1个文件
-    cp temp/drep95/dereplicated_genomes/Mx_All_55.fa ./ncbi_genomes/Alistipes_putredinis/Mx_All_55.fa
-    cp ./ncbi_genomes/Alistipes_putredinis/Mx_All_55.fa ./ncbi_genomes/Alistipes_putredinis/Mx_All_55.fna
+    cp $wd/temp/drep95/dereplicated_genomes/Mx_All_10.fa ./ncbi_genomes/Alistipes_putredinis/Mx_All_10.fa
+    # cp ./ncbi_genomes/Alistipes_putredinis/Mx_All_10.fa ./ncbi_genomes/Alistipes_putredinis/Mx_All_10.fna
 
     # 由于每一个基因组文件里面包含多条序列，需要将多条序列合并为1条
     # Directory containing the files
     input_dir="ncbi_genomes/Alistipes_putredinis/"
 
     # 循环处理每一个fna文件
-    for file in "$input_dir"/*.fna; do
+    for file in "$input_dir"/*.fa; do
       filename=$(basename "$file")
       output_file="${file%.fna}_merged_sequence.fna"
       awk '/^>/{if (seqlen){print seq} if (NR==1){print} seq=""; seqlen=0; next} {seq=seq $0; seqlen+=length($0)} END{print seq}' "$file" > "$output_file"
     done
 
     # 合并NCBI下载多个基因组文件并修改格式
+    species="Alistipes-putredinis"
     cat "$input_dir"/*merged_sequence.fna > $species-isolates.fa
 
     ## 获取fa文件的head信息
-    conda activate anvio-8
+    conda activate anvio-9
     grep '^>' Alistipes-putredinis-isolates.fa > headers01.txt
     ## 在开始时清理 contig 文件中的 fasta序列的head信息，以确保下游操作顺利进行
-    species="Alistipes-putredinis"
     anvi-script-reformat-fasta -o $species-isolates-CLEAN.fa -l 1000 \
                   --simplify-names \
                   -r $species-isolates-contigIDs.txt $species-isolates.fa
@@ -1680,41 +1715,43 @@
     anvi-run-hmms -c $species-isolates-CONTIGS.db \
                   --num-threads 24
     
-    ## 安装ncbi-cogs用于功能注释
+    ## 安装ncbi-cogs用于功能注释, 如果出现数据库下载失败问题，参考https://github.com/merenlab/anvio/blob/master/anvio/docs/programs/anvi-setup-ncbi-cogs.md解决
     anvi-setup-ncbi-cogs -T 24 --just-do-it --reset
     
-    ## COGs功能注释
+    ## COGs功能注释，运行时间较长，24线程13约天运行完成
     anvi-run-ncbi-cogs -c $species-isolates-CONTIGS.db --search-with blastp -T 24
     
     ## 导出注释得到的功能数据表
     # 如果没有进行COGs功能注释，可跳过该步骤
-    touch ncbi-cogs-results-fmt-$species-isolates01.tsv
-    anvi-import-functions -c $species-isolates-CONTIGS.db \
-                  -i ncbi-cogs-results-fmt-$species-isolates01.tsv
+    touch ncbi-cogs-results-fmt-$species-isolates01.txt
+    anvi-export-functions -c $species-isolates-CONTIGS.db \
+                  -o ncbi-cogs-results-fmt-$species-isolates01.txt
     
-    ## 建议映射             
+    ## 建立映射             
     bowtie2-build $species-isolates.fa $species-isolates
     
     ## 使用 bowtie2和默认参数（“--sensitive”），将宏基因组匹配到 contigs 数据库中的contigs上
     prefix="$species-isolates"
     ## 单样本处理示例，其它样本相同
-    bowtie2 -x $prefix -1 /temp/hr2/FC1_1.fastq -2 \
-                  /temp/hr2/FC1_2.fastq --no-unal \
-                  --threads 24 | samtools view -b - | samtools sort -@ 12 - > bt_mapped_Alistipes-putredinis-isolates/FC1.bam
+    # BAM 文件的输出目录
+    output_dir="bt_mapped_$species-isolates"
+    # 确保输出目录存在
+    mkdir -p $output_dir
+    bowtie2 -x $prefix -1 ${wd}/temp/hr/C1_1.fastq -2 \
+                  ${wd}/temp/hr/C1_2.fastq --no-unal \
+                  --threads 24 | samtools view -b - | samtools sort -@ 12 - > ${output_dir}/C1.bam
     ## 排序和建立索引
     cd bt_mapped_Alistipes-putredinis-isolates
-    samtools index FC1.bam
+    samtools index C1.bam
     cd ..
 
     ## 批量运行
     # 设置 Bowtie2 索引的前缀
     prefix="$species-isolates"
     # 包含 .fastq 文件的目录
-    input_dir="../hr2"
-    # BAM 文件的输出目录
-    output_dir="bt_mapped_$species-isolates"
-    # 确保输出目录存在
-    mkdir -p $output_dir
+    #input_dir="../hr2"
+    input_dir="${wd}/temp/hr"
+    
     
     # 循环遍历输入目录中的所有 *_1.fastq 文件
     for fastq1 in "$input_dir"/*_1.fastq; do
@@ -1739,16 +1776,16 @@
     done
 
     ## 使用 anvi’o 分析映射结果
-    # 单样本运行
-    anvi-profile -i bt_mapped_$species-isolates/FC1.bam -c $prefix-CONTIGS.db \
-                  -W -M 2500 -T 12 --write-buffer-size 500 -o profs_mapped_$species-isolates/FC1/
-    
-    # 批量运行
     # 定义输入 BAM 目录
     bam_dir="bt_mapped_$species-isolates/"
     # 定义分析结果的输出目录
     output_dir="profs_mapped_$species-isolates"
     mkdir -p $output_dir
+    # 单样本运行
+    anvi-profile -i bt_mapped_$species-isolates/C1.bam -c $prefix-CONTIGS.db \
+                  -W -M 2500 -T 12 --write-buffer-size 500 -o profs_mapped_$species-isolates/C1/
+    
+    # 批量运行
     # 循环遍历输入目录中的所有 BAM 文件
     for bam_file in $bam_dir/*.bam; do
       # 从 BAM 文件中提取样本名称（例如 FC1、FE1 等）
@@ -1769,11 +1806,12 @@
                -o $species-isolates-MERGED \
                -c $species-isolates-CONTIGS.db
     ## 得到集合文件
-    for split_name in `sqlite3 $species-isolates-CONTIGS.db 'select split from splits_basic_info;'`
+    for split_name in $(sqlite3 ${species}-isolates-CONTIGS.db \
+        "select split from splits_basic_info;")
     do
-        GENOME=`echo $split_name | awk 'BEGIN{FS="-"}{print $1}'`
-        echo -e "$split_name\t$GENOME"
-    done > $species-GENOME-COLLECTION.txt
+        GENOME=$(awk -F'-' '{print $1}' <<< "$split_name")
+        printf "%s\t%s\n" "$split_name" "$GENOME"
+    done > ${species}-GENOME-COLLECTION.txt
     
     anvi-import-collection $species-GENOME-COLLECTION.txt \
                            -c $species-isolates-CONTIGS.db \
@@ -1795,7 +1833,14 @@
     done
 
     ## 泛基因组计算
-    anvi-gen-genomes-storage -i $species-isolates-internal-genomes-table.txt \
+    # 随机选取100个基因组
+    head -n 1 ${species}-isolates-internal-genomes-table.txt \
+        > ${species}-100genomes.txt
+    tail -n +2 ${species}-isolates-internal-genomes-table.txt \
+    | shuf -n 100 \
+    >> ${species}-100genomes.txt
+    # 构建泛基因组数据集
+    anvi-gen-genomes-storage -i ${species}-100genomes.txt\
                              -o $species-PAN-GENOMES.db
     anvi-pan-genome -g $species-PAN-GENOMES.db \
                     --use-ncbi-blast \
@@ -1811,13 +1856,13 @@
     ## 直接在浏览器中打开结果给出的服务器网址，点击draw可得到相应的图，可在交互界面上得到基因组相关信息并对图进行调整
     anvi-display-pan -g $species-PAN-GENOMES.db \
                      -p $species-PAN/$species-PAN-PAN.db \
-                     -I 192.168.60.214 \
+                     -I 192.168.205.193 \
     				 -P 8082
     
     # 每个样本中Alistipes putredinis的基因组信息                
     anvi-interactive -p $species-isolates-MERGED/PROFILE.db \
                      -c $species-isolates-CONTIGS.db \
-                     -I 192.168.60.214 \
+                     -I 192.168.205.193 \
                      -P 8082
 
 # Appendix: Common Analysis Problems and Supplementary Code (附录：常见分析问题和补充代码)
@@ -1935,6 +1980,134 @@
        group_colorcode result/metaphlan2/taxonomy_group.tsv > result/metaphlan2/taxonomy_group2.tsv
     awk 'BEGIN{OFS=FS="\t"}{if(FNR==1) {print "Tax",$1,$2,$3,$4, $5, $6, $7, $8 } else print "Tax_"FNR, $1,$2,$3,$4, $5,$6, $7, $8}' \
        result/metaphlan2/taxonomy.spf > result/metaphlan2/taxonomy_anno.tsv
+       
+    
+    # **HUMAnN3使用**
+    
+    HUMAnN4更新了开发版，此流程也提供HUMAnN3的安装和使用代码
+
+    ### HUMAnN3直接安装
+
+    # 安装HUMAnN3.7+MetaPhlAn4
+    conda create -n humann3
+    conda activate humann3
+    conda install -c biobakery humann=3.9
+    conda install -c bioconda metaphlan
+    # 打包(可选)
+    conda-pack -f -n humann3 -o humann3.tar.gz
+    
+    ### HUMAnN3解包安装
+
+    # 下载
+    wget -c ftp://download.nmdc.cn/tools/conda/humann3.tar.gz
+    # 指定安装目录
+    mkdir -p ${soft}/envs/humann3
+    tar -xvzf humann3.tar.gz -C ${soft}/envs/humann3
+    # 启动环境
+    conda activate humann3
+    # 初始化环境
+    conda unpack
+
+    ### HUMAnN3安装测试
+
+    # 记录核心软件版本
+    humann --version # v3.9
+    metaphlan -v # 4.0.6 (1 Mar 2023)
+    diamond help | head -n 1 #  v2.1.25.179
+    # 测试
+    humann_test
+
+    ### HUMAnN3物种和功能数据库
+
+    # 显示可用分类、泛基因组和功能数据库
+    humann_databases
+
+    # 安装数据库
+    cd ${db}
+    mkdir -p ${db}/humann3 # 建立下载目录
+    # 微生物泛基因组 16 GB
+    humann_databases --download chocophlan full ${db}/humann3
+    # 功能基因diamond索引 20 GB
+    humann_databases --download uniref uniref90_diamond ${db}/humann3
+    # 输助比对数据库 2.6 GB
+    humann_databases --download utility_mapping full ${db}/humann3
+
+    # humann3数据库无法自动下载，备用链接下载安装
+    wget -c ftp://download.nmdc.cn/tools/meta/humann3/full_chocophlan.v201901_v31.tar.gz
+    wget -c ftp://download.nmdc.cn/tools/meta/humann3/uniref90_annotated_v201901b_full.tar.gz
+    wget -c ftp://download.nmdc.cn/tools/meta/humann3/full_mapping_v201901b.tar.gz
+    # 安装、解压
+    mkdir -p ${db}/humann3/chocophlan
+    tar xvzf full_chocophlan.v201901_v31.tar.gz -C ${db}/humann3/chocophlan
+    mkdir -p ${db}/humann3/uniref
+    tar xvzf uniref90_annotated_v201901b_full.tar.gz -C ${db}/humann3/uniref
+    mkdir -p ${db}/humann3/utility_mapping
+    tar xvzf full_mapping_v201901b.tar.gz -C ${db}/humann3/utility_mapping
+
+    # 设置数据库位置
+    # 显示参数
+    humann_config --print
+    # 如修改线程数，推荐3-8，根据实际情况调整
+    humann_config --update run_modes threads 8
+    # 设置核酸、蛋白和注释库位置
+    humann_config --update database_folders nucleotide ${db}/humann3/chocophlan
+    humann_config --update database_folders protein ${db}/humann3/uniref
+    humann_config --update database_folders utility_mapping ${db}/humann3/utility_mapping
+    # 核对设置结果
+    humann_config --print
+    
+    ### HUMAnN3 analysis tutorial and test (教学和测试)
+    # *   Taxonomic annotation call MetaPhlAn4 (物种组成调用)
+    # *   Input(输入)：temp/concat/*.fq Merged sequences (合并的序列)
+    # *   Output(输出)：temp/humann3/
+    #     *   Y1_pathabundance.tsv
+    #     *   Y1_pathcoverage.tsv
+    #     *   Y1_genefamilies.tsv
+    
+    # Start the humann3 environment and check the database configuration (启动环境并检查数据库配置)
+    conda activate humann3
+    mkdir -p temp/humann3
+    humann --version # v3.9
+    humann_config
+
+    # Single-sample test (单样本测试): Y1 657M, 8p, 32min
+    i=`tail -n+2 result/metadata.txt|cut -f1 | head -n1`
+	  time humann \
+  	  --input temp/concat/${i}.fq \
+  	  --output temp/humann3 \
+      --threads 8 \
+      --metaphlan-options "--input_type fastq --bowtie2db ${db}/metaphlan4 --index mpa_vOct22_CHOCOPhlAnSGB_202403 --offline -t rel_ab_w_read_stats --nproc 8" \
+      --nucleotide-database ${db}/humann3/chocophlan \
+      --protein-database ${db}/humann3/uniref
+      
+    time humann \
+  	  --input temp/concat/${i}.fq \
+  	  --output temp/humann3 \
+      --threads 8 \
+      --metaphlan-options "--input_type fastq --bowtie2db /data/meta/db/metaphlan4 --index mpa_vOct22_CHOCOPhlAnSGB_202403 --offline -t rel_ab_w_read_stats --nproc 8" \
+      --nucleotide-database ${db}/humann3/chocophlan \
+      --protein-database ${db}/humann3/uniref
+      
+    # Multi-sample parallel computing, test data with 6 samples in dual parallel: 2h, recommended 16p, 3h/6G;
+    # 多样本并行计算，测试数据6个样本双并行：2h，推荐16p，3h/6G；
+    # -n+3 start from second samples, --threads set 8/16/32 to accelerate
+    time tail -n+2 result/metadata.txt | cut -f1 | rush -j 2 \
+      "humann --input temp/concat/{1}.fq --threads 8 \
+        --metaphlan-options '--input_type fastq --bowtie2db ${db}/metaphlan4 --index mpa_vOct22_CHOCOPhlAnSGB_202403 --offline -t rel_ab_w_read_stats --nproc 8'  \
+        --output temp/humann3/ "
+        
+    # Multi-sample parallel computing, test data with 6 samples in dual parallel: 2h, recommended 16p, 3h/6G;
+    # 多样本并行计算，测试数据6个样本双并行：2h，推荐16p，3h/6G；
+    # -n+3 start from second samples, --threads set 8/16/32 to accelerate    
+    time tail -n+2 result/metadata.txt | cut -f1 | rush -j 2 \
+      "humann \
+  	  --input temp/concat/{1}.fq \
+  	  --output temp/humann3 \
+      --threads 8 \
+      --metaphlan-options '--input_type fastq --bowtie2db ${db}/metaphlan4 --index mpa_vOct22_CHOCOPhlAnSGB_202403 --offline -t rel_ab_w_read_stats --nproc 8' \
+      --nucleotide-database ${db}/humann3/chocophlan \
+      --protein-database ${db}/humann3/uniref "
+
 
 ## LEfSe生物标志鉴定
 
