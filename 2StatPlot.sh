@@ -3,7 +3,7 @@
 # 2EasyMetagenome Visualization (2易宏基因组统计与可视化)
 
     # Authors(作者): Yong-Xin Liu(刘永鑫), Defeng Bai(白德凤), Tong Chen(陈同) et al.
-    # Version(版本): 1.25, 2026/1/22
+    # Version(版本): 1.25, 2026/8/4
     # Operation System(操作系统): Linux Ubuntu 22.04+ / CentOS 7.7+ 
     # Homepage(主页): https://github.com/YongxinLiu/EasyMetagenome
     # Cititon(引文): Bai, et al. 2025. EasyMetagenome: A User‐Friendly and Flexible Pipeline for Shotgun Metagenomic Analysis in Microbiome Research. iMeta 4: e70001. https://doi.org/10.1002/imt2.70001
@@ -168,15 +168,6 @@
           --input metaphlan4/${tax}.txt --design metadata.txt \
           --group Group --output metaphlan4/${tax}.stackplot \
           --legend 10 --width 120 --height 70; done
-          
-    # Graphlan输入文件获取
-    # Add heatmap as an example, if need to plot bar use "--type bar" instead
-    Rscript ${sd}/graphlan_plot.R -h
-    Rscript ${sd}/graphlan_plot.R \
-      --input metaphlan4/taxonomy.spf \
-      --design metadata.txt \
-      --type heatmap \
-      --output metaphlan4/graphlan
 
 ### Different compare (差异比较)
 
@@ -193,20 +184,74 @@
           --width 300 --height 150 \
           --output metaphlan4/stamp_${compare}
 
-
     ### MaAsLin2差异物种分析火山图
     # 同样适用于功能通路差异分析
     Rscript ${sd}/compare_MaAsLin2.R \
-          --i metaphlan4/Species.txt \
-          --m metadata.txt \
-          --o metaphlan4/
+          --input metaphlan4/Species.txt \
+          --metadata metadata.txt \
+          --output metaphlan4/
       
     # 根据差异分析结果绘制火山图
-    Rscript ${sd}/compare_valcano.R \
-          --i metaphlan4/MaAsLin2_overall_difference.csv \
-          --d metaphlan4/MaAsLin2_enriched_depleted.csv \
-          --o metaphlan4/
+    Rscript ${sd}/compare_volcano.R \
+          --input metaphlan4/MaAsLin2_overall_difference.csv \
+          --trend metaphlan4/MaAsLin2_enriched_depleted.csv \
+          --width 100 --height 80 \
+          --output metaphlan4/
+          
+### Network analysis (网络分析)
 
+    # 数据准备
+    Rscript ${sd}/SparCC_data_processing.R \
+          --input metaphlan4/Species.txt \
+          --group metadata.txt \
+          --output metaphlan4/
+          
+    # SparCC相关性(Correlation)和显著性(p value)计算
+    chmod +x ${sd}/run_sparcc3.sh
+    ## 运行如果出现Sparcity assumption violated的警告信息，可能是样本量较小导致的
+    ## Centenarians
+    bash ${sd}/run_sparcc3.sh \
+          ./metaphlan4/Centenarians_sparcc.txt \
+          ./SparCC3/R_Centenarians.txt \
+          ./SparCC3/P_Centenarians.txt
+          
+    ## Young
+    bash ${sd}/run_sparcc3.sh \
+          ./metaphlan4/Young_sparcc.txt \
+          ./SparCC3/R_Young.txt \
+          ./SparCC3/P_Young.txt
+    
+    # 网络分析可视化，可自定义指定分组
+    # 方式一：基于Gephi软件进行可视化 https://gephi.org/
+    # 获取.graphml文件
+    # Centenarians
+    Rscript ${sd}/get_graphml.R \
+         --Correlation ${wd}/SparCC3/R_Centenarians.txt \
+         --Pvalue ${wd}/SparCC3/P_Centenarians.txt \
+         --Group Centenarians \
+         --output ${wd}/metaphlan4/     
+    # Young
+    Rscript ${sd}/get_graphml.R \
+         --Correlation ${wd}/SparCC3/R_Young.txt \
+         --Pvalue ${wd}/SparCC3/P_Young.txt \
+         --Group Young \
+         --output ${wd}/metaphlan4/     
+         
+    # 下载安装Gephi软件在本地带入.graphml文件进行可视化展示
+    
+    # 方式二：基于R代码进行可视化
+    # Centenarians
+    Rscript ${sd}/SparCC_visualization.R \
+          --Correlation ${wd}/SparCC3/R_Centenarians.txt \
+          --Pvalue ${wd}/SparCC3/P_Centenarians.txt \
+          --Group Centenarians \
+          --output ${wd}/metaphlan4/      
+    # Young
+    Rscript ${sd}/SparCC_visualization.R \
+          --Correlation ${wd}/SparCC3/R_Young.txt \
+          --Pvalue ${wd}/SparCC3/P_Young.txt \
+          --Group Young \
+          --output ${wd}/metaphlan4/      
 
 ## HUMAnN4 functional composition (功能组成)
 
@@ -237,7 +282,7 @@
       --species kraken2/tax_count.txt \
       --normalize kraken2/tax_count.norm \
       --output kraken2/tax_count.alpha
-    kraken2/tax_count.txt
+    head -6 kraken2/tax_count.txt
     sed -i 's/\r//' kraken2/tax_count.*
     
     # 绘制Alpha多样性指数，结果为输入文件+类型richness/chao1/ACE/shannon/simpson/invsimpson
@@ -390,143 +435,238 @@
 
 ### 堆叠柱状图
 
-```
-# 以门(P)/种(S)水平为例，结果包括output.sample/group.pdf两个文件
-tax=P
-Rscript ${sd}/tax_stackplot.R \
-  --input kraken2/bracken.${tax}.txt --design metadata.txt \
-  --group Group --output kraken2/bracken.${tax}.stackplot \
-  --legend 10 --width 89 --height 59
+    # 以门(P)/种(S)水平为例，结果包括output.sample/group.pdf两个文件
+    tax=P
+    Rscript ${sd}/tax_stackplot.R \
+      --input kraken2/bracken.${tax}.norm --design metadata.txt \
+      --group Group --output kraken2/bracken.${tax}.stackplot \
+      --legend 10 --width 89 --height 59
   
-# 批量运行
-for tax in D G P S; do
-Rscript ${sd}/tax_stackplot.R \
-      --input kraken2/bracken.${tax}.0.01-H --design metadata.txt \
+    # 批量运行
+    for tax in D G P S; do
+    Rscript ${sd}/tax_stackplot.R \
+      --input kraken2/bracken.${tax}.0.2-H --design metadata.txt \
       --group Group --output kraken2/bracken.${tax}.stackplot \
       --legend 10 --width 120 --height 70; done
 
-```
 
 ### STAMP图
 
-```
-compare="Normal-Cancer"
-tax=S
-Rscript ${sd}/compare_stamp.R \
-      --input kraken2/bracken.${tax}.0.01-H --metadata metadata.txt \
+    compare="Centenarians-Young"
+    tax=S
+    Rscript ${sd}/compare_stamp.R \
+      --input kraken2/bracken.${tax}.0.2-H --metadata metadata.txt \
       --group Group --compare ${compare} --threshold 0.1 \
-      --method "t.test" --pvalue 0.1 --fdr "none" \
-      --width 100 --height 200 \
+      --method "wilcox.test" --pvalue 0.1 --fdr "none" \
+      --width 89 --height 59 \
       --output kraken2/stamp_${compare}
-```
 
 
 ## 基因组进化树注释table2itol
 
-```
-cd ../binning/result/itol/
-## 方案1. 分类彩带、数值热图、种标签
-# -a 找不到输入列将终止运行（默认不执行）-c 将整数列转换为factor或具有小数点的数字，-t 偏离提示标签时转换ID列，-w 颜色带，区域宽度等， -D输出目录，-i OTU列名，-l 种标签替换ID
-Rscript ${sd}/table2itol.R -a -c double -D plan1 -i ID -l Species -t %s -w 0.5 annotation.txt
-# 生成注释文件中每列为单独一个文件
+    #cd ../binning/result/itol/
+    cd ../result/itol/
+    ## 方案1. 分类彩带、数值热图、种标签
+    # -a 找不到输入列将终止运行（默认不执行）-c 将整数列转换为factor或具有小数点的数字，-t 偏离提示标签时转换ID列，-w 颜色带，区域宽度等， -D输出目录，-i OTU列名，-l 种标签替换ID
+    Rscript ${sd}/table2itol.R -a -c double -D plan1 -i ID -l Species -t %s -w 0.5 annotation.txt
+    # 生成注释文件中每列为单独一个文件
 
-## 方案2. 数值柱形图，树门背景色，属标签
-Rscript ${sd}/table2itol.R -a -d -c none -D plan2 -b Phylum -i ID -l Genus -t %s -w 0.5 annotation.txt
+    ## 方案2. 数值柱形图，树门背景色，属标签
+    Rscript ${sd}/table2itol.R -a -d -c none -D plan2 -b Phylum -i ID -l Genus -t %s -w 0.5 annotation.txt
 
-## 方案3.分类彩带、整数为柱、小数为热图
-Rscript ${sd}/table2itol.R -c keep -D plan3 -i ID -t %s annotation.txt
+    ## 方案3.分类彩带、整数为柱、小数为热图
+    Rscript ${sd}/table2itol.R -c keep -D plan3 -i ID -t %s annotation.txt
 
-## 方案4. 将整数转化成因子生成注释文件
-Rscript ${sd}/table2itol.R -a -c factor -D plan4 -i ID -l Genus -t %s -w 0 annotation.txt
+    ## 方案4. 将整数转化成因子生成注释文件
+    Rscript ${sd}/table2itol.R -a -c factor -D plan4 -i ID -l Genus -t %s -w 0 annotation.txt
 
-```
 
 ## MAGs分析
 
 ### MAGs与样本稀疏曲线
 
-```
-cd ${wd}
-cd ..
-Rscript ${sd}/MAG_sample_rare.R \
-      --input binning/result/coverm/abundance.tsv \
-      --taxonomy binning/result/coverm/taxonomy_MAG.txt \
-      --output binning/result/coverm/
-```
+    cd ${wd}
+    Rscript ${sd}/MAG_sample_rare.R \
+      --input ./coverm/abundance.tsv \
+      --taxonomy ./itol/tax.txt \
+      --output ./coverm/
 
 
 ### MAGs不同功能数据库注释结果比较UpSet图
-
-```
-Rscript ${sd}/MAG_protiens_UpSet.R \
-        --i result/eggnog/data_venn1.txt \
-        --o result/eggnog/
+    
+    # 数据处理得到data_venn1.txt
+    bash $sd/extract_eggnog_anno01.sh
+    # 绘图
+    Rscript ${sd}/MAG_protiens_UpSet.R \
+        --i eggnog/data_venn1.txt \
+        --o eggnog/
         
-## 单个功能数据库分组比较(COGs, KEGG, ECs, GOs), 这里以COGs注释结果作为示例
-# 分组比较UpSet图
-Rscript ${sd}/common_upset.R \
-        --i result/eggnog/data_venn2.txt \
-        --o result/eggnog/
+    ## 单个功能数据库分组比较(COGs, KEGG, ECs, GOs), 这里以COGs注释结果作为示例
+    # 分组比较UpSet图
+    # 处理数据得到data_venn2.txt
+    bash $sd/extract_eggnog_anno02.sh 
+    # 绘图
+    Rscript ${sd}/common_upset.R \
+        --i eggnog/data_venn2.txt \
+        --o eggnog/
 
-# 提取交集并绘制交集组成饼图
-Rscript ${sd}/upset_intersection_composition.R \
-        --input result/eggnog/data_venn2.txt \
-        --composition result/eggnog/COGs_data.txt \
-        --output result/eggnog/
+    # 提取交集并绘制交集组成饼图，支持自定义分组
+    Rscript ${sd}/upset_intersection_composition.R \
+        --input eggnog/data_venn2.txt \
+        --groups Centenarians,Young \
+        --output eggnog/
 
-```
 
 ### MAGs功能通路桑基图
 
-```
-Rscript ${sd}/function_sankey.R \
-        --i result/humann3/data_sankey.txt \
-        --o result/humann3/
-```
+    # 需要提前对感兴趣的功能通路进行分析获得data_sankey.txt文件
+    # 下载KEGG Orthology （KO）分层文件
+    bash $sd/KEGG_Orthology_data_extract.sh
+    # 选择感兴趣的或者于研究项目密切相关的Level3通路
+    # 比如这里选择Tryptophan metabolism，Butanoate metabolism，Sulfur metabolism这3个Level3通路作为案例
+    # 从生成的KEGG_KO_Annotation.tsv文件中提取Level3_Name是Tryptophan metabolism，Butanoate metabolism，Sulfur metabolism的数据形成新的表格
+    bash ${sd}/extract_pathways.sh \
+        "Tryptophan metabolism" \
+        "Butanoate metabolism" \
+        "Sulfur metabolism"
+    # 绘制桑基图
+    Rscript ${sd}/function_sankey.R \
+        --i humann4/data_sankey2.txt \
+        --o humann4/
 
 
 ### MAGs完整性和污染率关系图
 
-```
-bash ${sd}/merged_tax.sh
-sed 's/ /_/g' result/checkm2/taxonomy_merge.txt > result/checkm2/taxonomy_merge2.txt
-Rscript ${sd}/MAG_quality_taxonomy.R \
-        --i result/checkm2/taxonomy_merge2.txt \
-        --o result/checkm2/
-```
+    # 生成绘图数据
+    bash ${sd}/merged_tax.sh
+    sed 's/ /_/g' checkm2/taxonomy_merge.txt > checkm2/taxonomy_merge2.txt
+    
+    # 绘图
+    Rscript ${sd}/MAG_quality_taxonomy.R \
+        --i checkm2/taxonomy_merge2.txt \
+        --o checkm2/
 
 ### MAGs系统发育分析树状图
 
-```
-# 肠道微生物样本示例
-Rscript ${sd}/phylogenetic_tree.R \
-        --input result/gtdb_95/tax.unrooted4.tree \
-        --annotation result/gtdb_95/annotation4.txt \
-        --output result/gtdb_95/
+    # 肠道微生物样本示例，这里以百岁老人数据为例
+    # 获取annotation.txt数据
+    bash ${sd}/phylogenetic_anno_data.sh
+    Rscript ${sd}/phylogenetic_tree.R \
+        --input ../temp/gtdb_infer/tax.unrooted.tree \
+        --annotation ../temp/gtdb_infer/annotation.txt \
+        --output ../temp/gtdb_infer/
 
-# 环境样本示例
-Rscript ${sd}/phylogenetic_tree_env.R \
-        --input result/gtdb_95/tax.unrooted2.tree \
-        --annotation result/gtdb_95/annotation3.txt \
-        --output result/gtdb_95/
+    # 环境样本示例
+    # 由于1Pipeline.sh中只用了肠道微生物样本作为示例数据，这里仅提供参考
+    # 实际运行代码和肠道微生物样本案例相似
+    Rscript ${sd}/phylogenetic_tree_env.R \
+        --input ../temp/gtdb_infer/tax.unrooted2.tree \
+        --annotation ../temp/gtdb_infer/annotation3.txt \
+        --output ../temp/gtdb_infer/
         
+        
+### Two Competing Guilds (TCG) Network
 
-Rscript ${sd}/phylogenetic_tree_env.R \
-        --input result/gtdb_95/tax.unrooted4.tree \
-        --annotation result/gtdb_95/annotation4.txt \
-        --output result/gtdb_95/        
+    # 参考Wu G, Xu T, Zhao N, et al. A core microbiome signature as an indicator of health. Cell. 2024.
+    # 分析肠道核心菌群的“蹊跷板”竞争模式
+    
+    # HCC-TCG网络输入数据准备
+    # 1.GTDBTK result：GTDBTK_tax.txt
+    # 获取GTDBTK.txt文件
+    bash ${sd}/GTDBTK_tax.sh \
+        -i itol/tax.txt \
+        -o itol/GTDBTK_tax.txt
+    
+    # FastSpar方法 (FastSpar方法比直接用SparCC计算更快, 部分步骤运行需要切换Bash (Windows Subsystem for Linux))
+    ############################################################################
+    # 2.FastSpar计算输入文件准备: MAG_for_FastSpar_Centenarians.txt; MAG_for_FastSpar_Young.txt
+    # 数据准备,abundance_cutoff和prevalence_cutoff可根据实际进行调整
+    Rscript ${sd}/FastSpar_input01.R \
+          --abundance coverm/abundance.tsv \
+          --taxonomy itol/tax.txt \
+          --metadata metadata.txt \
+          --group1 Centenarians \
+          --group2 Young \
+          --abundance_cutoff 0.0007 \
+          --prevalence_cutoff 0 \
+          --outdir ./coverm
+          
+    ## txt文件转为tsv文件; 最左上角head名称为#OTU ID, 符合输入数据运行规范
+    chmod +x ${sd}/txt2tsv.sh
+    # Centenarians
+    bash ${sd}/txt2tsv.sh \
+        ./coverm/MAG_for_FastSpar_Centenarians.txt \
+        ./coverm/MAG_for_FastSpar_Centenarians_fixed.tsv
+    # Young
+    bash ${sd}/txt2tsv.sh \
+        ./coverm/MAG_for_FastSpar_Young.txt \
+        ./coverm/MAG_for_FastSpar_Young_fixed.tsv
 
-```
-
-### MAGs耐药基因丰度热图
-
-```
-Rscript ${sd}/functional_gene_heatmap.R \
-        --input binning/temp/ARG2/ARG_final.txt \
-        --group binning/temp/ARG2/group_ARG.txt \
-        --output binning/temp/
-
-```
+    # 3.SparCC相关性(Correlation)和显著性(p value)计算
+    # 进入Bash (Windows Subsystem for Linux)环境, Bash (Windows Subsystem for Linux)比Git Bash路径多/mnt, 需要修改路径重新运行后进入工作目录才能正常运行
+    # 安装FastSpar
+    conda create -n fastspar -c conda-forge -c bioconda fastspar
+    conda activate fastspar
+    fastspar --help
+    
+    # 计算相关性(Correlation)和显著性(p value)
+    sed -i 's/\r$//' ${sd}/run_FastSpar.sh
+    bash ${sd}/run_FastSpar.sh \
+          -c $wd/coverm/MAG_for_FastSpar_Centenarians_fixed.tsv \
+          -y $wd/coverm/MAG_for_FastSpar_Young_fixed.tsv \
+          -o $wd/coverm/FastSpar_result \
+          -t 6 \
+          -b 1000 \
+          -i 1000
+          
+    # 删除第一行开头的 #OTU ID 并输出到指定文件
+    chmod +x ${sd}/remove_otu_header.sh
+    sed -i 's/\r$//' ${sd}/remove_otu_header.sh
+    # Centenarians correlation
+    bash ${sd}/remove_otu_header.sh \
+         $wd/coverm/FastSpar_result/Centenarians/Centenarians_correlation.tsv \
+         $wd/coverm/R_Centenarians2.txt
+    # Centenarians pvalue
+    bash ${sd}/remove_otu_header.sh \
+         $wd/coverm/FastSpar_result/Centenarians/Centenarians_pvalues.tsv \
+         $wd/coverm/P_Centenarians2.txt
+    # Young correlation
+    bash ${sd}/remove_otu_header.sh \
+         $wd/coverm/FastSpar_result/Young/Young_correlation.tsv \
+         $wd/coverm/R_Young2.txt
+    # Young pvalue
+    bash ${sd}/remove_otu_header.sh \
+         $wd/coverm/FastSpar_result/Young/Young_pvalues.tsv \
+         $wd/coverm/P_Young2.txt
+    ############################################################################
+    
+    # 切换到Git Bash环境中
+    # 4.获取stable.edge.txt文件和stable.node.txt文件
+    Rscript ${sd}/TCG_FromNetwork.R \
+          --gtdb ${wd}/itol/GTDBTK_tax.txt \
+          --group1_r ${wd}/coverm/R_Centenarians2.txt \
+          --group1_p ${wd}/coverm/P_Centenarians2.txt \
+          --group2_r ${wd}/coverm/R_Young2.txt \
+          --group2_p ${wd}/coverm/P_Young2.txt \
+          --output ${wd}/coverm
+    
+    # 5.TCG网络绘制
+    # 下载安装Cytoscape软件网址https://cytoscape.org/
+    # 将获取的stable.edge2.txt和stable.node2.txt导入Cytoscape
+    # Import Network from File System导入stable.edge2.txt文件 -> 菜单栏Layout选择Edge-weighted Spring Embedded Layout -> 选择NorPv2
+    # 左下角选中Edge对象，左上角选中style功能，Stroke Color选项Column选择NorP，Mapping Type选择Discrete Mapping，设置不同分组颜色
+    
+    # 6.绘制主要聚类群(Cluster)的层次聚类树
+    # ccCluster.txt需要根据自己的数据手动生成, C1为ccCluster.txt中cluster列的列名
+    # stable.node2.txt和stable.edge2.txt替换为上一步生成的结果
+    # GTDBTK.txt替换为生成的数据
+    Rscript ${sd}/cluster_from_Cytoscape.R \
+          --ccCluster ${wd}/coverm/ccCluster.txt \
+          --node ${wd}/coverm/stable.node2.txt \
+          --edge ${wd}/coverm/stable.edge2.txt \
+          --gtdb ${wd}/coverm/GTDBTK.txt \
+          --cluster C1 \
+          --output ${wd}/coverm
 
 
 ### 单菌基因组注释和绘图
@@ -535,24 +675,20 @@ Rscript ${sd}/functional_gene_heatmap.R \
 # 注释和绘图：https://proksee.ca
 
 
-
 ### 宏基因组数据泛基因组分析绘图
 
 # 绘图： https://anvi-server.org/
-
 
 
 # 附录
 
 ## windows换行符处理
 
-```
-# 查看行尾是否有^M
-cat -A $sd/metaphlan_hclust_heatmap.R | head
-# 转换Windows为Linux换行符
-dos2unix $sd/metaphlan_hclust_heatmap.R   
+    # 查看行尾是否有^M
+    cat -A $sd/metaphlan_hclust_heatmap.R | head
+    # 转换Windows为Linux换行符
+    dos2unix $sd/metaphlan_hclust_heatmap.R   
 
-```
 
 ## 表格合并
 
@@ -573,57 +709,7 @@ dos2unix $sd/metaphlan_hclust_heatmap.R
     # https://www.bic.ac.cn/ImageGP/ 直接选择热图可视化
 
 
-## 附录
-
-### SparCC NetWork (物种稀疏相关网络分析)
-
-    Rscript ${sd}/SparCC_data_processing.R \
-          --input metaphlan4/Species.txt \
-          --group metadata.txt \
-          --output metaphlan4/
-
-    # Python需要在Linux下用conda环境运行，整合到1Pipeline中
-    ## SparCC相关性(Correlation)和显著性(p value)计算
-    # 以下命令行需在linux环境中运行
-    git clone https://github.com/JCSzamosi/SparCC3.git
-    cd SparCC3
-    mkdir -p data
-    cp result12/metaphlan4/Cancer_sparcc.txt SparCC3/data/
-    cp result12/metaphlan4/Normal_sparcc.txt SparCC3/data/
-    # Step 1 - Compute correlations
-    python SparCC.py data/Cancer_sparcc.txt -i 20 \
-          --cor_file=example/basis_corr/sxtr_sparcc_Cancer.tsv \
-          > example/basis_corr/sxtr_sparcc_Cancer.log
-          
-    # Step 2 - Compute bootstraps
-    # 此处测试节省时间设置为100，建议设置为1000
-    mkdir -p example/pvals_cancer
-    python MakeBootstraps.py data/Cancer_sparcc.txt \
-          -n 100 -t bootstrap_#.txt \
-          -p example/pvals_cancer/ >> sxtr_sparcc_Cancer.log
-    
-    # Step 3 - Compute p-values
-    # 如果上面设置1000，这里99更改为999
-    for n in {0..99}; do python SparCC.py example/pvals_cancer/bootstrap_${n}.txt -i 20 \
-          --cor_file=example/pvals_cancer/bootstrap_cor_${n}.txt >> sxtr_sparcc_Cancer.log; done
-    
-    # 如果最开始设置1000，这里100更改为1000      
-    python PseudoPvals.py example/basis_corr/sxtr_sparcc_Cancer.tsv example/pvals_cancer/bootstrap_cor_#.txt 100 \
-          -o example/pvals_cancer/pvals.two_sided_cancer.txt \
-          -t two_sided >> sxtr_sparcc_cancer.log
-          
-    # step 4 - Rename file
-    mv example/pvals_cancer/pvals.two_sided_cancer.txt sxtr_pvals_cancer.two_sided.tsv
-    mv example/basis_corr/sxtr_sparcc_Cancer.tsv sxtr_cov_mat_Cancer.tsv
-
-    ## 可视化
-    Rscript ${sd}/SparCC_visualization.R \
-          --Correlation result12/metaphlan4/sxtr_cov_mat_Cancer.tsv \
-          --Pvalue result12/metaphlan4/sxtr_pvals_cancer.two_sided.tsv \
-          --output result12/metaphlan4/
-
-
-### graphlan_plot (物种组成)
+## graphlan_plot (物种组成)
 
     # Graphlan输入文件获取
     # Add heatmap as an example, if need to plot bar use "--type bar" instead
@@ -633,3 +719,12 @@ dos2unix $sd/metaphlan_hclust_heatmap.R
       --design metadata.txt \
       --type heatmap \
       --output metaphlan4/graphlan
+      
+      
+### MAGs耐药基因丰度热图
+
+    Rscript ${sd}/functional_gene_heatmap.R \
+        --input binning/temp/ARG2/ARG_final.txt \
+        --group binning/temp/ARG2/group_ARG.txt \
+        --output binning/temp/      
+      
