@@ -2,13 +2,14 @@
 
 # 0EasyMetagenome software & database install (0易宏基因组软件和数据库安装)
 
-    # Authors(作者): Yong-Xin Liu(刘永鑫), Defeng Bai(白德凤), Tong Chen(陈同) et al.
-    # Version(版本): 1.25, 2026/5/20
+    # Authors(作者): Yong-Xin Liu(刘永鑫), Defeng Bai(白德凤), Tong Chen(陈同), Yunyun Gao(高云云) et al.
+    # Version(版本): 1.26, 2026/11/5
     # Homepage(主页): https://github.com/YongxinLiu/EasyMetagenome
-    # Cititon(引文): Bai, et al. 2025. EasyMetagenome: A User‐Friendly and Flexible Pipeline for Shotgun Metagenomic Analysis in Microbiome Research. iMeta 4: e70001. https://doi.org/10.1002/imt2.70001
+    # Cititon(引文): Bai, et al. 2025. EasyMetagenome: A User‐Friendly and Flexible Pipeline for Shotgun Metagenomic Analysis in Microbiome Research. 
+    #                iMeta 4: e70001. https://doi.org/10.1002/imt2.70001
 
-    # All software and databases downloaded from the website (所有软件和数据库可从官网下载)
-    # Backup source add download speed and success rate (备用站点提高下载速度和成功率)
+    # All software and databases downloaded from the public links (所有软件和数据库可从官网下载)
+    # Backup source may increase the download speed and success rate (备用站点提高下载速度和成功率)
     # Backup1. Institute of Microbiology, Chinese Academy of Sciences(中科院微生物所)：ftp://download.nmdc.cn/tools/ (FileZilla访问) 
     # Backup2. Baidu Netdisk(百度网盘)：https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
 
