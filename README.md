@@ -1,13 +1,13 @@
 # EasyMetagenome - A user-friendly and flexible pipeline for shotgun metagenomic analysis in microbiome research
 # 易宏基因组——简单易用的宏基因组分析流程
 
-Version(版本)：v1.24
+Version(版本)：v1.26
 
-Update(更新)：2025/11/26
+Update(更新)：2026/11/5
 
 If used this project, please cited (使用此项目，请引用下文):
 
-Bai, Defeng, **Tong Chen**, ..., Yong‐Xin Liu**. 2025. “EasyMetagenome: A User‐Friendly and Flexible Pipeline for Shotgun Metagenomic Analysis in Microbiome Research.” **iMeta** 4: e70001. <https://doi.org/10.1002/imt2.70001>(Highly Cited)
+Bai, Defeng, **Tong Chen**, ..., **Yong‐Xin Liu**. 2025. “EasyMetagenome: A User‐Friendly and Flexible Pipeline for Shotgun Metagenomic Analysis in Microbiome Research.” **iMeta** 4: e70001. <https://doi.org/10.1002/imt2.70001>(Highly Cited)
 
 ![image](https://github.com/baidefeng/EasyMetagenome/blob/master/result/EasyMetagenomePipeline2.jpg)
 
