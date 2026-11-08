@@ -232,7 +232,7 @@
 
 ## Read-based HUMAnN4/MetaPhlAn4 (基于读长的分析)
 
-### Opt 1. Download install HUMAnN4 (方法1. HUMAnN4下载解压安装)
+### Method 1. Download install HUMAnN4 (方法1. HUMAnN4下载解压安装)
 
     # Specify conda filename (指定conda文件名)
     s=humann4
@@ -275,7 +275,7 @@
     # Record core software version (记录核心软件版本)
     humann --version # v4.0.0.alpha.1
     metaphlan -v # 4.1.1 (11 Mar 2024)
-    diamond help | head -n 1 # v2.2.0.180
+    diamond help | head -n 1 # v2.2.8.188
     # test (测试)
     humann_test
 
@@ -329,16 +329,16 @@
     # humann4 need MetaPhlAn4 mpa_vOct22_CHOCOPhlAnSGB_202403 database (2.98G+19.87G)
     mkdir -p ${db}/metaphlan4 && cd ${db}/metaphlan4
 
-    # Opt 1. Download from official website (官网下载) 2.7G, 30s; 19G, 5m;
+    # Opt 1. Download from official website (官网下载) 2.7G; 19G
     wget -c http://cmprod1.cibio.unitn.it/biobakery4/metaphlan_databases/mpa_vOct22_CHOCOPhlAnSGB_202403.tar
-    time tar xvf mpa_vOct22_CHOCOPhlAnSGB_202403.tar
     wget -c http://cmprod1.cibio.unitn.it/biobakery4/metaphlan_databases/bowtie2_indexes/mpa_vOct22_CHOCOPhlAnSGB_202403_bt2.tar
-    time tar xvf mpa_vOct22_CHOCOPhlAnSGB_202403_bt2.tar
 
     # Opt 2/3. Download from Baidu NetDisk or NMDC (下载可选百度云或微生物所)
     # Baidu NetDisk: https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315 db/meta/metaphlan4
     wget -c ftp://download.nmdc.cn/tools/meta/metaphlan4/mpa_vOct22_CHOCOPhlAnSGB_202403.tar
     wget -c ftp://download.nmdc.cn/tools/meta/metaphlan4/mpa_vOct22_CHOCOPhlAnSGB_202403_bt2.tar.gz
+
+    # After Download, uncompress, 2.7G, 1m; 19G, 5-20m;
     tar xvf mpa_vOct22_CHOCOPhlAnSGB_202403.tar
     time tar xvzf mpa_vOct22_CHOCOPhlAnSGB_202403_bt2.tar.gz
 

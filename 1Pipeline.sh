@@ -28,17 +28,17 @@
     db=/mnt/d/db
     # work directory(wd, 工作目录)，e.g. meta
     wd=/mnt/d/meta
-    # Create and enter the working directory 创建并进入工作目录
-    mkdir -p $wd && cd $wd
-    # Create sequences, temporary files, and a results directory 创建序列，临时文件和结果目录
-    mkdir -p seq temp result
     # Add software/scripts to environment variables 添加软件/脚本至环境变量
     PATH=$soft/bin:$soft/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$db/EasyMicrobiome/linux:$db/EasyMicrobiome/script
     echo $PATH
+    # Create and enter the working directory 创建并进入工作目录
+    mkdir -p $wd && cd $wd
 
     # **Metadata and sequence files (元数据和序列文件) **
 
     # Metadata (元数据)
+    # Create sequences, temporary files, and a results directory 创建序列，临时文件和结果目录
+    mkdir -p seq temp result
     # Edit metadata in Excel then save txt format in result, demo in result or download (编写元数据metadata.txt并保存至result目录，此处下载演示)
     wget -c http://www.imeta.science/github/EasyMetagenome/result/metadata.txt
     mv metadata.txt result/metadata.txt
@@ -259,8 +259,8 @@
 	  time humann \
   	  --input temp/concat/${i}.fq \
   	  --output temp/humann4 \
-      --threads 3 \
-      --metaphlan-options "--input_type fastq --bowtie2db ${db}/metaphlan4 --index mpa_vOct22_CHOCOPhlAnSGB_202403 --offline -t rel_ab_w_read_stats --nproc 3" \
+      --threads 1 \
+      --metaphlan-options "--input_type fastq --bowtie2db ${db}/metaphlan4 --index mpa_vOct22_CHOCOPhlAnSGB_202403 --offline -t rel_ab_w_read_stats --nproc 1" \
       --nucleotide-database ${db}/humann4/chocophlan \
       --protein-database ${db}/humann4/uniref \
       --utility-database ${db}/humann4/utility_mapping
