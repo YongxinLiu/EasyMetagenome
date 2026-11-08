@@ -2,11 +2,12 @@
 
 # 1EasyMetagenome Pipeline (1易宏基因组流程)
 
-    # Authors(作者): Yong-Xin Liu(刘永鑫), Defeng Bai(白德凤), Tong Chen(陈同) et al.
-    # Version(版本): 1.25, 2026/6/8
+    # Authors(作者): Yong-Xin Liu(刘永鑫), Tong Chen(陈同), Defeng Bai(白德凤) et al.
+    # Version(版本): 1.26, 2026/11/8
     # Operation System(操作系统): Linux Ubuntu 22.04+ / CentOS 7.7+ 
     # Homepage(主页): https://github.com/YongxinLiu/EasyMetagenome
-    # Cititon(引文): Bai, et al. 2025. EasyMetagenome: A User‐Friendly and Flexible Pipeline for Shotgun Metagenomic Analysis in Microbiome Research. iMeta 4: e70001. https://doi.org/10.1002/imt2.70001
+    # Cititon(引文): Bai, et al. 2025. EasyMetagenome: A User‐Friendly and Flexible Pipeline for Shotgun Metagenomic Analysis in Microbiome Research. 
+    #                iMeta 4: e70001. https://doi.org/10.1002/imt2.70001
 
 # 1. Data preprocessing(数据预处理)
 
@@ -24,9 +25,9 @@
     # Conda directory(软件安装目录), e.g. /anaconda3 , `conda env list` view software list,
     soft=~/miniconda3
     # database(db, 数据库位置), e.g. /db or ~/db
-    db=~/db
+    db=/mnt/d/db
     # work directory(wd, 工作目录)，e.g. meta
-    wd=~/meta
+    wd=/mnt/d/meta
     # Create and enter the working directory 创建并进入工作目录
     mkdir -p $wd && cd $wd
     # Create sequences, temporary files, and a results directory 创建序列，临时文件和结果目录
@@ -52,7 +53,7 @@
     # Sequencing data (序列文件)
     # Using filezilla upload to seq directory (用户使用filezilla上传测序文件至seq目录)
     # This test uses theChina National Center for Bioinformation's GSA network for downloading data. Backup links are also provided via iMeta and BaiduNetDisk.
-    # 本次测试国家生信息中心GSA网络下载，同时提供iMeta、百度网盘备用站点数据下载链接
+    # 本次测试国家生信息中心GSA网络下载(下载不完整重试)，同时提供iMeta、百度网盘备用站点数据下载链接
     
     # Site 1. GSA download links and batch rename by metadata (站点1. 国家生信息中心下载链接，按实验设计编号批量下载并改名)
     # GSA: https://ngdc.cncb.ac.cn/gsa/ search CRA032890, find link test one example C3
@@ -159,7 +160,7 @@
     conda activate kneaddata
     kneaddata --version # v0.12.4
 
-    # Single-sample host removal (单样本去宿主)
+    # Single-sample host removal (单样本去宿主), 5m, New version auto Reformatting file sequence identifiers
     i=`tail -n+2 result/metadata.txt|cut -f1 | head -n1`
     time kneaddata -i1 temp/qc/${i}_1.fastq -i2 temp/qc/${i}_2.fastq \
         -o temp/hr \
@@ -169,8 +170,8 @@
         --remove-intermediate-output -v -t 3
 
     # Multi-sample host removal, this step occupies 5 times the space of the original data, 3m
-    # 多样本去宿主,此步占用原始数据5x空间,5m
-    time tail -n+2 result/metadata.txt | cut -f1 | rush -j 2 \
+    # 多样本去宿主,此步占用原始数据5x空间,5-13m
+    time tail -n+3 result/metadata.txt | cut -f1 | rush -j 2 \
       "kneaddata \
         -i1 temp/qc/{1}_1.fastq -i2 temp/qc/{1}_2.fastq \
         -o temp/hr/ \

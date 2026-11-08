@@ -2,7 +2,7 @@
 
 # 0EasyMetagenome software & database install (0易宏基因组软件和数据库安装)
 
-    # Authors(作者): Yong-Xin Liu(刘永鑫), Defeng Bai(白德凤), Tong Chen(陈同), Yunyun Gao(高云云) et al.
+    # Authors(作者): Yong-Xin Liu(刘永鑫), Tong Chen(陈同), Defeng Bai(白德凤), Yunyun Gao(高云云) et al.
     # Version(版本): 1.26, 2026/11/5
     # Homepage(主页): https://github.com/YongxinLiu/EasyMetagenome
     # Cititon(引文): Bai, et al. 2025. EasyMetagenome: A User‐Friendly and Flexible Pipeline for Shotgun Metagenomic Analysis in Microbiome Research. 
@@ -21,7 +21,7 @@
     # The follwoing paragraph must run before(分析前必须运行)
     # Database Locations, default ~/db directory(No administrative privileges required), administrator can select /db
     # 数据库安装位置，默认~/db目录(无需管理权限)，管理员可选/db
-    db=~/db
+    db=/mnt/d/db
     mkdir -p ${db} && cd ${db}
     # Software installation location, default ~/miniconda3 , the test server is /anaconda3
     # 软件安装位置，默认为 ~/miniconda3 ，测试服务器为 /anaconda3
@@ -51,7 +51,7 @@
     # rename 改名
     mv EasyMetagenome-master EasyMetagenome
 
-    # Method 2. Baidu Netdisk (方法2. 百度网盘) https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315 /db/soft/EasyMetagenome.tar.gz
+    # Method 2. Baidu Netdisk /soft (百度网盘) https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315 /db/soft/EasyMetagenome.tar.gz
 
     # Method 3. Download by Git (needs Git installed)（方法3. git下载，需安装git）
     git clone https://github.com/YongxinLiu/EasyMetagenome
@@ -62,12 +62,9 @@
     wget -c ftp://download.nmdc.cn/tools/soft/EasyMetagenome.tar.gz
     tar xvzf EasyMetagenome.tar.gz
 
-### EasyMicrobiome: dependencies soft and scripts for pipeline (软件和数据库合集)
+### EasyMicrobiome: include dependencies soft and scripts for EasyMetagenome (软件和脚本合集)
 
-    # EasyMetagenome depends on EasyMicrobiome, which includes a collection of scripts, 
-    # software, and databases. (https://github.com/YongxinLiu/EasyMicrobiome)
-    # EasyMetagenome依赖EasyMicrobiome，其包括众多脚本、软件和数据库的集合，
-    # 网址：https://github.com/YongxinLiu/EasyMicrobiome
+    # Website(网址): https://github.com/YongxinLiu/EasyMicrobiome
     
     # Method 1. Download ZIP archive at https://github.com/YongxinLiu/EasyMicrobiome, `Code` - `Download` and upload it to the server.
     # 方法1. 网页 https://github.com/YongxinLiu/EasyMicrobiome 中Code - Download ZIP下载压缩包，上传至服务器
@@ -75,9 +72,9 @@
     mv EasyMicrobiome-master EasyMicrobiome
     # sed -i 's/\r//' EasyMicrobiome/kegg/KO1-4.txt
     
-    # Method 2. Baidu Netdisk (方法2. 百度网盘) https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315 /db/soft/EasyMicrobiome.tar.gz
+    # Method 2. Baidu Netdisk (百度网盘) /soft https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315 /db/soft/EasyMicrobiome.tar.gz
    
-    # Method 3. Download by Git（方法3. git下载）
+    # Method 3. Download by Git
     git clone https://github.com/YongxinLiu/EasyMicrobiome
     # Old version update (旧版更新)
     cd EasyMicrobiome && git pull && cd ../
@@ -105,7 +102,7 @@
     # 初始化，并重置环境，提示符前出现(base)即成功
     ~/miniconda3/condabin/conda init
     source ~/.bashrc
-    # Show version(查看版本), conda 26.3.2, python 3.13.9
+    # Show version(查看版本), conda 26.9.4, python 3.14.9
     conda -V
     python --version
     # Add frequently used channels (添加常用频道)
@@ -127,37 +124,6 @@
 
 
 # 1. Data preprocessing (数据预处理)
-
-## fastp install (安装)
-
-    # Note: You can choose one of the following installation methods: direct installation, download and unpack, etc. If one method fails, try another.
-    # 注：直接安装、下载解压等安装方法多选一。一种方法不成功，再尝试另一种。
-    
-## Opt 1. Conda install (Conda安装)
-
-    # note: the fastp version in bioconda may be not the latest
-    conda install -c bioconda fastp
-    
-    # or use mamba
-    mamba install fastp
-    
-## Opt 2. Download install (下载安装)
-    
-    # download the latest build
-    wget http://opengene.org/fastp/fastp
-    chmod a+x ./fastp
-
-    # or download specified version, i.e. fastp v1.3.3
-    wget http://opengene.org/fastp/fastp.1.3.3
-    mv fastp.1.3.3 fastp
-    chmod a+x ./fastp
-    
-    mv fastp ~/miniconda3/bin/
-    
-### Record software version (记录软件版本)
-
-    fastp --version # 1.3.3
-
 
 ## kneaddata install (安装)
 
@@ -188,12 +154,12 @@
 
 ### Record software version (记录软件版本)
 
-    fastp --version # 1.3.3
+    fastp --version # 1.4.0
     kneaddata --version # 0.12.4
-    bowtie2 --version # 2.5.4
-    fastqc -v # v0.12.1
-    trimmomatic -version # 0.40
-    multiqc --version  # 1.34
+    bowtie2 --version # 2.5.5
+    fastqc -v # v0.13.0
+    trimmomatic -version # 0.41
+    multiqc --version  # 1.35
     
     # Optional: Software packaging -- can copy to others (可选：软件打包--复制解压使用)
     conda pack -f --ignore-missing-files -n ${s} -o ${s}.tar.gz
@@ -214,7 +180,7 @@
     kneaddata_database --download human_genome bowtie2 ${db}/kneaddata/human
     
     # Opt 2. Manually download the Human Genome from the official, NMDC, or Baidu Netdisk, then extract 1 minute
-    # 方法2. 手动下载官网、备用链接或百度云人类基因组并解压1分钟
+    # 方法2. 手动下载官网、备用链接或百度云人类基因组并解压1分钟，位置参考meta/里面的目录
     cd ${db}/kneaddata/human
     wget -c https://huttenhower.sph.harvard.edu/kneadData_databases/Homo_sapiens_hg39_T2T_Bowtie2_v0.1.tar.gz
     # wget -c ftp://download.nmdc.cn/tools/meta/kneaddata/human/Homo_sapiens_hg39_T2T_Bowtie2_v0.1.tar.gz
@@ -258,6 +224,7 @@
     gunzip tair10.fa.gz
     time bowtie2-build -f tair10.fa tair10 --threads 4
     cd ${db}
+
 
 # 2. Read-based HUMAnN4/Kraken2 (基于读长分析)
 
@@ -1010,4 +977,6 @@
     # 1.  rgi应用于菌群分析及结果展示
     # 2.  antisamsh应用于菌群分析及结果展示
     # 3.  cazy应用于菌群分析及结果展示
-    
+
+    # **1.26 2026.11.7**
+    # 1. update fastp 1.0.1 to 1.4.0
