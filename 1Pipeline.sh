@@ -25,9 +25,9 @@
     # Conda directory(软件安装目录), e.g. /anaconda3 , `conda env list` view software list,
     soft=~/miniconda3
     # database(db, 数据库位置), e.g. /db or ~/db
-    db=/mnt/d/db
+    db=~/db
     # work directory(wd, 工作目录)，e.g. meta
-    wd=/mnt/d/meta
+    wd=~/meta
     # Add software/scripts to environment variables 添加软件/脚本至环境变量
     PATH=$soft/bin:$soft/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$db/EasyMicrobiome/linux:$db/EasyMicrobiome/script
     echo $PATH
@@ -259,8 +259,8 @@
 	  time humann \
   	  --input temp/concat/${i}.fq \
   	  --output temp/humann4 \
-      --threads 1 \
-      --metaphlan-options "--input_type fastq --bowtie2db ${db}/metaphlan4 --index mpa_vOct22_CHOCOPhlAnSGB_202403 --offline -t rel_ab_w_read_stats --nproc 1" \
+      --threads 8 \
+      --metaphlan-options "--input_type fastq --bowtie2db ${db}/metaphlan4 --index mpa_vOct22_CHOCOPhlAnSGB_202403 --offline -t rel_ab_w_read_stats --nproc 8" \
       --nucleotide-database ${db}/humann4/chocophlan \
       --protein-database ${db}/humann4/uniref \
       --utility-database ${db}/humann4/utility_mapping
@@ -268,7 +268,7 @@
     # Multi-sample parallel computing, test data with 6 samples in dual parallel: 2h, recommended 16p, 3h/6G;
     # 多样本并行计算，测试数据6个样本双并行：2h，推荐16p，3h/6G；
     # -n+3 start from second samples, --threads set 8/16/32 to accelerate    
-    time tail -n+2 result/metadata.txt | cut -f1 | rush -j 2 \
+    time tail -n+3 result/metadata.txt | cut -f1 | rush -j 2 \
       "humann \
   	  --input temp/concat/{1}.fq \
   	  --output temp/humann4 \

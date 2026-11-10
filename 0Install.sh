@@ -21,7 +21,7 @@
     # The follwoing paragraph must run before(分析前必须运行)
     # Database Locations, default ~/db directory(No administrative privileges required), administrator can select /db
     # 数据库安装位置，默认~/db目录(无需管理权限)，管理员可选/db
-    db=/mnt/d/db
+    db=~/db
     mkdir -p ${db} && cd ${db}
     # Software installation location, default ~/miniconda3 , the test server is /anaconda3
     # 软件安装位置，默认为 ~/miniconda3 ，测试服务器为 /anaconda3
