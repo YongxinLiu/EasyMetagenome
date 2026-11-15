@@ -1182,7 +1182,7 @@
     time checkm2 predict --input temp/drep95/dereplicated_genomes/* \
       --output-directory temp/checkm2 --threads 8
     ln temp/checkm2/quality_report.tsv result/checkm2/
-    less result/checkm2/quality_report.tsv
+    head result/checkm2/quality_report.tsv
 
 ## 4.3 CoverM quantify in genome (基因组定量)
 
@@ -1205,8 +1205,8 @@
     # Merge to table (结果合并)
     mkdir -p result/coverm
     conda activate humann4
-    sed -i 's/_1.fastq Relative Abundance (%)//' temp/coverm_all/*.txt
-    humann_join_tables --input temp/coverm_all --file_name txt --output result/coverm/abundance.tsv
+    sed -i 's/_1.fastq Relative Abundance (%)//' temp/coverm/*.txt
+    humann_join_tables --input temp/coverm --file_name txt --output result/coverm/abundance.tsv
     csvtk -t stat result/coverm/abundance.tsv
 
     # Group mean (按组求均值，需要metadata中有3列且每个组有多个样本)
