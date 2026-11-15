@@ -772,8 +772,9 @@
     # zenodo backup link: https://zenodo.org/records/14897628 diamond 2.1.11 (2025/2/20)  Download need VPN
     
     # Backup database
-    wget -c ftp://download.nmdc.cn/tools/meta/checkm2/uniref100.KO.1.dmnd.tar.gz
-    tar xvzf uniref100.KO.1.dmnd.tar.gz
+    cd $db/$s
+    wget -c ftp://download.nmdc.cn/tools/meta/checkm2/checkm2_database.tar.gz
+    tar xvzf checkm2_database.tar.gz
     
     #指定数据库
     export CHECKM2DB="${db}/checkm2/CheckM2_database/uniref100.KO.1.dmnd"  
@@ -785,10 +786,9 @@
     checkm2 predict --threads 30 --input ../bin1.fa ../../bin2.fna /some/other/directory/bin3.fasta --output-directory <output_folder> 
     
     #打包
-    cd ~/project/EasyMetagenome/package
     n=checkm2
     conda pack -f --ignore-missing-files -n ${n} -o ${n}.tar.gz
-    cd ..
+
 
 
 # 5. Genome and virome (单菌基因组/病毒组等)

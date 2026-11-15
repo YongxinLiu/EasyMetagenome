@@ -374,7 +374,7 @@
     csvtk -t stat ${pcl}
     head -n3 ${pcl} | cut -f 1-5
     # For the KW test with grouping, note the grouping column names in the second column 按分组KW检验，注意第二列的分组列名
-    humann_associate.py --input ${pcl} \
+    humann_associate --input ${pcl} \
         --focal-metadatum Group --focal-type categorical \
         --last-metadatum Group --fdr 0.2 \
         --output result/humann4/associate.txt
@@ -439,13 +439,14 @@
     export2graphlan.py --skip_rows 1,2 -i result/metaphlan4/taxonomy.tsv \
       --tree temp/merged_abundance.tree.txt \
       --annotation temp/merged_abundance.annot.txt \
-      --most_abundant 100 --abundance_threshold 20 --least_biomarkers 10 \
+      --most_abundant 100 --abundance_threshold 30 --least_biomarkers 30 \
       --annotations 3,4 --external_annotations 7
     # graphlan annotation
     graphlan_annotate.py --annot temp/merged_abundance.annot.txt \
       temp/merged_abundance.tree.txt  temp/merged_abundance.xml
     # output PDF figure, annoat and legend
-    graphlan.py temp/merged_abundance.xml result/metaphlan4/graphlan.pdf --external_legends 
+    graphlan.py temp/merged_abundance.xml \
+      result/metaphlan4/graphlan.pdf --external_legends 
 
 
 ## 2.3 LEfSe Differential analysis (差异分析物种)
@@ -809,7 +810,7 @@
     # Redundancy removal for both batches of data was accelerated using cd-hit-est-2d, see appendix.
     # 两批数据去冗余使用cd-hit-est-2d加速，见附录
     
-    # batch samples (样本批量运行)
+    # batch samples (样本批量运行，可选)
     for i in `tail -n+2 result/metadata.txt | cut -f1`;do
     	mkdir -p result/NR/${i}
         cd-hit-est -i temp/prodigal/${i}/gene.fa \
@@ -1177,6 +1178,7 @@
     conda activate checkm2
     mkdir -p temp/checkm2 result/checkm2
     # 22 genomes, 2m
+    export CHECKM2DB="${db}/checkm2/CheckM2_database/uniref100.KO.1.dmnd"  
     time checkm2 predict --input temp/drep95/dereplicated_genomes/* \
       --output-directory temp/checkm2 --threads 8
     ln temp/checkm2/quality_report.tsv result/checkm2/
