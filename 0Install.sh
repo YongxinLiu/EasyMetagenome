@@ -705,7 +705,7 @@
 
     # Home: https://gtdb.ecogenomic.org/
     # Github: https://github.com/Ecogenomics/GTDBTk
-    s=gtdbtk
+    s=gtdbtk2.8
 
 ### GTDB-tk software install (软件安装)
 
@@ -718,19 +718,20 @@
     conda unpack
 
     ### Opt 2. Conda install & package (方法2. conda安装)
-    # gtdbtk-2.7.2, 2026-05-08
+    # gtdbtk-2.7.2, 2026-05-08; 2.8 2026-11-16
     # n=gtdbtk
-    conda create -y -n ${s} -c conda-forge -c bioconda gtdbtk=2.7.2
+    conda create -y -n ${s} -c conda-forge -c bioconda gtdbtk=2.8.0
     conda activate ${s}
     # conda pack, --exclude database
-    conda pack -n ${s} -o ${s}.tar.gz --exclude gtdbtk-2.7.2 --ignore-editable-packages --ignore-missing-files
+    conda pack -n ${s} -o ${s}.tar.gz # --exclude gtdbtk-2.8.0 --ignore-editable-packages --ignore-missing-files
     chmod 755 *
 
     # recored version
-    gtdbtk -v # 2.7.2
+    gtdbtk -v # 2.8.0
 
 ### GTDB-tk database install (软件安装)
 
+    # gtdbtk_r232_data.tar.gz	2026-04-13 22:00	56.63G
     ### Opt 1. Download install (方法1.下载解压安装)
     mkdir -p ${db}/gtdb && cd ${db}/gtdb
     wget -c --no-check-certificate https://data.ace.uq.edu.au/public/gtdb/data/releases/latest/auxillary_files/gtdbtk_package/full_package/gtdbtk_data.tar.gz
@@ -742,7 +743,7 @@
     
     ### Opt 2. Script install & package (方法2. conda安装)
     # download-db.sh, modify database location, wget -c for network continue
-    sed -i 's#miniconda3/envs/gtdbtk/share/gtdbtk-2.7.2/db#db/gtdb#;s/wget /wget -c /' ${soft}/envs/gtdbtk/bin/download-db.sh
+    sed -i 's#miniconda3/envs/gtdbtk/share/gtdbtk-2.8.0/db#db/gtdb#;s/wget /wget -c /' ${soft}/envs/gtdbtk/bin/download-db.sh
     # Download database 57 G
     download-db.sh
     
@@ -979,4 +980,5 @@
     # 3.  cazy应用于菌群分析及结果展示
 
     # **1.26 2026.11.7**
-    # 1. update fastp 1.0.1 to 1.4.0
+    # 1. update fastp 1.3.3 to 1.4.0
+    # 1. update gtdbtk 2.7.2 to 2.8.0

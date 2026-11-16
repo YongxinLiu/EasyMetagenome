@@ -1219,27 +1219,28 @@
 
 ## 4.4 GTDB taxonomic classifications of prokaryote (原核基因组注释和进化树)
 
-    conda activate gtdbtk
+    s=gtdbtk2.8
+    conda activate $s
     export GTDBTK_DATA_PATH="${db}/gtdb"
-    gtdbtk -v # 2.7.2
+    gtdbtk -v # 2.8.0
     
     # Classify, 8p, 22 genomes, 40m
     mkdir -p temp/gtdb_classify
-    time gtdbtk classify_wf \
+    time gtdbtk classify_wf --place_species \
         --genome_dir temp/drep95/dereplicated_genomes \
         --out_dir temp/gtdb_classify \
-        --extension fa --place_species \
+        --extension fa \
         --prefix tax \
         --cpus 8
     # less -S view, press q quit; 26 bac short for Bacterial, 0 ar short for Archaea
-    less -S temp/gtdb_classify/tax.bac120.summary.tsv
-    less -S temp/gtdb_classify/tax.ar53.summary.tsv
+    head temp/gtdb_classify/tax.bac120.summary.tsv
+    head temp/gtdb_classify/tax.ar53.summary.tsv
 
     # (Optional) Annotations for all MAG species (可选)所有MAG物种注释
     mkdir -p temp/gtdb_all
     # 10000 genome，32p，100min
-    time gtdbtk classify_wf --genome_dir temp/drep_in/ \
-        --out_dir temp/gtdb_all --extension fa --place_species \
+    time gtdbtk classify_wf --place_species --genome_dir temp/drep_in/ \
+        --out_dir temp/gtdb_all --extension fa \
         --prefix tax --cpus 32
     
     # multi-sequence alignment and phylogenetic tree (多序列对齐结果建树)

@@ -2,11 +2,12 @@
 
 # 2EasyMetagenome Visualization (2易宏基因组统计与可视化)
 
-    # Authors(作者): Yong-Xin Liu(刘永鑫), Defeng Bai(白德凤), Tong Chen(陈同) et al.
-    # Version(版本): 1.25, 2026/8/4
+    # Authors(作者): Yong-Xin Liu(刘永鑫), Tong Chen(陈同), Defeng Bai(白德凤), Yunyun Gao(高云云) et al.
+    # Version(版本): 1.26, 2026/11/5
     # Operation System(操作系统): Linux Ubuntu 22.04+ / CentOS 7.7+ 
     # Homepage(主页): https://github.com/YongxinLiu/EasyMetagenome
-    # Cititon(引文): Bai, et al. 2025. EasyMetagenome: A User‐Friendly and Flexible Pipeline for Shotgun Metagenomic Analysis in Microbiome Research. iMeta 4: e70001. https://doi.org/10.1002/imt2.70001
+    # Cititon(引文): Bai, et al. 2025. EasyMetagenome: A User‐Friendly and Flexible Pipeline for Shotgun Metagenomic Analysis in Microbiome Research. 
+    #                iMeta 4: e70001. https://doi.org/10.1002/imt2.70001
 
     # Set work directory(设置工作目录)
     wd=/d/Download/github/EasyMetagenome/result
@@ -33,14 +34,14 @@
     head -n1 metaphlan4/alpha.txt
     Rscript $sd/alpha_boxplot.R \
       -i metaphlan4/alpha.txt \
-      -a shannon \
+      -a observed_species \
       -d metadata.txt \
       -n Group \
       -o metaphlan4/ \
       -w 89 -e 59
   
-    # 5 Alpha diversity boxplot
-    for i in `head -n1 metaphlan4/alpha.txt|cut -f 2-`;do
+    # Plot other 4 alpha diversities boxplot
+    for i in `head -n1 metaphlan4/alpha.txt|cut -f 3-`;do
     Rscript $sd/alpha_boxplot.R -i metaphlan4/alpha.txt -a ${i} \
       -d metadata.txt -n Group -w 89 -e 59 \
       -o metaphlan4/
@@ -50,16 +51,16 @@
     # result: p_boxplot_${alpha_diversity}.pdf
     Rscript $sd/alpha_boxplot_new.R \
       -i metaphlan4/alpha.txt \
-      -a shannon \
+      -a observed_species \
       -d metadata.txt \
       -n Group \
       -o metaphlan4/ \
-      -w 49 -e 79
+      -w 59 -e 89
   
-    # 5 Alpha diversity boxplot
-    for i in `head -n1 metaphlan4/alpha.txt|cut -f 2-`;do
+    # Plot other 4 alpha diversities boxplot with pvalue
+    for i in `head -n1 metaphlan4/alpha.txt|cut -f 3-`;do
     Rscript $sd/alpha_boxplot_new.R -i metaphlan4/alpha.txt -a ${i} \
-      -d metadata.txt -n Group -w 49 -e 79 \
+      -d metadata.txt -n Group -w 59 -e 89 \
       -o metaphlan4/
     done
 
@@ -70,9 +71,11 @@
        metaphlan4/taxonomy.tsv > metaphlan4/taxonomy_high.tsv
     wc -l metaphlan4/taxonomy_high.tsv
     # EVenn (https://www.bic.ac.cn/test/venn/#/) supports 6 groups and real-time viewing of element intersections (支持实时查看元素交集)
-    # Ref：Yang, Tong Chen, Yong-Xin Liu, Luqi Huang. 2024. Visualizing set relationships: EVenn's comprehensive approach to Venn diagrams. iMeta 3: e184. https://doi.org/10.1002/imt2.184
+    # Ref：Yang, Tong Chen, Yong-Xin Liu, Luqi Huang. 2024. Visualizing set relationships: EVenn's comprehensive approach to Venn diagrams. 
+    # iMeta 3: e184. https://doi.org/10.1002/imt2.184
     # script support 2-5 group: -f input, -a/b/c/d/g group, -w/u width and length, -p output filename
     # 本地2-5组比较:-f输入文件,-a/b/c/d/g分组名,-w/u为宽高英寸,-p输出文件名后缀
+    bash ${sd}/sp_vennDiagram.sh -h
     bash ${sd}/sp_vennDiagram.sh -f metaphlan4/taxonomy_high.tsv \
       -a C1 -b C2 -c Y1 -d Y2 -g Y3 \
       -w 4 -u 4 \
@@ -126,7 +129,7 @@
     csvtk -t stat metaphlan4/taxonomy.spf
     # Taxonomy level: Order, Top n taxa to plot heatmap (指定分类级、取前n种绘制热图）
     # Order Top 20, Family Top 25, Genus Top 30
-    tax=Order
+    tax=Family
     n=25
     # -i: input metaphlan4 result in spf format
     # -t: taxa in Kingdom/Phylum/Class/Order/Family/Genus/Species/Strain (界门纲目科属种株)，推荐门，目，属
