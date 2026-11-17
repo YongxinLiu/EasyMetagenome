@@ -312,7 +312,7 @@
     head result/metaphlan4/taxonomy2.spf
     # Download metadata.txt & taxonomy2.spf, and open in STAMP software 结果文件下载可用STAMP分析
 
-## 2.4 Functional composition analysis (功能组成分析)
+### Functional composition analysis (功能组成分析)
 
     # 整合后的输出：
     # *   result/metaphlan4/taxonomy.tsv 物种丰度表
@@ -543,7 +543,7 @@
       # --classified-out "temp/kraken2/${i}.classified_reads#.fasta" \
     # Batch processing of multiple samples to generate reports consumes a lot of memory but is fast; therefore, multi-task parallelism is not recommended.
     # 多样本批处理生成report，内存消耗大但速度快，不建议用多任务并行
-    for i in `tail -n+2 result/metadata.txt | cut -f1`;do
+    for i in `tail -n+3 result/metadata.txt | cut -f1`;do
       kraken2 --db ${db}/kraken2/${type} \
       --paired temp/hr/${i}_?.fastq \
       --threads 2 --use-names --report-zero-counts \
@@ -589,17 +589,17 @@
     # r是读长，通常为150，o输出重新估计的值
     # l为分类级，可选域D、门P、纲C、目O、科F、属G、种S级别丰度估计
     # t是阈值，默认为0，越大越可靠
-
+    
     # Re-estimate the abundance of each sample in a loop. 
-    # Please modify the tax and recalculate P and S once each.
-    # 循环重新估计每个样品的丰度，请修改tax分别重新计算P和S各1次
+    # 循环重新估计每个样品的丰度
     mkdir -p temp/bracken
     # read length (测序数据长度)、
     readLen=150
     # Only those present in 20% of the samples are retained (20%样本中存在才保留)
     prop=0.2
+    
     # Classification is set into D, P, C, O, F, G, S, with commonly used categories being Kingdom (D), Phylum (P), Genus (G), and Species (S).
-    # 设置分类级D,P,C,O,F,G,S，常用界D门P和属G种S
+    # 设置分类级D,P,C,O,F,G,S，常用门P和属G种S。**选择以下整段运行**
     for tax in P G S;do
     # tax=P
     for i in `tail -n+2 result/metadata.txt | cut -f1`;do
@@ -649,7 +649,6 @@
       > result/kraken2/bracken.S.${prop}-H
 
     # Clean big annotation files for each sequence (清理每条序列的注释大文件)
-
     /bin/rm -rf temp/kraken2/*.output
 
 ### Diversity and Visualization (多样性和可视化)
