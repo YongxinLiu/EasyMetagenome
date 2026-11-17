@@ -411,17 +411,18 @@
     conda create -n ${n} -y -c conda-forge -c bioconda kraken2=2.17.1 python=3.9
     conda activate ${n}
     conda install -y -c conda-forge -c bioconda bracken krakentools krona r-optparse
+    conda pack -f --ignore-missing-files -n ${n} -o ${n}.tar.gz
+    
+    # Record version 记录版本
     kraken2 --version # 2.17.1
     less `type bracken | cut -f2 -d '('|cut -f 1 -d ')'`|grep 'VERSION' # 3.0.1
-    conda pack -f --ignore-missing-files -n ${n} -o ${n}.tar.gz
 
 ### Kraken2 database (数据库安装)
 
     # Database：https://benlangmead.github.io/aws-indexes/k2  
-    # set version, current 20250714, set each type directory
-    # set version, current 20260226, set each type directory
+    # set version, current 20260626, set each type directory
     db=~/db
-    v=20260226
+    v=20260626
     mkdir -p ${db}/kraken2 && cd ${db}/kraken2
     mkdir -p pluspf16g pluspf pluspfp
 
@@ -433,7 +434,7 @@
     time tar xvzf k2_pluspf_16_GB_${v}.tar.gz -C pluspf16g # 1min
 
     # Option 2. Download the standard + protozoa + fungi, compressed 79.8G, uncompressed 103.4G (PlusPF)
-    # 方案2. 下载标准+原生动物+真菌，压缩包79.8G，解压103.4G (PlusPF) 
+    # 方案2. 下载标准+原生动物+真菌，压缩包84.8G，解压103.4G (PlusPF) 
     wget -c https://genome-idx.s3.amazonaws.com/kraken/k2_pluspf_${v}.tar.gz
     # wget -c ftp://download.nmdc.cn/tools/meta/kraken2/k2_pluspf_${v}.tar.gz
     time tar xvzf ${db}/kraken2/k2_pluspf_${v}.tar.gz -C ~/db/kraken2/pluspf # 1min

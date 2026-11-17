@@ -439,7 +439,7 @@
     export2graphlan.py --skip_rows 1,2 -i result/metaphlan4/taxonomy.tsv \
       --tree temp/merged_abundance.tree.txt \
       --annotation temp/merged_abundance.annot.txt \
-      --most_abundant 100 --abundance_threshold 30 --least_biomarkers 30 \
+      --most_abundant 1000 --abundance_threshold 30 --least_biomarkers 30 \
       --annotations 3,4 --external_annotations 7
     # graphlan annotation
     graphlan_annotate.py --annot temp/merged_abundance.annot.txt \
