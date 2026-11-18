@@ -198,6 +198,23 @@
           --trend metaphlan4/MaAsLin2_enriched_depleted.csv \
           --width 100 --height 80 \
           --output metaphlan4/
+
+    ### MaAsLin3差异物种分析火山图
+    # 同样适用于功能通路差异分析
+    Rscript ${sd}/compare_MaAsLin3.R -h      
+    Rscript ${sd}/compare_MaAsLin3.R \
+          --input metaphlan4/Species.txt \
+          --metadata metadata.txt \
+          --output metaphlan4/MaAsLin3_result
+          
+    # 根据MaAsLin3差异分析结果绘制火山图    
+    Rscript ${sd}/compare_volcano.R \
+          --input metaphlan4/MaAsLin3_result/MaAsLin3_overall_difference.csv \
+          --trend metaphlan4/MaAsLin3_result/MaAsLin3_enriched_depleted.csv \
+          --width 100 --height 80 \
+          --output metaphlan4/MaAsLin3_result/
+          
+    ## 注意：同样的输入文件MaAsLin2和MaAsLin3分析得到的结果不同主要原因是两者统计模型及零值处理策略不同，尤其是 MaAsLin3 将微生物检出率（prevalence）与非零丰度（abundance）分开建模，同时在标准化、数据转换和多重检验等方面也存在差异。
           
 ### Network analysis (网络分析，需要python环境运行)
 
@@ -252,7 +269,7 @@
           --Correlation ${wd}/SparCC3/R_Young.txt \
           --Pvalue ${wd}/SparCC3/P_Young.txt \
           --Group Young \
-          --output ${wd}/metaphlan4/      
+          --output ${wd}/metaphlan4/
 
 
 ## HUMAnN4 functional composition (功能组成)
