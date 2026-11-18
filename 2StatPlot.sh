@@ -10,8 +10,8 @@
     #                iMeta 4: e70001. https://doi.org/10.1002/imt2.70001
 
     # Set work directory(设置工作目录)
-    wd=/d/Download/github/EasyMetagenome/result
-    sd=/d/Download/github/EasyMicrobiome/script
+    wd=/d/meta/result
+    sd=/d/Download/EasyMicrobiome/script
     PATH=$PATH:$sd/../win:$sd
     cd $wd
 
@@ -163,7 +163,7 @@
     Rscript ${sd}/tax_stackplot.R \
           --input metaphlan4/${tax}.txt --design metadata.txt \
           --group Group --output metaphlan4/${tax}.stackplot \
-          --legend 10 --width 120 --height 70; done
+          --legend 10 --width 120 --height 80; done
 
     # Sorted stackplot (排序分面堆叠柱状图)
     for tax in Phylum Genus Species; do
@@ -443,12 +443,12 @@
     # Batch run 批量计算4种距离
     for dis in bray_curtis euclidean jaccard manhatten; do
         Rscript $sd/beta_pcoa.R \
-          --input kraken2/${tax}/beta/${dis}.txt \
+          --input kraken2/beta/${dis}.txt \
           --design metadata.txt \
           --group Group \
           --width 89 --height 59 \
-          --output kraken2/${tax}/beta/pcoa.${dis}.pdf; done
-    mv beta_pcoa_stat.txt kraken2/${tax}/beta/
+          --output kraken2/beta/pcoa.${dis}.pdf; done
+    mv beta_pcoa_stat.txt kraken2/beta/
     
 
 ### Stackplot 堆叠柱状图
@@ -473,7 +473,7 @@
     compare="Centenarians-Young"
     tax=S
     Rscript ${sd}/compare_stamp.R \
-      --input kraken2/bracken.${tax}.0.2-H --metadata metadata.txt \
+      --input kraken2/bracken.${tax}.0.2 --metadata metadata.txt \
       --group Group --compare ${compare} --threshold 0.1 \
       --method "wilcox.test" --pvalue 0.1 --fdr "none" \
       --width 200 --height 120 \
@@ -514,7 +514,7 @@
 ### MAGs不同功能数据库注释结果比较UpSet图
     
     # 数据处理得到data_venn1.txt
-    bash $sd/extract_eggnog_anno01.sh
+    bash $sd/extract_eggnog_anno01.sh -i ../temp/eggnog/output -o eggnog/data_venn1.txt
     # 绘图
     Rscript ${sd}/MAG_protiens_UpSet.R \
         --i eggnog/data_venn1.txt \
@@ -523,7 +523,9 @@
     ## 单个功能数据库分组比较(COGs, KEGG, ECs, GOs), 这里以COGs注释结果作为示例
     # 分组比较UpSet图
     # 处理数据得到data_venn2.txt
-    bash $sd/extract_eggnog_anno02.sh 
+    bash $sd/extract_eggnog_anno02.sh -i eggnog/eggnog.COG_category.raw.txt \
+          -m metadata.txt \
+          -o eggnog/data_venn2.txt
     # 绘图
     Rscript ${sd}/common_upset.R \
         --i eggnog/data_venn2.txt \
