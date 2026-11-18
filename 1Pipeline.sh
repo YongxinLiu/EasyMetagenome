@@ -1218,7 +1218,7 @@
 
 ## 4.4 GTDB taxonomic classifications of prokaryote (原核基因组注释和进化树)
 
-    s=gtdbtk2.8
+    s=gtdbtk
     conda activate $s
     export GTDBTK_DATA_PATH="${db}/gtdb"
     gtdbtk -v # 2.8.0
@@ -1246,6 +1246,8 @@
     mkdir -p temp/gtdb_infer
     gtdbtk infer --msa_file temp/gtdb_classify/align/tax.bac120.user_msa.fasta.gz \
         --out_dir temp/gtdb_infer --prefix tax --cpus 3
+    mkdir -p result/gtdb
+    cp temp/gtdb_infer/infer/intermediate_results/tax.unrooted.tree result/gtdb/
     # tree `tax.unrooted.tree` using iTOL online visualization
 
     # Tree annotation: gtdb-tk taxonomy (tax.bac120.summary.tsv) and drep genome info(Widb.csv)
@@ -1426,7 +1428,7 @@
 ## 5.6 GTDB taxonomy classification (物种注释)
 
   	conda activate gtdbtk
-  	# 所有基因组注释，400g, 1h, 1T
+  	# (可选) 所有基因组注释，400g, 1h, 1T
   	mkdir -p temp/gtdb_all result/gtdb_all
   	memusg -t gtdbtk classify_wf \
   	  --genome_dir temp/drep_in/ \

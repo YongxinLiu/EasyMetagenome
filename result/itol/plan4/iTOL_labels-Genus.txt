@@ -1,0 +1,30 @@
+LABELS
+SEPARATOR TAB
+DATA
+Gp_Centenarians_11	g__CAG-273
+Gp_Centenarians_13	g__Akkermansia
+Gp_Centenarians_7	g__Escherichia
+Gp_Centenarians_9	g__CAG-103
+Gp_Young_2	g__Blautia_A
+Gp_Young_3	g__Anaerostipes
+Gp_Young_5	g__Fusicatenibacter
+Gp_Young_6	g__Dorea_A
+Gp_Young_7	g__Blautia_A
+Gp_Young_9	g__Mediterraneibacter
+Mx_All_1	g__Alistipes
+Mx_All_13	g__Vescimonas
+Mx_All_14	g__Bifidobacterium
+Mx_All_16	g__Anaerobutyricum
+Mx_All_18	g__PeH17
+Mx_All_20	g__Comamonas
+Mx_All_5	g__Alistipes
+Mx_All_7	g__Faecalibacillus
+Sg_C1_2	g__Vescimonas
+Sg_C2_1	g__Klebsiella
+Sg_C2_3	g__CAG-349
+Sg_C2_4	g__CAG-170
+Sg_C3_3	g__Collinsella
+Sg_Y1_2	g__Blautia_A
+Sg_Y1_3	g__Collinsella
+Sg_Y2_1	g__Collinsella
+Sg_Y3_1	g__Anaerobutyricum

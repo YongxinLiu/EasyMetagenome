@@ -1,0 +1,30 @@
+LABELS
+SEPARATOR TAB
+DATA
+Gp_Centenarians_11	s__CAG-273 sp000437855
+Gp_Centenarians_13	s__Akkermansia muciniphila
+Gp_Centenarians_7	s__Escherichia coli
+Gp_Centenarians_9	s__CAG-103 sp900757655
+Gp_Young_2	s__Blautia_A sp003471165
+Gp_Young_3	s__Anaerostipes hadrus
+Gp_Young_5	s__Fusicatenibacter saccharivorans
+Gp_Young_6	s__Dorea_A amylophila
+Gp_Young_7	s__Blautia_A obeum
+Gp_Young_9	s__Mediterraneibacter faecis
+Mx_All_1	s__Alistipes putredinis
+Mx_All_13	s__Vescimonas cirricatena
+Mx_All_14	s__Bifidobacterium pseudocatenulatum
+Mx_All_16	s__Anaerobutyricum hallii
+Mx_All_18	s__PeH17 sp000435055
+Mx_All_20	s__Comamonas kerstersii
+Mx_All_5	s__Alistipes onderdonkii
+Mx_All_7	s__Faecalibacillus intestinalis
+Sg_C1_2	s__Vescimonas sp934591815
+Sg_C2_1	s__Klebsiella pneumoniae
+Sg_C2_3	s__CAG-349 sp003539515
+Sg_C2_4	s__CAG-170 sp000432135
+Sg_C3_3	s__Collinsella sp002391315
+Sg_Y1_2	s__Blautia_A wexlerae
+Sg_Y1_3	s__Collinsella intestinalis
+Sg_Y2_1	s__Collinsella sp902363945
+Sg_Y3_1	s__

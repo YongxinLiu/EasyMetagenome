@@ -1,0 +1,39 @@
+DATASET_COLORSTRIP
+SEPARATOR TAB
+BORDER_WIDTH	0.5
+COLOR	#bebada
+DATASET_LABEL	Family
+LEGEND_COLORS	#a6cee3	#1f78b4	#b2df8a	#33a02c	#fb9a99	#e31a1c	#fdbf6f	#ff7f00	#cab2d6	#6a3d9a	#ffff99	#b15928
+LEGEND_LABELS	f__Akkermansiaceae	f__Bifidobacteriaceae	f__Burkholderiaceae_C	f__CAG-138	f__CAG-508	f__CAG-917	f__Coprobacillaceae	f__Coriobacteriaceae	f__Enterobacteriaceae	f__Lachnospiraceae	f__Oscillospiraceae	f__Rikenellaceae
+LEGEND_SHAPES	1	1	1	1	1	1	1	1	1	1	1	1
+LEGEND_TITLE	Family
+MARGIN	5
+STRIP_WIDTH	25
+DATA
+Gp_Centenarians_11	#fb9a99	f__CAG-508
+Gp_Centenarians_13	#a6cee3	f__Akkermansiaceae
+Gp_Centenarians_7	#cab2d6	f__Enterobacteriaceae
+Gp_Centenarians_9	#ffff99	f__Oscillospiraceae
+Gp_Young_2	#6a3d9a	f__Lachnospiraceae
+Gp_Young_3	#6a3d9a	f__Lachnospiraceae
+Gp_Young_5	#6a3d9a	f__Lachnospiraceae
+Gp_Young_6	#6a3d9a	f__Lachnospiraceae
+Gp_Young_7	#6a3d9a	f__Lachnospiraceae
+Gp_Young_9	#6a3d9a	f__Lachnospiraceae
+Mx_All_1	#b15928	f__Rikenellaceae
+Mx_All_13	#ffff99	f__Oscillospiraceae
+Mx_All_14	#1f78b4	f__Bifidobacteriaceae
+Mx_All_16	#6a3d9a	f__Lachnospiraceae
+Mx_All_18	#33a02c	f__CAG-138
+Mx_All_20	#b2df8a	f__Burkholderiaceae_C
+Mx_All_5	#b15928	f__Rikenellaceae
+Mx_All_7	#fdbf6f	f__Coprobacillaceae
+Sg_C1_2	#ffff99	f__Oscillospiraceae
+Sg_C2_1	#cab2d6	f__Enterobacteriaceae
+Sg_C2_3	#e31a1c	f__CAG-917
+Sg_C2_4	#ffff99	f__Oscillospiraceae
+Sg_C3_3	#ff7f00	f__Coriobacteriaceae
+Sg_Y1_2	#6a3d9a	f__Lachnospiraceae
+Sg_Y1_3	#ff7f00	f__Coriobacteriaceae
+Sg_Y2_1	#ff7f00	f__Coriobacteriaceae
+Sg_Y3_1	#6a3d9a	f__Lachnospiraceae

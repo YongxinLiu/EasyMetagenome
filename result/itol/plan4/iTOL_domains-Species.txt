@@ -1,0 +1,43 @@
+DATASET_DOMAINS
+SEPARATOR TAB
+BACKBONE_COLOR	#FFFFFF
+BACKBONE_HEIGHT	0
+BORDER_WIDTH	0
+COLOR	#bebada
+DATASET_LABEL	Species
+HEIGHT_FACTOR	1
+LEGEND_COLORS	#a6cee3	#1f78b4	#b2df8a	#33a02c	#fb9a99	#e31a1c	#a6cee3	#1f78b4	#b2df8a	#33a02c	#fb9a99	#e31a1c	#a6cee3	#1f78b4	#b2df8a	#33a02c	#fb9a99	#e31a1c	#a6cee3	#1f78b4	#b2df8a	#33a02c	#fb9a99	#e31a1c	#a6cee3	#1f78b4	#b2df8a
+LEGEND_LABELS	s__	s__Akkermansia muciniphila	s__Alistipes onderdonkii	s__Alistipes putredinis	s__Anaerobutyricum hallii	s__Anaerostipes hadrus	s__Bifidobacterium pseudocatenulatum	s__Blautia_A obeum	s__Blautia_A sp003471165	s__Blautia_A wexlerae	s__CAG-103 sp900757655	s__CAG-170 sp000432135	s__CAG-273 sp000437855	s__CAG-349 sp003539515	s__Collinsella intestinalis	s__Collinsella sp002391315	s__Collinsella sp902363945	s__Comamonas kerstersii	s__Dorea_A amylophila	s__Escherichia coli	s__Faecalibacillus intestinalis	s__Fusicatenibacter saccharivorans	s__Klebsiella pneumoniae	s__Mediterraneibacter faecis	s__PeH17 sp000435055	s__Vescimonas cirricatena	s__Vescimonas sp934591815
+LEGEND_SHAPES	EL	EL	EL	EL	EL	EL	RE	RE	RE	RE	RE	RE	TL	TL	TL	TL	TL	TL	TR	TR	TR	TR	TR	TR	DI	DI	DI
+LEGEND_TITLE	Species
+MARGIN	5
+SHOW_DOMAIN_LABELS	0
+WIDTH	25
+DATA
+Gp_Centenarians_11	10	TL|0|10|#a6cee3|s__CAG-273 sp000437855
+Gp_Centenarians_13	10	EL|0|10|#1f78b4|s__Akkermansia muciniphila
+Gp_Centenarians_7	10	TR|0|10|#1f78b4|s__Escherichia coli
+Gp_Centenarians_9	10	RE|0|10|#fb9a99|s__CAG-103 sp900757655
+Gp_Young_2	10	RE|0|10|#b2df8a|s__Blautia_A sp003471165
+Gp_Young_3	10	EL|0|10|#e31a1c|s__Anaerostipes hadrus
+Gp_Young_5	10	TR|0|10|#33a02c|s__Fusicatenibacter saccharivorans
+Gp_Young_6	10	TR|0|10|#a6cee3|s__Dorea_A amylophila
+Gp_Young_7	10	RE|0|10|#1f78b4|s__Blautia_A obeum
+Gp_Young_9	10	TR|0|10|#e31a1c|s__Mediterraneibacter faecis
+Mx_All_1	10	EL|0|10|#33a02c|s__Alistipes putredinis
+Mx_All_13	10	DI|0|10|#1f78b4|s__Vescimonas cirricatena
+Mx_All_14	10	RE|0|10|#a6cee3|s__Bifidobacterium pseudocatenulatum
+Mx_All_16	10	EL|0|10|#fb9a99|s__Anaerobutyricum hallii
+Mx_All_18	10	DI|0|10|#a6cee3|s__PeH17 sp000435055
+Mx_All_20	10	TL|0|10|#e31a1c|s__Comamonas kerstersii
+Mx_All_5	10	EL|0|10|#b2df8a|s__Alistipes onderdonkii
+Mx_All_7	10	TR|0|10|#b2df8a|s__Faecalibacillus intestinalis
+Sg_C1_2	10	DI|0|10|#b2df8a|s__Vescimonas sp934591815
+Sg_C2_1	10	TR|0|10|#fb9a99|s__Klebsiella pneumoniae
+Sg_C2_3	10	TL|0|10|#1f78b4|s__CAG-349 sp003539515
+Sg_C2_4	10	RE|0|10|#e31a1c|s__CAG-170 sp000432135
+Sg_C3_3	10	TL|0|10|#33a02c|s__Collinsella sp002391315
+Sg_Y1_2	10	RE|0|10|#33a02c|s__Blautia_A wexlerae
+Sg_Y1_3	10	TL|0|10|#b2df8a|s__Collinsella intestinalis
+Sg_Y2_1	10	TL|0|10|#fb9a99|s__Collinsella sp902363945
+Sg_Y3_1	10	EL|0|10|#a6cee3|s__

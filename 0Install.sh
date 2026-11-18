@@ -45,10 +45,11 @@
     cd ${db}
 
     # Method 1. Download ZIP archive at https://github.com/YongxinLiu/EasyMetagenome, `Code` - `Download` and upload it to the server.
-    # 方法1. 网页 https://github.com/YongxinLiu/EasyMetagenome 中Code - Download ZIP下载压缩包，上传至服务器
+    # 方法1. 网页 https://github.com/YongxinLiu/EasyMetagenome 中Code - Download ZIP下载压缩包，或wget微生物所备用链接
+    # wget -c ftp://download.nmdc.cn/tools/soft/EasyMetagenome-master.zip 
     # Command 'unzip' not found, using `sudo apt install unzip` (解压，缺少使用sudo apt安装)
+    # unzip & rename 解压并改名
     unzip EasyMetagenome-master.zip 
-    # rename 改名
     mv EasyMetagenome-master EasyMetagenome
 
     # Method 2. Baidu Netdisk /soft (百度网盘) https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315 /db/soft/EasyMetagenome.tar.gz
@@ -58,31 +59,27 @@
     # Old version update (旧版更新)
     cd EasyMetagenome && git pull && cd ../
 
-    # Method 4. Backup link for the Institute of Microbiology (方法4. 微生物所备用链接)
-    wget -c ftp://download.nmdc.cn/tools/soft/EasyMetagenome.tar.gz
-    tar xvzf EasyMetagenome.tar.gz
 
 ### EasyMicrobiome: include dependencies soft and scripts for EasyMetagenome (软件和脚本合集)
 
     # Website(网址): https://github.com/YongxinLiu/EasyMicrobiome
     
-    # Method 1. Download ZIP archive at https://github.com/YongxinLiu/EasyMicrobiome, `Code` - `Download` and upload it to the server.
-    # 方法1. 网页 https://github.com/YongxinLiu/EasyMicrobiome 中Code - Download ZIP下载压缩包，上传至服务器
+    # Method 1. Download ZIP archive from website, `Code` - `Download` and upload it to the server.
+    # 方法1. 网页中Code - Download ZIP下载压缩包，上传至服务器
+    # Backup link for the Institute of Microbiology (方法4. 微生物所备用链接)
+    # wget -c ftp://download.nmdc.cn/tools/soft/EasyMicrobiome-master.zip
     unzip EasyMicrobiome-master.zip
     mv EasyMicrobiome-master EasyMicrobiome
+    # sovle new line '/r' problem
     # sed -i 's/\r//' EasyMicrobiome/kegg/KO1-4.txt
     
-    # Method 2. Baidu Netdisk (百度网盘) /soft https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315 /db/soft/EasyMicrobiome.tar.gz
+    # Method 2. Baidu Netdisk (百度网盘) /soft https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315 /db/soft/EasyMicrobiome-master.zip
    
     # Method 3. Download by Git
     git clone https://github.com/YongxinLiu/EasyMicrobiome
     # Old version update (旧版更新)
     cd EasyMicrobiome && git pull && cd ../
 
-    # Method 4. Backup link for the Institute of Microbiology (方法4. 微生物所备用链接)
-    wget -c ftp://download.nmdc.cn/tools/soft/EasyMicrobiome.tar.gz
-    tar -xvzf EasyMicrobiome.tar.gz
-     
     # Add command execute permissions (添加命令可执行权限)
     chmod +x `pwd`/EasyMicrobiome/linux/* `pwd`/EasyMicrobiome/script/*
     # Add environment variables (添加环境变量)
@@ -134,7 +131,7 @@
     # Specify conda filename (指定conda文件名)
     s=kneaddata
     # Download options include NMDC, Baidu NetDisk conda, etc (下载，可选NMDC、百度云等)
-    wget -c ftp://download.nmdc.cn/tools/conda/${s}.tar.gz
+    wget -c ftp://download.nmdc.cn/tools/meta/kneaddata/${s}.tar.gz
     # Set installation directory and extract (指定安装目录并解压)
     mkdir -p ${soft}/envs/${s}
     tar -xvzf ${s}.tar.gz -C ${soft}/envs/${s}
@@ -219,6 +216,7 @@
     cd ${db}/kneaddata/ath
     # Download host genome (下载宿主基因组）
     wget -c http://ftp.ensemblgenomes.org/pub/plants/release-51/fasta/arabidopsis_thaliana/dna/Arabidopsis_thaliana.TAIR10.dna.toplevel.fa.gz
+    # wget -c ftp://download.nmdc.cn/tools/meta/kneaddata/Arabidopsis_thaliana.TAIR10.dna.toplevel.fa.gz
     mv Arabidopsis_thaliana.TAIR10.dna.toplevel.fa.gz tair10.fa.gz
     # unzip and index, 3 minutes (解压，建索引，120M 3分钟)
     gunzip tair10.fa.gz
@@ -237,13 +235,13 @@
     # Specify conda filename (指定conda文件名)
     s=humann4
     # Download options include NMDC, Baidu NetDisk conda, etc (下载，可选微生物所nmdc 或 百度云/db/conda/humann4.tar.gz)
-    wget -c ftp://download.nmdc.cn/tools/conda/${s}.tar.gz
+    wget -c ftp://download.nmdc.cn/tools/meta/humann4/${s}.tar.gz
     mkdir -p ${soft}/envs/${s}
     time tar -xvzf ${s}.tar.gz -C ${soft}/envs/${s} # 1m
     conda activate ${s}
     conda unpack
     
-### Method 2. Conada installation of HUMAnN4 (方法2. HUMAnN4直接安装)
+### Method 2. Conda installation of HUMAnN4 (方法2. HUMAnN4直接安装)
 
     # install (安装)
     # The current HUMAnN 4 release (v4.0.0.alpha.1) should work with MetaPhlAn 4 releases up to v4.1.1.
@@ -289,17 +287,17 @@
 
     # Method 1. Download and extract the file using wget or NMDC/Baidu (方法1. wget或微生物所/百度下载并解压)
     # chocophlan full 42G, 5-7min
-    wget -c http://huttenhower.sph.harvard.edu/humann_data/chocophlan/chocophlan.v4_alpha.tar.gz
+    wget -c ftp://download.nmdc.cn/tools/meta/humann4/chocophlan.v4_alpha.tar.gz
     time tar xvzf chocophlan.v4_alpha.tar.gz -C ${db}/humann4/chocophlan
     # chocophlan ec_filtered, 6.5G, 1min
-    wget -c http://huttenhower.sph.harvard.edu/humann_data/chocophlan/chocophlan_EC_FILTERED.v4_alpha.tar.gz
+    wget -c ftp://download.nmdc.cn/tools/meta/humann4/chocophlan_EC_FILTERED.v4_alpha.tar.gz
     time tar xvzf chocophlan_EC_FILTERED.v4_alpha.tar.gz -C ${db}/humann4/chocophlan_ec
     # uniref, 893M, 13s 1.6G
-    wget -c http://huttenhower.sph.harvard.edu/humann_data/uniprot/uniref_ec_filtered/uniref90_annotated_v4_alpha_ec_filtered.tar.gz
+    wget -c ftp://download.nmdc.cn/tools/meta/humann4/uniref90_annotated_v4_alpha_ec_filtered.tar.gz
     time tar xvzf uniref90_annotated_v4_alpha_ec_filtered.tar.gz -C ${db}/humann4/uniref
     ls -lh ${db}/humann4/uniref/humann4_protein_database_filtered_v2019_06.dmnd
     # mapping, 2.7G, 30s
-    wget -c http://huttenhower.sph.harvard.edu/humann_data/full_mapping_v4_alpha.tar.gz
+    wget -c ftp://download.nmdc.cn/tools/meta/humann4/full_mapping_v4_alpha.tar.gz
     time tar xvzf full_mapping_v4_alpha.tar.gz -C ${db}/humann4/utility_mapping
 
     # Method 2. The program install database (方法2. 程序自动安装数据库)
@@ -348,8 +346,8 @@
     # 方法1. Conda包解压安装
     cd $db
     n=graphlan
-    # Download from NMDC ftp://download.nmdc.cn/tools/conda or BaiduNetdisk db/conda from https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
-    wget -c ftp://download.nmdc.cn/tools/conda/${n}.tar.gz
+    # Download from NMDC ftp://download.nmdc.cn/tools/meta or BaiduNetdisk db/conda from https://pan.baidu.com/s/1Ikd_47HHODOqC3Rcx6eJ6Q?pwd=0315
+    wget -c ftp://download.nmdc.cn/tools/meta/${n}.tar.gz
     mkdir -p ${soft}/envs/${n}
     tar -xvzf ${n}.tar.gz -C ${soft}/envs/${n}
     # activate and initial conda enviroment (启动和初始化环境)
@@ -369,7 +367,7 @@
 
     # Method 2. Download install LEfSe (方法2. LEfSe下载解压安装)
     n=lefse
-    wget -c ftp://download.nmdc.cn/tools/conda/${n}.tar.gz
+    wget -c ftp://download.nmdc.cn/tools/soft/${n}.tar.gz
     mkdir -p ${soft}/envs/${n}
     tar -xvzf ${n}.tar.gz -C ${soft}/envs/${n}
     conda activate ${n}
@@ -400,7 +398,7 @@
     # Method 1. Kraken2 Conda package download install (包本地解压安装)
     n=kraken2
     # Download options include NMDC, Baidu NetDisk conda, etc (下载，可选微生物所nmdc 或 百度云/db/conda/kraken2.tar.gz)
-    wget -c ftp://download.nmdc.cn/tools/conda/${n}.gz
+    wget -c ftp://download.nmdc.cn/tools/meta/${n}.gz
     mkdir -p ${soft}/envs/${n}
     time tar -xvzf ${n}.tar.gz -C ${soft}/envs/${n}
     conda activate ${n}
@@ -456,7 +454,7 @@
     
     ### Opt 1. Download, extract, and install megahit (方法1.megahit下载解压安装)
     # Download options include NMDC, Baidu NetDisk conda, etc (下载，可选NMDC、百度云等)
-    wget -c ftp://download.nmdc.cn/tools/conda/${s}.tar.gz
+    wget -c ftp://download.nmdc.cn/tools/meta/${s}.tar.gz
     mkdir -p ${soft}/envs/megahit
     tar -xvzf ${s}.tar.gz -C ${soft}/envs/${s}
     conda activate ${s}
@@ -483,7 +481,7 @@
 
     ### Opt 1. Download and install eggNOG (方法1.eggNOG下载解压安装)
     # Download options include NMDC, Baidu NetDisk conda, etc (下载，可选NMDC、百度云等)
-    wget -c ftp://download.nmdc.cn/tools/conda/${s}.tar.gz
+    wget -c ftp://download.nmdc.cn/tools/meta/${s}.tar.gz
     mkdir -p ${soft}/envs/${s}
     tar -xvzf ${s}.tar.gz -C ${soft}/envs/${s}
     conda activate ${s}
@@ -535,7 +533,7 @@
 
     ### Opt 1. Download and install RGI (方法1. RGI下载解压安装)
     # Download options include NMDC, Baidu NetDisk conda, etc (下载，可选NMDC、百度云等)
-    wget -c ftp://download.nmdc.cn/tools/conda/${s}.tar.gz
+    wget -c ftp://download.nmdc.cn/tools/meta/${s}.tar.gz
     mkdir -p ${soft}/envs/${s}
     tar -xvzf ${s}.tar.gz -C ${soft}/envs/${s}
     conda activate ${s}
@@ -585,7 +583,7 @@
 
     ### Opt 1. Download and install MetwWRAP (方法1.MetwWRAP下载解压安装)
     # Download options include NMDC, Baidu NetDisk conda, etc (下载，可选NMDC、百度云等)
-    wget -c ftp://download.nmdc.cn/tools/conda/${s}.tar.gz
+    wget -c ftp://download.nmdc.cn/tools/meta/${s}.tar.gz
     mkdir -p ${soft}/envs/${s}
     tar -xvzf ${s}.tar.gz -C ${soft}/envs/${s}
     conda activate ${s}
@@ -649,7 +647,7 @@
     
     ### Opt 1. Download install (方法1.下载解压安装)
     # Download options include NMDC, Baidu NetDisk conda, etc (下载，可选NMDC、百度云等)
-    wget -c ftp://download.nmdc.cn/tools/conda/${s}.tar.gz
+    wget -c ftp://download.nmdc.cn/tools/meta/${s}.tar.gz
     mkdir -p ${soft}/envs/${s}
     tar -xvzf ${s}.tar.gz -C ${soft}/envs/${s}
     conda activate ${s}
@@ -685,7 +683,7 @@
     
     ### Opt 1. Download install (方法1.下载解压安装)
     # Download options include NMDC, Baidu NetDisk conda, etc (下载，可选NMDC、百度云等)
-    wget -c ftp://download.nmdc.cn/tools/conda/${s}.tar.gz
+    wget -c ftp://download.nmdc.cn/tools/meta/${s}.tar.gz
     mkdir -p ${soft}/envs/${s}
     tar -xvzf ${s}.tar.gz -C ${soft}/envs/${s}
     conda activate ${s}
@@ -712,7 +710,7 @@
 
     ### Opt 1. Download install (方法1.下载解压安装)
     # Download options include NMDC, Baidu NetDisk conda, etc (下载，可选NMDC、百度云等)
-    wget -c ftp://download.nmdc.cn/tools/conda/${s}.tar.gz
+    wget -c ftp://download.nmdc.cn/tools/meta/${s}.tar.gz
     mkdir -p ${soft}/envs/${s}
     tar -xvzf ${s}.tar.gz -C ${soft}/envs/${s}
     conda activate ${s}
@@ -737,7 +735,7 @@
     mkdir -p ${db}/gtdb && cd ${db}/gtdb
     wget -c --no-check-certificate https://data.ace.uq.edu.au/public/gtdb/data/releases/latest/auxillary_files/gtdbtk_package/full_package/gtdbtk_data.tar.gz
     # Backup Download options include NMDC, Baidu NetDisk conda, etc (备用下载，可选NMDC、百度云等)
-    wget -c ftp://download.nmdc.cn/tools/conda/meta/gtdbtk/gtdbtk_data.tar.gz
+    wget -c ftp://download.nmdc.cn/tools/meta/meta/gtdbtk/gtdbtk_data.tar.gz
     # unzip and extract remove directory, 16m
     time tar xvzf gtdbtk_data.tar.gz -C ./  --strip 1 
     conda env config vars set GTDBTK_DATA_PATH="${db}/gtdb"
@@ -762,7 +760,7 @@
 
     ### Opt 2. Download install (方法2.下载解压安装)
     # Download options include NMDC, Baidu NetDisk conda, etc (下载，可选NMDC、百度云等)
-    wget -c ftp://download.nmdc.cn/tools/conda/${s}.tar.gz
+    wget -c ftp://download.nmdc.cn/tools/meta/${s}.tar.gz
     mkdir -p ${soft}/envs/${s}
     tar -xvzf ${s}.tar.gz -C ${soft}/envs/${s}
     conda activate ${s}
@@ -982,4 +980,5 @@
 
     # **1.26 2026.11.7**
     # 1. update fastp 1.3.3 to 1.4.0
-    # 1. update gtdbtk 2.7.2 to 2.8.0
+    # 2. update gtdbtk 2.7.2 to 2.8.0
+    # 3. move all the metagenome conda into meta directory

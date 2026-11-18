@@ -1,0 +1,38 @@
+DATASET_SIMPLEBAR
+SEPARATOR TAB
+COLOR	#000000
+DATASET_LABEL	strain_heterogeneity
+LEGEND_COLORS	#000000
+LEGEND_LABELS	Min. (0.0), Max. (100.0)
+LEGEND_SHAPES	1
+LEGEND_TITLE	strain heterogeneity
+MARGIN	5
+WIDTH	200
+DATA
+Gp_Centenarians_11	25
+Gp_Centenarians_13	100
+Gp_Centenarians_7	71.88
+Gp_Centenarians_9	0
+Gp_Young_2	0
+Gp_Young_3	10
+Gp_Young_5	0
+Gp_Young_6	25
+Gp_Young_7	32.14
+Gp_Young_9	29.41
+Mx_All_1	100
+Mx_All_13	25
+Mx_All_14	0
+Mx_All_16	50
+Mx_All_18	0
+Mx_All_20	0
+Mx_All_5	50
+Mx_All_7	25
+Sg_C1_2	0
+Sg_C2_1	50
+Sg_C2_3	33.33
+Sg_C2_4	33.33
+Sg_C3_3	0
+Sg_Y1_2	75
+Sg_Y1_3	0
+Sg_Y2_1	50
+Sg_Y3_1	5

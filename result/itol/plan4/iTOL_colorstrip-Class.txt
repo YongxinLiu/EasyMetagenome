@@ -1,0 +1,39 @@
+DATASET_COLORSTRIP
+SEPARATOR TAB
+BORDER_WIDTH	0
+COLOR	#bebada
+DATASET_LABEL	Class
+LEGEND_COLORS	#a6cee3	#1f78b4	#b2df8a	#33a02c	#fb9a99	#e31a1c	#fdbf6f
+LEGEND_LABELS	c__Actinomycetes	c__Bacilli_A	c__Bacteroidia	c__Clostridia	c__Coriobacteriia	c__Gammaproteobacteria	c__Verrucomicrobiia
+LEGEND_SHAPES	1	1	1	1	1	1	1
+LEGEND_TITLE	Class
+MARGIN	5
+STRIP_WIDTH	25
+DATA
+Gp_Centenarians_11	#33a02c	c__Clostridia
+Gp_Centenarians_13	#fdbf6f	c__Verrucomicrobiia
+Gp_Centenarians_7	#e31a1c	c__Gammaproteobacteria
+Gp_Centenarians_9	#33a02c	c__Clostridia
+Gp_Young_2	#33a02c	c__Clostridia
+Gp_Young_3	#33a02c	c__Clostridia
+Gp_Young_5	#33a02c	c__Clostridia
+Gp_Young_6	#33a02c	c__Clostridia
+Gp_Young_7	#33a02c	c__Clostridia
+Gp_Young_9	#33a02c	c__Clostridia
+Mx_All_1	#b2df8a	c__Bacteroidia
+Mx_All_13	#33a02c	c__Clostridia
+Mx_All_14	#a6cee3	c__Actinomycetes
+Mx_All_16	#33a02c	c__Clostridia
+Mx_All_18	#33a02c	c__Clostridia
+Mx_All_20	#e31a1c	c__Gammaproteobacteria
+Mx_All_5	#b2df8a	c__Bacteroidia
+Mx_All_7	#1f78b4	c__Bacilli_A
+Sg_C1_2	#33a02c	c__Clostridia
+Sg_C2_1	#e31a1c	c__Gammaproteobacteria
+Sg_C2_3	#33a02c	c__Clostridia
+Sg_C2_4	#33a02c	c__Clostridia
+Sg_C3_3	#fb9a99	c__Coriobacteriia
+Sg_Y1_2	#33a02c	c__Clostridia
+Sg_Y1_3	#fb9a99	c__Coriobacteriia
+Sg_Y2_1	#fb9a99	c__Coriobacteriia
+Sg_Y3_1	#33a02c	c__Clostridia

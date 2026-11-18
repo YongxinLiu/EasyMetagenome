@@ -1,0 +1,39 @@
+DATASET_COLORSTRIP
+SEPARATOR TAB
+BORDER_WIDTH	0
+COLOR	#bebada
+DATASET_LABEL	Phylum
+LEGEND_COLORS	#a6cee3	#1f78b4	#b2df8a	#33a02c	#fb9a99	#e31a1c
+LEGEND_LABELS	p__Actinomycetota	p__Bacillota	p__Bacillota_I	p__Bacteroidota	p__Pseudomonadota	p__Verrucomicrobiota
+LEGEND_SHAPES	1	1	1	1	1	1
+LEGEND_TITLE	Phylum
+MARGIN	5
+STRIP_WIDTH	25
+DATA
+Gp_Centenarians_11	#1f78b4	p__Bacillota
+Gp_Centenarians_13	#e31a1c	p__Verrucomicrobiota
+Gp_Centenarians_7	#fb9a99	p__Pseudomonadota
+Gp_Centenarians_9	#1f78b4	p__Bacillota
+Gp_Young_2	#1f78b4	p__Bacillota
+Gp_Young_3	#1f78b4	p__Bacillota
+Gp_Young_5	#1f78b4	p__Bacillota
+Gp_Young_6	#1f78b4	p__Bacillota
+Gp_Young_7	#1f78b4	p__Bacillota
+Gp_Young_9	#1f78b4	p__Bacillota
+Mx_All_1	#33a02c	p__Bacteroidota
+Mx_All_13	#1f78b4	p__Bacillota
+Mx_All_14	#a6cee3	p__Actinomycetota
+Mx_All_16	#1f78b4	p__Bacillota
+Mx_All_18	#1f78b4	p__Bacillota
+Mx_All_20	#fb9a99	p__Pseudomonadota
+Mx_All_5	#33a02c	p__Bacteroidota
+Mx_All_7	#b2df8a	p__Bacillota_I
+Sg_C1_2	#1f78b4	p__Bacillota
+Sg_C2_1	#fb9a99	p__Pseudomonadota
+Sg_C2_3	#1f78b4	p__Bacillota
+Sg_C2_4	#1f78b4	p__Bacillota
+Sg_C3_3	#a6cee3	p__Actinomycetota
+Sg_Y1_2	#1f78b4	p__Bacillota
+Sg_Y1_3	#a6cee3	p__Actinomycetota
+Sg_Y2_1	#a6cee3	p__Actinomycetota
+Sg_Y3_1	#1f78b4	p__Bacillota

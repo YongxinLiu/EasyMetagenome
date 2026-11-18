@@ -1,0 +1,39 @@
+DATASET_COLORSTRIP
+SEPARATOR TAB
+BORDER_WIDTH	0
+COLOR	#bebada
+DATASET_LABEL	cluster_members
+LEGEND_COLORS	#a6cee3	#1f78b4	#b2df8a	#33a02c
+LEGEND_LABELS	1	2	3	4
+LEGEND_SHAPES	1	1	1	1
+LEGEND_TITLE	cluster members
+MARGIN	5
+STRIP_WIDTH	25
+DATA
+Gp_Centenarians_11	#b2df8a	3
+Gp_Centenarians_13	#1f78b4	2
+Gp_Centenarians_7	#1f78b4	2
+Gp_Centenarians_9	#b2df8a	3
+Gp_Young_2	#1f78b4	2
+Gp_Young_3	#33a02c	4
+Gp_Young_5	#33a02c	4
+Gp_Young_6	#1f78b4	2
+Gp_Young_7	#a6cee3	1
+Gp_Young_9	#1f78b4	2
+Mx_All_1	#1f78b4	2
+Mx_All_13	#b2df8a	3
+Mx_All_14	#33a02c	4
+Mx_All_16	#a6cee3	1
+Mx_All_18	#b2df8a	3
+Mx_All_20	#b2df8a	3
+Mx_All_5	#1f78b4	2
+Mx_All_7	#1f78b4	2
+Sg_C1_2	#b2df8a	3
+Sg_C2_1	#33a02c	4
+Sg_C2_3	#b2df8a	3
+Sg_C2_4	#b2df8a	3
+Sg_C3_3	#1f78b4	2
+Sg_Y1_2	#b2df8a	3
+Sg_Y1_3	#33a02c	4
+Sg_Y2_1	#a6cee3	1
+Sg_Y3_1	#a6cee3	1

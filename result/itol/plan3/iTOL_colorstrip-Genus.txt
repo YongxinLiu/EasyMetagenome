@@ -1,0 +1,39 @@
+DATASET_COLORSTRIP
+SEPARATOR TAB
+BORDER_WIDTH	0.5
+COLOR	#bebada
+DATASET_LABEL	Genus
+LEGEND_COLORS	#7295c1	#d44b38	#6ad14f	#6a3bc0	#cedb44	#4d4040	#77d192	#cb4fc3	#b1b85f	#7772cc	#d9973b	#4f2b62	#79d1cf	#cc497b	#4a6c2e	#c990b5	#752e30	#d1c5ac	#a26f47	#537e71
+LEGEND_LABELS	g__Akkermansia	g__Alistipes	g__Anaerobutyricum	g__Anaerostipes	g__Bifidobacterium	g__Blautia_A	g__CAG-103	g__CAG-170	g__CAG-273	g__CAG-349	g__Collinsella	g__Comamonas	g__Dorea_A	g__Escherichia	g__Faecalibacillus	g__Fusicatenibacter	g__Klebsiella	g__Mediterraneibacter	g__PeH17	g__Vescimonas
+LEGEND_SHAPES	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+LEGEND_TITLE	Genus
+MARGIN	5
+STRIP_WIDTH	25
+DATA
+Gp_Centenarians_11	#b1b85f	g__CAG-273
+Gp_Centenarians_13	#7295c1	g__Akkermansia
+Gp_Centenarians_7	#cc497b	g__Escherichia
+Gp_Centenarians_9	#77d192	g__CAG-103
+Gp_Young_2	#4d4040	g__Blautia_A
+Gp_Young_3	#6a3bc0	g__Anaerostipes
+Gp_Young_5	#c990b5	g__Fusicatenibacter
+Gp_Young_6	#79d1cf	g__Dorea_A
+Gp_Young_7	#4d4040	g__Blautia_A
+Gp_Young_9	#d1c5ac	g__Mediterraneibacter
+Mx_All_1	#d44b38	g__Alistipes
+Mx_All_13	#537e71	g__Vescimonas
+Mx_All_14	#cedb44	g__Bifidobacterium
+Mx_All_16	#6ad14f	g__Anaerobutyricum
+Mx_All_18	#a26f47	g__PeH17
+Mx_All_20	#4f2b62	g__Comamonas
+Mx_All_5	#d44b38	g__Alistipes
+Mx_All_7	#4a6c2e	g__Faecalibacillus
+Sg_C1_2	#537e71	g__Vescimonas
+Sg_C2_1	#752e30	g__Klebsiella
+Sg_C2_3	#7772cc	g__CAG-349
+Sg_C2_4	#cb4fc3	g__CAG-170
+Sg_C3_3	#d9973b	g__Collinsella
+Sg_Y1_2	#4d4040	g__Blautia_A
+Sg_Y1_3	#d9973b	g__Collinsella
+Sg_Y2_1	#d9973b	g__Collinsella
+Sg_Y3_1	#6ad14f	g__Anaerobutyricum

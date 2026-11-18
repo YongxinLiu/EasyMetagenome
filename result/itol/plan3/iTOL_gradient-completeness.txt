@@ -1,0 +1,41 @@
+DATASET_GRADIENT
+SEPARATOR TAB
+BORDER_WIDTH	0.5
+COLOR	#fb9a99
+COLOR_MAX	#e31a1c
+COLOR_MIN	#e5e5e5
+DATASET_LABEL	completeness
+LEGEND_COLORS	#e5e5e5	#e31a1c
+LEGEND_LABELS	Min. (50.3)	Max. (100.0)
+LEGEND_SHAPES	1	1
+LEGEND_TITLE	completeness
+MARGIN	5
+STRIP_WIDTH	50
+DATA
+Gp_Centenarians_11	76.56
+Gp_Centenarians_13	85.95
+Gp_Centenarians_7	81.87
+Gp_Centenarians_9	91.95
+Gp_Young_2	50.32
+Gp_Young_3	98.66
+Gp_Young_5	73.07
+Gp_Young_6	79.37
+Gp_Young_7	86.75
+Gp_Young_9	65.5
+Mx_All_1	53.76
+Mx_All_13	91.46
+Mx_All_14	100
+Mx_All_16	94.63
+Mx_All_18	81.88
+Mx_All_20	92.47
+Mx_All_5	80.4
+Mx_All_7	83.26
+Sg_C1_2	91.78
+Sg_C2_1	96.53
+Sg_C2_3	86.71
+Sg_C2_4	85.56
+Sg_C3_3	87.8
+Sg_Y1_2	95.3
+Sg_Y1_3	67.02
+Sg_Y2_1	83.23
+Sg_Y3_1	59.36
