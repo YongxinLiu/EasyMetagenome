@@ -1,0 +1,157 @@
+"feature"	"metadata"	"value"	"name"	"coef"	"null_hypothesis"	"stderr"	"pval_individual"	"qval_individual"	"pval_joint"	"qval_joint"	"error"	"model"	"N"	"N_not_zero"
+"s__Collinsella_aerofaciens"	"Group"	"Centenarians"	"GroupCentenarians"	-5.88868762470953	0.398640108346472	2.23020983127013	0.123065622297569	0.257995399327259	0.230986097203651	0.300281926364746	NA	"abundance"	6	4
+"s__Agathobaculum_butyriciproducens"	"Group"	"Centenarians"	"GroupCentenarians"	-3.1527360223057	0	2.35628814369	0.18089332596509	0.257995399327259	0.18089332596509	0.239147108903	NA	"prevalence"	6	2
+"s__Akkermansia_muciniphila"	"Group"	"Centenarians"	"GroupCentenarians"	5.12989871480717	0	2.93518291479411	0.0805112943828869	0.257995399327259	0.0805112943828869	0.239147108903	NA	"prevalence"	6	3
+"s__Alistipes_communis"	"Group"	"Centenarians"	"GroupCentenarians"	5.12989871480717	0	2.93518291479411	0.0805112943828869	0.257995399327259	0.0805112943828869	0.239147108903	NA	"prevalence"	6	3
+"s__Alistipes_finegoldii"	"Group"	"Centenarians"	"GroupCentenarians"	3.1527360223057	0	2.35628814369	0.180893325965089	0.257995399327259	0.180893325965089	0.239147108903	NA	"prevalence"	6	2
+"s__Alistipes_ihumii"	"Group"	"Centenarians"	"GroupCentenarians"	3.1527360223057	0	2.35628814368999	0.18089332596509	0.257995399327259	0.18089332596509	0.239147108903	NA	"prevalence"	6	2
+"s__Alistipes_onderdonkii"	"Group"	"Centenarians"	"GroupCentenarians"	3.1527360223057	0	2.35628814369	0.180893325965089	0.257995399327259	0.180893325965089	0.239147108903	NA	"prevalence"	6	2
+"s__Alistipes_putredinis"	"Group"	"Centenarians"	"GroupCentenarians"	3.1527360223057	0	2.35628814369	0.18089332596509	0.257995399327259	0.329064256551467	0.420770688705155	NA	"prevalence"	6	4
+"s__Alistipes_senegalensis"	"Group"	"Centenarians"	"GroupCentenarians"	3.1527360223057	0	2.35628814368999	0.18089332596509	0.257995399327259	0.18089332596509	0.239147108903	NA	"prevalence"	6	2
+"s__Alistipes_shahii"	"Group"	"Centenarians"	"GroupCentenarians"	5.12989871480717	0	2.93518291479411	0.0805112943828869	0.257995399327259	0.0805112943828869	0.239147108903	NA	"prevalence"	6	3
+"s__Alistipes_sp_AF17_16"	"Group"	"Centenarians"	"GroupCentenarians"	3.1527360223057	0	2.35628814368999	0.18089332596509	0.257995399327259	0.18089332596509	0.239147108903	NA	"prevalence"	6	2
+"s__Anaerobutyricum_hallii"	"Group"	"Centenarians"	"GroupCentenarians"	-5.12989871480717	0	2.9351829147941	0.0805112943828869	0.257995399327259	0.0805112943828869	0.239147108903	NA	"prevalence"	6	3
+"s__Anaerostipes_hadrus"	"Group"	"Centenarians"	"GroupCentenarians"	-5.12989871480717	0	2.9351829147941	0.0805112943828869	0.257995399327259	0.0805112943828869	0.239147108903	NA	"prevalence"	6	3
+"s__Bacteroides_fragilis"	"Group"	"Centenarians"	"GroupCentenarians"	3.1527360223057	0	2.35628814369	0.18089332596509	0.257995399327259	0.18089332596509	0.239147108903	NA	"prevalence"	6	2
+"s__Bifidobacterium_longum"	"Group"	"Centenarians"	"GroupCentenarians"	-3.1527360223057	0	2.35628814369	0.18089332596509	0.257995399327259	0.18089332596509	0.239147108903	NA	"prevalence"	6	2
+"s__Blautia_faecis"	"Group"	"Centenarians"	"GroupCentenarians"	-5.12989871480717	0	2.9351829147941	0.0805112943828869	0.257995399327259	0.0805112943828869	0.239147108903	NA	"prevalence"	6	3
+"s__Blautia_massiliensis"	"Group"	"Centenarians"	"GroupCentenarians"	-3.1527360223057	0	2.35628814369	0.18089332596509	0.257995399327259	0.18089332596509	0.239147108903	NA	"prevalence"	6	2
+"s__Blautia_obeum"	"Group"	"Centenarians"	"GroupCentenarians"	-5.12989871480717	0	2.9351829147941	0.0805112943828869	0.257995399327259	0.0805112943828869	0.239147108903	NA	"prevalence"	6	3
+"s__Blautia_SGB4815"	"Group"	"Centenarians"	"GroupCentenarians"	-3.1527360223057	0	2.35628814369	0.180893325965089	0.257995399327259	0.180893325965089	0.239147108903	NA	"prevalence"	6	2
+"s__Blautia_sp_Marseille_P3087"	"Group"	"Centenarians"	"GroupCentenarians"	-3.1527360223057	0	2.35628814369	0.18089332596509	0.257995399327259	0.18089332596509	0.239147108903	NA	"prevalence"	6	2
+"s__Blautia_wexlerae"	"Group"	"Centenarians"	"GroupCentenarians"	-5.12989871480717	0	2.9351829147941	0.0805112943828869	0.257995399327259	0.0805112943828869	0.239147108903	NA	"prevalence"	6	3
+"s__Cloacibacillus_SGB15503"	"Group"	"Centenarians"	"GroupCentenarians"	3.1527360223057	0	2.35628814369	0.180893325965089	0.257995399327259	0.180893325965089	0.239147108903	NA	"prevalence"	6	2
+"s__Clostridiaceae_bacterium"	"Group"	"Centenarians"	"GroupCentenarians"	-3.1527360223057	0	2.35628814369	0.18089332596509	0.257995399327259	0.18089332596509	0.239147108903	NA	"prevalence"	6	2
+"s__Clostridiaceae_bacterium_Marseille_Q4149"	"Group"	"Centenarians"	"GroupCentenarians"	3.1527360223057	0	2.35628814369	0.18089332596509	0.257995399327259	0.18089332596509	0.239147108903	NA	"prevalence"	6	2
+"s__Comamonas_kerstersii"	"Group"	"Centenarians"	"GroupCentenarians"	3.1527360223057	0	2.35628814369	0.180893325965089	0.257995399327259	0.180893325965089	0.239147108903	NA	"prevalence"	6	2
+"s__Desulfovibrio_piger"	"Group"	"Centenarians"	"GroupCentenarians"	5.12989871480717	0	2.93518291479411	0.0805112943828869	0.257995399327259	0.0805112943828869	0.239147108903	NA	"prevalence"	6	3
+"s__Dorea_formicigenerans"	"Group"	"Centenarians"	"GroupCentenarians"	-5.12989871480717	0	2.9351829147941	0.0805112943828869	0.257995399327259	0.0805112943828869	0.239147108903	NA	"prevalence"	6	3
+"s__Dorea_longicatena"	"Group"	"Centenarians"	"GroupCentenarians"	-5.12989871480717	0	2.9351829147941	0.0805112943828869	0.257995399327259	0.0805112943828869	0.239147108903	NA	"prevalence"	6	3
+"s__Eggerthella_lenta"	"Group"	"Centenarians"	"GroupCentenarians"	-3.1527360223057	0	2.35628814369	0.18089332596509	0.257995399327259	0.18089332596509	0.239147108903	NA	"prevalence"	6	2
+"s__Eubacterium_ramulus"	"Group"	"Centenarians"	"GroupCentenarians"	-3.1527360223057	0	2.35628814369	0.180893325965089	0.257995399327259	0.180893325965089	0.239147108903	NA	"prevalence"	6	2
+"s__Faecalibacillus_intestinalis"	"Group"	"Centenarians"	"GroupCentenarians"	-5.12989871480717	0	2.9351829147941	0.0805112943828869	0.257995399327259	0.0805112943828869	0.239147108903	NA	"prevalence"	6	3
+"s__Fusicatenibacter_saccharivorans"	"Group"	"Centenarians"	"GroupCentenarians"	-3.1527360223057	0	2.35628814369	0.180893325965089	0.257995399327259	0.180893325965089	0.239147108903	NA	"prevalence"	6	2
+"s__Gemmiger_formicilis"	"Group"	"Centenarians"	"GroupCentenarians"	-3.1527360223057	0	2.35628814369	0.18089332596509	0.257995399327259	0.18089332596509	0.239147108903	NA	"prevalence"	6	2
+"s__GGB3052_SGB4053"	"Group"	"Centenarians"	"GroupCentenarians"	3.1527360223057	0	2.35628814369	0.180893325965089	0.257995399327259	0.180893325965089	0.239147108903	NA	"prevalence"	6	2
+"s__GGB3256_SGB4303"	"Group"	"Centenarians"	"GroupCentenarians"	-3.1527360223057	0	2.35628814369	0.180893325965089	0.257995399327259	0.180893325965089	0.239147108903	NA	"prevalence"	6	2
+"s__GGB3429_SGB71704"	"Group"	"Centenarians"	"GroupCentenarians"	-3.1527360223057	0	2.35628814369	0.18089332596509	0.257995399327259	0.18089332596509	0.239147108903	NA	"prevalence"	6	2
+"s__GGB9293_SGB14250"	"Group"	"Centenarians"	"GroupCentenarians"	3.1527360223057	0	2.35628814369	0.180893325965089	0.257995399327259	0.180893325965089	0.239147108903	NA	"prevalence"	6	2
+"s__GGB9342_SGB14306"	"Group"	"Centenarians"	"GroupCentenarians"	5.12989871480717	0	2.93518291479411	0.0805112943828869	0.257995399327259	0.0805112943828869	0.239147108903	NA	"prevalence"	6	3
+"s__GGB9345_SGB14311"	"Group"	"Centenarians"	"GroupCentenarians"	3.1527360223057	0	2.35628814369	0.18089332596509	0.257995399327259	0.18089332596509	0.239147108903	NA	"prevalence"	6	2
+"s__GGB9350_SGB14317"	"Group"	"Centenarians"	"GroupCentenarians"	3.1527360223057	0	2.35628814369	0.18089332596509	0.257995399327259	0.18089332596509	0.239147108903	NA	"prevalence"	6	2
+"s__GGB9634_SGB15095"	"Group"	"Centenarians"	"GroupCentenarians"	3.1527360223057	0	2.35628814369	0.18089332596509	0.257995399327259	0.18089332596509	0.239147108903	NA	"prevalence"	6	2
+"s__GGB9694_SGB15204"	"Group"	"Centenarians"	"GroupCentenarians"	3.1527360223057	0	2.35628814369	0.18089332596509	0.257995399327259	0.18089332596509	0.239147108903	NA	"prevalence"	6	2
+"s__GGB9708_SGB15234"	"Group"	"Centenarians"	"GroupCentenarians"	5.12989871480717	0	2.93518291479411	0.0805112943828869	0.257995399327259	0.0805112943828869	0.239147108903	NA	"prevalence"	6	3
+"s__GGB9713_SGB15249"	"Group"	"Centenarians"	"GroupCentenarians"	3.1527360223057	0	2.35628814369	0.18089332596509	0.257995399327259	0.18089332596509	0.239147108903	NA	"prevalence"	6	2
+"s__GGB9747_SGB15356"	"Group"	"Centenarians"	"GroupCentenarians"	3.1527360223057	0	2.35628814369	0.18089332596509	0.257995399327259	0.18089332596509	0.239147108903	NA	"prevalence"	6	2
+"s__GGB9760_SGB15374"	"Group"	"Centenarians"	"GroupCentenarians"	3.1527360223057	0	2.35628814369	0.180893325965089	0.257995399327259	0.180893325965089	0.239147108903	NA	"prevalence"	6	2
+"s__GGB9770_SGB15390"	"Group"	"Centenarians"	"GroupCentenarians"	3.1527360223057	0	2.35628814369	0.18089332596509	0.257995399327259	0.18089332596509	0.239147108903	NA	"prevalence"	6	2
+"s__Intestinimonas_massiliensis"	"Group"	"Centenarians"	"GroupCentenarians"	3.1527360223057	0	2.35628814369	0.18089332596509	0.257995399327259	0.18089332596509	0.239147108903	NA	"prevalence"	6	2
+"s__Klebsiella_pneumoniae"	"Group"	"Centenarians"	"GroupCentenarians"	3.1527360223057	0	2.35628814369	0.18089332596509	0.257995399327259	0.18089332596509	0.239147108903	NA	"prevalence"	6	2
+"s__Lachnospiraceae_bacterium"	"Group"	"Centenarians"	"GroupCentenarians"	-3.1527360223057	0	2.35628814369	0.18089332596509	0.257995399327259	0.18089332596509	0.239147108903	NA	"prevalence"	6	2
+"s__Lacrimispora_celerecrescens"	"Group"	"Centenarians"	"GroupCentenarians"	-3.1527360223057	0	2.35628814369	0.180893325965089	0.257995399327259	0.180893325965089	0.239147108903	NA	"prevalence"	6	2
+"s__Mogibacterium_sp_BX12"	"Group"	"Centenarians"	"GroupCentenarians"	-3.1527360223057	0	2.35628814369	0.180893325965089	0.257995399327259	0.180893325965089	0.239147108903	NA	"prevalence"	6	2
+"s__Oscillibacter_sp_ER4"	"Group"	"Centenarians"	"GroupCentenarians"	3.1527360223057	0	2.35628814368999	0.18089332596509	0.257995399327259	0.18089332596509	0.239147108903	NA	"prevalence"	6	2
+"s__Parabacteroides_distasonis"	"Group"	"Centenarians"	"GroupCentenarians"	3.1527360223057	0	2.35628814368999	0.18089332596509	0.257995399327259	0.18089332596509	0.239147108903	NA	"prevalence"	6	2
+"s__Phocaeicola_vulgatus"	"Group"	"Centenarians"	"GroupCentenarians"	3.1527360223057	0	2.35628814368999	0.18089332596509	0.257995399327259	0.18089332596509	0.239147108903	NA	"prevalence"	6	2
+"s__Romboutsia_timonensis"	"Group"	"Centenarians"	"GroupCentenarians"	-3.1527360223057	0	2.35628814369	0.18089332596509	0.257995399327259	0.18089332596509	0.239147108903	NA	"prevalence"	6	2
+"s__Ruminococcus_lactaris"	"Group"	"Centenarians"	"GroupCentenarians"	-3.1527360223057	0	2.35628814369	0.180893325965089	0.257995399327259	0.180893325965089	0.239147108903	NA	"prevalence"	6	2
+"s__Ruminococcus_sp_AF13_28"	"Group"	"Centenarians"	"GroupCentenarians"	-5.12989871480717	0	2.9351829147941	0.0805112943828869	0.257995399327259	0.0805112943828869	0.239147108903	NA	"prevalence"	6	3
+"s__Ruminococcus_torques"	"Group"	"Centenarians"	"GroupCentenarians"	-3.1527360223057	0	2.35628814369	0.180893325965089	0.257995399327259	0.180893325965089	0.239147108903	NA	"prevalence"	6	2
+"s__Ruthenibacterium_lactatiformans"	"Group"	"Centenarians"	"GroupCentenarians"	5.12989871480717	0	2.93518291479411	0.0805112943828869	0.257995399327259	0.0805112943828869	0.239147108903	NA	"prevalence"	6	3
+"s__Streptococcus_salivarius"	"Group"	"Centenarians"	"GroupCentenarians"	-5.12989871480717	0	2.9351829147941	0.0805112943828869	0.257995399327259	0.0805112943828869	0.239147108903	NA	"prevalence"	6	3
+"s__GGB9425_SGB14795"	"Group"	"Centenarians"	"GroupCentenarians"	-4.41455338260039	0.398640108346472	3.85611124752137	0.42887921172757	0.575180518137018	0.673821045203078	0.796116896005815	NA	"abundance"	6	3
+"s__Bacteroides_uniformis"	"Group"	"Centenarians"	"GroupCentenarians"	1.17557332980423	0	1.5776212492503	0.456177652315565	0.575180518137018	0.70425725415899	0.796116896005815	NA	"prevalence"	6	3
+"s__Candidatus_Cibionibacter_quicibialis"	"Group"	"Centenarians"	"GroupCentenarians"	1.17557332980423	0	1.5776212492503	0.456177652315566	0.575180518137018	0.70425725415899	0.796116896005815	NA	"prevalence"	6	3
+"s__Escherichia_coli"	"Group"	"Centenarians"	"GroupCentenarians"	1.17557332980423	0	1.5776212492503	0.456177652315566	0.575180518137018	0.70425725415899	0.796116896005815	NA	"prevalence"	6	3
+"s__Faecalibacterium_prausnitzii"	"Group"	"Centenarians"	"GroupCentenarians"	-1.17557332980423	0	1.5776212492503	0.456177652315566	0.575180518137018	0.70425725415899	0.796116896005815	NA	"prevalence"	6	3
+"s__Gemmiger_SGB15295"	"Group"	"Centenarians"	"GroupCentenarians"	1.17557332980423	0	1.5776212492503	0.456177652315566	0.575180518137018	0.70425725415899	0.796116896005815	NA	"prevalence"	6	3
+"s__GGB9425_SGB14795"	"Group"	"Centenarians"	"GroupCentenarians"	1.17557332980424	0	1.5776212492503	0.456177652315565	0.575180518137018	0.673821045203078	0.796116896005815	NA	"prevalence"	6	3
+"s__GGB9730_SGB15291"	"Group"	"Centenarians"	"GroupCentenarians"	1.17557332980424	0	1.5776212492503	0.456177652315565	0.575180518137018	0.704257254158989	0.796116896005815	NA	"prevalence"	6	3
+"s__Gemmiger_SGB15295"	"Group"	"Centenarians"	"GroupCentenarians"	-2.28626921163361	0.398640108346472	3.14368895333946	0.546250753016067	0.678911650177112	0.70425725415899	0.796116896005815	NA	"abundance"	6	3
+"s__Bacteroides_uniformis"	"Group"	"Centenarians"	"GroupCentenarians"	1.45613362093435	0.398640108346472	1.33801583419771	0.623423932464695	0.762892941519343	0.70425725415899	0.796116896005815	NA	"abundance"	6	3
+"unclassified"	"Group"	"Centenarians"	"GroupCentenarians"	1.011202689324	0.398640108346472	0.698216546327719	0.631359675740146	0.762892941519343	0.631359675740146	0.79429120496341	NA	"abundance"	6	6
+"s__Candidatus_Cibionibacter_quicibialis"	"Group"	"Centenarians"	"GroupCentenarians"	-0.228074936233994	0.398640108346472	1.75593596387762	0.782473664388998	0.932537106874559	0.70425725415899	0.796116896005815	NA	"abundance"	6	3
+"s__Escherichia_coli"	"Group"	"Centenarians"	"GroupCentenarians"	1.32385262954636	0.398640108346472	3.1288187646988	0.811081766587768	0.953569103961294	0.70425725415899	0.796116896005815	NA	"abundance"	6	3
+"s__Alistipes_putredinis"	"Group"	"Centenarians"	"GroupCentenarians"	0.448372826186009	0.398640108346472	5.7256849604386	0.993629171110194	1	0.329064256551467	0.420770688705155	NA	"abundance"	6	4
+"s__Faecalibacterium_prausnitzii"	"Group"	"Centenarians"	"GroupCentenarians"	0.348907390506934	0.398640108346472	0.468270032211902	0.970463848423092	1	0.70425725415899	0.796116896005815	NA	"abundance"	6	3
+"s__GGB9730_SGB15291"	"Group"	"Centenarians"	"GroupCentenarians"	0.658921182717118	0.398640108346472	2.4469842465958	0.930418878369425	1	0.704257254158989	0.796116896005815	NA	"abundance"	6	3
+"s__Adlercreutzia_equolifaciens"	"Group"	"Centenarians"	"GroupCentenarians"	1.75151143505558e-16	0	1.5776212492503	1	1	1	1	NA	"prevalence"	6	2
+"s__Bacteroides_stercoris"	"Group"	"Centenarians"	"GroupCentenarians"	1.75151143505558e-16	0	1.5776212492503	1	1	1	1	NA	"prevalence"	6	2
+"s__Collinsella_aerofaciens"	"Group"	"Centenarians"	"GroupCentenarians"	0	0	1.5776212492503	1	1	0.230986097203651	0.300281926364746	NA	"prevalence"	6	4
+"s__Eubacteriaceae_bacterium"	"Group"	"Centenarians"	"GroupCentenarians"	1.40120914804447e-15	0	1.5776212492503	0.999999999999999	1	0.999999999999999	1	NA	"prevalence"	6	2
+"s__Evtepia_gabavorous"	"Group"	"Centenarians"	"GroupCentenarians"	-7.00604574022233e-16	0	1.5776212492503	1	1	1	1	NA	"prevalence"	6	2
+"s__GGB3304_SGB4367"	"Group"	"Centenarians"	"GroupCentenarians"	-7.00604574022233e-16	0	1.5776212492503	1	1	1	1	NA	"prevalence"	6	2
+"s__GGB51647_SGB4348"	"Group"	"Centenarians"	"GroupCentenarians"	1.75151143505558e-16	0	1.5776212492503	1	1	1	1	NA	"prevalence"	6	2
+"s__GGB9468_SGB14861"	"Group"	"Centenarians"	"GroupCentenarians"	1.40120914804447e-15	0	1.5776212492503	0.999999999999999	1	0.999999999999999	1	NA	"prevalence"	6	2
+"s__Roseburia_faecis"	"Group"	"Centenarians"	"GroupCentenarians"	0	0	1.5776212492503	1	1	1	1	NA	"prevalence"	6	2
+"s__Senegalimassilia_anaerobia"	"Group"	"Centenarians"	"GroupCentenarians"	1.40120914804447e-15	0	1.5776212492503	0.999999999999999	1	0.999999999999999	1	NA	"prevalence"	6	2
+"s__Adlercreutzia_equolifaciens"	"Group"	"Centenarians"	"GroupCentenarians"	-1.88026342469672	NA	NA	NA	NA	1	1	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	6	2
+"s__Agathobaculum_butyriciproducens"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.18089332596509	0.239147108903	"对比只适用于有两个或多于两个水平的因子"	"abundance"	6	2
+"s__Akkermansia_muciniphila"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.0805112943828869	0.239147108903	"No data points have the baseline factor level"	"abundance"	6	3
+"s__Alistipes_communis"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.0805112943828869	0.239147108903	"No data points have the baseline factor level"	"abundance"	6	3
+"s__Alistipes_finegoldii"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.180893325965089	0.239147108903	"No data points have the baseline factor level"	"abundance"	6	2
+"s__Alistipes_ihumii"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.18089332596509	0.239147108903	"No data points have the baseline factor level"	"abundance"	6	2
+"s__Alistipes_onderdonkii"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.180893325965089	0.239147108903	"No data points have the baseline factor level"	"abundance"	6	2
+"s__Alistipes_senegalensis"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.18089332596509	0.239147108903	"No data points have the baseline factor level"	"abundance"	6	2
+"s__Alistipes_shahii"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.0805112943828869	0.239147108903	"No data points have the baseline factor level"	"abundance"	6	3
+"s__Alistipes_sp_AF17_16"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.18089332596509	0.239147108903	"No data points have the baseline factor level"	"abundance"	6	2
+"s__Anaerobutyricum_hallii"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.0805112943828869	0.239147108903	"对比只适用于有两个或多于两个水平的因子"	"abundance"	6	3
+"s__Anaerostipes_hadrus"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.0805112943828869	0.239147108903	"对比只适用于有两个或多于两个水平的因子"	"abundance"	6	3
+"s__Bacteroides_fragilis"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.18089332596509	0.239147108903	"No data points have the baseline factor level"	"abundance"	6	2
+"s__Bacteroides_stercoris"	"Group"	"Centenarians"	"GroupCentenarians"	3.11324178561706	NA	NA	NA	NA	1	1	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	6	2
+"s__Bifidobacterium_longum"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.18089332596509	0.239147108903	"对比只适用于有两个或多于两个水平的因子"	"abundance"	6	2
+"s__Blautia_faecis"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.0805112943828869	0.239147108903	"对比只适用于有两个或多于两个水平的因子"	"abundance"	6	3
+"s__Blautia_massiliensis"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.18089332596509	0.239147108903	"对比只适用于有两个或多于两个水平的因子"	"abundance"	6	2
+"s__Blautia_obeum"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.0805112943828869	0.239147108903	"对比只适用于有两个或多于两个水平的因子"	"abundance"	6	3
+"s__Blautia_SGB4815"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.180893325965089	0.239147108903	"对比只适用于有两个或多于两个水平的因子"	"abundance"	6	2
+"s__Blautia_sp_Marseille_P3087"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.18089332596509	0.239147108903	"对比只适用于有两个或多于两个水平的因子"	"abundance"	6	2
+"s__Blautia_wexlerae"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.0805112943828869	0.239147108903	"对比只适用于有两个或多于两个水平的因子"	"abundance"	6	3
+"s__Cloacibacillus_SGB15503"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.180893325965089	0.239147108903	"No data points have the baseline factor level"	"abundance"	6	2
+"s__Clostridiaceae_bacterium"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.18089332596509	0.239147108903	"对比只适用于有两个或多于两个水平的因子"	"abundance"	6	2
+"s__Clostridiaceae_bacterium_Marseille_Q4149"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.18089332596509	0.239147108903	"No data points have the baseline factor level"	"abundance"	6	2
+"s__Comamonas_kerstersii"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.180893325965089	0.239147108903	"No data points have the baseline factor level"	"abundance"	6	2
+"s__Desulfovibrio_piger"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.0805112943828869	0.239147108903	"No data points have the baseline factor level"	"abundance"	6	3
+"s__Dorea_formicigenerans"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.0805112943828869	0.239147108903	"对比只适用于有两个或多于两个水平的因子"	"abundance"	6	3
+"s__Dorea_longicatena"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.0805112943828869	0.239147108903	"对比只适用于有两个或多于两个水平的因子"	"abundance"	6	3
+"s__Eggerthella_lenta"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.18089332596509	0.239147108903	"对比只适用于有两个或多于两个水平的因子"	"abundance"	6	2
+"s__Eubacteriaceae_bacterium"	"Group"	"Centenarians"	"GroupCentenarians"	-2.51595987432737	NA	NA	NA	NA	0.999999999999999	1	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	6	2
+"s__Eubacterium_ramulus"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.180893325965089	0.239147108903	"对比只适用于有两个或多于两个水平的因子"	"abundance"	6	2
+"s__Evtepia_gabavorous"	"Group"	"Centenarians"	"GroupCentenarians"	-2.68678283873842	NA	NA	NA	NA	1	1	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	6	2
+"s__Faecalibacillus_intestinalis"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.0805112943828869	0.239147108903	"对比只适用于有两个或多于两个水平的因子"	"abundance"	6	3
+"s__Fusicatenibacter_saccharivorans"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.180893325965089	0.239147108903	"对比只适用于有两个或多于两个水平的因子"	"abundance"	6	2
+"s__Gemmiger_formicilis"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.18089332596509	0.239147108903	"对比只适用于有两个或多于两个水平的因子"	"abundance"	6	2
+"s__GGB3052_SGB4053"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.180893325965089	0.239147108903	"No data points have the baseline factor level"	"abundance"	6	2
+"s__GGB3256_SGB4303"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.180893325965089	0.239147108903	"对比只适用于有两个或多于两个水平的因子"	"abundance"	6	2
+"s__GGB3304_SGB4367"	"Group"	"Centenarians"	"GroupCentenarians"	4.81043946924634	NA	NA	NA	NA	1	1	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	6	2
+"s__GGB3429_SGB71704"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.18089332596509	0.239147108903	"对比只适用于有两个或多于两个水平的因子"	"abundance"	6	2
+"s__GGB51647_SGB4348"	"Group"	"Centenarians"	"GroupCentenarians"	2.63900175337763	NA	NA	NA	NA	1	1	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	6	2
+"s__GGB9293_SGB14250"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.180893325965089	0.239147108903	"No data points have the baseline factor level"	"abundance"	6	2
+"s__GGB9342_SGB14306"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.0805112943828869	0.239147108903	"No data points have the baseline factor level"	"abundance"	6	3
+"s__GGB9345_SGB14311"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.18089332596509	0.239147108903	"No data points have the baseline factor level"	"abundance"	6	2
+"s__GGB9350_SGB14317"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.18089332596509	0.239147108903	"No data points have the baseline factor level"	"abundance"	6	2
+"s__GGB9468_SGB14861"	"Group"	"Centenarians"	"GroupCentenarians"	-1.82310134742171	NA	NA	NA	NA	0.999999999999999	1	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	6	2
+"s__GGB9634_SGB15095"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.18089332596509	0.239147108903	"No data points have the baseline factor level"	"abundance"	6	2
+"s__GGB9694_SGB15204"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.18089332596509	0.239147108903	"No data points have the baseline factor level"	"abundance"	6	2
+"s__GGB9708_SGB15234"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.0805112943828869	0.239147108903	"No data points have the baseline factor level"	"abundance"	6	3
+"s__GGB9713_SGB15249"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.18089332596509	0.239147108903	"No data points have the baseline factor level"	"abundance"	6	2
+"s__GGB9747_SGB15356"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.18089332596509	0.239147108903	"No data points have the baseline factor level"	"abundance"	6	2
+"s__GGB9760_SGB15374"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.180893325965089	0.239147108903	"No data points have the baseline factor level"	"abundance"	6	2
+"s__GGB9770_SGB15390"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.18089332596509	0.239147108903	"No data points have the baseline factor level"	"abundance"	6	2
+"s__Intestinimonas_massiliensis"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.18089332596509	0.239147108903	"No data points have the baseline factor level"	"abundance"	6	2
+"s__Klebsiella_pneumoniae"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.18089332596509	0.239147108903	"No data points have the baseline factor level"	"abundance"	6	2
+"s__Lachnospiraceae_bacterium"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.18089332596509	0.239147108903	"对比只适用于有两个或多于两个水平的因子"	"abundance"	6	2
+"s__Lacrimispora_celerecrescens"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.180893325965089	0.239147108903	"对比只适用于有两个或多于两个水平的因子"	"abundance"	6	2
+"s__Mogibacterium_sp_BX12"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.180893325965089	0.239147108903	"对比只适用于有两个或多于两个水平的因子"	"abundance"	6	2
+"s__Oscillibacter_sp_ER4"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.18089332596509	0.239147108903	"No data points have the baseline factor level"	"abundance"	6	2
+"s__Parabacteroides_distasonis"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.18089332596509	0.239147108903	"No data points have the baseline factor level"	"abundance"	6	2
+"s__Phocaeicola_vulgatus"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.18089332596509	0.239147108903	"No data points have the baseline factor level"	"abundance"	6	2
+"s__Romboutsia_timonensis"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.18089332596509	0.239147108903	"对比只适用于有两个或多于两个水平的因子"	"abundance"	6	2
+"s__Roseburia_faecis"	"Group"	"Centenarians"	"GroupCentenarians"	-3.24103292707279	NA	NA	NA	NA	1	1	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	6	2
+"s__Ruminococcus_lactaris"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.180893325965089	0.239147108903	"对比只适用于有两个或多于两个水平的因子"	"abundance"	6	2
+"s__Ruminococcus_sp_AF13_28"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.0805112943828869	0.239147108903	"对比只适用于有两个或多于两个水平的因子"	"abundance"	6	3
+"s__Ruminococcus_torques"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.180893325965089	0.239147108903	"对比只适用于有两个或多于两个水平的因子"	"abundance"	6	2
+"s__Ruthenibacterium_lactatiformans"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.0805112943828869	0.239147108903	"No data points have the baseline factor level"	"abundance"	6	3
+"s__Senegalimassilia_anaerobia"	"Group"	"Centenarians"	"GroupCentenarians"	-1.89171875656858	NA	NA	NA	NA	0.999999999999999	1	"Fitting error (NA p-value returned from fitting procedure)"	"abundance"	6	2
+"s__Streptococcus_salivarius"	"Group"	"Centenarians"	"GroupCentenarians"	NA	NA	NA	NA	NA	0.0805112943828869	0.239147108903	"对比只适用于有两个或多于两个水平的因子"	"abundance"	6	3
+"unclassified"	"Group"	"Centenarians"	"GroupCentenarians"	NA	0	NA	NA	NA	0.631359675740146	0.79429120496341	"All logistic values are the same"	"prevalence"	6	6
